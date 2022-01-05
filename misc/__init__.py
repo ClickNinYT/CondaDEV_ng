@@ -1,24 +1,40 @@
 import sys
 import os
-from colorama import init
-from colorama import Fore, Back, Style
 from datetime import datetime
-
-init()
+import subprocess
+import struct
 
 def log(str, col):
+    subprocess.call('', shell=True)
     time = datetime.now().strftime('%H:%M:%S')
-    log = '[' + time + ']' + ' ' + str  
+    log = '[' + time + ']' + ' ' + str
+    class colors:
+        default = '\033[0m'
+        green = '\033[92m'
+        yellow = '\033[93m'
+        red = '\033[91m'
     if col == 0:
-       col = Fore.RED
+       col = colors.red
     elif col == 1:
-       col = Fore.GREEN
+       col = colors.green
     elif col == 2:
-       col = Style.RESET_ALL
+       col = colors.default
     elif col == 3:
-       col = Fore.YELLOW
+       col = colors.yellow
     else:
-       print Fore.RED + '[' + time + ']' + ' ' + 'Invaild color specified!'
+       print colors.red + '[' + time + ']' + ' ' + 'Invaild color specified!' + colors.default
        exit()
-    print col + log
-   
+    cl = colors.default
+    print col + log + cl
+
+def CheckArch():
+    ar = 8 * struct.calcsize("P")
+    if ar == 32:
+        arc = 32
+        return arc
+    elif ar == 64:
+        arc = 64
+        return arc
+    else:
+        arc = 0
+        return arc

@@ -17,8 +17,10 @@
 
 cimport cython
 
+from builtins import bytes as b1
 import struct
 import zlib
+from PIL import Image
 from cStringIO import StringIO
 
 from mmfparser.bytereader cimport ByteReader
@@ -485,6 +487,19 @@ cdef class ImageItem(DataLoader):
     
     def getGraphicMode(self):
         return graphicModes[self.graphicMode]
+
+    def save(self):
+       img = Image.frombytes('RGB', (self.width, self.height), b1(self.image))
+       if self.flags['Alpha']:
+           alp = Image.frombytes("L", (self.width, self.height), b1(self.alpha))
+           img.putalpha(alp)
+       ext = self.settings.get('IMAGEEXT')
+       img.save('C:\Out')
+       del img
+       if self.flags["Alpha"]:
+          del alp
+          del self.alpha
+       del self.image
 
 cdef class JavaImage(DataLoader):
     cdef public:
