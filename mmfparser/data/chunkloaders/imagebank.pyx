@@ -17,10 +17,8 @@
 
 cimport cython
 
-from builtins import bytes as b1
 import struct
 import zlib
-from PIL import Image
 from cStringIO import StringIO
 
 from mmfparser.bytereader cimport ByteReader

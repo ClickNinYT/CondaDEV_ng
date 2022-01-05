@@ -8,7 +8,6 @@ from mmfparser.translators.pame2mfa import translate
 from mmfparser.bytereader import ByteReader
 from mmfparser.data.chunkloaders.imagebank import *
 from mmfparser.loader import DataLoader
-from PIL import Image
 from misc import *
 
 import sys
