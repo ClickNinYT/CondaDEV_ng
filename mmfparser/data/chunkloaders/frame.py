@@ -23,6 +23,7 @@ from mmfparser.data.chunkloaders.events import Events
 from mmfparser.data.chunkloaders.transition import FadeIn, FadeOut
 from mmfparser.data import chunk
 from mmfparser.loader import DataLoader
+from misc import *
 
 class LayerEffects(DataLoader):
     def read(self, reader):
@@ -124,9 +125,10 @@ class Frame(DataLoader):
 
     def read_now(self, reader):
         self.delayedReader = None
-        try:
+        if True:
             newChunks = self.new(chunk.ChunkList, reader)
-        except:
+        if False:
+            log("Warning: ChunkList failed to load!", 3)
             return
         name = newChunks.popChunk(FrameName, True)
         if name:

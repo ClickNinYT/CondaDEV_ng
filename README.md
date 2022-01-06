@@ -1,13 +1,9 @@
 # CondaDEV
- A CTF2.5/MMF2 Decompiler
+A fork of Anaconda Decompiler, now with better compatibility and visuals!
 
 # What is CondaDEV?
- CondaDEV (anaCondaDEVeloper) is a fork of Anaconda Mode 4.1, with a lot of Quality of Life patches, better support and better visuals.
- CondaDEV is in highly development stage and might be very unstable.
+CondaDEV stands for "anaConda DEVeloper", which is a fork of Anaconda Mode 4. This fork aiming to simplify the decompiler, removing unneeded features while still keeping compatibility with original upstream decompiler.
 
 # Support
- 80% of all games are currently supported. From MMF2 to CTF2.5 Build 293. Games that are made with Clickteam Fusion 2.5+ are currently not decompileable for now. But may in the future.
-
-# Difference
- CondaDEV is basically same with Anaconda Mode 4.1, but with a better visual and support. CondaDEV also have some patches from CTFAK in order to improve the decompile accurate!
+CondaDEV now support 85% of every games made with Clickteam Series! Including The Game Factory 2, Multimedia Fusion 2.5 to latest Clickteam Fusion 2.5 (2.5+ is not supported for now).
 
