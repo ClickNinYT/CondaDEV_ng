@@ -14,6 +14,7 @@ import sys
 import os
 import string
 import os.path
+import platform
                                                                                                                                                                                                                                                                                                                                                                                         
 def main(opt):
     if opt == 0:
@@ -35,9 +36,19 @@ def decompile():
        output1 = sys.argv[3]
     except:
         log("Warning: No output directory specified!", 3)
-        log("Warning: Defaulting to C:\Out...", 3)
-        output1 = "C:\Out"
-        pass
+        os = platform.system()
+        homedir = os.path.expanduser("~")
+        if os == "Linux":
+           log("Warning: Defaulting to " + homedir + "/Out", 3)
+           output1 = homedir + "/Out"
+           pass
+        elif os == "Windows":
+           log("Warning: Defaulting to " + homedir + "\Out", 3)
+           output1 = homedir + "\Out"
+           pass
+        else:
+           log("Error: This OS is not supported!")
+           exit()
     def checks():
         path = output1
         isdir = os.path.isdir(path)
