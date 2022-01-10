@@ -417,8 +417,8 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\expressions\\loaders.pyx",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/data/chunkloaders/expressions/loaders.pyx",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -437,7 +437,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -449,7 +449,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -461,7 +461,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -473,7 +473,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -485,7 +485,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -497,7 +497,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -509,7 +509,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -522,7 +522,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
 };
 struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString;
 
-/* "mmfparser\loader.pxd":31
+/* "mmfparser/loader.pxd":31
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False
  *     cpdef readString(self, ByteReader reader, size=?)             # <<<<<<<<<<<<<<
@@ -532,7 +532,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -560,7 +560,7 @@ struct __pyx_obj_9mmfparser_6loader_DataLoader {
 };
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":25
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":25
  *     pass
  * 
  * cdef class String(DataLoader):             # <<<<<<<<<<<<<<
@@ -573,7 +573,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_11expressions_7loaders_String {
 };
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":35
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":35
  *         reader.writeString(self.value)
  * 
  * cdef class Long(DataLoader):             # <<<<<<<<<<<<<<
@@ -586,7 +586,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Long {
 };
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":45
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":45
  *         reader.writeInt(self.value)
  * 
  * cdef class Double(DataLoader):             # <<<<<<<<<<<<<<
@@ -600,7 +600,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Double {
 };
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":58
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":58
  *         reader.writeFloat(self.floatValue)
  * 
  * cdef class GlobalCommon(DataLoader):             # <<<<<<<<<<<<<<
@@ -613,7 +613,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_11expressions_7loaders_GlobalCo
 };
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":78
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":78
  *     pass
  * 
  * cdef class ExtensionCommon(DataLoader):             # <<<<<<<<<<<<<<
@@ -627,7 +627,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Extensio
 
 
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -669,7 +669,7 @@ struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader {
 static struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader *__pyx_vtabptr_9mmfparser_6loader_DataLoader;
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":25
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":25
  *     pass
  * 
  * cdef class String(DataLoader):             # <<<<<<<<<<<<<<
@@ -683,7 +683,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_S
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_String *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_11expressions_7loaders_String;
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":35
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":35
  *         reader.writeString(self.value)
  * 
  * cdef class Long(DataLoader):             # <<<<<<<<<<<<<<
@@ -697,7 +697,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_L
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Long *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Long;
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":45
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":45
  *         reader.writeInt(self.value)
  * 
  * cdef class Double(DataLoader):             # <<<<<<<<<<<<<<
@@ -711,7 +711,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_D
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Double *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Double;
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":58
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":58
  *         reader.writeFloat(self.floatValue)
  * 
  * cdef class GlobalCommon(DataLoader):             # <<<<<<<<<<<<<<
@@ -725,7 +725,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_G
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_GlobalCommon *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_11expressions_7loaders_GlobalCommon;
 
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":78
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":78
  *     pass
  * 
  * cdef class ExtensionCommon(DataLoader):             # <<<<<<<<<<<<<<
@@ -1013,7 +1013,7 @@ static PyObject *__pyx_n_s_writeShort;
 static PyObject *__pyx_n_s_writeString;
 static PyObject *__pyx_int_4;
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":29
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":29
  *         bytes value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1076,7 +1076,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":30
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":30
  * 
  *     cpdef read(self, ByteReader reader):
  *         self.value = self.readString(reader)             # <<<<<<<<<<<<<<
@@ -1092,7 +1092,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
   __pyx_v_self->value = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":29
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":29
  *         bytes value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1164,7 +1164,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":32
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":32
  *         self.value = self.readString(reader)
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1197,7 +1197,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":33
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":33
  * 
  *     def write(self, reader):
  *         reader.writeString(self.value)             # <<<<<<<<<<<<<<
@@ -1233,7 +1233,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":32
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":32
  *         self.value = self.readString(reader)
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1257,7 +1257,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":27
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":27
  * cdef class String(DataLoader):
  *     cdef public:
  *         bytes value             # <<<<<<<<<<<<<<
@@ -1365,7 +1365,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders_6Stri
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":39
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":39
  *         int value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1429,7 +1429,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":40
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":40
  * 
  *     cpdef read(self, ByteReader reader):
  *         self.value = reader.readInt()             # <<<<<<<<<<<<<<
@@ -1442,7 +1442,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_self->value = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":39
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":39
  *         int value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1514,7 +1514,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":42
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":42
  *         self.value = reader.readInt()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1548,7 +1548,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":43
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":43
  * 
  *     def write(self, reader):
  *         reader.writeInt(self.value)             # <<<<<<<<<<<<<<
@@ -1587,7 +1587,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":42
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":42
  *         self.value = reader.readInt()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1612,7 +1612,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":37
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":37
  * cdef class Long(DataLoader):
  *     cdef public:
  *         int value             # <<<<<<<<<<<<<<
@@ -1694,7 +1694,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders_4Long
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":50
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":50
  *         float floatValue
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1759,7 +1759,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":51
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":51
  * 
  *     cpdef read(self, ByteReader reader):
  *         self.value = reader.readDouble()             # <<<<<<<<<<<<<<
@@ -1769,7 +1769,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
   __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readDouble(__pyx_v_reader, 0); if (unlikely(__pyx_t_6 == -10.0 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->value = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":52
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":52
  *     cpdef read(self, ByteReader reader):
  *         self.value = reader.readDouble()
  *         self.floatValue = reader.readFloat()             # <<<<<<<<<<<<<<
@@ -1779,7 +1779,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
   __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readFloat(__pyx_v_reader, 0); if (unlikely(__pyx_t_7 == -10.0 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->floatValue = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":50
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":50
  *         float floatValue
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1851,7 +1851,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":54
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":54
  *         self.floatValue = reader.readFloat()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1885,7 +1885,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":55
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":55
  * 
  *     def write(self, reader):
  *         reader.writeDouble(self.value)             # <<<<<<<<<<<<<<
@@ -1924,7 +1924,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":56
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":56
  *     def write(self, reader):
  *         reader.writeDouble(self.value)
  *         reader.writeFloat(self.floatValue)             # <<<<<<<<<<<<<<
@@ -1963,7 +1963,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":54
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":54
  *         self.floatValue = reader.readFloat()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1988,7 +1988,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":47
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":47
  * cdef class Double(DataLoader):
  *     cdef public:
  *         double value             # <<<<<<<<<<<<<<
@@ -2070,7 +2070,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders_6Doub
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":48
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":48
  *     cdef public:
  *         double value
  *         float floatValue             # <<<<<<<<<<<<<<
@@ -2152,7 +2152,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders_6Doub
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":62
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":62
  *         short value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2216,7 +2216,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":65
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":65
  *         # Oi et OIlist qui servent a rien
  *         # I does not translate. Sorry. Failure. :(
  *         reader.skipBytes(4)             # <<<<<<<<<<<<<<
@@ -2225,7 +2225,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
  */
   ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->skipBytes(__pyx_v_reader, 4, 0);
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":66
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":66
  *         # I does not translate. Sorry. Failure. :(
  *         reader.skipBytes(4)
  *         self.value = reader.readShort()             # <<<<<<<<<<<<<<
@@ -2235,7 +2235,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
   __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->value = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":62
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":62
  *         short value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2307,7 +2307,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":68
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":68
  *         self.value = reader.readShort()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -2341,7 +2341,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":69
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":69
  * 
  *     def write(self, reader):
  *         reader.write('\x00' * 4)             # <<<<<<<<<<<<<<
@@ -2380,7 +2380,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":70
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":70
  *     def write(self, reader):
  *         reader.write('\x00' * 4)
  *         reader.writeShort(self.value)             # <<<<<<<<<<<<<<
@@ -2419,7 +2419,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":68
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":68
  *         self.value = reader.readShort()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -2444,7 +2444,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":60
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":60
  * cdef class GlobalCommon(DataLoader):
  *     cdef public:
  *         short value             # <<<<<<<<<<<<<<
@@ -2526,7 +2526,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders_12Glo
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":82
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":82
  *         short value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2590,7 +2590,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":83
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":83
  * 
  *     cpdef read(self, ByteReader reader):
  *         self.value = reader.readShort()             # <<<<<<<<<<<<<<
@@ -2600,7 +2600,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_11expressions_7loaders_
   __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->value = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":82
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":82
  *         short value
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2672,7 +2672,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":85
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":85
  *         self.value = reader.readShort()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -2706,7 +2706,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":86
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":86
  * 
  *     def write(self, reader):
  *         reader.writeShort(self.value)             # <<<<<<<<<<<<<<
@@ -2745,7 +2745,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":85
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":85
  *         self.value = reader.readShort()
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -2770,7 +2770,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\expressions\loaders.pyx":80
+/* "mmfparser/data/chunkloaders/expressions/loaders.pyx":80
  * cdef class ExtensionCommon(DataLoader):
  *     cdef public:
  *         short value             # <<<<<<<<<<<<<<
@@ -3649,7 +3649,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":18
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":18
  * # along with Anaconda.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * from mmfparser.data.chunkloaders.common import Empty             # <<<<<<<<<<<<<<
@@ -3670,7 +3670,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":22
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":22
  * from mmfparser.bytereader cimport ByteReader
  * 
  * class End(Empty):             # <<<<<<<<<<<<<<
@@ -3696,7 +3696,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":72
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":72
  *         reader.writeShort(self.value)
  * 
  * class GlobalString(GlobalCommon):             # <<<<<<<<<<<<<<
@@ -3720,7 +3720,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":75
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":75
  *     pass
  * 
  * class GlobalValue(GlobalCommon):             # <<<<<<<<<<<<<<
@@ -3744,7 +3744,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":88
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":88
  *         reader.writeShort(self.value)
  * 
  * class ExtensionString(ExtensionCommon):             # <<<<<<<<<<<<<<
@@ -3768,7 +3768,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":91
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":91
  *     pass
  * 
  * class ExtensionValue(ExtensionCommon):             # <<<<<<<<<<<<<<
@@ -3792,7 +3792,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":94
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":94
  *     pass
  * 
  * __all__ = ['String', 'Long', 'Double', 'GlobalValue', 'GlobalString',             # <<<<<<<<<<<<<<
@@ -3827,7 +3827,7 @@ PyMODINIT_FUNC PyInit_loaders(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\expressions\loaders.pyx":1
+  /* "mmfparser/data/chunkloaders/expressions/loaders.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.

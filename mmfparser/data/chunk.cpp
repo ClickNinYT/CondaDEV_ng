@@ -418,8 +418,8 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunk.pyx",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/data/chunk.pyx",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -436,7 +436,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -448,7 +448,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -460,7 +460,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -472,7 +472,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -484,7 +484,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -496,7 +496,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -508,7 +508,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -521,7 +521,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
 };
 struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString;
 
-/* "mmfparser\loader.pxd":31
+/* "mmfparser/loader.pxd":31
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False
  *     cpdef readString(self, ByteReader reader, size=?)             # <<<<<<<<<<<<<<
@@ -531,7 +531,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -559,7 +559,7 @@ struct __pyx_obj_9mmfparser_6loader_DataLoader {
 };
 
 
-/* "mmfparser\data\chunk.pyx":18
+/* "mmfparser/data/chunk.pyx":18
  *     return newLoader
  * 
  * cdef class Chunk(DataLoader):             # <<<<<<<<<<<<<<
@@ -575,7 +575,7 @@ struct __pyx_obj_9mmfparser_4data_5chunk_Chunk {
 };
 
 
-/* "mmfparser\data\chunk.pyx":143
+/* "mmfparser/data/chunk.pyx":143
  *         return bytes(ret_arr)
  * 
  * cdef class ChunkList(DataLoader):             # <<<<<<<<<<<<<<
@@ -588,7 +588,7 @@ struct __pyx_obj_9mmfparser_4data_5chunk_ChunkList {
 };
 
 
-/* "mmfparser\data\chunk.pyx":252
+/* "mmfparser/data/chunk.pyx":252
  *             chunk.write(reader)
  * 
  * cdef class PreservingLoader(DataLoader):             # <<<<<<<<<<<<<<
@@ -602,7 +602,7 @@ struct __pyx_obj_9mmfparser_4data_5chunk_PreservingLoader {
 
 
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -644,7 +644,7 @@ struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader {
 static struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader *__pyx_vtabptr_9mmfparser_6loader_DataLoader;
 
 
-/* "mmfparser\data\chunk.pyx":18
+/* "mmfparser/data/chunk.pyx":18
  *     return newLoader
  * 
  * cdef class Chunk(DataLoader):             # <<<<<<<<<<<<<<
@@ -658,7 +658,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_5chunk_Chunk {
 static struct __pyx_vtabstruct_9mmfparser_4data_5chunk_Chunk *__pyx_vtabptr_9mmfparser_4data_5chunk_Chunk;
 
 
-/* "mmfparser\data\chunk.pyx":143
+/* "mmfparser/data/chunk.pyx":143
  *         return bytes(ret_arr)
  * 
  * cdef class ChunkList(DataLoader):             # <<<<<<<<<<<<<<
@@ -673,7 +673,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_5chunk_ChunkList {
 static struct __pyx_vtabstruct_9mmfparser_4data_5chunk_ChunkList *__pyx_vtabptr_9mmfparser_4data_5chunk_ChunkList;
 
 
-/* "mmfparser\data\chunk.pyx":252
+/* "mmfparser/data/chunk.pyx":252
  *             chunk.write(reader)
  * 
  * cdef class PreservingLoader(DataLoader):             # <<<<<<<<<<<<<<
@@ -1362,7 +1362,7 @@ static char __pyx_k_Warning_Unknown_Chunk_s[] = "Warning: Unknown Chunk %s";
 static char __pyx_k_mmfparser_data_chunkloaders[] = "mmfparser.data.chunkloaders";
 static char __pyx_k_ADDITIONAL_FRAMEITEMINSTANCE[] = "ADDITIONAL_FRAMEITEMINSTANCE";
 static char __pyx_k_unsupported_compression_flag_s[] = "unsupported compression flag: %s";
-static char __pyx_k_C_Users_clicknin_Desktop_CondaDE[] = "C:\\Users\\clicknin\\Desktop\\CondaDEV\\mmfparser\\data\\chunk.pyx";
+static char __pyx_k_home_clicknin_Downloads_CondaDE[] = "/home/clicknin/Downloads/CondaDEV_ng-main/mmfparser/data/chunk.pyx";
 static char __pyx_k_Last_chunk_not_found_in_ChunkLis[] = "Last chunk not found in ChunkList";
 static char __pyx_k_mmfparser_data_chunkloaders_onep[] = "mmfparser.data.chunkloaders.onepointfive";
 static PyObject *__pyx_kp_b_;
@@ -1393,7 +1393,6 @@ static PyObject *__pyx_n_s_BINARYFILES;
 static PyObject *__pyx_n_s_BLURAYFRAMEOPTIONS;
 static PyObject *__pyx_n_s_BinaryFiles;
 static PyObject *__pyx_n_s_COPYRIGHT;
-static PyObject *__pyx_kp_s_C_Users_clicknin_Desktop_CondaDE;
 static PyObject *__pyx_n_s_Chunk;
 static PyObject *__pyx_n_s_ChunkList;
 static PyObject *__pyx_kp_s_Combined_Data;
@@ -1534,6 +1533,7 @@ static PyObject *__pyx_n_s_generate;
 static PyObject *__pyx_n_s_get;
 static PyObject *__pyx_n_s_getName;
 static PyObject *__pyx_n_s_getitem;
+static PyObject *__pyx_kp_s_home_clicknin_Downloads_CondaDE;
 static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_initialize;
@@ -1666,7 +1666,7 @@ static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_codeobj__8;
 static PyObject *__pyx_codeobj__10;
 
-/* "mmfparser\data\chunk.pyx":13
+/* "mmfparser/data/chunk.pyx":13
  *                             unsigned char * trans)
  * 
  * def makeValueChunk(klass, value):             # <<<<<<<<<<<<<<
@@ -1748,7 +1748,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_makeValueChunk(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("makeValueChunk", 0);
 
-  /* "mmfparser\data\chunk.pyx":14
+  /* "mmfparser/data/chunk.pyx":14
  * 
  * def makeValueChunk(klass, value):
  *     newLoader = klass()             # <<<<<<<<<<<<<<
@@ -1777,7 +1777,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_makeValueChunk(CYTHON_UNUSED P
   __pyx_v_newLoader = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":15
+  /* "mmfparser/data/chunk.pyx":15
  * def makeValueChunk(klass, value):
  *     newLoader = klass()
  *     newLoader.value = value             # <<<<<<<<<<<<<<
@@ -1786,7 +1786,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_makeValueChunk(CYTHON_UNUSED P
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newLoader, __pyx_n_s_value, __pyx_v_value) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 15; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":16
+  /* "mmfparser/data/chunk.pyx":16
  *     newLoader = klass()
  *     newLoader.value = value
  *     return newLoader             # <<<<<<<<<<<<<<
@@ -1798,7 +1798,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_makeValueChunk(CYTHON_UNUSED P
   __pyx_r = __pyx_v_newLoader;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":13
+  /* "mmfparser/data/chunk.pyx":13
  *                             unsigned char * trans)
  * 
  * def makeValueChunk(klass, value):             # <<<<<<<<<<<<<<
@@ -1820,7 +1820,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_makeValueChunk(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":25
+/* "mmfparser/data/chunk.pyx":25
  *         DataLoader loader
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1900,7 +1900,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunk.pyx":26
+  /* "mmfparser/data/chunk.pyx":26
  * 
  *     cpdef read(self, ByteReader reader):
  *         cdef bint old = self.settings.get('old', False)             # <<<<<<<<<<<<<<
@@ -1917,7 +1917,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_old = __pyx_t_6;
 
-  /* "mmfparser\data\chunk.pyx":27
+  /* "mmfparser/data/chunk.pyx":27
  *     cpdef read(self, ByteReader reader):
  *         cdef bint old = self.settings.get('old', False)
  *         self.id = reader.readShort()             # <<<<<<<<<<<<<<
@@ -1927,7 +1927,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->id = __pyx_t_7;
 
-  /* "mmfparser\data\chunk.pyx":28
+  /* "mmfparser/data/chunk.pyx":28
  *         cdef bint old = self.settings.get('old', False)
  *         self.id = reader.readShort()
  *         cdef short flags = reader.readShort()             # <<<<<<<<<<<<<<
@@ -1937,7 +1937,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_flags = __pyx_t_7;
 
-  /* "mmfparser\data\chunk.pyx":29
+  /* "mmfparser/data/chunk.pyx":29
  *         self.id = reader.readShort()
  *         cdef short flags = reader.readShort()
  *         self.flags = flags             # <<<<<<<<<<<<<<
@@ -1946,7 +1946,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
  */
   __pyx_v_self->flags = __pyx_v_flags;
 
-  /* "mmfparser\data\chunk.pyx":30
+  /* "mmfparser/data/chunk.pyx":30
  *         cdef short flags = reader.readShort()
  *         self.flags = flags
  *         cdef int size = reader.readInt()             # <<<<<<<<<<<<<<
@@ -1959,7 +1959,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_size = __pyx_t_7;
 
-  /* "mmfparser\data\chunk.pyx":31
+  /* "mmfparser/data/chunk.pyx":31
  *         self.flags = flags
  *         cdef int size = reader.readInt()
  *         cdef ByteReader data = reader.readReader(size)             # <<<<<<<<<<<<<<
@@ -1971,7 +1971,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __pyx_v_data = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":35
+  /* "mmfparser/data/chunk.pyx":35
  *         cdef bint supported
  *         IF USE_TRANS:
  *             supported = (flags & (~3)) == 0             # <<<<<<<<<<<<<<
@@ -1980,7 +1980,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
  */
   __pyx_v_supported = ((__pyx_v_flags & (~3)) == 0);
 
-  /* "mmfparser\data\chunk.pyx":38
+  /* "mmfparser/data/chunk.pyx":38
  *         ELSE:
  *             supported = (flags & (~1)) == 0
  *         if not supported:             # <<<<<<<<<<<<<<
@@ -1990,7 +1990,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __pyx_t_6 = ((!(__pyx_v_supported != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunk.pyx":39
+    /* "mmfparser/data/chunk.pyx":39
  *             supported = (flags & (~1)) == 0
  *         if not supported:
  *             raise Exception('unsupported compression flag: %s' % flags)             # <<<<<<<<<<<<<<
@@ -2015,7 +2015,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "mmfparser\data\chunk.pyx":41
+  /* "mmfparser/data/chunk.pyx":41
  *             raise Exception('unsupported compression flag: %s' % flags)
  * 
  *         if (flags & 1) != 0:             # <<<<<<<<<<<<<<
@@ -2025,7 +2025,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __pyx_t_6 = (((__pyx_v_flags & 1) != 0) != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunk.pyx":43
+    /* "mmfparser/data/chunk.pyx":43
  *         if (flags & 1) != 0:
  *             IF USE_TRANS:
  *                 if (flags & 2) != 0:             # <<<<<<<<<<<<<<
@@ -2035,7 +2035,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __pyx_t_6 = (((__pyx_v_flags & 2) != 0) != 0);
     if (__pyx_t_6) {
 
-      /* "mmfparser\data\chunk.pyx":46
+      /* "mmfparser/data/chunk.pyx":46
  * 
  *                     #log("Transforming Chunk...", 1)
  *                     if self.id & 1 == 1:             # <<<<<<<<<<<<<<
@@ -2045,7 +2045,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       __pyx_t_6 = (((__pyx_v_self->id & 1) == 1) != 0);
       if (__pyx_t_6) {
 
-        /* "mmfparser\data\chunk.pyx":47
+        /* "mmfparser/data/chunk.pyx":47
  *                     #log("Transforming Chunk...", 1)
  *                     if self.id & 1 == 1:
  *                        if self.settings['build'] > 285:             # <<<<<<<<<<<<<<
@@ -2064,7 +2064,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_6) {
 
-          /* "mmfparser\data\chunk.pyx":48
+          /* "mmfparser/data/chunk.pyx":48
  *                     if self.id & 1 == 1:
  *                        if self.settings['build'] > 285:
  *                           data.buffer[4]^=(self.id&0xFF)^(self.id>>0x8)             # <<<<<<<<<<<<<<
@@ -2080,7 +2080,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       }
       __pyx_L6:;
 
-      /* "mmfparser\data\chunk.pyx":49
+      /* "mmfparser/data/chunk.pyx":49
  *                        if self.settings['build'] > 285:
  *                           data.buffer[4]^=(self.id&0xFF)^(self.id>>0x8)
  *                     transform(&data.buffer[data.pos]+4, data.size()-4,self.settings['trans'])             # <<<<<<<<<<<<<<
@@ -2100,7 +2100,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     }
     __pyx_L5:;
 
-    /* "mmfparser\data\chunk.pyx":51
+    /* "mmfparser/data/chunk.pyx":51
  *                     transform(&data.buffer[data.pos]+4, data.size()-4,self.settings['trans'])
  * 
  *             if old:             # <<<<<<<<<<<<<<
@@ -2110,7 +2110,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __pyx_t_6 = (__pyx_v_old != 0);
     if (__pyx_t_6) {
 
-      /* "mmfparser\data\chunk.pyx":52
+      /* "mmfparser/data/chunk.pyx":52
  * 
  *             if old:
  *                 data = onepointfive.decompress(data)             # <<<<<<<<<<<<<<
@@ -2154,7 +2154,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     }
     /*else*/ {
 
-      /* "mmfparser\data\chunk.pyx":54
+      /* "mmfparser/data/chunk.pyx":54
  *                 data = onepointfive.decompress(data)
  *             else:
  *                 data = zlibdata.decompress(data)             # <<<<<<<<<<<<<<
@@ -2199,7 +2199,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     goto __pyx_L4;
   }
 
-  /* "mmfparser\data\chunk.pyx":55
+  /* "mmfparser/data/chunk.pyx":55
  *             else:
  *                 data = zlibdata.decompress(data)
  *         elif (flags & 2) != 0:             # <<<<<<<<<<<<<<
@@ -2209,7 +2209,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   __pyx_t_6 = (((__pyx_v_flags & 2) != 0) != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunk.pyx":58
+    /* "mmfparser/data/chunk.pyx":58
  *             IF USE_TRANS:
  * 
  *                 if self.id & 1 == 1:             # <<<<<<<<<<<<<<
@@ -2219,7 +2219,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __pyx_t_6 = (((__pyx_v_self->id & 1) == 1) != 0);
     if (__pyx_t_6) {
 
-      /* "mmfparser\data\chunk.pyx":59
+      /* "mmfparser/data/chunk.pyx":59
  * 
  *                 if self.id & 1 == 1:
  *                    if self.settings['build'] > 285:             # <<<<<<<<<<<<<<
@@ -2238,7 +2238,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (__pyx_t_6) {
 
-        /* "mmfparser\data\chunk.pyx":60
+        /* "mmfparser/data/chunk.pyx":60
  *                 if self.id & 1 == 1:
  *                    if self.settings['build'] > 285:
  *                       data.buffer[0]^=(self.id&0xFF)^(self.id>>0x8)             # <<<<<<<<<<<<<<
@@ -2254,7 +2254,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     }
     __pyx_L9:;
 
-    /* "mmfparser\data\chunk.pyx":61
+    /* "mmfparser/data/chunk.pyx":61
  *                    if self.settings['build'] > 285:
  *                       data.buffer[0]^=(self.id&0xFF)^(self.id>>0x8)
  *                 transform(&data.buffer[data.pos], data.size(), self.settings['trans'])             # <<<<<<<<<<<<<<
@@ -2274,7 +2274,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
   }
   __pyx_L4:;
 
-  /* "mmfparser\data\chunk.pyx":65
+  /* "mmfparser/data/chunk.pyx":65
  * 
  *         cdef type loaderClass
  *         try:             # <<<<<<<<<<<<<<
@@ -2288,7 +2288,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __Pyx_XGOTREF(__pyx_t_12);
     /*try:*/ {
 
-      /* "mmfparser\data\chunk.pyx":66
+      /* "mmfparser/data/chunk.pyx":66
  *         cdef type loaderClass
  *         try:
  *             if old:             # <<<<<<<<<<<<<<
@@ -2298,7 +2298,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       __pyx_t_6 = (__pyx_v_old != 0);
       if (__pyx_t_6) {
 
-        /* "mmfparser\data\chunk.pyx":67
+        /* "mmfparser/data/chunk.pyx":67
  *         try:
  *             if old:
  *                 loaderClass = oldLoaders[self.id]             # <<<<<<<<<<<<<<
@@ -2317,7 +2317,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       }
       /*else*/ {
 
-        /* "mmfparser\data\chunk.pyx":69
+        /* "mmfparser/data/chunk.pyx":69
  *                 loaderClass = oldLoaders[self.id]
  *             else:
  *                 loaderClass = chunkLoaders[self.id]             # <<<<<<<<<<<<<<
@@ -2339,7 +2339,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       }
       __pyx_L19:;
 
-      /* "mmfparser\data\chunk.pyx":70
+      /* "mmfparser/data/chunk.pyx":70
  *             else:
  *                 loaderClass = chunkLoaders[self.id]
  *             self.loader = self.parent.new(loaderClass, data,             # <<<<<<<<<<<<<<
@@ -2359,7 +2359,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L11_error;}
       __Pyx_GOTREF(__pyx_t_2);
 
-      /* "mmfparser\data\chunk.pyx":71
+      /* "mmfparser/data/chunk.pyx":71
  *                 loaderClass = chunkLoaders[self.id]
  *             self.loader = self.parent.new(loaderClass, data,
  *                 chunk = self)             # <<<<<<<<<<<<<<
@@ -2368,7 +2368,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
  */
       if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_chunk, ((PyObject *)__pyx_v_self)) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 70; __pyx_clineno = __LINE__; goto __pyx_L11_error;}
 
-      /* "mmfparser\data\chunk.pyx":70
+      /* "mmfparser/data/chunk.pyx":70
  *             else:
  *                 loaderClass = chunkLoaders[self.id]
  *             self.loader = self.parent.new(loaderClass, data,             # <<<<<<<<<<<<<<
@@ -2398,7 +2398,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunk.pyx":72
+    /* "mmfparser/data/chunk.pyx":72
  *             self.loader = self.parent.new(loaderClass, data,
  *                 chunk = self)
  *         except KeyError:             # <<<<<<<<<<<<<<
@@ -2413,7 +2413,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GOTREF(__pyx_t_1);
 
-      /* "mmfparser\data\chunk.pyx":73
+      /* "mmfparser/data/chunk.pyx":73
  *                 chunk = self)
  *         except KeyError:
  *             log('Warning: Unknown Chunk %s' % self.id, 3)             # <<<<<<<<<<<<<<
@@ -2475,7 +2475,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9m
     __pyx_L18_try_end:;
   }
 
-  /* "mmfparser\data\chunk.pyx":25
+  /* "mmfparser/data/chunk.pyx":25
  *         DataLoader loader
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2552,7 +2552,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_read(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":75
+/* "mmfparser/data/chunk.pyx":75
  *             log('Warning: Unknown Chunk %s' % self.id, 3)
  * 
  *     def getName(self):             # <<<<<<<<<<<<<<
@@ -2583,7 +2583,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_2getName(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getName", 0);
 
-  /* "mmfparser\data\chunk.pyx":76
+  /* "mmfparser/data/chunk.pyx":76
  * 
  *     def getName(self):
  *         return chunkNames[self.id]             # <<<<<<<<<<<<<<
@@ -2600,7 +2600,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_2getName(struct __pyx_o
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":75
+  /* "mmfparser/data/chunk.pyx":75
  *             log('Warning: Unknown Chunk %s' % self.id, 3)
  * 
  *     def getName(self):             # <<<<<<<<<<<<<<
@@ -2620,7 +2620,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_2getName(struct __pyx_o
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":78
+/* "mmfparser/data/chunk.pyx":78
  *         return chunkNames[self.id]
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2667,7 +2667,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunk.pyx":79
+  /* "mmfparser/data/chunk.pyx":79
  * 
  *     def write(self, ByteReader reader):
  *         flags = self.flags             # <<<<<<<<<<<<<<
@@ -2677,7 +2677,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __pyx_t_1 = __pyx_v_self->flags;
   __pyx_v_flags = __pyx_t_1;
 
-  /* "mmfparser\data\chunk.pyx":80
+  /* "mmfparser/data/chunk.pyx":80
  *     def write(self, ByteReader reader):
  *         flags = self.flags
  *         reader.writeShort(self.id)             # <<<<<<<<<<<<<<
@@ -2716,7 +2716,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":81
+  /* "mmfparser/data/chunk.pyx":81
  *         flags = self.flags
  *         reader.writeShort(self.id)
  *         reader.writeShort(flags)             # <<<<<<<<<<<<<<
@@ -2755,7 +2755,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":82
+  /* "mmfparser/data/chunk.pyx":82
  *         reader.writeShort(self.id)
  *         reader.writeShort(flags)
  *         data = self.loader.generate()             # <<<<<<<<<<<<<<
@@ -2785,7 +2785,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __pyx_v_data = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":83
+  /* "mmfparser/data/chunk.pyx":83
  *         reader.writeShort(flags)
  *         data = self.loader.generate()
  *         if flags == 1:             # <<<<<<<<<<<<<<
@@ -2795,7 +2795,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __pyx_t_7 = ((__pyx_v_flags == 1) != 0);
   if (__pyx_t_7) {
 
-    /* "mmfparser\data\chunk.pyx":84
+    /* "mmfparser/data/chunk.pyx":84
  *         data = self.loader.generate()
  *         if flags == 1:
  *             data = zlibdata.compress(data)             # <<<<<<<<<<<<<<
@@ -2838,7 +2838,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunk.pyx":85
+  /* "mmfparser/data/chunk.pyx":85
  *         if flags == 1:
  *             data = zlibdata.compress(data)
  *         reader.writeInt(len(data))             # <<<<<<<<<<<<<<
@@ -2878,7 +2878,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":86
+  /* "mmfparser/data/chunk.pyx":86
  *             data = zlibdata.compress(data)
  *         reader.writeInt(len(data))
  *         reader.writeReader(data)             # <<<<<<<<<<<<<<
@@ -2914,7 +2914,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":78
+  /* "mmfparser/data/chunk.pyx":78
  *         return chunkNames[self.id]
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2940,7 +2940,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_5Chunk_4write(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":20
+/* "mmfparser/data/chunk.pyx":20
  * cdef class Chunk(DataLoader):
  *     cdef public:
  *         str data             # <<<<<<<<<<<<<<
@@ -3048,7 +3048,7 @@ static int __pyx_pf_9mmfparser_4data_5chunk_5Chunk_4data_4__del__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":21
+/* "mmfparser/data/chunk.pyx":21
  *     cdef public:
  *         str data
  *         short id             # <<<<<<<<<<<<<<
@@ -3130,7 +3130,7 @@ static int __pyx_pf_9mmfparser_4data_5chunk_5Chunk_2id_2__set__(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":22
+/* "mmfparser/data/chunk.pyx":22
  *         str data
  *         short id
  *         short flags             # <<<<<<<<<<<<<<
@@ -3212,7 +3212,7 @@ static int __pyx_pf_9mmfparser_4data_5chunk_5Chunk_5flags_2__set__(struct __pyx_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":23
+/* "mmfparser/data/chunk.pyx":23
  *         short id
  *         short flags
  *         DataLoader loader             # <<<<<<<<<<<<<<
@@ -3320,7 +3320,7 @@ static int __pyx_pf_9mmfparser_4data_5chunk_5Chunk_6loader_4__del__(struct __pyx
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":89
+/* "mmfparser/data/chunk.pyx":89
  * 
  * IF USE_TRANS:
  *     cdef bytes create_transform_part(bytes data):             # <<<<<<<<<<<<<<
@@ -3349,7 +3349,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("create_transform_part", 0);
 
-  /* "mmfparser\data\chunk.pyx":90
+  /* "mmfparser/data/chunk.pyx":90
  * IF USE_TRANS:
  *     cdef bytes create_transform_part(bytes data):
  *         cdef unsigned char * c = data             # <<<<<<<<<<<<<<
@@ -3359,7 +3359,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   __pyx_t_1 = __Pyx_PyObject_AsUString(__pyx_v_data); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_c = __pyx_t_1;
 
-  /* "mmfparser\data\chunk.pyx":91
+  /* "mmfparser/data/chunk.pyx":91
  *     cdef bytes create_transform_part(bytes data):
  *         cdef unsigned char * c = data
  *         cdef unsigned short * v = <unsigned short*>c             # <<<<<<<<<<<<<<
@@ -3368,7 +3368,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
  */
   __pyx_v_v = ((unsigned short *)__pyx_v_c);
 
-  /* "mmfparser\data\chunk.pyx":93
+  /* "mmfparser/data/chunk.pyx":93
  *         cdef unsigned short * v = <unsigned short*>c
  * 
  *         cdef unsigned int l = len(data) / 2             # <<<<<<<<<<<<<<
@@ -3382,7 +3382,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   __pyx_t_2 = PyBytes_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_2 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_l = (__pyx_t_2 / 2);
 
-  /* "mmfparser\data\chunk.pyx":97
+  /* "mmfparser/data/chunk.pyx":97
  *         cdef unsigned short vv
  * 
  *         cdef bytes ret = b''             # <<<<<<<<<<<<<<
@@ -3392,7 +3392,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   __Pyx_INCREF(__pyx_kp_b_);
   __pyx_v_ret = __pyx_kp_b_;
 
-  /* "mmfparser\data\chunk.pyx":99
+  /* "mmfparser/data/chunk.pyx":99
  *         cdef bytes ret = b''
  * 
  *         for i in xrange(l):             # <<<<<<<<<<<<<<
@@ -3403,7 +3403,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "mmfparser\data\chunk.pyx":100
+    /* "mmfparser/data/chunk.pyx":100
  * 
  *         for i in xrange(l):
  *             vv = v[i]             # <<<<<<<<<<<<<<
@@ -3412,7 +3412,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
  */
     __pyx_v_vv = (__pyx_v_v[__pyx_v_i]);
 
-    /* "mmfparser\data\chunk.pyx":101
+    /* "mmfparser/data/chunk.pyx":101
  *         for i in xrange(l):
  *             vv = v[i]
  *             if vv & 0xFF:             # <<<<<<<<<<<<<<
@@ -3422,7 +3422,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
     __pyx_t_5 = ((__pyx_v_vv & 0xFF) != 0);
     if (__pyx_t_5) {
 
-      /* "mmfparser\data\chunk.pyx":102
+      /* "mmfparser/data/chunk.pyx":102
  *             vv = v[i]
  *             if vv & 0xFF:
  *                 ret += chr(vv & 0xFF)             # <<<<<<<<<<<<<<
@@ -3449,7 +3449,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
     }
     __pyx_L5:;
 
-    /* "mmfparser\data\chunk.pyx":103
+    /* "mmfparser/data/chunk.pyx":103
  *             if vv & 0xFF:
  *                 ret += chr(vv & 0xFF)
  *             vv = vv >> 8             # <<<<<<<<<<<<<<
@@ -3458,7 +3458,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
  */
     __pyx_v_vv = (__pyx_v_vv >> 8);
 
-    /* "mmfparser\data\chunk.pyx":104
+    /* "mmfparser/data/chunk.pyx":104
  *                 ret += chr(vv & 0xFF)
  *             vv = vv >> 8
  *             if vv:             # <<<<<<<<<<<<<<
@@ -3468,7 +3468,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
     __pyx_t_5 = (__pyx_v_vv != 0);
     if (__pyx_t_5) {
 
-      /* "mmfparser\data\chunk.pyx":105
+      /* "mmfparser/data/chunk.pyx":105
  *             vv = vv >> 8
  *             if vv:
  *                 ret += chr(vv)             # <<<<<<<<<<<<<<
@@ -3496,7 +3496,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
     __pyx_L6:;
   }
 
-  /* "mmfparser\data\chunk.pyx":107
+  /* "mmfparser/data/chunk.pyx":107
  *                 ret += chr(vv)
  * 
  *         return ret             # <<<<<<<<<<<<<<
@@ -3508,7 +3508,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":89
+  /* "mmfparser/data/chunk.pyx":89
  * 
  * IF USE_TRANS:
  *     cdef bytes create_transform_part(bytes data):             # <<<<<<<<<<<<<<
@@ -3529,7 +3529,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform_part(PyObject 
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":109
+/* "mmfparser/data/chunk.pyx":109
  *         return ret
  * 
  *     cpdef bytes create_transform(bytes editor, bytes name, bytes copyright, bint is_ascii, int build):             # <<<<<<<<<<<<<<
@@ -3563,7 +3563,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __Pyx_INCREF(__pyx_v_name);
   __Pyx_INCREF(__pyx_v_copyright);
 
-  /* "mmfparser\data\chunk.pyx":111
+  /* "mmfparser/data/chunk.pyx":111
  *     cpdef bytes create_transform(bytes editor, bytes name, bytes copyright, bint is_ascii, int build):
  *         cdef bytes ret
  *         if is_ascii:             # <<<<<<<<<<<<<<
@@ -3573,7 +3573,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __pyx_t_1 = (__pyx_v_is_ascii != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\data\chunk.pyx":112
+    /* "mmfparser/data/chunk.pyx":112
  *         cdef bytes ret
  *         if is_ascii:
  *             ret = (editor + name + copyright)             # <<<<<<<<<<<<<<
@@ -3591,7 +3591,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunk.pyx":114
+    /* "mmfparser/data/chunk.pyx":114
  *             ret = (editor + name + copyright)
  *         else:
  *             editor = editor.decode('utf-8').encode('utf-16-le')             # <<<<<<<<<<<<<<
@@ -3611,7 +3611,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
     __Pyx_DECREF_SET(__pyx_v_editor, ((PyObject*)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "mmfparser\data\chunk.pyx":115
+    /* "mmfparser/data/chunk.pyx":115
  *         else:
  *             editor = editor.decode('utf-8').encode('utf-16-le')
  *             name = name.decode('utf-8').encode('utf-16-le')             # <<<<<<<<<<<<<<
@@ -3631,7 +3631,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
     __Pyx_DECREF_SET(__pyx_v_name, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunk.pyx":116
+    /* "mmfparser/data/chunk.pyx":116
  *             editor = editor.decode('utf-8').encode('utf-16-le')
  *             name = name.decode('utf-8').encode('utf-16-le')
  *             copyright = copyright.decode('utf-8').encode('utf-16-le')             # <<<<<<<<<<<<<<
@@ -3651,7 +3651,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
     __Pyx_DECREF_SET(__pyx_v_copyright, ((PyObject*)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "mmfparser\data\chunk.pyx":117
+    /* "mmfparser/data/chunk.pyx":117
  *             name = name.decode('utf-8').encode('utf-16-le')
  *             copyright = copyright.decode('utf-8').encode('utf-16-le')
  *             ret = b''             # <<<<<<<<<<<<<<
@@ -3661,7 +3661,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
     __Pyx_INCREF(__pyx_kp_b_);
     __pyx_v_ret = __pyx_kp_b_;
 
-    /* "mmfparser\data\chunk.pyx":118
+    /* "mmfparser/data/chunk.pyx":118
  *             copyright = copyright.decode('utf-8').encode('utf-16-le')
  *             ret = b''
  *             if build > 285:             # <<<<<<<<<<<<<<
@@ -3671,7 +3671,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
     __pyx_t_1 = ((__pyx_v_build > 285) != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser\data\chunk.pyx":119
+      /* "mmfparser/data/chunk.pyx":119
  *             ret = b''
  *             if build > 285:
  *                log("Application Build: " + str(build), 1)             # <<<<<<<<<<<<<<
@@ -3722,7 +3722,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":120
+      /* "mmfparser/data/chunk.pyx":120
  *             if build > 285:
  *                log("Application Build: " + str(build), 1)
  *                log("Using New Key...", 1)             # <<<<<<<<<<<<<<
@@ -3736,7 +3736,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "mmfparser\data\chunk.pyx":121
+      /* "mmfparser/data/chunk.pyx":121
  *                log("Application Build: " + str(build), 1)
  *                log("Using New Key...", 1)
  *                ret += create_transform_part(name)             # <<<<<<<<<<<<<<
@@ -3751,7 +3751,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":122
+      /* "mmfparser/data/chunk.pyx":122
  *                log("Using New Key...", 1)
  *                ret += create_transform_part(name)
  *                ret += create_transform_part(copyright)             # <<<<<<<<<<<<<<
@@ -3766,7 +3766,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "mmfparser\data\chunk.pyx":123
+      /* "mmfparser/data/chunk.pyx":123
  *                ret += create_transform_part(name)
  *                ret += create_transform_part(copyright)
  *                ret += create_transform_part(editor)             # <<<<<<<<<<<<<<
@@ -3781,7 +3781,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":124
+      /* "mmfparser/data/chunk.pyx":124
  *                ret += create_transform_part(copyright)
  *                ret += create_transform_part(editor)
  *                log("Combined Data: " + str(name) + str(copyright) + str(editor), 1)             # <<<<<<<<<<<<<<
@@ -3857,7 +3857,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
     }
     /*else*/ {
 
-      /* "mmfparser\data\chunk.pyx":126
+      /* "mmfparser/data/chunk.pyx":126
  *                log("Combined Data: " + str(name) + str(copyright) + str(editor), 1)
  *             else:
  *                log("Application Build: " + str(build), 1)             # <<<<<<<<<<<<<<
@@ -3908,7 +3908,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":127
+      /* "mmfparser/data/chunk.pyx":127
  *             else:
  *                log("Application Build: " + str(build), 1)
  *                log("Using Old Key...", 1)             # <<<<<<<<<<<<<<
@@ -3922,7 +3922,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "mmfparser\data\chunk.pyx":128
+      /* "mmfparser/data/chunk.pyx":128
  *                log("Application Build: " + str(build), 1)
  *                log("Using Old Key...", 1)
  *                ret += create_transform_part(editor)             # <<<<<<<<<<<<<<
@@ -3937,7 +3937,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":129
+      /* "mmfparser/data/chunk.pyx":129
  *                log("Using Old Key...", 1)
  *                ret += create_transform_part(editor)
  *                ret += create_transform_part(name)             # <<<<<<<<<<<<<<
@@ -3952,7 +3952,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "mmfparser\data\chunk.pyx":130
+      /* "mmfparser/data/chunk.pyx":130
  *                ret += create_transform_part(editor)
  *                ret += create_transform_part(name)
  *                ret += create_transform_part(copyright)             # <<<<<<<<<<<<<<
@@ -3967,7 +3967,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
       __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":131
+      /* "mmfparser/data/chunk.pyx":131
  *                ret += create_transform_part(name)
  *                ret += create_transform_part(copyright)
  *                log("Combined Data: " + str(editor) + str(name) + str(copyright), 1)             # <<<<<<<<<<<<<<
@@ -4044,7 +4044,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunk.pyx":134
+  /* "mmfparser/data/chunk.pyx":134
  * 
  * 
  *         ret = ret[:128]             # <<<<<<<<<<<<<<
@@ -4056,7 +4056,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":135
+  /* "mmfparser/data/chunk.pyx":135
  * 
  *         ret = ret[:128]
  *         cdef unsigned int l = len(ret)             # <<<<<<<<<<<<<<
@@ -4066,7 +4066,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __pyx_t_6 = PyBytes_GET_SIZE(__pyx_v_ret); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_l = __pyx_t_6;
 
-  /* "mmfparser\data\chunk.pyx":136
+  /* "mmfparser/data/chunk.pyx":136
  *         ret = ret[:128]
  *         cdef unsigned int l = len(ret)
  *         ret += '\x00' * max(0, 256 - len(ret))             # <<<<<<<<<<<<<<
@@ -4093,7 +4093,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __Pyx_DECREF_SET(__pyx_v_ret, ((PyObject*)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":138
+  /* "mmfparser/data/chunk.pyx":138
  *         ret += '\x00' * max(0, 256 - len(ret))
  * 
  *         cdef bytearray ret_arr = bytearray(ret)             # <<<<<<<<<<<<<<
@@ -4111,7 +4111,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __pyx_v_ret_arr = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunk.pyx":139
+  /* "mmfparser/data/chunk.pyx":139
  * 
  *         cdef bytearray ret_arr = bytearray(ret)
  *         cdef unsigned char * ret_c = ret_arr             # <<<<<<<<<<<<<<
@@ -4121,7 +4121,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __pyx_t_10 = __Pyx_PyObject_AsUString(__pyx_v_ret_arr); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_ret_c = __pyx_t_10;
 
-  /* "mmfparser\data\chunk.pyx":140
+  /* "mmfparser/data/chunk.pyx":140
  *         cdef bytearray ret_arr = bytearray(ret)
  *         cdef unsigned char * ret_c = ret_arr
  *         prepare_transform(ret_arr, l)             # <<<<<<<<<<<<<<
@@ -4131,7 +4131,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __pyx_t_10 = __Pyx_PyObject_AsUString(__pyx_v_ret_arr); if (unlikely((!__pyx_t_10) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   prepare_transform(__pyx_t_10, __pyx_v_l);
 
-  /* "mmfparser\data\chunk.pyx":141
+  /* "mmfparser/data/chunk.pyx":141
  *         cdef unsigned char * ret_c = ret_arr
  *         prepare_transform(ret_arr, l)
  *         return bytes(ret_arr)             # <<<<<<<<<<<<<<
@@ -4151,7 +4151,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_create_transform(PyObject *__py
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":109
+  /* "mmfparser/data/chunk.pyx":109
  *         return ret
  * 
  *     cpdef bytes create_transform(bytes editor, bytes name, bytes copyright, bint is_ascii, int build):             # <<<<<<<<<<<<<<
@@ -4300,7 +4300,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_2create_transform(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":147
+/* "mmfparser/data/chunk.pyx":147
  *         list items
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -4355,7 +4355,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_initialize(struct __
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunk.pyx":148
+  /* "mmfparser/data/chunk.pyx":148
  * 
  *     cpdef initialize(self):
  *         self.items = []             # <<<<<<<<<<<<<<
@@ -4370,7 +4370,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_initialize(struct __
   __pyx_v_self->items = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":147
+  /* "mmfparser/data/chunk.pyx":147
  *         list items
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -4433,7 +4433,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_initialize(struct _
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":150
+/* "mmfparser/data/chunk.pyx":150
  *         self.items = []
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4509,7 +4509,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunk.pyx":151
+  /* "mmfparser/data/chunk.pyx":151
  * 
  *     cpdef read(self, ByteReader reader):
  *         setup()             # <<<<<<<<<<<<<<
@@ -4518,7 +4518,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
  */
   __pyx_f_9mmfparser_4data_5chunk_setup();
 
-  /* "mmfparser\data\chunk.pyx":152
+  /* "mmfparser/data/chunk.pyx":152
  *     cpdef read(self, ByteReader reader):
  *         setup()
  *         cdef list items = self.items             # <<<<<<<<<<<<<<
@@ -4530,7 +4530,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
   __pyx_v_items = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":154
+  /* "mmfparser/data/chunk.pyx":154
  *         cdef list items = self.items
  *         # cdef int checksumStart = -1
  *         parent = self.parent             # <<<<<<<<<<<<<<
@@ -4542,7 +4542,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
   __pyx_v_parent = ((struct __pyx_obj_9mmfparser_6loader_DataLoader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":159
+  /* "mmfparser/data/chunk.pyx":159
  *         # cdef int chunkPosition
  * 
  *         while 1:             # <<<<<<<<<<<<<<
@@ -4551,7 +4551,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
  */
   while (1) {
 
-    /* "mmfparser\data\chunk.pyx":161
+    /* "mmfparser/data/chunk.pyx":161
  *         while 1:
  *             # chunkPosition = reader.tell()
  *             newChunk = parent.new(Chunk, reader)             # <<<<<<<<<<<<<<
@@ -4591,7 +4591,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
     __Pyx_XDECREF_SET(__pyx_v_newChunk, ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunk.pyx":162
+    /* "mmfparser/data/chunk.pyx":162
  *             # chunkPosition = reader.tell()
  *             newChunk = parent.new(Chunk, reader)
  *             if newChunk.id == LAST:             # <<<<<<<<<<<<<<
@@ -4601,7 +4601,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
     __pyx_t_7 = ((__pyx_v_newChunk->id == __pyx_v_9mmfparser_4data_5chunk_LAST) != 0);
     if (__pyx_t_7) {
 
-      /* "mmfparser\data\chunk.pyx":163
+      /* "mmfparser/data/chunk.pyx":163
  *             newChunk = parent.new(Chunk, reader)
  *             if newChunk.id == LAST:
  *                 break             # <<<<<<<<<<<<<<
@@ -4611,7 +4611,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       goto __pyx_L4_break;
     }
 
-    /* "mmfparser\data\chunk.pyx":165
+    /* "mmfparser/data/chunk.pyx":165
  *                 break
  *             IF USE_TRANS:
  *                 if newChunk.id == 8750 and self.settings['build'] >= 281:             # <<<<<<<<<<<<<<
@@ -4638,7 +4638,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
     __pyx_L7_bool_binop_done:;
     if (__pyx_t_7) {
 
-      /* "mmfparser\data\chunk.pyx":167
+      /* "mmfparser/data/chunk.pyx":167
  *                 if newChunk.id == 8750 and self.settings['build'] >= 281:
  *                     # EditorFilename
  *                     editor = newChunk.loader.value             # <<<<<<<<<<<<<<
@@ -4650,7 +4650,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       __Pyx_XDECREF_SET(__pyx_v_editor, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunk.pyx":168
+      /* "mmfparser/data/chunk.pyx":168
  *                     # EditorFilename
  *                     editor = newChunk.loader.value
  *                     name = self.getId(8740).loader.value             # <<<<<<<<<<<<<<
@@ -4665,7 +4665,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       __Pyx_XDECREF_SET(__pyx_v_name, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunk.pyx":169
+      /* "mmfparser/data/chunk.pyx":169
  *                     editor = newChunk.loader.value
  *                     name = self.getId(8740).loader.value
  *                     copyright = self.getId(8763)             # <<<<<<<<<<<<<<
@@ -4677,7 +4677,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       __Pyx_XDECREF_SET(__pyx_v_copyright, ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunk.pyx":170
+      /* "mmfparser/data/chunk.pyx":170
  *                     name = self.getId(8740).loader.value
  *                     copyright = self.getId(8763)
  *                     if copyright is None:             # <<<<<<<<<<<<<<
@@ -4688,7 +4688,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       __pyx_t_8 = (__pyx_t_7 != 0);
       if (__pyx_t_8) {
 
-        /* "mmfparser\data\chunk.pyx":171
+        /* "mmfparser/data/chunk.pyx":171
  *                     copyright = self.getId(8763)
  *                     if copyright is None:
  *                         copyright_text = b''             # <<<<<<<<<<<<<<
@@ -4701,7 +4701,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       }
       /*else*/ {
 
-        /* "mmfparser\data\chunk.pyx":173
+        /* "mmfparser/data/chunk.pyx":173
  *                         copyright_text = b''
  *                     else:
  *                         copyright_text = copyright.loader.value             # <<<<<<<<<<<<<<
@@ -4716,7 +4716,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       }
       __pyx_L9:;
 
-      /* "mmfparser\data\chunk.pyx":174
+      /* "mmfparser/data/chunk.pyx":174
  *                     else:
  *                         copyright_text = copyright.loader.value
  *                     trans = create_transform(editor, name, copyright_text, not self.settings.get('unicode',False),self.settings['build'])             # <<<<<<<<<<<<<<
@@ -4746,7 +4746,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
       __Pyx_XDECREF_SET(__pyx_v_trans, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunk.pyx":175
+      /* "mmfparser/data/chunk.pyx":175
  *                         copyright_text = copyright.loader.value
  *                     trans = create_transform(editor, name, copyright_text, not self.settings.get('unicode',False),self.settings['build'])
  *                     parent.settings['trans'] = trans             # <<<<<<<<<<<<<<
@@ -4762,7 +4762,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
     }
     __pyx_L6:;
 
-    /* "mmfparser\data\chunk.pyx":187
+    /* "mmfparser/data/chunk.pyx":187
  *                     # raise Exception('checksum does not match (%s %s)' %
  *                         # (checksumStart, currentPosition))
  *             items.append(newChunk)             # <<<<<<<<<<<<<<
@@ -4777,7 +4777,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_9ChunkList_read(struct __pyx_ob
   }
   __pyx_L4_break:;
 
-  /* "mmfparser\data\chunk.pyx":150
+  /* "mmfparser/data/chunk.pyx":150
  *         self.items = []
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4857,7 +4857,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_2read(struct __pyx_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":189
+/* "mmfparser/data/chunk.pyx":189
  *             items.append(newChunk)
  * 
  *     def append(self, loader, compressed = False):             # <<<<<<<<<<<<<<
@@ -4944,7 +4944,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("append", 0);
 
-  /* "mmfparser\data\chunk.pyx":190
+  /* "mmfparser/data/chunk.pyx":190
  * 
  *     def append(self, loader, compressed = False):
  *         newChunk = self.new(Chunk)             # <<<<<<<<<<<<<<
@@ -4981,7 +4981,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   __pyx_v_newChunk = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":191
+  /* "mmfparser/data/chunk.pyx":191
  *     def append(self, loader, compressed = False):
  *         newChunk = self.new(Chunk)
  *         newChunk.id = chunkLoaderIds[loader.__class__]             # <<<<<<<<<<<<<<
@@ -5000,7 +5000,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newChunk, __pyx_n_s_id, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":192
+  /* "mmfparser/data/chunk.pyx":192
  *         newChunk = self.new(Chunk)
  *         newChunk.id = chunkLoaderIds[loader.__class__]
  *         if compressed:             # <<<<<<<<<<<<<<
@@ -5010,7 +5010,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_compressed); if (unlikely(__pyx_t_5 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 192; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_5) {
 
-    /* "mmfparser\data\chunk.pyx":193
+    /* "mmfparser/data/chunk.pyx":193
  *         newChunk.id = chunkLoaderIds[loader.__class__]
  *         if compressed:
  *             newChunk.flags = 1             # <<<<<<<<<<<<<<
@@ -5022,7 +5022,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunk.pyx":195
+    /* "mmfparser/data/chunk.pyx":195
  *             newChunk.flags = 1
  *         else:
  *             newChunk.flags = 0             # <<<<<<<<<<<<<<
@@ -5033,7 +5033,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunk.pyx":196
+  /* "mmfparser/data/chunk.pyx":196
  *         else:
  *             newChunk.flags = 0
  *         newChunk.loader = loader             # <<<<<<<<<<<<<<
@@ -5042,7 +5042,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newChunk, __pyx_n_s_loader, __pyx_v_loader) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 196; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":197
+  /* "mmfparser/data/chunk.pyx":197
  *             newChunk.flags = 0
  *         newChunk.loader = loader
  *         self.items.append(newChunk)             # <<<<<<<<<<<<<<
@@ -5055,7 +5055,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   }
   __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_self->items, __pyx_v_newChunk); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":198
+  /* "mmfparser/data/chunk.pyx":198
  *         newChunk.loader = loader
  *         self.items.append(newChunk)
  *         return newChunk             # <<<<<<<<<<<<<<
@@ -5067,7 +5067,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   __pyx_r = __pyx_v_newChunk;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":189
+  /* "mmfparser/data/chunk.pyx":189
  *             items.append(newChunk)
  * 
  *     def append(self, loader, compressed = False):             # <<<<<<<<<<<<<<
@@ -5090,7 +5090,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_4append(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":200
+/* "mmfparser/data/chunk.pyx":200
  *         return newChunk
  * 
  *     cdef Chunk getId(self, unsigned int typ):             # <<<<<<<<<<<<<<
@@ -5112,7 +5112,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getId", 0);
 
-  /* "mmfparser\data\chunk.pyx":202
+  /* "mmfparser/data/chunk.pyx":202
  *     cdef Chunk getId(self, unsigned int typ):
  *         cdef Chunk chunk
  *         cdef Chunk foundChunk = None             # <<<<<<<<<<<<<<
@@ -5122,7 +5122,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
   __Pyx_INCREF(Py_None);
   __pyx_v_foundChunk = ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)Py_None);
 
-  /* "mmfparser\data\chunk.pyx":203
+  /* "mmfparser/data/chunk.pyx":203
  *         cdef Chunk chunk
  *         cdef Chunk foundChunk = None
  *         for chunk in self.items:             # <<<<<<<<<<<<<<
@@ -5145,7 +5145,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
     __Pyx_XDECREF_SET(__pyx_v_chunk, ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunk.pyx":204
+    /* "mmfparser/data/chunk.pyx":204
  *         cdef Chunk foundChunk = None
  *         for chunk in self.items:
  *             if chunk.id == typ:             # <<<<<<<<<<<<<<
@@ -5155,7 +5155,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
     __pyx_t_4 = ((__pyx_v_chunk->id == __pyx_v_typ) != 0);
     if (__pyx_t_4) {
 
-      /* "mmfparser\data\chunk.pyx":205
+      /* "mmfparser/data/chunk.pyx":205
  *         for chunk in self.items:
  *             if chunk.id == typ:
  *                 return chunk             # <<<<<<<<<<<<<<
@@ -5169,7 +5169,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
       goto __pyx_L0;
     }
 
-    /* "mmfparser\data\chunk.pyx":203
+    /* "mmfparser/data/chunk.pyx":203
  *         cdef Chunk chunk
  *         cdef Chunk foundChunk = None
  *         for chunk in self.items:             # <<<<<<<<<<<<<<
@@ -5179,7 +5179,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":206
+  /* "mmfparser/data/chunk.pyx":206
  *             if chunk.id == typ:
  *                 return chunk
  *         return None             # <<<<<<<<<<<<<<
@@ -5191,7 +5191,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
   __pyx_r = ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)Py_None);
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":200
+  /* "mmfparser/data/chunk.pyx":200
  *         return newChunk
  * 
  *     cdef Chunk getId(self, unsigned int typ):             # <<<<<<<<<<<<<<
@@ -5213,7 +5213,7 @@ static struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *__pyx_f_9mmfparser_4data_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":208
+/* "mmfparser/data/chunk.pyx":208
  *         return None
  * 
  *     def popChunk(self, chunkType, bint returnNone = False):             # <<<<<<<<<<<<<<
@@ -5305,7 +5305,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("popChunk", 0);
 
-  /* "mmfparser\data\chunk.pyx":210
+  /* "mmfparser/data/chunk.pyx":210
  *     def popChunk(self, chunkType, bint returnNone = False):
  *         cdef Chunk chunk
  *         cdef Chunk foundChunk = None             # <<<<<<<<<<<<<<
@@ -5315,7 +5315,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   __Pyx_INCREF(Py_None);
   __pyx_v_foundChunk = ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)Py_None);
 
-  /* "mmfparser\data\chunk.pyx":211
+  /* "mmfparser/data/chunk.pyx":211
  *         cdef Chunk chunk
  *         cdef Chunk foundChunk = None
  *         for chunk in self.items:             # <<<<<<<<<<<<<<
@@ -5338,7 +5338,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
     __Pyx_XDECREF_SET(__pyx_v_chunk, ((struct __pyx_obj_9mmfparser_4data_5chunk_Chunk *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunk.pyx":212
+    /* "mmfparser/data/chunk.pyx":212
  *         cdef Chunk foundChunk = None
  *         for chunk in self.items:
  *             if type(chunk.loader) is chunkType:             # <<<<<<<<<<<<<<
@@ -5349,7 +5349,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
     __pyx_t_5 = (__pyx_t_4 != 0);
     if (__pyx_t_5) {
 
-      /* "mmfparser\data\chunk.pyx":213
+      /* "mmfparser/data/chunk.pyx":213
  *         for chunk in self.items:
  *             if type(chunk.loader) is chunkType:
  *                 foundChunk = chunk             # <<<<<<<<<<<<<<
@@ -5359,7 +5359,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
       __Pyx_INCREF(((PyObject *)__pyx_v_chunk));
       __Pyx_DECREF_SET(__pyx_v_foundChunk, __pyx_v_chunk);
 
-      /* "mmfparser\data\chunk.pyx":214
+      /* "mmfparser/data/chunk.pyx":214
  *             if type(chunk.loader) is chunkType:
  *                 foundChunk = chunk
  *                 break             # <<<<<<<<<<<<<<
@@ -5369,7 +5369,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
       goto __pyx_L4_break;
     }
 
-    /* "mmfparser\data\chunk.pyx":211
+    /* "mmfparser/data/chunk.pyx":211
  *         cdef Chunk chunk
  *         cdef Chunk foundChunk = None
  *         for chunk in self.items:             # <<<<<<<<<<<<<<
@@ -5380,7 +5380,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   __pyx_L4_break:;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":215
+  /* "mmfparser/data/chunk.pyx":215
  *                 foundChunk = chunk
  *                 break
  *         if foundChunk is not None:             # <<<<<<<<<<<<<<
@@ -5391,7 +5391,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   __pyx_t_4 = (__pyx_t_5 != 0);
   if (__pyx_t_4) {
 
-    /* "mmfparser\data\chunk.pyx":216
+    /* "mmfparser/data/chunk.pyx":216
  *                 break
  *         if foundChunk is not None:
  *             self.items.remove(foundChunk)             # <<<<<<<<<<<<<<
@@ -5427,7 +5427,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunk.pyx":217
+    /* "mmfparser/data/chunk.pyx":217
  *         if foundChunk is not None:
  *             self.items.remove(foundChunk)
  *             return foundChunk.loader             # <<<<<<<<<<<<<<
@@ -5440,7 +5440,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunk.pyx":218
+  /* "mmfparser/data/chunk.pyx":218
  *             self.items.remove(foundChunk)
  *             return foundChunk.loader
  *         if returnNone:             # <<<<<<<<<<<<<<
@@ -5450,7 +5450,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   __pyx_t_4 = (__pyx_v_returnNone != 0);
   if (__pyx_t_4) {
 
-    /* "mmfparser\data\chunk.pyx":219
+    /* "mmfparser/data/chunk.pyx":219
  *             return foundChunk.loader
  *         if returnNone:
  *             return None             # <<<<<<<<<<<<<<
@@ -5463,7 +5463,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunk.pyx":220
+  /* "mmfparser/data/chunk.pyx":220
  *         if returnNone:
  *             return None
  *         raise IndexError('chunktype %r not found' % chunkType.__name__)             # <<<<<<<<<<<<<<
@@ -5487,7 +5487,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":208
+  /* "mmfparser/data/chunk.pyx":208
  *         return None
  * 
  *     def popChunk(self, chunkType, bint returnNone = False):             # <<<<<<<<<<<<<<
@@ -5511,7 +5511,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_6popChunk(struct __
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":222
+/* "mmfparser/data/chunk.pyx":222
  *         raise IndexError('chunktype %r not found' % chunkType.__name__)
  * 
  *     def indexChunk(self, chunkType):             # <<<<<<<<<<<<<<
@@ -5548,7 +5548,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("indexChunk", 0);
 
-  /* "mmfparser\data\chunk.pyx":223
+  /* "mmfparser/data/chunk.pyx":223
  * 
  *     def indexChunk(self, chunkType):
  *         for index, chunk in enumerate(self.items):             # <<<<<<<<<<<<<<
@@ -5575,7 +5575,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
     __pyx_t_1 = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "mmfparser\data\chunk.pyx":224
+    /* "mmfparser/data/chunk.pyx":224
  *     def indexChunk(self, chunkType):
  *         for index, chunk in enumerate(self.items):
  *             if isinstance(chunk.loader, chunkType):             # <<<<<<<<<<<<<<
@@ -5589,7 +5589,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "mmfparser\data\chunk.pyx":225
+      /* "mmfparser/data/chunk.pyx":225
  *         for index, chunk in enumerate(self.items):
  *             if isinstance(chunk.loader, chunkType):
  *                 return index             # <<<<<<<<<<<<<<
@@ -5604,7 +5604,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
       goto __pyx_L0;
     }
 
-    /* "mmfparser\data\chunk.pyx":223
+    /* "mmfparser/data/chunk.pyx":223
  * 
  *     def indexChunk(self, chunkType):
  *         for index, chunk in enumerate(self.items):             # <<<<<<<<<<<<<<
@@ -5615,7 +5615,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":226
+  /* "mmfparser/data/chunk.pyx":226
  *             if isinstance(chunk.loader, chunkType):
  *                 return index
  *         raise IndexError('chunktype %r not found' % chunkType.__name__)             # <<<<<<<<<<<<<<
@@ -5639,7 +5639,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":222
+  /* "mmfparser/data/chunk.pyx":222
  *         raise IndexError('chunktype %r not found' % chunkType.__name__)
  * 
  *     def indexChunk(self, chunkType):             # <<<<<<<<<<<<<<
@@ -5662,7 +5662,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_8indexChunk(struct 
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":228
+/* "mmfparser/data/chunk.pyx":228
  *         raise IndexError('chunktype %r not found' % chunkType.__name__)
  * 
  *     def popName(self, chunkName):             # <<<<<<<<<<<<<<
@@ -5699,7 +5699,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("popName", 0);
 
-  /* "mmfparser\data\chunk.pyx":229
+  /* "mmfparser/data/chunk.pyx":229
  * 
  *     def popName(self, chunkName):
  *         for chunk in [chunk for chunk in self.items if chunk.getName() == chunkName]:             # <<<<<<<<<<<<<<
@@ -5765,7 +5765,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
     __Pyx_XDECREF_SET(__pyx_v_chunk, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunk.pyx":230
+    /* "mmfparser/data/chunk.pyx":230
  *     def popName(self, chunkName):
  *         for chunk in [chunk for chunk in self.items if chunk.getName() == chunkName]:
  *             self.items.remove(chunk)             # <<<<<<<<<<<<<<
@@ -5801,7 +5801,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunk.pyx":231
+    /* "mmfparser/data/chunk.pyx":231
  *         for chunk in [chunk for chunk in self.items if chunk.getName() == chunkName]:
  *             self.items.remove(chunk)
  *             return chunk.loader             # <<<<<<<<<<<<<<
@@ -5816,7 +5816,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "mmfparser\data\chunk.pyx":229
+    /* "mmfparser/data/chunk.pyx":229
  * 
  *     def popName(self, chunkName):
  *         for chunk in [chunk for chunk in self.items if chunk.getName() == chunkName]:             # <<<<<<<<<<<<<<
@@ -5826,7 +5826,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":232
+  /* "mmfparser/data/chunk.pyx":232
  *             self.items.remove(chunk)
  *             return chunk.loader
  *         raise IndexError('chunkname %r not found' % chunkName)             # <<<<<<<<<<<<<<
@@ -5847,7 +5847,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   {__pyx_filename = __pyx_f[0]; __pyx_lineno = 232; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":228
+  /* "mmfparser/data/chunk.pyx":228
  *         raise IndexError('chunktype %r not found' % chunkType.__name__)
  * 
  *     def popName(self, chunkName):             # <<<<<<<<<<<<<<
@@ -5871,7 +5871,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_10popName(struct __
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":234
+/* "mmfparser/data/chunk.pyx":234
  *         raise IndexError('chunkname %r not found' % chunkName)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5924,7 +5924,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunk.pyx":235
+  /* "mmfparser/data/chunk.pyx":235
  * 
  *     def write(self, ByteReader reader):
  *         if 'LAST' not in [chunk.getName() for chunk in self.items]:             # <<<<<<<<<<<<<<
@@ -5976,7 +5976,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
   __pyx_t_8 = (__pyx_t_7 != 0);
   if (__pyx_t_8) {
 
-    /* "mmfparser\data\chunk.pyx":236
+    /* "mmfparser/data/chunk.pyx":236
  *     def write(self, ByteReader reader):
  *         if 'LAST' not in [chunk.getName() for chunk in self.items]:
  *             raise Exception('Last chunk not found in ChunkList')             # <<<<<<<<<<<<<<
@@ -5990,7 +5990,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "mmfparser\data\chunk.pyx":238
+  /* "mmfparser/data/chunk.pyx":238
  *             raise Exception('Last chunk not found in ChunkList')
  * 
  *         checksumStart = None             # <<<<<<<<<<<<<<
@@ -6000,7 +6000,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
   __Pyx_INCREF(Py_None);
   __pyx_v_checksumStart = Py_None;
 
-  /* "mmfparser\data\chunk.pyx":239
+  /* "mmfparser/data/chunk.pyx":239
  * 
  *         checksumStart = None
  *         for chunk in self.items:             # <<<<<<<<<<<<<<
@@ -6022,7 +6022,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     __Pyx_XDECREF_SET(__pyx_v_chunk, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "mmfparser\data\chunk.pyx":240
+    /* "mmfparser/data/chunk.pyx":240
  *         checksumStart = None
  *         for chunk in self.items:
  *             if chunk.id == chunkIds['PROTECTION']:             # <<<<<<<<<<<<<<
@@ -6043,7 +6043,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_8) {
 
-      /* "mmfparser\data\chunk.pyx":241
+      /* "mmfparser/data/chunk.pyx":241
  *         for chunk in self.items:
  *             if chunk.id == chunkIds['PROTECTION']:
  *                 if checksumStart is None:             # <<<<<<<<<<<<<<
@@ -6054,7 +6054,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
       __pyx_t_7 = (__pyx_t_8 != 0);
       if (__pyx_t_7) {
 
-        /* "mmfparser\data\chunk.pyx":242
+        /* "mmfparser/data/chunk.pyx":242
  *             if chunk.id == chunkIds['PROTECTION']:
  *                 if checksumStart is None:
  *                     continue             # <<<<<<<<<<<<<<
@@ -6064,7 +6064,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
         goto __pyx_L6_continue;
       }
 
-      /* "mmfparser\data\chunk.pyx":243
+      /* "mmfparser/data/chunk.pyx":243
  *                 if checksumStart is None:
  *                     continue
  *                 currentPosition = reader.tell()             # <<<<<<<<<<<<<<
@@ -6073,7 +6073,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
  */
       __pyx_v_currentPosition = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0);
 
-      /* "mmfparser\data\chunk.pyx":244
+      /* "mmfparser/data/chunk.pyx":244
  *                     continue
  *                 currentPosition = reader.tell()
  *                 reader.seek(checksumStart)             # <<<<<<<<<<<<<<
@@ -6083,7 +6083,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
       __pyx_t_9 = __Pyx_PyInt_As_int(__pyx_v_checksumStart); if (unlikely((__pyx_t_9 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 244; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_9, 0, NULL);
 
-      /* "mmfparser\data\chunk.pyx":245
+      /* "mmfparser/data/chunk.pyx":245
  *                 currentPosition = reader.tell()
  *                 reader.seek(checksumStart)
  *                 data = reader.read(currentPosition - checksumStart)             # <<<<<<<<<<<<<<
@@ -6104,7 +6104,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
       __Pyx_XDECREF_SET(__pyx_v_data, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "mmfparser\data\chunk.pyx":246
+      /* "mmfparser/data/chunk.pyx":246
  *                 reader.seek(checksumStart)
  *                 data = reader.read(currentPosition - checksumStart)
  *                 chunk.loader.setData(data)             # <<<<<<<<<<<<<<
@@ -6145,7 +6145,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
       goto __pyx_L8;
     }
 
-    /* "mmfparser\data\chunk.pyx":247
+    /* "mmfparser/data/chunk.pyx":247
  *                 data = reader.read(currentPosition - checksumStart)
  *                 chunk.loader.setData(data)
  *             elif chunk.id == chunkIds['APPTARGETFILENAME']:             # <<<<<<<<<<<<<<
@@ -6166,7 +6166,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_7) {
 
-      /* "mmfparser\data\chunk.pyx":248
+      /* "mmfparser/data/chunk.pyx":248
  *                 chunk.loader.setData(data)
  *             elif chunk.id == chunkIds['APPTARGETFILENAME']:
  *                 checksumStart = reader.tell()             # <<<<<<<<<<<<<<
@@ -6181,7 +6181,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     }
     __pyx_L8:;
 
-    /* "mmfparser\data\chunk.pyx":249
+    /* "mmfparser/data/chunk.pyx":249
  *             elif chunk.id == chunkIds['APPTARGETFILENAME']:
  *                 checksumStart = reader.tell()
  *             log('Writing ' + chunk.getName() + 'at' + reader.tell(), 1)             # <<<<<<<<<<<<<<
@@ -6251,7 +6251,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser\data\chunk.pyx":250
+    /* "mmfparser/data/chunk.pyx":250
  *                 checksumStart = reader.tell()
  *             log('Writing ' + chunk.getName() + 'at' + reader.tell(), 1)
  *             chunk.write(reader)             # <<<<<<<<<<<<<<
@@ -6287,7 +6287,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser\data\chunk.pyx":239
+    /* "mmfparser/data/chunk.pyx":239
  * 
  *         checksumStart = None
  *         for chunk in self.items:             # <<<<<<<<<<<<<<
@@ -6298,7 +6298,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":234
+  /* "mmfparser/data/chunk.pyx":234
  *         raise IndexError('chunkname %r not found' % chunkName)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -6327,7 +6327,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_9ChunkList_12write(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":145
+/* "mmfparser/data/chunk.pyx":145
  * cdef class ChunkList(DataLoader):
  *     cdef public:
  *         list items             # <<<<<<<<<<<<<<
@@ -6435,7 +6435,7 @@ static int __pyx_pf_9mmfparser_4data_5chunk_9ChunkList_5items_4__del__(struct __
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":255
+/* "mmfparser/data/chunk.pyx":255
  *     cdef public:
  *         bytes realData
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -6499,7 +6499,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_16PreservingLoader_read(struct 
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunk.pyx":256
+  /* "mmfparser/data/chunk.pyx":256
  *         bytes realData
  *     cpdef read(self, ByteReader reader):
  *         log('%s has not implemented!' % self.settings['chunk'].getName(), 3)             # <<<<<<<<<<<<<<
@@ -6567,7 +6567,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_16PreservingLoader_read(struct 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":261
+  /* "mmfparser/data/chunk.pyx":261
  *         # code.interact(local = locals())
  *         # raise NotImplementedError('%s has not been implemented' % self.parent.getName())
  *         self.realData = reader.read()             # <<<<<<<<<<<<<<
@@ -6583,7 +6583,7 @@ static PyObject *__pyx_f_9mmfparser_4data_5chunk_16PreservingLoader_read(struct 
   __pyx_v_self->realData = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":255
+  /* "mmfparser/data/chunk.pyx":255
  *     cdef public:
  *         bytes realData
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -6655,7 +6655,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_16PreservingLoader_read(struct
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":263
+/* "mmfparser/data/chunk.pyx":263
  *         self.realData = reader.read()
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -6694,7 +6694,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_16PreservingLoader_2write(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunk.pyx":264
+  /* "mmfparser/data/chunk.pyx":264
  * 
  *     def write(self, ByteReader reader):
  *         return reader.write(self.realData)             # <<<<<<<<<<<<<<
@@ -6711,7 +6711,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_16PreservingLoader_2write(stru
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":263
+  /* "mmfparser/data/chunk.pyx":263
  *         self.realData = reader.read()
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -6731,7 +6731,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_16PreservingLoader_2write(stru
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":254
+/* "mmfparser/data/chunk.pyx":254
  * cdef class PreservingLoader(DataLoader):
  *     cdef public:
  *         bytes realData             # <<<<<<<<<<<<<<
@@ -6839,7 +6839,7 @@ static int __pyx_pf_9mmfparser_4data_5chunk_16PreservingLoader_8realData_4__del_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":266
+/* "mmfparser/data/chunk.pyx":266
  *         return reader.write(self.realData)
  * 
  * cdef inline createPreservingLoader():             # <<<<<<<<<<<<<<
@@ -6852,7 +6852,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_5chunk_createPreservingL
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("createPreservingLoader", 0);
 
-  /* "mmfparser\data\chunk.pyx":267
+  /* "mmfparser/data/chunk.pyx":267
  * 
  * cdef inline createPreservingLoader():
  *     return PreservingLoader             # <<<<<<<<<<<<<<
@@ -6864,7 +6864,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_5chunk_createPreservingL
   __pyx_r = ((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_5chunk_PreservingLoader));
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunk.pyx":266
+  /* "mmfparser/data/chunk.pyx":266
  *         return reader.write(self.realData)
  * 
  * cdef inline createPreservingLoader():             # <<<<<<<<<<<<<<
@@ -6879,7 +6879,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_5chunk_createPreservingL
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunk.pyx":275
+/* "mmfparser/data/chunk.pyx":275
  * cdef dict oldLoadersReal
  * 
  * cdef inline void setup():             # <<<<<<<<<<<<<<
@@ -6907,7 +6907,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("setup", 0);
 
-  /* "mmfparser\data\chunk.pyx":276
+  /* "mmfparser/data/chunk.pyx":276
  * 
  * cdef inline void setup():
  *     if chunkLoaders is not None:             # <<<<<<<<<<<<<<
@@ -6918,7 +6918,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunk.pyx":277
+    /* "mmfparser/data/chunk.pyx":277
  * cdef inline void setup():
  *     if chunkLoaders is not None:
  *         return             # <<<<<<<<<<<<<<
@@ -6928,7 +6928,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunk.pyx":278
+  /* "mmfparser/data/chunk.pyx":278
  *     if chunkLoaders is not None:
  *         return
  *     from mmfparser.data.chunkloaders import all             # <<<<<<<<<<<<<<
@@ -6950,7 +6950,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":279
+  /* "mmfparser/data/chunk.pyx":279
  *         return
  *     from mmfparser.data.chunkloaders import all
  *     from mmfparser.data.chunkloaders.onepointfive import all as oldchunks             # <<<<<<<<<<<<<<
@@ -6972,7 +6972,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunk.pyx":282
+  /* "mmfparser/data/chunk.pyx":282
  * 
  *     global chunkLoaders
  *     chunkLoaders = {             # <<<<<<<<<<<<<<
@@ -6982,7 +6982,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "mmfparser\data\chunk.pyx":284
+  /* "mmfparser/data/chunk.pyx":284
  *     chunkLoaders = {
  *         # Vitalize chunks (0x11)
  *         4386 : all.VitalizePreview, # Preview             # <<<<<<<<<<<<<<
@@ -6994,7 +6994,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_4386, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":287
+  /* "mmfparser/data/chunk.pyx":287
  *         # Application chunks (0x22)
  *         # not-in-use 8738 : createPreservingLoader(), # AppMiniHeader
  *         8739 : all.AppHeader,             # <<<<<<<<<<<<<<
@@ -7006,7 +7006,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8739, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":288
+  /* "mmfparser/data/chunk.pyx":288
  *         # not-in-use 8738 : createPreservingLoader(), # AppMiniHeader
  *         8739 : all.AppHeader,
  *         8740 : all.AppName,             # <<<<<<<<<<<<<<
@@ -7018,7 +7018,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8740, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":289
+  /* "mmfparser/data/chunk.pyx":289
  *         8739 : all.AppHeader,
  *         8740 : all.AppName,
  *         8741 : all.AppAuthor,             # <<<<<<<<<<<<<<
@@ -7030,7 +7030,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8741, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":290
+  /* "mmfparser/data/chunk.pyx":290
  *         8740 : all.AppName,
  *         8741 : all.AppAuthor,
  *         8742 : all.AppMenu,             # <<<<<<<<<<<<<<
@@ -7042,7 +7042,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8742, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":291
+  /* "mmfparser/data/chunk.pyx":291
  *         8741 : all.AppAuthor,
  *         8742 : all.AppMenu,
  *         8743 : all.ExtPath,             # <<<<<<<<<<<<<<
@@ -7054,7 +7054,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8743, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":293
+  /* "mmfparser/data/chunk.pyx":293
  *         8743 : all.ExtPath,
  *         # deprecated 8744 : createPreservingLoader(), # Extensions
  *         8745 : all.FrameItems, # FrameItems             # <<<<<<<<<<<<<<
@@ -7066,7 +7066,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8745, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":295
+  /* "mmfparser/data/chunk.pyx":295
  *         8745 : all.FrameItems, # FrameItems
  *         # deprecated 8746 : createPreservingLoader(), # GlobalEvents
  *         8747 : all.FrameHandles, # FrameHandles             # <<<<<<<<<<<<<<
@@ -7078,7 +7078,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8747, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":296
+  /* "mmfparser/data/chunk.pyx":296
  *         # deprecated 8746 : createPreservingLoader(), # GlobalEvents
  *         8747 : all.FrameHandles, # FrameHandles
  *         8748 : all.ExtData, # ExtData             # <<<<<<<<<<<<<<
@@ -7090,7 +7090,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8748, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":298
+  /* "mmfparser/data/chunk.pyx":298
  *         8748 : all.ExtData, # ExtData
  *         # deprecated 8749 : createPreservingLoader(), # Additional_Extension
  *         8750 : all.EditorFilename, # AppEditorFilename             # <<<<<<<<<<<<<<
@@ -7102,7 +7102,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8750, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":299
+  /* "mmfparser/data/chunk.pyx":299
  *         # deprecated 8749 : createPreservingLoader(), # Additional_Extension
  *         8750 : all.EditorFilename, # AppEditorFilename
  *         8751 : all.TargetFilename, # AppTargetFilename             # <<<<<<<<<<<<<<
@@ -7114,7 +7114,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8751, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":300
+  /* "mmfparser/data/chunk.pyx":300
  *         8750 : all.EditorFilename, # AppEditorFilename
  *         8751 : all.TargetFilename, # AppTargetFilename
  *         8752 : all.AppDoc, # AppDoc             # <<<<<<<<<<<<<<
@@ -7126,7 +7126,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8752, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":301
+  /* "mmfparser/data/chunk.pyx":301
  *         8751 : all.TargetFilename, # AppTargetFilename
  *         8752 : all.AppDoc, # AppDoc
  *         8753 : all.OtherExtensions, # OtherExts             # <<<<<<<<<<<<<<
@@ -7138,7 +7138,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8753, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":302
+  /* "mmfparser/data/chunk.pyx":302
  *         8752 : all.AppDoc, # AppDoc
  *         8753 : all.OtherExtensions, # OtherExts
  *         8754 : all.GlobalValues,             # <<<<<<<<<<<<<<
@@ -7150,7 +7150,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8754, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":303
+  /* "mmfparser/data/chunk.pyx":303
  *         8753 : all.OtherExtensions, # OtherExts
  *         8754 : all.GlobalValues,
  *         8755 : all.GlobalStrings, # GlobalStrings             # <<<<<<<<<<<<<<
@@ -7162,7 +7162,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8755, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":304
+  /* "mmfparser/data/chunk.pyx":304
  *         8754 : all.GlobalValues,
  *         8755 : all.GlobalStrings, # GlobalStrings
  *         8756 : all.ExtensionList, # Extensions2             # <<<<<<<<<<<<<<
@@ -7174,7 +7174,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8756, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":305
+  /* "mmfparser/data/chunk.pyx":305
  *         8755 : all.GlobalStrings, # GlobalStrings
  *         8756 : all.ExtensionList, # Extensions2
  *         8757 : all.AppIcon, # AppIcon_16x16x8             # <<<<<<<<<<<<<<
@@ -7186,7 +7186,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8757, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":306
+  /* "mmfparser/data/chunk.pyx":306
  *         8756 : all.ExtensionList, # Extensions2
  *         8757 : all.AppIcon, # AppIcon_16x16x8
  *         8758 : createPreservingLoader(), # DemoVersion             # <<<<<<<<<<<<<<
@@ -7198,7 +7198,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8758, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":307
+  /* "mmfparser/data/chunk.pyx":307
  *         8757 : all.AppIcon, # AppIcon_16x16x8
  *         8758 : createPreservingLoader(), # DemoVersion
  *         8759 : all.SecNum, # serial number             # <<<<<<<<<<<<<<
@@ -7210,7 +7210,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8759, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":308
+  /* "mmfparser/data/chunk.pyx":308
  *         8758 : createPreservingLoader(), # DemoVersion
  *         8759 : all.SecNum, # serial number
  *         8760 : all.BinaryFiles, # BinaryFiles             # <<<<<<<<<<<<<<
@@ -7222,7 +7222,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8760, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":309
+  /* "mmfparser/data/chunk.pyx":309
  *         8759 : all.SecNum, # serial number
  *         8760 : all.BinaryFiles, # BinaryFiles
  *         8761 : createPreservingLoader(), # AppMenuImages             # <<<<<<<<<<<<<<
@@ -7234,7 +7234,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8761, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":310
+  /* "mmfparser/data/chunk.pyx":310
  *         8760 : all.BinaryFiles, # BinaryFiles
  *         8761 : createPreservingLoader(), # AppMenuImages
  *         8762 : all.AboutText, # AboutText             # <<<<<<<<<<<<<<
@@ -7246,7 +7246,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8762, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":311
+  /* "mmfparser/data/chunk.pyx":311
  *         8761 : createPreservingLoader(), # AppMenuImages
  *         8762 : all.AboutText, # AboutText
  *         8763 : all.Copyright, # Copyright             # <<<<<<<<<<<<<<
@@ -7258,7 +7258,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8763, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":312
+  /* "mmfparser/data/chunk.pyx":312
  *         8762 : all.AboutText, # AboutText
  *         8763 : all.Copyright, # Copyright
  *         8764 : createPreservingLoader(), # GlobalValueNames             # <<<<<<<<<<<<<<
@@ -7270,7 +7270,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8764, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":313
+  /* "mmfparser/data/chunk.pyx":313
  *         8763 : all.Copyright, # Copyright
  *         8764 : createPreservingLoader(), # GlobalValueNames
  *         8765 : createPreservingLoader(), # GlobalStringNames             # <<<<<<<<<<<<<<
@@ -7282,7 +7282,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8765, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":314
+  /* "mmfparser/data/chunk.pyx":314
  *         8764 : createPreservingLoader(), # GlobalValueNames
  *         8765 : createPreservingLoader(), # GlobalStringNames
  *         8766 : all.MovementExtensions, # MvtExts             # <<<<<<<<<<<<<<
@@ -7294,7 +7294,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8766, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":315
+  /* "mmfparser/data/chunk.pyx":315
  *         8765 : createPreservingLoader(), # GlobalStringNames
  *         8766 : all.MovementExtensions, # MvtExts
  *         8767 : all.FrameItems, # FrameItems_2             # <<<<<<<<<<<<<<
@@ -7306,7 +7306,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8767, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":316
+  /* "mmfparser/data/chunk.pyx":316
  *         8766 : all.MovementExtensions, # MvtExts
  *         8767 : all.FrameItems, # FrameItems_2
  *         8768 : all.ExeOnly, # EXEOnly             # <<<<<<<<<<<<<<
@@ -7318,7 +7318,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8768, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":317
+  /* "mmfparser/data/chunk.pyx":317
  *         8767 : all.FrameItems, # FrameItems_2
  *         8768 : all.ExeOnly, # EXEOnly
  *         8770 : all.Protection,             # <<<<<<<<<<<<<<
@@ -7330,7 +7330,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8770, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":318
+  /* "mmfparser/data/chunk.pyx":318
  *         8768 : all.ExeOnly, # EXEOnly
  *         8770 : all.Protection,
  *         8771 : all.Shaders, # Shaders             # <<<<<<<<<<<<<<
@@ -7342,7 +7342,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8771, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":319
+  /* "mmfparser/data/chunk.pyx":319
  *         8770 : all.Protection,
  *         8771 : all.Shaders, # Shaders
  *         8773 : all.ExtendedHeader, # ExtendedHeader aka APPHEADER2             # <<<<<<<<<<<<<<
@@ -7354,7 +7354,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8773, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":321
+  /* "mmfparser/data/chunk.pyx":321
  *         8773 : all.ExtendedHeader, # ExtendedHeader aka APPHEADER2
  *         # Frame chunks (0x33)
  *         13107 : all.Frame, # Frame             # <<<<<<<<<<<<<<
@@ -7366,7 +7366,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13107, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":322
+  /* "mmfparser/data/chunk.pyx":322
  *         # Frame chunks (0x33)
  *         13107 : all.Frame, # Frame
  *         13108 : all.FrameHeader, # FrameHeader             # <<<<<<<<<<<<<<
@@ -7378,7 +7378,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13108, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":323
+  /* "mmfparser/data/chunk.pyx":323
  *         13107 : all.Frame, # Frame
  *         13108 : all.FrameHeader, # FrameHeader
  *         13109 : all.FrameName, # FrameName             # <<<<<<<<<<<<<<
@@ -7390,7 +7390,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13109, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":324
+  /* "mmfparser/data/chunk.pyx":324
  *         13108 : all.FrameHeader, # FrameHeader
  *         13109 : all.FrameName, # FrameName
  *         13110 : all.FramePassword, # FramePassword             # <<<<<<<<<<<<<<
@@ -7402,7 +7402,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13110, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":325
+  /* "mmfparser/data/chunk.pyx":325
  *         13109 : all.FrameName, # FrameName
  *         13110 : all.FramePassword, # FramePassword
  *         13111 : all.FramePalette, # FramePalette             # <<<<<<<<<<<<<<
@@ -7414,7 +7414,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13111, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":326
+  /* "mmfparser/data/chunk.pyx":326
  *         13110 : all.FramePassword, # FramePassword
  *         13111 : all.FramePalette, # FramePalette
  *         13112 : all.ObjectInstances, # FrameItemInstances             # <<<<<<<<<<<<<<
@@ -7426,7 +7426,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13112, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":327
+  /* "mmfparser/data/chunk.pyx":327
  *         13111 : all.FramePalette, # FramePalette
  *         13112 : all.ObjectInstances, # FrameItemInstances
  *         13113 : createPreservingLoader(), # FrameFadeInFrame             # <<<<<<<<<<<<<<
@@ -7438,7 +7438,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13113, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":328
+  /* "mmfparser/data/chunk.pyx":328
  *         13112 : all.ObjectInstances, # FrameItemInstances
  *         13113 : createPreservingLoader(), # FrameFadeInFrame
  *         13114 : createPreservingLoader(), # FrameFadeOutFrame             # <<<<<<<<<<<<<<
@@ -7450,7 +7450,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13114, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":329
+  /* "mmfparser/data/chunk.pyx":329
  *         13113 : createPreservingLoader(), # FrameFadeInFrame
  *         13114 : createPreservingLoader(), # FrameFadeOutFrame
  *         13115 : all.FadeIn, # FrameFadeIn             # <<<<<<<<<<<<<<
@@ -7462,7 +7462,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13115, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":330
+  /* "mmfparser/data/chunk.pyx":330
  *         13114 : createPreservingLoader(), # FrameFadeOutFrame
  *         13115 : all.FadeIn, # FrameFadeIn
  *         13116 : all.FadeOut, # FrameFadeOut             # <<<<<<<<<<<<<<
@@ -7474,7 +7474,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13116, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":331
+  /* "mmfparser/data/chunk.pyx":331
  *         13115 : all.FadeIn, # FrameFadeIn
  *         13116 : all.FadeOut, # FrameFadeOut
  *         13117 : all.Events, # FrameEvents             # <<<<<<<<<<<<<<
@@ -7486,7 +7486,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13117, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":332
+  /* "mmfparser/data/chunk.pyx":332
  *         13116 : all.FadeOut, # FrameFadeOut
  *         13117 : all.Events, # FrameEvents
  *         13118 : createPreservingLoader(), # FramePlayHeader             # <<<<<<<<<<<<<<
@@ -7498,7 +7498,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13118, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":333
+  /* "mmfparser/data/chunk.pyx":333
  *         13117 : all.Events, # FrameEvents
  *         13118 : createPreservingLoader(), # FramePlayHeader
  *         13119 : createPreservingLoader(), # Additional_FrameItem             # <<<<<<<<<<<<<<
@@ -7510,7 +7510,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13119, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":334
+  /* "mmfparser/data/chunk.pyx":334
  *         13118 : createPreservingLoader(), # FramePlayHeader
  *         13119 : createPreservingLoader(), # Additional_FrameItem
  *         13120 : createPreservingLoader(), # Additional_FrameItemInstance             # <<<<<<<<<<<<<<
@@ -7522,7 +7522,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13120, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":335
+  /* "mmfparser/data/chunk.pyx":335
  *         13119 : createPreservingLoader(), # Additional_FrameItem
  *         13120 : createPreservingLoader(), # Additional_FrameItemInstance
  *         13121 : all.Layers, # FrameLayers             # <<<<<<<<<<<<<<
@@ -7534,7 +7534,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13121, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":336
+  /* "mmfparser/data/chunk.pyx":336
  *         13120 : createPreservingLoader(), # Additional_FrameItemInstance
  *         13121 : all.Layers, # FrameLayers
  *         13122 : all.VirtualSize, # FrameVirtualRect             # <<<<<<<<<<<<<<
@@ -7546,7 +7546,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13122, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":337
+  /* "mmfparser/data/chunk.pyx":337
  *         13121 : all.Layers, # FrameLayers
  *         13122 : all.VirtualSize, # FrameVirtualRect
  *         13123 : all.DemoFilePath, # DemoFilePath             # <<<<<<<<<<<<<<
@@ -7558,7 +7558,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13123, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":338
+  /* "mmfparser/data/chunk.pyx":338
  *         13122 : all.VirtualSize, # FrameVirtualRect
  *         13123 : all.DemoFilePath, # DemoFilePath
  *         13124 : createPreservingLoader(), # RandomSeed             # <<<<<<<<<<<<<<
@@ -7570,7 +7570,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13124, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":339
+  /* "mmfparser/data/chunk.pyx":339
  *         13123 : all.DemoFilePath, # DemoFilePath
  *         13124 : createPreservingLoader(), # RandomSeed
  *         13125 : all.LayerEffects, # FrameLayerEffects             # <<<<<<<<<<<<<<
@@ -7582,7 +7582,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13125, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":340
+  /* "mmfparser/data/chunk.pyx":340
  *         13124 : createPreservingLoader(), # RandomSeed
  *         13125 : all.LayerEffects, # FrameLayerEffects
  *         13126 : createPreservingLoader(), # BluRayFrameOptions             # <<<<<<<<<<<<<<
@@ -7594,7 +7594,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13126, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":341
+  /* "mmfparser/data/chunk.pyx":341
  *         13125 : all.LayerEffects, # FrameLayerEffects
  *         13126 : createPreservingLoader(), # BluRayFrameOptions
  *         13127 : all.MovementTimerBase, # MvtTimerBase             # <<<<<<<<<<<<<<
@@ -7606,7 +7606,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13127, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":342
+  /* "mmfparser/data/chunk.pyx":342
  *         13126 : createPreservingLoader(), # BluRayFrameOptions
  *         13127 : all.MovementTimerBase, # MvtTimerBase
  *         13128 : createPreservingLoader(), # MosaicImageTable             # <<<<<<<<<<<<<<
@@ -7618,7 +7618,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13128, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":343
+  /* "mmfparser/data/chunk.pyx":343
  *         13127 : all.MovementTimerBase, # MvtTimerBase
  *         13128 : createPreservingLoader(), # MosaicImageTable
  *         13129 : all.FrameEffects, # FrameEffects             # <<<<<<<<<<<<<<
@@ -7630,7 +7630,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13129, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":344
+  /* "mmfparser/data/chunk.pyx":344
  *         13128 : createPreservingLoader(), # MosaicImageTable
  *         13129 : all.FrameEffects, # FrameEffects
  *         13130 : createPreservingLoader(), # FrameIphoneOptions             # <<<<<<<<<<<<<<
@@ -7642,7 +7642,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13130, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":346
+  /* "mmfparser/data/chunk.pyx":346
  *         13130 : createPreservingLoader(), # FrameIphoneOptions
  *         # Object chunks (0x44)
  *         17476 : all.ObjectHeader, # ObjInfoHeader             # <<<<<<<<<<<<<<
@@ -7654,7 +7654,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17476, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":347
+  /* "mmfparser/data/chunk.pyx":347
  *         # Object chunks (0x44)
  *         17476 : all.ObjectHeader, # ObjInfoHeader
  *         17477 : all.ObjectName,             # <<<<<<<<<<<<<<
@@ -7666,7 +7666,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17477, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":348
+  /* "mmfparser/data/chunk.pyx":348
  *         17476 : all.ObjectHeader, # ObjInfoHeader
  *         17477 : all.ObjectName,
  *         17478 : all.ObjectProperties, # ObjectsCommon             # <<<<<<<<<<<<<<
@@ -7678,7 +7678,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17478, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":349
+  /* "mmfparser/data/chunk.pyx":349
  *         17477 : all.ObjectName,
  *         17478 : all.ObjectProperties, # ObjectsCommon
  *         17479 : createPreservingLoader(), # ObjectUnknown             # <<<<<<<<<<<<<<
@@ -7690,7 +7690,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17479, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":350
+  /* "mmfparser/data/chunk.pyx":350
  *         17478 : all.ObjectProperties, # ObjectsCommon
  *         17479 : createPreservingLoader(), # ObjectUnknown
  *         17480 : all.ObjectEffects, # ObjectUnknown2             # <<<<<<<<<<<<<<
@@ -7702,7 +7702,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17480, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":352
+  /* "mmfparser/data/chunk.pyx":352
  *         17480 : all.ObjectEffects, # ObjectUnknown2
  *         # Offset chunks (0x55)
  *         21845 : all.ImageOffsets, # ImagesOffsets             # <<<<<<<<<<<<<<
@@ -7714,7 +7714,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_21845, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":353
+  /* "mmfparser/data/chunk.pyx":353
  *         # Offset chunks (0x55)
  *         21845 : all.ImageOffsets, # ImagesOffsets
  *         21846 : all.FontOffsets, # FontsOffsets             # <<<<<<<<<<<<<<
@@ -7726,7 +7726,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_21846, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":354
+  /* "mmfparser/data/chunk.pyx":354
  *         21845 : all.ImageOffsets, # ImagesOffsets
  *         21846 : all.FontOffsets, # FontsOffsets
  *         21847 : all.SoundOffsets, # SoundsOffsets             # <<<<<<<<<<<<<<
@@ -7738,7 +7738,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_21847, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":355
+  /* "mmfparser/data/chunk.pyx":355
  *         21846 : all.FontOffsets, # FontsOffsets
  *         21847 : all.SoundOffsets, # SoundsOffsets
  *         21848 : all.MusicOffsets, # MusicsOffsets             # <<<<<<<<<<<<<<
@@ -7750,7 +7750,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_21848, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":357
+  /* "mmfparser/data/chunk.pyx":357
  *         21848 : all.MusicOffsets, # MusicsOffsets
  *         # Bank chunks (0x66)
  *         26214 : all.ImageBank, # Images             # <<<<<<<<<<<<<<
@@ -7762,7 +7762,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26214, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":358
+  /* "mmfparser/data/chunk.pyx":358
  *         # Bank chunks (0x66)
  *         26214 : all.ImageBank, # Images
  *         26215 : all.FontBank,             # <<<<<<<<<<<<<<
@@ -7774,7 +7774,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26215, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":359
+  /* "mmfparser/data/chunk.pyx":359
  *         26214 : all.ImageBank, # Images
  *         26215 : all.FontBank,
  *         26216 : all.SoundBank,             # <<<<<<<<<<<<<<
@@ -7786,7 +7786,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26216, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":360
+  /* "mmfparser/data/chunk.pyx":360
  *         26215 : all.FontBank,
  *         26216 : all.SoundBank,
  *         26217 : all.MusicBank, # Musics             # <<<<<<<<<<<<<<
@@ -7798,7 +7798,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26217, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunk.pyx":362
+  /* "mmfparser/data/chunk.pyx":362
  *         26217 : all.MusicBank, # Musics
  *         # Last chunk (0x7f7f)
  *         32639 : all.Last, # Last             # <<<<<<<<<<<<<<
@@ -7814,7 +7814,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunk.pyx":366
+  /* "mmfparser/data/chunk.pyx":366
  * 
  *     global chunkLoaderIds
  *     chunkLoaderIds = {}             # <<<<<<<<<<<<<<
@@ -7828,7 +7828,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunk.pyx":367
+  /* "mmfparser/data/chunk.pyx":367
  *     global chunkLoaderIds
  *     chunkLoaderIds = {}
  *     for id, klass in chunkLoaders.iteritems():             # <<<<<<<<<<<<<<
@@ -7856,7 +7856,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
     __Pyx_XDECREF_SET(__pyx_v_klass, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "mmfparser\data\chunk.pyx":368
+    /* "mmfparser/data/chunk.pyx":368
  *     chunkLoaderIds = {}
  *     for id, klass in chunkLoaders.iteritems():
  *         chunkLoaderIds[klass] = id             # <<<<<<<<<<<<<<
@@ -7871,7 +7871,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunk.pyx":371
+  /* "mmfparser/data/chunk.pyx":371
  * 
  *     global oldLoadersReal
  *     oldLoadersReal = {             # <<<<<<<<<<<<<<
@@ -7881,7 +7881,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "mmfparser\data\chunk.pyx":372
+  /* "mmfparser/data/chunk.pyx":372
  *     global oldLoadersReal
  *     oldLoadersReal = {
  *         8739 : oldchunks.AppHeader,             # <<<<<<<<<<<<<<
@@ -7893,7 +7893,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8739, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":373
+  /* "mmfparser/data/chunk.pyx":373
  *     oldLoadersReal = {
  *         8739 : oldchunks.AppHeader,
  *         8740 : all.AppName,             # <<<<<<<<<<<<<<
@@ -7905,7 +7905,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8740, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":374
+  /* "mmfparser/data/chunk.pyx":374
  *         8739 : oldchunks.AppHeader,
  *         8740 : all.AppName,
  *         8741 : all.AppAuthor,             # <<<<<<<<<<<<<<
@@ -7917,7 +7917,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8741, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":375
+  /* "mmfparser/data/chunk.pyx":375
  *         8740 : all.AppName,
  *         8741 : all.AppAuthor,
  *         8742 : all.AppMenu,             # <<<<<<<<<<<<<<
@@ -7929,7 +7929,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8742, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":376
+  /* "mmfparser/data/chunk.pyx":376
  *         8741 : all.AppAuthor,
  *         8742 : all.AppMenu,
  *         8743 : all.ExtPath,             # <<<<<<<<<<<<<<
@@ -7941,7 +7941,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8743, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":377
+  /* "mmfparser/data/chunk.pyx":377
  *         8742 : all.AppMenu,
  *         8743 : all.ExtPath,
  *         8745 : oldchunks.FrameItems, # FrameItems             # <<<<<<<<<<<<<<
@@ -7953,7 +7953,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8745, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":378
+  /* "mmfparser/data/chunk.pyx":378
  *         8743 : all.ExtPath,
  *         8745 : oldchunks.FrameItems, # FrameItems
  *         8767 : oldchunks.FrameItems, # FrameItems_2             # <<<<<<<<<<<<<<
@@ -7965,7 +7965,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8767, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":379
+  /* "mmfparser/data/chunk.pyx":379
  *         8745 : oldchunks.FrameItems, # FrameItems
  *         8767 : oldchunks.FrameItems, # FrameItems_2
  *         8747 : all.FrameHandles, # FrameHandles             # <<<<<<<<<<<<<<
@@ -7977,7 +7977,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8747, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":380
+  /* "mmfparser/data/chunk.pyx":380
  *         8767 : oldchunks.FrameItems, # FrameItems_2
  *         8747 : all.FrameHandles, # FrameHandles
  *         8748 : all.ExtData, # ExtData             # <<<<<<<<<<<<<<
@@ -7989,7 +7989,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8748, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":381
+  /* "mmfparser/data/chunk.pyx":381
  *         8747 : all.FrameHandles, # FrameHandles
  *         8748 : all.ExtData, # ExtData
  *         8750 : all.EditorFilename, # AppEditorFilename             # <<<<<<<<<<<<<<
@@ -8001,7 +8001,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8750, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":382
+  /* "mmfparser/data/chunk.pyx":382
  *         8748 : all.ExtData, # ExtData
  *         8750 : all.EditorFilename, # AppEditorFilename
  *         8751 : all.TargetFilename, # AppTargetFilename             # <<<<<<<<<<<<<<
@@ -8013,7 +8013,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8751, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":383
+  /* "mmfparser/data/chunk.pyx":383
  *         8750 : all.EditorFilename, # AppEditorFilename
  *         8751 : all.TargetFilename, # AppTargetFilename
  *         8753 : all.OtherExtensions, # OtherExts             # <<<<<<<<<<<<<<
@@ -8025,7 +8025,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8753, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":384
+  /* "mmfparser/data/chunk.pyx":384
  *         8751 : all.TargetFilename, # AppTargetFilename
  *         8753 : all.OtherExtensions, # OtherExts
  *         8756 : all.ExtensionList, # Extensions2             # <<<<<<<<<<<<<<
@@ -8037,7 +8037,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8756, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":385
+  /* "mmfparser/data/chunk.pyx":385
  *         8753 : all.OtherExtensions, # OtherExts
  *         8756 : all.ExtensionList, # Extensions2
  *         8757 : all.AppIcon, # AppIcon_16x16x8             # <<<<<<<<<<<<<<
@@ -8049,7 +8049,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_8757, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":386
+  /* "mmfparser/data/chunk.pyx":386
  *         8756 : all.ExtensionList, # Extensions2
  *         8757 : all.AppIcon, # AppIcon_16x16x8
  *         17476 : all.ObjectHeader, # ObjInfoHeader             # <<<<<<<<<<<<<<
@@ -8061,7 +8061,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17476, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":387
+  /* "mmfparser/data/chunk.pyx":387
  *         8757 : all.AppIcon, # AppIcon_16x16x8
  *         17476 : all.ObjectHeader, # ObjInfoHeader
  *         17477 : all.ObjectName,             # <<<<<<<<<<<<<<
@@ -8073,7 +8073,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17477, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":388
+  /* "mmfparser/data/chunk.pyx":388
  *         17476 : all.ObjectHeader, # ObjInfoHeader
  *         17477 : all.ObjectName,
  *         17478 : oldchunks.ObjectProperties,             # <<<<<<<<<<<<<<
@@ -8085,7 +8085,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_17478, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":390
+  /* "mmfparser/data/chunk.pyx":390
  *         17478 : oldchunks.ObjectProperties,
  *         #
  *         13107 : oldchunks.Frame,             # <<<<<<<<<<<<<<
@@ -8097,7 +8097,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13107, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":391
+  /* "mmfparser/data/chunk.pyx":391
  *         #
  *         13107 : oldchunks.Frame,
  *         13108 : oldchunks.FrameHeader, # FrameHeader             # <<<<<<<<<<<<<<
@@ -8109,7 +8109,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13108, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":392
+  /* "mmfparser/data/chunk.pyx":392
  *         13107 : oldchunks.Frame,
  *         13108 : oldchunks.FrameHeader, # FrameHeader
  *         13109 : all.FrameName, # FrameName             # <<<<<<<<<<<<<<
@@ -8121,7 +8121,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13109, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":393
+  /* "mmfparser/data/chunk.pyx":393
  *         13108 : oldchunks.FrameHeader, # FrameHeader
  *         13109 : all.FrameName, # FrameName
  *         13110 : all.FramePassword, # FramePassword             # <<<<<<<<<<<<<<
@@ -8133,7 +8133,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13110, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":394
+  /* "mmfparser/data/chunk.pyx":394
  *         13109 : all.FrameName, # FrameName
  *         13110 : all.FramePassword, # FramePassword
  *         13111 : all.FramePalette, # FramePalette             # <<<<<<<<<<<<<<
@@ -8145,7 +8145,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13111, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":395
+  /* "mmfparser/data/chunk.pyx":395
  *         13110 : all.FramePassword, # FramePassword
  *         13111 : all.FramePalette, # FramePalette
  *         13112 : oldchunks.ObjectInstances, # FrameItemInstances             # <<<<<<<<<<<<<<
@@ -8157,7 +8157,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13112, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":396
+  /* "mmfparser/data/chunk.pyx":396
  *         13111 : all.FramePalette, # FramePalette
  *         13112 : oldchunks.ObjectInstances, # FrameItemInstances
  *         13113 : createPreservingLoader(), # FrameFadeInFrame             # <<<<<<<<<<<<<<
@@ -8169,7 +8169,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13113, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":397
+  /* "mmfparser/data/chunk.pyx":397
  *         13112 : oldchunks.ObjectInstances, # FrameItemInstances
  *         13113 : createPreservingLoader(), # FrameFadeInFrame
  *         13114 : createPreservingLoader(), # FrameFadeOutFrame             # <<<<<<<<<<<<<<
@@ -8181,7 +8181,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13114, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":398
+  /* "mmfparser/data/chunk.pyx":398
  *         13113 : createPreservingLoader(), # FrameFadeInFrame
  *         13114 : createPreservingLoader(), # FrameFadeOutFrame
  *         13115 : all.FadeIn, # FrameFadeIn             # <<<<<<<<<<<<<<
@@ -8193,7 +8193,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13115, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":399
+  /* "mmfparser/data/chunk.pyx":399
  *         13114 : createPreservingLoader(), # FrameFadeOutFrame
  *         13115 : all.FadeIn, # FrameFadeIn
  *         13116 : all.FadeOut, # FrameFadeOut             # <<<<<<<<<<<<<<
@@ -8205,7 +8205,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13116, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":400
+  /* "mmfparser/data/chunk.pyx":400
  *         13115 : all.FadeIn, # FrameFadeIn
  *         13116 : all.FadeOut, # FrameFadeOut
  *         13117 : oldchunks.Events, # FrameEvents             # <<<<<<<<<<<<<<
@@ -8217,7 +8217,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13117, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":401
+  /* "mmfparser/data/chunk.pyx":401
  *         13116 : all.FadeOut, # FrameFadeOut
  *         13117 : oldchunks.Events, # FrameEvents
  *         13118 : createPreservingLoader(), # FramePlayHeader             # <<<<<<<<<<<<<<
@@ -8229,7 +8229,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13118, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":402
+  /* "mmfparser/data/chunk.pyx":402
  *         13117 : oldchunks.Events, # FrameEvents
  *         13118 : createPreservingLoader(), # FramePlayHeader
  *         13119 : createPreservingLoader(), # Additional_FrameItem             # <<<<<<<<<<<<<<
@@ -8241,7 +8241,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13119, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":403
+  /* "mmfparser/data/chunk.pyx":403
  *         13118 : createPreservingLoader(), # FramePlayHeader
  *         13119 : createPreservingLoader(), # Additional_FrameItem
  *         13120 : createPreservingLoader(), # Additional_FrameItemInstance             # <<<<<<<<<<<<<<
@@ -8253,7 +8253,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_13120, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":405
+  /* "mmfparser/data/chunk.pyx":405
  *         13120 : createPreservingLoader(), # Additional_FrameItemInstance
  *         #
  *         26214 : all.ImageBank, # Images             # <<<<<<<<<<<<<<
@@ -8265,7 +8265,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26214, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":406
+  /* "mmfparser/data/chunk.pyx":406
  *         #
  *         26214 : all.ImageBank, # Images
  *         26215 : all.FontBank,             # <<<<<<<<<<<<<<
@@ -8277,7 +8277,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26215, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":407
+  /* "mmfparser/data/chunk.pyx":407
  *         26214 : all.ImageBank, # Images
  *         26215 : all.FontBank,
  *         26216 : all.SoundBank,             # <<<<<<<<<<<<<<
@@ -8289,7 +8289,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   if (PyDict_SetItem(__pyx_t_3, __pyx_int_26216, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 371; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\data\chunk.pyx":409
+  /* "mmfparser/data/chunk.pyx":409
  *         26216 : all.SoundBank,
  *         # 26217 : all.MusicBank, # Musics
  *         32639 : all.Last, # Last             # <<<<<<<<<<<<<<
@@ -8305,7 +8305,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __Pyx_GIVEREF(__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunk.pyx":275
+  /* "mmfparser/data/chunk.pyx":275
  * cdef dict oldLoadersReal
  * 
  * cdef inline void setup():             # <<<<<<<<<<<<<<
@@ -8328,7 +8328,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_4data_5chunk_setup(void) {
   __Pyx_RefNannyFinishContext();
 }
 
-/* "mmfparser\data\chunk.pyx":413
+/* "mmfparser/data/chunk.pyx":413
  * 
  * class OldLoaders:
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -8414,7 +8414,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_10OldLoaders___getitem__(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__getitem__", 0);
 
-  /* "mmfparser\data\chunk.pyx":414
+  /* "mmfparser/data/chunk.pyx":414
  * class OldLoaders:
  *     def __getitem__(self, key):
  *         try:             # <<<<<<<<<<<<<<
@@ -8428,7 +8428,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_10OldLoaders___getitem__(CYTHO
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "mmfparser\data\chunk.pyx":415
+      /* "mmfparser/data/chunk.pyx":415
  *     def __getitem__(self, key):
  *         try:
  *             return oldLoadersReal[key]             # <<<<<<<<<<<<<<
@@ -8449,7 +8449,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_10OldLoaders___getitem__(CYTHO
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser\data\chunk.pyx":416
+    /* "mmfparser/data/chunk.pyx":416
  *         try:
  *             return oldLoadersReal[key]
  *         except KeyError:             # <<<<<<<<<<<<<<
@@ -8464,7 +8464,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_10OldLoaders___getitem__(CYTHO
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "mmfparser\data\chunk.pyx":417
+      /* "mmfparser/data/chunk.pyx":417
  *             return oldLoadersReal[key]
  *         except KeyError:
  *             return createPreservingLoader()             # <<<<<<<<<<<<<<
@@ -8502,7 +8502,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_5chunk_10OldLoaders___getitem__(CYTHO
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunk.pyx":413
+  /* "mmfparser/data/chunk.pyx":413
  * 
  * class OldLoaders:
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -9169,7 +9169,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_BLURAYFRAMEOPTIONS, __pyx_k_BLURAYFRAMEOPTIONS, sizeof(__pyx_k_BLURAYFRAMEOPTIONS), 0, 0, 1, 1},
   {&__pyx_n_s_BinaryFiles, __pyx_k_BinaryFiles, sizeof(__pyx_k_BinaryFiles), 0, 0, 1, 1},
   {&__pyx_n_s_COPYRIGHT, __pyx_k_COPYRIGHT, sizeof(__pyx_k_COPYRIGHT), 0, 0, 1, 1},
-  {&__pyx_kp_s_C_Users_clicknin_Desktop_CondaDE, __pyx_k_C_Users_clicknin_Desktop_CondaDE, sizeof(__pyx_k_C_Users_clicknin_Desktop_CondaDE), 0, 0, 1, 0},
   {&__pyx_n_s_Chunk, __pyx_k_Chunk, sizeof(__pyx_k_Chunk), 0, 0, 1, 1},
   {&__pyx_n_s_ChunkList, __pyx_k_ChunkList, sizeof(__pyx_k_ChunkList), 0, 0, 1, 1},
   {&__pyx_kp_s_Combined_Data, __pyx_k_Combined_Data, sizeof(__pyx_k_Combined_Data), 0, 0, 1, 0},
@@ -9310,6 +9309,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_get, __pyx_k_get, sizeof(__pyx_k_get), 0, 0, 1, 1},
   {&__pyx_n_s_getName, __pyx_k_getName, sizeof(__pyx_k_getName), 0, 0, 1, 1},
   {&__pyx_n_s_getitem, __pyx_k_getitem, sizeof(__pyx_k_getitem), 0, 0, 1, 1},
+  {&__pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_k_home_clicknin_Downloads_CondaDE, sizeof(__pyx_k_home_clicknin_Downloads_CondaDE), 0, 0, 1, 0},
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_initialize, __pyx_k_initialize, sizeof(__pyx_k_initialize), 0, 0, 1, 1},
@@ -9378,7 +9378,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mmfparser\data\chunk.pyx":120
+  /* "mmfparser/data/chunk.pyx":120
  *             if build > 285:
  *                log("Application Build: " + str(build), 1)
  *                log("Using New Key...", 1)             # <<<<<<<<<<<<<<
@@ -9389,7 +9389,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "mmfparser\data\chunk.pyx":127
+  /* "mmfparser/data/chunk.pyx":127
  *             else:
  *                log("Application Build: " + str(build), 1)
  *                log("Using Old Key...", 1)             # <<<<<<<<<<<<<<
@@ -9400,7 +9400,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "mmfparser\data\chunk.pyx":236
+  /* "mmfparser/data/chunk.pyx":236
  *     def write(self, ByteReader reader):
  *         if 'LAST' not in [chunk.getName() for chunk in self.items]:
  *             raise Exception('Last chunk not found in ChunkList')             # <<<<<<<<<<<<<<
@@ -9411,7 +9411,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "mmfparser\data\chunk.pyx":13
+  /* "mmfparser/data/chunk.pyx":13
  *                             unsigned char * trans)
  * 
  * def makeValueChunk(klass, value):             # <<<<<<<<<<<<<<
@@ -9421,9 +9421,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__7 = PyTuple_Pack(3, __pyx_n_s_klass, __pyx_n_s_value, __pyx_n_s_newLoader); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_clicknin_Desktop_CondaDE, __pyx_n_s_makeValueChunk, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_makeValueChunk, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunk.pyx":413
+  /* "mmfparser/data/chunk.pyx":413
  * 
  * class OldLoaders:
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -9433,7 +9433,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_key); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 413; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_clicknin_Desktop_CondaDE, __pyx_n_s_getitem, 413, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 413; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_getitem, 413, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 413; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9654,7 +9654,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\data\chunk.pyx":2
+  /* "mmfparser/data/chunk.pyx":2
  * from mmfparser.bytereader cimport ByteReader
  * from mmfparser.data import zlibdata             # <<<<<<<<<<<<<<
  * from mmfparser.data import onepointfive
@@ -9674,7 +9674,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":3
+  /* "mmfparser/data/chunk.pyx":3
  * from mmfparser.bytereader cimport ByteReader
  * from mmfparser.data import zlibdata
  * from mmfparser.data import onepointfive             # <<<<<<<<<<<<<<
@@ -9695,7 +9695,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":5
+  /* "mmfparser/data/chunk.pyx":5
  * from mmfparser.data import onepointfive
  * from mmfparser.loader cimport DataLoader
  * from misc import *             # <<<<<<<<<<<<<<
@@ -9713,7 +9713,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (__pyx_import_star(__pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 5; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":13
+  /* "mmfparser/data/chunk.pyx":13
  *                             unsigned char * trans)
  * 
  * def makeValueChunk(klass, value):             # <<<<<<<<<<<<<<
@@ -9725,7 +9725,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_makeValueChunk, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 13; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":269
+  /* "mmfparser/data/chunk.pyx":269
  *     return PreservingLoader
  * 
  * cdef bint initialized = False             # <<<<<<<<<<<<<<
@@ -9734,7 +9734,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
  */
   __pyx_v_9mmfparser_4data_5chunk_initialized = 0;
 
-  /* "mmfparser\data\chunk.pyx":412
+  /* "mmfparser/data/chunk.pyx":412
  *     }
  * 
  * class OldLoaders:             # <<<<<<<<<<<<<<
@@ -9744,7 +9744,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_OldLoaders, __pyx_n_s_OldLoaders, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunk, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 412; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "mmfparser\data\chunk.pyx":413
+  /* "mmfparser/data/chunk.pyx":413
  * 
  * class OldLoaders:
  *     def __getitem__(self, key):             # <<<<<<<<<<<<<<
@@ -9756,7 +9756,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_getitem, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 413; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":412
+  /* "mmfparser/data/chunk.pyx":412
  *     }
  * 
  * class OldLoaders:             # <<<<<<<<<<<<<<
@@ -9769,7 +9769,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":419
+  /* "mmfparser/data/chunk.pyx":419
  *             return createPreservingLoader()
  * 
  * oldLoaders = OldLoaders()             # <<<<<<<<<<<<<<
@@ -9799,7 +9799,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_oldLoaders, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 419; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":421
+  /* "mmfparser/data/chunk.pyx":421
  * oldLoaders = OldLoaders()
  * 
  * chunkNames = {             # <<<<<<<<<<<<<<
@@ -9884,7 +9884,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_chunkNames, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":497
+  /* "mmfparser/data/chunk.pyx":497
  * }
  * 
  * chunkIds = {}             # <<<<<<<<<<<<<<
@@ -9896,7 +9896,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_chunkIds, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 497; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":498
+  /* "mmfparser/data/chunk.pyx":498
  * 
  * chunkIds = {}
  * for id, name in chunkNames.iteritems():             # <<<<<<<<<<<<<<
@@ -9927,7 +9927,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
     if (PyDict_SetItem(__pyx_d, __pyx_n_s_name, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunk.pyx":499
+    /* "mmfparser/data/chunk.pyx":499
  * chunkIds = {}
  * for id, name in chunkNames.iteritems():
  *     chunkIds[name] = id             # <<<<<<<<<<<<<<
@@ -9947,7 +9947,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunk.pyx":501
+  /* "mmfparser/data/chunk.pyx":501
  *     chunkIds[name] = id
  * 
  * cdef int LAST = chunkIds['LAST']             # <<<<<<<<<<<<<<
@@ -9963,7 +9963,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_9mmfparser_4data_5chunk_LAST = __pyx_t_6;
 
-  /* "mmfparser\data\chunk.pyx":502
+  /* "mmfparser/data/chunk.pyx":502
  * 
  * cdef int LAST = chunkIds['LAST']
  * cdef int APPTARGETFILENAME = chunkIds['APPTARGETFILENAME']             # <<<<<<<<<<<<<<
@@ -9979,7 +9979,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_9mmfparser_4data_5chunk_APPTARGETFILENAME = __pyx_t_6;
 
-  /* "mmfparser\data\chunk.pyx":503
+  /* "mmfparser/data/chunk.pyx":503
  * cdef int LAST = chunkIds['LAST']
  * cdef int APPTARGETFILENAME = chunkIds['APPTARGETFILENAME']
  * cdef int PROTECTION = chunkIds['PROTECTION']             # <<<<<<<<<<<<<<
@@ -9995,7 +9995,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_9mmfparser_4data_5chunk_PROTECTION = __pyx_t_6;
 
-  /* "mmfparser\data\chunk.pyx":505
+  /* "mmfparser/data/chunk.pyx":505
  * cdef int PROTECTION = chunkIds['PROTECTION']
  * 
  * __all__ = ['Chunk', 'ChunkList', 'makeValueChunk']             # <<<<<<<<<<<<<<
@@ -10014,7 +10014,7 @@ PyMODINIT_FUNC PyInit_chunk(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_all_2, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 505; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunk.pyx":1
+  /* "mmfparser/data/chunk.pyx":1
  * from mmfparser.bytereader cimport ByteReader             # <<<<<<<<<<<<<<
  * from mmfparser.data import zlibdata
  * from mmfparser.data import onepointfive

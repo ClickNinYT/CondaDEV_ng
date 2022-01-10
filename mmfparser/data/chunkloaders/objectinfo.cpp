@@ -417,9 +417,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\objectinfo.pyx",
-  "mmfparser\\bytereader.pxd",
-  "mmfparser\\loader.pxd",
+  "mmfparser/data/chunkloaders/objectinfo.pyx",
+  "mmfparser/bytereader.pxd",
+  "mmfparser/loader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -433,7 +433,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -445,7 +445,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -457,7 +457,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -469,7 +469,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -481,7 +481,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -493,7 +493,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -505,7 +505,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -518,7 +518,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
 };
 struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString;
 
-/* "mmfparser\loader.pxd":31
+/* "mmfparser/loader.pxd":31
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False
  *     cpdef readString(self, ByteReader reader, size=?)             # <<<<<<<<<<<<<<
@@ -528,7 +528,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -1055,7 +1055,7 @@ static char __pyx_k_ObjectProperties_write[] = "ObjectProperties.write";
 static char __pyx_k_SEMITRANSPARENT_EFFECT[] = "SEMITRANSPARENT_EFFECT";
 static char __pyx_k_ObjectHeader_initialize[] = "ObjectHeader.initialize";
 static char __pyx_k_REPLACE_TRANSPARENT_EFFECT[] = "REPLACE_TRANSPARENT_EFFECT";
-static char __pyx_k_C_LAPTOP_Downloads_AnacondaDev_b[] = "C:\\LAPTOP\\Downloads\\AnacondaDev-b2c583a408de197bd210236d50a501047dce6853\\AnacondaDev-b2c583a408de197bd210236d50a501047dce6853\\mmfparser\\data\\chunkloaders\\objectinfo.pyx";
+static char __pyx_k_home_clicknin_Downloads_CondaDE[] = "/home/clicknin/Downloads/CondaDEV_ng-main/mmfparser/data/chunkloaders/objectinfo.pyx";
 static char __pyx_k_mmfparser_data_chunkloaders_comm[] = "mmfparser.data.chunkloaders.common";
 static char __pyx_k_mmfparser_data_chunkloaders_last[] = "mmfparser.data.chunkloaders.last";
 static char __pyx_k_mmfparser_data_chunkloaders_obje[] = "mmfparser.data.chunkloaders.objectinfo";
@@ -1073,7 +1073,6 @@ static PyObject *__pyx_n_s_Backdrop;
 static PyObject *__pyx_n_s_BitDict;
 static PyObject *__pyx_n_s_COUNTER;
 static PyObject *__pyx_n_s_CREATE;
-static PyObject *__pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b;
 static PyObject *__pyx_n_s_ChunkList;
 static PyObject *__pyx_n_s_Counter;
 static PyObject *__pyx_n_s_Create;
@@ -1167,6 +1166,7 @@ static PyObject *__pyx_n_s_getFlags;
 static PyObject *__pyx_n_s_getName;
 static PyObject *__pyx_n_s_getObjectType;
 static PyObject *__pyx_n_s_handle;
+static PyObject *__pyx_kp_s_home_clicknin_Downloads_CondaDE;
 static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_infoChunks;
@@ -1270,7 +1270,7 @@ static PyObject *__pyx_codeobj__21;
 static PyObject *__pyx_codeobj__23;
 static PyObject *__pyx_codeobj__25;
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":51
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":51
  *     QUESTION, SCORE, LIVES, COUNTER, RTF, SUBAPPLICATION) = xrange(-7, 10)
  * 
  * def getObjectType(id):             # <<<<<<<<<<<<<<
@@ -1303,7 +1303,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_getObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getObjectType", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":52
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":52
  * 
  * def getObjectType(id):
  *     if id < EXTENSION_BASE:             # <<<<<<<<<<<<<<
@@ -1318,7 +1318,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_getObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":53
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":53
  * def getObjectType(id):
  *     if id < EXTENSION_BASE:
  *         return objectTypes[id]             # <<<<<<<<<<<<<<
@@ -1337,7 +1337,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_getObject
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":55
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":55
  *         return objectTypes[id]
  *     else:
  *         return 'Extension'             # <<<<<<<<<<<<<<
@@ -1350,7 +1350,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_getObject
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":51
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":51
  *     QUESTION, SCORE, LIVES, COUNTER, RTF, SUBAPPLICATION) = xrange(-7, 10)
  * 
  * def getObjectType(id):             # <<<<<<<<<<<<<<
@@ -1370,7 +1370,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_getObject
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":63
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":63
  *     _loadReader = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1453,7 +1453,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":64
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":64
  * 
  *     def read(self, ByteReader reader):
  *         self._loadReader = reader             # <<<<<<<<<<<<<<
@@ -1462,7 +1462,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_loadReader, ((PyObject *)__pyx_v_reader)) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":63
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":63
  *     _loadReader = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1482,7 +1482,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":66
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":66
  *         self._loadReader = reader
  * 
  *     def load(self, objectType):             # <<<<<<<<<<<<<<
@@ -1568,7 +1568,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("load", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":67
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":67
  * 
  *     def load(self, objectType):
  *         self.objectType = objectType             # <<<<<<<<<<<<<<
@@ -1577,7 +1577,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_objectType, __pyx_v_objectType) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":68
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":68
  *     def load(self, objectType):
  *         self.objectType = objectType
  *         reader = self._loadReader             # <<<<<<<<<<<<<<
@@ -1589,7 +1589,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   __pyx_v_reader = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":69
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":69
  *         self.objectType = objectType
  *         reader = self._loadReader
  *         del self._loadReader             # <<<<<<<<<<<<<<
@@ -1598,7 +1598,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
  */
   if (__Pyx_PyObject_DelAttrStr(__pyx_v_self, __pyx_n_s_loadReader) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":70
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":70
  *         reader = self._loadReader
  *         del self._loadReader
  *         reader.seek(0)             # <<<<<<<<<<<<<<
@@ -1612,7 +1612,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":72
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":72
  *         reader.seek(0)
  * 
  *         self.isCommon = False             # <<<<<<<<<<<<<<
@@ -1621,7 +1621,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_isCommon, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 72; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":73
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":73
  * 
  *         self.isCommon = False
  *         if objectType == QUICKBACKDROP:             # <<<<<<<<<<<<<<
@@ -1636,7 +1636,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_3) {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":74
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":74
  *         self.isCommon = False
  *         if objectType == QUICKBACKDROP:
  *             self.loader = self.new(QuickBackdrop, reader)             # <<<<<<<<<<<<<<
@@ -1679,7 +1679,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
     goto __pyx_L3;
   }
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":75
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":75
  *         if objectType == QUICKBACKDROP:
  *             self.loader = self.new(QuickBackdrop, reader)
  *         elif objectType == BACKDROP:             # <<<<<<<<<<<<<<
@@ -1694,7 +1694,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":76
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":76
  *             self.loader = self.new(QuickBackdrop, reader)
  *         elif objectType == BACKDROP:
  *             self.loader = self.new(Backdrop, reader)             # <<<<<<<<<<<<<<
@@ -1738,7 +1738,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":78
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":78
  *             self.loader = self.new(Backdrop, reader)
  *         else:
  *             self.isCommon = True             # <<<<<<<<<<<<<<
@@ -1747,7 +1747,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_isCommon, Py_True) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":79
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":79
  *         else:
  *             self.isCommon = True
  *             self.loader = self.new(ObjectCommon, reader)             # <<<<<<<<<<<<<<
@@ -1790,7 +1790,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":66
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":66
  *         self._loadReader = reader
  * 
  *     def load(self, objectType):             # <<<<<<<<<<<<<<
@@ -1816,7 +1816,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":81
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":81
  *             self.loader = self.new(ObjectCommon, reader)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1903,7 +1903,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":82
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":82
  * 
  *     def write(self, ByteReader reader):
  *         self.loader.write(reader)             # <<<<<<<<<<<<<<
@@ -1942,7 +1942,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":81
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":81
  *             self.loader = self.new(ObjectCommon, reader)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1966,7 +1966,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_16ObjectP
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":127
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":127
  * class ObjectEffects(DataLoader):
  *     items = None
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2056,7 +2056,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":128
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":128
  *     items = None
  *     def read(self, ByteReader reader):
  *         self.id = reader.readInt(True)             # <<<<<<<<<<<<<<
@@ -2070,7 +2070,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_id, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":129
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":129
  *     def read(self, ByteReader reader):
  *         self.id = reader.readInt(True)
  *         self.items = [reader.readReader(4)             # <<<<<<<<<<<<<<
@@ -2080,7 +2080,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
   __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":130
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":130
  *         self.id = reader.readInt(True)
  *         self.items = [reader.readReader(4)
  *             for _ in xrange(reader.readInt(True))]             # <<<<<<<<<<<<<<
@@ -2140,7 +2140,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
     __Pyx_XDECREF_SET(__pyx_v__, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":129
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":129
  *     def read(self, ByteReader reader):
  *         self.id = reader.readInt(True)
  *         self.items = [reader.readReader(4)             # <<<<<<<<<<<<<<
@@ -2152,7 +2152,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
     if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_3))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":130
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":130
  *         self.id = reader.readInt(True)
  *         self.items = [reader.readReader(4)
  *             for _ in xrange(reader.readInt(True))]             # <<<<<<<<<<<<<<
@@ -2162,7 +2162,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":129
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":129
  *     def read(self, ByteReader reader):
  *         self.id = reader.readInt(True)
  *         self.items = [reader.readReader(4)             # <<<<<<<<<<<<<<
@@ -2172,7 +2172,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_items, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":127
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":127
  * class ObjectEffects(DataLoader):
  *     items = None
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2196,7 +2196,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_13ObjectE
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":139
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":139
  *     inkEffectParameter = None
  * 
  *     def initialize(self):             # <<<<<<<<<<<<<<
@@ -2229,7 +2229,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("initialize", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":140
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":140
  * 
  *     def initialize(self):
  *         self.flags = OBJECT_FLAGS.copy()             # <<<<<<<<<<<<<<
@@ -2262,7 +2262,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_flags, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":139
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":139
  *     inkEffectParameter = None
  * 
  *     def initialize(self):             # <<<<<<<<<<<<<<
@@ -2285,7 +2285,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":142
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":142
  *         self.flags = OBJECT_FLAGS.copy()
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2377,7 +2377,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":143
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":143
  * 
  *     def read(self, ByteReader reader):
  *         self.handle = reader.readShort()             # <<<<<<<<<<<<<<
@@ -2390,7 +2390,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_handle, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":144
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":144
  *     def read(self, ByteReader reader):
  *         self.handle = reader.readShort()
  *         self.objectType = reader.readShort()             # <<<<<<<<<<<<<<
@@ -2403,7 +2403,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_objectType, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":145
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":145
  *         self.handle = reader.readShort()
  *         self.objectType = reader.readShort()
  *         self.flags.setFlags(reader.readShort(True))             # <<<<<<<<<<<<<<
@@ -2448,7 +2448,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":146
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":146
  *         self.objectType = reader.readShort()
  *         self.flags.setFlags(reader.readShort(True))
  *         reserved = reader.readShort() # no longer used             # <<<<<<<<<<<<<<
@@ -2458,7 +2458,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_1 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_reserved = __pyx_t_1;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":147
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":147
  *         self.flags.setFlags(reader.readShort(True))
  *         reserved = reader.readShort() # no longer used
  *         self.inkEffect = reader.readInt(True)             # <<<<<<<<<<<<<<
@@ -2472,7 +2472,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_inkEffect, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":148
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":148
  *         reserved = reader.readShort() # no longer used
  *         self.inkEffect = reader.readInt(True)
  *         self.inkEffectParameter = reader.readInt(True)             # <<<<<<<<<<<<<<
@@ -2486,7 +2486,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_inkEffectParameter, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":142
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":142
  *         self.flags = OBJECT_FLAGS.copy()
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2511,7 +2511,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":150
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":150
  *         self.inkEffectParameter = reader.readInt(True)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2600,7 +2600,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":151
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":151
  * 
  *     def write(self, ByteReader reader):
  *         reader.writeShort(self.handle)             # <<<<<<<<<<<<<<
@@ -2639,7 +2639,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":152
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":152
  *     def write(self, ByteReader reader):
  *         reader.writeShort(self.handle)
  *         reader.writeShort(self.objectType)             # <<<<<<<<<<<<<<
@@ -2678,7 +2678,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":153
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":153
  *         reader.writeShort(self.handle)
  *         reader.writeShort(self.objectType)
  *         reader.writeShort(self.flags.getFlags(), True)             # <<<<<<<<<<<<<<
@@ -2739,7 +2739,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":154
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":154
  *         reader.writeShort(self.objectType)
  *         reader.writeShort(self.flags.getFlags(), True)
  *         reader.writeShort(0)             # <<<<<<<<<<<<<<
@@ -2753,7 +2753,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":155
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":155
  *         reader.writeShort(self.flags.getFlags(), True)
  *         reader.writeShort(0)
  *         reader.writeInt(self.inkEffect, True)             # <<<<<<<<<<<<<<
@@ -2793,7 +2793,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":156
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":156
  *         reader.writeShort(0)
  *         reader.writeInt(self.inkEffect, True)
  *         reader.writeInt(self.inkEffectParameter, True)             # <<<<<<<<<<<<<<
@@ -2833,7 +2833,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":150
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":150
  *         self.inkEffectParameter = reader.readInt(True)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2858,7 +2858,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_12ObjectH
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":173
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":173
  *     items = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2957,7 +2957,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":174
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":174
  * 
  *     def read(self, ByteReader reader):
  *         infoChunks = self.new(ChunkList, reader)             # <<<<<<<<<<<<<<
@@ -2998,7 +2998,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __pyx_v_infoChunks = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":175
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":175
  *     def read(self, ByteReader reader):
  *         infoChunks = self.new(ChunkList, reader)
  *         properties = None             # <<<<<<<<<<<<<<
@@ -3008,7 +3008,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_INCREF(Py_None);
   __pyx_v_properties = Py_None;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":176
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":176
  *         infoChunks = self.new(ChunkList, reader)
  *         properties = None
  *         for chunk in infoChunks.items:             # <<<<<<<<<<<<<<
@@ -3058,7 +3058,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __Pyx_XDECREF_SET(__pyx_v_chunk, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":177
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":177
  *         properties = None
  *         for chunk in infoChunks.items:
  *             loader = chunk.loader             # <<<<<<<<<<<<<<
@@ -3070,7 +3070,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __Pyx_XDECREF_SET(__pyx_v_loader, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":178
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":178
  *         for chunk in infoChunks.items:
  *             loader = chunk.loader
  *             klass = loader.__class__             # <<<<<<<<<<<<<<
@@ -3082,7 +3082,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __Pyx_XDECREF_SET(__pyx_v_klass, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":179
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":179
  *             loader = chunk.loader
  *             klass = loader.__class__
  *             if klass is ObjectName:             # <<<<<<<<<<<<<<
@@ -3096,7 +3096,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __pyx_t_9 = (__pyx_t_8 != 0);
     if (__pyx_t_9) {
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":180
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":180
  *             klass = loader.__class__
  *             if klass is ObjectName:
  *                 self.name = loader.value             # <<<<<<<<<<<<<<
@@ -3110,7 +3110,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       goto __pyx_L5;
     }
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":181
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":181
  *             if klass is ObjectName:
  *                 self.name = loader.value
  *             elif klass is ObjectHeader:             # <<<<<<<<<<<<<<
@@ -3124,7 +3124,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __pyx_t_8 = (__pyx_t_9 != 0);
     if (__pyx_t_8) {
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":182
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":182
  *                 self.name = loader.value
  *             elif klass is ObjectHeader:
  *                 self.handle = loader.handle             # <<<<<<<<<<<<<<
@@ -3136,7 +3136,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_handle, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 182; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":183
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":183
  *             elif klass is ObjectHeader:
  *                 self.handle = loader.handle
  *                 self.objectType = loader.objectType             # <<<<<<<<<<<<<<
@@ -3148,7 +3148,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_objectType, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 183; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":184
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":184
  *                 self.handle = loader.handle
  *                 self.objectType = loader.objectType
  *                 self.flags = loader.flags             # <<<<<<<<<<<<<<
@@ -3160,7 +3160,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_flags, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 184; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":185
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":185
  *                 self.objectType = loader.objectType
  *                 self.flags = loader.flags
  *                 inkEffect = loader.inkEffect             # <<<<<<<<<<<<<<
@@ -3172,7 +3172,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       __Pyx_XDECREF_SET(__pyx_v_inkEffect, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":186
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":186
  *                 self.flags = loader.flags
  *                 inkEffect = loader.inkEffect
  *                 self.transparent = byteflag.getFlag(inkEffect, 28)             # <<<<<<<<<<<<<<
@@ -3214,7 +3214,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_transparent, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 186; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":187
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":187
  *                 inkEffect = loader.inkEffect
  *                 self.transparent = byteflag.getFlag(inkEffect, 28)
  *                 self.antialias = byteflag.getFlag(inkEffect, 29)             # <<<<<<<<<<<<<<
@@ -3256,7 +3256,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_antialias, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 187; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":188
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":188
  *                 self.transparent = byteflag.getFlag(inkEffect, 28)
  *                 self.antialias = byteflag.getFlag(inkEffect, 29)
  *                 self.inkEffect = inkEffect & 0xFFFF             # <<<<<<<<<<<<<<
@@ -3268,7 +3268,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_inkEffect, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 188; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":189
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":189
  *                 self.antialias = byteflag.getFlag(inkEffect, 29)
  *                 self.inkEffect = inkEffect & 0xFFFF
  *                 self.inkEffectValue = loader.inkEffectParameter             # <<<<<<<<<<<<<<
@@ -3282,7 +3282,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       goto __pyx_L5;
     }
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":190
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":190
  *                 self.inkEffect = inkEffect & 0xFFFF
  *                 self.inkEffectValue = loader.inkEffectParameter
  *             elif klass is ObjectProperties:             # <<<<<<<<<<<<<<
@@ -3296,7 +3296,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __pyx_t_9 = (__pyx_t_8 != 0);
     if (__pyx_t_9) {
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":191
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":191
  *                 self.inkEffectValue = loader.inkEffectParameter
  *             elif klass is ObjectProperties:
  *                 properties = loader             # <<<<<<<<<<<<<<
@@ -3308,7 +3308,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       goto __pyx_L5;
     }
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":192
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":192
  *             elif klass is ObjectProperties:
  *                 properties = loader
  *             elif klass is ObjectEffects:             # <<<<<<<<<<<<<<
@@ -3322,7 +3322,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __pyx_t_8 = (__pyx_t_9 != 0);
     if (__pyx_t_8) {
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":193
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":193
  *                 properties = loader
  *             elif klass is ObjectEffects:
  *                 self.shaderId = loader.id             # <<<<<<<<<<<<<<
@@ -3334,7 +3334,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_shaderId, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":194
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":194
  *             elif klass is ObjectEffects:
  *                 self.shaderId = loader.id
  *                 self.items = loader.items             # <<<<<<<<<<<<<<
@@ -3349,7 +3349,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     }
     /*else*/ {
 
-      /* "mmfparser\data\chunkloaders\objectinfo.pyx":196
+      /* "mmfparser/data/chunkloaders/objectinfo.pyx":196
  *                 self.items = loader.items
  *             else:
  *                 print chunk.getName(), chunk.id             # <<<<<<<<<<<<<<
@@ -3391,7 +3391,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     }
     __pyx_L5:;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":176
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":176
  *         infoChunks = self.new(ChunkList, reader)
  *         properties = None
  *         for chunk in infoChunks.items:             # <<<<<<<<<<<<<<
@@ -3401,7 +3401,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":197
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":197
  *             else:
  *                 print chunk.getName(), chunk.id
  *         properties.load(self.objectType)             # <<<<<<<<<<<<<<
@@ -3440,7 +3440,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":198
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":198
  *                 print chunk.getName(), chunk.id
  *         properties.load(self.objectType)
  *         self.properties = properties             # <<<<<<<<<<<<<<
@@ -3449,7 +3449,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_properties, __pyx_v_properties) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 198; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":173
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":173
  *     items = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3480,7 +3480,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\objectinfo.pyx":200
+/* "mmfparser/data/chunkloaders/objectinfo.pyx":200
  *         self.properties = properties
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3576,7 +3576,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":201
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":201
  * 
  *     def write(self, ByteReader reader):
  *         newChunks = self.new(ChunkList)             # <<<<<<<<<<<<<<
@@ -3616,7 +3616,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __pyx_v_newChunks = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":202
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":202
  *     def write(self, ByteReader reader):
  *         newChunks = self.new(ChunkList)
  *         newHeader = self.new(ObjectHeader)             # <<<<<<<<<<<<<<
@@ -3656,7 +3656,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __pyx_v_newHeader = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":203
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":203
  *         newChunks = self.new(ChunkList)
  *         newHeader = self.new(ObjectHeader)
  *         newHeader.handle = self.handle             # <<<<<<<<<<<<<<
@@ -3668,7 +3668,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newHeader, __pyx_n_s_handle, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 203; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":204
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":204
  *         newHeader = self.new(ObjectHeader)
  *         newHeader.handle = self.handle
  *         newHeader.objectType = self.objectType             # <<<<<<<<<<<<<<
@@ -3680,7 +3680,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newHeader, __pyx_n_s_objectType, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 204; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":205
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":205
  *         newHeader.handle = self.handle
  *         newHeader.objectType = self.objectType
  *         newHeader.flags = self.flags             # <<<<<<<<<<<<<<
@@ -3692,7 +3692,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newHeader, __pyx_n_s_flags, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 205; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":206
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":206
  *         newHeader.objectType = self.objectType
  *         newHeader.flags = self.flags
  *         flag = 0             # <<<<<<<<<<<<<<
@@ -3702,7 +3702,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_flag = __pyx_int_0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":207
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":207
  *         newHeader.flags = self.flags
  *         flag = 0
  *         if self.transparent:             # <<<<<<<<<<<<<<
@@ -3715,7 +3715,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":208
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":208
  *         flag = 0
  *         if self.transparent:
  *             flag = byteflag.setFlag(flag, 28, True)             # <<<<<<<<<<<<<<
@@ -3763,7 +3763,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":209
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":209
  *         if self.transparent:
  *             flag = byteflag.setFlag(flag, 28, True)
  *         if self.antialias:             # <<<<<<<<<<<<<<
@@ -3776,7 +3776,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":210
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":210
  *             flag = byteflag.setFlag(flag, 28, True)
  *         if self.antialias:
  *             flag = byteflag.setFlag(flag, 29, True)             # <<<<<<<<<<<<<<
@@ -3824,7 +3824,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   }
   __pyx_L4:;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":211
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":211
  *         if self.antialias:
  *             flag = byteflag.setFlag(flag, 29, True)
  *         flag = flag | (self.inkEffect & 0xFFFF)             # <<<<<<<<<<<<<<
@@ -3842,7 +3842,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_DECREF_SET(__pyx_v_flag, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":212
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":212
  *             flag = byteflag.setFlag(flag, 29, True)
  *         flag = flag | (self.inkEffect & 0xFFFF)
  *         newHeader.inkEffect = flag             # <<<<<<<<<<<<<<
@@ -3851,7 +3851,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newHeader, __pyx_n_s_inkEffect, __pyx_v_flag) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 212; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":213
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":213
  *         flag = flag | (self.inkEffect & 0xFFFF)
  *         newHeader.inkEffect = flag
  *         newHeader.inkEffectParameter = self.inkEffectValue             # <<<<<<<<<<<<<<
@@ -3863,7 +3863,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_newHeader, __pyx_n_s_inkEffectParameter, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 213; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":214
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":214
  *         newHeader.inkEffect = flag
  *         newHeader.inkEffectParameter = self.inkEffectValue
  *         newChunks.append(newHeader)             # <<<<<<<<<<<<<<
@@ -3872,7 +3872,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
  */
   __pyx_t_8 = __Pyx_PyObject_Append(__pyx_v_newChunks, __pyx_v_newHeader); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 214; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":215
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":215
  *         newHeader.inkEffectParameter = self.inkEffectValue
  *         newChunks.append(newHeader)
  *         if self.name is not None:             # <<<<<<<<<<<<<<
@@ -3886,7 +3886,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __pyx_t_9 = (__pyx_t_6 != 0);
   if (__pyx_t_9) {
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":216
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":216
  *         newChunks.append(newHeader)
  *         if self.name is not None:
  *             newName = self.new(ObjectName)             # <<<<<<<<<<<<<<
@@ -3926,7 +3926,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     __pyx_v_newName = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":217
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":217
  *         if self.name is not None:
  *             newName = self.new(ObjectName)
  *             newName.value = self.name             # <<<<<<<<<<<<<<
@@ -3938,7 +3938,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_newName, __pyx_n_s_value, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 217; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\objectinfo.pyx":218
+    /* "mmfparser/data/chunkloaders/objectinfo.pyx":218
  *             newName = self.new(ObjectName)
  *             newName.value = self.name
  *             newChunks.append(newName)             # <<<<<<<<<<<<<<
@@ -3950,7 +3950,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   }
   __pyx_L5:;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":219
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":219
  *             newName.value = self.name
  *             newChunks.append(newName)
  *         newChunks.append(self.properties)             # <<<<<<<<<<<<<<
@@ -3962,7 +3962,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __pyx_t_8 = __Pyx_PyObject_Append(__pyx_v_newChunks, __pyx_t_1); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 219; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":220
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":220
  *             newChunks.append(newName)
  *         newChunks.append(self.properties)
  *         newChunks.append(Last())             # <<<<<<<<<<<<<<
@@ -3992,7 +3992,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __pyx_t_8 = __Pyx_PyObject_Append(__pyx_v_newChunks, __pyx_t_1); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":221
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":221
  *         newChunks.append(self.properties)
  *         newChunks.append(Last())
  *         newChunks.write(reader)             # <<<<<<<<<<<<<<
@@ -4028,7 +4028,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10objectinfo_10ObjectI
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":200
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":200
  *         self.properties = properties
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4092,7 +4092,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_BitDict, __pyx_k_BitDict, sizeof(__pyx_k_BitDict), 0, 0, 1, 1},
   {&__pyx_n_s_COUNTER, __pyx_k_COUNTER, sizeof(__pyx_k_COUNTER), 0, 0, 1, 1},
   {&__pyx_n_s_CREATE, __pyx_k_CREATE, sizeof(__pyx_k_CREATE), 0, 0, 1, 1},
-  {&__pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_k_C_LAPTOP_Downloads_AnacondaDev_b, sizeof(__pyx_k_C_LAPTOP_Downloads_AnacondaDev_b), 0, 0, 1, 0},
   {&__pyx_n_s_ChunkList, __pyx_k_ChunkList, sizeof(__pyx_k_ChunkList), 0, 0, 1, 1},
   {&__pyx_n_s_Counter, __pyx_k_Counter, sizeof(__pyx_k_Counter), 0, 0, 1, 1},
   {&__pyx_n_s_Create, __pyx_k_Create, sizeof(__pyx_k_Create), 0, 0, 1, 1},
@@ -4186,6 +4185,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_getName, __pyx_k_getName, sizeof(__pyx_k_getName), 0, 0, 1, 1},
   {&__pyx_n_s_getObjectType, __pyx_k_getObjectType, sizeof(__pyx_k_getObjectType), 0, 0, 1, 1},
   {&__pyx_n_s_handle, __pyx_k_handle, sizeof(__pyx_k_handle), 0, 0, 1, 1},
+  {&__pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_k_home_clicknin_Downloads_CondaDE, sizeof(__pyx_k_home_clicknin_Downloads_CondaDE), 0, 0, 1, 0},
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_infoChunks, __pyx_k_infoChunks, sizeof(__pyx_k_infoChunks), 0, 0, 1, 1},
@@ -4255,7 +4255,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":70
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":70
  *         reader = self._loadReader
  *         del self._loadReader
  *         reader.seek(0)             # <<<<<<<<<<<<<<
@@ -4266,7 +4266,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":154
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":154
  *         reader.writeShort(self.objectType)
  *         reader.writeShort(self.flags.getFlags(), True)
  *         reader.writeShort(0)             # <<<<<<<<<<<<<<
@@ -4277,7 +4277,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":49
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":49
  * (PLAYER, KEYBOARD, CREATE, TIMER, GAME, SPEAKER,
  *     SYSTEM, QUICKBACKDROP, BACKDROP, ACTIVE, TEXT,
  *     QUESTION, SCORE, LIVES, COUNTER, RTF, SUBAPPLICATION) = xrange(-7, 10)             # <<<<<<<<<<<<<<
@@ -4288,7 +4288,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":51
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":51
  *     QUESTION, SCORE, LIVES, COUNTER, RTF, SUBAPPLICATION) = xrange(-7, 10)
  * 
  * def getObjectType(id):             # <<<<<<<<<<<<<<
@@ -4298,9 +4298,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_id); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_getObjectType, 51, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_getObjectType, 51, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":63
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":63
  *     _loadReader = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4310,9 +4310,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_reader); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_read, 63, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_read, 63, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":66
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":66
  *         self._loadReader = reader
  * 
  *     def load(self, objectType):             # <<<<<<<<<<<<<<
@@ -4322,9 +4322,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_objectType, __pyx_n_s_reader); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_load, 66, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_load, 66, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":81
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":81
  *             self.loader = self.new(ObjectCommon, reader)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4334,9 +4334,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_reader); if (unlikely(!__pyx_tuple__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_write, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_write, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":118
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":118
  * }
  * 
  * OBJECT_FLAGS = BitDict(             # <<<<<<<<<<<<<<
@@ -4347,7 +4347,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":127
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":127
  * class ObjectEffects(DataLoader):
  *     items = None
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4357,9 +4357,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__14 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_reader, __pyx_n_s__13); if (unlikely(!__pyx_tuple__14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_read, 127, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_read, 127, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":139
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":139
  *     inkEffectParameter = None
  * 
  *     def initialize(self):             # <<<<<<<<<<<<<<
@@ -4369,9 +4369,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__16 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_initialize, 139, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_initialize, 139, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":142
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":142
  *         self.flags = OBJECT_FLAGS.copy()
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4381,9 +4381,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__18 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_reader, __pyx_n_s_reserved); if (unlikely(!__pyx_tuple__18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_read, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_read, 142, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":150
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":150
  *         self.inkEffectParameter = reader.readInt(True)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4393,9 +4393,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__20 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_reader); if (unlikely(!__pyx_tuple__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_write, 150, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_write, 150, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":173
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":173
  *     items = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4405,9 +4405,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__22 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_reader, __pyx_n_s_infoChunks, __pyx_n_s_properties, __pyx_n_s_chunk, __pyx_n_s_loader, __pyx_n_s_klass, __pyx_n_s_inkEffect); if (unlikely(!__pyx_tuple__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_read, 173, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_read, 173, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":200
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":200
  *         self.properties = properties
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4417,7 +4417,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__24 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_reader, __pyx_n_s_newChunks, __pyx_n_s_newHeader, __pyx_n_s_flag, __pyx_n_s_newName); if (unlikely(!__pyx_tuple__24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_write, 200, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_write, 200, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -4566,7 +4566,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":19
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":19
  * 
  * from mmfparser.bytereader cimport ByteReader
  * from mmfparser.bitdict import BitDict             # <<<<<<<<<<<<<<
@@ -4587,7 +4587,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":20
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":20
  * from mmfparser.bytereader cimport ByteReader
  * from mmfparser.bitdict import BitDict
  * from mmfparser.data.chunkloaders.stringchunk import StringChunk             # <<<<<<<<<<<<<<
@@ -4608,7 +4608,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":22
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":22
  * from mmfparser.data.chunkloaders.stringchunk import StringChunk
  * from mmfparser.loader cimport DataLoader
  * from mmfparser.data.chunkloaders.common import _ObjectTypeMixin             # <<<<<<<<<<<<<<
@@ -4629,7 +4629,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":23
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":23
  * from mmfparser.loader cimport DataLoader
  * from mmfparser.data.chunkloaders.common import _ObjectTypeMixin
  * from mmfparser import byteflag             # <<<<<<<<<<<<<<
@@ -4650,7 +4650,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":25
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":25
  * from mmfparser import byteflag
  * 
  * EXTENSION_BASE = 32             # <<<<<<<<<<<<<<
@@ -4659,7 +4659,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_EXTENSION_BASE, __pyx_int_32) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":27
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":27
  * EXTENSION_BASE = 32
  * 
  * objectTypes = {             # <<<<<<<<<<<<<<
@@ -4688,7 +4688,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_objectTypes, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":49
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":49
  * (PLAYER, KEYBOARD, CREATE, TIMER, GAME, SPEAKER,
  *     SYSTEM, QUICKBACKDROP, BACKDROP, ACTIVE, TEXT,
  *     QUESTION, SCORE, LIVES, COUNTER, RTF, SUBAPPLICATION) = xrange(-7, 10)             # <<<<<<<<<<<<<<
@@ -4800,7 +4800,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
     __pyx_L3_unpacking_done:;
   }
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":47
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":47
  * }
  * 
  * (PLAYER, KEYBOARD, CREATE, TIMER, GAME, SPEAKER,             # <<<<<<<<<<<<<<
@@ -4842,7 +4842,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_SUBAPPLICATION, __pyx_t_18) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":51
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":51
  *     QUESTION, SCORE, LIVES, COUNTER, RTF, SUBAPPLICATION) = xrange(-7, 10)
  * 
  * def getObjectType(id):             # <<<<<<<<<<<<<<
@@ -4854,7 +4854,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_getObjectType, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":57
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":57
  *         return 'Extension'
  * 
  * class ObjectProperties(DataLoader, _ObjectTypeMixin):             # <<<<<<<<<<<<<<
@@ -4876,7 +4876,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __pyx_t_17 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_18, __pyx_n_s_ObjectProperties, __pyx_n_s_ObjectProperties, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_obje, (PyObject *) NULL); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":58
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":58
  * 
  * class ObjectProperties(DataLoader, _ObjectTypeMixin):
  *     loader = None             # <<<<<<<<<<<<<<
@@ -4885,7 +4885,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_loader, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":59
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":59
  * class ObjectProperties(DataLoader, _ObjectTypeMixin):
  *     loader = None
  *     objectType = None             # <<<<<<<<<<<<<<
@@ -4894,7 +4894,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_objectType, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 59; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":60
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":60
  *     loader = None
  *     objectType = None
  *     isCommon = None             # <<<<<<<<<<<<<<
@@ -4903,7 +4903,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_isCommon, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 60; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":61
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":61
  *     objectType = None
  *     isCommon = None
  *     _loadReader = None             # <<<<<<<<<<<<<<
@@ -4912,7 +4912,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_loadReader, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":63
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":63
  *     _loadReader = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4924,7 +4924,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_read, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":66
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":66
  *         self._loadReader = reader
  * 
  *     def load(self, objectType):             # <<<<<<<<<<<<<<
@@ -4936,7 +4936,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_load, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":81
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":81
  *             self.loader = self.new(ObjectCommon, reader)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4948,7 +4948,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_write, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":57
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":57
  *         return 'Extension'
  * 
  * class ObjectProperties(DataLoader, _ObjectTypeMixin):             # <<<<<<<<<<<<<<
@@ -4963,7 +4963,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":84
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":84
  *         self.loader.write(reader)
  * 
  * class ObjectName(StringChunk):             # <<<<<<<<<<<<<<
@@ -4989,7 +4989,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":87
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":87
  *     pass
  * 
  * NONE_EFFECT = 0             # <<<<<<<<<<<<<<
@@ -4998,7 +4998,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NONE_EFFECT, __pyx_int_0) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 87; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":88
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":88
  * 
  * NONE_EFFECT = 0
  * SEMITRANSPARENT_EFFECT = 1             # <<<<<<<<<<<<<<
@@ -5007,7 +5007,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_SEMITRANSPARENT_EFFECT, __pyx_int_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 88; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":89
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":89
  * NONE_EFFECT = 0
  * SEMITRANSPARENT_EFFECT = 1
  * INVERTED_EFFECT = 2             # <<<<<<<<<<<<<<
@@ -5016,7 +5016,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_INVERTED_EFFECT, __pyx_int_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 89; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":90
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":90
  * SEMITRANSPARENT_EFFECT = 1
  * INVERTED_EFFECT = 2
  * XOR_EFFECT = 3             # <<<<<<<<<<<<<<
@@ -5025,7 +5025,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_XOR_EFFECT, __pyx_int_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 90; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":91
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":91
  * INVERTED_EFFECT = 2
  * XOR_EFFECT = 3
  * AND_EFFECT = 4             # <<<<<<<<<<<<<<
@@ -5034,7 +5034,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_AND_EFFECT, __pyx_int_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 91; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":92
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":92
  * XOR_EFFECT = 3
  * AND_EFFECT = 4
  * OR_EFFECT = 5             # <<<<<<<<<<<<<<
@@ -5043,7 +5043,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_OR_EFFECT, __pyx_int_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":93
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":93
  * AND_EFFECT = 4
  * OR_EFFECT = 5
  * REPLACE_TRANSPARENT_EFFECT = 6             # <<<<<<<<<<<<<<
@@ -5052,7 +5052,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_REPLACE_TRANSPARENT_EFFECT, __pyx_int_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":94
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":94
  * OR_EFFECT = 5
  * REPLACE_TRANSPARENT_EFFECT = 6
  * DWROP_EFFECT = 7             # <<<<<<<<<<<<<<
@@ -5061,7 +5061,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_DWROP_EFFECT, __pyx_int_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":95
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":95
  * REPLACE_TRANSPARENT_EFFECT = 6
  * DWROP_EFFECT = 7
  * ANDNOT_EFFECT = 8             # <<<<<<<<<<<<<<
@@ -5070,7 +5070,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ANDNOT_EFFECT, __pyx_int_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":96
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":96
  * DWROP_EFFECT = 7
  * ANDNOT_EFFECT = 8
  * ADD_EFFECT = 9             # <<<<<<<<<<<<<<
@@ -5079,7 +5079,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ADD_EFFECT, __pyx_int_9) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":97
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":97
  * ANDNOT_EFFECT = 8
  * ADD_EFFECT = 9
  * MONOCHROME_EFFECT = 10             # <<<<<<<<<<<<<<
@@ -5088,7 +5088,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_MONOCHROME_EFFECT, __pyx_int_10) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":98
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":98
  * ADD_EFFECT = 9
  * MONOCHROME_EFFECT = 10
  * SUBTRACT_EFFECT = 11             # <<<<<<<<<<<<<<
@@ -5097,7 +5097,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_SUBTRACT_EFFECT, __pyx_int_11) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":99
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":99
  * MONOCHROME_EFFECT = 10
  * SUBTRACT_EFFECT = 11
  * NO_REPLACE_EFFECT = 12             # <<<<<<<<<<<<<<
@@ -5106,7 +5106,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_NO_REPLACE_EFFECT, __pyx_int_12) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":100
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":100
  * SUBTRACT_EFFECT = 11
  * NO_REPLACE_EFFECT = 12
  * SHADER_EFFECT = 13             # <<<<<<<<<<<<<<
@@ -5115,7 +5115,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_SHADER_EFFECT, __pyx_int_13) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 100; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":102
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":102
  * SHADER_EFFECT = 13
  * 
  * HWA_EFFECT = 0x1000 # BOP_RGBAFILTER             # <<<<<<<<<<<<<<
@@ -5124,7 +5124,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_HWA_EFFECT, __pyx_int_4096) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":104
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":104
  * HWA_EFFECT = 0x1000 # BOP_RGBAFILTER
  * 
  * INK_EFFECTS = {             # <<<<<<<<<<<<<<
@@ -5134,7 +5134,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":105
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":105
  * 
  * INK_EFFECTS = {
  *     NONE_EFFECT : 'None',             # <<<<<<<<<<<<<<
@@ -5146,7 +5146,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":106
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":106
  * INK_EFFECTS = {
  *     NONE_EFFECT : 'None',
  *     SEMITRANSPARENT_EFFECT : 'Semitransparent',             # <<<<<<<<<<<<<<
@@ -5158,7 +5158,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_Semitransparent) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":107
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":107
  *     NONE_EFFECT : 'None',
  *     SEMITRANSPARENT_EFFECT : 'Semitransparent',
  *     INVERTED_EFFECT : 'Inverted',             # <<<<<<<<<<<<<<
@@ -5170,7 +5170,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_Inverted) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":108
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":108
  *     SEMITRANSPARENT_EFFECT : 'Semitransparent',
  *     INVERTED_EFFECT : 'Inverted',
  *     XOR_EFFECT : 'XOR',             # <<<<<<<<<<<<<<
@@ -5182,7 +5182,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_XOR) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":109
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":109
  *     INVERTED_EFFECT : 'Inverted',
  *     XOR_EFFECT : 'XOR',
  *     AND_EFFECT : 'AND',             # <<<<<<<<<<<<<<
@@ -5194,7 +5194,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_AND) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":110
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":110
  *     XOR_EFFECT : 'XOR',
  *     AND_EFFECT : 'AND',
  *     OR_EFFECT : 'OR',             # <<<<<<<<<<<<<<
@@ -5206,7 +5206,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_OR) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":111
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":111
  *     AND_EFFECT : 'AND',
  *     OR_EFFECT : 'OR',
  *     ADD_EFFECT : 'Add',             # <<<<<<<<<<<<<<
@@ -5218,7 +5218,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_Add) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":112
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":112
  *     OR_EFFECT : 'OR',
  *     ADD_EFFECT : 'Add',
  *     MONOCHROME_EFFECT : 'Monochrome',             # <<<<<<<<<<<<<<
@@ -5230,7 +5230,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_Monochrome) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":113
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":113
  *     ADD_EFFECT : 'Add',
  *     MONOCHROME_EFFECT : 'Monochrome',
  *     SUBTRACT_EFFECT : 'Subtract',             # <<<<<<<<<<<<<<
@@ -5242,7 +5242,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_Subtract) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":114
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":114
  *     MONOCHROME_EFFECT : 'Monochrome',
  *     SUBTRACT_EFFECT : 'Subtract',
  *     SHADER_EFFECT : 'Shader',             # <<<<<<<<<<<<<<
@@ -5254,7 +5254,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_t_18, __pyx_n_s_Shader) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":115
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":115
  *     SUBTRACT_EFFECT : 'Subtract',
  *     SHADER_EFFECT : 'Shader',
  *     HWA_EFFECT : 'HWA'             # <<<<<<<<<<<<<<
@@ -5268,7 +5268,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_INK_EFFECTS, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":118
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":118
  * }
  * 
  * OBJECT_FLAGS = BitDict(             # <<<<<<<<<<<<<<
@@ -5283,7 +5283,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_OBJECT_FLAGS, __pyx_t_18) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 118; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":125
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":125
  * )
  * 
  * class ObjectEffects(DataLoader):             # <<<<<<<<<<<<<<
@@ -5300,7 +5300,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __pyx_t_17 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_18, __pyx_n_s_ObjectEffects, __pyx_n_s_ObjectEffects, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_obje, (PyObject *) NULL); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":126
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":126
  * 
  * class ObjectEffects(DataLoader):
  *     items = None             # <<<<<<<<<<<<<<
@@ -5309,7 +5309,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_items, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":127
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":127
  * class ObjectEffects(DataLoader):
  *     items = None
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5321,7 +5321,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_read, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":125
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":125
  * )
  * 
  * class ObjectEffects(DataLoader):             # <<<<<<<<<<<<<<
@@ -5336,7 +5336,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":132
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":132
  *             for _ in xrange(reader.readInt(True))]
  * 
  * class ObjectHeader(DataLoader, _ObjectTypeMixin):             # <<<<<<<<<<<<<<
@@ -5358,7 +5358,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __pyx_t_17 = __Pyx_Py3MetaclassPrepare(__pyx_t_18, __pyx_t_1, __pyx_n_s_ObjectHeader, __pyx_n_s_ObjectHeader, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_obje, (PyObject *) NULL); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":133
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":133
  * 
  * class ObjectHeader(DataLoader, _ObjectTypeMixin):
  *     handle = None             # <<<<<<<<<<<<<<
@@ -5367,7 +5367,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_handle, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 133; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":134
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":134
  * class ObjectHeader(DataLoader, _ObjectTypeMixin):
  *     handle = None
  *     objectType = None             # <<<<<<<<<<<<<<
@@ -5376,7 +5376,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_objectType, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":135
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":135
  *     handle = None
  *     objectType = None
  *     flags = None             # <<<<<<<<<<<<<<
@@ -5385,7 +5385,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_flags, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":136
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":136
  *     objectType = None
  *     flags = None
  *     inkEffect = None             # <<<<<<<<<<<<<<
@@ -5394,7 +5394,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_inkEffect, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":137
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":137
  *     flags = None
  *     inkEffect = None
  *     inkEffectParameter = None             # <<<<<<<<<<<<<<
@@ -5403,7 +5403,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_inkEffectParameter, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":139
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":139
  *     inkEffectParameter = None
  * 
  *     def initialize(self):             # <<<<<<<<<<<<<<
@@ -5415,7 +5415,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_initialize, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":142
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":142
  *         self.flags = OBJECT_FLAGS.copy()
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5427,7 +5427,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_read, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":150
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":150
  *         self.inkEffectParameter = reader.readInt(True)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5439,7 +5439,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_write, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":132
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":132
  *             for _ in xrange(reader.readInt(True))]
  * 
  * class ObjectHeader(DataLoader, _ObjectTypeMixin):             # <<<<<<<<<<<<<<
@@ -5454,7 +5454,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":158
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":158
  *         reader.writeInt(self.inkEffectParameter, True)
  * 
  * class ObjectInfo(DataLoader, _ObjectTypeMixin):             # <<<<<<<<<<<<<<
@@ -5476,7 +5476,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __pyx_t_17 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_t_18, __pyx_n_s_ObjectInfo, __pyx_n_s_ObjectInfo, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_obje, (PyObject *) NULL); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 158; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":159
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":159
  * 
  * class ObjectInfo(DataLoader, _ObjectTypeMixin):
  *     name = None             # <<<<<<<<<<<<<<
@@ -5485,7 +5485,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_name, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 159; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":160
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":160
  * class ObjectInfo(DataLoader, _ObjectTypeMixin):
  *     name = None
  *     handle = None             # <<<<<<<<<<<<<<
@@ -5494,7 +5494,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_handle, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 160; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":161
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":161
  *     name = None
  *     handle = None
  *     objectType = None             # <<<<<<<<<<<<<<
@@ -5503,7 +5503,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_objectType, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":162
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":162
  *     handle = None
  *     objectType = None
  *     flags = None             # <<<<<<<<<<<<<<
@@ -5512,7 +5512,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_flags, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 162; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":163
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":163
  *     objectType = None
  *     flags = None
  *     properties = None             # <<<<<<<<<<<<<<
@@ -5521,7 +5521,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_properties, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 163; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":165
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":165
  *     properties = None
  * 
  *     antialias = None             # <<<<<<<<<<<<<<
@@ -5530,7 +5530,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_antialias, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 165; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":166
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":166
  * 
  *     antialias = None
  *     transparent = None             # <<<<<<<<<<<<<<
@@ -5539,7 +5539,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_transparent, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 166; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":167
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":167
  *     antialias = None
  *     transparent = None
  *     inkEffect = None             # <<<<<<<<<<<<<<
@@ -5548,7 +5548,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_inkEffect, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 167; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":168
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":168
  *     transparent = None
  *     inkEffect = None
  *     inkEffectValue = None             # <<<<<<<<<<<<<<
@@ -5557,7 +5557,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_inkEffectValue, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 168; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":170
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":170
  *     inkEffectValue = None
  * 
  *     shaderId = None             # <<<<<<<<<<<<<<
@@ -5566,7 +5566,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_shaderId, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 170; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":171
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":171
  * 
  *     shaderId = None
  *     items = None             # <<<<<<<<<<<<<<
@@ -5575,7 +5575,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
  */
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_items, Py_None) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 171; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":173
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":173
  *     items = None
  * 
  *     def read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5587,7 +5587,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_read, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":200
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":200
  *         self.properties = properties
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5599,7 +5599,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyObject_SetItem(__pyx_t_17, __pyx_n_s_write, __pyx_t_16) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":158
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":158
  *         reader.writeInt(self.inkEffectParameter, True)
  * 
  * class ObjectInfo(DataLoader, _ObjectTypeMixin):             # <<<<<<<<<<<<<<
@@ -5614,7 +5614,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":223
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":223
  *         newChunks.write(reader)
  * 
  * from mmfparser.data.chunkloaders.objects import (QuickBackdrop, Backdrop,             # <<<<<<<<<<<<<<
@@ -5649,7 +5649,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":226
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":226
  *     ObjectCommon)
  * 
  * from mmfparser.data.chunkloaders.last import Last             # <<<<<<<<<<<<<<
@@ -5670,7 +5670,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":227
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":227
  * 
  * from mmfparser.data.chunkloaders.last import Last
  * from mmfparser.data.chunk import ChunkList             # <<<<<<<<<<<<<<
@@ -5691,7 +5691,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":229
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":229
  * from mmfparser.data.chunk import ChunkList
  * 
  * __all__ = ['ObjectProperties', 'ObjectInfo', 'ObjectHeader', 'ObjectName',             # <<<<<<<<<<<<<<
@@ -5717,7 +5717,7 @@ PyMODINIT_FUNC PyInit_objectinfo(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\objectinfo.pyx":1
+  /* "mmfparser/data/chunkloaders/objectinfo.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.

@@ -14,7 +14,6 @@ import sys
 import os
 import string
 import os.path
-from builtins import bytes
                                                                                                                                                                                                                                                                                                                                                                                         
 def main(opt):
     if opt == 0:

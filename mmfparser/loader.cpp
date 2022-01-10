@@ -417,9 +417,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\loader.pyx",
-  "mmfparser\\loader.pxd",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/loader.pyx",
+  "mmfparser/loader.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -433,7 +433,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -445,7 +445,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -457,7 +457,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -469,7 +469,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -481,7 +481,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -493,7 +493,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -505,7 +505,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -518,7 +518,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
 };
 struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString;
 
-/* "mmfparser\loader.pxd":31
+/* "mmfparser/loader.pxd":31
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False
  *     cpdef readString(self, ByteReader reader, size=?)             # <<<<<<<<<<<<<<
@@ -528,7 +528,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -582,7 +582,7 @@ struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader {
 static struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *__pyx_vtabptr_9mmfparser_10bytereader_ByteReader;
 
 
-/* "mmfparser\loader.pyx":18
+/* "mmfparser/loader.pyx":18
  * # along with Anaconda.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * cdef class DataLoader:             # <<<<<<<<<<<<<<
@@ -835,7 +835,7 @@ static PyObject *__pyx_n_s_unicode;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_write;
 
-/* "mmfparser\loader.pyx":19
+/* "mmfparser/loader.pyx":19
  * 
  * cdef class DataLoader:
  *     def __init__(self, reader = None, parent = None, **settings):             # <<<<<<<<<<<<<<
@@ -924,7 +924,7 @@ static int __pyx_pf_9mmfparser_6loader_10DataLoader___init__(struct __pyx_obj_9m
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "mmfparser\loader.pyx":20
+  /* "mmfparser/loader.pyx":20
  * cdef class DataLoader:
  *     def __init__(self, reader = None, parent = None, **settings):
  *         self.init(reader, parent, settings)             # <<<<<<<<<<<<<<
@@ -935,7 +935,7 @@ static int __pyx_pf_9mmfparser_6loader_10DataLoader___init__(struct __pyx_obj_9m
   if (!(likely(((__pyx_v_parent) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_parent, __pyx_ptype_9mmfparser_6loader_DataLoader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader *)__pyx_v_self->__pyx_vtab)->init(__pyx_v_self, ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader), ((struct __pyx_obj_9mmfparser_6loader_DataLoader *)__pyx_v_parent), __pyx_v_settings); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\loader.pyx":19
+  /* "mmfparser/loader.pyx":19
  * 
  * cdef class DataLoader:
  *     def __init__(self, reader = None, parent = None, **settings):             # <<<<<<<<<<<<<<
@@ -954,7 +954,7 @@ static int __pyx_pf_9mmfparser_6loader_10DataLoader___init__(struct __pyx_obj_9m
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":22
+/* "mmfparser/loader.pyx":22
  *         self.init(reader, parent, settings)
  * 
  *     cdef bint init(self, ByteReader reader, DataLoader parent,             # <<<<<<<<<<<<<<
@@ -975,7 +975,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("init", 0);
 
-  /* "mmfparser\loader.pyx":24
+  /* "mmfparser/loader.pyx":24
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False:
  *         self.parent = parent             # <<<<<<<<<<<<<<
@@ -988,7 +988,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   __Pyx_DECREF(((PyObject *)__pyx_v_self->parent));
   __pyx_v_self->parent = __pyx_v_parent;
 
-  /* "mmfparser\loader.pyx":25
+  /* "mmfparser/loader.pyx":25
  *                    dict settings) except False:
  *         self.parent = parent
  *         self.settings = settings             # <<<<<<<<<<<<<<
@@ -1001,7 +1001,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   __Pyx_DECREF(__pyx_v_self->settings);
   __pyx_v_self->settings = __pyx_v_settings;
 
-  /* "mmfparser\loader.pyx":27
+  /* "mmfparser/loader.pyx":27
  *         self.settings = settings
  *         IF IS_PYPY:
  *             getattr(self, 'initialize')()             # <<<<<<<<<<<<<<
@@ -1030,7 +1030,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\loader.pyx":30
+  /* "mmfparser/loader.pyx":30
  *         ELSE:
  *             self.initialize()
  *         if reader is not None:             # <<<<<<<<<<<<<<
@@ -1041,7 +1041,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (__pyx_t_5) {
 
-    /* "mmfparser\loader.pyx":31
+    /* "mmfparser/loader.pyx":31
  *             self.initialize()
  *         if reader is not None:
  *             self.read(reader)             # <<<<<<<<<<<<<<
@@ -1055,7 +1055,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   }
   __pyx_L3:;
 
-  /* "mmfparser\loader.pyx":32
+  /* "mmfparser/loader.pyx":32
  *         if reader is not None:
  *             self.read(reader)
  *         return True             # <<<<<<<<<<<<<<
@@ -1065,7 +1065,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser\loader.pyx":22
+  /* "mmfparser/loader.pyx":22
  *         self.init(reader, parent, settings)
  * 
  *     cdef bint init(self, ByteReader reader, DataLoader parent,             # <<<<<<<<<<<<<<
@@ -1085,7 +1085,7 @@ static int __pyx_f_9mmfparser_6loader_10DataLoader_init(struct __pyx_obj_9mmfpar
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":34
+/* "mmfparser/loader.pyx":34
  *         return True
  * 
  *     def new(self, type loaderClass, reader = None, **kw):             # <<<<<<<<<<<<<<
@@ -1181,7 +1181,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_2new(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("new", 0);
 
-  /* "mmfparser\loader.pyx":35
+  /* "mmfparser/loader.pyx":35
  * 
  *     def new(self, type loaderClass, reader = None, **kw):
  *         (<dict>kw).update(self.settings)             # <<<<<<<<<<<<<<
@@ -1217,7 +1217,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_2new(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\loader.pyx":36
+  /* "mmfparser/loader.pyx":36
  *     def new(self, type loaderClass, reader = None, **kw):
  *         (<dict>kw).update(self.settings)
  *         cdef DataLoader newLoader = loaderClass.__new__(loaderClass)             # <<<<<<<<<<<<<<
@@ -1234,7 +1234,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_2new(struct __pyx_obj_
   __pyx_v_newLoader = ((struct __pyx_obj_9mmfparser_6loader_DataLoader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\loader.pyx":37
+  /* "mmfparser/loader.pyx":37
  *         (<dict>kw).update(self.settings)
  *         cdef DataLoader newLoader = loaderClass.__new__(loaderClass)
  *         newLoader.init(reader, self, kw)             # <<<<<<<<<<<<<<
@@ -1244,7 +1244,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_2new(struct __pyx_obj_
   if (!(likely(((__pyx_v_reader) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_reader, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader *)__pyx_v_newLoader->__pyx_vtab)->init(__pyx_v_newLoader, ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader), __pyx_v_self, __pyx_v_kw); if (unlikely(__pyx_t_5 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\loader.pyx":38
+  /* "mmfparser/loader.pyx":38
  *         cdef DataLoader newLoader = loaderClass.__new__(loaderClass)
  *         newLoader.init(reader, self, kw)
  *         return newLoader             # <<<<<<<<<<<<<<
@@ -1256,7 +1256,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_2new(struct __pyx_obj_
   __pyx_r = ((PyObject *)__pyx_v_newLoader);
   goto __pyx_L0;
 
-  /* "mmfparser\loader.pyx":34
+  /* "mmfparser/loader.pyx":34
  *         return True
  * 
  *     def new(self, type loaderClass, reader = None, **kw):             # <<<<<<<<<<<<<<
@@ -1279,7 +1279,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_2new(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":40
+/* "mmfparser/loader.pyx":40
  *         return newLoader
  * 
  *     cpdef readString(self, ByteReader reader, size=None):             # <<<<<<<<<<<<<<
@@ -1354,7 +1354,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_readString(struct __pyx
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\loader.pyx":41
+  /* "mmfparser/loader.pyx":41
  * 
  *     cpdef readString(self, ByteReader reader, size=None):
  *         if self.settings.get('unicode', False):             # <<<<<<<<<<<<<<
@@ -1371,7 +1371,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_readString(struct __pyx
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_7) {
 
-    /* "mmfparser\loader.pyx":42
+    /* "mmfparser/loader.pyx":42
  *     cpdef readString(self, ByteReader reader, size=None):
  *         if self.settings.get('unicode', False):
  *             return reader.readUnicodeString(size).encode('utf-8')             # <<<<<<<<<<<<<<
@@ -1396,7 +1396,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_readString(struct __pyx
   }
   /*else*/ {
 
-    /* "mmfparser\loader.pyx":44
+    /* "mmfparser/loader.pyx":44
  *             return reader.readUnicodeString(size).encode('utf-8')
  *         else:
  *             return reader.readString(size)             # <<<<<<<<<<<<<<
@@ -1413,7 +1413,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_readString(struct __pyx
     goto __pyx_L0;
   }
 
-  /* "mmfparser\loader.pyx":40
+  /* "mmfparser/loader.pyx":40
  *         return newLoader
  * 
  *     cpdef readString(self, ByteReader reader, size=None):             # <<<<<<<<<<<<<<
@@ -1534,7 +1534,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_4readString(struct __p
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":46
+/* "mmfparser/loader.pyx":46
  *             return reader.readString(size)
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -1589,7 +1589,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_initialize(CYTHON_UNUSE
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\loader.pyx":47
+  /* "mmfparser/loader.pyx":47
  * 
  *     cpdef initialize(self):
  *         return             # <<<<<<<<<<<<<<
@@ -1600,7 +1600,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_initialize(CYTHON_UNUSE
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
 
-  /* "mmfparser\loader.pyx":46
+  /* "mmfparser/loader.pyx":46
  *             return reader.readString(size)
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -1661,7 +1661,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_6initialize(struct __p
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":49
+/* "mmfparser/loader.pyx":49
  *         return
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1724,7 +1724,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_read(struct __pyx_obj_9
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\loader.pyx":51
+  /* "mmfparser/loader.pyx":51
  *     cpdef read(self, ByteReader reader):
  *         IF IS_PYPY:
  *             return getattr(self, 'read')(reader)             # <<<<<<<<<<<<<<
@@ -1763,7 +1763,7 @@ static PyObject *__pyx_f_9mmfparser_6loader_10DataLoader_read(struct __pyx_obj_9
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\loader.pyx":49
+  /* "mmfparser/loader.pyx":49
  *         return
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1833,7 +1833,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_8read(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":56
+/* "mmfparser/loader.pyx":56
  *                 self.__class__.__name__)
  * 
  *     def generate(self):             # <<<<<<<<<<<<<<
@@ -1867,7 +1867,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_10generate(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("generate", 0);
 
-  /* "mmfparser\loader.pyx":57
+  /* "mmfparser/loader.pyx":57
  * 
  *     def generate(self):
  *         newReader = ByteReader()             # <<<<<<<<<<<<<<
@@ -1879,7 +1879,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_10generate(struct __py
   __pyx_v_newReader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\loader.pyx":58
+  /* "mmfparser/loader.pyx":58
  *     def generate(self):
  *         newReader = ByteReader()
  *         self.write(newReader)             # <<<<<<<<<<<<<<
@@ -1915,7 +1915,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_10generate(struct __py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\loader.pyx":59
+  /* "mmfparser/loader.pyx":59
  *         newReader = ByteReader()
  *         self.write(newReader)
  *         return newReader             # <<<<<<<<<<<<<<
@@ -1927,7 +1927,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_10generate(struct __py
   __pyx_r = ((PyObject *)__pyx_v_newReader);
   goto __pyx_L0;
 
-  /* "mmfparser\loader.pyx":56
+  /* "mmfparser/loader.pyx":56
  *                 self.__class__.__name__)
  * 
  *     def generate(self):             # <<<<<<<<<<<<<<
@@ -1950,7 +1950,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_10generate(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pyx":61
+/* "mmfparser/loader.pyx":61
  *         return newReader
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -1981,7 +1981,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_12write(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\loader.pyx":63
+  /* "mmfparser/loader.pyx":63
  *     def write(self, reader):
  *         raise NotImplementedError('%s has not implemented a write method' %
  *             self.__class__.__name__)             # <<<<<<<<<<<<<<
@@ -1992,7 +1992,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_12write(struct __pyx_o
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\loader.pyx":62
+  /* "mmfparser/loader.pyx":62
  * 
  *     def write(self, reader):
  *         raise NotImplementedError('%s has not implemented a write method' %             # <<<<<<<<<<<<<<
@@ -2013,7 +2013,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_12write(struct __pyx_o
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\loader.pyx":61
+  /* "mmfparser/loader.pyx":61
  *         return newReader
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -2032,7 +2032,7 @@ static PyObject *__pyx_pf_9mmfparser_6loader_10DataLoader_12write(struct __pyx_o
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pxd":24
+/* "mmfparser/loader.pxd":24
  * cdef class DataLoader:
  *     cdef public:
  *         dict settings             # <<<<<<<<<<<<<<
@@ -2140,7 +2140,7 @@ static int __pyx_pf_9mmfparser_6loader_10DataLoader_8settings_4__del__(struct __
   return __pyx_r;
 }
 
-/* "mmfparser\loader.pxd":25
+/* "mmfparser/loader.pxd":25
  *     cdef public:
  *         dict settings
  *         DataLoader parent             # <<<<<<<<<<<<<<
@@ -2562,7 +2562,7 @@ PyMODINIT_FUNC PyInit_loader(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\loader.pyx":1
+  /* "mmfparser/loader.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.

@@ -418,9 +418,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\imagebank.pyx",
-  "mmfparser\\common.pxd",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/data/chunkloaders/imagebank.pyx",
+  "mmfparser/common.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -442,7 +442,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -454,7 +454,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -466,7 +466,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -478,7 +478,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -490,7 +490,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -502,7 +502,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -514,7 +514,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -527,7 +527,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
 };
 struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString;
 
-/* "mmfparser\loader.pxd":31
+/* "mmfparser/loader.pxd":31
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False
  *     cpdef readString(self, ByteReader reader, size=?)             # <<<<<<<<<<<<<<
@@ -538,7 +538,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
 };
 struct __pyx_opt_args_9mmfparser_4data_12chunkloaders_9imagebank_get_padding;
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":213
+/* "mmfparser/data/chunkloaders/imagebank.pyx":211
  *     return points, n
  * 
  * cdef inline int get_padding(int width, BasePoint pointClass, int bytes = 2):             # <<<<<<<<<<<<<<
@@ -550,7 +550,7 @@ struct __pyx_opt_args_9mmfparser_4data_12chunkloaders_9imagebank_get_padding {
   int bytes;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -578,7 +578,7 @@ struct __pyx_obj_9mmfparser_6loader_DataLoader {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":102
+/* "mmfparser/data/chunkloaders/imagebank.pyx":100
  *     return newImage
  * 
  * cdef class BasePoint             # <<<<<<<<<<<<<<
@@ -592,7 +592,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":110
+/* "mmfparser/data/chunkloaders/imagebank.pyx":108
  *         pass
  * 
  * cdef class Point(BasePoint):             # <<<<<<<<<<<<<<
@@ -604,7 +604,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_Point {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":128
+/* "mmfparser/data/chunkloaders/imagebank.pyx":126
  * cdef BasePoint point_instance = Point()
  * 
  * cdef class SixteenPoint(BasePoint):             # <<<<<<<<<<<<<<
@@ -616,7 +616,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":156
+/* "mmfparser/data/chunkloaders/imagebank.pyx":154
  * cdef BasePoint sixteen_point = SixteenPoint()
  * 
  * cdef class FifteenPoint(BasePoint):             # <<<<<<<<<<<<<<
@@ -628,7 +628,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":185
+/* "mmfparser/data/chunkloaders/imagebank.pyx":183
  * cdef BasePoint fifteen_point = FifteenPoint()
  * 
  * cdef class IndexPoint(BasePoint):             # <<<<<<<<<<<<<<
@@ -640,7 +640,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":41
+/* "mmfparser/data/chunkloaders/imagebank.pyx":39
  * cdef int FIFTEENPOINT_MODE = 6  # 32768 colors
  * 
  * cdef class ImageItem             # <<<<<<<<<<<<<<
@@ -670,8 +670,8 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":504
- *        del self.image
+/* "mmfparser/data/chunkloaders/imagebank.pyx":489
+ *         return graphicModes[self.graphicMode]
  * 
  * cdef class JavaImage(DataLoader):             # <<<<<<<<<<<<<<
  *     cdef public:
@@ -691,7 +691,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage {
 };
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":560
+/* "mmfparser/data/chunkloaders/imagebank.pyx":545
  *         return img.get_data()
  * 
  * cdef class ImageBank(DataLoader):             # <<<<<<<<<<<<<<
@@ -705,7 +705,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank {
 
 
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -747,7 +747,7 @@ struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader {
 static struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader *__pyx_vtabptr_9mmfparser_6loader_DataLoader;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":343
+/* "mmfparser/data/chunkloaders/imagebank.pyx":341
  * )
  * 
  * cdef class ImageItem(DataLoader):             # <<<<<<<<<<<<<<
@@ -762,7 +762,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem {
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":104
+/* "mmfparser/data/chunkloaders/imagebank.pyx":102
  * cdef class BasePoint
  * 
  * cdef class BasePoint:             # <<<<<<<<<<<<<<
@@ -776,7 +776,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint {
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":110
+/* "mmfparser/data/chunkloaders/imagebank.pyx":108
  *         pass
  * 
  * cdef class Point(BasePoint):             # <<<<<<<<<<<<<<
@@ -791,7 +791,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_Point {
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_Point *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_Point;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":128
+/* "mmfparser/data/chunkloaders/imagebank.pyx":126
  * cdef BasePoint point_instance = Point()
  * 
  * cdef class SixteenPoint(BasePoint):             # <<<<<<<<<<<<<<
@@ -806,7 +806,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint 
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":156
+/* "mmfparser/data/chunkloaders/imagebank.pyx":154
  * cdef BasePoint sixteen_point = SixteenPoint()
  * 
  * cdef class FifteenPoint(BasePoint):             # <<<<<<<<<<<<<<
@@ -821,7 +821,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint 
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":185
+/* "mmfparser/data/chunkloaders/imagebank.pyx":183
  * cdef BasePoint fifteen_point = FifteenPoint()
  * 
  * cdef class IndexPoint(BasePoint):             # <<<<<<<<<<<<<<
@@ -836,8 +836,8 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint {
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":504
- *        del self.image
+/* "mmfparser/data/chunkloaders/imagebank.pyx":489
+ *         return graphicModes[self.graphicMode]
  * 
  * cdef class JavaImage(DataLoader):             # <<<<<<<<<<<<<<
  *     cdef public:
@@ -850,7 +850,7 @@ struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage {
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage;
 
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":560
+/* "mmfparser/data/chunkloaders/imagebank.pyx":545
  *         return img.get_data()
  * 
  * cdef class ImageBank(DataLoader):             # <<<<<<<<<<<<<<
@@ -1031,8 +1031,6 @@ static void __Pyx_RaiseDoubleKeywordsError(const char* func_name, PyObject* kw_n
 static int __Pyx_ParseOptionalKeywords(PyObject *kwds, PyObject **argnames[], \
     PyObject *kwds2, PyObject *values[], Py_ssize_t num_pos_args, \
     const char* function_name);
-
-static CYTHON_INLINE void __Pyx_RaiseUnboundLocalError(const char *varname);
 
 static CYTHON_INLINE void __Pyx_ExceptionSave(PyObject **type, PyObject **value, PyObject **tb);
 static void __Pyx_ExceptionReset(PyObject *type, PyObject *value, PyObject *tb);
@@ -1227,7 +1225,6 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
 static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_10getImageData(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self, PyObject *__pyx_v_frame, CYTHON_UNUSED PyObject *__pyx_v_kw); /* proto */
 static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_12unload(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_14getGraphicMode(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_16save(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6handle___get__(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self); /* proto */
 static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6handle_2__set__(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
 static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8checksum___get__(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self); /* proto */
@@ -1309,15 +1306,11 @@ static PyObject *__pyx_tp_new_9mmfparser_4data_12chunkloaders_9imagebank_Fifteen
 static PyObject *__pyx_tp_new_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static char __pyx_k_L[] = "L";
 static char __pyx_k__3[] = "\000\000";
-static char __pyx_k_b1[] = "b1";
 static char __pyx_k_rb[] = "rb";
 static char __pyx_k_ACE[] = "ACE";
 static char __pyx_k_LZX[] = "LZX";
 static char __pyx_k_Mac[] = "Mac";
-static char __pyx_k_PIL[] = "PIL";
-static char __pyx_k_RGB[] = "RGB";
 static char __pyx_k_RLE[] = "RLE";
 static char __pyx_k_all[] = "__all__";
 static char __pyx_k_get[] = "get";
@@ -1335,20 +1328,15 @@ static char __pyx_k_load[] = "load";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_open[] = "open";
 static char __pyx_k_read[] = "read";
-static char __pyx_k_save[] = "save";
 static char __pyx_k_tell[] = "tell";
 static char __pyx_k_test[] = "__test__";
 static char __pyx_k_zlib[] = "zlib";
 static char __pyx_k_Alpha[] = "Alpha";
-static char __pyx_k_C_Out[] = "C:\\Out";
 static char __pyx_k_Image[] = "Image";
-static char __pyx_k_alpha[] = "alpha";
 static char __pyx_k_build[] = "build";
-static char __pyx_k_bytes[] = "bytes";
 static char __pyx_k_debug[] = "debug";
 static char __pyx_k_error[] = "error";
 static char __pyx_k_frame[] = "frame";
-static char __pyx_k_image[] = "image";
 static char __pyx_k_items[] = "items";
 static char __pyx_k_range[] = "range";
 static char __pyx_k_write[] = "write";
@@ -1363,16 +1351,13 @@ static char __pyx_k_BitDict[] = "BitDict";
 static char __pyx_k_offsets[] = "offsets";
 static char __pyx_k_palette[] = "palette";
 static char __pyx_k_AGMIBank[] = "AGMIBank";
-static char __pyx_k_IMAGEEXT[] = "IMAGEEXT";
 static char __pyx_k_StringIO[] = "StringIO";
 static char __pyx_k_anchor_x[] = "anchor_x";
 static char __pyx_k_anchor_y[] = "anchor_y";
-static char __pyx_k_builtins[] = "builtins";
 static char __pyx_k_compress[] = "compress";
 static char __pyx_k_getFlags[] = "getFlags";
 static char __pyx_k_get_data[] = "get_data";
 static char __pyx_k_property[] = "property";
-static char __pyx_k_putalpha[] = "putalpha";
 static char __pyx_k_setFlags[] = "setFlags";
 static char __pyx_k_withSize[] = "withSize";
 static char __pyx_k_writeInt[] = "writeInt";
@@ -1382,7 +1367,6 @@ static char __pyx_k_ImageData[] = "ImageData";
 static char __pyx_k_ImageItem[] = "ImageItem";
 static char __pyx_k_JavaImage[] = "JavaImage";
 static char __pyx_k_cStringIO[] = "cStringIO";
-static char __pyx_k_frombytes[] = "frombytes";
 static char __pyx_k_writeByte[] = "writeByte";
 static char __pyx_k_decompress[] = "decompress";
 static char __pyx_k_initialize[] = "initialize";
@@ -1410,20 +1394,15 @@ static PyObject *__pyx_n_s_AGMIBank;
 static PyObject *__pyx_n_s_ARGB;
 static PyObject *__pyx_n_s_Alpha;
 static PyObject *__pyx_n_s_BitDict;
-static PyObject *__pyx_kp_s_C_Out;
-static PyObject *__pyx_n_s_IMAGEEXT;
 static PyObject *__pyx_n_s_IMAGE_FLAGS;
 static PyObject *__pyx_n_s_Image;
 static PyObject *__pyx_n_s_ImageBank;
 static PyObject *__pyx_n_s_ImageData;
 static PyObject *__pyx_n_s_ImageItem;
 static PyObject *__pyx_n_s_JavaImage;
-static PyObject *__pyx_n_s_L;
 static PyObject *__pyx_n_s_LZX;
 static PyObject *__pyx_n_s_Mac;
 static PyObject *__pyx_n_s_NotImplementedError;
-static PyObject *__pyx_n_s_PIL;
-static PyObject *__pyx_n_s_RGB;
 static PyObject *__pyx_n_s_RGBA;
 static PyObject *__pyx_n_s_RLE;
 static PyObject *__pyx_n_s_RLET;
@@ -1431,13 +1410,9 @@ static PyObject *__pyx_n_s_RLEW;
 static PyObject *__pyx_n_s_StringIO;
 static PyObject *__pyx_kp_s__3;
 static PyObject *__pyx_n_s_all;
-static PyObject *__pyx_n_s_alpha;
 static PyObject *__pyx_n_s_anchor_x;
 static PyObject *__pyx_n_s_anchor_y;
-static PyObject *__pyx_n_s_b1;
 static PyObject *__pyx_n_s_build;
-static PyObject *__pyx_n_s_builtins;
-static PyObject *__pyx_n_s_bytes;
 static PyObject *__pyx_n_s_cStringIO;
 static PyObject *__pyx_n_s_compress;
 static PyObject *__pyx_n_s_compressImageLZX;
@@ -1447,13 +1422,11 @@ static PyObject *__pyx_n_s_debug;
 static PyObject *__pyx_n_s_decompress;
 static PyObject *__pyx_n_s_error;
 static PyObject *__pyx_n_s_frame;
-static PyObject *__pyx_n_s_frombytes;
 static PyObject *__pyx_n_s_get;
 static PyObject *__pyx_n_s_getFlags;
 static PyObject *__pyx_n_s_get_data;
 static PyObject *__pyx_n_s_graphicModes;
 static PyObject *__pyx_n_s_handle;
-static PyObject *__pyx_n_s_image;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_initialize;
 static PyObject *__pyx_n_s_items;
@@ -1478,12 +1451,10 @@ static PyObject *__pyx_n_s_onepointfive;
 static PyObject *__pyx_n_s_open;
 static PyObject *__pyx_n_s_palette;
 static PyObject *__pyx_n_s_property;
-static PyObject *__pyx_n_s_putalpha;
 static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_rb;
 static PyObject *__pyx_n_s_read;
-static PyObject *__pyx_n_s_save;
 static PyObject *__pyx_n_s_setFlags;
 static PyObject *__pyx_n_s_sorted;
 static PyObject *__pyx_n_s_struct;
@@ -1515,9 +1486,8 @@ static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
-static PyObject *__pyx_tuple__6;
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":43
+/* "mmfparser/data/chunkloaders/imagebank.pyx":41
  * cdef class ImageItem
  * 
  * cdef inline object indexImage(ImageItem item, frame):             # <<<<<<<<<<<<<<
@@ -1548,7 +1518,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("indexImage", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":49
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":47
  *     cdef unsigned int * new_points_array
  *     cdef char * new_points
  *     if not item.indexed:             # <<<<<<<<<<<<<<
@@ -1558,7 +1528,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_t_1 = ((!(__pyx_v_item->indexed != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":50
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":48
  *     cdef char * new_points
  *     if not item.indexed:
  *         return item.image             # <<<<<<<<<<<<<<
@@ -1572,17 +1542,17 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":52
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":50
  *         return item.image
  *     else:
  *         image = <unsigned int *>(<char *>item.image)             # <<<<<<<<<<<<<<
  *         str_points = allocate_memory(len(item.image), &new_points)
  *         new_points_array = <unsigned int *>new_points
  */
-    __pyx_t_2 = __Pyx_PyObject_AsString(__pyx_v_item->image); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_AsString(__pyx_v_item->image); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_image = ((unsigned int *)((char *)__pyx_t_2));
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":53
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":51
  *     else:
  *         image = <unsigned int *>(<char *>item.image)
  *         str_points = allocate_memory(len(item.image), &new_points)             # <<<<<<<<<<<<<<
@@ -1591,14 +1561,14 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     __pyx_t_3 = __pyx_v_item->image;
     __Pyx_INCREF(__pyx_t_3);
-    __pyx_t_4 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __pyx_f_9mmfparser_6common_allocate_memory(__pyx_t_4, (&__pyx_v_new_points)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __pyx_f_9mmfparser_6common_allocate_memory(__pyx_t_4, (&__pyx_v_new_points)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_v_str_points = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":54
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":52
  *         image = <unsigned int *>(<char *>item.image)
  *         str_points = allocate_memory(len(item.image), &new_points)
  *         new_points_array = <unsigned int *>new_points             # <<<<<<<<<<<<<<
@@ -1607,7 +1577,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     __pyx_v_new_points_array = ((unsigned int *)__pyx_v_new_points);
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":55
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":53
  *         str_points = allocate_memory(len(item.image), &new_points)
  *         new_points_array = <unsigned int *>new_points
  *         for i in range(len(item.image) / 4):             # <<<<<<<<<<<<<<
@@ -1616,32 +1586,32 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     __pyx_t_3 = __pyx_v_item->image;
     __Pyx_INCREF(__pyx_t_3);
-    __pyx_t_4 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_5 = (__pyx_t_4 / 4);
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":56
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":54
  *         new_points_array = <unsigned int *>new_points
  *         for i in range(len(item.image) / 4):
  *             current_value = frame.palette.items[image[i]]             # <<<<<<<<<<<<<<
  *             new_points_array[i] = (current_value[0] | current_value[1] << 8 |
  *                 current_value[2] << 16)
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_frame, __pyx_n_s_palette); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_frame, __pyx_n_s_palette); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_items); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_items); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_7, (__pyx_v_image[__pyx_v_i]), unsigned int, 0, __Pyx_PyInt_From_unsigned_int, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_7, (__pyx_v_image[__pyx_v_i]), unsigned int, 0, __Pyx_PyInt_From_unsigned_int, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_XDECREF_SET(__pyx_v_current_value, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":57
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":55
  *         for i in range(len(item.image) / 4):
  *             current_value = frame.palette.items[image[i]]
  *             new_points_array[i] = (current_value[0] | current_value[1] << 8 |             # <<<<<<<<<<<<<<
@@ -1650,25 +1620,25 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       if (unlikely(__pyx_v_current_value == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_3 = __Pyx_GetItemInt_Tuple(__pyx_v_current_value, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_3 = __Pyx_GetItemInt_Tuple(__pyx_v_current_value, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_3);
       if (unlikely(__pyx_v_current_value == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_7 = __Pyx_GetItemInt_Tuple(__pyx_v_current_value, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_7 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_7 = __Pyx_GetItemInt_Tuple(__pyx_v_current_value, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_7 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_8 = PyNumber_Lshift(__pyx_t_7, __pyx_int_8); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyNumber_Lshift(__pyx_t_7, __pyx_int_8); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyNumber_Or(__pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyNumber_Or(__pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":58
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":56
  *             current_value = frame.palette.items[image[i]]
  *             new_points_array[i] = (current_value[0] | current_value[1] << 8 |
  *                 current_value[2] << 16)             # <<<<<<<<<<<<<<
@@ -1677,31 +1647,31 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       if (unlikely(__pyx_v_current_value == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_8 = __Pyx_GetItemInt_Tuple(__pyx_v_current_value, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_8 = __Pyx_GetItemInt_Tuple(__pyx_v_current_value, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_3 = PyNumber_Lshift(__pyx_t_8, __pyx_int_16); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyNumber_Lshift(__pyx_t_8, __pyx_int_16); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":57
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":55
  *         for i in range(len(item.image) / 4):
  *             current_value = frame.palette.items[image[i]]
  *             new_points_array[i] = (current_value[0] | current_value[1] << 8 |             # <<<<<<<<<<<<<<
  *                 current_value[2] << 16)
  *         return str_points
  */
-      __pyx_t_8 = PyNumber_Or(__pyx_t_7, __pyx_t_3); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyNumber_Or(__pyx_t_7, __pyx_t_3); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_9 = __Pyx_PyInt_As_unsigned_int(__pyx_t_8); if (unlikely((__pyx_t_9 == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_9 = __Pyx_PyInt_As_unsigned_int(__pyx_t_8); if (unlikely((__pyx_t_9 == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       (__pyx_v_new_points_array[__pyx_v_i]) = __pyx_t_9;
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":59
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":57
  *             new_points_array[i] = (current_value[0] | current_value[1] << 8 |
  *                 current_value[2] << 16)
  *         return str_points             # <<<<<<<<<<<<<<
@@ -1714,7 +1684,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":43
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":41
  * cdef class ImageItem
  * 
  * cdef inline object indexImage(ImageItem item, frame):             # <<<<<<<<<<<<<<
@@ -1737,7 +1707,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":61
+/* "mmfparser/data/chunkloaders/imagebank.pyx":59
  *         return str_points
  * 
  * cdef inline str joinImage(bytes points, bytes alpha):             # <<<<<<<<<<<<<<
@@ -1764,7 +1734,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("joinImage", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":64
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":62
  *     cdef char * c_array_string
  *     cdef unsigned int value
  *     new_points = allocate_memory(len(points), &c_array_string)             # <<<<<<<<<<<<<<
@@ -1773,15 +1743,15 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   if (unlikely(__pyx_v_points == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_points); if (unlikely(__pyx_t_1 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __pyx_f_9mmfparser_6common_allocate_memory(__pyx_t_1, (&__pyx_v_c_array_string)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_points); if (unlikely(__pyx_t_1 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __pyx_f_9mmfparser_6common_allocate_memory(__pyx_t_1, (&__pyx_v_c_array_string)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_new_points = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":65
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":63
  *     cdef unsigned int value
  *     new_points = allocate_memory(len(points), &c_array_string)
  *     cdef unsigned int * c_array = <unsigned int *>c_array_string             # <<<<<<<<<<<<<<
@@ -1790,27 +1760,27 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_c_array = ((unsigned int *)__pyx_v_c_array_string);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":66
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":64
  *     new_points = allocate_memory(len(points), &c_array_string)
  *     cdef unsigned int * c_array = <unsigned int *>c_array_string
  *     cdef unsigned int * points_c = <unsigned int *>(<char *>points)             # <<<<<<<<<<<<<<
  *     cdef char * alpha_c = alpha
  *     cdef int i
  */
-  __pyx_t_3 = __Pyx_PyObject_AsString(__pyx_v_points); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_AsString(__pyx_v_points); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_points_c = ((unsigned int *)((char *)__pyx_t_3));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":67
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":65
  *     cdef unsigned int * c_array = <unsigned int *>c_array_string
  *     cdef unsigned int * points_c = <unsigned int *>(<char *>points)
  *     cdef char * alpha_c = alpha             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(len(points) / 4):
  */
-  __pyx_t_3 = __Pyx_PyObject_AsString(__pyx_v_alpha); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_AsString(__pyx_v_alpha); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 65; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_alpha_c = __pyx_t_3;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":69
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":67
  *     cdef char * alpha_c = alpha
  *     cdef int i
  *     for i in range(len(points) / 4):             # <<<<<<<<<<<<<<
@@ -1819,14 +1789,14 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   if (unlikely(__pyx_v_points == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_points); if (unlikely(__pyx_t_1 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_points); if (unlikely(__pyx_t_1 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_4 = (__pyx_t_1 / 4);
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":70
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":68
  *     cdef int i
  *     for i in range(len(points) / 4):
  *         c_array[i] = points_c[i] | ((<unsigned char *>alpha_c)[i] << 24)             # <<<<<<<<<<<<<<
@@ -1836,7 +1806,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     (__pyx_v_c_array[__pyx_v_i]) = ((__pyx_v_points_c[__pyx_v_i]) | ((((unsigned char *)__pyx_v_alpha_c)[__pyx_v_i]) << 24));
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":71
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":69
  *     for i in range(len(points) / 4):
  *         c_array[i] = points_c[i] | ((<unsigned char *>alpha_c)[i] << 24)
  *     return new_points             # <<<<<<<<<<<<<<
@@ -1844,12 +1814,12 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  * cdef inline object getImageData(ImageItem item, frame):
  */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyString_CheckExact(__pyx_v_new_points))||((__pyx_v_new_points) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_new_points)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyString_CheckExact(__pyx_v_new_points))||((__pyx_v_new_points) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_new_points)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_INCREF(__pyx_v_new_points);
   __pyx_r = ((PyObject*)__pyx_v_new_points);
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":61
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":59
  *         return str_points
  * 
  * cdef inline str joinImage(bytes points, bytes alpha):             # <<<<<<<<<<<<<<
@@ -1869,7 +1839,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":73
+/* "mmfparser/data/chunkloaders/imagebank.pyx":71
  *     return new_points
  * 
  * cdef inline object getImageData(ImageItem item, frame):             # <<<<<<<<<<<<<<
@@ -1900,50 +1870,50 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getImageData", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":76
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":74
  *     cdef unsigned int point
  *     cdef unsigned int transparent
  *     cdef object points = indexImage(item, frame)             # <<<<<<<<<<<<<<
  *     cdef unsigned int * points_c = <unsigned int *>(<char *>points)
  *     cdef int i
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_indexImage(__pyx_v_item, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 76; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_indexImage(__pyx_v_item, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 74; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_points = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":77
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":75
  *     cdef unsigned int transparent
  *     cdef object points = indexImage(item, frame)
  *     cdef unsigned int * points_c = <unsigned int *>(<char *>points)             # <<<<<<<<<<<<<<
  *     cdef int i
  *     cdef unsigned int * c_array
  */
-  __pyx_t_2 = __Pyx_PyObject_AsString(__pyx_v_points); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 77; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_AsString(__pyx_v_points); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 75; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_points_c = ((unsigned int *)((char *)__pyx_t_2));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":80
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":78
  *     cdef int i
  *     cdef unsigned int * c_array
  *     if item.alpha:             # <<<<<<<<<<<<<<
  *         data = joinImage(points, item.alpha)
  *     else:
  */
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_v_item->alpha); if (unlikely(__pyx_t_3 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 80; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_v_item->alpha); if (unlikely(__pyx_t_3 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 78; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_3) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":81
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":79
  *     cdef unsigned int * c_array
  *     if item.alpha:
  *         data = joinImage(points, item.alpha)             # <<<<<<<<<<<<<<
  *     else:
  *         transparent = (item.transparent[0] | item.transparent[1] << 8 |
  */
-    if (!(likely(PyBytes_CheckExact(__pyx_v_points))||((__pyx_v_points) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_points)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!(likely(PyBytes_CheckExact(__pyx_v_item->alpha))||((__pyx_v_item->alpha) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_item->alpha)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(PyBytes_CheckExact(__pyx_v_points))||((__pyx_v_points) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_points)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(PyBytes_CheckExact(__pyx_v_item->alpha))||((__pyx_v_item->alpha) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_item->alpha)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_1 = __pyx_v_item->alpha;
     __Pyx_INCREF(__pyx_t_1);
-    __pyx_t_4 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_joinImage(((PyObject*)__pyx_v_points), ((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_joinImage(((PyObject*)__pyx_v_points), ((PyObject*)__pyx_t_1)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 79; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_data = __pyx_t_4;
@@ -1952,7 +1922,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":83
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":81
  *         data = joinImage(points, item.alpha)
  *     else:
  *         transparent = (item.transparent[0] | item.transparent[1] << 8 |             # <<<<<<<<<<<<<<
@@ -1961,25 +1931,25 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     if (unlikely(__pyx_v_item->transparent == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_item->transparent, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_item->transparent, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
     __Pyx_GOTREF(__pyx_t_4);
     if (unlikely(__pyx_v_item->transparent == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_item->transparent, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_item->transparent, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyNumber_Lshift(__pyx_t_1, __pyx_int_8); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyNumber_Lshift(__pyx_t_1, __pyx_int_8); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Or(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PyNumber_Or(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":84
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":82
  *     else:
  *         transparent = (item.transparent[0] | item.transparent[1] << 8 |
  *             item.transparent[2] << 16)             # <<<<<<<<<<<<<<
@@ -1988,55 +1958,55 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     if (unlikely(__pyx_v_item->transparent == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_5 = __Pyx_GetItemInt_Tuple(__pyx_v_item->transparent, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+    __pyx_t_5 = __Pyx_GetItemInt_Tuple(__pyx_v_item->transparent, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_5 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyNumber_Lshift(__pyx_t_5, __pyx_int_16); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyNumber_Lshift(__pyx_t_5, __pyx_int_16); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 82; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":83
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":81
  *         data = joinImage(points, item.alpha)
  *     else:
  *         transparent = (item.transparent[0] | item.transparent[1] << 8 |             # <<<<<<<<<<<<<<
  *             item.transparent[2] << 16)
  *         data = allocate_memory(len(points), <char**>&c_array)
  */
-    __pyx_t_5 = PyNumber_Or(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyNumber_Or(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_6 = __Pyx_PyInt_As_unsigned_int(__pyx_t_5); if (unlikely((__pyx_t_6 == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyInt_As_unsigned_int(__pyx_t_5); if (unlikely((__pyx_t_6 == (unsigned int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 81; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_transparent = __pyx_t_6;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":85
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":83
  *         transparent = (item.transparent[0] | item.transparent[1] << 8 |
  *             item.transparent[2] << 16)
  *         data = allocate_memory(len(points), <char**>&c_array)             # <<<<<<<<<<<<<<
  *         for i in range(len(points) / 4):
  *             if points_c[i] == transparent:
  */
-    __pyx_t_7 = PyObject_Length(__pyx_v_points); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __pyx_t_5 = __pyx_f_9mmfparser_6common_allocate_memory(__pyx_t_7, ((char **)(&__pyx_v_c_array))); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 85; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = PyObject_Length(__pyx_v_points); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __pyx_f_9mmfparser_6common_allocate_memory(__pyx_t_7, ((char **)(&__pyx_v_c_array))); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 83; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_v_data = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":86
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":84
  *             item.transparent[2] << 16)
  *         data = allocate_memory(len(points), <char**>&c_array)
  *         for i in range(len(points) / 4):             # <<<<<<<<<<<<<<
  *             if points_c[i] == transparent:
  *                 c_array[i] = points_c[i]
  */
-    __pyx_t_7 = PyObject_Length(__pyx_v_points); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 86; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = PyObject_Length(__pyx_v_points); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 84; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_8 = (__pyx_t_7 / 4);
     for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
       __pyx_v_i = __pyx_t_9;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":87
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":85
  *         data = allocate_memory(len(points), <char**>&c_array)
  *         for i in range(len(points) / 4):
  *             if points_c[i] == transparent:             # <<<<<<<<<<<<<<
@@ -2046,7 +2016,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       __pyx_t_3 = (((__pyx_v_points_c[__pyx_v_i]) == __pyx_v_transparent) != 0);
       if (__pyx_t_3) {
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":88
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":86
  *         for i in range(len(points) / 4):
  *             if points_c[i] == transparent:
  *                 c_array[i] = points_c[i]             # <<<<<<<<<<<<<<
@@ -2058,7 +2028,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       }
       /*else*/ {
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":90
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":88
  *                 c_array[i] = points_c[i]
  *             else:
  *                 c_array[i] = points_c[i] | <unsigned int>(0xFF << 24)             # <<<<<<<<<<<<<<
@@ -2072,7 +2042,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":91
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":89
  *             else:
  *                 c_array[i] = points_c[i] | <unsigned int>(0xFF << 24)
  *     return data             # <<<<<<<<<<<<<<
@@ -2084,7 +2054,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":73
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":71
  *     return new_points
  * 
  * cdef inline object getImageData(ImageItem item, frame):             # <<<<<<<<<<<<<<
@@ -2107,7 +2077,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":93
+/* "mmfparser/data/chunkloaders/imagebank.pyx":91
  *     return data
  * 
  * cdef inline object createDisplay(ImageItem item, frame):             # <<<<<<<<<<<<<<
@@ -2134,60 +2104,60 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("createDisplay", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":94
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":92
  * 
  * cdef inline object createDisplay(ImageItem item, frame):
  *     data = getImageData(item, frame)             # <<<<<<<<<<<<<<
  *     from mmfparser.player.sprite import ImageData
  *     newImage = ImageData(item.width, item.height, 'RGBA', data,
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_getImageData(__pyx_v_item, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_getImageData(__pyx_v_item, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 92; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":95
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":93
  * cdef inline object createDisplay(ImageItem item, frame):
  *     data = getImageData(item, frame)
  *     from mmfparser.player.sprite import ImageData             # <<<<<<<<<<<<<<
  *     newImage = ImageData(item.width, item.height, 'RGBA', data,
  *         -item.width * 4, item.alpha)
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_ImageData);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_ImageData);
   __Pyx_GIVEREF(__pyx_n_s_ImageData);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ImageData); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ImageData); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 93; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_t_1);
   __pyx_v_ImageData = __pyx_t_1;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":96
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":94
  *     data = getImageData(item, frame)
  *     from mmfparser.player.sprite import ImageData
  *     newImage = ImageData(item.width, item.height, 'RGBA', data,             # <<<<<<<<<<<<<<
  *         -item.width * 4, item.alpha)
  *     newImage.anchor_x = item.xHotspot
  */
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_item->width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_item->width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_item->height); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_item->height); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":97
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":95
  *     from mmfparser.player.sprite import ImageData
  *     newImage = ImageData(item.width, item.height, 'RGBA', data,
  *         -item.width * 4, item.alpha)             # <<<<<<<<<<<<<<
  *     newImage.anchor_x = item.xHotspot
  *     newImage.anchor_y = item.height - item.yHotspot
  */
-  __pyx_t_4 = __Pyx_PyInt_From_long(((-__pyx_v_item->width) * 4)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyInt_From_long(((-__pyx_v_item->width) * 4)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_ImageData);
   __pyx_t_5 = __pyx_v_ImageData; __pyx_t_6 = NULL;
@@ -2202,7 +2172,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       __pyx_t_7 = 1;
     }
   }
-  __pyx_t_8 = PyTuple_New(6+__pyx_t_7); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyTuple_New(6+__pyx_t_7); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
   if (__pyx_t_6) {
     PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
@@ -2225,38 +2195,38 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 94; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_newImage = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":98
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":96
  *     newImage = ImageData(item.width, item.height, 'RGBA', data,
  *         -item.width * 4, item.alpha)
  *     newImage.anchor_x = item.xHotspot             # <<<<<<<<<<<<<<
  *     newImage.anchor_y = item.height - item.yHotspot
  *     return newImage
  */
-  __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_item->xHotspot); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_item->xHotspot); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_x, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_x, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 96; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":99
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":97
  *         -item.width * 4, item.alpha)
  *     newImage.anchor_x = item.xHotspot
  *     newImage.anchor_y = item.height - item.yHotspot             # <<<<<<<<<<<<<<
  *     return newImage
  * 
  */
-  __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_item->height - __pyx_v_item->yHotspot)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_item->height - __pyx_v_item->yHotspot)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_y, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 99; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_y, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 97; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":100
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":98
  *     newImage.anchor_x = item.xHotspot
  *     newImage.anchor_y = item.height - item.yHotspot
  *     return newImage             # <<<<<<<<<<<<<<
@@ -2268,7 +2238,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_r = __pyx_v_newImage;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":93
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":91
  *     return data
  * 
  * cdef inline object createDisplay(ImageItem item, frame):             # <<<<<<<<<<<<<<
@@ -2296,7 +2266,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":107
+/* "mmfparser/data/chunkloaders/imagebank.pyx":105
  *     cdef public:
  *         int size
  *     cdef unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -2315,7 +2285,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9BasePoin
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":106
+/* "mmfparser/data/chunkloaders/imagebank.pyx":104
  * cdef class BasePoint:
  *     cdef public:
  *         int size             # <<<<<<<<<<<<<<
@@ -2345,7 +2315,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9BasePoint_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->size); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->size); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2383,7 +2353,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9BasePoint_4size_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 106; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->size = __pyx_t_1;
 
   /* function exit code */
@@ -2397,7 +2367,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9BasePoint_4size_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":111
+/* "mmfparser/data/chunkloaders/imagebank.pyx":109
  * 
  * cdef class Point(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -2426,7 +2396,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_5Point___cinit__(
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":112
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":110
  * cdef class Point(BasePoint):
  *     def __cinit__(self):
  *         self.size = 3             # <<<<<<<<<<<<<<
@@ -2435,7 +2405,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_5Point___cinit__(
  */
   __pyx_v_self->__pyx_base.size = 3;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":111
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":109
  * 
  * cdef class Point(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -2449,7 +2419,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_5Point___cinit__(
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":114
+/* "mmfparser/data/chunkloaders/imagebank.pyx":112
  *         self.size = 3
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -2465,7 +2435,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_re
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":116
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":114
  *     cdef inline unsigned int read(self, char * data, int position):
  *         cdef unsigned char r, g, b
  *         b = <unsigned char>data[position]             # <<<<<<<<<<<<<<
@@ -2474,7 +2444,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_re
  */
   __pyx_v_b = ((unsigned char)(__pyx_v_data[__pyx_v_position]));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":117
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":115
  *         cdef unsigned char r, g, b
  *         b = <unsigned char>data[position]
  *         g = <unsigned char>data[position+1]             # <<<<<<<<<<<<<<
@@ -2483,7 +2453,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_re
  */
   __pyx_v_g = ((unsigned char)(__pyx_v_data[(__pyx_v_position + 1)]));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":118
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":116
  *         b = <unsigned char>data[position]
  *         g = <unsigned char>data[position+1]
  *         r = <unsigned char>data[position+2]             # <<<<<<<<<<<<<<
@@ -2492,7 +2462,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_re
  */
   __pyx_v_r = ((unsigned char)(__pyx_v_data[(__pyx_v_position + 2)]));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":119
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":117
  *         g = <unsigned char>data[position+1]
  *         r = <unsigned char>data[position+2]
  *         return r | g << 8 | b << 16             # <<<<<<<<<<<<<<
@@ -2502,7 +2472,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_re
   __pyx_r = ((__pyx_v_r | (__pyx_v_g << 8)) | (__pyx_v_b << 16));
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":114
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":112
  *         self.size = 3
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -2516,7 +2486,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_re
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":121
+/* "mmfparser/data/chunkloaders/imagebank.pyx":119
  *         return r | g << 8 | b << 16
  * 
  *     cdef write(self, item, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2538,16 +2508,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":122
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":120
  * 
  *     cdef write(self, item, ByteReader reader):
  *         reader.writeByte(item[2], True)             # <<<<<<<<<<<<<<
  *         reader.writeByte(item[1], True)
  *         reader.writeByte(item[0], True)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_item, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_item, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_3 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -2561,7 +2531,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   if (__pyx_t_4) {
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
@@ -2572,22 +2542,22 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
   PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, Py_True);
   __Pyx_GIVEREF(Py_True);
   __pyx_t_3 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":123
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":121
  *     cdef write(self, item, ByteReader reader):
  *         reader.writeByte(item[2], True)
  *         reader.writeByte(item[1], True)             # <<<<<<<<<<<<<<
  *         reader.writeByte(item[0], True)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_item, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_item, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_6 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_3 = NULL;
   __pyx_t_5 = 0;
@@ -2601,7 +2571,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   if (__pyx_t_3) {
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
@@ -2612,22 +2582,22 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
   PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_5, Py_True);
   __Pyx_GIVEREF(Py_True);
   __pyx_t_6 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":124
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":122
  *         reader.writeByte(item[2], True)
  *         reader.writeByte(item[1], True)
  *         reader.writeByte(item[0], True)             # <<<<<<<<<<<<<<
  * 
  * cdef BasePoint point_instance = Point()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_item, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_item, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_6 = NULL;
   __pyx_t_5 = 0;
@@ -2641,7 +2611,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
       __pyx_t_5 = 1;
     }
   }
-  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   if (__pyx_t_6) {
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
@@ -2652,13 +2622,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
   PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, Py_True);
   __Pyx_GIVEREF(Py_True);
   __pyx_t_4 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":121
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":119
  *         return r | g << 8 | b << 16
  * 
  *     cdef write(self, item, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2683,7 +2653,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":129
+/* "mmfparser/data/chunkloaders/imagebank.pyx":127
  * 
  * cdef class SixteenPoint(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -2712,7 +2682,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoint___
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":130
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":128
  * cdef class SixteenPoint(BasePoint):
  *     def __cinit__(self):
  *         self.size = 2             # <<<<<<<<<<<<<<
@@ -2721,7 +2691,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoint___
  */
   __pyx_v_self->__pyx_base.size = 2;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":129
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":127
  * 
  * cdef class SixteenPoint(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -2735,7 +2705,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoint___
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":132
+/* "mmfparser/data/chunkloaders/imagebank.pyx":130
  *         self.size = 2
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -2752,7 +2722,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":134
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":132
  *     cdef inline unsigned int read(self, char * data, int position):
  *         cdef unsigned short newShort
  *         newShort = (<unsigned char>data[position] |             # <<<<<<<<<<<<<<
@@ -2761,7 +2731,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_newShort = (((unsigned char)(__pyx_v_data[__pyx_v_position])) | (((unsigned char)(__pyx_v_data[(__pyx_v_position + 1)])) << 8));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":137
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":135
  *             <unsigned char>data[position + 1] << 8)
  *         cdef unsigned char r, g, b
  *         r = (newShort & 63488) >> 11             # <<<<<<<<<<<<<<
@@ -2770,7 +2740,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_r = ((__pyx_v_newShort & 63488) >> 11);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":138
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":136
  *         cdef unsigned char r, g, b
  *         r = (newShort & 63488) >> 11
  *         g = (newShort & 2016) >> 5             # <<<<<<<<<<<<<<
@@ -2779,7 +2749,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_g = ((__pyx_v_newShort & 2016) >> 5);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":139
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":137
  *         r = (newShort & 63488) >> 11
  *         g = (newShort & 2016) >> 5
  *         b = (newShort & 31)             # <<<<<<<<<<<<<<
@@ -2788,7 +2758,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_b = (__pyx_v_newShort & 31);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":140
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":138
  *         g = (newShort & 2016) >> 5
  *         b = (newShort & 31)
  *         r = r << 3             # <<<<<<<<<<<<<<
@@ -2797,7 +2767,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_r = (__pyx_v_r << 3);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":141
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":139
  *         b = (newShort & 31)
  *         r = r << 3
  *         g = g << 2             # <<<<<<<<<<<<<<
@@ -2806,7 +2776,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_g = (__pyx_v_g << 2);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":142
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":140
  *         r = r << 3
  *         g = g << 2
  *         b = b << 3             # <<<<<<<<<<<<<<
@@ -2815,7 +2785,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
  */
   __pyx_v_b = (__pyx_v_b << 3);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":143
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":141
  *         g = g << 2
  *         b = b << 3
  *         return r | g << 8 | b << 16             # <<<<<<<<<<<<<<
@@ -2825,7 +2795,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
   __pyx_r = ((__pyx_v_r | (__pyx_v_g << 8)) | (__pyx_v_b << 16));
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":132
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":130
  *         self.size = 2
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -2839,7 +2809,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Sixteen
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":145
+/* "mmfparser/data/chunkloaders/imagebank.pyx":143
  *         return r | g << 8 | b << 16
  * 
  *     cdef write(item, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -2863,7 +2833,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":146
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":144
  * 
  *     cdef write(item, ByteReader reader):
  *         r, g, b = item             # <<<<<<<<<<<<<<
@@ -2880,7 +2850,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     #if CYTHON_COMPILING_IN_CPYTHON
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -2896,16 +2866,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
     __Pyx_INCREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_t_3);
     #else
-    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     #endif
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_item)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_item)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
     index = 0; __pyx_t_1 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_1)) goto __pyx_L3_unpacking_failed;
@@ -2914,7 +2884,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
     __Pyx_GOTREF(__pyx_t_2);
     index = 2; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_3);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_5 = NULL;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     goto __pyx_L4_unpacking_done;
@@ -2922,7 +2892,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_r = __pyx_t_1;
@@ -2932,67 +2902,67 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
   __pyx_v_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":147
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":145
  *     cdef write(item, ByteReader reader):
  *         r, g, b = item
  *         r = r >> 3             # <<<<<<<<<<<<<<
  *         g = g >> 2
  *         b = b >> 3
  */
-  __pyx_t_3 = PyNumber_Rshift(__pyx_v_r, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Rshift(__pyx_v_r, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_r, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":148
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":146
  *         r, g, b = item
  *         r = r >> 3
  *         g = g >> 2             # <<<<<<<<<<<<<<
  *         b = b >> 3
  *         r = r << 11
  */
-  __pyx_t_3 = PyNumber_Rshift(__pyx_v_g, __pyx_int_2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Rshift(__pyx_v_g, __pyx_int_2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_g, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":149
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":147
  *         r = r >> 3
  *         g = g >> 2
  *         b = b >> 3             # <<<<<<<<<<<<<<
  *         r = r << 11
  *         g = g << 5
  */
-  __pyx_t_3 = PyNumber_Rshift(__pyx_v_b, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 149; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Rshift(__pyx_v_b, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_b, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":150
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":148
  *         g = g >> 2
  *         b = b >> 3
  *         r = r << 11             # <<<<<<<<<<<<<<
  *         g = g << 5
  *         return r | g | b
  */
-  __pyx_t_3 = PyNumber_Lshift(__pyx_v_r, __pyx_int_11); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Lshift(__pyx_v_r, __pyx_int_11); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_r, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":151
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":149
  *         b = b >> 3
  *         r = r << 11
  *         g = g << 5             # <<<<<<<<<<<<<<
  *         return r | g | b
  * 
  */
-  __pyx_t_3 = PyNumber_Lshift(__pyx_v_g, __pyx_int_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 151; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Lshift(__pyx_v_g, __pyx_int_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 149; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_g, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":152
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":150
  *         r = r << 11
  *         g = g << 5
  *         return r | g | b             # <<<<<<<<<<<<<<
@@ -3000,16 +2970,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
  * cdef BasePoint sixteen_point = SixteenPoint()
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyNumber_Or(__pyx_v_r, __pyx_v_g); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Or(__pyx_v_r, __pyx_v_g); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyNumber_Or(__pyx_t_3, __pyx_v_b); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Or(__pyx_t_3, __pyx_v_b); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":145
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":143
  *         return r | g << 8 | b << 16
  * 
  *     cdef write(item, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3034,7 +3004,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoi
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":157
+/* "mmfparser/data/chunkloaders/imagebank.pyx":155
  * 
  * cdef class FifteenPoint(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -3063,7 +3033,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoint___
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":158
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":156
  * cdef class FifteenPoint(BasePoint):
  *     def __cinit__(self):
  *         self.size = 2             # <<<<<<<<<<<<<<
@@ -3072,7 +3042,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoint___
  */
   __pyx_v_self->__pyx_base.size = 2;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":157
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":155
  * 
  * cdef class FifteenPoint(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -3086,7 +3056,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoint___
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":160
+/* "mmfparser/data/chunkloaders/imagebank.pyx":158
  *         self.size = 2
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -3103,7 +3073,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":163
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":161
  *         cdef unsigned char r, g, b
  *         cdef unsigned short newShort
  *         newShort = (<unsigned char>data[position] |             # <<<<<<<<<<<<<<
@@ -3112,7 +3082,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_newShort = (((unsigned char)(__pyx_v_data[__pyx_v_position])) | (((unsigned char)(__pyx_v_data[(__pyx_v_position + 1)])) << 8));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":165
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":163
  *         newShort = (<unsigned char>data[position] |
  *             <unsigned char>data[position + 1] << 8)
  *         r = (newShort & 31744) >> 10             # <<<<<<<<<<<<<<
@@ -3121,7 +3091,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_r = ((__pyx_v_newShort & 31744) >> 10);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":166
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":164
  *             <unsigned char>data[position + 1] << 8)
  *         r = (newShort & 31744) >> 10
  *         g = (newShort & 992) >> 5             # <<<<<<<<<<<<<<
@@ -3130,7 +3100,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_g = ((__pyx_v_newShort & 992) >> 5);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":167
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":165
  *         r = (newShort & 31744) >> 10
  *         g = (newShort & 992) >> 5
  *         b = (newShort & 31)             # <<<<<<<<<<<<<<
@@ -3139,7 +3109,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_b = (__pyx_v_newShort & 31);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":168
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":166
  *         g = (newShort & 992) >> 5
  *         b = (newShort & 31)
  *         r = r << 3             # <<<<<<<<<<<<<<
@@ -3148,7 +3118,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_r = (__pyx_v_r << 3);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":169
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":167
  *         b = (newShort & 31)
  *         r = r << 3
  *         g = g << 3             # <<<<<<<<<<<<<<
@@ -3157,7 +3127,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_g = (__pyx_v_g << 3);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":170
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":168
  *         r = r << 3
  *         g = g << 3
  *         b = b << 3             # <<<<<<<<<<<<<<
@@ -3166,7 +3136,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
  */
   __pyx_v_b = (__pyx_v_b << 3);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":171
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":169
  *         g = g << 3
  *         b = b << 3
  *         return r | g << 8 | b << 16             # <<<<<<<<<<<<<<
@@ -3176,7 +3146,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
   __pyx_r = ((__pyx_v_r | (__pyx_v_g << 8)) | (__pyx_v_b << 16));
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":160
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":158
  *         self.size = 2
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -3190,7 +3160,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12Fifteen
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":173
+/* "mmfparser/data/chunkloaders/imagebank.pyx":171
  *         return r | g << 8 | b << 16
  * 
  *     cdef write(item, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3214,7 +3184,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":174
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":172
  * 
  *     cdef write(item, ByteReader reader):
  *         r, g, b = item             # <<<<<<<<<<<<<<
@@ -3231,7 +3201,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     #if CYTHON_COMPILING_IN_CPYTHON
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -3247,16 +3217,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
     __Pyx_INCREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_t_3);
     #else
-    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     #endif
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_item)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_item)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
     index = 0; __pyx_t_1 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_1)) goto __pyx_L3_unpacking_failed;
@@ -3265,7 +3235,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
     __Pyx_GOTREF(__pyx_t_2);
     index = 2; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_3);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_5 = NULL;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     goto __pyx_L4_unpacking_done;
@@ -3273,7 +3243,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_r = __pyx_t_1;
@@ -3283,67 +3253,67 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
   __pyx_v_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":175
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":173
  *     cdef write(item, ByteReader reader):
  *         r, g, b = item
  *         r = r >> 3             # <<<<<<<<<<<<<<
  *         g = g >> 3
  *         b = b >> 3
  */
-  __pyx_t_3 = PyNumber_Rshift(__pyx_v_r, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Rshift(__pyx_v_r, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 173; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_r, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":176
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":174
  *         r, g, b = item
  *         r = r >> 3
  *         g = g >> 3             # <<<<<<<<<<<<<<
  *         b = b >> 3
  *         r = r << 10
  */
-  __pyx_t_3 = PyNumber_Rshift(__pyx_v_g, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 176; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Rshift(__pyx_v_g, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_g, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":177
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":175
  *         r = r >> 3
  *         g = g >> 3
  *         b = b >> 3             # <<<<<<<<<<<<<<
  *         r = r << 10
  *         g = g << 5
  */
-  __pyx_t_3 = PyNumber_Rshift(__pyx_v_b, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Rshift(__pyx_v_b, __pyx_int_3); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_b, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":178
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":176
  *         g = g >> 3
  *         b = b >> 3
  *         r = r << 10             # <<<<<<<<<<<<<<
  *         g = g << 5
  * 
  */
-  __pyx_t_3 = PyNumber_Lshift(__pyx_v_r, __pyx_int_10); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Lshift(__pyx_v_r, __pyx_int_10); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 176; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_r, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":179
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":177
  *         b = b >> 3
  *         r = r << 10
  *         g = g << 5             # <<<<<<<<<<<<<<
  * 
  *         return r | g | b
  */
-  __pyx_t_3 = PyNumber_Lshift(__pyx_v_g, __pyx_int_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Lshift(__pyx_v_g, __pyx_int_5); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 177; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_g, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":181
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":179
  *         g = g << 5
  * 
  *         return r | g | b             # <<<<<<<<<<<<<<
@@ -3351,16 +3321,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
  * cdef BasePoint fifteen_point = FifteenPoint()
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyNumber_Or(__pyx_v_r, __pyx_v_g); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyNumber_Or(__pyx_v_r, __pyx_v_g); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyNumber_Or(__pyx_t_3, __pyx_v_b); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyNumber_Or(__pyx_t_3, __pyx_v_b); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":173
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":171
  *         return r | g << 8 | b << 16
  * 
  *     cdef write(item, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3385,7 +3355,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoi
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":186
+/* "mmfparser/data/chunkloaders/imagebank.pyx":184
  * 
  * cdef class IndexPoint(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -3414,7 +3384,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint___ci
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":187
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":185
  * cdef class IndexPoint(BasePoint):
  *     def __cinit__(self):
  *         self.size = 1             # <<<<<<<<<<<<<<
@@ -3423,7 +3393,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint___ci
  */
   __pyx_v_self->__pyx_base.size = 1;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":186
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":184
  * 
  * cdef class IndexPoint(BasePoint):
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -3437,7 +3407,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint___ci
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":189
+/* "mmfparser/data/chunkloaders/imagebank.pyx":187
  *         self.size = 1
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -3450,7 +3420,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPo
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":190
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":188
  * 
  *     cdef inline unsigned int read(self, char * data, int position):
  *         return <unsigned char>data[position]             # <<<<<<<<<<<<<<
@@ -3460,7 +3430,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPo
   __pyx_r = ((unsigned char)(__pyx_v_data[__pyx_v_position]));
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":189
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":187
  *         self.size = 1
  * 
  *     cdef inline unsigned int read(self, char * data, int position):             # <<<<<<<<<<<<<<
@@ -3474,7 +3444,7 @@ static unsigned int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPo
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":192
+/* "mmfparser/data/chunkloaders/imagebank.pyx":190
  *         return <unsigned char>data[position]
  * 
  *     cdef write(self, point, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3495,14 +3465,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":193
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":191
  * 
  *     cdef write(self, point, ByteReader reader):
  *         reader.writeByte(point, True)             # <<<<<<<<<<<<<<
  * 
  * cdef IndexPoint index_point = IndexPoint()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -3516,7 +3486,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint
       __pyx_t_4 = 1;
     }
   }
-  __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   if (__pyx_t_3) {
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
@@ -3527,13 +3497,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint
   __Pyx_INCREF(Py_True);
   PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, Py_True);
   __Pyx_GIVEREF(Py_True);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 191; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":192
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":190
  *         return <unsigned char>data[position]
  * 
  *     cdef write(self, point, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -3557,7 +3527,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":197
+/* "mmfparser/data/chunkloaders/imagebank.pyx":195
  * cdef IndexPoint index_point = IndexPoint()
  * 
  * cdef inline tuple read_rgb(char * data, int width, int height, BasePoint pointClass):             # <<<<<<<<<<<<<<
@@ -3587,19 +3557,19 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read_rgb", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":199
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":197
  * cdef inline tuple read_rgb(char * data, int width, int height, BasePoint pointClass):
  *     cdef char * buf
  *     points = allocate_memory(width * height * 4, &buf)             # <<<<<<<<<<<<<<
  *     cdef unsigned int * c_array = <unsigned int *>buf
  *     cdef int x, y
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory(((__pyx_v_width * __pyx_v_height) * 4), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 199; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory(((__pyx_v_width * __pyx_v_height) * 4), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 197; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_points = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":200
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":198
  *     cdef char * buf
  *     points = allocate_memory(width * height * 4, &buf)
  *     cdef unsigned int * c_array = <unsigned int *>buf             # <<<<<<<<<<<<<<
@@ -3608,7 +3578,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_c_array = ((unsigned int *)__pyx_v_buf);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":202
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":200
  *     cdef unsigned int * c_array = <unsigned int *>buf
  *     cdef int x, y
  *     cdef int n = 0             # <<<<<<<<<<<<<<
@@ -3617,7 +3587,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_n = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":203
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":201
  *     cdef int x, y
  *     cdef int n = 0
  *     cdef int i = 0             # <<<<<<<<<<<<<<
@@ -3626,7 +3596,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_i = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":204
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":202
  *     cdef int n = 0
  *     cdef int i = 0
  *     cdef int pad = get_padding(width, pointClass)             # <<<<<<<<<<<<<<
@@ -3635,7 +3605,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_pad = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_padding(__pyx_v_width, __pyx_v_pointClass, NULL);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":205
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":203
  *     cdef int i = 0
  *     cdef int pad = get_padding(width, pointClass)
  *     for y in range(height):             # <<<<<<<<<<<<<<
@@ -3646,7 +3616,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_y = __pyx_t_3;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":206
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":204
  *     cdef int pad = get_padding(width, pointClass)
  *     for y in range(height):
  *         for x in range(width):             # <<<<<<<<<<<<<<
@@ -3657,7 +3627,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_x = __pyx_t_5;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":207
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":205
  *     for y in range(height):
  *         for x in range(width):
  *             c_array[i] = pointClass.read(data, n)             # <<<<<<<<<<<<<<
@@ -3666,7 +3636,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       (__pyx_v_c_array[__pyx_v_i]) = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_v_pointClass->__pyx_vtab)->read(__pyx_v_pointClass, __pyx_v_data, __pyx_v_n);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":208
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":206
  *         for x in range(width):
  *             c_array[i] = pointClass.read(data, n)
  *             n += pointClass.size             # <<<<<<<<<<<<<<
@@ -3675,7 +3645,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       __pyx_v_n = (__pyx_v_n + __pyx_v_pointClass->size);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":209
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":207
  *             c_array[i] = pointClass.read(data, n)
  *             n += pointClass.size
  *             i += 1             # <<<<<<<<<<<<<<
@@ -3685,7 +3655,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":210
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":208
  *             n += pointClass.size
  *             i += 1
  *         n += pad * pointClass.size             # <<<<<<<<<<<<<<
@@ -3695,7 +3665,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     __pyx_v_n = (__pyx_v_n + (__pyx_v_pad * __pyx_v_pointClass->size));
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":211
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":209
  *             i += 1
  *         n += pad * pointClass.size
  *     return points, n             # <<<<<<<<<<<<<<
@@ -3703,9 +3673,9 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  * cdef inline int get_padding(int width, BasePoint pointClass, int bytes = 2):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_n); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 211; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_n); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 211; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(__pyx_v_points);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_points);
@@ -3717,7 +3687,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":197
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":195
  * cdef IndexPoint index_point = IndexPoint()
  * 
  * cdef inline tuple read_rgb(char * data, int width, int height, BasePoint pointClass):             # <<<<<<<<<<<<<<
@@ -3738,7 +3708,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":213
+/* "mmfparser/data/chunkloaders/imagebank.pyx":211
  *     return points, n
  * 
  * cdef inline int get_padding(int width, BasePoint pointClass, int bytes = 2):             # <<<<<<<<<<<<<<
@@ -3759,7 +3729,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
     }
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":215
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":213
  * cdef inline int get_padding(int width, BasePoint pointClass, int bytes = 2):
  *     cdef int pad
  *     pad = bytes - ((width * pointClass.size) % bytes)             # <<<<<<<<<<<<<<
@@ -3768,7 +3738,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
  */
   __pyx_v_pad = (__pyx_v_bytes - ((__pyx_v_width * __pyx_v_pointClass->size) % __pyx_v_bytes));
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":216
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":214
  *     cdef int pad
  *     pad = bytes - ((width * pointClass.size) % bytes)
  *     if pad == bytes:             # <<<<<<<<<<<<<<
@@ -3778,7 +3748,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
   __pyx_t_1 = ((__pyx_v_pad == __pyx_v_bytes) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":217
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":215
  *     pad = bytes - ((width * pointClass.size) % bytes)
  *     if pad == bytes:
  *         pad = 0             # <<<<<<<<<<<<<<
@@ -3790,7 +3760,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":218
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":216
  *     if pad == bytes:
  *         pad = 0
  *     return <int>ceil(pad / <float>pointClass.size)             # <<<<<<<<<<<<<<
@@ -3800,7 +3770,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
   __pyx_r = ((int)ceil((__pyx_v_pad / ((float)__pyx_v_pointClass->size))));
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":213
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":211
  *     return points, n
  * 
  * cdef inline int get_padding(int width, BasePoint pointClass, int bytes = 2):             # <<<<<<<<<<<<<<
@@ -3814,7 +3784,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":220
+/* "mmfparser/data/chunkloaders/imagebank.pyx":218
  *     return <int>ceil(pad / <float>pointClass.size)
  * 
  * cdef inline tuple read_rle(char * data, int width, int height, BasePoint pointClass):             # <<<<<<<<<<<<<<
@@ -3845,7 +3815,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read_rle", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":222
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":220
  * cdef inline tuple read_rle(char * data, int width, int height, BasePoint pointClass):
  *     cdef char * buf
  *     cdef int pad = get_padding(width, pointClass)             # <<<<<<<<<<<<<<
@@ -3854,20 +3824,20 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_pad = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_padding(__pyx_v_width, __pyx_v_pointClass, NULL);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":223
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":221
  *     cdef char * buf
  *     cdef int pad = get_padding(width, pointClass)
  *     cdef bytes points = allocate_memory(width * height * 4, &buf)             # <<<<<<<<<<<<<<
  *     cdef unsigned int * c_array = <unsigned int *>buf
  *     cdef int currentPosition = 0
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory(((__pyx_v_width * __pyx_v_height) * 4), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory(((__pyx_v_width * __pyx_v_height) * 4), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_points = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":224
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":222
  *     cdef int pad = get_padding(width, pointClass)
  *     cdef bytes points = allocate_memory(width * height * 4, &buf)
  *     cdef unsigned int * c_array = <unsigned int *>buf             # <<<<<<<<<<<<<<
@@ -3876,7 +3846,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_c_array = ((unsigned int *)__pyx_v_buf);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":225
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":223
  *     cdef bytes points = allocate_memory(width * height * 4, &buf)
  *     cdef unsigned int * c_array = <unsigned int *>buf
  *     cdef int currentPosition = 0             # <<<<<<<<<<<<<<
@@ -3885,7 +3855,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_currentPosition = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":226
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":224
  *     cdef unsigned int * c_array = <unsigned int *>buf
  *     cdef int currentPosition = 0
  *     cdef int i = 0             # <<<<<<<<<<<<<<
@@ -3894,7 +3864,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_i = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":227
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":225
  *     cdef int currentPosition = 0
  *     cdef int i = 0
  *     cdef int pos = 0             # <<<<<<<<<<<<<<
@@ -3903,7 +3873,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_pos = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":231
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":229
  *     cdef unsigned char command
  *     cdef unsigned int newPoint
  *     while 1:             # <<<<<<<<<<<<<<
@@ -3912,7 +3882,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   while (1) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":232
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":230
  *     cdef unsigned int newPoint
  *     while 1:
  *         command = <unsigned char>data[currentPosition]             # <<<<<<<<<<<<<<
@@ -3921,7 +3891,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     __pyx_v_command = ((unsigned char)(__pyx_v_data[__pyx_v_currentPosition]));
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":233
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":231
  *     while 1:
  *         command = <unsigned char>data[currentPosition]
  *         currentPosition += 1             # <<<<<<<<<<<<<<
@@ -3930,7 +3900,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
     __pyx_v_currentPosition = (__pyx_v_currentPosition + 1);
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":235
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":233
  *         currentPosition += 1
  * 
  *         if command == 0:             # <<<<<<<<<<<<<<
@@ -3940,7 +3910,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     __pyx_t_2 = ((__pyx_v_command == 0) != 0);
     if (__pyx_t_2) {
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":236
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":234
  * 
  *         if command == 0:
  *             break             # <<<<<<<<<<<<<<
@@ -3950,7 +3920,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       goto __pyx_L4_break;
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":238
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":236
  *             break
  * 
  *         if command > 128:             # <<<<<<<<<<<<<<
@@ -3960,7 +3930,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     __pyx_t_2 = ((__pyx_v_command > 128) != 0);
     if (__pyx_t_2) {
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":239
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":237
  * 
  *         if command > 128:
  *             command -= 128             # <<<<<<<<<<<<<<
@@ -3969,7 +3939,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       __pyx_v_command = (__pyx_v_command - 128);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":240
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":238
  *         if command > 128:
  *             command -= 128
  *             for n in range(command):             # <<<<<<<<<<<<<<
@@ -3980,7 +3950,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
         __pyx_v_n = __pyx_t_4;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":241
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":239
  *             command -= 128
  *             for n in range(command):
  *                 if pos % (width + pad) < width:             # <<<<<<<<<<<<<<
@@ -3990,7 +3960,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
         __pyx_t_2 = (((__pyx_v_pos % (__pyx_v_width + __pyx_v_pad)) < __pyx_v_width) != 0);
         if (__pyx_t_2) {
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":242
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":240
  *             for n in range(command):
  *                 if pos % (width + pad) < width:
  *                     c_array[i] = pointClass.read(data, currentPosition)             # <<<<<<<<<<<<<<
@@ -3999,7 +3969,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
           (__pyx_v_c_array[__pyx_v_i]) = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_v_pointClass->__pyx_vtab)->read(__pyx_v_pointClass, __pyx_v_data, __pyx_v_currentPosition);
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":243
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":241
  *                 if pos % (width + pad) < width:
  *                     c_array[i] = pointClass.read(data, currentPosition)
  *                     i += 1             # <<<<<<<<<<<<<<
@@ -4011,7 +3981,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
         }
         __pyx_L9:;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":244
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":242
  *                     c_array[i] = pointClass.read(data, currentPosition)
  *                     i += 1
  *                 pos += 1             # <<<<<<<<<<<<<<
@@ -4020,7 +3990,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
         __pyx_v_pos = (__pyx_v_pos + 1);
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":245
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":243
  *                     i += 1
  *                 pos += 1
  *                 currentPosition += pointClass.size             # <<<<<<<<<<<<<<
@@ -4033,7 +4003,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     }
     /*else*/ {
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":247
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":245
  *                 currentPosition += pointClass.size
  *         else:
  *             newPoint = pointClass.read(data, currentPosition)             # <<<<<<<<<<<<<<
@@ -4042,7 +4012,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       __pyx_v_newPoint = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_v_pointClass->__pyx_vtab)->read(__pyx_v_pointClass, __pyx_v_data, __pyx_v_currentPosition);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":248
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":246
  *         else:
  *             newPoint = pointClass.read(data, currentPosition)
  *             for n in range(command):             # <<<<<<<<<<<<<<
@@ -4053,7 +4023,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
         __pyx_v_n = __pyx_t_4;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":249
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":247
  *             newPoint = pointClass.read(data, currentPosition)
  *             for n in range(command):
  *                 if pos % (width + pad) < width:             # <<<<<<<<<<<<<<
@@ -4063,7 +4033,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
         __pyx_t_2 = (((__pyx_v_pos % (__pyx_v_width + __pyx_v_pad)) < __pyx_v_width) != 0);
         if (__pyx_t_2) {
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":250
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":248
  *             for n in range(command):
  *                 if pos % (width + pad) < width:
  *                     c_array[i] = newPoint             # <<<<<<<<<<<<<<
@@ -4072,7 +4042,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
           (__pyx_v_c_array[__pyx_v_i]) = __pyx_v_newPoint;
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":251
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":249
  *                 if pos % (width + pad) < width:
  *                     c_array[i] = newPoint
  *                     i += 1             # <<<<<<<<<<<<<<
@@ -4084,7 +4054,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
         }
         __pyx_L12:;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":252
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":250
  *                     c_array[i] = newPoint
  *                     i += 1
  *                 pos += 1             # <<<<<<<<<<<<<<
@@ -4094,7 +4064,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
         __pyx_v_pos = (__pyx_v_pos + 1);
       }
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":253
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":251
  *                     i += 1
  *                 pos += 1
  *             currentPosition += pointClass.size             # <<<<<<<<<<<<<<
@@ -4107,7 +4077,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   }
   __pyx_L4_break:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":254
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":252
  *                 pos += 1
  *             currentPosition += pointClass.size
  *     return points, currentPosition             # <<<<<<<<<<<<<<
@@ -4115,9 +4085,9 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  * cdef inline read_alpha(char * data, int width, int height, int position):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_currentPosition); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_currentPosition); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_points);
   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_points);
@@ -4129,7 +4099,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":220
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":218
  *     return <int>ceil(pad / <float>pointClass.size)
  * 
  * cdef inline tuple read_rle(char * data, int width, int height, BasePoint pointClass):             # <<<<<<<<<<<<<<
@@ -4150,7 +4120,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":256
+/* "mmfparser/data/chunkloaders/imagebank.pyx":254
  *     return points, currentPosition
  * 
  * cdef inline read_alpha(char * data, int width, int height, int position):             # <<<<<<<<<<<<<<
@@ -4179,7 +4149,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read_alpha", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":257
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":255
  * 
  * cdef inline read_alpha(char * data, int width, int height, int position):
  *     cdef int pad = get_padding(width, index_point, 4)             # <<<<<<<<<<<<<<
@@ -4194,19 +4164,19 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_pad = __pyx_t_2;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":259
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":257
  *     cdef int pad = get_padding(width, index_point, 4)
  *     cdef char * buf
  *     points = allocate_memory(width * height, &buf)             # <<<<<<<<<<<<<<
  *     cdef int i, n, x, y
  *     n = i = 0
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory((__pyx_v_width * __pyx_v_height), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 259; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory((__pyx_v_width * __pyx_v_height), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 257; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_points = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":261
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":259
  *     points = allocate_memory(width * height, &buf)
  *     cdef int i, n, x, y
  *     n = i = 0             # <<<<<<<<<<<<<<
@@ -4216,7 +4186,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_v_n = 0;
   __pyx_v_i = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":262
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":260
  *     cdef int i, n, x, y
  *     n = i = 0
  *     for y in range(height):             # <<<<<<<<<<<<<<
@@ -4227,7 +4197,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_2; __pyx_t_4+=1) {
     __pyx_v_y = __pyx_t_4;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":263
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":261
  *     n = i = 0
  *     for y in range(height):
  *         for x in range(width):             # <<<<<<<<<<<<<<
@@ -4238,7 +4208,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":264
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":262
  *     for y in range(height):
  *         for x in range(width):
  *             buf[i] = data[n + position]             # <<<<<<<<<<<<<<
@@ -4247,7 +4217,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       (__pyx_v_buf[__pyx_v_i]) = (__pyx_v_data[(__pyx_v_n + __pyx_v_position)]);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":265
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":263
  *         for x in range(width):
  *             buf[i] = data[n + position]
  *             n += 1             # <<<<<<<<<<<<<<
@@ -4256,7 +4226,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       __pyx_v_n = (__pyx_v_n + 1);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":266
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":264
  *             buf[i] = data[n + position]
  *             n += 1
  *             i += 1             # <<<<<<<<<<<<<<
@@ -4266,7 +4236,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       __pyx_v_i = (__pyx_v_i + 1);
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":267
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":265
  *             n += 1
  *             i += 1
  *         n += pad             # <<<<<<<<<<<<<<
@@ -4276,7 +4246,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     __pyx_v_n = (__pyx_v_n + __pyx_v_pad);
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":268
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":266
  *             i += 1
  *         n += pad
  *     return points             # <<<<<<<<<<<<<<
@@ -4288,7 +4258,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_r = __pyx_v_points;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":256
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":254
  *     return points, currentPosition
  * 
  * cdef inline read_alpha(char * data, int width, int height, int position):             # <<<<<<<<<<<<<<
@@ -4308,7 +4278,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":270
+/* "mmfparser/data/chunkloaders/imagebank.pyx":268
  *     return points
  * 
  * cdef inline generate_alpha(ImageItem item):             # <<<<<<<<<<<<<<
@@ -4339,7 +4309,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("generate_alpha", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":271
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":269
  * 
  * cdef inline generate_alpha(ImageItem item):
  *     cdef int pad = get_padding(item.width, index_point, 4)             # <<<<<<<<<<<<<<
@@ -4354,29 +4324,29 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_pad = __pyx_t_2;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":273
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":271
  *     cdef int pad = get_padding(item.width, index_point, 4)
  *     cdef int i, n, x, y
  *     cdef char * alpha = item.alpha             # <<<<<<<<<<<<<<
  *     cdef char * buf
  *     points = allocate_memory(item.width * item.height + pad * item.height, &buf)
  */
-  __pyx_t_4 = __Pyx_PyObject_AsString(__pyx_v_item->alpha); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_AsString(__pyx_v_item->alpha); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_alpha = __pyx_t_4;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":275
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":273
  *     cdef char * alpha = item.alpha
  *     cdef char * buf
  *     points = allocate_memory(item.width * item.height + pad * item.height, &buf)             # <<<<<<<<<<<<<<
  *     i = n = 0
  *     for y in range(item.height):
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory(((__pyx_v_item->width * __pyx_v_item->height) + (__pyx_v_pad * __pyx_v_item->height)), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 275; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_6common_allocate_memory(((__pyx_v_item->width * __pyx_v_item->height) + (__pyx_v_pad * __pyx_v_item->height)), (&__pyx_v_buf)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 273; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_points = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":276
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":274
  *     cdef char * buf
  *     points = allocate_memory(item.width * item.height + pad * item.height, &buf)
  *     i = n = 0             # <<<<<<<<<<<<<<
@@ -4386,7 +4356,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_v_i = 0;
   __pyx_v_n = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":277
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":275
  *     points = allocate_memory(item.width * item.height + pad * item.height, &buf)
  *     i = n = 0
  *     for y in range(item.height):             # <<<<<<<<<<<<<<
@@ -4397,7 +4367,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_5; __pyx_t_2+=1) {
     __pyx_v_y = __pyx_t_2;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":278
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":276
  *     i = n = 0
  *     for y in range(item.height):
  *         for x in range(item.width):             # <<<<<<<<<<<<<<
@@ -4408,7 +4378,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_x = __pyx_t_7;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":279
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":277
  *     for y in range(item.height):
  *         for x in range(item.width):
  *             buf[n] = alpha[i]             # <<<<<<<<<<<<<<
@@ -4417,7 +4387,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       (__pyx_v_buf[__pyx_v_n]) = (__pyx_v_alpha[__pyx_v_i]);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":280
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":278
  *         for x in range(item.width):
  *             buf[n] = alpha[i]
  *             i += 1             # <<<<<<<<<<<<<<
@@ -4426,7 +4396,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       __pyx_v_i = (__pyx_v_i + 1);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":281
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":279
  *             buf[n] = alpha[i]
  *             i += 1
  *             n += 1             # <<<<<<<<<<<<<<
@@ -4436,7 +4406,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       __pyx_v_n = (__pyx_v_n + 1);
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":282
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":280
  *             i += 1
  *             n += 1
  *         n += pad             # <<<<<<<<<<<<<<
@@ -4446,7 +4416,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     __pyx_v_n = (__pyx_v_n + __pyx_v_pad);
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":283
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":281
  *             n += 1
  *         n += pad
  *     return points             # <<<<<<<<<<<<<<
@@ -4458,7 +4428,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_r = __pyx_v_points;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":270
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":268
  *     return points
  * 
  * cdef inline generate_alpha(ImageItem item):             # <<<<<<<<<<<<<<
@@ -4478,7 +4448,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":285
+/* "mmfparser/data/chunkloaders/imagebank.pyx":283
  *     return points
  * 
  * cdef inline generate_image(ImageItem item):             # <<<<<<<<<<<<<<
@@ -4508,7 +4478,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("generate_image", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":287
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":285
  * cdef inline generate_image(ImageItem item):
  *     cdef int x, y
  *     cdef int n = 0             # <<<<<<<<<<<<<<
@@ -4517,7 +4487,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_n = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":288
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":286
  *     cdef int x, y
  *     cdef int n = 0
  *     cdef int i = 0             # <<<<<<<<<<<<<<
@@ -4526,17 +4496,17 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
   __pyx_v_i = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":289
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":287
  *     cdef int n = 0
  *     cdef int i = 0
  *     cdef char * image = item.image             # <<<<<<<<<<<<<<
  *     cdef int pad = get_padding(item.width, point_instance)
  *     cdef char * buf
  */
-  __pyx_t_1 = __Pyx_PyObject_AsString(__pyx_v_item->image); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_AsString(__pyx_v_item->image); if (unlikely((!__pyx_t_1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_image = __pyx_t_1;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":290
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":288
  *     cdef int i = 0
  *     cdef char * image = item.image
  *     cdef int pad = get_padding(item.width, point_instance)             # <<<<<<<<<<<<<<
@@ -4548,19 +4518,19 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_v_pad = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_padding(__pyx_v_item->width, ((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_t_2), NULL);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":292
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":290
  *     cdef int pad = get_padding(item.width, point_instance)
  *     cdef char * buf
  *     points = allocate_memory((item.width * item.height + pad * item.height             # <<<<<<<<<<<<<<
  *         ) * point_instance.size, &buf)
  *     for y in range(item.height):
  */
-  __pyx_t_2 = __pyx_f_9mmfparser_6common_allocate_memory((((__pyx_v_item->width * __pyx_v_item->height) + (__pyx_v_pad * __pyx_v_item->height)) * __pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_point_instance->size), (&__pyx_v_buf)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __pyx_f_9mmfparser_6common_allocate_memory((((__pyx_v_item->width * __pyx_v_item->height) + (__pyx_v_pad * __pyx_v_item->height)) * __pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_point_instance->size), (&__pyx_v_buf)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_points = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":294
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":292
  *     points = allocate_memory((item.width * item.height + pad * item.height
  *         ) * point_instance.size, &buf)
  *     for y in range(item.height):             # <<<<<<<<<<<<<<
@@ -4571,7 +4541,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_y = __pyx_t_4;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":295
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":293
  *         ) * point_instance.size, &buf)
  *     for y in range(item.height):
  *         for x in range(item.width):             # <<<<<<<<<<<<<<
@@ -4582,7 +4552,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":296
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":294
  *     for y in range(item.height):
  *         for x in range(item.width):
  *             buf[n] = image[i+2]             # <<<<<<<<<<<<<<
@@ -4591,7 +4561,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       (__pyx_v_buf[__pyx_v_n]) = (__pyx_v_image[(__pyx_v_i + 2)]);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":297
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":295
  *         for x in range(item.width):
  *             buf[n] = image[i+2]
  *             buf[n+1] = image[i+1]             # <<<<<<<<<<<<<<
@@ -4600,7 +4570,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       (__pyx_v_buf[(__pyx_v_n + 1)]) = (__pyx_v_image[(__pyx_v_i + 1)]);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":298
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":296
  *             buf[n] = image[i+2]
  *             buf[n+1] = image[i+1]
  *             buf[n+2] = image[i]             # <<<<<<<<<<<<<<
@@ -4609,7 +4579,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       (__pyx_v_buf[(__pyx_v_n + 2)]) = (__pyx_v_image[__pyx_v_i]);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":299
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":297
  *             buf[n+1] = image[i+1]
  *             buf[n+2] = image[i]
  *             i += 4             # <<<<<<<<<<<<<<
@@ -4618,7 +4588,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  */
       __pyx_v_i = (__pyx_v_i + 4);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":300
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":298
  *             buf[n+2] = image[i]
  *             i += 4
  *             n += 3             # <<<<<<<<<<<<<<
@@ -4628,7 +4598,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
       __pyx_v_n = (__pyx_v_n + 3);
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":301
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":299
  *             i += 4
  *             n += 3
  *         n += pad * point_instance.size             # <<<<<<<<<<<<<<
@@ -4638,7 +4608,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     __pyx_v_n = (__pyx_v_n + (__pyx_v_pad * __pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_point_instance->size));
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":302
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":300
  *             n += 3
  *         n += pad * point_instance.size
  *     return points             # <<<<<<<<<<<<<<
@@ -4650,7 +4620,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __pyx_r = __pyx_v_points;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":285
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":283
  *     return points
  * 
  * cdef inline generate_image(ImageItem item):             # <<<<<<<<<<<<<<
@@ -4670,7 +4640,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":365
+/* "mmfparser/data/chunkloaders/imagebank.pyx":363
  *         size_t pos
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -4694,7 +4664,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_i
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_initialize); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 365; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_initialize); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_1initialize)) {
       __Pyx_XDECREF(__pyx_r);
@@ -4710,10 +4680,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_i
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 365; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 365; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4725,16 +4695,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_i
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":366
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":364
  * 
  *     cpdef initialize(self):
  *         self.flags = IMAGE_FLAGS.copy()             # <<<<<<<<<<<<<<
  * 
  *     cpdef read(self, ByteReader reader):
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_IMAGE_FLAGS); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_IMAGE_FLAGS); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_copy); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -4748,10 +4718,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_i
     }
   }
   if (__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -4761,7 +4731,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_i
   __pyx_v_self->flags = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":365
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":363
  *         size_t pos
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -4807,7 +4777,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("initialize", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_initialize(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 365; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_initialize(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4824,7 +4794,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":368
+/* "mmfparser/data/chunkloaders/imagebank.pyx":366
  *         self.flags = IMAGE_FLAGS.copy()
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -4856,7 +4826,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_3read)) {
       __Pyx_XDECREF(__pyx_r);
@@ -4872,16 +4842,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
         }
       }
       if (!__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
       } else {
-        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_5);
         PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
         __Pyx_INCREF(((PyObject *)__pyx_v_reader));
         PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_reader));
         __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
@@ -4894,20 +4864,20 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":369
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":367
  * 
  *     cpdef read(self, ByteReader reader):
  *         self.handle = reader.readInt()             # <<<<<<<<<<<<<<
  *         cdef bint load_now = self.settings.get('loadImages', True)
  *         self.reader = reader
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 369; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 367; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 369; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 367; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_self->handle = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":370
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":368
  *     cpdef read(self, ByteReader reader):
  *         self.handle = reader.readInt()
  *         cdef bint load_now = self.settings.get('loadImages', True)             # <<<<<<<<<<<<<<
@@ -4916,15 +4886,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 370; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_loadImages, Py_True); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 370; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_loadImages, Py_True); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 370; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_load_now = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":371
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":369
  *         self.handle = reader.readInt()
  *         cdef bint load_now = self.settings.get('loadImages', True)
  *         self.reader = reader             # <<<<<<<<<<<<<<
@@ -4937,7 +4907,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   __Pyx_DECREF(((PyObject *)__pyx_v_self->reader));
   __pyx_v_self->reader = __pyx_v_reader;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":372
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":370
  *         cdef bint load_now = self.settings.get('loadImages', True)
  *         self.reader = reader
  *         self.pos = reader.tell()             # <<<<<<<<<<<<<<
@@ -4946,7 +4916,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
   __pyx_v_self->pos = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":373
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":371
  *         self.reader = reader
  *         self.pos = reader.tell()
  *         if load_now:             # <<<<<<<<<<<<<<
@@ -4956,18 +4926,18 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   __pyx_t_7 = (__pyx_v_load_now != 0);
   if (__pyx_t_7) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":374
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":372
  *         self.pos = reader.tell()
  *         if load_now:
  *             self.load()             # <<<<<<<<<<<<<<
  *             return
  * 
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *)__pyx_v_self->__pyx_base.__pyx_vtab)->load(__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 374; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *)__pyx_v_self->__pyx_base.__pyx_vtab)->load(__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 372; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":375
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":373
  *         if load_now:
  *             self.load()
  *             return             # <<<<<<<<<<<<<<
@@ -4979,7 +4949,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":377
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":375
  *             return
  * 
  *         cdef bint old = self.settings.get('old', False)             # <<<<<<<<<<<<<<
@@ -4988,15 +4958,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 375; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_old, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_old, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 375; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 375; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_old = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":378
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":376
  * 
  *         cdef bint old = self.settings.get('old', False)
  *         if old:             # <<<<<<<<<<<<<<
@@ -5006,21 +4976,21 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   __pyx_t_7 = (__pyx_v_old != 0);
   if (__pyx_t_7) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":379
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":377
  *         cdef bint old = self.settings.get('old', False)
  *         if old:
  *             raise NotImplementedError('not supported')             # <<<<<<<<<<<<<<
  * 
  *         cdef bint debug = self.settings.get('debug', False)
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_NotImplementedError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_NotImplementedError, __pyx_tuple_, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_Raise(__pyx_t_1, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":381
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":379
  *             raise NotImplementedError('not supported')
  * 
  *         cdef bint debug = self.settings.get('debug', False)             # <<<<<<<<<<<<<<
@@ -5029,15 +4999,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 381; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 381; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 381; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_debug = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":383
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":381
  *         cdef bint debug = self.settings.get('debug', False)
  *         cdef int size
  *         if debug:             # <<<<<<<<<<<<<<
@@ -5047,7 +5017,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   __pyx_t_7 = (__pyx_v_debug != 0);
   if (__pyx_t_7) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":384
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":382
  *         cdef int size
  *         if debug:
  *             reader.skipBytes(8)             # <<<<<<<<<<<<<<
@@ -5056,7 +5026,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
     ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->skipBytes(__pyx_v_reader, 8, 0);
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":385
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":383
  *         if debug:
  *             reader.skipBytes(8)
  *             size = reader.readInt(True)             # <<<<<<<<<<<<<<
@@ -5065,13 +5035,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
     __pyx_t_8.__pyx_n = 1;
     __pyx_t_8.asUnsigned = 1;
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 383; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 385; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 383; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_size = __pyx_t_6;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":386
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":384
  *             reader.skipBytes(8)
  *             size = reader.readInt(True)
  *             reader.skipBytes(size + 20)             # <<<<<<<<<<<<<<
@@ -5083,7 +5053,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":388
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":386
  *             reader.skipBytes(size + 20)
  *         else:
  *             reader.skipBytes(4)             # <<<<<<<<<<<<<<
@@ -5092,7 +5062,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
     ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->skipBytes(__pyx_v_reader, 4, 0);
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":389
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":387
  *         else:
  *             reader.skipBytes(4)
  *             size = reader.readInt(True)             # <<<<<<<<<<<<<<
@@ -5101,13 +5071,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
  */
     __pyx_t_8.__pyx_n = 1;
     __pyx_t_8.asUnsigned = 1;
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 389; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 387; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 389; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 387; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_size = __pyx_t_6;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":390
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":388
  *             reader.skipBytes(4)
  *             size = reader.readInt(True)
  *             reader.skipBytes(size)             # <<<<<<<<<<<<<<
@@ -5118,7 +5088,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
   }
   __pyx_L5:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":368
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":366
  *         self.flags = IMAGE_FLAGS.copy()
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -5152,7 +5122,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_2read(((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *)__pyx_v_self), ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader));
 
   /* function exit code */
@@ -5173,7 +5143,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_read(__pyx_v_self, __pyx_v_reader, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_read(__pyx_v_self, __pyx_v_reader, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 366; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5190,7 +5160,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":392
+/* "mmfparser/data/chunkloaders/imagebank.pyx":390
  *             reader.skipBytes(size)
  * 
  *     cpdef load(self):             # <<<<<<<<<<<<<<
@@ -5228,7 +5198,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_load); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 392; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_load); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 390; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_5load)) {
       __Pyx_XDECREF(__pyx_r);
@@ -5244,10 +5214,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 392; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 390; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 392; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 390; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5259,7 +5229,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":393
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":391
  * 
  *     cpdef load(self):
  *         cdef ByteReader reader = self.reader             # <<<<<<<<<<<<<<
@@ -5271,7 +5241,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_v_reader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":394
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":392
  *     cpdef load(self):
  *         cdef ByteReader reader = self.reader
  *         if reader is None:             # <<<<<<<<<<<<<<
@@ -5282,7 +5252,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = (__pyx_t_5 != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":395
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":393
  *         cdef ByteReader reader = self.reader
  *         if reader is None:
  *             return             # <<<<<<<<<<<<<<
@@ -5294,7 +5264,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
     goto __pyx_L0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":396
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":394
  *         if reader is None:
  *             return
  *         reader.seek(self.pos)             # <<<<<<<<<<<<<<
@@ -5303,7 +5273,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
  */
   ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_v_self->pos, 0, NULL);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":397
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":395
  *             return
  *         reader.seek(self.pos)
  *         self.reader = None             # <<<<<<<<<<<<<<
@@ -5316,7 +5286,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __Pyx_DECREF(((PyObject *)__pyx_v_self->reader));
   __pyx_v_self->reader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)Py_None);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":399
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":397
  *         self.reader = None
  * 
  *         cdef bint old = self.settings.get('old', False)             # <<<<<<<<<<<<<<
@@ -5325,15 +5295,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 399; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 397; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_old, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 399; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_old, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 397; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 399; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 397; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_old = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":400
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":398
  * 
  *         cdef bint old = self.settings.get('old', False)
  *         cdef bint debug = self.settings.get('debug', False)             # <<<<<<<<<<<<<<
@@ -5342,15 +5312,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 400; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 398; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 400; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 398; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 400; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 398; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_debug = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":402
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":400
  *         cdef bint debug = self.settings.get('debug', False)
  *         cdef ByteReader newReader
  *         if old:             # <<<<<<<<<<<<<<
@@ -5360,16 +5330,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = (__pyx_v_old != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":403
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":401
  *         cdef ByteReader newReader
  *         if old:
  *             newReader = onepointfive.decompress(reader)             # <<<<<<<<<<<<<<
  *         elif debug:
  *             newReader = reader
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_onepointfive); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 403; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_onepointfive); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 401; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_decompress); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 403; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_decompress); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 401; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -5383,27 +5353,27 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
       }
     }
     if (!__pyx_t_2) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 403; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 401; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 403; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 401; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __Pyx_GIVEREF(__pyx_t_2); __pyx_t_2 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_reader));
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, ((PyObject *)__pyx_v_reader));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 403; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 401; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 403; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 401; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_newReader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
     __pyx_t_1 = 0;
     goto __pyx_L4;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":404
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":402
  *         if old:
  *             newReader = onepointfive.decompress(reader)
  *         elif debug:             # <<<<<<<<<<<<<<
@@ -5413,7 +5383,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = (__pyx_v_debug != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":405
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":403
  *             newReader = onepointfive.decompress(reader)
  *         elif debug:
  *             newReader = reader             # <<<<<<<<<<<<<<
@@ -5426,16 +5396,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":407
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":405
  *             newReader = reader
  *         else:
  *             newReader = zlibdata.decompress(reader)             # <<<<<<<<<<<<<<
  * 
  *         start = newReader.tell()
  */
-    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlibdata); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 407; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlibdata); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 405; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_decompress); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 407; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_decompress); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 405; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -5449,27 +5419,27 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
       }
     }
     if (!__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 407; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 405; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 407; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 405; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_reader));
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, ((PyObject *)__pyx_v_reader));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 407; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 405; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 407; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 405; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_newReader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
     __pyx_t_1 = 0;
   }
   __pyx_L4:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":409
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":407
  *             newReader = zlibdata.decompress(reader)
  * 
  *         start = newReader.tell()             # <<<<<<<<<<<<<<
@@ -5478,7 +5448,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
  */
   __pyx_v_start = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->tell(__pyx_v_newReader, 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":411
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":409
  *         start = newReader.tell()
  * 
  *         if old:             # <<<<<<<<<<<<<<
@@ -5488,48 +5458,48 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = (__pyx_v_old != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":412
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":410
  * 
  *         if old:
  *             self.checksum = newReader.readShort()             # <<<<<<<<<<<<<<
  *         else:
  *             self.checksum = newReader.readInt()
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 412; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 410; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_self->checksum = __pyx_t_7;
     goto __pyx_L5;
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":414
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":412
  *             self.checksum = newReader.readShort()
  *         else:
  *             self.checksum = newReader.readInt()             # <<<<<<<<<<<<<<
  *         self.references = newReader.readInt()
  *         cdef int size = newReader.readInt(True)
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readInt(__pyx_v_newReader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 414; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readInt(__pyx_v_newReader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 412; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 414; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 412; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_self->checksum = __pyx_t_7;
   }
   __pyx_L5:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":415
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":413
  *         else:
  *             self.checksum = newReader.readInt()
  *         self.references = newReader.readInt()             # <<<<<<<<<<<<<<
  *         cdef int size = newReader.readInt(True)
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readInt(__pyx_v_newReader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 415; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readInt(__pyx_v_newReader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 413; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 415; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 413; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_self->references = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":416
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":414
  *             self.checksum = newReader.readInt()
  *         self.references = newReader.readInt()
  *         cdef int size = newReader.readInt(True)             # <<<<<<<<<<<<<<
@@ -5538,13 +5508,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
  */
   __pyx_t_8.__pyx_n = 1;
   __pyx_t_8.asUnsigned = 1;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readInt(__pyx_v_newReader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 416; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readInt(__pyx_v_newReader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 414; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 416; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 414; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_size = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":418
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":416
  *         cdef int size = newReader.readInt(True)
  * 
  *         if debug:             # <<<<<<<<<<<<<<
@@ -5554,14 +5524,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = (__pyx_v_debug != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":419
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":417
  * 
  *         if debug:
  *             newReader = newReader.readReader(size + 20)             # <<<<<<<<<<<<<<
  *         self.width = newReader.readShort()
  *         self.height = newReader.readShort()
  */
-    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readReader(__pyx_v_newReader, (__pyx_v_size + 20), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 419; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readReader(__pyx_v_newReader, (__pyx_v_size + 20), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 417; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF_SET(__pyx_v_newReader, ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1));
     __pyx_t_1 = 0;
@@ -5569,49 +5539,49 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   }
   __pyx_L6:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":420
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":418
  *         if debug:
  *             newReader = newReader.readReader(size + 20)
  *         self.width = newReader.readShort()             # <<<<<<<<<<<<<<
  *         self.height = newReader.readShort()
  *         self.graphicMode = newReader.readByte()
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 420; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 418; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->width = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":421
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":419
  *             newReader = newReader.readReader(size + 20)
  *         self.width = newReader.readShort()
  *         self.height = newReader.readShort()             # <<<<<<<<<<<<<<
  *         self.graphicMode = newReader.readByte()
  *         self.flags.setFlags(newReader.readByte(True))
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 419; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->height = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":422
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":420
  *         self.width = newReader.readShort()
  *         self.height = newReader.readShort()
  *         self.graphicMode = newReader.readByte()             # <<<<<<<<<<<<<<
  *         self.flags.setFlags(newReader.readByte(True))
  * 
  */
-  __pyx_t_9 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readByte(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_9 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 422; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readByte(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_9 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 420; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->graphicMode = __pyx_t_9;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":423
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":421
  *         self.height = newReader.readShort()
  *         self.graphicMode = newReader.readByte()
  *         self.flags.setFlags(newReader.readByte(True))             # <<<<<<<<<<<<<<
  * 
  *         if not old:
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_setFlags); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 423; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_setFlags); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_10.__pyx_n = 1;
   __pyx_t_10.asUnsigned = 1;
-  __pyx_t_9 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readByte(__pyx_v_newReader, 0, &__pyx_t_10); if (unlikely(__pyx_t_9 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 423; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_t_9); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 423; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readByte(__pyx_v_newReader, 0, &__pyx_t_10); if (unlikely(__pyx_t_9 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_t_9); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -5624,24 +5594,24 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 423; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 423; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_11);
     PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_11, 0+1, __pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_11, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 423; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_11, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 421; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":425
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":423
  *         self.flags.setFlags(newReader.readByte(True))
  * 
  *         if not old:             # <<<<<<<<<<<<<<
@@ -5651,7 +5621,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = ((!(__pyx_v_old != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":426
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":424
  * 
  *         if not old:
  *             newReader.skipBytes(2) # imgNotUsed             # <<<<<<<<<<<<<<
@@ -5663,47 +5633,47 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   }
   __pyx_L7:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":427
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":425
  *         if not old:
  *             newReader.skipBytes(2) # imgNotUsed
  *         self.xHotspot = newReader.readShort()             # <<<<<<<<<<<<<<
  *         self.yHotspot = newReader.readShort()
  *         self.actionX = newReader.readShort()
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 427; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 425; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->xHotspot = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":428
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":426
  *             newReader.skipBytes(2) # imgNotUsed
  *         self.xHotspot = newReader.readShort()
  *         self.yHotspot = newReader.readShort()             # <<<<<<<<<<<<<<
  *         self.actionX = newReader.readShort()
  *         self.actionY = newReader.readShort()
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 428; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 426; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->yHotspot = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":429
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":427
  *         self.xHotspot = newReader.readShort()
  *         self.yHotspot = newReader.readShort()
  *         self.actionX = newReader.readShort()             # <<<<<<<<<<<<<<
  *         self.actionY = newReader.readShort()
  *         if old:
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 429; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 427; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionX = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":430
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":428
  *         self.yHotspot = newReader.readShort()
  *         self.actionX = newReader.readShort()
  *         self.actionY = newReader.readShort()             # <<<<<<<<<<<<<<
  *         if old:
  *             self.transparent = (0, 0, 0)
  */
-  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 430; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readShort(__pyx_v_newReader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 428; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionY = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":431
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":429
  *         self.actionX = newReader.readShort()
  *         self.actionY = newReader.readShort()
  *         if old:             # <<<<<<<<<<<<<<
@@ -5713,7 +5683,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_t_6 = (__pyx_v_old != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":432
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":430
  *         self.actionY = newReader.readShort()
  *         if old:
  *             self.transparent = (0, 0, 0)             # <<<<<<<<<<<<<<
@@ -5729,14 +5699,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":434
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":432
  *             self.transparent = (0, 0, 0)
  *         else:
  *             self.transparent = newReader.readColor()             # <<<<<<<<<<<<<<
  * 
  *         cdef int decompressed
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readColor(__pyx_v_newReader, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 434; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->readColor(__pyx_v_newReader, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 432; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_1);
     __Pyx_GOTREF(__pyx_v_self->transparent);
@@ -5746,26 +5716,26 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   }
   __pyx_L8:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":437
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":435
  * 
  *         cdef int decompressed
  *         data = newReader.read()             # <<<<<<<<<<<<<<
  *         self.rawImage=ByteReader()
  *         self.rawImage.write(data)
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->read(__pyx_v_newReader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 437; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->read(__pyx_v_newReader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 435; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":438
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":436
  *         cdef int decompressed
  *         data = newReader.read()
  *         self.rawImage=ByteReader()             # <<<<<<<<<<<<<<
  *         self.rawImage.write(data)
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_10bytereader_ByteReader)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 438; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_10bytereader_ByteReader)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 436; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->rawImage);
@@ -5773,17 +5743,17 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
   __pyx_v_self->rawImage = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":439
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":437
  *         data = newReader.read()
  *         self.rawImage=ByteReader()
  *         self.rawImage.write(data)             # <<<<<<<<<<<<<<
  * 
  *     def write(self, reader):
  */
-  if (!(likely(PyBytes_CheckExact(__pyx_v_data))||((__pyx_v_data) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_data)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 439; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyBytes_CheckExact(__pyx_v_data))||((__pyx_v_data) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_data)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 437; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_self->rawImage->__pyx_vtab)->write(__pyx_v_self->rawImage, ((PyObject*)__pyx_v_data), 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":392
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":390
  *             reader.skipBytes(size)
  * 
  *     cpdef load(self):             # <<<<<<<<<<<<<<
@@ -5833,7 +5803,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("load", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_load(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 392; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_load(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 390; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5850,7 +5820,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":441
+/* "mmfparser/data/chunkloaders/imagebank.pyx":439
  *         self.rawImage.write(data)
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -5890,16 +5860,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":442
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":440
  * 
  *     def write(self, reader):
  *         self.flags['LZX'] = True             # <<<<<<<<<<<<<<
  *         cdef bint debug = self.settings.get('debug', False)
  *         compressedPeen = zlibdata.compressImageLZX(self.rawImage)
  */
-  if (unlikely(PyObject_SetItem(__pyx_v_self->flags, __pyx_n_s_LZX, Py_True) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(PyObject_SetItem(__pyx_v_self->flags, __pyx_n_s_LZX, Py_True) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 440; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":443
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":441
  *     def write(self, reader):
  *         self.flags['LZX'] = True
  *         cdef bint debug = self.settings.get('debug', False)             # <<<<<<<<<<<<<<
@@ -5908,24 +5878,24 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 441; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 441; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 441; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_debug = __pyx_t_2;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":444
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":442
  *         self.flags['LZX'] = True
  *         cdef bint debug = self.settings.get('debug', False)
  *         compressedPeen = zlibdata.compressImageLZX(self.rawImage)             # <<<<<<<<<<<<<<
  *         newReader = ByteReader()
  *         newReader.writeInt(self.checksum)
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlibdata); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlibdata); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_compressImageLZX); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_compressImageLZX); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -5939,16 +5909,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self->rawImage)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_self->rawImage)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     __Pyx_INCREF(((PyObject *)__pyx_v_self->rawImage));
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_self->rawImage));
     __Pyx_GIVEREF(((PyObject *)__pyx_v_self->rawImage));
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -5956,28 +5926,28 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __pyx_v_compressedPeen = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":445
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":443
  *         cdef bint debug = self.settings.get('debug', False)
  *         compressedPeen = zlibdata.compressImageLZX(self.rawImage)
  *         newReader = ByteReader()             # <<<<<<<<<<<<<<
  *         newReader.writeInt(self.checksum)
  *         newReader.writeInt(self.references)
  */
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_10bytereader_ByteReader)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 445; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_10bytereader_ByteReader)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_newReader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":446
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":444
  *         compressedPeen = zlibdata.compressImageLZX(self.rawImage)
  *         newReader = ByteReader()
  *         newReader.writeInt(self.checksum)             # <<<<<<<<<<<<<<
  *         newReader.writeInt(self.references)
  *         if (self.flags['LZX'] == False):
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->checksum); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->checksum); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -5990,33 +5960,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":447
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":445
  *         newReader = ByteReader()
  *         newReader.writeInt(self.checksum)
  *         newReader.writeInt(self.references)             # <<<<<<<<<<<<<<
  *         if (self.flags['LZX'] == False):
  *             newReader.writeInt(len(self.rawImage))
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 445; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->references); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->references); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 445; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6029,52 +5999,52 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 445; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 445; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 445; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":448
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":446
  *         newReader.writeInt(self.checksum)
  *         newReader.writeInt(self.references)
  *         if (self.flags['LZX'] == False):             # <<<<<<<<<<<<<<
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):
  */
-  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 446; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":449
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":447
  *         newReader.writeInt(self.references)
  *         if (self.flags['LZX'] == False):
  *             newReader.writeInt(len(self.rawImage))             # <<<<<<<<<<<<<<
  *         if (self.flags['LZX'] == True):
  *             newReader.writeInt(len(compressedPeen) + 4, True)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_3 = ((PyObject *)__pyx_v_self->rawImage);
     __Pyx_INCREF(__pyx_t_3);
-    __pyx_t_7 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_7); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_7); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_6 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6087,17 +6057,17 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_6) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 447; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -6107,32 +6077,32 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":450
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":448
  *         if (self.flags['LZX'] == False):
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):             # <<<<<<<<<<<<<<
  *             newReader.writeInt(len(compressedPeen) + 4, True)
  *         newReader.writeShort(self.width)
  */
-  __pyx_t_4 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_4 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 448; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":451
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":449
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):
  *             newReader.writeInt(len(compressedPeen) + 4, True)             # <<<<<<<<<<<<<<
  *         newReader.writeShort(self.width)
  *         newReader.writeShort(self.height)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = PyObject_Length(__pyx_v_compressedPeen); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __pyx_t_5 = PyInt_FromSsize_t((__pyx_t_7 + 4)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = PyObject_Length(__pyx_v_compressedPeen); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyInt_FromSsize_t((__pyx_t_7 + 4)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_3 = NULL;
     __pyx_t_7 = 0;
@@ -6146,7 +6116,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
         __pyx_t_7 = 1;
       }
     }
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_3) {
       PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
@@ -6157,7 +6127,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_7, Py_True);
     __Pyx_GIVEREF(Py_True);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 449; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -6166,16 +6136,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   __pyx_L4:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":452
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":450
  *         if (self.flags['LZX'] == True):
  *             newReader.writeInt(len(compressedPeen) + 4, True)
  *         newReader.writeShort(self.width)             # <<<<<<<<<<<<<<
  *         newReader.writeShort(self.height)
  *         newReader.writeByte(self.graphicMode)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = __Pyx_PyInt_From_short(__pyx_v_self->width); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_From_short(__pyx_v_self->width); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6188,33 +6158,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 450; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":453
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":451
  *             newReader.writeInt(len(compressedPeen) + 4, True)
  *         newReader.writeShort(self.width)
  *         newReader.writeShort(self.height)             # <<<<<<<<<<<<<<
  *         newReader.writeByte(self.graphicMode)
  *         newReader.writeByte(self.flags.getFlags())
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->height); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->height); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6227,33 +6197,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":454
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":452
  *         newReader.writeShort(self.width)
  *         newReader.writeShort(self.height)
  *         newReader.writeByte(self.graphicMode)             # <<<<<<<<<<<<<<
  *         newReader.writeByte(self.flags.getFlags())
  *         newReader.write(<bytes>('\x00\x00'))
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_char(__pyx_v_self->graphicMode); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_char(__pyx_v_self->graphicMode); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6266,33 +6236,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 452; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":455
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":453
  *         newReader.writeShort(self.height)
  *         newReader.writeByte(self.graphicMode)
  *         newReader.writeByte(self.flags.getFlags())             # <<<<<<<<<<<<<<
  *         newReader.write(<bytes>('\x00\x00'))
  *         newReader.writeShort(self.xHotspot)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_5))) {
@@ -6305,10 +6275,10 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_6 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -6323,24 +6293,24 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":456
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":454
  *         newReader.writeByte(self.graphicMode)
  *         newReader.writeByte(self.flags.getFlags())
  *         newReader.write(<bytes>('\x00\x00'))             # <<<<<<<<<<<<<<
@@ -6349,16 +6319,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  */
   ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->write(__pyx_v_newReader, ((PyObject*)__pyx_kp_s__3), 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":457
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":455
  *         newReader.writeByte(self.flags.getFlags())
  *         newReader.write(<bytes>('\x00\x00'))
  *         newReader.writeShort(self.xHotspot)             # <<<<<<<<<<<<<<
  *         newReader.writeShort(self.yHotspot)
  *         newReader.writeShort(self.actionX)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6371,33 +6341,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":458
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":456
  *         newReader.write(<bytes>('\x00\x00'))
  *         newReader.writeShort(self.xHotspot)
  *         newReader.writeShort(self.yHotspot)             # <<<<<<<<<<<<<<
  *         newReader.writeShort(self.actionX)
  *         newReader.writeShort(self.actionY)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 456; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_short(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_short(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 456; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6410,33 +6380,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 456; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 456; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 456; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":459
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":457
  *         newReader.writeShort(self.xHotspot)
  *         newReader.writeShort(self.yHotspot)
  *         newReader.writeShort(self.actionX)             # <<<<<<<<<<<<<<
  *         newReader.writeShort(self.actionY)
  *         newReader.writeColor(self.transparent or (0, 0, 0))
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = __Pyx_PyInt_From_short(__pyx_v_self->actionX); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_From_short(__pyx_v_self->actionX); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6449,33 +6419,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 457; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":460
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":458
  *         newReader.writeShort(self.yHotspot)
  *         newReader.writeShort(self.actionX)
  *         newReader.writeShort(self.actionY)             # <<<<<<<<<<<<<<
  *         newReader.writeColor(self.transparent or (0, 0, 0))
  *         if (self.flags['LZX'] == False):
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->actionY); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->actionY); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_6 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6488,33 +6458,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":461
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":459
  *         newReader.writeShort(self.actionX)
  *         newReader.writeShort(self.actionY)
  *         newReader.writeColor(self.transparent or (0, 0, 0))             # <<<<<<<<<<<<<<
  *         if (self.flags['LZX'] == False):
  *             newReader.writeReader(self.rawImage)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeColor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeColor); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->transparent); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->transparent); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (!__pyx_t_2) {
   } else {
     __Pyx_INCREF(__pyx_v_self->transparent);
@@ -6535,46 +6505,46 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":462
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":460
  *         newReader.writeShort(self.actionY)
  *         newReader.writeColor(self.transparent or (0, 0, 0))
  *         if (self.flags['LZX'] == False):             # <<<<<<<<<<<<<<
  *             newReader.writeReader(self.rawImage)
  *         if (self.flags['LZX'] == True):
  */
-  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 462; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 460; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":463
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":461
  *         newReader.writeColor(self.transparent or (0, 0, 0))
  *         if (self.flags['LZX'] == False):
  *             newReader.writeReader(self.rawImage)             # <<<<<<<<<<<<<<
  *         if (self.flags['LZX'] == True):
  *             newReader.writeInt(len(self.rawImage))
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_6 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6587,16 +6557,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_6) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_self->rawImage)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_self->rawImage)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_self->rawImage));
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_self->rawImage));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_self->rawImage));
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -6606,35 +6576,35 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   __pyx_L7:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":464
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":462
  *         if (self.flags['LZX'] == False):
  *             newReader.writeReader(self.rawImage)
  *         if (self.flags['LZX'] == True):             # <<<<<<<<<<<<<<
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):
  */
-  __pyx_t_4 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 464; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_4 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 462; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 464; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 464; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":465
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":463
  *             newReader.writeReader(self.rawImage)
  *         if (self.flags['LZX'] == True):
  *             newReader.writeInt(len(self.rawImage))             # <<<<<<<<<<<<<<
  *         if (self.flags['LZX'] == True):
  *             newReader.writeReader(compressedPeen)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = ((PyObject *)__pyx_v_self->rawImage);
     __Pyx_INCREF(__pyx_t_5);
-    __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_7); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_7); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6647,17 +6617,17 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_6) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
       PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 463; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -6667,29 +6637,29 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   __pyx_L8:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":466
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":464
  *         if (self.flags['LZX'] == True):
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):             # <<<<<<<<<<<<<<
  *             newReader.writeReader(compressedPeen)
  *         reader.writeInt(self.handle)
  */
-  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 464; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 464; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 464; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":467
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":465
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):
  *             newReader.writeReader(compressedPeen)             # <<<<<<<<<<<<<<
  *         reader.writeInt(self.handle)
  *         if debug:
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 467; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_newReader), __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6702,16 +6672,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_3) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_compressedPeen); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 467; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_compressedPeen); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 467; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(__pyx_v_compressedPeen);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_compressedPeen);
       __Pyx_GIVEREF(__pyx_v_compressedPeen);
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 467; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 465; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -6721,16 +6691,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   __pyx_L9:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":468
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":466
  *         if (self.flags['LZX'] == True):
  *             newReader.writeReader(compressedPeen)
  *         reader.writeInt(self.handle)             # <<<<<<<<<<<<<<
  *         if debug:
  *             reader.writeReader(newReader)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeInt); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeInt); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6743,24 +6713,24 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
-    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":469
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":467
  *             newReader.writeReader(compressedPeen)
  *         reader.writeInt(self.handle)
  *         if debug:             # <<<<<<<<<<<<<<
@@ -6770,14 +6740,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __pyx_t_2 = (__pyx_v_debug != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":470
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":468
  *         reader.writeInt(self.handle)
  *         if debug:
  *             reader.writeReader(newReader)             # <<<<<<<<<<<<<<
  *         else:
  *             reader.writeReader(zlibdata.compress(newReader))
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_6 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6790,16 +6760,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_6) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_newReader)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_newReader)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_newReader));
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_newReader));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_newReader));
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 468; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -6809,18 +6779,18 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":472
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":470
  *             reader.writeReader(newReader)
  *         else:
  *             reader.writeReader(zlibdata.compress(newReader))             # <<<<<<<<<<<<<<
  * 
  *     def createDisplay(self, frame = None, **kw):
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeReader); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlibdata); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlibdata); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_compress); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_compress); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -6834,16 +6804,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_6) {
-      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_newReader)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_newReader)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
     } else {
-      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
       __Pyx_INCREF(((PyObject *)__pyx_v_newReader));
       PyTuple_SET_ITEM(__pyx_t_8, 0+1, ((PyObject *)__pyx_v_newReader));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_newReader));
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
@@ -6859,17 +6829,17 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
       }
     }
     if (!__pyx_t_3) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else {
-      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
       PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
@@ -6878,7 +6848,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   __pyx_L10:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":441
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":439
  *         self.rawImage.write(data)
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -6906,7 +6876,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":474
+/* "mmfparser/data/chunkloaders/imagebank.pyx":472
  *             reader.writeReader(zlibdata.compress(newReader))
  * 
  *     def createDisplay(self, frame = None, **kw):             # <<<<<<<<<<<<<<
@@ -6948,7 +6918,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, __pyx_v_kw, values, pos_args, "createDisplay") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 474; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, __pyx_v_kw, values, pos_args, "createDisplay") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6961,7 +6931,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("createDisplay", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 474; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("createDisplay", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 472; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_kw); __pyx_v_kw = 0;
   __Pyx_AddTraceback("mmfparser.data.chunkloaders.imagebank.ImageItem.createDisplay", __pyx_clineno, __pyx_lineno, __pyx_filename);
@@ -6988,26 +6958,26 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("createDisplay", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":475
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":473
  * 
  *     def createDisplay(self, frame = None, **kw):
  *         foo = createDisplay(self, frame)             # <<<<<<<<<<<<<<
  *         self.unload()
  *         return foo
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_createDisplay(__pyx_v_self, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 475; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_createDisplay(__pyx_v_self, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 473; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_foo = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":476
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":474
  *     def createDisplay(self, frame = None, **kw):
  *         foo = createDisplay(self, frame)
  *         self.unload()             # <<<<<<<<<<<<<<
  *         return foo
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_unload); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_unload); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 474; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7020,16 +6990,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 474; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 474; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":477
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":475
  *         foo = createDisplay(self, frame)
  *         self.unload()
  *         return foo             # <<<<<<<<<<<<<<
@@ -7041,7 +7011,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __pyx_r = __pyx_v_foo;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":474
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":472
  *             reader.writeReader(zlibdata.compress(newReader))
  * 
  *     def createDisplay(self, frame = None, **kw):             # <<<<<<<<<<<<<<
@@ -7063,7 +7033,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":479
+/* "mmfparser/data/chunkloaders/imagebank.pyx":477
  *         return foo
  * 
  *     def getImageData(self, frame = None, **kw):             # <<<<<<<<<<<<<<
@@ -7105,7 +7075,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, __pyx_v_kw, values, pos_args, "getImageData") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 479; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, __pyx_v_kw, values, pos_args, "getImageData") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 477; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7118,7 +7088,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getImageData", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 479; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("getImageData", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 477; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_kw); __pyx_v_kw = 0;
   __Pyx_AddTraceback("mmfparser.data.chunkloaders.imagebank.ImageItem.getImageData", __pyx_clineno, __pyx_lineno, __pyx_filename);
@@ -7145,26 +7115,26 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getImageData", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":480
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":478
  * 
  *     def getImageData(self, frame = None, **kw):
  *         foo = getImageData(self, frame)             # <<<<<<<<<<<<<<
  *         self.unload()
  *         return foo
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_getImageData(__pyx_v_self, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 480; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_getImageData(__pyx_v_self, __pyx_v_frame); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 478; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_foo = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":481
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":479
  *     def getImageData(self, frame = None, **kw):
  *         foo = getImageData(self, frame)
  *         self.unload()             # <<<<<<<<<<<<<<
  *         return foo
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_unload); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 481; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_unload); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 479; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7177,16 +7147,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 481; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 479; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 481; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 479; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":482
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":480
  *         foo = getImageData(self, frame)
  *         self.unload()
  *         return foo             # <<<<<<<<<<<<<<
@@ -7198,7 +7168,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __pyx_r = __pyx_v_foo;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":479
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":477
  *         return foo
  * 
  *     def getImageData(self, frame = None, **kw):             # <<<<<<<<<<<<<<
@@ -7220,7 +7190,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":484
+/* "mmfparser/data/chunkloaders/imagebank.pyx":482
  *         return foo
  * 
  *     def unload(self):             # <<<<<<<<<<<<<<
@@ -7246,7 +7216,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("unload", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":485
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":483
  * 
  *     def unload(self):
  *         self.image = None             # <<<<<<<<<<<<<<
@@ -7259,7 +7229,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __Pyx_DECREF(__pyx_v_self->image);
   __pyx_v_self->image = Py_None;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":486
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":484
  *     def unload(self):
  *         self.image = None
  *         self.alpha = None             # <<<<<<<<<<<<<<
@@ -7272,7 +7242,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   __Pyx_DECREF(__pyx_v_self->alpha);
   __pyx_v_self->alpha = Py_None;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":484
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":482
  *         return foo
  * 
  *     def unload(self):             # <<<<<<<<<<<<<<
@@ -7287,7 +7257,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":488
+/* "mmfparser/data/chunkloaders/imagebank.pyx":486
  *         self.alpha = None
  * 
  *     def getGraphicMode(self):             # <<<<<<<<<<<<<<
@@ -7318,24 +7288,24 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getGraphicMode", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":489
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":487
  * 
  *     def getGraphicMode(self):
  *         return graphicModes[self.graphicMode]             # <<<<<<<<<<<<<<
  * 
- *     def save(self):
+ * cdef class JavaImage(DataLoader):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_graphicModes); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 489; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_graphicModes); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, __pyx_v_self->graphicMode, char, 1, __Pyx_PyInt_From_char, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 489; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, __pyx_v_self->graphicMode, char, 1, __Pyx_PyInt_From_char, 0, 0, 1); if (unlikely(__pyx_t_2 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":488
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":486
  *         self.alpha = None
  * 
  *     def getGraphicMode(self):             # <<<<<<<<<<<<<<
@@ -7355,383 +7325,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":491
- *         return graphicModes[self.graphicMode]
- * 
- *     def save(self):             # <<<<<<<<<<<<<<
- *        img = Image.frombytes('RGB', (self.width, self.height), b1(self.image))
- *        if self.flags['Alpha']:
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_17save(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_17save(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("save (wrapper)", 0);
-  __pyx_r = __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_16save(((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_16save(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *__pyx_v_self) {
-  PyObject *__pyx_v_img = NULL;
-  PyObject *__pyx_v_alp = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v_ext = NULL;
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  PyObject *__pyx_t_4 = NULL;
-  PyObject *__pyx_t_5 = NULL;
-  PyObject *__pyx_t_6 = NULL;
-  PyObject *__pyx_t_7 = NULL;
-  Py_ssize_t __pyx_t_8;
-  int __pyx_t_9;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("save", 0);
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":492
- * 
- *     def save(self):
- *        img = Image.frombytes('RGB', (self.width, self.height), b1(self.image))             # <<<<<<<<<<<<<<
- *        if self.flags['Alpha']:
- *            alp = Image.frombytes("L", (self.width, self.height), b1(self.alpha))
- */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_Image); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_frombytes); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_self->width); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyInt_From_short(__pyx_v_self->height); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  __pyx_t_2 = 0;
-  __pyx_t_4 = 0;
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_b1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = NULL;
-  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_6)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_6);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  if (!__pyx_t_6) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self->image); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-  } else {
-    __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_7);
-    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
-    __Pyx_INCREF(__pyx_v_self->image);
-    PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_v_self->image);
-    __Pyx_GIVEREF(__pyx_v_self->image);
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = NULL;
-  __pyx_t_8 = 0;
-  if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-      __pyx_t_8 = 1;
-    }
-  }
-  __pyx_t_7 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_7);
-  if (__pyx_t_2) {
-    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_2); __Pyx_GIVEREF(__pyx_t_2); __pyx_t_2 = NULL;
-  }
-  __Pyx_INCREF(__pyx_n_s_RGB);
-  PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_8, __pyx_n_s_RGB);
-  __Pyx_GIVEREF(__pyx_n_s_RGB);
-  PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_8, __pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_7, 2+__pyx_t_8, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  __pyx_t_5 = 0;
-  __pyx_t_4 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_img = __pyx_t_1;
-  __pyx_t_1 = 0;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":493
- *     def save(self):
- *        img = Image.frombytes('RGB', (self.width, self.height), b1(self.image))
- *        if self.flags['Alpha']:             # <<<<<<<<<<<<<<
- *            alp = Image.frombytes("L", (self.width, self.height), b1(self.alpha))
- *            img.putalpha(alp)
- */
-  __pyx_t_1 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_Alpha); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 493; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_9 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 493; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__pyx_t_9) {
-
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":494
- *        img = Image.frombytes('RGB', (self.width, self.height), b1(self.image))
- *        if self.flags['Alpha']:
- *            alp = Image.frombytes("L", (self.width, self.height), b1(self.alpha))             # <<<<<<<<<<<<<<
- *            img.putalpha(alp)
- *        ext = self.settings.get('IMAGEEXT')
- */
-    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_Image); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_frombytes); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_self->width); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyInt_From_short(__pyx_v_self->height); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_5);
-    PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3);
-    __Pyx_GIVEREF(__pyx_t_3);
-    PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
-    __Pyx_GIVEREF(__pyx_t_4);
-    __pyx_t_3 = 0;
-    __pyx_t_4 = 0;
-    __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_b1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = NULL;
-    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_2)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_2);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_3, function);
-      }
-    }
-    if (!__pyx_t_2) {
-      __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_self->alpha); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_4);
-    } else {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_6);
-      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2); __Pyx_GIVEREF(__pyx_t_2); __pyx_t_2 = NULL;
-      __Pyx_INCREF(__pyx_v_self->alpha);
-      PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_v_self->alpha);
-      __Pyx_GIVEREF(__pyx_v_self->alpha);
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = NULL;
-    __pyx_t_8 = 0;
-    if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_7))) {
-      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_7);
-      if (likely(__pyx_t_3)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-        __Pyx_INCREF(__pyx_t_3);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_7, function);
-        __pyx_t_8 = 1;
-      }
-    }
-    __pyx_t_6 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_6);
-    if (__pyx_t_3) {
-      PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
-    }
-    __Pyx_INCREF(__pyx_n_s_L);
-    PyTuple_SET_ITEM(__pyx_t_6, 0+__pyx_t_8, __pyx_n_s_L);
-    __Pyx_GIVEREF(__pyx_n_s_L);
-    PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_8, __pyx_t_5);
-    __Pyx_GIVEREF(__pyx_t_5);
-    PyTuple_SET_ITEM(__pyx_t_6, 2+__pyx_t_8, __pyx_t_4);
-    __Pyx_GIVEREF(__pyx_t_4);
-    __pyx_t_5 = 0;
-    __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_v_alp = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":495
- *        if self.flags['Alpha']:
- *            alp = Image.frombytes("L", (self.width, self.height), b1(self.alpha))
- *            img.putalpha(alp)             # <<<<<<<<<<<<<<
- *        ext = self.settings.get('IMAGEEXT')
- *        img.save('C:\Out')
- */
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_putalpha); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 495; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_6 = NULL;
-    if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_7))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_7);
-      if (likely(__pyx_t_6)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-        __Pyx_INCREF(__pyx_t_6);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_7, function);
-      }
-    }
-    if (!__pyx_t_6) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_alp); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 495; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_1);
-    } else {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 495; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_6); __Pyx_GIVEREF(__pyx_t_6); __pyx_t_6 = NULL;
-      __Pyx_INCREF(__pyx_v_alp);
-      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_v_alp);
-      __Pyx_GIVEREF(__pyx_v_alp);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 495; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    goto __pyx_L3;
-  }
-  __pyx_L3:;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":496
- *            alp = Image.frombytes("L", (self.width, self.height), b1(self.alpha))
- *            img.putalpha(alp)
- *        ext = self.settings.get('IMAGEEXT')             # <<<<<<<<<<<<<<
- *        img.save('C:\Out')
- *        del img
- */
-  if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
-    PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 496; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_IMAGEEXT, Py_None); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 496; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_ext = __pyx_t_1;
-  __pyx_t_1 = 0;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":497
- *            img.putalpha(alp)
- *        ext = self.settings.get('IMAGEEXT')
- *        img.save('C:\Out')             # <<<<<<<<<<<<<<
- *        del img
- *        if self.flags["Alpha"]:
- */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_save); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 497; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 497; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":498
- *        ext = self.settings.get('IMAGEEXT')
- *        img.save('C:\Out')
- *        del img             # <<<<<<<<<<<<<<
- *        if self.flags["Alpha"]:
- *           del alp
- */
-  __Pyx_DECREF(__pyx_v_img);
-  __pyx_v_img = NULL;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":499
- *        img.save('C:\Out')
- *        del img
- *        if self.flags["Alpha"]:             # <<<<<<<<<<<<<<
- *           del alp
- *           del self.alpha
- */
-  __pyx_t_7 = PyObject_GetItem(__pyx_v_self->flags, __pyx_n_s_Alpha); if (unlikely(__pyx_t_7 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 499; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
-  __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_9 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 499; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__pyx_t_9) {
-
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":500
- *        del img
- *        if self.flags["Alpha"]:
- *           del alp             # <<<<<<<<<<<<<<
- *           del self.alpha
- *        del self.image
- */
-    if (unlikely(!__pyx_v_alp)) { __Pyx_RaiseUnboundLocalError("alp"); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 500; __pyx_clineno = __LINE__; goto __pyx_L1_error;} }
-    __Pyx_DECREF(__pyx_v_alp);
-    __pyx_v_alp = NULL;
-
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":501
- *        if self.flags["Alpha"]:
- *           del alp
- *           del self.alpha             # <<<<<<<<<<<<<<
- *        del self.image
- * 
- */
-    if (__Pyx_PyObject_DelAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_alpha) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 501; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    goto __pyx_L4;
-  }
-  __pyx_L4:;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":502
- *           del alp
- *           del self.alpha
- *        del self.image             # <<<<<<<<<<<<<<
- * 
- * cdef class JavaImage(DataLoader):
- */
-  if (__Pyx_PyObject_DelAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_image) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":491
- *         return graphicModes[self.graphicMode]
- * 
- *     def save(self):             # <<<<<<<<<<<<<<
- *        img = Image.frombytes('RGB', (self.width, self.height), b1(self.image))
- *        if self.flags['Alpha']:
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("mmfparser.data.chunkloaders.imagebank.ImageItem.save", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_img);
-  __Pyx_XDECREF(__pyx_v_alp);
-  __Pyx_XDECREF(__pyx_v_ext);
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "mmfparser\data\chunkloaders\imagebank.pyx":345
+/* "mmfparser/data/chunkloaders/imagebank.pyx":343
  * cdef class ImageItem(DataLoader):
  *     cdef public:
  *         int handle             # <<<<<<<<<<<<<<
@@ -7761,7 +7355,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7799,7 +7393,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6handl
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->handle = __pyx_t_1;
 
   /* function exit code */
@@ -7813,7 +7407,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6handl
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":346
+/* "mmfparser/data/chunkloaders/imagebank.pyx":344
  *     cdef public:
  *         int handle
  *         int checksum # starts at imgWidth and ends at end of bitmap             # <<<<<<<<<<<<<<
@@ -7843,7 +7437,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->checksum); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->checksum); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7881,7 +7475,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8check
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->checksum = __pyx_t_1;
 
   /* function exit code */
@@ -7895,7 +7489,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8check
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":347
+/* "mmfparser/data/chunkloaders/imagebank.pyx":345
  *         int handle
  *         int checksum # starts at imgWidth and ends at end of bitmap
  *         int references             # <<<<<<<<<<<<<<
@@ -7925,7 +7519,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->references); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->references); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7963,7 +7557,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_10refe
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->references = __pyx_t_1;
 
   /* function exit code */
@@ -7977,7 +7571,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_10refe
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":348
+/* "mmfparser/data/chunkloaders/imagebank.pyx":346
  *         int checksum # starts at imgWidth and ends at end of bitmap
  *         int references
  *         short width             # <<<<<<<<<<<<<<
@@ -8007,7 +7601,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8045,7 +7639,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_5width
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->width = __pyx_t_1;
 
   /* function exit code */
@@ -8059,7 +7653,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_5width
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":349
+/* "mmfparser/data/chunkloaders/imagebank.pyx":347
  *         int references
  *         short width
  *         short height             # <<<<<<<<<<<<<<
@@ -8089,7 +7683,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->height); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->height); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8127,7 +7721,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6heigh
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->height = __pyx_t_1;
 
   /* function exit code */
@@ -8141,7 +7735,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6heigh
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":350
+/* "mmfparser/data/chunkloaders/imagebank.pyx":348
  *         short width
  *         short height
  *         short xHotspot             # <<<<<<<<<<<<<<
@@ -8171,7 +7765,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8209,7 +7803,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8xHots
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->xHotspot = __pyx_t_1;
 
   /* function exit code */
@@ -8223,7 +7817,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8xHots
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":351
+/* "mmfparser/data/chunkloaders/imagebank.pyx":349
  *         short height
  *         short xHotspot
  *         short yHotspot             # <<<<<<<<<<<<<<
@@ -8253,7 +7847,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8291,7 +7885,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8yHots
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->yHotspot = __pyx_t_1;
 
   /* function exit code */
@@ -8305,7 +7899,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8yHots
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":352
+/* "mmfparser/data/chunkloaders/imagebank.pyx":350
  *         short xHotspot
  *         short yHotspot
  *         short actionX             # <<<<<<<<<<<<<<
@@ -8335,7 +7929,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->actionX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->actionX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8373,7 +7967,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_7actio
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionX = __pyx_t_1;
 
   /* function exit code */
@@ -8387,7 +7981,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_7actio
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":353
+/* "mmfparser/data/chunkloaders/imagebank.pyx":351
  *         short yHotspot
  *         short actionX
  *         short actionY             # <<<<<<<<<<<<<<
@@ -8417,7 +8011,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->actionY); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_self->actionY); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8455,7 +8049,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_7actio
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_short(__pyx_v_value); if (unlikely((__pyx_t_1 == (short)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionY = __pyx_t_1;
 
   /* function exit code */
@@ -8469,7 +8063,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_7actio
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":354
+/* "mmfparser/data/chunkloaders/imagebank.pyx":352
  *         short actionX
  *         short actionY
  *         object flags             # <<<<<<<<<<<<<<
@@ -8564,7 +8158,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_5flags
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":355
+/* "mmfparser/data/chunkloaders/imagebank.pyx":353
  *         short actionY
  *         object flags
  *         object image             # <<<<<<<<<<<<<<
@@ -8659,7 +8253,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_5image
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":356
+/* "mmfparser/data/chunkloaders/imagebank.pyx":354
  *         object flags
  *         object image
  *         object alpha             # <<<<<<<<<<<<<<
@@ -8754,7 +8348,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_5alpha
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":357
+/* "mmfparser/data/chunkloaders/imagebank.pyx":355
  *         object image
  *         object alpha
  *         bint indexed             # <<<<<<<<<<<<<<
@@ -8784,7 +8378,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->indexed); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->indexed); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 355; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8822,7 +8416,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_7index
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 355; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->indexed = __pyx_t_1;
 
   /* function exit code */
@@ -8836,7 +8430,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_7index
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":358
+/* "mmfparser/data/chunkloaders/imagebank.pyx":356
  *         object alpha
  *         bint indexed
  *         char graphicMode             # <<<<<<<<<<<<<<
@@ -8866,7 +8460,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_char(__pyx_v_self->graphicMode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 358; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_char(__pyx_v_self->graphicMode); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 356; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8904,7 +8498,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_11grap
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_char(__pyx_v_value); if (unlikely((__pyx_t_1 == (char)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 358; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_char(__pyx_v_value); if (unlikely((__pyx_t_1 == (char)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 356; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->graphicMode = __pyx_t_1;
 
   /* function exit code */
@@ -8918,7 +8512,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_11grap
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":359
+/* "mmfparser/data/chunkloaders/imagebank.pyx":357
  *         bint indexed
  *         char graphicMode
  *         tuple transparent             # <<<<<<<<<<<<<<
@@ -8976,7 +8570,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_11tran
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(PyTuple_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyTuple_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 357; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9026,7 +8620,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_11tran
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":361
+/* "mmfparser/data/chunkloaders/imagebank.pyx":359
  *         tuple transparent
  * 
  *         ByteReader reader             # <<<<<<<<<<<<<<
@@ -9084,7 +8678,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6reade
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 361; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9134,7 +8728,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_6reade
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":362
+/* "mmfparser/data/chunkloaders/imagebank.pyx":360
  * 
  *         ByteReader reader
  *         ByteReader rawImage             # <<<<<<<<<<<<<<
@@ -9192,7 +8786,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8rawIm
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 362; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_v_value) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_value, __pyx_ptype_9mmfparser_10bytereader_ByteReader))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 360; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -9242,7 +8836,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_8rawIm
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":363
+/* "mmfparser/data/chunkloaders/imagebank.pyx":361
  *         ByteReader reader
  *         ByteReader rawImage
  *         size_t pos             # <<<<<<<<<<<<<<
@@ -9272,7 +8866,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->pos); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_v_self->pos); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 361; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9310,7 +8904,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_3pos_2
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_value); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_size_t(__pyx_v_value); if (unlikely((__pyx_t_1 == (size_t)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 361; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->pos = __pyx_t_1;
 
   /* function exit code */
@@ -9324,7 +8918,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_3pos_2
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":513
+/* "mmfparser/data/chunkloaders/imagebank.pyx":498
  *         bint flash
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -9357,7 +8951,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 513; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_1read)) {
       __Pyx_XDECREF(__pyx_r);
@@ -9373,16 +8967,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
         }
       }
       if (!__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 513; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
       } else {
-        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 513; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_5);
         PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
         __Pyx_INCREF(((PyObject *)__pyx_v_reader));
         PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_reader));
         __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 513; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
@@ -9395,17 +8989,17 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":514
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":499
  * 
  *     cpdef read(self, ByteReader reader):
  *         self.handle = reader.readShort()             # <<<<<<<<<<<<<<
  *         if self.settings.get('withSize', False):
  *             self.width = reader.readShort()
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 514; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 499; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->handle = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":515
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":500
  *     cpdef read(self, ByteReader reader):
  *         self.handle = reader.readShort()
  *         if self.settings.get('withSize', False):             # <<<<<<<<<<<<<<
@@ -9414,105 +9008,105 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 515; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 500; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_withSize, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 515; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_withSize, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 500; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 515; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 500; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_7) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":516
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":501
  *         self.handle = reader.readShort()
  *         if self.settings.get('withSize', False):
  *             self.width = reader.readShort()             # <<<<<<<<<<<<<<
  *             self.height = reader.readShort()
  *         self.xHotspot = reader.readShort()
  */
-    __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 516; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 501; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_self->width = __pyx_t_6;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":517
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":502
  *         if self.settings.get('withSize', False):
  *             self.width = reader.readShort()
  *             self.height = reader.readShort()             # <<<<<<<<<<<<<<
  *         self.xHotspot = reader.readShort()
  *         self.yHotspot = reader.readShort()
  */
-    __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 517; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_self->height = __pyx_t_6;
     goto __pyx_L3;
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":518
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":503
  *             self.width = reader.readShort()
  *             self.height = reader.readShort()
  *         self.xHotspot = reader.readShort()             # <<<<<<<<<<<<<<
  *         self.yHotspot = reader.readShort()
  *         self.actionX = reader.readShort()
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 503; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->xHotspot = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":519
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":504
  *             self.height = reader.readShort()
  *         self.xHotspot = reader.readShort()
  *         self.yHotspot = reader.readShort()             # <<<<<<<<<<<<<<
  *         self.actionX = reader.readShort()
  *         self.actionY = reader.readShort()
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 519; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 504; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->yHotspot = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":520
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":505
  *         self.xHotspot = reader.readShort()
  *         self.yHotspot = reader.readShort()
  *         self.actionX = reader.readShort()             # <<<<<<<<<<<<<<
  *         self.actionY = reader.readShort()
  *         size = reader.readInt()
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 520; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 505; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionX = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":521
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":506
  *         self.yHotspot = reader.readShort()
  *         self.actionX = reader.readShort()
  *         self.actionY = reader.readShort()             # <<<<<<<<<<<<<<
  *         size = reader.readInt()
  *         data = reader.read(size)
  */
-  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 521; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_6 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 506; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionY = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":522
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":507
  *         self.actionX = reader.readShort()
  *         self.actionY = reader.readShort()
  *         size = reader.readInt()             # <<<<<<<<<<<<<<
  *         data = reader.read(size)
  *         try:
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 522; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 507; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_size = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":523
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":508
  *         self.actionY = reader.readShort()
  *         size = reader.readInt()
  *         data = reader.read(size)             # <<<<<<<<<<<<<<
  *         try:
  *             self.data = zlib.decompress(data)
  */
-  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_v_size); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_v_size); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 508; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_8.__pyx_n = 1;
   __pyx_t_8.size = __pyx_t_6;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->read(__pyx_v_reader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->read(__pyx_v_reader, 0, &__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 508; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":524
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":509
  *         size = reader.readInt()
  *         data = reader.read(size)
  *         try:             # <<<<<<<<<<<<<<
@@ -9526,16 +9120,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
     __Pyx_XGOTREF(__pyx_t_11);
     /*try:*/ {
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":525
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":510
  *         data = reader.read(size)
  *         try:
  *             self.data = zlib.decompress(data)             # <<<<<<<<<<<<<<
  *             self.flash = True
  *         except zlib.error:
  */
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlib); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlib); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_decompress); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_decompress); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -9549,16 +9143,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
         }
       }
       if (!__pyx_t_2) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_data); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_data); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
         __Pyx_GOTREF(__pyx_t_1);
       } else {
-        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
         __Pyx_GOTREF(__pyx_t_5);
         PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_2); __Pyx_GIVEREF(__pyx_t_2); __pyx_t_2 = NULL;
         __Pyx_INCREF(__pyx_v_data);
         PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_data);
         __Pyx_GIVEREF(__pyx_v_data);
-        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L4_error;}
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
@@ -9569,7 +9163,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
       __pyx_v_self->data = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":526
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":511
  *         try:
  *             self.data = zlib.decompress(data)
  *             self.flash = True             # <<<<<<<<<<<<<<
@@ -9589,28 +9183,28 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":527
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":512
  *             self.data = zlib.decompress(data)
  *             self.flash = True
  *         except zlib.error:             # <<<<<<<<<<<<<<
  *             self.data = data
  *             self.flash = False
  */
-    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 527; __pyx_clineno = __LINE__; goto __pyx_L6_except_error;}
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_zlib); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 512; __pyx_clineno = __LINE__; goto __pyx_L6_except_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_error); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 527; __pyx_clineno = __LINE__; goto __pyx_L6_except_error;}
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_error); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 512; __pyx_clineno = __LINE__; goto __pyx_L6_except_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = PyErr_ExceptionMatches(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_6) {
       __Pyx_AddTraceback("mmfparser.data.chunkloaders.imagebank.JavaImage.read", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 527; __pyx_clineno = __LINE__; goto __pyx_L6_except_error;}
+      if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 512; __pyx_clineno = __LINE__; goto __pyx_L6_except_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_5);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":528
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":513
  *             self.flash = True
  *         except zlib.error:
  *             self.data = data             # <<<<<<<<<<<<<<
@@ -9623,7 +9217,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
       __Pyx_DECREF(__pyx_v_self->data);
       __pyx_v_self->data = __pyx_v_data;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":529
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":514
  *         except zlib.error:
  *             self.data = data
  *             self.flash = False             # <<<<<<<<<<<<<<
@@ -9651,7 +9245,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
     __pyx_L11_try_end:;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":513
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":498
  *         bint flash
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -9687,7 +9281,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 513; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_read(((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage *)__pyx_v_self), ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader));
 
   /* function exit code */
@@ -9708,7 +9302,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_read(__pyx_v_self, __pyx_v_reader, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 513; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_read(__pyx_v_self, __pyx_v_reader, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 498; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9725,7 +9319,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":531
+/* "mmfparser/data/chunkloaders/imagebank.pyx":516
  *             self.flash = False
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -9761,16 +9355,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":532
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":517
  * 
  *     def write(self, reader):
  *         reader.writeShort(self.handle)             # <<<<<<<<<<<<<<
  *         if self.settings.get('withSize', False):
  *             reader.writeShort(self.width)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 517; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 517; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9783,24 +9377,24 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 517; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 517; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 517; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":533
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":518
  *     def write(self, reader):
  *         reader.writeShort(self.handle)
  *         if self.settings.get('withSize', False):             # <<<<<<<<<<<<<<
@@ -9809,24 +9403,24 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 533; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_withSize, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 533; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_withSize, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 533; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":534
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":519
  *         reader.writeShort(self.handle)
  *         if self.settings.get('withSize', False):
  *             reader.writeShort(self.width)             # <<<<<<<<<<<<<<
  *             reader.writeShort(self.height)
  *         reader.writeShort(self.xHotspot)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 519; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->width); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->width); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 519; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_3 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9839,33 +9433,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
       }
     }
     if (!__pyx_t_3) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 519; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 519; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 519; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":535
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":520
  *         if self.settings.get('withSize', False):
  *             reader.writeShort(self.width)
  *             reader.writeShort(self.height)             # <<<<<<<<<<<<<<
  *         reader.writeShort(self.xHotspot)
  *         reader.writeShort(self.yHotspot)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 520; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->height); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->height); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 520; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9878,17 +9472,17 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
       }
     }
     if (!__pyx_t_5) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 520; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 520; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
       PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 520; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -9898,16 +9492,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":536
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":521
  *             reader.writeShort(self.width)
  *             reader.writeShort(self.height)
  *         reader.writeShort(self.xHotspot)             # <<<<<<<<<<<<<<
  *         reader.writeShort(self.yHotspot)
  *         reader.writeShort(self.actionX)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 521; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 521; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9920,33 +9514,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 521; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 521; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 521; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":537
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":522
  *             reader.writeShort(self.height)
  *         reader.writeShort(self.xHotspot)
  *         reader.writeShort(self.yHotspot)             # <<<<<<<<<<<<<<
  *         reader.writeShort(self.actionX)
  *         reader.writeShort(self.actionY)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 522; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 522; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9959,33 +9553,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 522; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 522; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 522; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":538
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":523
  *         reader.writeShort(self.xHotspot)
  *         reader.writeShort(self.yHotspot)
  *         reader.writeShort(self.actionX)             # <<<<<<<<<<<<<<
  *         reader.writeShort(self.actionY)
  *         reader.writeInt(len(self.data))
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->actionX); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->actionX); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9998,33 +9592,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
     PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 523; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":539
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":524
  *         reader.writeShort(self.yHotspot)
  *         reader.writeShort(self.actionX)
  *         reader.writeShort(self.actionY)             # <<<<<<<<<<<<<<
  *         reader.writeInt(len(self.data))
  *         reader.write(self.data)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 539; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 524; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->actionY); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 539; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_self->actionY); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 524; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10037,37 +9631,37 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 539; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 524; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 539; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 524; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 539; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 524; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":540
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":525
  *         reader.writeShort(self.actionX)
  *         reader.writeShort(self.actionY)
  *         reader.writeInt(len(self.data))             # <<<<<<<<<<<<<<
  *         reader.write(self.data)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeInt); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 540; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeInt); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_5 = __pyx_v_self->data;
   __Pyx_INCREF(__pyx_t_5);
-  __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 540; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_7); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 540; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_7); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10080,31 +9674,31 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 540; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 540; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __Pyx_GIVEREF(__pyx_t_3); __pyx_t_3 = NULL;
     PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 540; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 525; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":541
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":526
  *         reader.writeShort(self.actionY)
  *         reader.writeInt(len(self.data))
  *         reader.write(self.data)             # <<<<<<<<<<<<<<
  * 
  *     def createDisplay(self, *arg, **kw):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 526; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10117,23 +9711,23 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self->data); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self->data); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 526; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
   } else {
-    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 526; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
     __Pyx_INCREF(__pyx_v_self->data);
     PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_v_self->data);
     __Pyx_GIVEREF(__pyx_v_self->data);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 526; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":531
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":516
  *             self.flash = False
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -10158,7 +9752,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":543
+/* "mmfparser/data/chunkloaders/imagebank.pyx":528
  *         reader.write(self.data)
  * 
  *     def createDisplay(self, *arg, **kw):             # <<<<<<<<<<<<<<
@@ -10209,7 +9803,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("createDisplay", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":544
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":529
  * 
  *     def createDisplay(self, *arg, **kw):
  *         if self.flash:             # <<<<<<<<<<<<<<
@@ -10219,48 +9813,48 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   __pyx_t_1 = (__pyx_v_self->flash != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":545
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":530
  *     def createDisplay(self, *arg, **kw):
  *         if self.flash:
  *             from mmfparser.player.sprite import ImageData             # <<<<<<<<<<<<<<
  *             newImage = ImageData(self.width, self.height, 'ARGB',
  *                 self.data, self.width * -4, None)
  */
-    __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 545; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 530; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_n_s_ImageData);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_ImageData);
     __Pyx_GIVEREF(__pyx_n_s_ImageData);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 545; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 530; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_ImageData); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 545; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_ImageData); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 530; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_t_2);
     __pyx_v_ImageData = __pyx_t_2;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":546
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":531
  *         if self.flash:
  *             from mmfparser.player.sprite import ImageData
  *             newImage = ImageData(self.width, self.height, 'ARGB',             # <<<<<<<<<<<<<<
  *                 self.data, self.width * -4, None)
  *         else:
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->width); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_self->width); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 531; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->height); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_self->height); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 531; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":547
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":532
  *             from mmfparser.player.sprite import ImageData
  *             newImage = ImageData(self.width, self.height, 'ARGB',
  *                 self.data, self.width * -4, None)             # <<<<<<<<<<<<<<
  *         else:
  *             from mmfparser.player.common import load_image
  */
-    __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_self->width * -4)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 547; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_self->width * -4)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_ImageData);
     __pyx_t_6 = __pyx_v_ImageData; __pyx_t_7 = NULL;
@@ -10275,7 +9869,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
         __pyx_t_8 = 1;
       }
     }
-    __pyx_t_9 = PyTuple_New(6+__pyx_t_8); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_9 = PyTuple_New(6+__pyx_t_8); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 531; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_9);
     if (__pyx_t_7) {
       PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __Pyx_GIVEREF(__pyx_t_7); __pyx_t_7 = NULL;
@@ -10298,7 +9892,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     __pyx_t_2 = 0;
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_9, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 531; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -10308,36 +9902,36 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":549
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":534
  *                 self.data, self.width * -4, None)
  *         else:
  *             from mmfparser.player.common import load_image             # <<<<<<<<<<<<<<
  *             newImage = load_image(StringIO(self.data))
  *         newImage.anchor_x = self.xHotspot
  */
-    __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 549; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_n_s_load_image);
     PyList_SET_ITEM(__pyx_t_3, 0, __pyx_n_s_load_image);
     __Pyx_GIVEREF(__pyx_n_s_load_image);
-    __pyx_t_6 = __Pyx_Import(__pyx_n_s_mmfparser_player_common, __pyx_t_3, -1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 549; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_Import(__pyx_n_s_mmfparser_player_common, __pyx_t_3, -1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_6, __pyx_n_s_load_image); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 549; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_6, __pyx_n_s_load_image); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_t_3);
     __pyx_v_load_image = __pyx_t_3;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":550
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":535
  *         else:
  *             from mmfparser.player.common import load_image
  *             newImage = load_image(StringIO(self.data))             # <<<<<<<<<<<<<<
  *         newImage.anchor_x = self.xHotspot
  *         newImage.anchor_y = self.height - self.yHotspot
  */
-    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_StringIO); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_StringIO); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_5 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_9))) {
@@ -10350,16 +9944,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
       }
     }
     if (!__pyx_t_5) {
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_v_self->data); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_v_self->data); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
     } else {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_INCREF(__pyx_v_self->data);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_v_self->data);
       __Pyx_GIVEREF(__pyx_v_self->data);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -10376,17 +9970,17 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
       }
     }
     if (!__pyx_t_4) {
-      __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_3); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_3); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_6);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 535; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -10396,31 +9990,31 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":551
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":536
  *             from mmfparser.player.common import load_image
  *             newImage = load_image(StringIO(self.data))
  *         newImage.anchor_x = self.xHotspot             # <<<<<<<<<<<<<<
  *         newImage.anchor_y = self.height - self.yHotspot
  *         return newImage
  */
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 551; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_x, __pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 551; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_x, __pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":552
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":537
  *             newImage = load_image(StringIO(self.data))
  *         newImage.anchor_x = self.xHotspot
  *         newImage.anchor_y = self.height - self.yHotspot             # <<<<<<<<<<<<<<
  *         return newImage
  * 
  */
-  __pyx_t_6 = __Pyx_PyInt_From_int((__pyx_v_self->height - __pyx_v_self->yHotspot)); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 552; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyInt_From_int((__pyx_v_self->height - __pyx_v_self->yHotspot)); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_y, __pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 552; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_newImage, __pyx_n_s_anchor_y, __pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 537; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":553
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":538
  *         newImage.anchor_x = self.xHotspot
  *         newImage.anchor_y = self.height - self.yHotspot
  *         return newImage             # <<<<<<<<<<<<<<
@@ -10432,7 +10026,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   __pyx_r = __pyx_v_newImage;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":543
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":528
  *         reader.write(self.data)
  * 
  *     def createDisplay(self, *arg, **kw):             # <<<<<<<<<<<<<<
@@ -10460,7 +10054,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":555
+/* "mmfparser/data/chunkloaders/imagebank.pyx":540
  *         return newImage
  * 
  *     def getImageData(self, *arg, **kw):             # <<<<<<<<<<<<<<
@@ -10504,45 +10098,45 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getImageData", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":556
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":541
  * 
  *     def getImageData(self, *arg, **kw):
  *         from mmfparser.image import Image             # <<<<<<<<<<<<<<
  *         img = Image(data = self.data)
  *         return img.get_data()
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_Image);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Image);
   __Pyx_GIVEREF(__pyx_n_s_Image);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_image, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_image, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Image); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Image); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 541; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_t_1);
   __pyx_v_Image = __pyx_t_1;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":557
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":542
  *     def getImageData(self, *arg, **kw):
  *         from mmfparser.image import Image
  *         img = Image(data = self.data)             # <<<<<<<<<<<<<<
  *         return img.get_data()
  * 
  */
-  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 557; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 542; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_data, __pyx_v_self->data) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 557; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_v_Image, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 557; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_data, __pyx_v_self->data) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 542; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_v_Image, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 542; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_img = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":558
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":543
  *         from mmfparser.image import Image
  *         img = Image(data = self.data)
  *         return img.get_data()             # <<<<<<<<<<<<<<
@@ -10550,7 +10144,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
  * cdef class ImageBank(DataLoader):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_get_data); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 558; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_img, __pyx_n_s_get_data); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 543; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_2))) {
@@ -10563,10 +10157,10 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 558; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 543; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 558; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 543; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -10574,7 +10168,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":555
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":540
  *         return newImage
  * 
  *     def getImageData(self, *arg, **kw):             # <<<<<<<<<<<<<<
@@ -10597,7 +10191,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":506
+/* "mmfparser/data/chunkloaders/imagebank.pyx":491
  * cdef class JavaImage(DataLoader):
  *     cdef public:
  *         int handle             # <<<<<<<<<<<<<<
@@ -10627,7 +10221,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 506; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 491; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10665,7 +10259,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_6handl
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 506; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 491; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->handle = __pyx_t_1;
 
   /* function exit code */
@@ -10679,7 +10273,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_6handl
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":507
+/* "mmfparser/data/chunkloaders/imagebank.pyx":492
  *     cdef public:
  *         int handle
  *         int xHotspot, yHotspot             # <<<<<<<<<<<<<<
@@ -10709,7 +10303,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 507; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->xHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10747,7 +10341,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_8xHots
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 507; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->xHotspot = __pyx_t_1;
 
   /* function exit code */
@@ -10783,7 +10377,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 507; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->yHotspot); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10821,7 +10415,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_8yHots
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 507; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->yHotspot = __pyx_t_1;
 
   /* function exit code */
@@ -10835,7 +10429,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_8yHots
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":508
+/* "mmfparser/data/chunkloaders/imagebank.pyx":493
  *         int handle
  *         int xHotspot, yHotspot
  *         int actionX, actionY             # <<<<<<<<<<<<<<
@@ -10865,7 +10459,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->actionX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 508; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->actionX); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 493; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10903,7 +10497,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_7actio
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 508; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 493; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionX = __pyx_t_1;
 
   /* function exit code */
@@ -10939,7 +10533,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->actionY); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 508; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->actionY); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 493; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10977,7 +10571,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_7actio
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 508; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 493; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->actionY = __pyx_t_1;
 
   /* function exit code */
@@ -10991,7 +10585,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_7actio
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":509
+/* "mmfparser/data/chunkloaders/imagebank.pyx":494
  *         int xHotspot, yHotspot
  *         int actionX, actionY
  *         int width, height             # <<<<<<<<<<<<<<
@@ -11021,7 +10615,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 509; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->width); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11059,7 +10653,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_5width
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 509; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->width = __pyx_t_1;
 
   /* function exit code */
@@ -11095,7 +10689,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->height); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 509; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_self->height); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11133,7 +10727,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_6heigh
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 509; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 494; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->height = __pyx_t_1;
 
   /* function exit code */
@@ -11147,7 +10741,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_6heigh
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":510
+/* "mmfparser/data/chunkloaders/imagebank.pyx":495
  *         int actionX, actionY
  *         int width, height
  *         object data             # <<<<<<<<<<<<<<
@@ -11242,7 +10836,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_4data_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":511
+/* "mmfparser/data/chunkloaders/imagebank.pyx":496
  *         int width, height
  *         object data
  *         bint flash             # <<<<<<<<<<<<<<
@@ -11272,7 +10866,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->flash); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 511; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->flash); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 496; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11310,7 +10904,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_5flash
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 511; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_value); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 496; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_self->flash = __pyx_t_1;
 
   /* function exit code */
@@ -11324,7 +10918,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_5flash
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":565
+/* "mmfparser/data/chunkloaders/imagebank.pyx":550
  * 
  *     @property
  *     def items(self):             # <<<<<<<<<<<<<<
@@ -11354,7 +10948,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("items", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":566
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":551
  *     @property
  *     def items(self):
  *         return self.itemDict.values()             # <<<<<<<<<<<<<<
@@ -11364,15 +10958,15 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_self->itemDict == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "values");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 551; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_Values(__pyx_v_self->itemDict); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_Values(__pyx_v_self->itemDict); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 551; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":565
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":550
  * 
  *     @property
  *     def items(self):             # <<<<<<<<<<<<<<
@@ -11391,7 +10985,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":568
+/* "mmfparser/data/chunkloaders/imagebank.pyx":553
  *         return self.itemDict.values()
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -11415,7 +11009,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_i
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_initialize); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_initialize); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 553; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_3initialize)) {
       __Pyx_XDECREF(__pyx_r);
@@ -11431,10 +11025,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_i
         }
       }
       if (__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 553; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else {
-        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 553; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11446,14 +11040,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_i
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":569
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":554
  * 
  *     cpdef initialize(self):
  *         self.itemDict = {}             # <<<<<<<<<<<<<<
  * 
  *     cpdef read(self, ByteReader reader):
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 569; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 554; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->itemDict);
@@ -11461,7 +11055,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_i
   __pyx_v_self->itemDict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":568
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":553
  *         return self.itemDict.values()
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -11507,7 +11101,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("initialize", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_initialize(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_initialize(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 553; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -11524,7 +11118,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":571
+/* "mmfparser/data/chunkloaders/imagebank.pyx":556
  *         self.itemDict = {}
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -11573,7 +11167,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
   if (unlikely(__pyx_skip_dispatch)) ;
   /* Check if overridden in Python */
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 571; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_read); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_5read)) {
       __Pyx_XDECREF(__pyx_r);
@@ -11589,16 +11183,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
         }
       }
       if (!__pyx_t_4) {
-        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 571; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_3, ((PyObject *)__pyx_v_reader)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
       } else {
-        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 571; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_5);
         PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
         __Pyx_INCREF(((PyObject *)__pyx_v_reader));
         PyTuple_SET_ITEM(__pyx_t_5, 0+1, ((PyObject *)__pyx_v_reader));
         __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 571; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
@@ -11611,7 +11205,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":572
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":557
  * 
  *     cpdef read(self, ByteReader reader):
  *         cdef bint java = self.settings.get('java', False)             # <<<<<<<<<<<<<<
@@ -11620,15 +11214,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 572; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 557; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_java, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 572; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_java, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 557; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 572; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 557; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_java = __pyx_t_6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":573
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":558
  *     cpdef read(self, ByteReader reader):
  *         cdef bint java = self.settings.get('java', False)
  *         cdef int build = self.settings['build']             # <<<<<<<<<<<<<<
@@ -11637,15 +11231,15 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 558; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->__pyx_base.settings, __pyx_n_s_build); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->__pyx_base.settings, __pyx_n_s_build); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 558; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 558; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_build = __pyx_t_7;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":576
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":561
  *         cdef int i
  *         cdef int numberOfItems
  *         if not java:             # <<<<<<<<<<<<<<
@@ -11655,7 +11249,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
   __pyx_t_6 = ((!(__pyx_v_java != 0)) != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":577
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":562
  *         cdef int numberOfItems
  *         if not java:
  *             if self.settings.get('debug', False):             # <<<<<<<<<<<<<<
@@ -11664,34 +11258,34 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
     if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 577; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 562; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 577; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 562; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 577; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 562; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_6) {
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":578
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":563
  *         if not java:
  *             if self.settings.get('debug', False):
  *                 path = self.readString(reader)             # <<<<<<<<<<<<<<
  *                 newReader = ByteReader(open(path, 'rb'))
  *                 newReader.skipBytes(4)
  */
-      __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.readString(((struct __pyx_obj_9mmfparser_6loader_DataLoader *)__pyx_v_self), __pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 578; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.readString(((struct __pyx_obj_9mmfparser_6loader_DataLoader *)__pyx_v_self), __pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 563; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_v_path = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":579
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":564
  *             if self.settings.get('debug', False):
  *                 path = self.readString(reader)
  *                 newReader = ByteReader(open(path, 'rb'))             # <<<<<<<<<<<<<<
  *                 newReader.skipBytes(4)
  *                 bank = self.new(AGMIBank, newReader)
  */
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_INCREF(__pyx_v_path);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_path);
@@ -11699,21 +11293,21 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       __Pyx_INCREF(__pyx_n_s_rb);
       PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_rb);
       __Pyx_GIVEREF(__pyx_n_s_rb);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_10bytereader_ByteReader)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_10bytereader_ByteReader)), __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_newReader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":580
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":565
  *                 path = self.readString(reader)
  *                 newReader = ByteReader(open(path, 'rb'))
  *                 newReader.skipBytes(4)             # <<<<<<<<<<<<<<
@@ -11722,16 +11316,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
       ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->skipBytes(__pyx_v_newReader, 4, 0);
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":581
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":566
  *                 newReader = ByteReader(open(path, 'rb'))
  *                 newReader.skipBytes(4)
  *                 bank = self.new(AGMIBank, newReader)             # <<<<<<<<<<<<<<
  *                 for item in bank.items:
  *                     self.itemDict[item.handle] = item
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 581; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_AGMIBank); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 581; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_AGMIBank); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_5 = NULL;
       __pyx_t_8 = 0;
@@ -11745,7 +11339,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           __pyx_t_8 = 1;
         }
       }
-      __pyx_t_4 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 581; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_4 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
       if (__pyx_t_5) {
         PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
@@ -11756,29 +11350,29 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_8, ((PyObject *)__pyx_v_newReader));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_newReader));
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 581; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_bank = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":582
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":567
  *                 newReader.skipBytes(4)
  *                 bank = self.new(AGMIBank, newReader)
  *                 for item in bank.items:             # <<<<<<<<<<<<<<
  *                     self.itemDict[item.handle] = item
  *                 return
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_bank, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_bank, __pyx_n_s_items); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
         __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_8 = 0;
         __pyx_t_9 = NULL;
       } else {
-        __pyx_t_8 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_8 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_9 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_9 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       for (;;) {
@@ -11786,16 +11380,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           if (likely(PyList_CheckExact(__pyx_t_1))) {
             if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_1)) break;
             #if CYTHON_COMPILING_IN_CPYTHON
-            __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             #else
-            __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             #endif
           } else {
             if (__pyx_t_8 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
             #if CYTHON_COMPILING_IN_CPYTHON
-            __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             #else
-            __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             #endif
           }
         } else {
@@ -11804,7 +11398,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
               if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-              else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+              else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 567; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
             }
             break;
           }
@@ -11813,7 +11407,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
         __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":583
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":568
  *                 bank = self.new(AGMIBank, newReader)
  *                 for item in bank.items:
  *                     self.itemDict[item.handle] = item             # <<<<<<<<<<<<<<
@@ -11822,14 +11416,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
         if (unlikely(__pyx_v_self->itemDict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 583; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         }
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 583; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
-        if (unlikely(PyDict_SetItem(__pyx_v_self->itemDict, __pyx_t_2, __pyx_v_item) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 583; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (unlikely(PyDict_SetItem(__pyx_v_self->itemDict, __pyx_t_2, __pyx_v_item) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 568; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":582
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":567
  *                 newReader.skipBytes(4)
  *                 bank = self.new(AGMIBank, newReader)
  *                 for item in bank.items:             # <<<<<<<<<<<<<<
@@ -11839,7 +11433,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":584
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":569
  *                 for item in bank.items:
  *                     self.itemDict[item.handle] = item
  *                 return             # <<<<<<<<<<<<<<
@@ -11851,20 +11445,20 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       goto __pyx_L0;
     }
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":585
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":570
  *                     self.itemDict[item.handle] = item
  *                 return
  *             numberOfItems = reader.readInt()             # <<<<<<<<<<<<<<
  *             for i in range(numberOfItems):
  *                 newItem = self.new(ImageItem, reader)
  */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 570; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 570; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_numberOfItems = __pyx_t_7;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":586
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":571
  *                 return
  *             numberOfItems = reader.readInt()
  *             for i in range(numberOfItems):             # <<<<<<<<<<<<<<
@@ -11875,14 +11469,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_7; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":587
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":572
  *             numberOfItems = reader.readInt()
  *             for i in range(numberOfItems):
  *                 newItem = self.new(ImageItem, reader)             # <<<<<<<<<<<<<<
  *                 if build >= 284:
  *                     newItem.handle -= 1
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 587; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 572; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       __pyx_t_8 = 0;
@@ -11896,7 +11490,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           __pyx_t_8 = 1;
         }
       }
-      __pyx_t_3 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 587; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_3 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 572; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       if (__pyx_t_4) {
         PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4); __Pyx_GIVEREF(__pyx_t_4); __pyx_t_4 = NULL;
@@ -11907,14 +11501,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       __Pyx_INCREF(((PyObject *)__pyx_v_reader));
       PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_8, ((PyObject *)__pyx_v_reader));
       __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 587; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 572; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_newItem, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":588
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":573
  *             for i in range(numberOfItems):
  *                 newItem = self.new(ImageItem, reader)
  *                 if build >= 284:             # <<<<<<<<<<<<<<
@@ -11924,25 +11518,25 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       __pyx_t_6 = ((__pyx_v_build >= 284) != 0);
       if (__pyx_t_6) {
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":589
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":574
  *                 newItem = self.new(ImageItem, reader)
  *                 if build >= 284:
  *                     newItem.handle -= 1             # <<<<<<<<<<<<<<
  *                 self.itemDict[newItem.handle] = newItem
  * 
  */
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 589; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = PyNumber_InPlaceSubtract(__pyx_t_1, __pyx_int_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 589; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_2 = PyNumber_InPlaceSubtract(__pyx_t_1, __pyx_int_1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (__Pyx_PyObject_SetAttrStr(__pyx_v_newItem, __pyx_n_s_handle, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 589; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        if (__Pyx_PyObject_SetAttrStr(__pyx_v_newItem, __pyx_n_s_handle, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         goto __pyx_L9;
       }
       __pyx_L9:;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":590
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":575
  *                 if build >= 284:
  *                     newItem.handle -= 1
  *                 self.itemDict[newItem.handle] = newItem             # <<<<<<<<<<<<<<
@@ -11951,38 +11545,38 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
       if (unlikely(__pyx_v_self->itemDict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 590; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 575; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 590; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 575; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_2);
-      if (unlikely(PyDict_SetItem(__pyx_v_self->itemDict, __pyx_t_2, __pyx_v_newItem) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 590; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (unlikely(PyDict_SetItem(__pyx_v_self->itemDict, __pyx_t_2, __pyx_v_newItem) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 575; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     goto __pyx_L3;
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":593
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":578
  * 
  *         else:
  *             numberOfItems = reader.readShort()             # <<<<<<<<<<<<<<
  *             itemsInBank = reader.readShort()
  *             itemsToRead = itemsInBank
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 593; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 578; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_numberOfItems = __pyx_t_7;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":594
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":579
  *         else:
  *             numberOfItems = reader.readShort()
  *             itemsInBank = reader.readShort()             # <<<<<<<<<<<<<<
  *             itemsToRead = itemsInBank
  * 
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 594; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readShort(__pyx_v_reader, 0, NULL); if (unlikely(__pyx_t_7 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_itemsInBank = __pyx_t_7;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":595
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":580
  *             numberOfItems = reader.readShort()
  *             itemsInBank = reader.readShort()
  *             itemsToRead = itemsInBank             # <<<<<<<<<<<<<<
@@ -11991,7 +11585,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
     __pyx_v_itemsToRead = __pyx_v_itemsInBank;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":597
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":582
  *             itemsToRead = itemsInBank
  * 
  *             currentPosition = reader.tell()             # <<<<<<<<<<<<<<
@@ -12000,7 +11594,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
     __pyx_v_currentPosition = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0);
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":598
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":583
  * 
  *             currentPosition = reader.tell()
  *             try:             # <<<<<<<<<<<<<<
@@ -12014,14 +11608,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       __Pyx_XGOTREF(__pyx_t_13);
       /*try:*/ {
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":599
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":584
  *             currentPosition = reader.tell()
  *             try:
  *                 self.itemDict = itemDict = {}             # <<<<<<<<<<<<<<
  *                 for _ in xrange(itemsToRead):
  *                     newItem = self.new(JavaImage, reader, withSize = True)
  */
-        __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 599; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+        __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 584; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_INCREF(__pyx_t_2);
         __Pyx_GIVEREF(__pyx_t_2);
@@ -12032,7 +11626,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
         __pyx_v_itemDict = __pyx_t_2;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":600
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":585
  *             try:
  *                 self.itemDict = itemDict = {}
  *                 for _ in xrange(itemsToRead):             # <<<<<<<<<<<<<<
@@ -12043,16 +11637,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
         for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_7; __pyx_t_10+=1) {
           __pyx_v__ = __pyx_t_10;
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":601
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":586
  *                 self.itemDict = itemDict = {}
  *                 for _ in xrange(itemsToRead):
  *                     newItem = self.new(JavaImage, reader, withSize = True)             # <<<<<<<<<<<<<<
  *                     itemDict[newItem.handle] = newItem
  *             except struct.error:
  */
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_INCREF(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage)));
           PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage)));
@@ -12060,10 +11654,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           __Pyx_INCREF(((PyObject *)__pyx_v_reader));
           PyTuple_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_reader));
           __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-          __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
           __Pyx_GOTREF(__pyx_t_3);
-          if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_withSize, Py_True) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
-          __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_withSize, Py_True) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 586; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12071,16 +11665,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           __Pyx_XDECREF_SET(__pyx_v_newItem, __pyx_t_4);
           __pyx_t_4 = 0;
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":602
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":587
  *                 for _ in xrange(itemsToRead):
  *                     newItem = self.new(JavaImage, reader, withSize = True)
  *                     itemDict[newItem.handle] = newItem             # <<<<<<<<<<<<<<
  *             except struct.error:
  *                 reader.seek(currentPosition)
  */
-          __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 587; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
           __Pyx_GOTREF(__pyx_t_4);
-          if (unlikely(PyDict_SetItem(__pyx_v_itemDict, __pyx_t_4, __pyx_v_newItem) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
+          if (unlikely(PyDict_SetItem(__pyx_v_itemDict, __pyx_t_4, __pyx_v_newItem) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 587; __pyx_clineno = __LINE__; goto __pyx_L10_error;}
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
       }
@@ -12095,28 +11689,28 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":603
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":588
  *                     newItem = self.new(JavaImage, reader, withSize = True)
  *                     itemDict[newItem.handle] = newItem
  *             except struct.error:             # <<<<<<<<<<<<<<
  *                 reader.seek(currentPosition)
  *                 self.itemDict = itemDict = {}
  */
-      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_struct); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+      __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_struct); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 588; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_error); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_error); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 588; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_7 = PyErr_ExceptionMatches(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_7) {
         __Pyx_AddTraceback("mmfparser.data.chunkloaders.imagebank.ImageBank.read", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_4, &__pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+        if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_4, &__pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 588; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_1);
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":604
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":589
  *                     itemDict[newItem.handle] = newItem
  *             except struct.error:
  *                 reader.seek(currentPosition)             # <<<<<<<<<<<<<<
@@ -12125,14 +11719,14 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
  */
         ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_v_currentPosition, 0, NULL);
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":605
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":590
  *             except struct.error:
  *                 reader.seek(currentPosition)
  *                 self.itemDict = itemDict = {}             # <<<<<<<<<<<<<<
  *                 for _ in xrange(itemsToRead):
  *                     newItem = self.new(JavaImage, reader, withSize = False)
  */
-        __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 605; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+        __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 590; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_INCREF(__pyx_t_2);
         __Pyx_GIVEREF(__pyx_t_2);
@@ -12143,7 +11737,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
         __Pyx_XDECREF_SET(__pyx_v_itemDict, __pyx_t_2);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "mmfparser\data\chunkloaders\imagebank.pyx":606
+        /* "mmfparser/data/chunkloaders/imagebank.pyx":591
  *                 reader.seek(currentPosition)
  *                 self.itemDict = itemDict = {}
  *                 for _ in xrange(itemsToRead):             # <<<<<<<<<<<<<<
@@ -12154,16 +11748,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
         for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_7; __pyx_t_10+=1) {
           __pyx_v__ = __pyx_t_10;
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":607
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":592
  *                 self.itemDict = itemDict = {}
  *                 for _ in xrange(itemsToRead):
  *                     newItem = self.new(JavaImage, reader, withSize = False)             # <<<<<<<<<<<<<<
  *                     itemDict[newItem.handle] = newItem
  * 
  */
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 592; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 592; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_INCREF(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage)));
           PyTuple_SET_ITEM(__pyx_t_5, 0, ((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage)));
@@ -12171,10 +11765,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           __Pyx_INCREF(((PyObject *)__pyx_v_reader));
           PyTuple_SET_ITEM(__pyx_t_5, 1, ((PyObject *)__pyx_v_reader));
           __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-          __pyx_t_14 = PyDict_New(); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          __pyx_t_14 = PyDict_New(); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 592; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
           __Pyx_GOTREF(__pyx_t_14);
-          if (PyDict_SetItem(__pyx_t_14, __pyx_n_s_withSize, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
-          __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_14); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          if (PyDict_SetItem(__pyx_t_14, __pyx_n_s_withSize, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 592; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_14); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 592; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
           __Pyx_GOTREF(__pyx_t_15);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -12182,16 +11776,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
           __Pyx_XDECREF_SET(__pyx_v_newItem, __pyx_t_15);
           __pyx_t_15 = 0;
 
-          /* "mmfparser\data\chunkloaders\imagebank.pyx":608
+          /* "mmfparser/data/chunkloaders/imagebank.pyx":593
  *                 for _ in xrange(itemsToRead):
  *                     newItem = self.new(JavaImage, reader, withSize = False)
  *                     itemDict[newItem.handle] = newItem             # <<<<<<<<<<<<<<
  * 
  *     def write(self, reader):
  */
-          __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_newItem, __pyx_n_s_handle); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 593; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
           __Pyx_GOTREF(__pyx_t_15);
-          if (unlikely(PyDict_SetItem(__pyx_v_itemDict, __pyx_t_15, __pyx_v_newItem) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
+          if (unlikely(PyDict_SetItem(__pyx_v_itemDict, __pyx_t_15, __pyx_v_newItem) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 593; __pyx_clineno = __LINE__; goto __pyx_L12_except_error;}
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -12216,7 +11810,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":571
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":556
  *         self.itemDict = {}
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -12258,7 +11852,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("read (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 571; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_4read(((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank *)__pyx_v_self), ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader));
 
   /* function exit code */
@@ -12279,7 +11873,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("read", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_read(__pyx_v_self, __pyx_v_reader, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 571; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_read(__pyx_v_self, __pyx_v_reader, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 556; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12296,7 +11890,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":610
+/* "mmfparser/data/chunkloaders/imagebank.pyx":595
  *                     itemDict[newItem.handle] = newItem
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -12340,7 +11934,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":611
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":596
  * 
  *     def write(self, reader):
  *         java = self.settings.get('java', False)             # <<<<<<<<<<<<<<
@@ -12349,64 +11943,64 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
  */
   if (unlikely(__pyx_v_self->__pyx_base.settings == Py_None)) {
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%s'", "get");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 611; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 596; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_java, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 611; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_java, Py_False); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 596; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_java = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":612
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":597
  *     def write(self, reader):
  *         java = self.settings.get('java', False)
  *         if not java:             # <<<<<<<<<<<<<<
  *             offsetDict = {}
  *             self.offsets = offsets = []
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_java); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 612; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_java); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_3 = ((!__pyx_t_2) != 0);
   if (__pyx_t_3) {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":613
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":598
  *         java = self.settings.get('java', False)
  *         if not java:
  *             offsetDict = {}             # <<<<<<<<<<<<<<
  *             self.offsets = offsets = []
  *             reader.writeInt(len(self.items))
  */
-    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 613; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 598; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_offsetDict = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":614
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":599
  *         if not java:
  *             offsetDict = {}
  *             self.offsets = offsets = []             # <<<<<<<<<<<<<<
  *             reader.writeInt(len(self.items))
  *             for item in self.items:
  */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 614; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 599; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_offsets, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 614; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (__Pyx_PyObject_SetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_offsets, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 599; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_INCREF(__pyx_t_1);
     __pyx_v_offsets = __pyx_t_1;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":615
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":600
  *             offsetDict = {}
  *             self.offsets = offsets = []
  *             reader.writeInt(len(self.items))             # <<<<<<<<<<<<<<
  *             for item in self.items:
  *                 offsetDict[item.handle] = reader.tell() + 4
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_6); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_6); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_7 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -12419,39 +12013,39 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
       }
     }
     if (!__pyx_t_7) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
-      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_7); __Pyx_GIVEREF(__pyx_t_7); __pyx_t_7 = NULL;
       PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":616
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":601
  *             self.offsets = offsets = []
  *             reader.writeInt(len(self.items))
  *             for item in self.items:             # <<<<<<<<<<<<<<
  *                 offsetDict[item.handle] = reader.tell() + 4
  *                 item.write(reader)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
       __pyx_t_4 = __pyx_t_1; __Pyx_INCREF(__pyx_t_4); __pyx_t_6 = 0;
       __pyx_t_9 = NULL;
     } else {
-      __pyx_t_6 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_9 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_9 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     for (;;) {
@@ -12459,16 +12053,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
         if (likely(PyList_CheckExact(__pyx_t_4))) {
           if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         } else {
           if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_1); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         }
       } else {
@@ -12477,7 +12071,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 616; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 601; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           }
           break;
         }
@@ -12486,14 +12080,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
       __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":617
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":602
  *             reader.writeInt(len(self.items))
  *             for item in self.items:
  *                 offsetDict[item.handle] = reader.tell() + 4             # <<<<<<<<<<<<<<
  *                 item.write(reader)
  *             for key in sorted(offsetDict.keys()):
  */
-      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_tell); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_tell); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __pyx_t_5 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_8))) {
@@ -12506,30 +12100,30 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
         }
       }
       if (__pyx_t_5) {
-        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_5); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       } else {
-        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_8); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       }
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_8 = PyNumber_Add(__pyx_t_1, __pyx_int_4); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = PyNumber_Add(__pyx_t_1, __pyx_int_4); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_handle); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
-      if (unlikely(PyDict_SetItem(__pyx_v_offsetDict, __pyx_t_1, __pyx_t_8) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      if (unlikely(PyDict_SetItem(__pyx_v_offsetDict, __pyx_t_1, __pyx_t_8) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 602; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":618
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":603
  *             for item in self.items:
  *                 offsetDict[item.handle] = reader.tell() + 4
  *                 item.write(reader)             # <<<<<<<<<<<<<<
  *             for key in sorted(offsetDict.keys()):
  *                 offsets.append(offsetDict[key])
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_write); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 618; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_write); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_5 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -12542,23 +12136,23 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
         }
       }
       if (!__pyx_t_5) {
-        __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_reader); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 618; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_reader); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_8);
       } else {
-        __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 618; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_7);
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
         __Pyx_INCREF(__pyx_v_reader);
         PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_v_reader);
         __Pyx_GIVEREF(__pyx_v_reader);
-        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_7, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 618; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_7, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 603; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":616
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":601
  *             self.offsets = offsets = []
  *             reader.writeInt(len(self.items))
  *             for item in self.items:             # <<<<<<<<<<<<<<
@@ -12568,30 +12162,30 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":619
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":604
  *                 offsetDict[item.handle] = reader.tell() + 4
  *                 item.write(reader)
  *             for key in sorted(offsetDict.keys()):             # <<<<<<<<<<<<<<
  *                 offsets.append(offsetDict[key])
  *         else:
  */
-    __pyx_t_4 = __Pyx_PyDict_Keys(__pyx_v_offsetDict); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyDict_Keys(__pyx_v_offsetDict); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_8);
     PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_sorted, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_sorted, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
       __pyx_t_8 = __pyx_t_4; __Pyx_INCREF(__pyx_t_8); __pyx_t_6 = 0;
       __pyx_t_9 = NULL;
     } else {
-      __pyx_t_6 = -1; __pyx_t_8 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = -1; __pyx_t_8 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     for (;;) {
@@ -12599,16 +12193,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
         if (likely(PyList_CheckExact(__pyx_t_8))) {
           if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_8)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_4 = PyList_GET_ITEM(__pyx_t_8, __pyx_t_6); __Pyx_INCREF(__pyx_t_4); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_4 = PyList_GET_ITEM(__pyx_t_8, __pyx_t_6); __Pyx_INCREF(__pyx_t_4); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_4 = PySequence_ITEM(__pyx_t_8, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_8, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         } else {
           if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_8)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_8, __pyx_t_6); __Pyx_INCREF(__pyx_t_4); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_8, __pyx_t_6); __Pyx_INCREF(__pyx_t_4); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_4 = PySequence_ITEM(__pyx_t_8, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_8, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         }
       } else {
@@ -12617,7 +12211,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           }
           break;
         }
@@ -12626,19 +12220,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":620
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":605
  *                 item.write(reader)
  *             for key in sorted(offsetDict.keys()):
  *                 offsets.append(offsetDict[key])             # <<<<<<<<<<<<<<
  *         else:
  *             reader.writeShort(len(self.items))
  */
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_offsetDict, __pyx_v_key); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 620; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_offsetDict, __pyx_v_key); if (unlikely(__pyx_t_4 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 605; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_offsets, __pyx_t_4); if (unlikely(__pyx_t_10 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 620; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_offsets, __pyx_t_4); if (unlikely(__pyx_t_10 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 605; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":619
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":604
  *                 offsetDict[item.handle] = reader.tell() + 4
  *                 item.write(reader)
  *             for key in sorted(offsetDict.keys()):             # <<<<<<<<<<<<<<
@@ -12651,20 +12245,20 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   }
   /*else*/ {
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":622
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":607
  *                 offsets.append(offsetDict[key])
  *         else:
  *             reader.writeShort(len(self.items))             # <<<<<<<<<<<<<<
  *             reader.writeShort(len(self.items))
  *             for item in self.items:
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_6); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_7 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -12677,37 +12271,37 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
       }
     }
     if (!__pyx_t_7) {
-      __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_8);
     } else {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7); __Pyx_GIVEREF(__pyx_t_7); __pyx_t_7 = NULL;
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_1);
       __Pyx_GIVEREF(__pyx_t_1);
       __pyx_t_1 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":623
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":608
  *         else:
  *             reader.writeShort(len(self.items))
  *             reader.writeShort(len(self.items))             # <<<<<<<<<<<<<<
  *             for item in self.items:
  *                 item.write(reader)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_6); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_6); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_1 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_4))) {
@@ -12720,39 +12314,39 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
       }
     }
     if (!__pyx_t_1) {
-      __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_8);
     } else {
-      __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1); __Pyx_GIVEREF(__pyx_t_1); __pyx_t_1 = NULL;
       PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "mmfparser\data\chunkloaders\imagebank.pyx":624
+    /* "mmfparser/data/chunkloaders/imagebank.pyx":609
  *             reader.writeShort(len(self.items))
  *             reader.writeShort(len(self.items))
  *             for item in self.items:             # <<<<<<<<<<<<<<
  *                 item.write(reader)
  * 
  */
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_items); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_8);
     if (likely(PyList_CheckExact(__pyx_t_8)) || PyTuple_CheckExact(__pyx_t_8)) {
       __pyx_t_4 = __pyx_t_8; __Pyx_INCREF(__pyx_t_4); __pyx_t_6 = 0;
       __pyx_t_9 = NULL;
     } else {
-      __pyx_t_6 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_8); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_6 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_8); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_9 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_9 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     for (;;) {
@@ -12760,16 +12354,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
         if (likely(PyList_CheckExact(__pyx_t_4))) {
           if (__pyx_t_6 >= PyList_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_8 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_8); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_8 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_8); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_8 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_8 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         } else {
           if (__pyx_t_6 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
           #if CYTHON_COMPILING_IN_CPYTHON
-          __pyx_t_8 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_8); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_8 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_6); __Pyx_INCREF(__pyx_t_8); __pyx_t_6++; if (unlikely(0 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #else
-          __pyx_t_8 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+          __pyx_t_8 = PySequence_ITEM(__pyx_t_4, __pyx_t_6); __pyx_t_6++; if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           #endif
         }
       } else {
@@ -12778,7 +12372,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+            else {__pyx_filename = __pyx_f[0]; __pyx_lineno = 609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
           }
           break;
         }
@@ -12787,14 +12381,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
       __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":625
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":610
  *             reader.writeShort(len(self.items))
  *             for item in self.items:
  *                 item.write(reader)             # <<<<<<<<<<<<<<
  * 
  *     def fromHandle(self, handle):
  */
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_write); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 625; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_item, __pyx_n_s_write); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 610; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_7);
       __pyx_t_5 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_7))) {
@@ -12807,23 +12401,23 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
         }
       }
       if (!__pyx_t_5) {
-        __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_reader); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 625; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_reader); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 610; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_8);
       } else {
-        __pyx_t_1 = PyTuple_New(1+1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 625; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_1 = PyTuple_New(1+1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 610; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_1);
         PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_5); __Pyx_GIVEREF(__pyx_t_5); __pyx_t_5 = NULL;
         __Pyx_INCREF(__pyx_v_reader);
         PyTuple_SET_ITEM(__pyx_t_1, 0+1, __pyx_v_reader);
         __Pyx_GIVEREF(__pyx_v_reader);
-        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_1, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 625; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_1, NULL); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 610; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "mmfparser\data\chunkloaders\imagebank.pyx":624
+      /* "mmfparser/data/chunkloaders/imagebank.pyx":609
  *             reader.writeShort(len(self.items))
  *             reader.writeShort(len(self.items))
  *             for item in self.items:             # <<<<<<<<<<<<<<
@@ -12835,7 +12429,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":610
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":595
  *                     itemDict[newItem.handle] = newItem
  * 
  *     def write(self, reader):             # <<<<<<<<<<<<<<
@@ -12865,7 +12459,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":627
+/* "mmfparser/data/chunkloaders/imagebank.pyx":612
  *                 item.write(reader)
  * 
  *     def fromHandle(self, handle):             # <<<<<<<<<<<<<<
@@ -12895,7 +12489,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fromHandle", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":628
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":613
  * 
  *     def fromHandle(self, handle):
  *         return self.itemDict[handle]             # <<<<<<<<<<<<<<
@@ -12905,15 +12499,15 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_self->itemDict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 628; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 613; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->itemDict, __pyx_v_handle); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 628; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->itemDict, __pyx_v_handle); if (unlikely(__pyx_t_1 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 613; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":627
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":612
  *                 item.write(reader)
  * 
  *     def fromHandle(self, handle):             # <<<<<<<<<<<<<<
@@ -12932,7 +12526,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\imagebank.pyx":562
+/* "mmfparser/data/chunkloaders/imagebank.pyx":547
  * cdef class ImageBank(DataLoader):
  *     cdef public:
  *         dict itemDict             # <<<<<<<<<<<<<<
@@ -12990,7 +12584,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_8itemD
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__set__", 0);
-  if (!(likely(PyDict_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "dict", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 562; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(PyDict_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "dict", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 547; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_1 = __pyx_v_value;
   __Pyx_INCREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
@@ -13040,7 +12634,7 @@ static int __pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_8itemD
   return __pyx_r;
 }
 
-/* "mmfparser\common.pxd":23
+/* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -13059,7 +12653,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("allocate_memory", 0);
 
-  /* "mmfparser\common.pxd":24
+  /* "mmfparser/common.pxd":24
  * 
  * cdef inline object allocate_memory(int size, char ** i):
  *     if size < 0:             # <<<<<<<<<<<<<<
@@ -13069,7 +12663,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_t_1 = ((__pyx_v_size < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\common.pxd":25
+    /* "mmfparser/common.pxd":25
  * cdef inline object allocate_memory(int size, char ** i):
  *     if size < 0:
  *         size = 0             # <<<<<<<<<<<<<<
@@ -13081,7 +12675,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   }
   __pyx_L3:;
 
-  /* "mmfparser\common.pxd":26
+  /* "mmfparser/common.pxd":26
  *     if size < 0:
  *         size = 0
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)             # <<<<<<<<<<<<<<
@@ -13093,7 +12687,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_v_ob = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\common.pxd":27
+  /* "mmfparser/common.pxd":27
  *         size = 0
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)
  *     i[0] = PyString_AS_STRING(ob)             # <<<<<<<<<<<<<<
@@ -13101,7 +12695,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
  */
   (__pyx_v_i[0]) = PyString_AS_STRING(__pyx_v_ob);
 
-  /* "mmfparser\common.pxd":28
+  /* "mmfparser/common.pxd":28
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)
  *     i[0] = PyString_AS_STRING(ob)
  *     return ob             # <<<<<<<<<<<<<<
@@ -13111,7 +12705,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_r = __pyx_v_ob;
   goto __pyx_L0;
 
-  /* "mmfparser\common.pxd":23
+  /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -13470,7 +13064,6 @@ static PyMethodDef __pyx_methods_9mmfparser_4data_12chunkloaders_9imagebank_Imag
   {"getImageData", (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_11getImageData, METH_VARARGS|METH_KEYWORDS, 0},
   {"unload", (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_13unload, METH_NOARGS, 0},
   {"getGraphicMode", (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_15getGraphicMode, METH_NOARGS, 0},
-  {"save", (PyCFunction)__pyx_pw_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_17save, METH_NOARGS, 0},
   {0, 0, 0, 0}
 };
 
@@ -14352,20 +13945,15 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ARGB, __pyx_k_ARGB, sizeof(__pyx_k_ARGB), 0, 0, 1, 1},
   {&__pyx_n_s_Alpha, __pyx_k_Alpha, sizeof(__pyx_k_Alpha), 0, 0, 1, 1},
   {&__pyx_n_s_BitDict, __pyx_k_BitDict, sizeof(__pyx_k_BitDict), 0, 0, 1, 1},
-  {&__pyx_kp_s_C_Out, __pyx_k_C_Out, sizeof(__pyx_k_C_Out), 0, 0, 1, 0},
-  {&__pyx_n_s_IMAGEEXT, __pyx_k_IMAGEEXT, sizeof(__pyx_k_IMAGEEXT), 0, 0, 1, 1},
   {&__pyx_n_s_IMAGE_FLAGS, __pyx_k_IMAGE_FLAGS, sizeof(__pyx_k_IMAGE_FLAGS), 0, 0, 1, 1},
   {&__pyx_n_s_Image, __pyx_k_Image, sizeof(__pyx_k_Image), 0, 0, 1, 1},
   {&__pyx_n_s_ImageBank, __pyx_k_ImageBank, sizeof(__pyx_k_ImageBank), 0, 0, 1, 1},
   {&__pyx_n_s_ImageData, __pyx_k_ImageData, sizeof(__pyx_k_ImageData), 0, 0, 1, 1},
   {&__pyx_n_s_ImageItem, __pyx_k_ImageItem, sizeof(__pyx_k_ImageItem), 0, 0, 1, 1},
   {&__pyx_n_s_JavaImage, __pyx_k_JavaImage, sizeof(__pyx_k_JavaImage), 0, 0, 1, 1},
-  {&__pyx_n_s_L, __pyx_k_L, sizeof(__pyx_k_L), 0, 0, 1, 1},
   {&__pyx_n_s_LZX, __pyx_k_LZX, sizeof(__pyx_k_LZX), 0, 0, 1, 1},
   {&__pyx_n_s_Mac, __pyx_k_Mac, sizeof(__pyx_k_Mac), 0, 0, 1, 1},
   {&__pyx_n_s_NotImplementedError, __pyx_k_NotImplementedError, sizeof(__pyx_k_NotImplementedError), 0, 0, 1, 1},
-  {&__pyx_n_s_PIL, __pyx_k_PIL, sizeof(__pyx_k_PIL), 0, 0, 1, 1},
-  {&__pyx_n_s_RGB, __pyx_k_RGB, sizeof(__pyx_k_RGB), 0, 0, 1, 1},
   {&__pyx_n_s_RGBA, __pyx_k_RGBA, sizeof(__pyx_k_RGBA), 0, 0, 1, 1},
   {&__pyx_n_s_RLE, __pyx_k_RLE, sizeof(__pyx_k_RLE), 0, 0, 1, 1},
   {&__pyx_n_s_RLET, __pyx_k_RLET, sizeof(__pyx_k_RLET), 0, 0, 1, 1},
@@ -14373,13 +13961,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_StringIO, __pyx_k_StringIO, sizeof(__pyx_k_StringIO), 0, 0, 1, 1},
   {&__pyx_kp_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 0},
   {&__pyx_n_s_all, __pyx_k_all, sizeof(__pyx_k_all), 0, 0, 1, 1},
-  {&__pyx_n_s_alpha, __pyx_k_alpha, sizeof(__pyx_k_alpha), 0, 0, 1, 1},
   {&__pyx_n_s_anchor_x, __pyx_k_anchor_x, sizeof(__pyx_k_anchor_x), 0, 0, 1, 1},
   {&__pyx_n_s_anchor_y, __pyx_k_anchor_y, sizeof(__pyx_k_anchor_y), 0, 0, 1, 1},
-  {&__pyx_n_s_b1, __pyx_k_b1, sizeof(__pyx_k_b1), 0, 0, 1, 1},
   {&__pyx_n_s_build, __pyx_k_build, sizeof(__pyx_k_build), 0, 0, 1, 1},
-  {&__pyx_n_s_builtins, __pyx_k_builtins, sizeof(__pyx_k_builtins), 0, 0, 1, 1},
-  {&__pyx_n_s_bytes, __pyx_k_bytes, sizeof(__pyx_k_bytes), 0, 0, 1, 1},
   {&__pyx_n_s_cStringIO, __pyx_k_cStringIO, sizeof(__pyx_k_cStringIO), 0, 0, 1, 1},
   {&__pyx_n_s_compress, __pyx_k_compress, sizeof(__pyx_k_compress), 0, 0, 1, 1},
   {&__pyx_n_s_compressImageLZX, __pyx_k_compressImageLZX, sizeof(__pyx_k_compressImageLZX), 0, 0, 1, 1},
@@ -14389,13 +13973,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_decompress, __pyx_k_decompress, sizeof(__pyx_k_decompress), 0, 0, 1, 1},
   {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
   {&__pyx_n_s_frame, __pyx_k_frame, sizeof(__pyx_k_frame), 0, 0, 1, 1},
-  {&__pyx_n_s_frombytes, __pyx_k_frombytes, sizeof(__pyx_k_frombytes), 0, 0, 1, 1},
   {&__pyx_n_s_get, __pyx_k_get, sizeof(__pyx_k_get), 0, 0, 1, 1},
   {&__pyx_n_s_getFlags, __pyx_k_getFlags, sizeof(__pyx_k_getFlags), 0, 0, 1, 1},
   {&__pyx_n_s_get_data, __pyx_k_get_data, sizeof(__pyx_k_get_data), 0, 0, 1, 1},
   {&__pyx_n_s_graphicModes, __pyx_k_graphicModes, sizeof(__pyx_k_graphicModes), 0, 0, 1, 1},
   {&__pyx_n_s_handle, __pyx_k_handle, sizeof(__pyx_k_handle), 0, 0, 1, 1},
-  {&__pyx_n_s_image, __pyx_k_image, sizeof(__pyx_k_image), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_initialize, __pyx_k_initialize, sizeof(__pyx_k_initialize), 0, 0, 1, 1},
   {&__pyx_n_s_items, __pyx_k_items, sizeof(__pyx_k_items), 0, 0, 1, 1},
@@ -14420,12 +14002,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_open, __pyx_k_open, sizeof(__pyx_k_open), 0, 0, 1, 1},
   {&__pyx_n_s_palette, __pyx_k_palette, sizeof(__pyx_k_palette), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
-  {&__pyx_n_s_putalpha, __pyx_k_putalpha, sizeof(__pyx_k_putalpha), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_rb, __pyx_k_rb, sizeof(__pyx_k_rb), 0, 0, 1, 1},
   {&__pyx_n_s_read, __pyx_k_read, sizeof(__pyx_k_read), 0, 0, 1, 1},
-  {&__pyx_n_s_save, __pyx_k_save, sizeof(__pyx_k_save), 0, 0, 1, 1},
   {&__pyx_n_s_setFlags, __pyx_k_setFlags, sizeof(__pyx_k_setFlags), 0, 0, 1, 1},
   {&__pyx_n_s_sorted, __pyx_k_sorted, sizeof(__pyx_k_sorted), 0, 0, 1, 1},
   {&__pyx_n_s_struct, __pyx_k_struct, sizeof(__pyx_k_struct), 0, 0, 1, 1},
@@ -14446,16 +14026,16 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_property = __Pyx_GetBuiltinName(__pyx_n_s_property); if (!__pyx_builtin_property) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_NotImplementedError = __Pyx_GetBuiltinName(__pyx_n_s_NotImplementedError); if (!__pyx_builtin_NotImplementedError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_property = __Pyx_GetBuiltinName(__pyx_n_s_property); if (!__pyx_builtin_property) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 549; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_NotImplementedError = __Pyx_GetBuiltinName(__pyx_n_s_NotImplementedError); if (!__pyx_builtin_NotImplementedError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 600; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  __pyx_builtin_sorted = __Pyx_GetBuiltinName(__pyx_n_s_sorted); if (!__pyx_builtin_sorted) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_sorted = __Pyx_GetBuiltinName(__pyx_n_s_sorted); if (!__pyx_builtin_sorted) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -14465,60 +14045,49 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":379
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":377
  *         cdef bint old = self.settings.get('old', False)
  *         if old:
  *             raise NotImplementedError('not supported')             # <<<<<<<<<<<<<<
  * 
  *         cdef bint debug = self.settings.get('debug', False)
  */
-  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_not_supported); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 379; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple_ = PyTuple_Pack(1, __pyx_kp_s_not_supported); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 377; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":432
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":430
  *         self.actionY = newReader.readShort()
  *         if old:
  *             self.transparent = (0, 0, 0)             # <<<<<<<<<<<<<<
  *         else:
  *             self.transparent = newReader.readColor()
  */
-  __pyx_tuple__2 = PyTuple_Pack(3, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 432; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__2 = PyTuple_Pack(3, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 430; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":461
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":459
  *         newReader.writeShort(self.actionX)
  *         newReader.writeShort(self.actionY)
  *         newReader.writeColor(self.transparent or (0, 0, 0))             # <<<<<<<<<<<<<<
  *         if (self.flags['LZX'] == False):
  *             newReader.writeReader(self.rawImage)
  */
-  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 461; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":497
- *            img.putalpha(alp)
- *        ext = self.settings.get('IMAGEEXT')
- *        img.save('C:\Out')             # <<<<<<<<<<<<<<
- *        del img
- *        if self.flags["Alpha"]:
- */
-  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_C_Out); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 497; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__5);
-  __Pyx_GIVEREF(__pyx_tuple__5);
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":333
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":331
  *     # return data
  * 
  * IMAGE_FLAGS = BitDict(             # <<<<<<<<<<<<<<
  *     'RLE',
  *     'RLEW',
  */
-  __pyx_tuple__6 = PyTuple_Pack(7, __pyx_n_s_RLE, __pyx_n_s_RLEW, __pyx_n_s_RLET, __pyx_n_s_LZX, __pyx_n_s_Alpha, __pyx_n_s_ACE, __pyx_n_s_Mac); if (unlikely(!__pyx_tuple__6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__6);
-  __Pyx_GIVEREF(__pyx_tuple__6);
+  __pyx_tuple__5 = PyTuple_Pack(7, __pyx_n_s_RLE, __pyx_n_s_RLEW, __pyx_n_s_RLET, __pyx_n_s_LZX, __pyx_n_s_Alpha, __pyx_n_s_ACE, __pyx_n_s_Mac); if (unlikely(!__pyx_tuple__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__5);
+  __Pyx_GIVEREF(__pyx_tuple__5);
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -14636,76 +14205,76 @@ PyMODINIT_FUNC PyInit_imagebank(void)
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem.__pyx_base.initialize = (PyObject *(*)(struct __pyx_obj_9mmfparser_6loader_DataLoader *, int __pyx_skip_dispatch))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_initialize;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem.load = (PyObject *(*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem *, int __pyx_skip_dispatch))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_load;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem.tp_base = __pyx_ptype_9mmfparser_6loader_DataLoader;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "ImageItem", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "ImageItem", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 341; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageItem;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint.read = (unsigned int (*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *, char *, int))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9BasePoint_read;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "BasePoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 104; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "BasePoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 102; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_Point = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_Point;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_Point.__pyx_base = *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_Point.__pyx_base.read = (unsigned int (*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *, char *, int))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_read;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_Point.write = (PyObject *(*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_Point *, PyObject *, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_5Point_write;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point.tp_base = __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_Point) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "Point", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_Point) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "Point", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 108; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_Point = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.__pyx_base = *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.__pyx_base.read = (unsigned int (*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *, char *, int))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoint_read;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.write = (PyObject *(*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint *, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12SixteenPoint_write;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.tp_base = __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "SixteenPoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "SixteenPoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.__pyx_base = *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.__pyx_base.read = (unsigned int (*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *, char *, int))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoint_read;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.write = (PyObject *(*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint *, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_12FifteenPoint_write;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.tp_base = __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 156; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 156; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "FifteenPoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 156; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "FifteenPoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.__pyx_base = *__pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.__pyx_base.read = (unsigned int (*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *, char *, int))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint_read;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.write = (PyObject *(*)(struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint *, PyObject *, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_10IndexPoint_write;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.tp_base = __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 183; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "IndexPoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 185; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 183; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "IndexPoint", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 183; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage.__pyx_base = *__pyx_vtabptr_9mmfparser_6loader_DataLoader;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage.__pyx_base.read = (PyObject *(*)(struct __pyx_obj_9mmfparser_6loader_DataLoader *, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *, int __pyx_skip_dispatch))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_read;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage.tp_base = __pyx_ptype_9mmfparser_6loader_DataLoader;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 504; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 489; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 504; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "JavaImage", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 504; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 489; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "JavaImage", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 489; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage;
   __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank = &__pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.__pyx_base = *__pyx_vtabptr_9mmfparser_6loader_DataLoader;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.__pyx_base.read = (PyObject *(*)(struct __pyx_obj_9mmfparser_6loader_DataLoader *, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *, int __pyx_skip_dispatch))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_read;
   __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.__pyx_base.initialize = (PyObject *(*)(struct __pyx_obj_9mmfparser_6loader_DataLoader *, int __pyx_skip_dispatch))__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_initialize;
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.tp_base = __pyx_ptype_9mmfparser_6loader_DataLoader;
-  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 560; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyType_Ready(&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 545; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.tp_print = 0;
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 560; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "ImageBank", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 560; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank.tp_dict, __pyx_vtabptr_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 545; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "ImageBank", (PyObject *)&__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 545; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank = &__pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank;
   /*--- Type import code ---*/
   __pyx_ptype_9mmfparser_10bytereader_ByteReader = __Pyx_ImportType("mmfparser.bytereader", "ByteReader", sizeof(struct __pyx_obj_9mmfparser_10bytereader_ByteReader), 1); if (unlikely(!__pyx_ptype_9mmfparser_10bytereader_ByteReader)) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -14714,178 +14283,136 @@ PyMODINIT_FUNC PyInit_imagebank(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":20
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":20
  * cimport cython
  * 
- * from builtins import bytes as b1             # <<<<<<<<<<<<<<
- * import struct
- * import zlib
- */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_bytes);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_bytes);
-  __Pyx_GIVEREF(__pyx_n_s_bytes);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_builtins, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_bytes); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_b1, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":21
- * 
- * from builtins import bytes as b1
  * import struct             # <<<<<<<<<<<<<<
  * import zlib
- * from PIL import Image
- */
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_struct, 0, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_struct, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":22
- * from builtins import bytes as b1
- * import struct
- * import zlib             # <<<<<<<<<<<<<<
- * from PIL import Image
  * from cStringIO import StringIO
  */
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_zlib, 0, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_zlib, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_struct, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_struct, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 20; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":23
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":21
+ * 
  * import struct
- * import zlib
- * from PIL import Image             # <<<<<<<<<<<<<<
+ * import zlib             # <<<<<<<<<<<<<<
  * from cStringIO import StringIO
  * 
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(__pyx_n_s_Image);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_Image);
-  __Pyx_GIVEREF(__pyx_n_s_Image);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_PIL, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_zlib, 0, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_Image); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Image, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 23; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_zlib, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 21; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":24
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":22
+ * import struct
  * import zlib
- * from PIL import Image
  * from cStringIO import StringIO             # <<<<<<<<<<<<<<
  * 
  * from mmfparser.bytereader cimport ByteReader
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_StringIO);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_StringIO);
   __Pyx_GIVEREF(__pyx_n_s_StringIO);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_cStringIO, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_cStringIO, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_StringIO, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_StringIO, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 22; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":27
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":25
  * 
  * from mmfparser.bytereader cimport ByteReader
  * from mmfparser.data import zlibdata             # <<<<<<<<<<<<<<
  * from mmfparser.data import onepointfive
  * from mmfparser.loader cimport DataLoader
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_zlibdata);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_zlibdata);
   __Pyx_GIVEREF(__pyx_n_s_zlibdata);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_zlibdata); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_zlibdata); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_zlibdata, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_zlibdata, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":28
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":26
  * from mmfparser.bytereader cimport ByteReader
  * from mmfparser.data import zlibdata
  * from mmfparser.data import onepointfive             # <<<<<<<<<<<<<<
  * from mmfparser.loader cimport DataLoader
  * from mmfparser.data.chunkloaders.appheader import graphicModes
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_onepointfive);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_onepointfive);
   __Pyx_GIVEREF(__pyx_n_s_onepointfive);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_onepointfive); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_onepointfive); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_onepointfive, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_onepointfive, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 26; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":30
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":28
  * from mmfparser.data import onepointfive
  * from mmfparser.loader cimport DataLoader
  * from mmfparser.data.chunkloaders.appheader import graphicModes             # <<<<<<<<<<<<<<
  * from mmfparser.common cimport allocate_memory
  * 
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_graphicModes);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_graphicModes);
   __Pyx_GIVEREF(__pyx_n_s_graphicModes);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data_chunkloaders_apph, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data_chunkloaders_apph, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_graphicModes); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_graphicModes); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_graphicModes, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_graphicModes, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":33
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":31
  * from mmfparser.common cimport allocate_memory
  * 
  * from mmfparser.bitdict import BitDict             # <<<<<<<<<<<<<<
  * 
  * cdef extern from "math.h":
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_BitDict);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_BitDict);
   __Pyx_GIVEREF(__pyx_n_s_BitDict);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_bitdict, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_bitdict, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_BitDict); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_BitDict); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_BitDict, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_BitDict, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":38
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":36
  *     double ceil(double ceil)
  * 
  * cdef int POINT_MODE = 4 # 16 million colors             # <<<<<<<<<<<<<<
@@ -14894,7 +14421,7 @@ PyMODINIT_FUNC PyInit_imagebank(void)
  */
   __pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_POINT_MODE = 4;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":39
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":37
  * 
  * cdef int POINT_MODE = 4 # 16 million colors
  * cdef int FIFTEENPOINT_MODE = 6  # 32768 colors             # <<<<<<<<<<<<<<
@@ -14903,133 +14430,133 @@ PyMODINIT_FUNC PyInit_imagebank(void)
  */
   __pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_FIFTEENPOINT_MODE = 6;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":126
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":124
  *         reader.writeByte(item[0], True)
  * 
  * cdef BasePoint point_instance = Point()             # <<<<<<<<<<<<<<
  * 
  * cdef class SixteenPoint(BasePoint):
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_Point)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_Point)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_XGOTREF(((PyObject *)__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_point_instance));
   __Pyx_DECREF_SET(__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_point_instance, ((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_t_2));
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":154
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":152
  *         return r | g | b
  * 
  * cdef BasePoint sixteen_point = SixteenPoint()             # <<<<<<<<<<<<<<
  * 
  * cdef class FifteenPoint(BasePoint):
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 154; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 152; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_XGOTREF(((PyObject *)__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_sixteen_point));
   __Pyx_DECREF_SET(__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_sixteen_point, ((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_t_2));
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":183
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":181
  *         return r | g | b
  * 
  * cdef BasePoint fifteen_point = FifteenPoint()             # <<<<<<<<<<<<<<
  * 
  * cdef class IndexPoint(BasePoint):
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 183; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 181; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_XGOTREF(((PyObject *)__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_fifteen_point));
   __Pyx_DECREF_SET(__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_fifteen_point, ((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint *)__pyx_t_2));
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":195
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":193
  *         reader.writeByte(point, True)
  * 
  * cdef IndexPoint index_point = IndexPoint()             # <<<<<<<<<<<<<<
  * 
  * cdef inline tuple read_rgb(char * data, int width, int height, BasePoint pointClass):
  */
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 195; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)((PyObject*)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint)), __pyx_empty_tuple, NULL); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 193; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_XGOTREF(((PyObject *)__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_index_point));
   __Pyx_DECREF_SET(__pyx_v_9mmfparser_4data_12chunkloaders_9imagebank_index_point, ((struct __pyx_obj_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint *)__pyx_t_2));
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":333
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":331
  *     # return data
  * 
  * IMAGE_FLAGS = BitDict(             # <<<<<<<<<<<<<<
  *     'RLE',
  *     'RLEW',
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_BitDict); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_BitDict); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_IMAGE_FLAGS, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 333; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_IMAGE_FLAGS, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 331; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":565
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":550
  * 
  *     @property
  *     def items(self):             # <<<<<<<<<<<<<<
  *         return self.itemDict.values()
  * 
  */
-  __pyx_t_1 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank, __pyx_n_s_items); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 565; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank, __pyx_n_s_items); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":564
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":549
  *         dict itemDict
  * 
  *     @property             # <<<<<<<<<<<<<<
  *     def items(self):
  *         return self.itemDict.values()
  */
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 549; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_property, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 564; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_property, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 549; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank->tp_dict, __pyx_n_s_items, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 565; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank->tp_dict, __pyx_n_s_items, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 550; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank);
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":630
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":615
  *         return self.itemDict[handle]
  * 
  * from mmfparser.data.mfaloaders.imagebank import AGMIBank             # <<<<<<<<<<<<<<
  * 
  * __all__ = ['ImageBank', 'JavaImage', 'ImageItem']
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 630; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_AGMIBank);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_AGMIBank);
   __Pyx_GIVEREF(__pyx_n_s_AGMIBank);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data_mfaloaders_imageb, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 630; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data_mfaloaders_imageb, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_AGMIBank); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 630; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_AGMIBank); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_AGMIBank, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 630; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_AGMIBank, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 615; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":632
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":617
  * from mmfparser.data.mfaloaders.imagebank import AGMIBank
  * 
  * __all__ = ['ImageBank', 'JavaImage', 'ImageItem']             # <<<<<<<<<<<<<<
  */
-  __pyx_t_2 = PyList_New(3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 632; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyList_New(3); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_ImageBank);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_ImageBank);
@@ -15040,10 +14567,10 @@ PyMODINIT_FUNC PyInit_imagebank(void)
   __Pyx_INCREF(__pyx_n_s_ImageItem);
   PyList_SET_ITEM(__pyx_t_2, 2, __pyx_n_s_ImageItem);
   __Pyx_GIVEREF(__pyx_n_s_ImageItem);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 632; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\imagebank.pyx":1
+  /* "mmfparser/data/chunkloaders/imagebank.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.
@@ -15053,7 +14580,7 @@ PyMODINIT_FUNC PyInit_imagebank(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\common.pxd":23
+  /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -15790,10 +15317,6 @@ invalid_keyword:
     #endif
 bad:
     return -1;
-}
-
-static CYTHON_INLINE void __Pyx_RaiseUnboundLocalError(const char *varname) {
-    PyErr_Format(PyExc_UnboundLocalError, "local variable '%s' referenced before assignment", varname);
 }
 
 static CYTHON_INLINE void __Pyx_ExceptionSave(PyObject **type, PyObject **value, PyObject **tb) {

@@ -419,9 +419,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\onepointfive.pyx",
-  "mmfparser\\common.pxd",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/data/onepointfive.pyx",
+  "mmfparser/common.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -434,7 +434,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -446,7 +446,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -458,7 +458,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -470,7 +470,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -482,7 +482,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -494,7 +494,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -506,7 +506,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -518,7 +518,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -740,8 +740,7 @@ static char __pyx_k_decompress_single[] = "decompress_single";
 static char __pyx_k_decompressed_size[] = "decompressed_size";
 static char __pyx_k_decompression_failed_s_s[] = "decompression failed (%s, %s)";
 static char __pyx_k_mmfparser_data_onepointfive[] = "mmfparser.data.onepointfive";
-static char __pyx_k_C_LAPTOP_Downloads_AnacondaDev_b[] = "C:\\LAPTOP\\Downloads\\AnacondaDev-b2c583a408de197bd210236d50a501047dce6853\\AnacondaDev-b2c583a408de197bd210236d50a501047dce6853\\mmfparser\\data\\onepointfive.pyx";
-static PyObject *__pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b;
+static char __pyx_k_home_clicknin_Downloads_CondaDE[] = "/home/clicknin/Downloads/CondaDEV_ng-main/mmfparser/data/onepointfive.pyx";
 static PyObject *__pyx_n_s_Exception;
 static PyObject *__pyx_n_s_buf;
 static PyObject *__pyx_n_s_buffer_size;
@@ -751,6 +750,7 @@ static PyObject *__pyx_n_s_decompress;
 static PyObject *__pyx_n_s_decompress_single;
 static PyObject *__pyx_n_s_decompressed_size;
 static PyObject *__pyx_kp_s_decompression_failed_s_s;
+static PyObject *__pyx_kp_s_home_clicknin_Downloads_CondaDE;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mmfparser_data_onepointfive;
 static PyObject *__pyx_n_s_new_data;
@@ -764,7 +764,7 @@ static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_codeobj__2;
 static PyObject *__pyx_codeobj__4;
 
-/* "mmfparser\data\onepointfive.pyx":31
+/* "mmfparser/data/onepointfive.pyx":31
  * cdef char * buffer = NULL
  * 
  * def decompress_single(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -811,7 +811,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decompress_single", 0);
 
-  /* "mmfparser\data\onepointfive.pyx":32
+  /* "mmfparser/data/onepointfive.pyx":32
  * 
  * def decompress_single(ByteReader reader):
  *     cdef unsigned int buffer_size = 1024 * 1024 * 10             # <<<<<<<<<<<<<<
@@ -820,7 +820,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
  */
   __pyx_v_buffer_size = 10485760;
 
-  /* "mmfparser\data\onepointfive.pyx":34
+  /* "mmfparser/data/onepointfive.pyx":34
  *     cdef unsigned int buffer_size = 1024 * 1024 * 10
  *     global buffer
  *     if buffer == NULL:             # <<<<<<<<<<<<<<
@@ -830,7 +830,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   __pyx_t_1 = ((__pyx_v_9mmfparser_4data_12onepointfive_buffer == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\data\onepointfive.pyx":35
+    /* "mmfparser/data/onepointfive.pyx":35
  *     global buffer
  *     if buffer == NULL:
  *         buffer = <char*>malloc(buffer_size) # allocate 10 mb             # <<<<<<<<<<<<<<
@@ -842,7 +842,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   }
   __pyx_L3:;
 
-  /* "mmfparser\data\onepointfive.pyx":36
+  /* "mmfparser/data/onepointfive.pyx":36
  *     if buffer == NULL:
  *         buffer = <char*>malloc(buffer_size) # allocate 10 mb
  *     cdef int start = reader.tell()             # <<<<<<<<<<<<<<
@@ -851,7 +851,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
  */
   __pyx_v_start = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0);
 
-  /* "mmfparser\data\onepointfive.pyx":37
+  /* "mmfparser/data/onepointfive.pyx":37
  *         buffer = <char*>malloc(buffer_size) # allocate 10 mb
  *     cdef int start = reader.tell()
  *     data = reader.read()             # <<<<<<<<<<<<<<
@@ -863,7 +863,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   __pyx_v_data = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\data\onepointfive.pyx":39
+  /* "mmfparser/data/onepointfive.pyx":39
  *     data = reader.read()
  *     cdef int bytesread = tinf_uncompress(<void *>buffer, &buffer_size,
  *         <void *>(<char *>data), len(data))             # <<<<<<<<<<<<<<
@@ -873,7 +873,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   __pyx_t_3 = __Pyx_PyObject_AsString(__pyx_v_data); if (unlikely((!__pyx_t_3) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_4 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_4 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\onepointfive.pyx":38
+  /* "mmfparser/data/onepointfive.pyx":38
  *     cdef int start = reader.tell()
  *     data = reader.read()
  *     cdef int bytesread = tinf_uncompress(<void *>buffer, &buffer_size,             # <<<<<<<<<<<<<<
@@ -882,7 +882,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
  */
   __pyx_v_bytesread = tinf_uncompress(((void *)__pyx_v_9mmfparser_4data_12onepointfive_buffer), (&__pyx_v_buffer_size), ((void *)((char *)__pyx_t_3)), __pyx_t_4);
 
-  /* "mmfparser\data\onepointfive.pyx":40
+  /* "mmfparser/data/onepointfive.pyx":40
  *     cdef int bytesread = tinf_uncompress(<void *>buffer, &buffer_size,
  *         <void *>(<char *>data), len(data))
  *     reader.seek(start + bytesread)             # <<<<<<<<<<<<<<
@@ -891,7 +891,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
  */
   ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, (__pyx_v_start + __pyx_v_bytesread), 0, NULL);
 
-  /* "mmfparser\data\onepointfive.pyx":41
+  /* "mmfparser/data/onepointfive.pyx":41
  *         <void *>(<char *>data), len(data))
  *     reader.seek(start + bytesread)
  *     return ByteReader(buffer[:buffer_size])             # <<<<<<<<<<<<<<
@@ -913,7 +913,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\onepointfive.pyx":31
+  /* "mmfparser/data/onepointfive.pyx":31
  * cdef char * buffer = NULL
  * 
  * def decompress_single(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -934,7 +934,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_decompress_single(CYTH
   return __pyx_r;
 }
 
-/* "mmfparser\data\onepointfive.pyx":43
+/* "mmfparser/data/onepointfive.pyx":43
  *     return ByteReader(buffer[:buffer_size])
  * 
  * def decompress(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -987,7 +987,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("decompress", 0);
 
-  /* "mmfparser\data\onepointfive.pyx":44
+  /* "mmfparser/data/onepointfive.pyx":44
  * 
  * def decompress(ByteReader reader):
  *     cdef unsigned int decompressed_size = reader.readInt(True)             # <<<<<<<<<<<<<<
@@ -1002,7 +1002,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_decompressed_size = __pyx_t_3;
 
-  /* "mmfparser\data\onepointfive.pyx":45
+  /* "mmfparser/data/onepointfive.pyx":45
  * def decompress(ByteReader reader):
  *     cdef unsigned int decompressed_size = reader.readInt(True)
  *     cdef unsigned int saved_size = decompressed_size             # <<<<<<<<<<<<<<
@@ -1011,7 +1011,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
  */
   __pyx_v_saved_size = __pyx_v_decompressed_size;
 
-  /* "mmfparser\data\onepointfive.pyx":47
+  /* "mmfparser/data/onepointfive.pyx":47
  *     cdef unsigned int saved_size = decompressed_size
  *     cdef char * buf
  *     cdef int start = reader.tell()             # <<<<<<<<<<<<<<
@@ -1020,7 +1020,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
  */
   __pyx_v_start = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0);
 
-  /* "mmfparser\data\onepointfive.pyx":48
+  /* "mmfparser/data/onepointfive.pyx":48
  *     cdef char * buf
  *     cdef int start = reader.tell()
  *     data = reader.read()             # <<<<<<<<<<<<<<
@@ -1032,7 +1032,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   __pyx_v_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\onepointfive.pyx":49
+  /* "mmfparser/data/onepointfive.pyx":49
  *     cdef int start = reader.tell()
  *     data = reader.read()
  *     new_data = allocate_memory(decompressed_size, &buf)             # <<<<<<<<<<<<<<
@@ -1044,7 +1044,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   __pyx_v_new_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\onepointfive.pyx":51
+  /* "mmfparser/data/onepointfive.pyx":51
  *     new_data = allocate_memory(decompressed_size, &buf)
  *     cdef int bytesread = tinf_uncompress(<void *>buf, &decompressed_size,
  *         <void *>(<char *>data), len(data))             # <<<<<<<<<<<<<<
@@ -1054,7 +1054,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   __pyx_t_4 = __Pyx_PyObject_AsString(__pyx_v_data); if (unlikely((!__pyx_t_4) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_5 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_5 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 51; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\onepointfive.pyx":50
+  /* "mmfparser/data/onepointfive.pyx":50
  *     data = reader.read()
  *     new_data = allocate_memory(decompressed_size, &buf)
  *     cdef int bytesread = tinf_uncompress(<void *>buf, &decompressed_size,             # <<<<<<<<<<<<<<
@@ -1063,7 +1063,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
  */
   __pyx_v_bytesread = tinf_uncompress(((void *)__pyx_v_buf), (&__pyx_v_decompressed_size), ((void *)((char *)__pyx_t_4)), __pyx_t_5);
 
-  /* "mmfparser\data\onepointfive.pyx":52
+  /* "mmfparser/data/onepointfive.pyx":52
  *     cdef int bytesread = tinf_uncompress(<void *>buf, &decompressed_size,
  *         <void *>(<char *>data), len(data))
  *     reader.seek(start + bytesread)             # <<<<<<<<<<<<<<
@@ -1072,7 +1072,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
  */
   ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, (__pyx_v_start + __pyx_v_bytesread), 0, NULL);
 
-  /* "mmfparser\data\onepointfive.pyx":53
+  /* "mmfparser/data/onepointfive.pyx":53
  *         <void *>(<char *>data), len(data))
  *     reader.seek(start + bytesread)
  *     if decompressed_size != saved_size:             # <<<<<<<<<<<<<<
@@ -1082,7 +1082,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   __pyx_t_6 = ((__pyx_v_decompressed_size != __pyx_v_saved_size) != 0);
   if (__pyx_t_6) {
 
-    /* "mmfparser\data\onepointfive.pyx":54
+    /* "mmfparser/data/onepointfive.pyx":54
  *     reader.seek(start + bytesread)
  *     if decompressed_size != saved_size:
  *         raise Exception('decompression failed (%s, %s)' % (saved_size,             # <<<<<<<<<<<<<<
@@ -1092,7 +1092,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
     __pyx_t_1 = __Pyx_PyInt_From_unsigned_int(__pyx_v_saved_size); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
 
-    /* "mmfparser\data\onepointfive.pyx":55
+    /* "mmfparser/data/onepointfive.pyx":55
  *     if decompressed_size != saved_size:
  *         raise Exception('decompression failed (%s, %s)' % (saved_size,
  *             decompressed_size))             # <<<<<<<<<<<<<<
@@ -1101,7 +1101,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
     __pyx_t_7 = __Pyx_PyInt_From_unsigned_int(__pyx_v_decompressed_size); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_7);
 
-    /* "mmfparser\data\onepointfive.pyx":54
+    /* "mmfparser/data/onepointfive.pyx":54
  *     reader.seek(start + bytesread)
  *     if decompressed_size != saved_size:
  *         raise Exception('decompression failed (%s, %s)' % (saved_size,             # <<<<<<<<<<<<<<
@@ -1132,7 +1132,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "mmfparser\data\onepointfive.pyx":56
+  /* "mmfparser/data/onepointfive.pyx":56
  *         raise Exception('decompression failed (%s, %s)' % (saved_size,
  *             decompressed_size))
  *     return ByteReader(new_data)             # <<<<<<<<<<<<<<
@@ -1150,7 +1150,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   __pyx_t_8 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\onepointfive.pyx":43
+  /* "mmfparser/data/onepointfive.pyx":43
  *     return ByteReader(buffer[:buffer_size])
  * 
  * def decompress(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1173,7 +1173,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12onepointfive_2decompress(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "mmfparser\common.pxd":23
+/* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -1192,7 +1192,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("allocate_memory", 0);
 
-  /* "mmfparser\common.pxd":24
+  /* "mmfparser/common.pxd":24
  * 
  * cdef inline object allocate_memory(int size, char ** i):
  *     if size < 0:             # <<<<<<<<<<<<<<
@@ -1202,7 +1202,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_t_1 = ((__pyx_v_size < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\common.pxd":25
+    /* "mmfparser/common.pxd":25
  * cdef inline object allocate_memory(int size, char ** i):
  *     if size < 0:
  *         size = 0             # <<<<<<<<<<<<<<
@@ -1214,7 +1214,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   }
   __pyx_L3:;
 
-  /* "mmfparser\common.pxd":26
+  /* "mmfparser/common.pxd":26
  *     if size < 0:
  *         size = 0
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)             # <<<<<<<<<<<<<<
@@ -1226,7 +1226,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_v_ob = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\common.pxd":27
+  /* "mmfparser/common.pxd":27
  *         size = 0
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)
  *     i[0] = PyString_AS_STRING(ob)             # <<<<<<<<<<<<<<
@@ -1234,7 +1234,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
  */
   (__pyx_v_i[0]) = PyString_AS_STRING(__pyx_v_ob);
 
-  /* "mmfparser\common.pxd":28
+  /* "mmfparser/common.pxd":28
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)
  *     i[0] = PyString_AS_STRING(ob)
  *     return ob             # <<<<<<<<<<<<<<
@@ -1244,7 +1244,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_r = __pyx_v_ob;
   goto __pyx_L0;
 
-  /* "mmfparser\common.pxd":23
+  /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -1287,7 +1287,6 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_k_C_LAPTOP_Downloads_AnacondaDev_b, sizeof(__pyx_k_C_LAPTOP_Downloads_AnacondaDev_b), 0, 0, 1, 0},
   {&__pyx_n_s_Exception, __pyx_k_Exception, sizeof(__pyx_k_Exception), 0, 0, 1, 1},
   {&__pyx_n_s_buf, __pyx_k_buf, sizeof(__pyx_k_buf), 0, 0, 1, 1},
   {&__pyx_n_s_buffer_size, __pyx_k_buffer_size, sizeof(__pyx_k_buffer_size), 0, 0, 1, 1},
@@ -1297,6 +1296,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_decompress_single, __pyx_k_decompress_single, sizeof(__pyx_k_decompress_single), 0, 0, 1, 1},
   {&__pyx_n_s_decompressed_size, __pyx_k_decompressed_size, sizeof(__pyx_k_decompressed_size), 0, 0, 1, 1},
   {&__pyx_kp_s_decompression_failed_s_s, __pyx_k_decompression_failed_s_s, sizeof(__pyx_k_decompression_failed_s_s), 0, 0, 1, 0},
+  {&__pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_k_home_clicknin_Downloads_CondaDE, sizeof(__pyx_k_home_clicknin_Downloads_CondaDE), 0, 0, 1, 0},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mmfparser_data_onepointfive, __pyx_k_mmfparser_data_onepointfive, sizeof(__pyx_k_mmfparser_data_onepointfive), 0, 0, 1, 1},
   {&__pyx_n_s_new_data, __pyx_k_new_data, sizeof(__pyx_k_new_data), 0, 0, 1, 1},
@@ -1318,7 +1318,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mmfparser\data\onepointfive.pyx":31
+  /* "mmfparser/data/onepointfive.pyx":31
  * cdef char * buffer = NULL
  * 
  * def decompress_single(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1328,9 +1328,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple_ = PyTuple_Pack(5, __pyx_n_s_reader, __pyx_n_s_buffer_size, __pyx_n_s_start, __pyx_n_s_data, __pyx_n_s_bytesread); if (unlikely(!__pyx_tuple_)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_decompress_single, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_decompress_single, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\data\onepointfive.pyx":43
+  /* "mmfparser/data/onepointfive.pyx":43
  *     return ByteReader(buffer[:buffer_size])
  * 
  * def decompress(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1340,7 +1340,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(8, __pyx_n_s_reader, __pyx_n_s_decompressed_size, __pyx_n_s_saved_size, __pyx_n_s_buf, __pyx_n_s_start, __pyx_n_s_data, __pyx_n_s_new_data, __pyx_n_s_bytesread); if (unlikely(!__pyx_tuple__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_decompress, 43, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_decompress, 43, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1442,7 +1442,7 @@ PyMODINIT_FUNC PyInit_onepointfive(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\data\onepointfive.pyx":27
+  /* "mmfparser/data/onepointfive.pyx":27
  *         void *source, unsigned int sourceLen)
  * 
  * tinf_init()             # <<<<<<<<<<<<<<
@@ -1451,7 +1451,7 @@ PyMODINIT_FUNC PyInit_onepointfive(void)
  */
   tinf_init();
 
-  /* "mmfparser\data\onepointfive.pyx":29
+  /* "mmfparser/data/onepointfive.pyx":29
  * tinf_init()
  * 
  * cdef char * buffer = NULL             # <<<<<<<<<<<<<<
@@ -1460,7 +1460,7 @@ PyMODINIT_FUNC PyInit_onepointfive(void)
  */
   __pyx_v_9mmfparser_4data_12onepointfive_buffer = NULL;
 
-  /* "mmfparser\data\onepointfive.pyx":31
+  /* "mmfparser/data/onepointfive.pyx":31
  * cdef char * buffer = NULL
  * 
  * def decompress_single(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1472,7 +1472,7 @@ PyMODINIT_FUNC PyInit_onepointfive(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decompress_single, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\onepointfive.pyx":43
+  /* "mmfparser/data/onepointfive.pyx":43
  *     return ByteReader(buffer[:buffer_size])
  * 
  * def decompress(ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1484,7 +1484,7 @@ PyMODINIT_FUNC PyInit_onepointfive(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_decompress, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\onepointfive.pyx":1
+  /* "mmfparser/data/onepointfive.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.
@@ -1494,7 +1494,7 @@ PyMODINIT_FUNC PyInit_onepointfive(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\common.pxd":23
+  /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<

@@ -418,8 +418,8 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\bytereader.pyx",
-  "mmfparser\\common.pxd",
+  "mmfparser/bytereader.pyx",
+  "mmfparser/common.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -432,7 +432,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -444,7 +444,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -456,7 +456,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -468,7 +468,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -480,7 +480,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -492,7 +492,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -504,7 +504,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -516,7 +516,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -538,7 +538,7 @@ struct __pyx_obj_9mmfparser_10bytereader_ByteReader {
 
 
 
-/* "mmfparser\bytereader.pyx":75
+/* "mmfparser/bytereader.pyx":75
  * 
  * @cython.final
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -954,13 +954,12 @@ static char __pyx_k_s_bytes_required[] = "%s bytes required";
 static char __pyx_k_NamedTemporaryFile[] = "NamedTemporaryFile";
 static char __pyx_k_mmfparser_bytereader[] = "mmfparser.bytereader";
 static char __pyx_k_Press_enter_to_open_hex_editor[] = "Press enter to open hex editor...";
+static char __pyx_k_home_clicknin_Downloads_CondaDE[] = "/home/clicknin/Downloads/CondaDEV_ng-main/mmfparser/bytereader.pyx";
 static char __pyx_k_unimplemented_value_at_s_size_s[] = "unimplemented value at %s, size %s (should be %s but was %s)";
-static char __pyx_k_C_LAPTOP_Downloads_AnacondaDev_b[] = "C:\\LAPTOP\\Downloads\\AnacondaDev-b2c583a408de197bd210236d50a501047dce6853\\AnacondaDev-b2c583a408de197bd210236d50a501047dce6853\\mmfparser\\bytereader.pyx";
 static PyObject *__pyx_kp_s_;
 static PyObject *__pyx_kp_s_010editor;
 static PyObject *__pyx_n_s_B;
 static PyObject *__pyx_n_s_BYTE;
-static PyObject *__pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b;
 static PyObject *__pyx_n_s_DOUBLE;
 static PyObject *__pyx_n_s_FLOAT;
 static PyObject *__pyx_n_s_H;
@@ -996,6 +995,7 @@ static PyObject *__pyx_n_s_file;
 static PyObject *__pyx_n_s_filename;
 static PyObject *__pyx_n_s_format;
 static PyObject *__pyx_n_s_h;
+static PyObject *__pyx_kp_s_home_clicknin_Downloads_CondaDE;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_input;
@@ -1064,7 +1064,7 @@ static PyObject *__pyx_tuple__21;
 static PyObject *__pyx_codeobj__20;
 static PyObject *__pyx_codeobj__22;
 
-/* "mmfparser\bytereader.pyx":46
+/* "mmfparser/bytereader.pyx":46
  * cdef class ByteReader
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:             # <<<<<<<<<<<<<<
@@ -1087,7 +1087,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_available", 0);
 
-  /* "mmfparser\bytereader.pyx":47
+  /* "mmfparser/bytereader.pyx":47
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:
  *     if reader.pos + size > reader.data_size:             # <<<<<<<<<<<<<<
@@ -1097,7 +1097,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   __pyx_t_1 = (((__pyx_v_reader->pos + __pyx_v_size) > __pyx_v_reader->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":48
+    /* "mmfparser/bytereader.pyx":48
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:
  *     if reader.pos + size > reader.data_size:
  *         import traceback             # <<<<<<<<<<<<<<
@@ -1109,7 +1109,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
     __pyx_v_traceback = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":49
+    /* "mmfparser/bytereader.pyx":49
  *     if reader.pos + size > reader.data_size:
  *         import traceback
  *         traceback.print_stack()             # <<<<<<<<<<<<<<
@@ -1138,7 +1138,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":50
+    /* "mmfparser/bytereader.pyx":50
  *         import traceback
  *         traceback.print_stack()
  *         raise struct.error('%s bytes required' % size)             # <<<<<<<<<<<<<<
@@ -1186,7 +1186,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "mmfparser\bytereader.pyx":51
+  /* "mmfparser/bytereader.pyx":51
  *         traceback.print_stack()
  *         raise struct.error('%s bytes required' % size)
  *     return 0             # <<<<<<<<<<<<<<
@@ -1196,7 +1196,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   __pyx_r = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":46
+  /* "mmfparser/bytereader.pyx":46
  * cdef class ByteReader
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:             # <<<<<<<<<<<<<<
@@ -1219,7 +1219,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":53
+/* "mmfparser/bytereader.pyx":53
  *     return 0
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -1241,7 +1241,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ensure_size", 0);
 
-  /* "mmfparser\bytereader.pyx":54
+  /* "mmfparser/bytereader.pyx":54
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):
  *     if size < reader.data_size:             # <<<<<<<<<<<<<<
@@ -1251,7 +1251,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_t_1 = ((__pyx_v_size < __pyx_v_reader->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":55
+    /* "mmfparser/bytereader.pyx":55
  * cdef inline void ensure_size(ByteReader reader, size_t size):
  *     if size < reader.data_size:
  *         size = reader.data_size             # <<<<<<<<<<<<<<
@@ -1264,7 +1264,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   }
   __pyx_L3:;
 
-  /* "mmfparser\bytereader.pyx":56
+  /* "mmfparser/bytereader.pyx":56
  *     if size < reader.data_size:
  *         size = reader.data_size
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:             # <<<<<<<<<<<<<<
@@ -1290,7 +1290,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_L5_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":57
+    /* "mmfparser/bytereader.pyx":57
  *         size = reader.data_size
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:
  *         if size > reader.data_size:             # <<<<<<<<<<<<<<
@@ -1300,7 +1300,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
     __pyx_t_1 = ((__pyx_v_size > __pyx_v_reader->data_size) != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser\bytereader.pyx":58
+      /* "mmfparser/bytereader.pyx":58
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:
  *         if size > reader.data_size:
  *             reader.data_size = size             # <<<<<<<<<<<<<<
@@ -1312,7 +1312,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
     }
     __pyx_L7:;
 
-    /* "mmfparser\bytereader.pyx":59
+    /* "mmfparser/bytereader.pyx":59
  *         if size > reader.data_size:
  *             reader.data_size = size
  *         return             # <<<<<<<<<<<<<<
@@ -1322,7 +1322,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":61
+  /* "mmfparser/bytereader.pyx":61
  *         return
  *     cdef char * buf
  *     newData = allocate_memory(size * 3, &buf)             # <<<<<<<<<<<<<<
@@ -1334,7 +1334,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_v_newData = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":62
+  /* "mmfparser/bytereader.pyx":62
  *     cdef char * buf
  *     newData = allocate_memory(size * 3, &buf)
  *     memcpy(buf, reader.buffer, reader.data_size)             # <<<<<<<<<<<<<<
@@ -1343,7 +1343,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   memcpy(__pyx_v_buf, __pyx_v_reader->buffer, __pyx_v_reader->data_size);
 
-  /* "mmfparser\bytereader.pyx":63
+  /* "mmfparser/bytereader.pyx":63
  *     newData = allocate_memory(size * 3, &buf)
  *     memcpy(buf, reader.buffer, reader.data_size)
  *     reader.original = newData             # <<<<<<<<<<<<<<
@@ -1359,7 +1359,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_v_reader->original = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":64
+  /* "mmfparser/bytereader.pyx":64
  *     memcpy(buf, reader.buffer, reader.data_size)
  *     reader.original = newData
  *     reader.buffer = <unsigned char *>buf             # <<<<<<<<<<<<<<
@@ -1368,7 +1368,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->buffer = ((unsigned char *)__pyx_v_buf);
 
-  /* "mmfparser\bytereader.pyx":65
+  /* "mmfparser/bytereader.pyx":65
  *     reader.original = newData
  *     reader.buffer = <unsigned char *>buf
  *     reader.data_size = size             # <<<<<<<<<<<<<<
@@ -1377,7 +1377,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->data_size = __pyx_v_size;
 
-  /* "mmfparser\bytereader.pyx":66
+  /* "mmfparser/bytereader.pyx":66
  *     reader.buffer = <unsigned char *>buf
  *     reader.data_size = size
  *     reader.start = 0             # <<<<<<<<<<<<<<
@@ -1386,7 +1386,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->start = 0;
 
-  /* "mmfparser\bytereader.pyx":67
+  /* "mmfparser/bytereader.pyx":67
  *     reader.data_size = size
  *     reader.start = 0
  *     reader.shared = False             # <<<<<<<<<<<<<<
@@ -1395,7 +1395,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->shared = 0;
 
-  /* "mmfparser\bytereader.pyx":53
+  /* "mmfparser/bytereader.pyx":53
  *     return 0
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -1413,7 +1413,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __Pyx_RefNannyFinishContext();
 }
 
-/* "mmfparser\bytereader.pyx":69
+/* "mmfparser/bytereader.pyx":69
  *     reader.shared = False
  * 
  * cdef inline void ensure_write_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -1425,7 +1425,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_write_size(stru
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("ensure_write_size", 0);
 
-  /* "mmfparser\bytereader.pyx":70
+  /* "mmfparser/bytereader.pyx":70
  * 
  * cdef inline void ensure_write_size(ByteReader reader, size_t size):
  *     ensure_size(reader, reader.pos + size)             # <<<<<<<<<<<<<<
@@ -1434,7 +1434,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_write_size(stru
  */
   __pyx_f_9mmfparser_10bytereader_ensure_size(__pyx_v_reader, (__pyx_v_reader->pos + __pyx_v_size));
 
-  /* "mmfparser\bytereader.pyx":69
+  /* "mmfparser/bytereader.pyx":69
  *     reader.shared = False
  * 
  * cdef inline void ensure_write_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -1446,7 +1446,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_write_size(stru
   __Pyx_RefNannyFinishContext();
 }
 
-/* "mmfparser\bytereader.pyx":76
+/* "mmfparser/bytereader.pyx":76
  * @cython.final
  * cdef class ByteReader:
  *     def __cinit__(self, input = None, start = None, size = None):             # <<<<<<<<<<<<<<
@@ -1551,7 +1551,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "mmfparser\bytereader.pyx":77
+  /* "mmfparser/bytereader.pyx":77
  * cdef class ByteReader:
  *     def __cinit__(self, input = None, start = None, size = None):
  *         self.pos = 0             # <<<<<<<<<<<<<<
@@ -1560,7 +1560,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
   __pyx_v_self->pos = 0;
 
-  /* "mmfparser\bytereader.pyx":78
+  /* "mmfparser/bytereader.pyx":78
  *     def __cinit__(self, input = None, start = None, size = None):
  *         self.pos = 0
  *         if isinstance(input, file):             # <<<<<<<<<<<<<<
@@ -1571,7 +1571,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":81
+    /* "mmfparser/bytereader.pyx":81
  *             IF not IS_PYPY:
  *                 self.fp = PyFile_AsFile(input)
  *             self.python_fp = input             # <<<<<<<<<<<<<<
@@ -1584,7 +1584,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __Pyx_DECREF(__pyx_v_self->python_fp);
     __pyx_v_self->python_fp = __pyx_v_input;
 
-    /* "mmfparser\bytereader.pyx":82
+    /* "mmfparser/bytereader.pyx":82
  *                 self.fp = PyFile_AsFile(input)
  *             self.python_fp = input
  *             self.shared = False             # <<<<<<<<<<<<<<
@@ -1593,7 +1593,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_self->shared = 0;
 
-    /* "mmfparser\bytereader.pyx":83
+    /* "mmfparser/bytereader.pyx":83
  *             self.python_fp = input
  *             self.shared = False
  *             self.start = 0             # <<<<<<<<<<<<<<
@@ -1602,7 +1602,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_self->start = 0;
 
-    /* "mmfparser\bytereader.pyx":84
+    /* "mmfparser/bytereader.pyx":84
  *             self.shared = False
  *             self.start = 0
  *             return             # <<<<<<<<<<<<<<
@@ -1614,7 +1614,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   }
   /*else*/ {
 
-    /* "mmfparser\bytereader.pyx":86
+    /* "mmfparser/bytereader.pyx":86
  *             return
  *         else:
  *             self.python_fp = None             # <<<<<<<<<<<<<<
@@ -1627,7 +1627,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __Pyx_DECREF(__pyx_v_self->python_fp);
     __pyx_v_self->python_fp = Py_None;
 
-    /* "mmfparser\bytereader.pyx":87
+    /* "mmfparser/bytereader.pyx":87
  *         else:
  *             self.python_fp = None
  *             if input is not None:             # <<<<<<<<<<<<<<
@@ -1638,7 +1638,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __pyx_t_1 = (__pyx_t_2 != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser\bytereader.pyx":88
+      /* "mmfparser/bytereader.pyx":88
  *             self.python_fp = None
  *             if input is not None:
  *                 data = input             # <<<<<<<<<<<<<<
@@ -1651,7 +1651,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     }
     /*else*/ {
 
-      /* "mmfparser\bytereader.pyx":90
+      /* "mmfparser/bytereader.pyx":90
  *                 data = input
  *             else:
  *                 data = ''             # <<<<<<<<<<<<<<
@@ -1664,7 +1664,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __pyx_L4:;
   }
 
-  /* "mmfparser\bytereader.pyx":91
+  /* "mmfparser/bytereader.pyx":91
  *             else:
  *                 data = ''
  *         cdef bint isChild = start is not None and size is not None             # <<<<<<<<<<<<<<
@@ -1684,7 +1684,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   __pyx_L5_bool_binop_done:;
   __pyx_v_isChild = __pyx_t_1;
 
-  /* "mmfparser\bytereader.pyx":92
+  /* "mmfparser/bytereader.pyx":92
  *                 data = ''
  *         cdef bint isChild = start is not None and size is not None
  *         self.shared = isChild             # <<<<<<<<<<<<<<
@@ -1693,7 +1693,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
   __pyx_v_self->shared = __pyx_v_isChild;
 
-  /* "mmfparser\bytereader.pyx":93
+  /* "mmfparser/bytereader.pyx":93
  *         cdef bint isChild = start is not None and size is not None
  *         self.shared = isChild
  *         self.original = data             # <<<<<<<<<<<<<<
@@ -1709,7 +1709,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   __pyx_v_self->original = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "mmfparser\bytereader.pyx":95
+  /* "mmfparser/bytereader.pyx":95
  *         self.original = data
  *         cdef unsigned char * c_data
  *         c_data = data             # <<<<<<<<<<<<<<
@@ -1719,7 +1719,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   __pyx_t_5 = __Pyx_PyObject_AsUString(__pyx_v_data); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 95; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_c_data = __pyx_t_5;
 
-  /* "mmfparser\bytereader.pyx":97
+  /* "mmfparser/bytereader.pyx":97
  *         c_data = data
  *         cdef int int_start
  *         if isChild:             # <<<<<<<<<<<<<<
@@ -1729,7 +1729,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   __pyx_t_1 = (__pyx_v_isChild != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":98
+    /* "mmfparser/bytereader.pyx":98
  *         cdef int int_start
  *         if isChild:
  *             int_start = start             # <<<<<<<<<<<<<<
@@ -1739,7 +1739,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_v_start); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 98; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_int_start = __pyx_t_6;
 
-    /* "mmfparser\bytereader.pyx":99
+    /* "mmfparser/bytereader.pyx":99
  *         if isChild:
  *             int_start = start
  *             self.start = int_start             # <<<<<<<<<<<<<<
@@ -1748,7 +1748,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_self->start = __pyx_v_int_start;
 
-    /* "mmfparser\bytereader.pyx":100
+    /* "mmfparser/bytereader.pyx":100
  *             int_start = start
  *             self.start = int_start
  *             c_data += int_start             # <<<<<<<<<<<<<<
@@ -1760,7 +1760,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   }
   __pyx_L7:;
 
-  /* "mmfparser\bytereader.pyx":101
+  /* "mmfparser/bytereader.pyx":101
  *             self.start = int_start
  *             c_data += int_start
  *         if isChild:             # <<<<<<<<<<<<<<
@@ -1770,7 +1770,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   __pyx_t_1 = (__pyx_v_isChild != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":102
+    /* "mmfparser/bytereader.pyx":102
  *             c_data += int_start
  *         if isChild:
  *             self.data_size = size             # <<<<<<<<<<<<<<
@@ -1783,7 +1783,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   }
   /*else*/ {
 
-    /* "mmfparser\bytereader.pyx":104
+    /* "mmfparser/bytereader.pyx":104
  *             self.data_size = size
  *         else:
  *             self.data_size = len(data)             # <<<<<<<<<<<<<<
@@ -1795,7 +1795,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   }
   __pyx_L8:;
 
-  /* "mmfparser\bytereader.pyx":106
+  /* "mmfparser/bytereader.pyx":106
  *             self.data_size = len(data)
  * 
  *         self.buffer = c_data             # <<<<<<<<<<<<<<
@@ -1804,7 +1804,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
   __pyx_v_self->buffer = __pyx_v_c_data;
 
-  /* "mmfparser\bytereader.pyx":76
+  /* "mmfparser/bytereader.pyx":76
  * @cython.final
  * cdef class ByteReader:
  *     def __cinit__(self, input = None, start = None, size = None):             # <<<<<<<<<<<<<<
@@ -1825,7 +1825,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":108
+/* "mmfparser/bytereader.pyx":108
  *         self.buffer = c_data
  * 
  *     cpdef int tell(self):             # <<<<<<<<<<<<<<
@@ -1847,7 +1847,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tell", 0);
 
-  /* "mmfparser\bytereader.pyx":110
+  /* "mmfparser/bytereader.pyx":110
  *     cpdef int tell(self):
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -1857,7 +1857,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 110; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":111
+    /* "mmfparser/bytereader.pyx":111
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 return self.python_fp.tell()             # <<<<<<<<<<<<<<
@@ -1890,7 +1890,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":116
+  /* "mmfparser/bytereader.pyx":116
  *                 return ftell(self.fp)
  * 
  *         return self.pos             # <<<<<<<<<<<<<<
@@ -1900,7 +1900,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
   __pyx_r = __pyx_v_self->pos;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":108
+  /* "mmfparser/bytereader.pyx":108
  *         self.buffer = c_data
  * 
  *     cpdef int tell(self):             # <<<<<<<<<<<<<<
@@ -1959,7 +1959,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_2tell(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":118
+/* "mmfparser/bytereader.pyx":118
  *         return self.pos
  * 
  *     cpdef data(self):             # <<<<<<<<<<<<<<
@@ -1980,7 +1980,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("data", 0);
 
-  /* "mmfparser\bytereader.pyx":121
+  /* "mmfparser/bytereader.pyx":121
  *         cdef int pos
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -1990,7 +1990,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":122
+    /* "mmfparser/bytereader.pyx":122
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 pos = self.tell()             # <<<<<<<<<<<<<<
@@ -1999,7 +1999,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
     __pyx_v_pos = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser\bytereader.pyx":123
+    /* "mmfparser/bytereader.pyx":123
  *             if self.python_fp:
  *                 pos = self.tell()
  *                 self.seek(0)             # <<<<<<<<<<<<<<
@@ -2008,7 +2008,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
     __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, 0, 0, NULL);
 
-    /* "mmfparser\bytereader.pyx":124
+    /* "mmfparser/bytereader.pyx":124
  *                 pos = self.tell()
  *                 self.seek(0)
  *                 data = self.read()             # <<<<<<<<<<<<<<
@@ -2020,7 +2020,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
     __pyx_v_data = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":125
+    /* "mmfparser/bytereader.pyx":125
  *                 self.seek(0)
  *                 data = self.read()
  *                 self.seek(pos)             # <<<<<<<<<<<<<<
@@ -2029,7 +2029,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
     __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, __pyx_v_pos, 0, NULL);
 
-    /* "mmfparser\bytereader.pyx":126
+    /* "mmfparser/bytereader.pyx":126
  *                 data = self.read()
  *                 self.seek(pos)
  *                 return data             # <<<<<<<<<<<<<<
@@ -2042,7 +2042,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":135
+  /* "mmfparser/bytereader.pyx":135
  *                 return data
  * 
  *         return self.buffer[0:self.data_size]             # <<<<<<<<<<<<<<
@@ -2056,7 +2056,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":118
+  /* "mmfparser/bytereader.pyx":118
  *         return self.pos
  * 
  *     cpdef data(self):             # <<<<<<<<<<<<<<
@@ -2115,7 +2115,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_4data(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":137
+/* "mmfparser/bytereader.pyx":137
  *         return self.buffer[0:self.data_size]
  * 
  *     cpdef bint seek(self, int pos, int mode = 0):             # <<<<<<<<<<<<<<
@@ -2147,7 +2147,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     }
   }
 
-  /* "mmfparser\bytereader.pyx":139
+  /* "mmfparser/bytereader.pyx":139
  *     cpdef bint seek(self, int pos, int mode = 0):
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -2157,7 +2157,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":140
+    /* "mmfparser/bytereader.pyx":140
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.python_fp.seek(pos, mode)             # <<<<<<<<<<<<<<
@@ -2199,7 +2199,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":141
+    /* "mmfparser/bytereader.pyx":141
  *             if self.python_fp:
  *                 self.python_fp.seek(pos, mode)
  *                 return True             # <<<<<<<<<<<<<<
@@ -2210,7 +2210,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":149
+  /* "mmfparser/bytereader.pyx":149
  *         if mode == 2:
  *             pos += self.data_size
  *         elif mode == 1:             # <<<<<<<<<<<<<<
@@ -2219,7 +2219,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
   switch (__pyx_v_mode) {
 
-    /* "mmfparser\bytereader.pyx":147
+    /* "mmfparser/bytereader.pyx":147
  *                 return True
  * 
  *         if mode == 2:             # <<<<<<<<<<<<<<
@@ -2228,7 +2228,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
     case 2:
 
-    /* "mmfparser\bytereader.pyx":148
+    /* "mmfparser/bytereader.pyx":148
  * 
  *         if mode == 2:
  *             pos += self.data_size             # <<<<<<<<<<<<<<
@@ -2238,7 +2238,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     __pyx_v_pos = (__pyx_v_pos + __pyx_v_self->data_size);
     break;
 
-    /* "mmfparser\bytereader.pyx":149
+    /* "mmfparser/bytereader.pyx":149
  *         if mode == 2:
  *             pos += self.data_size
  *         elif mode == 1:             # <<<<<<<<<<<<<<
@@ -2247,7 +2247,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
     case 1:
 
-    /* "mmfparser\bytereader.pyx":150
+    /* "mmfparser/bytereader.pyx":150
  *             pos += self.data_size
  *         elif mode == 1:
  *             pos += self.pos             # <<<<<<<<<<<<<<
@@ -2259,7 +2259,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     default: break;
   }
 
-  /* "mmfparser\bytereader.pyx":151
+  /* "mmfparser/bytereader.pyx":151
  *         elif mode == 1:
  *             pos += self.pos
  *         if pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -2269,7 +2269,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_t_1 = ((__pyx_v_pos > __pyx_v_self->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":152
+    /* "mmfparser/bytereader.pyx":152
  *             pos += self.pos
  *         if pos > self.data_size:
  *             pos = self.data_size             # <<<<<<<<<<<<<<
@@ -2282,7 +2282,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   }
   __pyx_L4:;
 
-  /* "mmfparser\bytereader.pyx":153
+  /* "mmfparser/bytereader.pyx":153
  *         if pos > self.data_size:
  *             pos = self.data_size
  *         if pos < 0:             # <<<<<<<<<<<<<<
@@ -2292,7 +2292,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_t_1 = ((__pyx_v_pos < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":154
+    /* "mmfparser/bytereader.pyx":154
  *             pos = self.data_size
  *         if pos < 0:
  *             pos = 0             # <<<<<<<<<<<<<<
@@ -2304,7 +2304,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   }
   __pyx_L5:;
 
-  /* "mmfparser\bytereader.pyx":155
+  /* "mmfparser/bytereader.pyx":155
  *         if pos < 0:
  *             pos = 0
  *         self.pos = pos             # <<<<<<<<<<<<<<
@@ -2313,7 +2313,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
   __pyx_v_self->pos = __pyx_v_pos;
 
-  /* "mmfparser\bytereader.pyx":156
+  /* "mmfparser/bytereader.pyx":156
  *             pos = 0
  *         self.pos = pos
  *         return True             # <<<<<<<<<<<<<<
@@ -2323,7 +2323,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":137
+  /* "mmfparser/bytereader.pyx":137
  *         return self.buffer[0:self.data_size]
  * 
  *     cpdef bint seek(self, int pos, int mode = 0):             # <<<<<<<<<<<<<<
@@ -2444,7 +2444,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_6seek(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":158
+/* "mmfparser/bytereader.pyx":158
  *         return True
  * 
  *     cpdef adjust(self, int to):             # <<<<<<<<<<<<<<
@@ -2463,7 +2463,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("adjust", 0);
 
-  /* "mmfparser\bytereader.pyx":159
+  /* "mmfparser/bytereader.pyx":159
  * 
  *     cpdef adjust(self, int to):
  *         cdef int value = to - (self.tell() % to)             # <<<<<<<<<<<<<<
@@ -2472,7 +2472,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
   __pyx_v_value = (__pyx_v_to - (__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0) % __pyx_v_to));
 
-  /* "mmfparser\bytereader.pyx":162
+  /* "mmfparser/bytereader.pyx":162
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -2482,7 +2482,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 162; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":163
+    /* "mmfparser/bytereader.pyx":163
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.seek(self.tell() + value)             # <<<<<<<<<<<<<<
@@ -2491,7 +2491,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
     __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, (__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0) + __pyx_v_value), 0, NULL);
 
-    /* "mmfparser\bytereader.pyx":164
+    /* "mmfparser/bytereader.pyx":164
  *             if self.python_fp:
  *                 self.seek(self.tell() + value)
  *                 return             # <<<<<<<<<<<<<<
@@ -2503,7 +2503,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":170
+  /* "mmfparser/bytereader.pyx":170
  *                 return
  * 
  *         self.pos += value             # <<<<<<<<<<<<<<
@@ -2512,7 +2512,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_value);
 
-  /* "mmfparser\bytereader.pyx":158
+  /* "mmfparser/bytereader.pyx":158
  *         return True
  * 
  *     cpdef adjust(self, int to):             # <<<<<<<<<<<<<<
@@ -2584,7 +2584,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_8adjust(struct __
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":172
+/* "mmfparser/bytereader.pyx":172
  *         self.pos += value
  * 
  *     cdef bint _read(self, void * value, int size) except False:             # <<<<<<<<<<<<<<
@@ -2611,7 +2611,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_read", 0);
 
-  /* "mmfparser\bytereader.pyx":175
+  /* "mmfparser/bytereader.pyx":175
  *         IF IS_PYPY:
  *             cdef char * data_c
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -2621,7 +2621,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":176
+    /* "mmfparser/bytereader.pyx":176
  *             cdef char * data_c
  *             if self.python_fp:
  *                 data = self.python_fp.read(size)             # <<<<<<<<<<<<<<
@@ -2661,7 +2661,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     __pyx_v_data = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":177
+    /* "mmfparser/bytereader.pyx":177
  *             if self.python_fp:
  *                 data = self.python_fp.read(size)
  *                 if len(data) < size:             # <<<<<<<<<<<<<<
@@ -2672,7 +2672,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     __pyx_t_1 = ((__pyx_t_7 < __pyx_v_size) != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser\bytereader.pyx":178
+      /* "mmfparser/bytereader.pyx":178
  *                 data = self.python_fp.read(size)
  *                 if len(data) < size:
  *                     raise struct.error('%s bytes required' % size)             # <<<<<<<<<<<<<<
@@ -2720,7 +2720,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 178; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
 
-    /* "mmfparser\bytereader.pyx":179
+    /* "mmfparser/bytereader.pyx":179
  *                 if len(data) < size:
  *                     raise struct.error('%s bytes required' % size)
  *                 data_c = data             # <<<<<<<<<<<<<<
@@ -2730,7 +2730,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     __pyx_t_8 = __Pyx_PyObject_AsString(__pyx_v_data); if (unlikely((!__pyx_t_8) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 179; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_v_data_c = __pyx_t_8;
 
-    /* "mmfparser\bytereader.pyx":180
+    /* "mmfparser/bytereader.pyx":180
  *                     raise struct.error('%s bytes required' % size)
  *                 data_c = data
  *                 memcpy(value, data_c, len(data))             # <<<<<<<<<<<<<<
@@ -2740,7 +2740,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     __pyx_t_7 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_7 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 180; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     memcpy(__pyx_v_value, __pyx_v_data_c, __pyx_t_7);
 
-    /* "mmfparser\bytereader.pyx":181
+    /* "mmfparser/bytereader.pyx":181
  *                 data_c = data
  *                 memcpy(value, data_c, len(data))
  *                 return True             # <<<<<<<<<<<<<<
@@ -2751,7 +2751,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":190
+  /* "mmfparser/bytereader.pyx":190
  *                 return True
  * 
  *         check_available(self, size)             # <<<<<<<<<<<<<<
@@ -2760,7 +2760,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
   __pyx_t_9 = __pyx_f_9mmfparser_10bytereader_check_available(__pyx_v_self, __pyx_v_size); if (unlikely(__pyx_t_9 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 190; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":191
+  /* "mmfparser/bytereader.pyx":191
  * 
  *         check_available(self, size)
  *         memcpy(value, (self.buffer + self.pos), size)             # <<<<<<<<<<<<<<
@@ -2769,7 +2769,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
   memcpy(__pyx_v_value, (__pyx_v_self->buffer + __pyx_v_self->pos), __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":192
+  /* "mmfparser/bytereader.pyx":192
  *         check_available(self, size)
  *         memcpy(value, (self.buffer + self.pos), size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -2778,7 +2778,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":193
+  /* "mmfparser/bytereader.pyx":193
  *         memcpy(value, (self.buffer + self.pos), size)
  *         self.pos += size
  *         return True             # <<<<<<<<<<<<<<
@@ -2788,7 +2788,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":172
+  /* "mmfparser/bytereader.pyx":172
  *         self.pos += value
  * 
  *     cdef bint _read(self, void * value, int size) except False:             # <<<<<<<<<<<<<<
@@ -2811,7 +2811,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":195
+/* "mmfparser/bytereader.pyx":195
  *         return True
  * 
  *     cpdef read(self, int size = -1):             # <<<<<<<<<<<<<<
@@ -2843,7 +2843,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     }
   }
 
-  /* "mmfparser\bytereader.pyx":200
+  /* "mmfparser/bytereader.pyx":200
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -2853,7 +2853,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 200; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":201
+    /* "mmfparser/bytereader.pyx":201
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 if size == -1:             # <<<<<<<<<<<<<<
@@ -2863,7 +2863,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     __pyx_t_1 = ((__pyx_v_size == -1) != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser\bytereader.pyx":202
+      /* "mmfparser/bytereader.pyx":202
  *             if self.python_fp:
  *                 if size == -1:
  *                     size = self.size() - self.tell()             # <<<<<<<<<<<<<<
@@ -2875,7 +2875,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     }
     __pyx_L4:;
 
-    /* "mmfparser\bytereader.pyx":203
+    /* "mmfparser/bytereader.pyx":203
  *                 if size == -1:
  *                     size = self.size() - self.tell()
  *                 return self.python_fp.read(size)             # <<<<<<<<<<<<<<
@@ -2918,7 +2918,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":212
+  /* "mmfparser/bytereader.pyx":212
  *                 return newData
  * 
  *         if size == -1 or size + self.pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -2936,7 +2936,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_L6_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":213
+    /* "mmfparser/bytereader.pyx":213
  * 
  *         if size == -1 or size + self.pos > self.data_size:
  *             size = self.data_size - self.pos             # <<<<<<<<<<<<<<
@@ -2948,7 +2948,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   }
   __pyx_L5:;
 
-  /* "mmfparser\bytereader.pyx":214
+  /* "mmfparser/bytereader.pyx":214
  *         if size == -1 or size + self.pos > self.data_size:
  *             size = self.data_size - self.pos
  *         if size < 0:             # <<<<<<<<<<<<<<
@@ -2958,7 +2958,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_t_1 = ((__pyx_v_size < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":215
+    /* "mmfparser/bytereader.pyx":215
  *             size = self.data_size - self.pos
  *         if size < 0:
  *             size = 0             # <<<<<<<<<<<<<<
@@ -2970,7 +2970,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   }
   __pyx_L8:;
 
-  /* "mmfparser\bytereader.pyx":216
+  /* "mmfparser/bytereader.pyx":216
  *         if size < 0:
  *             size = 0
  *         data = self.buffer[self.pos:self.pos+size]             # <<<<<<<<<<<<<<
@@ -2982,7 +2982,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_v_data = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "mmfparser\bytereader.pyx":217
+  /* "mmfparser/bytereader.pyx":217
  *             size = 0
  *         data = self.buffer[self.pos:self.pos+size]
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -2991,7 +2991,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":218
+  /* "mmfparser/bytereader.pyx":218
  *         data = self.buffer[self.pos:self.pos+size]
  *         self.pos += size
  *         if self.pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3001,7 +3001,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_t_1 = ((__pyx_v_self->pos > __pyx_v_self->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":219
+    /* "mmfparser/bytereader.pyx":219
  *         self.pos += size
  *         if self.pos > self.data_size:
  *             self.pos = self.data_size             # <<<<<<<<<<<<<<
@@ -3014,7 +3014,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   }
   __pyx_L9:;
 
-  /* "mmfparser\bytereader.pyx":220
+  /* "mmfparser/bytereader.pyx":220
  *         if self.pos > self.data_size:
  *             self.pos = self.data_size
  *         return data             # <<<<<<<<<<<<<<
@@ -3026,7 +3026,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":195
+  /* "mmfparser/bytereader.pyx":195
  *         return True
  * 
  *     cpdef read(self, int size = -1):             # <<<<<<<<<<<<<<
@@ -3139,7 +3139,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_10read(struct __p
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":222
+/* "mmfparser/bytereader.pyx":222
  *         return data
  * 
  *     cpdef size_t size(self):             # <<<<<<<<<<<<<<
@@ -3160,7 +3160,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("size", 0);
 
-  /* "mmfparser\bytereader.pyx":227
+  /* "mmfparser/bytereader.pyx":227
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -3170,7 +3170,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":228
+    /* "mmfparser/bytereader.pyx":228
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 pos = self.tell()             # <<<<<<<<<<<<<<
@@ -3179,7 +3179,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
     __pyx_v_pos = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser\bytereader.pyx":229
+    /* "mmfparser/bytereader.pyx":229
  *             if self.python_fp:
  *                 pos = self.tell()
  *                 self.seek(0, 2)             # <<<<<<<<<<<<<<
@@ -3190,7 +3190,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
     __pyx_t_2.mode = 2;
     __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, 0, 0, &__pyx_t_2); 
 
-    /* "mmfparser\bytereader.pyx":230
+    /* "mmfparser/bytereader.pyx":230
  *                 pos = self.tell()
  *                 self.seek(0, 2)
  *                 size = self.tell()             # <<<<<<<<<<<<<<
@@ -3199,7 +3199,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
     __pyx_v_size = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser\bytereader.pyx":231
+    /* "mmfparser/bytereader.pyx":231
  *                 self.seek(0, 2)
  *                 size = self.tell()
  *                 self.seek(pos)             # <<<<<<<<<<<<<<
@@ -3208,7 +3208,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
     __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, __pyx_v_pos, 0, NULL);
 
-    /* "mmfparser\bytereader.pyx":232
+    /* "mmfparser/bytereader.pyx":232
  *                 size = self.tell()
  *                 self.seek(pos)
  *                 return size             # <<<<<<<<<<<<<<
@@ -3219,7 +3219,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":241
+  /* "mmfparser/bytereader.pyx":241
  *                 return size
  * 
  *         return self.data_size             # <<<<<<<<<<<<<<
@@ -3229,7 +3229,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
   __pyx_r = __pyx_v_self->data_size;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":222
+  /* "mmfparser/bytereader.pyx":222
  *         return data
  * 
  *     cpdef size_t size(self):             # <<<<<<<<<<<<<<
@@ -3285,7 +3285,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_12size(struct __p
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":243
+/* "mmfparser/bytereader.pyx":243
  *         return self.data_size
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -3311,7 +3311,7 @@ static Py_ssize_t __pyx_pf_9mmfparser_10bytereader_10ByteReader_14__len__(struct
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__len__", 0);
 
-  /* "mmfparser\bytereader.pyx":244
+  /* "mmfparser/bytereader.pyx":244
  * 
  *     def __len__(self):
  *         return self.size()             # <<<<<<<<<<<<<<
@@ -3321,7 +3321,7 @@ static Py_ssize_t __pyx_pf_9mmfparser_10bytereader_10ByteReader_14__len__(struct
   __pyx_r = __pyx_f_9mmfparser_10bytereader_10ByteReader_size(__pyx_v_self, 0);
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":243
+  /* "mmfparser/bytereader.pyx":243
  *         return self.data_size
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -3335,7 +3335,7 @@ static Py_ssize_t __pyx_pf_9mmfparser_10bytereader_10ByteReader_14__len__(struct
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":246
+/* "mmfparser/bytereader.pyx":246
  *         return self.size()
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -3365,7 +3365,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_16__str__(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__str__", 0);
 
-  /* "mmfparser\bytereader.pyx":247
+  /* "mmfparser/bytereader.pyx":247
  * 
  *     def __str__(self):
  *         return self.data()             # <<<<<<<<<<<<<<
@@ -3379,7 +3379,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_16__str__(struct 
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":246
+  /* "mmfparser/bytereader.pyx":246
  *         return self.size()
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -3398,7 +3398,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_16__str__(struct 
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":249
+/* "mmfparser/bytereader.pyx":249
  *         return self.data()
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -3429,7 +3429,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_18__repr__(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "mmfparser\bytereader.pyx":250
+  /* "mmfparser/bytereader.pyx":250
  * 
  *     def __repr__(self):
  *         return repr(str(self))             # <<<<<<<<<<<<<<
@@ -3452,7 +3452,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_18__repr__(struct
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":249
+  /* "mmfparser/bytereader.pyx":249
  *         return self.data()
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -3472,7 +3472,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_18__repr__(struct
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":252
+/* "mmfparser/bytereader.pyx":252
  *         return repr(str(self))
  * 
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -3497,7 +3497,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
     }
   }
 
-  /* "mmfparser\bytereader.pyx":254
+  /* "mmfparser/bytereader.pyx":254
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:
  *         cdef char value
  *         self._read(&value, 1)             # <<<<<<<<<<<<<<
@@ -3506,7 +3506,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":255
+  /* "mmfparser/bytereader.pyx":255
  *         cdef char value
  *         self._read(&value, 1)
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -3516,7 +3516,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
   __pyx_t_1 = (__pyx_v_asUnsigned != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":256
+    /* "mmfparser/bytereader.pyx":256
  *         self._read(&value, 1)
  *         if asUnsigned:
  *             return <unsigned char>value             # <<<<<<<<<<<<<<
@@ -3527,7 +3527,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":257
+  /* "mmfparser/bytereader.pyx":257
  *         if asUnsigned:
  *             return <unsigned char>value
  *         return value             # <<<<<<<<<<<<<<
@@ -3537,7 +3537,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":252
+  /* "mmfparser/bytereader.pyx":252
  *         return repr(str(self))
  * 
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -3645,7 +3645,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_20readByte(struct
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":259
+/* "mmfparser/bytereader.pyx":259
  *         return value
  * 
  *     cpdef int readShort(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -3672,7 +3672,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
     }
   }
 
-  /* "mmfparser\bytereader.pyx":262
+  /* "mmfparser/bytereader.pyx":262
  *         cdef short value
  *         cdef unsigned char byte1, byte2
  *         self._read(&byte1, 1)             # <<<<<<<<<<<<<<
@@ -3681,7 +3681,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte1), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 262; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":263
+  /* "mmfparser/bytereader.pyx":263
  *         cdef unsigned char byte1, byte2
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)             # <<<<<<<<<<<<<<
@@ -3690,7 +3690,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte2), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 263; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":264
+  /* "mmfparser/bytereader.pyx":264
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)
  *         value = (byte2 << 8) | byte1             # <<<<<<<<<<<<<<
@@ -3699,7 +3699,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
  */
   __pyx_v_value = ((__pyx_v_byte2 << 8) | __pyx_v_byte1);
 
-  /* "mmfparser\bytereader.pyx":265
+  /* "mmfparser/bytereader.pyx":265
  *         self._read(&byte2, 1)
  *         value = (byte2 << 8) | byte1
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -3709,7 +3709,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
   __pyx_t_1 = (__pyx_v_asUnsigned != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":266
+    /* "mmfparser/bytereader.pyx":266
  *         value = (byte2 << 8) | byte1
  *         if asUnsigned:
  *             return <unsigned short>value             # <<<<<<<<<<<<<<
@@ -3720,7 +3720,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":267
+  /* "mmfparser/bytereader.pyx":267
  *         if asUnsigned:
  *             return <unsigned short>value
  *         return value             # <<<<<<<<<<<<<<
@@ -3730,7 +3730,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":259
+  /* "mmfparser/bytereader.pyx":259
  *         return value
  * 
  *     cpdef int readShort(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -3838,7 +3838,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_22readShort(struc
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":269
+/* "mmfparser/bytereader.pyx":269
  *         return value
  * 
  *     cpdef float readFloat(self) except? -10:             # <<<<<<<<<<<<<<
@@ -3857,7 +3857,7 @@ static float __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readFloat", 0);
 
-  /* "mmfparser\bytereader.pyx":271
+  /* "mmfparser/bytereader.pyx":271
  *     cpdef float readFloat(self) except? -10:
  *         cdef float value
  *         self._read(&value, 4)             # <<<<<<<<<<<<<<
@@ -3866,7 +3866,7 @@ static float __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(struct __pyx
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 4); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 271; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":272
+  /* "mmfparser/bytereader.pyx":272
  *         cdef float value
  *         self._read(&value, 4)
  *         return value             # <<<<<<<<<<<<<<
@@ -3876,7 +3876,7 @@ static float __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(struct __pyx
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":269
+  /* "mmfparser/bytereader.pyx":269
  *         return value
  * 
  *     cpdef float readFloat(self) except? -10:             # <<<<<<<<<<<<<<
@@ -3934,7 +3934,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_24readFloat(struc
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":274
+/* "mmfparser/bytereader.pyx":274
  *         return value
  * 
  *     cpdef double readDouble(self) except? -10:             # <<<<<<<<<<<<<<
@@ -3953,7 +3953,7 @@ static double __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readDouble", 0);
 
-  /* "mmfparser\bytereader.pyx":276
+  /* "mmfparser/bytereader.pyx":276
  *     cpdef double readDouble(self) except? -10:
  *         cdef double value
  *         self._read(&value, 8)             # <<<<<<<<<<<<<<
@@ -3962,7 +3962,7 @@ static double __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(struct __p
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 8); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 276; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":277
+  /* "mmfparser/bytereader.pyx":277
  *         cdef double value
  *         self._read(&value, 8)
  *         return value             # <<<<<<<<<<<<<<
@@ -3972,7 +3972,7 @@ static double __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(struct __p
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":274
+  /* "mmfparser/bytereader.pyx":274
  *         return value
  * 
  *     cpdef double readDouble(self) except? -10:             # <<<<<<<<<<<<<<
@@ -4030,7 +4030,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_26readDouble(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":279
+/* "mmfparser/bytereader.pyx":279
  *         return value
  * 
  *     cpdef readInt(self, bint asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -4060,7 +4060,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
     }
   }
 
-  /* "mmfparser\bytereader.pyx":282
+  /* "mmfparser/bytereader.pyx":282
  *         cdef int value
  *         cdef unsigned char byte1, byte2, byte3, byte4
  *         self._read(&byte1, 1)             # <<<<<<<<<<<<<<
@@ -4069,7 +4069,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte1), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 282; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":283
+  /* "mmfparser/bytereader.pyx":283
  *         cdef unsigned char byte1, byte2, byte3, byte4
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)             # <<<<<<<<<<<<<<
@@ -4078,7 +4078,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte2), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 283; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":284
+  /* "mmfparser/bytereader.pyx":284
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)
  *         self._read(&byte3, 1)             # <<<<<<<<<<<<<<
@@ -4087,7 +4087,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte3), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 284; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":285
+  /* "mmfparser/bytereader.pyx":285
  *         self._read(&byte2, 1)
  *         self._read(&byte3, 1)
  *         self._read(&byte4, 1)             # <<<<<<<<<<<<<<
@@ -4096,7 +4096,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte4), 1); if (unlikely(__pyx_t_1 == 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":286
+  /* "mmfparser/bytereader.pyx":286
  *         self._read(&byte3, 1)
  *         self._read(&byte4, 1)
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)             # <<<<<<<<<<<<<<
@@ -4105,7 +4105,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   __pyx_v_value = ((((__pyx_v_byte4 << 24) | (__pyx_v_byte3 << 16)) | (__pyx_v_byte2 << 8)) | __pyx_v_byte1);
 
-  /* "mmfparser\bytereader.pyx":287
+  /* "mmfparser/bytereader.pyx":287
  *         self._read(&byte4, 1)
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -4115,7 +4115,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
   __pyx_t_1 = (__pyx_v_asUnsigned != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":288
+    /* "mmfparser/bytereader.pyx":288
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  *         if asUnsigned:
  *             return <unsigned int>value             # <<<<<<<<<<<<<<
@@ -4130,7 +4130,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":289
+  /* "mmfparser/bytereader.pyx":289
  *         if asUnsigned:
  *             return <unsigned int>value
  *         return value             # <<<<<<<<<<<<<<
@@ -4144,7 +4144,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":279
+  /* "mmfparser/bytereader.pyx":279
  *         return value
  * 
  *     cpdef readInt(self, bint asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -4252,7 +4252,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_28readInt(struct 
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":291
+/* "mmfparser/bytereader.pyx":291
  *         return value
  * 
  *     cpdef bytes readString(self, size=None):             # <<<<<<<<<<<<<<
@@ -4283,7 +4283,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
     }
   }
 
-  /* "mmfparser\bytereader.pyx":292
+  /* "mmfparser/bytereader.pyx":292
  * 
  *     cpdef bytes readString(self, size=None):
  *         if size is not None:             # <<<<<<<<<<<<<<
@@ -4294,7 +4294,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":293
+    /* "mmfparser/bytereader.pyx":293
  *     cpdef bytes readString(self, size=None):
  *         if size is not None:
  *             return self.readReader(size).readString()             # <<<<<<<<<<<<<<
@@ -4313,7 +4313,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":294
+  /* "mmfparser/bytereader.pyx":294
  *         if size is not None:
  *             return self.readReader(size).readString()
  *         data = ''             # <<<<<<<<<<<<<<
@@ -4323,7 +4323,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
   __Pyx_INCREF(__pyx_kp_s_);
   __pyx_v_data = __pyx_kp_s_;
 
-  /* "mmfparser\bytereader.pyx":295
+  /* "mmfparser/bytereader.pyx":295
  *             return self.readReader(size).readString()
  *         data = ''
  *         while 1:             # <<<<<<<<<<<<<<
@@ -4332,7 +4332,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
   while (1) {
 
-    /* "mmfparser\bytereader.pyx":296
+    /* "mmfparser/bytereader.pyx":296
  *         data = ''
  *         while 1:
  *             c = self.read(1)             # <<<<<<<<<<<<<<
@@ -4346,7 +4346,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "mmfparser\bytereader.pyx":297
+    /* "mmfparser/bytereader.pyx":297
  *         while 1:
  *             c = self.read(1)
  *             if c in ('\x00', ''):             # <<<<<<<<<<<<<<
@@ -4368,7 +4368,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
     __pyx_t_1 = (__pyx_t_2 != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser\bytereader.pyx":298
+      /* "mmfparser/bytereader.pyx":298
  *             c = self.read(1)
  *             if c in ('\x00', ''):
  *                 break             # <<<<<<<<<<<<<<
@@ -4378,7 +4378,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
       goto __pyx_L5_break;
     }
 
-    /* "mmfparser\bytereader.pyx":299
+    /* "mmfparser/bytereader.pyx":299
  *             if c in ('\x00', ''):
  *                 break
  *             data += c             # <<<<<<<<<<<<<<
@@ -4392,7 +4392,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
   }
   __pyx_L5_break:;
 
-  /* "mmfparser\bytereader.pyx":300
+  /* "mmfparser/bytereader.pyx":300
  *                 break
  *             data += c
  *         return data             # <<<<<<<<<<<<<<
@@ -4405,7 +4405,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
   __pyx_r = ((PyObject*)__pyx_v_data);
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":291
+  /* "mmfparser/bytereader.pyx":291
  *         return value
  * 
  *     cpdef bytes readString(self, size=None):             # <<<<<<<<<<<<<<
@@ -4513,7 +4513,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_30readString(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":302
+/* "mmfparser/bytereader.pyx":302
  *         return data
  * 
  *     cpdef unicode readUnicodeString(self, size=None):             # <<<<<<<<<<<<<<
@@ -4547,7 +4547,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
     }
   }
 
-  /* "mmfparser\bytereader.pyx":303
+  /* "mmfparser/bytereader.pyx":303
  * 
  *     cpdef unicode readUnicodeString(self, size=None):
  *         if size is not None:             # <<<<<<<<<<<<<<
@@ -4558,7 +4558,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":304
+    /* "mmfparser/bytereader.pyx":304
  *     cpdef unicode readUnicodeString(self, size=None):
  *         if size is not None:
  *             return self.readReader(size*2).readUnicodeString()             # <<<<<<<<<<<<<<
@@ -4580,7 +4580,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":306
+  /* "mmfparser/bytereader.pyx":306
  *             return self.readReader(size*2).readUnicodeString()
  * 
  *         cdef int currentPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -4589,7 +4589,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
   __pyx_v_currentPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-  /* "mmfparser\bytereader.pyx":308
+  /* "mmfparser/bytereader.pyx":308
  *         cdef int currentPosition = self.tell()
  *         cdef int endPosition
  *         data = ''             # <<<<<<<<<<<<<<
@@ -4599,7 +4599,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   __Pyx_INCREF(__pyx_kp_s_);
   __pyx_v_data = __pyx_kp_s_;
 
-  /* "mmfparser\bytereader.pyx":309
+  /* "mmfparser/bytereader.pyx":309
  *         cdef int endPosition
  *         data = ''
  *         while 1:             # <<<<<<<<<<<<<<
@@ -4608,7 +4608,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
   while (1) {
 
-    /* "mmfparser\bytereader.pyx":310
+    /* "mmfparser/bytereader.pyx":310
  *         data = ''
  *         while 1:
  *             endPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -4617,7 +4617,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
     __pyx_v_endPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser\bytereader.pyx":311
+    /* "mmfparser/bytereader.pyx":311
  *         while 1:
  *             endPosition = self.tell()
  *             c = self.read(2)             # <<<<<<<<<<<<<<
@@ -4631,7 +4631,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "mmfparser\bytereader.pyx":312
+    /* "mmfparser/bytereader.pyx":312
  *             endPosition = self.tell()
  *             c = self.read(2)
  *             if len(c) != 2:             # <<<<<<<<<<<<<<
@@ -4642,7 +4642,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
     __pyx_t_2 = ((__pyx_t_7 != 2) != 0);
     if (__pyx_t_2) {
 
-      /* "mmfparser\bytereader.pyx":313
+      /* "mmfparser/bytereader.pyx":313
  *             c = self.read(2)
  *             if len(c) != 2:
  *                 break             # <<<<<<<<<<<<<<
@@ -4652,7 +4652,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
       goto __pyx_L5_break;
     }
 
-    /* "mmfparser\bytereader.pyx":314
+    /* "mmfparser/bytereader.pyx":314
  *             if len(c) != 2:
  *                 break
  *             if c == '\x00\x00':             # <<<<<<<<<<<<<<
@@ -4662,7 +4662,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
     __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_c, __pyx_kp_s__3, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 314; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (__pyx_t_2) {
 
-      /* "mmfparser\bytereader.pyx":315
+      /* "mmfparser/bytereader.pyx":315
  *                 break
  *             if c == '\x00\x00':
  *                 break             # <<<<<<<<<<<<<<
@@ -4672,7 +4672,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
       goto __pyx_L5_break;
     }
 
-    /* "mmfparser\bytereader.pyx":316
+    /* "mmfparser/bytereader.pyx":316
  *             if c == '\x00\x00':
  *                 break
  *             data += c             # <<<<<<<<<<<<<<
@@ -4686,7 +4686,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   }
   __pyx_L5_break:;
 
-  /* "mmfparser\bytereader.pyx":318
+  /* "mmfparser/bytereader.pyx":318
  *             data += c
  * 
  *         return data.decode('utf-16-le')             # <<<<<<<<<<<<<<
@@ -4704,7 +4704,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":302
+  /* "mmfparser/bytereader.pyx":302
  *         return data
  * 
  *     cpdef unicode readUnicodeString(self, size=None):             # <<<<<<<<<<<<<<
@@ -4812,7 +4812,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_32readUnicodeStri
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":320
+/* "mmfparser/bytereader.pyx":320
  *         return data.decode('utf-16-le')
  * 
  *     cpdef tuple readColor(self):             # <<<<<<<<<<<<<<
@@ -4839,7 +4839,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readColor", 0);
 
-  /* "mmfparser\bytereader.pyx":321
+  /* "mmfparser/bytereader.pyx":321
  * 
  *     cpdef tuple readColor(self):
  *         cdef int currentPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -4848,7 +4848,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   __pyx_v_currentPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-  /* "mmfparser\bytereader.pyx":322
+  /* "mmfparser/bytereader.pyx":322
  *     cpdef tuple readColor(self):
  *         cdef int currentPosition = self.tell()
  *         cdef short r = self.readByte(True)             # <<<<<<<<<<<<<<
@@ -4860,7 +4860,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 322; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_r = __pyx_t_1;
 
-  /* "mmfparser\bytereader.pyx":323
+  /* "mmfparser/bytereader.pyx":323
  *         cdef int currentPosition = self.tell()
  *         cdef short r = self.readByte(True)
  *         cdef short g = self.readByte(True)             # <<<<<<<<<<<<<<
@@ -4872,7 +4872,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 323; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_g = __pyx_t_1;
 
-  /* "mmfparser\bytereader.pyx":324
+  /* "mmfparser/bytereader.pyx":324
  *         cdef short r = self.readByte(True)
  *         cdef short g = self.readByte(True)
  *         cdef short b = self.readByte(True)             # <<<<<<<<<<<<<<
@@ -4884,7 +4884,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == -10 && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 324; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_b = __pyx_t_1;
 
-  /* "mmfparser\bytereader.pyx":325
+  /* "mmfparser/bytereader.pyx":325
  *         cdef short g = self.readByte(True)
  *         cdef short b = self.readByte(True)
  *         self.skipBytes(1)             # <<<<<<<<<<<<<<
@@ -4893,7 +4893,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   __pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(__pyx_v_self, 1, 0);
 
-  /* "mmfparser\bytereader.pyx":326
+  /* "mmfparser/bytereader.pyx":326
  *         cdef short b = self.readByte(True)
  *         self.skipBytes(1)
  *         return (r, g, b)             # <<<<<<<<<<<<<<
@@ -4922,7 +4922,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":320
+  /* "mmfparser/bytereader.pyx":320
  *         return data.decode('utf-16-le')
  * 
  *     cpdef tuple readColor(self):             # <<<<<<<<<<<<<<
@@ -4983,7 +4983,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_34readColor(struc
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":328
+/* "mmfparser/bytereader.pyx":328
  *         return (r, g, b)
  * 
  *     cpdef ByteReader readReader(self, size_t size):             # <<<<<<<<<<<<<<
@@ -5009,7 +5009,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readReader", 0);
 
-  /* "mmfparser\bytereader.pyx":332
+  /* "mmfparser/bytereader.pyx":332
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -5019,7 +5019,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 332; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":333
+    /* "mmfparser/bytereader.pyx":333
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 data = self.read(size)             # <<<<<<<<<<<<<<
@@ -5033,7 +5033,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
     __pyx_v_data = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":334
+    /* "mmfparser/bytereader.pyx":334
  *             if self.python_fp:
  *                 data = self.read(size)
  *                 reader = ByteReader(data, 0, len(data))             # <<<<<<<<<<<<<<
@@ -5060,7 +5060,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
     __pyx_v_reader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":335
+    /* "mmfparser/bytereader.pyx":335
  *                 data = self.read(size)
  *                 reader = ByteReader(data, 0, len(data))
  *                 return reader             # <<<<<<<<<<<<<<
@@ -5073,7 +5073,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":342
+  /* "mmfparser/bytereader.pyx":342
  *                 return reader
  * 
  *         check_available(self, size)             # <<<<<<<<<<<<<<
@@ -5082,7 +5082,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
   __pyx_t_6 = __pyx_f_9mmfparser_10bytereader_check_available(__pyx_v_self, __pyx_v_size); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":343
+  /* "mmfparser/bytereader.pyx":343
  * 
  *         check_available(self, size)
  *         self.shared = True             # <<<<<<<<<<<<<<
@@ -5091,7 +5091,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
   __pyx_v_self->shared = 1;
 
-  /* "mmfparser\bytereader.pyx":344
+  /* "mmfparser/bytereader.pyx":344
  *         check_available(self, size)
  *         self.shared = True
  *         reader = ByteReader(self.original, self.pos + self.start, size)             # <<<<<<<<<<<<<<
@@ -5119,7 +5119,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   __pyx_v_reader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "mmfparser\bytereader.pyx":345
+  /* "mmfparser/bytereader.pyx":345
  *         self.shared = True
  *         reader = ByteReader(self.original, self.pos + self.start, size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -5128,7 +5128,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":346
+  /* "mmfparser/bytereader.pyx":346
  *         reader = ByteReader(self.original, self.pos + self.start, size)
  *         self.pos += size
  *         return reader             # <<<<<<<<<<<<<<
@@ -5140,7 +5140,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   __pyx_r = __pyx_v_reader;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":328
+  /* "mmfparser/bytereader.pyx":328
  *         return (r, g, b)
  * 
  *     cpdef ByteReader readReader(self, size_t size):             # <<<<<<<<<<<<<<
@@ -5215,7 +5215,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_36readReader(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":348
+/* "mmfparser/bytereader.pyx":348
  *         return reader
  * 
  *     def readIntString(self):             # <<<<<<<<<<<<<<
@@ -5249,7 +5249,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readIntString", 0);
 
-  /* "mmfparser\bytereader.pyx":349
+  /* "mmfparser/bytereader.pyx":349
  * 
  *     def readIntString(self):
  *         cdef size_t length = self.readInt(True)             # <<<<<<<<<<<<<<
@@ -5264,7 +5264,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_length = __pyx_t_3;
 
-  /* "mmfparser\bytereader.pyx":350
+  /* "mmfparser/bytereader.pyx":350
  *     def readIntString(self):
  *         cdef size_t length = self.readInt(True)
  *         return self.read(length)             # <<<<<<<<<<<<<<
@@ -5280,7 +5280,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":348
+  /* "mmfparser/bytereader.pyx":348
  *         return reader
  * 
  *     def readIntString(self):             # <<<<<<<<<<<<<<
@@ -5299,7 +5299,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":352
+/* "mmfparser/bytereader.pyx":352
  *         return self.read(length)
  * 
  *     cpdef bint write(self, bytes data):             # <<<<<<<<<<<<<<
@@ -5325,7 +5325,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\bytereader.pyx":353
+  /* "mmfparser/bytereader.pyx":353
  * 
  *     cpdef bint write(self, bytes data):
  *         cdef size_t size = len(data)             # <<<<<<<<<<<<<<
@@ -5339,7 +5339,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_1 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 353; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_size = __pyx_t_1;
 
-  /* "mmfparser\bytereader.pyx":354
+  /* "mmfparser/bytereader.pyx":354
  *     cpdef bint write(self, bytes data):
  *         cdef size_t size = len(data)
  *         if size == 0:             # <<<<<<<<<<<<<<
@@ -5349,7 +5349,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_t_2 = ((__pyx_v_size == 0) != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":355
+    /* "mmfparser/bytereader.pyx":355
  *         cdef size_t size = len(data)
  *         if size == 0:
  *             return False             # <<<<<<<<<<<<<<
@@ -5360,7 +5360,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":359
+  /* "mmfparser/bytereader.pyx":359
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -5370,7 +5370,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_2 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":360
+    /* "mmfparser/bytereader.pyx":360
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.python_fp.write(data)             # <<<<<<<<<<<<<<
@@ -5406,7 +5406,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mmfparser\bytereader.pyx":361
+    /* "mmfparser/bytereader.pyx":361
  *             if self.python_fp:
  *                 self.python_fp.write(data)
  *                 return True             # <<<<<<<<<<<<<<
@@ -5417,7 +5417,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":367
+  /* "mmfparser/bytereader.pyx":367
  *                 return True
  * 
  *         ensure_write_size(self, size)             # <<<<<<<<<<<<<<
@@ -5426,7 +5426,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   __pyx_f_9mmfparser_10bytereader_ensure_write_size(__pyx_v_self, __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":368
+  /* "mmfparser/bytereader.pyx":368
  * 
  *         ensure_write_size(self, size)
  *         c_data = data             # <<<<<<<<<<<<<<
@@ -5436,7 +5436,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_t_7 = __Pyx_PyObject_AsString(__pyx_v_data); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_c_data = __pyx_t_7;
 
-  /* "mmfparser\bytereader.pyx":369
+  /* "mmfparser/bytereader.pyx":369
  *         ensure_write_size(self, size)
  *         c_data = data
  *         memcpy((self.buffer + self.pos), c_data, size)             # <<<<<<<<<<<<<<
@@ -5445,7 +5445,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   memcpy((__pyx_v_self->buffer + __pyx_v_self->pos), __pyx_v_c_data, __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":370
+  /* "mmfparser/bytereader.pyx":370
  *         c_data = data
  *         memcpy((self.buffer + self.pos), c_data, size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -5454,7 +5454,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":371
+  /* "mmfparser/bytereader.pyx":371
  *         memcpy((self.buffer + self.pos), c_data, size)
  *         self.pos += size
  *         return True             # <<<<<<<<<<<<<<
@@ -5464,7 +5464,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":352
+  /* "mmfparser/bytereader.pyx":352
  *         return self.read(length)
  * 
  *     cpdef bint write(self, bytes data):             # <<<<<<<<<<<<<<
@@ -5532,7 +5532,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_40write(struct __
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":373
+/* "mmfparser/bytereader.pyx":373
  *         return True
  * 
  *     cpdef bint write_size(self, char * data, size_t size):             # <<<<<<<<<<<<<<
@@ -5555,7 +5555,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write_size", 0);
 
-  /* "mmfparser\bytereader.pyx":374
+  /* "mmfparser/bytereader.pyx":374
  * 
  *     cpdef bint write_size(self, char * data, size_t size):
  *         if size == 0:             # <<<<<<<<<<<<<<
@@ -5565,7 +5565,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   __pyx_t_1 = ((__pyx_v_size == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":375
+    /* "mmfparser/bytereader.pyx":375
  *     cpdef bint write_size(self, char * data, size_t size):
  *         if size == 0:
  *             return False             # <<<<<<<<<<<<<<
@@ -5576,7 +5576,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":378
+  /* "mmfparser/bytereader.pyx":378
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -5586,7 +5586,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 378; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":379
+    /* "mmfparser/bytereader.pyx":379
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.python_fp.write(buffer(data, 0, size))             # <<<<<<<<<<<<<<
@@ -5641,7 +5641,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser\bytereader.pyx":380
+    /* "mmfparser/bytereader.pyx":380
  *             if self.python_fp:
  *                 self.python_fp.write(buffer(data, 0, size))
  *                 return True             # <<<<<<<<<<<<<<
@@ -5652,7 +5652,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":386
+  /* "mmfparser/bytereader.pyx":386
  *                 return True
  * 
  *         ensure_write_size(self, size)             # <<<<<<<<<<<<<<
@@ -5661,7 +5661,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   __pyx_f_9mmfparser_10bytereader_ensure_write_size(__pyx_v_self, __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":387
+  /* "mmfparser/bytereader.pyx":387
  * 
  *         ensure_write_size(self, size)
  *         memcpy((self.buffer + self.pos), data, size)             # <<<<<<<<<<<<<<
@@ -5670,7 +5670,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   memcpy((__pyx_v_self->buffer + __pyx_v_self->pos), __pyx_v_data, __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":388
+  /* "mmfparser/bytereader.pyx":388
  *         ensure_write_size(self, size)
  *         memcpy((self.buffer + self.pos), data, size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -5679,7 +5679,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser\bytereader.pyx":389
+  /* "mmfparser/bytereader.pyx":389
  *         memcpy((self.buffer + self.pos), data, size)
  *         self.pos += size
  *         return True             # <<<<<<<<<<<<<<
@@ -5689,7 +5689,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":373
+  /* "mmfparser/bytereader.pyx":373
  *         return True
  * 
  *     cpdef bint write_size(self, char * data, size_t size):             # <<<<<<<<<<<<<<
@@ -5798,7 +5798,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_42write_size(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":391
+/* "mmfparser/bytereader.pyx":391
  *         return True
  * 
  *     def writeByte(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -5885,7 +5885,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeByte", 0);
 
-  /* "mmfparser\bytereader.pyx":392
+  /* "mmfparser/bytereader.pyx":392
  * 
  *     def writeByte(self, value, asUnsigned = False):
  *         format = UBYTE if asUnsigned else BYTE             # <<<<<<<<<<<<<<
@@ -5907,7 +5907,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   __pyx_v_format = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":393
+  /* "mmfparser/bytereader.pyx":393
  *     def writeByte(self, value, asUnsigned = False):
  *         format = UBYTE if asUnsigned else BYTE
  *         self.writeStruct(format, value)             # <<<<<<<<<<<<<<
@@ -5945,7 +5945,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":391
+  /* "mmfparser/bytereader.pyx":391
  *         return True
  * 
  *     def writeByte(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -5970,7 +5970,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":395
+/* "mmfparser/bytereader.pyx":395
  *         self.writeStruct(format, value)
  * 
  *     def writeShort(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -6057,7 +6057,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeShort", 0);
 
-  /* "mmfparser\bytereader.pyx":396
+  /* "mmfparser/bytereader.pyx":396
  * 
  *     def writeShort(self, value, asUnsigned = False):
  *         format = USHORT if asUnsigned else SHORT             # <<<<<<<<<<<<<<
@@ -6079,7 +6079,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   __pyx_v_format = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":397
+  /* "mmfparser/bytereader.pyx":397
  *     def writeShort(self, value, asUnsigned = False):
  *         format = USHORT if asUnsigned else SHORT
  *         self.writeStruct(format, value)             # <<<<<<<<<<<<<<
@@ -6117,7 +6117,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":395
+  /* "mmfparser/bytereader.pyx":395
  *         self.writeStruct(format, value)
  * 
  *     def writeShort(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -6142,7 +6142,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":399
+/* "mmfparser/bytereader.pyx":399
  *         self.writeStruct(format, value)
  * 
  *     def writeFloat(self, value):             # <<<<<<<<<<<<<<
@@ -6177,7 +6177,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeFloat", 0);
 
-  /* "mmfparser\bytereader.pyx":400
+  /* "mmfparser/bytereader.pyx":400
  * 
  *     def writeFloat(self, value):
  *         self.writeStruct(FLOAT, value)             # <<<<<<<<<<<<<<
@@ -6217,7 +6217,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":399
+  /* "mmfparser/bytereader.pyx":399
  *         self.writeStruct(format, value)
  * 
  *     def writeFloat(self, value):             # <<<<<<<<<<<<<<
@@ -6242,7 +6242,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":402
+/* "mmfparser/bytereader.pyx":402
  *         self.writeStruct(FLOAT, value)
  * 
  *     def writeDouble(self, value):             # <<<<<<<<<<<<<<
@@ -6277,7 +6277,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeDouble", 0);
 
-  /* "mmfparser\bytereader.pyx":403
+  /* "mmfparser/bytereader.pyx":403
  * 
  *     def writeDouble(self, value):
  *         self.writeStruct(DOUBLE, value)             # <<<<<<<<<<<<<<
@@ -6317,7 +6317,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":402
+  /* "mmfparser/bytereader.pyx":402
  *         self.writeStruct(FLOAT, value)
  * 
  *     def writeDouble(self, value):             # <<<<<<<<<<<<<<
@@ -6342,7 +6342,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":405
+/* "mmfparser/bytereader.pyx":405
  *         self.writeStruct(DOUBLE, value)
  * 
  *     def writeInt(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -6429,7 +6429,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeInt", 0);
 
-  /* "mmfparser\bytereader.pyx":406
+  /* "mmfparser/bytereader.pyx":406
  * 
  *     def writeInt(self, value, asUnsigned = False):
  *         format = UINT if asUnsigned else INT             # <<<<<<<<<<<<<<
@@ -6451,7 +6451,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   __pyx_v_format = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":407
+  /* "mmfparser/bytereader.pyx":407
  *     def writeInt(self, value, asUnsigned = False):
  *         format = UINT if asUnsigned else INT
  *         self.writeStruct(format, value)             # <<<<<<<<<<<<<<
@@ -6489,7 +6489,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":405
+  /* "mmfparser/bytereader.pyx":405
  *         self.writeStruct(DOUBLE, value)
  * 
  *     def writeInt(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -6514,7 +6514,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":409
+/* "mmfparser/bytereader.pyx":409
  *         self.writeStruct(format, value)
  * 
  *     def writeString(self, value, size_t size = -1):             # <<<<<<<<<<<<<<
@@ -6604,7 +6604,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeString", 0);
 
-  /* "mmfparser\bytereader.pyx":411
+  /* "mmfparser/bytereader.pyx":411
  *     def writeString(self, value, size_t size = -1):
  *         cdef unsigned int currentPosition
  *         if size == -1:             # <<<<<<<<<<<<<<
@@ -6614,7 +6614,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   __pyx_t_1 = ((__pyx_v_size == -1) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":412
+    /* "mmfparser/bytereader.pyx":412
  *         cdef unsigned int currentPosition
  *         if size == -1:
  *             self.write(value + "\x00")             # <<<<<<<<<<<<<<
@@ -6630,7 +6630,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   }
   /*else*/ {
 
-    /* "mmfparser\bytereader.pyx":414
+    /* "mmfparser/bytereader.pyx":414
  *             self.write(value + "\x00")
  *         else:
  *             for i in range(size):             # <<<<<<<<<<<<<<
@@ -6641,7 +6641,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
       __pyx_v_i = __pyx_t_4;
 
-      /* "mmfparser\bytereader.pyx":415
+      /* "mmfparser/bytereader.pyx":415
  *         else:
  *             for i in range(size):
  *                 self.writeByte(0)             # <<<<<<<<<<<<<<
@@ -6656,7 +6656,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
 
-    /* "mmfparser\bytereader.pyx":416
+    /* "mmfparser/bytereader.pyx":416
  *             for i in range(size):
  *                 self.writeByte(0)
  *             currentPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -6665,7 +6665,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
  */
     __pyx_v_currentPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser\bytereader.pyx":417
+    /* "mmfparser/bytereader.pyx":417
  *                 self.writeByte(0)
  *             currentPosition = self.tell()
  *             self.rewind(size)             # <<<<<<<<<<<<<<
@@ -6674,7 +6674,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
  */
     __pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(__pyx_v_self, __pyx_v_size, 0);
 
-    /* "mmfparser\bytereader.pyx":418
+    /* "mmfparser/bytereader.pyx":418
  *             currentPosition = self.tell()
  *             self.rewind(size)
  *             self.write(value[:size-1])             # <<<<<<<<<<<<<<
@@ -6687,7 +6687,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
     __pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_5), 0);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "mmfparser\bytereader.pyx":419
+    /* "mmfparser/bytereader.pyx":419
  *             self.rewind(size)
  *             self.write(value[:size-1])
  *             self.seek(currentPosition)             # <<<<<<<<<<<<<<
@@ -6698,7 +6698,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   }
   __pyx_L3:;
 
-  /* "mmfparser\bytereader.pyx":409
+  /* "mmfparser/bytereader.pyx":409
  *         self.writeStruct(format, value)
  * 
  *     def writeString(self, value, size_t size = -1):             # <<<<<<<<<<<<<<
@@ -6720,7 +6720,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":421
+/* "mmfparser/bytereader.pyx":421
  *             self.seek(currentPosition)
  * 
  *     def writeUnicodeString(self, value):             # <<<<<<<<<<<<<<
@@ -6751,7 +6751,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_56writeUnicodeStr
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeUnicodeString", 0);
 
-  /* "mmfparser\bytereader.pyx":422
+  /* "mmfparser/bytereader.pyx":422
  * 
  *     def writeUnicodeString(self, value):
  *         self.write(value.encode('utf-16-le') + "\x00\x00")             # <<<<<<<<<<<<<<
@@ -6770,7 +6770,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_56writeUnicodeStr
   __pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_1), 0);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":421
+  /* "mmfparser/bytereader.pyx":421
  *             self.seek(currentPosition)
  * 
  *     def writeUnicodeString(self, value):             # <<<<<<<<<<<<<<
@@ -6792,7 +6792,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_56writeUnicodeStr
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":424
+/* "mmfparser/bytereader.pyx":424
  *         self.write(value.encode('utf-16-le') + "\x00\x00")
  * 
  *     def writeColor(self, colorTuple):             # <<<<<<<<<<<<<<
@@ -6830,7 +6830,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeColor", 0);
 
-  /* "mmfparser\bytereader.pyx":425
+  /* "mmfparser/bytereader.pyx":425
  * 
  *     def writeColor(self, colorTuple):
  *         r, g, b = colorTuple             # <<<<<<<<<<<<<<
@@ -6899,7 +6899,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   __pyx_v_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":426
+  /* "mmfparser/bytereader.pyx":426
  *     def writeColor(self, colorTuple):
  *         r, g, b = colorTuple
  *         self.writeByte(r, True)             # <<<<<<<<<<<<<<
@@ -6937,7 +6937,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":427
+  /* "mmfparser/bytereader.pyx":427
  *         r, g, b = colorTuple
  *         self.writeByte(r, True)
  *         self.writeByte(g, True)             # <<<<<<<<<<<<<<
@@ -6975,7 +6975,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":428
+  /* "mmfparser/bytereader.pyx":428
  *         self.writeByte(r, True)
  *         self.writeByte(g, True)
  *         self.writeByte(b, True)             # <<<<<<<<<<<<<<
@@ -7013,7 +7013,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":429
+  /* "mmfparser/bytereader.pyx":429
  *         self.writeByte(g, True)
  *         self.writeByte(b, True)
  *         self.writeByte(0)             # <<<<<<<<<<<<<<
@@ -7027,7 +7027,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\bytereader.pyx":424
+  /* "mmfparser/bytereader.pyx":424
  *         self.write(value.encode('utf-16-le') + "\x00\x00")
  * 
  *     def writeColor(self, colorTuple):             # <<<<<<<<<<<<<<
@@ -7054,7 +7054,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":431
+/* "mmfparser/bytereader.pyx":431
  *         self.writeByte(0)
  * 
  *     def writeFormat(self, format, *values):             # <<<<<<<<<<<<<<
@@ -7140,7 +7140,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_60writeFormat(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeFormat", 0);
 
-  /* "mmfparser\bytereader.pyx":432
+  /* "mmfparser/bytereader.pyx":432
  * 
  *     def writeFormat(self, format, *values):
  *         self.write(struct.pack(format, *values))             # <<<<<<<<<<<<<<
@@ -7171,7 +7171,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_60writeFormat(str
   __pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_3), 0);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":431
+  /* "mmfparser/bytereader.pyx":431
  *         self.writeByte(0)
  * 
  *     def writeFormat(self, format, *values):             # <<<<<<<<<<<<<<
@@ -7195,7 +7195,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_60writeFormat(str
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":434
+/* "mmfparser/bytereader.pyx":434
  *         self.write(struct.pack(format, *values))
  * 
  *     def writeStruct(self, structType, *values):             # <<<<<<<<<<<<<<
@@ -7280,7 +7280,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_62writeStruct(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeStruct", 0);
 
-  /* "mmfparser\bytereader.pyx":435
+  /* "mmfparser/bytereader.pyx":435
  * 
  *     def writeStruct(self, structType, *values):
  *         self.write(structType.pack(*values))             # <<<<<<<<<<<<<<
@@ -7299,7 +7299,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_62writeStruct(str
   __pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_3), 0);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser\bytereader.pyx":434
+  /* "mmfparser/bytereader.pyx":434
  *         self.write(struct.pack(format, *values))
  * 
  *     def writeStruct(self, structType, *values):             # <<<<<<<<<<<<<<
@@ -7322,7 +7322,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_62writeStruct(str
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":437
+/* "mmfparser/bytereader.pyx":437
  *         self.write(structType.pack(*values))
  * 
  *     def writeReader(self, reader):             # <<<<<<<<<<<<<<
@@ -7354,7 +7354,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_64writeReader(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeReader", 0);
 
-  /* "mmfparser\bytereader.pyx":438
+  /* "mmfparser/bytereader.pyx":438
  * 
  *     def writeReader(self, reader):
  *         self.write(reader.data())             # <<<<<<<<<<<<<<
@@ -7385,7 +7385,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_64writeReader(str
   __pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_1), 0);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":437
+  /* "mmfparser/bytereader.pyx":437
  *         self.write(structType.pack(*values))
  * 
  *     def writeReader(self, reader):             # <<<<<<<<<<<<<<
@@ -7408,7 +7408,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_64writeReader(str
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":440
+/* "mmfparser/bytereader.pyx":440
  *         self.write(reader.data())
  * 
  *     def writeIntString(self, value):             # <<<<<<<<<<<<<<
@@ -7443,7 +7443,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeIntString", 0);
 
-  /* "mmfparser\bytereader.pyx":441
+  /* "mmfparser/bytereader.pyx":441
  * 
  *     def writeIntString(self, value):
  *         self.writeInt(len(value), True)             # <<<<<<<<<<<<<<
@@ -7484,7 +7484,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":442
+  /* "mmfparser/bytereader.pyx":442
  *     def writeIntString(self, value):
  *         self.writeInt(len(value), True)
  *         self.write(value)             # <<<<<<<<<<<<<<
@@ -7494,7 +7494,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   if (!(likely(PyBytes_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_value)->tp_name), 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 442; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_v_value), 0);
 
-  /* "mmfparser\bytereader.pyx":440
+  /* "mmfparser/bytereader.pyx":440
  *         self.write(reader.data())
  * 
  *     def writeIntString(self, value):             # <<<<<<<<<<<<<<
@@ -7519,7 +7519,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":444
+/* "mmfparser/bytereader.pyx":444
  *         self.write(value)
  * 
  *     cpdef bint skipBytes(self, size_t n):             # <<<<<<<<<<<<<<
@@ -7535,7 +7535,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(struct __pyx_o
   struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek __pyx_t_2;
   __Pyx_RefNannySetupContext("skipBytes", 0);
 
-  /* "mmfparser\bytereader.pyx":445
+  /* "mmfparser/bytereader.pyx":445
  * 
  *     cpdef bint skipBytes(self, size_t n):
  *         self.seek(n, 1)             # <<<<<<<<<<<<<<
@@ -7546,7 +7546,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(struct __pyx_o
   __pyx_t_2.mode = 1;
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, __pyx_v_n, 0, &__pyx_t_2); 
 
-  /* "mmfparser\bytereader.pyx":444
+  /* "mmfparser/bytereader.pyx":444
  *         self.write(value)
  * 
  *     cpdef bint skipBytes(self, size_t n):             # <<<<<<<<<<<<<<
@@ -7612,7 +7612,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_68skipBytes(struc
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":447
+/* "mmfparser/bytereader.pyx":447
  *         self.seek(n, 1)
  * 
  *     cpdef bint rewind(self, size_t n):             # <<<<<<<<<<<<<<
@@ -7628,7 +7628,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(struct __pyx_obj_
   struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek __pyx_t_2;
   __Pyx_RefNannySetupContext("rewind", 0);
 
-  /* "mmfparser\bytereader.pyx":448
+  /* "mmfparser/bytereader.pyx":448
  * 
  *     cpdef bint rewind(self, size_t n):
  *         self.seek(-n, 1)             # <<<<<<<<<<<<<<
@@ -7639,7 +7639,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(struct __pyx_obj_
   __pyx_t_2.mode = 1;
   __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, (-__pyx_v_n), 0, &__pyx_t_2); 
 
-  /* "mmfparser\bytereader.pyx":447
+  /* "mmfparser/bytereader.pyx":447
  *         self.seek(n, 1)
  * 
  *     cpdef bint rewind(self, size_t n):             # <<<<<<<<<<<<<<
@@ -7705,7 +7705,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_70rewind(struct _
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":450
+/* "mmfparser/bytereader.pyx":450
  *         self.seek(-n, 1)
  * 
  *     def truncate(self, value):             # <<<<<<<<<<<<<<
@@ -7738,7 +7738,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_72truncate(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("truncate", 0);
 
-  /* "mmfparser\bytereader.pyx":451
+  /* "mmfparser/bytereader.pyx":451
  * 
  *     def truncate(self, value):
  *         self.buffer.truncate(value)             # <<<<<<<<<<<<<<
@@ -7777,7 +7777,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_72truncate(struct
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":450
+  /* "mmfparser/bytereader.pyx":450
  *         self.seek(-n, 1)
  * 
  *     def truncate(self, value):             # <<<<<<<<<<<<<<
@@ -7801,7 +7801,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_72truncate(struct
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":453
+/* "mmfparser/bytereader.pyx":453
  *         self.buffer.truncate(value)
  * 
  *     def checkDefault(self, value, *defaults):             # <<<<<<<<<<<<<<
@@ -7887,7 +7887,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("checkDefault", 0);
 
-  /* "mmfparser\bytereader.pyx":454
+  /* "mmfparser/bytereader.pyx":454
  * 
  *     def checkDefault(self, value, *defaults):
  *         return checkDefault(self, value, *defaults)             # <<<<<<<<<<<<<<
@@ -7919,7 +7919,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":453
+  /* "mmfparser/bytereader.pyx":453
  *         self.buffer.truncate(value)
  * 
  *     def checkDefault(self, value, *defaults):             # <<<<<<<<<<<<<<
@@ -7941,7 +7941,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":456
+/* "mmfparser/bytereader.pyx":456
  *         return checkDefault(self, value, *defaults)
  * 
  *     def openEditor(self):             # <<<<<<<<<<<<<<
@@ -7983,7 +7983,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("openEditor", 0);
 
-  /* "mmfparser\bytereader.pyx":458
+  /* "mmfparser/bytereader.pyx":458
  *     def openEditor(self):
  *         cdef object name
  *         if self.python_fp:             # <<<<<<<<<<<<<<
@@ -7993,7 +7993,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 458; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (__pyx_t_1) {
 
-    /* "mmfparser\bytereader.pyx":459
+    /* "mmfparser/bytereader.pyx":459
  *         cdef object name
  *         if self.python_fp:
  *             name = self.python_fp.name             # <<<<<<<<<<<<<<
@@ -8008,7 +8008,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   }
   /*else*/ {
 
-    /* "mmfparser\bytereader.pyx":461
+    /* "mmfparser/bytereader.pyx":461
  *             name = self.python_fp.name
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)             # <<<<<<<<<<<<<<
@@ -8030,7 +8030,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __pyx_v_fp = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "mmfparser\bytereader.pyx":462
+    /* "mmfparser/bytereader.pyx":462
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)
  *             fp.write(self.data())             # <<<<<<<<<<<<<<
@@ -8069,7 +8069,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser\bytereader.pyx":463
+    /* "mmfparser/bytereader.pyx":463
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)
  *             fp.write(self.data())
  *             fp.close()             # <<<<<<<<<<<<<<
@@ -8098,7 +8098,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser\bytereader.pyx":464
+    /* "mmfparser/bytereader.pyx":464
  *             fp.write(self.data())
  *             fp.close()
  *             name = fp.name             # <<<<<<<<<<<<<<
@@ -8112,7 +8112,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   }
   __pyx_L3:;
 
-  /* "mmfparser\bytereader.pyx":466
+  /* "mmfparser/bytereader.pyx":466
  *             name = fp.name
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -8126,7 +8126,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __Pyx_XGOTREF(__pyx_t_9);
     /*try:*/ {
 
-      /* "mmfparser\bytereader.pyx":467
+      /* "mmfparser/bytereader.pyx":467
  * 
  *         try:
  *             raw_input('Press enter to open hex editor...')             # <<<<<<<<<<<<<<
@@ -8137,7 +8137,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "mmfparser\bytereader.pyx":468
+      /* "mmfparser/bytereader.pyx":468
  *         try:
  *             raw_input('Press enter to open hex editor...')
  *             openEditor(name, self.tell())             # <<<<<<<<<<<<<<
@@ -8188,7 +8188,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser\bytereader.pyx":469
+    /* "mmfparser/bytereader.pyx":469
  *             raw_input('Press enter to open hex editor...')
  *             openEditor(name, self.tell())
  *         except IOError:             # <<<<<<<<<<<<<<
@@ -8215,7 +8215,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __pyx_L11_try_end:;
   }
 
-  /* "mmfparser\bytereader.pyx":471
+  /* "mmfparser/bytereader.pyx":471
  *         except IOError:
  *             pass
  *         raw_input('(enter)')             # <<<<<<<<<<<<<<
@@ -8226,7 +8226,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser\bytereader.pyx":456
+  /* "mmfparser/bytereader.pyx":456
  *         return checkDefault(self, value, *defaults)
  * 
  *     def openEditor(self):             # <<<<<<<<<<<<<<
@@ -8253,7 +8253,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":473
+/* "mmfparser/bytereader.pyx":473
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
@@ -8336,7 +8336,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("openEditor", 0);
 
-  /* "mmfparser\bytereader.pyx":474
+  /* "mmfparser/bytereader.pyx":474
  * 
  * def openEditor(filename, position):
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])             # <<<<<<<<<<<<<<
@@ -8398,7 +8398,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\bytereader.pyx":473
+  /* "mmfparser/bytereader.pyx":473
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
@@ -8421,7 +8421,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "mmfparser\bytereader.pyx":476
+/* "mmfparser/bytereader.pyx":476
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
@@ -8530,7 +8530,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("checkDefault", 0);
 
-  /* "mmfparser\bytereader.pyx":477
+  /* "mmfparser/bytereader.pyx":477
  * 
  * def checkDefault(ByteReader reader, value, *defaults):
  *     if value in defaults:             # <<<<<<<<<<<<<<
@@ -8541,7 +8541,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":478
+    /* "mmfparser/bytereader.pyx":478
  * def checkDefault(ByteReader reader, value, *defaults):
  *     if value in defaults:
  *         return False             # <<<<<<<<<<<<<<
@@ -8554,7 +8554,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
     goto __pyx_L0;
   }
 
-  /* "mmfparser\bytereader.pyx":479
+  /* "mmfparser/bytereader.pyx":479
  *     if value in defaults:
  *         return False
  *     cdef int lastPosition = reader.lastPosition             # <<<<<<<<<<<<<<
@@ -8564,7 +8564,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __pyx_t_3 = __pyx_v_reader->lastPosition;
   __pyx_v_lastPosition = __pyx_t_3;
 
-  /* "mmfparser\bytereader.pyx":480
+  /* "mmfparser/bytereader.pyx":480
  *         return False
  *     cdef int lastPosition = reader.lastPosition
  *     cdef size_t size = reader.tell() - lastPosition             # <<<<<<<<<<<<<<
@@ -8573,7 +8573,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
  */
   __pyx_v_size = (__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_reader, 0) - __pyx_v_lastPosition);
 
-  /* "mmfparser\bytereader.pyx":481
+  /* "mmfparser/bytereader.pyx":481
  *     cdef int lastPosition = reader.lastPosition
  *     cdef size_t size = reader.tell() - lastPosition
  *     reprDefaults = defaults             # <<<<<<<<<<<<<<
@@ -8583,7 +8583,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __Pyx_INCREF(__pyx_v_defaults);
   __pyx_v_reprDefaults = __pyx_v_defaults;
 
-  /* "mmfparser\bytereader.pyx":482
+  /* "mmfparser/bytereader.pyx":482
  *     cdef size_t size = reader.tell() - lastPosition
  *     reprDefaults = defaults
  *     if len(defaults) == 1:             # <<<<<<<<<<<<<<
@@ -8594,7 +8594,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __pyx_t_2 = ((__pyx_t_4 == 1) != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":483
+    /* "mmfparser/bytereader.pyx":483
  *     reprDefaults = defaults
  *     if len(defaults) == 1:
  *         reprDefaults, = defaults             # <<<<<<<<<<<<<<
@@ -8627,7 +8627,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   }
   __pyx_L4:;
 
-  /* "mmfparser\bytereader.pyx":485
+  /* "mmfparser/bytereader.pyx":485
  *         reprDefaults, = defaults
  *     cdef str message = ('unimplemented value at %s, size %s (should be '
  *         '%s but was %s)' % (lastPosition, size, reprDefaults, value))             # <<<<<<<<<<<<<<
@@ -8659,7 +8659,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __pyx_v_message = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "mmfparser\bytereader.pyx":486
+  /* "mmfparser/bytereader.pyx":486
  *     cdef str message = ('unimplemented value at %s, size %s (should be '
  *         '%s but was %s)' % (lastPosition, size, reprDefaults, value))
  *     traceback.print_stack(file=sys.stdout)             # <<<<<<<<<<<<<<
@@ -8686,7 +8686,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser\bytereader.pyx":488
+  /* "mmfparser/bytereader.pyx":488
  *     traceback.print_stack(file=sys.stdout)
  *     # print message
  *     if sys.stdin.isatty():             # <<<<<<<<<<<<<<
@@ -8723,7 +8723,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser\bytereader.pyx":489
+    /* "mmfparser/bytereader.pyx":489
  *     # print message
  *     if sys.stdin.isatty():
  *         reader.openEditor()             # <<<<<<<<<<<<<<
@@ -8754,7 +8754,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   }
   __pyx_L5:;
 
-  /* "mmfparser\bytereader.pyx":490
+  /* "mmfparser/bytereader.pyx":490
  *     if sys.stdin.isatty():
  *         reader.openEditor()
  *     raise SystemExit             # <<<<<<<<<<<<<<
@@ -8762,7 +8762,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __Pyx_Raise(__pyx_builtin_SystemExit, 0, 0, 0);
   {__pyx_filename = __pyx_f[0]; __pyx_lineno = 490; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":476
+  /* "mmfparser/bytereader.pyx":476
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
@@ -8786,7 +8786,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "mmfparser\common.pxd":23
+/* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -8805,7 +8805,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("allocate_memory", 0);
 
-  /* "mmfparser\common.pxd":24
+  /* "mmfparser/common.pxd":24
  * 
  * cdef inline object allocate_memory(int size, char ** i):
  *     if size < 0:             # <<<<<<<<<<<<<<
@@ -8815,7 +8815,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_t_1 = ((__pyx_v_size < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser\common.pxd":25
+    /* "mmfparser/common.pxd":25
  * cdef inline object allocate_memory(int size, char ** i):
  *     if size < 0:
  *         size = 0             # <<<<<<<<<<<<<<
@@ -8827,7 +8827,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   }
   __pyx_L3:;
 
-  /* "mmfparser\common.pxd":26
+  /* "mmfparser/common.pxd":26
  *     if size < 0:
  *         size = 0
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)             # <<<<<<<<<<<<<<
@@ -8839,7 +8839,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_v_ob = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "mmfparser\common.pxd":27
+  /* "mmfparser/common.pxd":27
  *         size = 0
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)
  *     i[0] = PyString_AS_STRING(ob)             # <<<<<<<<<<<<<<
@@ -8847,7 +8847,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
  */
   (__pyx_v_i[0]) = PyString_AS_STRING(__pyx_v_ob);
 
-  /* "mmfparser\common.pxd":28
+  /* "mmfparser/common.pxd":28
  *     cdef object ob = PyString_FromStringAndSize(NULL, size)
  *     i[0] = PyString_AS_STRING(ob)
  *     return ob             # <<<<<<<<<<<<<<
@@ -8857,7 +8857,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_6common_allocate_memory(int __
   __pyx_r = __pyx_v_ob;
   goto __pyx_L0;
 
-  /* "mmfparser\common.pxd":23
+  /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<
@@ -9061,7 +9061,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_010editor, __pyx_k_010editor, sizeof(__pyx_k_010editor), 0, 0, 1, 0},
   {&__pyx_n_s_B, __pyx_k_B, sizeof(__pyx_k_B), 0, 0, 1, 1},
   {&__pyx_n_s_BYTE, __pyx_k_BYTE, sizeof(__pyx_k_BYTE), 0, 0, 1, 1},
-  {&__pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_k_C_LAPTOP_Downloads_AnacondaDev_b, sizeof(__pyx_k_C_LAPTOP_Downloads_AnacondaDev_b), 0, 0, 1, 0},
   {&__pyx_n_s_DOUBLE, __pyx_k_DOUBLE, sizeof(__pyx_k_DOUBLE), 0, 0, 1, 1},
   {&__pyx_n_s_FLOAT, __pyx_k_FLOAT, sizeof(__pyx_k_FLOAT), 0, 0, 1, 1},
   {&__pyx_n_s_H, __pyx_k_H, sizeof(__pyx_k_H), 0, 0, 1, 1},
@@ -9097,6 +9096,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_filename, __pyx_k_filename, sizeof(__pyx_k_filename), 0, 0, 1, 1},
   {&__pyx_n_s_format, __pyx_k_format, sizeof(__pyx_k_format), 0, 0, 1, 1},
   {&__pyx_n_s_h, __pyx_k_h, sizeof(__pyx_k_h), 0, 0, 1, 1},
+  {&__pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_k_home_clicknin_Downloads_CondaDE, sizeof(__pyx_k_home_clicknin_Downloads_CondaDE), 0, 0, 1, 0},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_input, __pyx_k_input, sizeof(__pyx_k_input), 0, 0, 1, 1},
@@ -9165,7 +9165,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mmfparser\bytereader.pyx":318
+  /* "mmfparser/bytereader.pyx":318
  *             data += c
  * 
  *         return data.decode('utf-16-le')             # <<<<<<<<<<<<<<
@@ -9176,7 +9176,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "mmfparser\bytereader.pyx":415
+  /* "mmfparser/bytereader.pyx":415
  *         else:
  *             for i in range(size):
  *                 self.writeByte(0)             # <<<<<<<<<<<<<<
@@ -9187,7 +9187,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "mmfparser\bytereader.pyx":422
+  /* "mmfparser/bytereader.pyx":422
  * 
  *     def writeUnicodeString(self, value):
  *         self.write(value.encode('utf-16-le') + "\x00\x00")             # <<<<<<<<<<<<<<
@@ -9198,7 +9198,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "mmfparser\bytereader.pyx":429
+  /* "mmfparser/bytereader.pyx":429
  *         self.writeByte(g, True)
  *         self.writeByte(b, True)
  *         self.writeByte(0)             # <<<<<<<<<<<<<<
@@ -9209,7 +9209,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "mmfparser\bytereader.pyx":461
+  /* "mmfparser/bytereader.pyx":461
  *             name = self.python_fp.name
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)             # <<<<<<<<<<<<<<
@@ -9220,7 +9220,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "mmfparser\bytereader.pyx":467
+  /* "mmfparser/bytereader.pyx":467
  * 
  *         try:
  *             raw_input('Press enter to open hex editor...')             # <<<<<<<<<<<<<<
@@ -9231,7 +9231,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "mmfparser\bytereader.pyx":471
+  /* "mmfparser/bytereader.pyx":471
  *         except IOError:
  *             pass
  *         raw_input('(enter)')             # <<<<<<<<<<<<<<
@@ -9242,7 +9242,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "mmfparser\bytereader.pyx":35
+  /* "mmfparser/bytereader.pyx":35
  * import tempfile
  * 
  * BYTE = struct.Struct('b')             # <<<<<<<<<<<<<<
@@ -9253,7 +9253,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "mmfparser\bytereader.pyx":36
+  /* "mmfparser/bytereader.pyx":36
  * 
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')             # <<<<<<<<<<<<<<
@@ -9264,7 +9264,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "mmfparser\bytereader.pyx":37
+  /* "mmfparser/bytereader.pyx":37
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')             # <<<<<<<<<<<<<<
@@ -9275,7 +9275,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "mmfparser\bytereader.pyx":38
+  /* "mmfparser/bytereader.pyx":38
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')             # <<<<<<<<<<<<<<
@@ -9286,7 +9286,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "mmfparser\bytereader.pyx":39
+  /* "mmfparser/bytereader.pyx":39
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')             # <<<<<<<<<<<<<<
@@ -9297,7 +9297,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "mmfparser\bytereader.pyx":40
+  /* "mmfparser/bytereader.pyx":40
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')             # <<<<<<<<<<<<<<
@@ -9308,7 +9308,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "mmfparser\bytereader.pyx":41
+  /* "mmfparser/bytereader.pyx":41
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')             # <<<<<<<<<<<<<<
@@ -9319,7 +9319,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "mmfparser\bytereader.pyx":42
+  /* "mmfparser/bytereader.pyx":42
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')
  * UINT = struct.Struct('I')             # <<<<<<<<<<<<<<
@@ -9330,7 +9330,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "mmfparser\bytereader.pyx":473
+  /* "mmfparser/bytereader.pyx":473
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
@@ -9340,9 +9340,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__19 = PyTuple_Pack(2, __pyx_n_s_filename, __pyx_n_s_position); if (unlikely(!__pyx_tuple__19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 473; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_openEditor, 473, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 473; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_openEditor, 473, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 473; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "mmfparser\bytereader.pyx":476
+  /* "mmfparser/bytereader.pyx":476
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
@@ -9352,7 +9352,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__21 = PyTuple_Pack(7, __pyx_n_s_reader, __pyx_n_s_value, __pyx_n_s_defaults, __pyx_n_s_lastPosition, __pyx_n_s_size, __pyx_n_s_reprDefaults, __pyx_n_s_message); if (unlikely(!__pyx_tuple__21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_LAPTOP_Downloads_AnacondaDev_b, __pyx_n_s_checkDefault, 476, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_clicknin_Downloads_CondaDE, __pyx_n_s_checkDefault, 476, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9481,7 +9481,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\bytereader.pyx":28
+  /* "mmfparser/bytereader.pyx":28
  * from mmfparser.common cimport allocate_memory
  * 
  * import struct             # <<<<<<<<<<<<<<
@@ -9493,7 +9493,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_struct, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":29
+  /* "mmfparser/bytereader.pyx":29
  * 
  * import struct
  * import subprocess             # <<<<<<<<<<<<<<
@@ -9505,7 +9505,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_subprocess, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":30
+  /* "mmfparser/bytereader.pyx":30
  * import struct
  * import subprocess
  * import os             # <<<<<<<<<<<<<<
@@ -9517,7 +9517,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":31
+  /* "mmfparser/bytereader.pyx":31
  * import subprocess
  * import os
  * import traceback             # <<<<<<<<<<<<<<
@@ -9529,7 +9529,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_traceback, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 31; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":32
+  /* "mmfparser/bytereader.pyx":32
  * import os
  * import traceback
  * import sys             # <<<<<<<<<<<<<<
@@ -9541,7 +9541,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sys, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":33
+  /* "mmfparser/bytereader.pyx":33
  * import traceback
  * import sys
  * import tempfile             # <<<<<<<<<<<<<<
@@ -9553,7 +9553,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_tempfile, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 33; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":35
+  /* "mmfparser/bytereader.pyx":35
  * import tempfile
  * 
  * BYTE = struct.Struct('b')             # <<<<<<<<<<<<<<
@@ -9571,7 +9571,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_BYTE, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 35; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":36
+  /* "mmfparser/bytereader.pyx":36
  * 
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')             # <<<<<<<<<<<<<<
@@ -9589,7 +9589,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_UBYTE, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 36; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":37
+  /* "mmfparser/bytereader.pyx":37
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')             # <<<<<<<<<<<<<<
@@ -9607,7 +9607,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_SHORT, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":38
+  /* "mmfparser/bytereader.pyx":38
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')             # <<<<<<<<<<<<<<
@@ -9625,7 +9625,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_USHORT, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 38; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":39
+  /* "mmfparser/bytereader.pyx":39
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')             # <<<<<<<<<<<<<<
@@ -9643,7 +9643,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_FLOAT, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 39; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":40
+  /* "mmfparser/bytereader.pyx":40
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')             # <<<<<<<<<<<<<<
@@ -9661,7 +9661,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_DOUBLE, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":41
+  /* "mmfparser/bytereader.pyx":41
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')             # <<<<<<<<<<<<<<
@@ -9679,7 +9679,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_INT, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 41; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":42
+  /* "mmfparser/bytereader.pyx":42
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')
  * UINT = struct.Struct('I')             # <<<<<<<<<<<<<<
@@ -9697,7 +9697,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_UINT, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":473
+  /* "mmfparser/bytereader.pyx":473
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
@@ -9709,7 +9709,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_openEditor, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 473; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":476
+  /* "mmfparser/bytereader.pyx":476
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
@@ -9721,7 +9721,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_checkDefault, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\bytereader.pyx":1
+  /* "mmfparser/bytereader.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.
@@ -9731,7 +9731,7 @@ PyMODINIT_FUNC PyInit_bytereader(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\common.pxd":23
+  /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
  * 
  * cdef inline object allocate_memory(int size, char ** i):             # <<<<<<<<<<<<<<

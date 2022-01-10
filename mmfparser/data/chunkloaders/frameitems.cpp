@@ -417,8 +417,8 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\frameitems.pyx",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/data/chunkloaders/frameitems.pyx",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -433,7 +433,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser\bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":33
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -445,7 +445,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser\bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":34
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -457,7 +457,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser\bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":37
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -469,7 +469,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":38
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -481,7 +481,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":41
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -493,7 +493,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser\bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":42
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -505,7 +505,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":43
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -518,7 +518,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
 };
 struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString;
 
-/* "mmfparser\loader.pxd":31
+/* "mmfparser/loader.pxd":31
  *     cdef bint init(self, ByteReader reader, DataLoader parent,
  *                    dict settings) except False
  *     cpdef readString(self, ByteReader reader, size=?)             # <<<<<<<<<<<<<<
@@ -528,7 +528,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
   PyObject *size;
 };
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -556,7 +556,7 @@ struct __pyx_obj_9mmfparser_6loader_DataLoader {
 };
 
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":22
+/* "mmfparser/data/chunkloaders/frameitems.pyx":22
  * from mmfparser.bytereader cimport ByteReader
  * 
  * cdef class FrameItems(DataLoader):             # <<<<<<<<<<<<<<
@@ -570,7 +570,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_10frameitems_FrameItems {
 
 
 
-/* "mmfparser\bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":20
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -612,7 +612,7 @@ struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader {
 static struct __pyx_vtabstruct_9mmfparser_6loader_DataLoader *__pyx_vtabptr_9mmfparser_6loader_DataLoader;
 
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":22
+/* "mmfparser/data/chunkloaders/frameitems.pyx":22
  * from mmfparser.bytereader cimport ByteReader
  * 
  * cdef class FrameItems(DataLoader):             # <<<<<<<<<<<<<<
@@ -869,7 +869,7 @@ static PyObject *__pyx_n_s_write;
 static PyObject *__pyx_n_s_writeInt;
 static PyObject *__pyx_n_s_xrange;
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":26
+/* "mmfparser/data/chunkloaders/frameitems.pyx":26
  *         dict itemDict
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -924,7 +924,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":27
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":27
  * 
  *     cpdef initialize(self):
  *         self.itemDict = {}             # <<<<<<<<<<<<<<
@@ -939,7 +939,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
   __pyx_v_self->itemDict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":26
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":26
  *         dict itemDict
  * 
  *     cpdef initialize(self):             # <<<<<<<<<<<<<<
@@ -1002,7 +1002,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":30
+/* "mmfparser/data/chunkloaders/frameitems.pyx":30
  * 
  *     property items:
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1032,7 +1032,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":31
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":31
  *     property items:
  *         def __get__(self):
  *             return self.itemDict.values()             # <<<<<<<<<<<<<<
@@ -1050,7 +1050,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":30
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":30
  * 
  *     property items:
  *         def __get__(self):             # <<<<<<<<<<<<<<
@@ -1069,7 +1069,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":33
+/* "mmfparser/data/chunkloaders/frameitems.pyx":33
  *             return self.itemDict.values()
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1140,7 +1140,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":34
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":34
  * 
  *     cpdef read(self, ByteReader reader):
  *         cdef dict itemDict = self.itemDict             # <<<<<<<<<<<<<<
@@ -1152,7 +1152,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
   __pyx_v_itemDict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":35
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":35
  *     cpdef read(self, ByteReader reader):
  *         cdef dict itemDict = self.itemDict
  *         for _ in xrange(reader.readInt(True)):             # <<<<<<<<<<<<<<
@@ -1212,7 +1212,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
     __Pyx_XDECREF_SET(__pyx_v__, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\frameitems.pyx":36
+    /* "mmfparser/data/chunkloaders/frameitems.pyx":36
  *         cdef dict itemDict = self.itemDict
  *         for _ in xrange(reader.readInt(True)):
  *             item = self.new(ObjectInfo, reader)             # <<<<<<<<<<<<<<
@@ -1253,7 +1253,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
     __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\frameitems.pyx":37
+    /* "mmfparser/data/chunkloaders/frameitems.pyx":37
  *         for _ in xrange(reader.readInt(True)):
  *             item = self.new(ObjectInfo, reader)
  *             itemDict[item.handle] = item             # <<<<<<<<<<<<<<
@@ -1269,7 +1269,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
     if (unlikely(PyDict_SetItem(__pyx_v_itemDict, __pyx_t_1, __pyx_v_item) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 37; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\frameitems.pyx":35
+    /* "mmfparser/data/chunkloaders/frameitems.pyx":35
  *     cpdef read(self, ByteReader reader):
  *         cdef dict itemDict = self.itemDict
  *         for _ in xrange(reader.readInt(True)):             # <<<<<<<<<<<<<<
@@ -1279,7 +1279,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIte
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":33
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":33
  *             return self.itemDict.values()
  * 
  *     cpdef read(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1355,7 +1355,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":39
+/* "mmfparser/data/chunkloaders/frameitems.pyx":39
  *             itemDict[item.handle] = item
  * 
  *     def fromHandle(self, handle):             # <<<<<<<<<<<<<<
@@ -1385,7 +1385,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fromHandle", 0);
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":40
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":40
  * 
  *     def fromHandle(self, handle):
  *         return self.itemDict[handle]             # <<<<<<<<<<<<<<
@@ -1403,7 +1403,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":39
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":39
  *             itemDict[item.handle] = item
  * 
  *     def fromHandle(self, handle):             # <<<<<<<<<<<<<<
@@ -1422,7 +1422,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":42
+/* "mmfparser/data/chunkloaders/frameitems.pyx":42
  *         return self.itemDict[handle]
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1467,7 +1467,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":43
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":43
  * 
  *     def write(self, ByteReader reader):
  *         reader.writeInt(len(self.items), True)             # <<<<<<<<<<<<<<
@@ -1511,7 +1511,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":44
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":44
  *     def write(self, ByteReader reader):
  *         reader.writeInt(len(self.items), True)
  *         for item in self.items:             # <<<<<<<<<<<<<<
@@ -1561,7 +1561,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
     __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\frameitems.pyx":45
+    /* "mmfparser/data/chunkloaders/frameitems.pyx":45
  *         reader.writeInt(len(self.items), True)
  *         for item in self.items:
  *             item.write(reader)             # <<<<<<<<<<<<<<
@@ -1597,7 +1597,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser\data\chunkloaders\frameitems.pyx":44
+    /* "mmfparser/data/chunkloaders/frameitems.pyx":44
  *     def write(self, ByteReader reader):
  *         reader.writeInt(len(self.items), True)
  *         for item in self.items:             # <<<<<<<<<<<<<<
@@ -1607,7 +1607,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":42
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":42
  *         return self.itemDict[handle]
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
@@ -1633,7 +1633,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_10frameitems_10FrameIt
   return __pyx_r;
 }
 
-/* "mmfparser\data\chunkloaders\frameitems.pyx":24
+/* "mmfparser/data/chunkloaders/frameitems.pyx":24
  * cdef class FrameItems(DataLoader):
  *     cdef public:
  *         dict itemDict             # <<<<<<<<<<<<<<
@@ -2041,7 +2041,7 @@ PyMODINIT_FUNC PyInit_frameitems(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":18
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":18
  * # along with Anaconda.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * from mmfparser.data.chunkloaders.objectinfo import ObjectInfo             # <<<<<<<<<<<<<<
@@ -2062,7 +2062,7 @@ PyMODINIT_FUNC PyInit_frameitems(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":47
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":47
  *             item.write(reader)
  * 
  * __all__ = ['FrameItems']             # <<<<<<<<<<<<<<
@@ -2075,7 +2075,7 @@ PyMODINIT_FUNC PyInit_frameitems(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser\data\chunkloaders\frameitems.pyx":1
+  /* "mmfparser/data/chunkloaders/frameitems.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.
