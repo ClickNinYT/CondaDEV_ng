@@ -116,19 +116,15 @@ IF USE_TRANS:
             copyright = copyright.decode('utf-8').encode('utf-16-le')
             ret = b''
             if build > 285:
-               log("Application Build: " + str(build), 1)
                log("Using New Key...", 1)
                ret += create_transform_part(name)
                ret += create_transform_part(copyright)
                ret += create_transform_part(editor)
-               log("Combined Data: " + str(name) + str(copyright) + str(editor), 1)
             else:
-               log("Application Build: " + str(build), 1)
                log("Using Old Key...", 1)
                ret += create_transform_part(editor)
                ret += create_transform_part(name)
                ret += create_transform_part(copyright)
-               log("Combined Data: " + str(editor) + str(name) + str(copyright), 1)
             
 
         ret = ret[:128]

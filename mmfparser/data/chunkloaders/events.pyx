@@ -212,7 +212,6 @@ cdef class Condition(_AceCommon):
             self.num = -27
         if self.num == -28 or self.num == -29 or self.num == -30 or self.num == -31 or self.num == -32 or self.num == -33:
             self.num = -8
-        log("Events Type: " + str(self.num), 1)
         newReader.writeShort(self.num)
         newReader.writeShort(self.objectInfo, True)
         newReader.writeShort(self.objectInfoList)

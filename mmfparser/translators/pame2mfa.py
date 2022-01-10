@@ -525,7 +525,6 @@ def translate(game, print_func = dummy_out):
         for name, parameter in loop_parameters():
             if name == 'GROUP':
                 offset = parameter.offset
-                log("Event Group Found! Offset: " + str(offset), 1)
                 if onepointfive:
                     offset += 2
                 else:

@@ -36,13 +36,13 @@ def decompile():
        output1 = sys.argv[3]
     except:
         log("Warning: No output directory specified!", 3)
-        os = platform.system()
+        oss = platform.system()
         homedir = os.path.expanduser("~")
-        if os == "Linux":
+        if oss == "Linux":
            log("Warning: Defaulting to " + homedir + "/Out", 3)
            output1 = homedir + "/Out"
            pass
-        elif os == "Windows":
+        elif oss == "Windows":
            log("Warning: Defaulting to " + homedir + "\Out", 3)
            output1 = homedir + "\Out"
            pass
@@ -105,7 +105,13 @@ def decompile():
             new_s1 += char
 
     output_p = new_s1
-    output = os.path.join(output1, output_p)
+    if oss == "Linux":
+       output = output1 + "/" + output_p
+    elif oss == "Windows":
+       output = output1 + "\\" + output_p
+    else:
+       log("Error: This OS is not supported!")
+       exit()
     checks_custom(output)
 
     for file in newExe.packData.items:
