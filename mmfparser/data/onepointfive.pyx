@@ -16,13 +16,25 @@
 # along with Anaconda.  If not, see <http://www.gnu.org/licenses/>.
 
 from mmfparser.bytereader cimport ByteReader
-from mmfparser.common cimport allocate_memory
+#from mmfparser.common cimport allocate_memory
 from libc.stdlib cimport malloc, free
 
 cdef extern from "tinflate.c":
     void tinf_init()
     int tinf_uncompress(void *dest, unsigned int *destLen,
         void *source, unsigned int sourceLen)
+
+cdef extern from "Python.h":
+    object PyBytes_FromStringAndSize(char*, Py_ssize_t)
+    char* PyBytes_AS_STRING(object)
+    int Py_REFCNT(object v)
+
+cdef inline object allocate_memory(int size, char ** i):
+    if size < 0:
+        size = 0
+    cdef object ob = PyBytes_FromStringAndSize(NULL, size)
+    i[0] = PyBytes_AS_STRING(ob)
+    return ob
 
 tinf_init()
 
