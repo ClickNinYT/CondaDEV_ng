@@ -22,7 +22,7 @@ ext_modules = []
 libraries = []
 include_dirs = ['./mmfparser/player']
 
-names = open('names.txt', 'rb').read().splitlines()
+names = open('names.txt', 'r').read().splitlines()
 
 is_pypy = platform.python_implementation() == 'PyPy'
 

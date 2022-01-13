@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.loader", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.loader",
         "sources": [
             "./mmfparser/loader.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.loader"
 }
 END: Cython Metadata */
@@ -924,10 +924,10 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\loader.pyx",
-  "mmfparser\\loader.pxd",
+  "mmfparser/loader.pyx",
+  "mmfparser/loader.pxd",
   "stringsource",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -3986,9 +3986,6 @@ static PyTypeObject __pyx_type_9mmfparser_6loader_DataLoader = {
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 

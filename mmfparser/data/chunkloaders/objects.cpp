@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.data.chunkloaders.objects", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.data.chunkloaders.objects",
         "sources": [
             "./mmfparser/data/chunkloaders/objects.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.data.chunkloaders.objects"
 }
 END: Cython Metadata */
@@ -924,9 +924,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\objects.pyx",
+  "mmfparser/data/chunkloaders/objects.pyx",
   "stringsource",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -2628,7 +2628,7 @@ static const char __pyx_k_Incompatible_checksums_s_vs_0xd1[] = "Incompatible che
 static const char __pyx_k_mmfparser_data_chunkloaders_move[] = "mmfparser.data.chunkloaders.movement";
 static const char __pyx_k_mmfparser_data_chunkloaders_obje[] = "mmfparser.data.chunkloaders.objectinfo";
 static const char __pyx_k_mmfparser_data_chunkloaders_tran[] = "mmfparser.data.chunkloaders.transition";
-static const char __pyx_k_mmfparser_data_chunkloaders_obje_2[] = "mmfparser\\data\\chunkloaders\\objects.pyx";
+static const char __pyx_k_mmfparser_data_chunkloaders_obje_2[] = "mmfparser/data/chunkloaders/objects.pyx";
 static const char __pyx_k_mmfparser_data_chunkloaders_obje_3[] = "mmfparser.data.chunkloaders.objects";
 static PyObject *__pyx_kp_b_;
 static PyObject *__pyx_kp_s_;
@@ -42632,9 +42632,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Alterabl
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings;
 
@@ -42774,9 +42771,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Alterabl
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Shape __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Shape;
@@ -43063,9 +43057,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Shape = 
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects__Background __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects__Background;
 
@@ -43176,9 +43167,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects__Backgro
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_QuickBackdrop __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_QuickBackdrop;
@@ -43379,9 +43367,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_QuickBac
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Backdrop __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Backdrop;
 
@@ -43548,9 +43533,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Backdrop
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_AnimationDirection __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_AnimationDirection;
@@ -43768,9 +43750,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Animatio
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Animation __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Animation;
 
@@ -43950,9 +43929,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Animatio
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader;
 
@@ -44115,9 +44091,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Animatio
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Counters __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Counters;
@@ -44493,9 +44466,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Counters
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Paragraph __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Paragraph;
 
@@ -44690,9 +44660,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Paragrap
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Text __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Text;
 
@@ -44862,9 +44829,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Text = {
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_RTFObject __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_RTFObject;
@@ -45088,9 +45052,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_RTFObjec
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_SubApplication __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_SubApplication;
@@ -45324,9 +45285,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_SubAppli
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_Counter __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_Counter;
 
@@ -45484,9 +45442,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_Counter 
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_7objects_ObjectCommon __pyx_vtable_9mmfparser_4data_12chunkloaders_7objects_ObjectCommon;
@@ -46076,9 +46031,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_7objects_ObjectCo
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 

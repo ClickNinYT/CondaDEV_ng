@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.data.chunkloaders.events", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.data.chunkloaders.events",
         "sources": [
             "./mmfparser/data/chunkloaders/events.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.data.chunkloaders.events"
 }
 END: Cython Metadata */
@@ -924,9 +924,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\events.pyx",
+  "mmfparser/data/chunkloaders/events.pyx",
   "stringsource",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -2159,7 +2159,7 @@ static const char __pyx_k_Incompatible_checksums_s_vs_0xe5[] = "Incompatible che
 static const char __pyx_k_mmfparser_data_chunkloaders_comm[] = "mmfparser.data.chunkloaders.common";
 static const char __pyx_k_mmfparser_data_chunkloaders_even[] = "mmfparser.data.chunkloaders.events";
 static const char __pyx_k_mmfparser_data_chunkloaders_para[] = "mmfparser.data.chunkloaders.parameters.loaders";
-static const char __pyx_k_mmfparser_data_chunkloaders_even_2[] = "mmfparser\\data\\chunkloaders\\events.pyx";
+static const char __pyx_k_mmfparser_data_chunkloaders_even_2[] = "mmfparser/data/chunkloaders/events.pyx";
 static PyObject *__pyx_n_s_;
 static PyObject *__pyx_n_s_ACE_FLAGS;
 static PyObject *__pyx_n_s_ACE_OTHERFLAGS;
@@ -16733,9 +16733,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_6events_Parameter
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_6events_Action __pyx_vtable_9mmfparser_4data_12chunkloaders_6events_Action;
 
@@ -16935,9 +16932,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_6events_Action = 
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_6events_Condition __pyx_vtable_9mmfparser_4data_12chunkloaders_6events_Condition;
@@ -17153,9 +17147,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_6events_Condition
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_6events_EventGroup __pyx_vtable_9mmfparser_4data_12chunkloaders_6events_EventGroup;
@@ -17400,9 +17391,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_6events_EventGrou
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_6events_Events __pyx_vtable_9mmfparser_4data_12chunkloaders_6events_Events;
@@ -17676,9 +17664,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_6events_Events = 
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 
@@ -21505,9 +21490,6 @@ static PyTypeObject __pyx_CyFunctionType_type = {
     0,
 #endif
 #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
-    0,
-#endif
-#if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
     0,
 #endif
 };

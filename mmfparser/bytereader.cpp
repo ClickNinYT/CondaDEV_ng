@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.bytereader", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.bytereader",
         "sources": [
             "./mmfparser/bytereader.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.bytereader"
 }
 END: Cython Metadata */
@@ -925,9 +925,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\bytereader.pyx",
+  "mmfparser/bytereader.pyx",
   "stringsource",
-  "mmfparser\\common.pxd",
+  "mmfparser/common.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -1046,7 +1046,7 @@ struct __pyx_obj_9mmfparser_10bytereader_ByteReader {
 
 
 
-/* "mmfparser/bytereader.pyx":75
+/* "mmfparser/bytereader.pyx":76
  * 
  * @cython.final
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -1421,6 +1421,9 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_GetAttrStrNoError(PyObject* obj, P
 /* SetupReduce.proto */
 static int __Pyx_setup_reduce(PyObject* type_obj);
 
+/* ImportFrom.proto */
+static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
+
 /* CLineInTraceback.proto */
 #ifdef CYTHON_CLINE_IN_TRACEBACK
 #define __Pyx_CLineForTraceback(tstate, c_line)  (((CYTHON_CLINE_IN_TRACEBACK)) ? c_line : 0)
@@ -1535,8 +1538,6 @@ extern int __pyx_module_is_main_mmfparser__bytereader;
 int __pyx_module_is_main_mmfparser__bytereader = 0;
 
 /* Implementation of 'mmfparser.bytereader' */
-static PyObject *__pyx_builtin_file;
-static PyObject *__pyx_builtin_buffer;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_raw_input;
 static PyObject *__pyx_builtin_IOError;
@@ -1553,6 +1554,7 @@ static const char __pyx_k_h[] = "h";
 static const char __pyx_k_i[] = "i";
 static const char __pyx_k__2[] = "\000";
 static const char __pyx_k__3[] = "\000\000";
+static const char __pyx_k_io[] = "io";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_wb[] = "wb";
 static const char __pyx_k_INT[] = "INT";
@@ -1586,9 +1588,9 @@ static const char __pyx_k_stdin[] = "stdin";
 static const char __pyx_k_value[] = "value";
 static const char __pyx_k_write[] = "write";
 static const char __pyx_k_DOUBLE[] = "DOUBLE";
+static const char __pyx_k_IOBase[] = "IOBase";
 static const char __pyx_k_Struct[] = "Struct";
 static const char __pyx_k_USHORT[] = "USHORT";
-static const char __pyx_k_buffer[] = "buffer";
 static const char __pyx_k_decode[] = "decode";
 static const char __pyx_k_delete[] = "delete";
 static const char __pyx_k_encode[] = "encode";
@@ -1620,6 +1622,7 @@ static const char __pyx_k_writeByte[] = "writeByte";
 static const char __pyx_k_ByteReader[] = "ByteReader";
 static const char __pyx_k_SystemExit[] = "SystemExit";
 static const char __pyx_k_asUnsigned[] = "asUnsigned";
+static const char __pyx_k_memoryview[] = "memoryview";
 static const char __pyx_k_openEditor[] = "openEditor";
 static const char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static const char __pyx_k_structType[] = "structType";
@@ -1635,7 +1638,7 @@ static const char __pyx_k_s_bytes_required[] = "%s bytes required";
 static const char __pyx_k_NamedTemporaryFile[] = "NamedTemporaryFile";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_mmfparser_bytereader[] = "mmfparser.bytereader";
-static const char __pyx_k_mmfparser_bytereader_pyx[] = "mmfparser\\bytereader.pyx";
+static const char __pyx_k_mmfparser_bytereader_pyx[] = "mmfparser/bytereader.pyx";
 static const char __pyx_k_Press_enter_to_open_hex_editor[] = "Press enter to open hex editor...";
 static const char __pyx_k_unimplemented_value_at_s_size_s[] = "unimplemented value at %s, size %s (should be %s but was %s)";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
@@ -1649,6 +1652,7 @@ static PyObject *__pyx_n_s_FLOAT;
 static PyObject *__pyx_n_s_H;
 static PyObject *__pyx_n_s_I;
 static PyObject *__pyx_n_s_INT;
+static PyObject *__pyx_n_s_IOBase;
 static PyObject *__pyx_n_s_IOError;
 static PyObject *__pyx_n_s_NamedTemporaryFile;
 static PyObject *__pyx_n_s_Popen;
@@ -1664,7 +1668,6 @@ static PyObject *__pyx_kp_s__2;
 static PyObject *__pyx_kp_s__3;
 static PyObject *__pyx_n_s_asUnsigned;
 static PyObject *__pyx_n_s_b;
-static PyObject *__pyx_n_s_buffer;
 static PyObject *__pyx_n_s_checkDefault;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_close;
@@ -1685,9 +1688,11 @@ static PyObject *__pyx_n_s_h;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_input;
+static PyObject *__pyx_n_s_io;
 static PyObject *__pyx_n_s_isatty;
 static PyObject *__pyx_n_s_lastPosition;
 static PyObject *__pyx_n_s_main;
+static PyObject *__pyx_n_s_memoryview;
 static PyObject *__pyx_n_s_message;
 static PyObject *__pyx_n_s_mmfparser_bytereader;
 static PyObject *__pyx_kp_s_mmfparser_bytereader_pyx;
@@ -1801,7 +1806,7 @@ static PyObject *__pyx_codeobj__18;
 static PyObject *__pyx_codeobj__20;
 /* Late includes */
 
-/* "mmfparser/bytereader.pyx":46
+/* "mmfparser/bytereader.pyx":47
  * cdef class ByteReader
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:             # <<<<<<<<<<<<<<
@@ -1823,7 +1828,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_available", 0);
 
-  /* "mmfparser/bytereader.pyx":47
+  /* "mmfparser/bytereader.pyx":48
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:
  *     if reader.pos + size > reader.data_size:             # <<<<<<<<<<<<<<
@@ -1833,26 +1838,26 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   __pyx_t_1 = (((__pyx_v_reader->pos + __pyx_v_size) > __pyx_v_reader->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":48
+    /* "mmfparser/bytereader.pyx":49
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:
  *     if reader.pos + size > reader.data_size:
  *         import traceback             # <<<<<<<<<<<<<<
  *         traceback.print_stack()
  *         raise struct.error('%s bytes required' % size)
  */
-    __pyx_t_2 = __Pyx_Import(__pyx_n_s_traceback, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_Import(__pyx_n_s_traceback, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_v_traceback = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":49
+    /* "mmfparser/bytereader.pyx":50
  *     if reader.pos + size > reader.data_size:
  *         import traceback
  *         traceback.print_stack()             # <<<<<<<<<<<<<<
  *         raise struct.error('%s bytes required' % size)
  *     return 0
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_traceback, __pyx_n_s_print_stack); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_traceback, __pyx_n_s_print_stack); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -1866,26 +1871,26 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 49, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":50
+    /* "mmfparser/bytereader.pyx":51
  *         import traceback
  *         traceback.print_stack()
  *         raise struct.error('%s bytes required' % size)             # <<<<<<<<<<<<<<
  *     return 0
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_struct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_struct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 51, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 51, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 51, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_bytes_required, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_bytes_required, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 51, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -1901,14 +1906,14 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
     __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 51, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(__pyx_t_2, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 50, __pyx_L1_error)
+    __PYX_ERR(0, 51, __pyx_L1_error)
 
-    /* "mmfparser/bytereader.pyx":47
+    /* "mmfparser/bytereader.pyx":48
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:
  *     if reader.pos + size > reader.data_size:             # <<<<<<<<<<<<<<
@@ -1917,7 +1922,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
  */
   }
 
-  /* "mmfparser/bytereader.pyx":51
+  /* "mmfparser/bytereader.pyx":52
  *         traceback.print_stack()
  *         raise struct.error('%s bytes required' % size)
  *     return 0             # <<<<<<<<<<<<<<
@@ -1927,7 +1932,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   __pyx_r = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":46
+  /* "mmfparser/bytereader.pyx":47
  * cdef class ByteReader
  * 
  * cdef inline int check_available(ByteReader reader, size_t size) except -1:             # <<<<<<<<<<<<<<
@@ -1949,7 +1954,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_10bytereader_check_available(struct 
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":53
+/* "mmfparser/bytereader.pyx":54
  *     return 0
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -1971,7 +1976,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ensure_size", 0);
 
-  /* "mmfparser/bytereader.pyx":54
+  /* "mmfparser/bytereader.pyx":55
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):
  *     if size < reader.data_size:             # <<<<<<<<<<<<<<
@@ -1981,7 +1986,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_t_1 = ((__pyx_v_size < __pyx_v_reader->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":55
+    /* "mmfparser/bytereader.pyx":56
  * cdef inline void ensure_size(ByteReader reader, size_t size):
  *     if size < reader.data_size:
  *         size = reader.data_size             # <<<<<<<<<<<<<<
@@ -1991,7 +1996,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
     __pyx_t_2 = __pyx_v_reader->data_size;
     __pyx_v_size = __pyx_t_2;
 
-    /* "mmfparser/bytereader.pyx":54
+    /* "mmfparser/bytereader.pyx":55
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):
  *     if size < reader.data_size:             # <<<<<<<<<<<<<<
@@ -2000,7 +2005,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   }
 
-  /* "mmfparser/bytereader.pyx":56
+  /* "mmfparser/bytereader.pyx":57
  *     if size < reader.data_size:
  *         size = reader.data_size
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:             # <<<<<<<<<<<<<<
@@ -2011,9 +2016,9 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __Pyx_INCREF(__pyx_t_3);
   if (unlikely(__pyx_t_3 == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 56, __pyx_L1_error)
+    __PYX_ERR(0, 57, __pyx_L1_error)
   }
-  __pyx_t_4 = PyBytes_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_t_4 = PyBytes_GET_SIZE(__pyx_t_3); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_5 = ((__pyx_t_4 >= (__pyx_v_reader->start + __pyx_v_size)) != 0);
   if (__pyx_t_5) {
@@ -2026,7 +2031,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_L5_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":57
+    /* "mmfparser/bytereader.pyx":58
  *         size = reader.data_size
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:
  *         if size > reader.data_size:             # <<<<<<<<<<<<<<
@@ -2036,7 +2041,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
     __pyx_t_1 = ((__pyx_v_size > __pyx_v_reader->data_size) != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser/bytereader.pyx":58
+      /* "mmfparser/bytereader.pyx":59
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:
  *         if size > reader.data_size:
  *             reader.data_size = size             # <<<<<<<<<<<<<<
@@ -2045,7 +2050,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
       __pyx_v_reader->data_size = __pyx_v_size;
 
-      /* "mmfparser/bytereader.pyx":57
+      /* "mmfparser/bytereader.pyx":58
  *         size = reader.data_size
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:
  *         if size > reader.data_size:             # <<<<<<<<<<<<<<
@@ -2054,7 +2059,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
     }
 
-    /* "mmfparser/bytereader.pyx":59
+    /* "mmfparser/bytereader.pyx":60
  *         if size > reader.data_size:
  *             reader.data_size = size
  *         return             # <<<<<<<<<<<<<<
@@ -2063,7 +2068,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":56
+    /* "mmfparser/bytereader.pyx":57
  *     if size < reader.data_size:
  *         size = reader.data_size
  *     if len(reader.original) >= (reader.start + size) and not reader.shared:             # <<<<<<<<<<<<<<
@@ -2072,19 +2077,19 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   }
 
-  /* "mmfparser/bytereader.pyx":61
+  /* "mmfparser/bytereader.pyx":62
  *         return
  *     cdef char * buf
  *     newData = allocate_memory(size * 3, &buf)             # <<<<<<<<<<<<<<
  *     memcpy(buf, reader.buffer, reader.data_size)
  *     reader.original = newData
  */
-  __pyx_t_3 = __pyx_f_9mmfparser_6common_allocate_memory((__pyx_v_size * 3), (&__pyx_v_buf)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_3 = __pyx_f_9mmfparser_6common_allocate_memory((__pyx_v_size * 3), (&__pyx_v_buf)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_newData = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":62
+  /* "mmfparser/bytereader.pyx":63
  *     cdef char * buf
  *     newData = allocate_memory(size * 3, &buf)
  *     memcpy(buf, reader.buffer, reader.data_size)             # <<<<<<<<<<<<<<
@@ -2093,14 +2098,14 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   (void)(memcpy(__pyx_v_buf, __pyx_v_reader->buffer, __pyx_v_reader->data_size));
 
-  /* "mmfparser/bytereader.pyx":63
+  /* "mmfparser/bytereader.pyx":64
  *     newData = allocate_memory(size * 3, &buf)
  *     memcpy(buf, reader.buffer, reader.data_size)
  *     reader.original = newData             # <<<<<<<<<<<<<<
  *     reader.buffer = <unsigned char *>buf
  *     reader.data_size = size
  */
-  if (!(likely(PyBytes_CheckExact(__pyx_v_newData))||((__pyx_v_newData) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_newData)->tp_name), 0))) __PYX_ERR(0, 63, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_v_newData))||((__pyx_v_newData) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_newData)->tp_name), 0))) __PYX_ERR(0, 64, __pyx_L1_error)
   __pyx_t_3 = __pyx_v_newData;
   __Pyx_INCREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
@@ -2109,7 +2114,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __pyx_v_reader->original = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":64
+  /* "mmfparser/bytereader.pyx":65
  *     memcpy(buf, reader.buffer, reader.data_size)
  *     reader.original = newData
  *     reader.buffer = <unsigned char *>buf             # <<<<<<<<<<<<<<
@@ -2118,7 +2123,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->buffer = ((unsigned char *)__pyx_v_buf);
 
-  /* "mmfparser/bytereader.pyx":65
+  /* "mmfparser/bytereader.pyx":66
  *     reader.original = newData
  *     reader.buffer = <unsigned char *>buf
  *     reader.data_size = size             # <<<<<<<<<<<<<<
@@ -2127,7 +2132,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->data_size = __pyx_v_size;
 
-  /* "mmfparser/bytereader.pyx":66
+  /* "mmfparser/bytereader.pyx":67
  *     reader.buffer = <unsigned char *>buf
  *     reader.data_size = size
  *     reader.start = 0             # <<<<<<<<<<<<<<
@@ -2136,7 +2141,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->start = 0;
 
-  /* "mmfparser/bytereader.pyx":67
+  /* "mmfparser/bytereader.pyx":68
  *     reader.data_size = size
  *     reader.start = 0
  *     reader.shared = False             # <<<<<<<<<<<<<<
@@ -2145,7 +2150,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
  */
   __pyx_v_reader->shared = 0;
 
-  /* "mmfparser/bytereader.pyx":53
+  /* "mmfparser/bytereader.pyx":54
  *     return 0
  * 
  * cdef inline void ensure_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -2163,7 +2168,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_size(struct __p
   __Pyx_RefNannyFinishContext();
 }
 
-/* "mmfparser/bytereader.pyx":69
+/* "mmfparser/bytereader.pyx":70
  *     reader.shared = False
  * 
  * cdef inline void ensure_write_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -2175,7 +2180,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_write_size(stru
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("ensure_write_size", 0);
 
-  /* "mmfparser/bytereader.pyx":70
+  /* "mmfparser/bytereader.pyx":71
  * 
  * cdef inline void ensure_write_size(ByteReader reader, size_t size):
  *     ensure_size(reader, reader.pos + size)             # <<<<<<<<<<<<<<
@@ -2184,7 +2189,7 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_write_size(stru
  */
   __pyx_f_9mmfparser_10bytereader_ensure_size(__pyx_v_reader, (__pyx_v_reader->pos + __pyx_v_size));
 
-  /* "mmfparser/bytereader.pyx":69
+  /* "mmfparser/bytereader.pyx":70
  *     reader.shared = False
  * 
  * cdef inline void ensure_write_size(ByteReader reader, size_t size):             # <<<<<<<<<<<<<<
@@ -2196,12 +2201,12 @@ static CYTHON_INLINE void __pyx_f_9mmfparser_10bytereader_ensure_write_size(stru
   __Pyx_RefNannyFinishContext();
 }
 
-/* "mmfparser/bytereader.pyx":76
+/* "mmfparser/bytereader.pyx":77
  * @cython.final
  * cdef class ByteReader:
  *     def __cinit__(self, input = None, start = None, size = None):             # <<<<<<<<<<<<<<
  *         self.pos = 0
- *         if isinstance(input, file):
+ *         if isinstance(input, IOBase):
  */
 
 /* Python wrapper */
@@ -2256,7 +2261,7 @@ static int __pyx_pw_9mmfparser_10bytereader_10ByteReader_1__cinit__(PyObject *__
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 76, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(0, 77, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2276,7 +2281,7 @@ static int __pyx_pw_9mmfparser_10bytereader_10ByteReader_1__cinit__(PyObject *__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 0, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 76, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 0, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 77, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2296,10 +2301,10 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   int __pyx_v_int_start;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
-  int __pyx_t_1;
+  PyObject *__pyx_t_1 = NULL;
   int __pyx_t_2;
   int __pyx_t_3;
-  PyObject *__pyx_t_4 = NULL;
+  int __pyx_t_4;
   unsigned char *__pyx_t_5;
   int __pyx_t_6;
   unsigned int __pyx_t_7;
@@ -2309,27 +2314,30 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "mmfparser/bytereader.pyx":77
+  /* "mmfparser/bytereader.pyx":78
  * cdef class ByteReader:
  *     def __cinit__(self, input = None, start = None, size = None):
  *         self.pos = 0             # <<<<<<<<<<<<<<
- *         if isinstance(input, file):
+ *         if isinstance(input, IOBase):
  *             IF not IS_PYPY:
  */
   __pyx_v_self->pos = 0;
 
-  /* "mmfparser/bytereader.pyx":78
+  /* "mmfparser/bytereader.pyx":79
  *     def __cinit__(self, input = None, start = None, size = None):
  *         self.pos = 0
- *         if isinstance(input, file):             # <<<<<<<<<<<<<<
+ *         if isinstance(input, IOBase):             # <<<<<<<<<<<<<<
  *             IF not IS_PYPY:
  *                 self.fp = PyFile_AsFile(input)
  */
-  __pyx_t_1 = PyObject_IsInstance(__pyx_v_input, __pyx_builtin_file); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 78, __pyx_L1_error)
-  __pyx_t_2 = (__pyx_t_1 != 0);
-  if (__pyx_t_2) {
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_IOBase); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = PyObject_IsInstance(__pyx_v_input, __pyx_t_1); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 79, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = (__pyx_t_2 != 0);
+  if (__pyx_t_3) {
 
-    /* "mmfparser/bytereader.pyx":81
+    /* "mmfparser/bytereader.pyx":82
  *             IF not IS_PYPY:
  *                 self.fp = PyFile_AsFile(input)
  *             self.python_fp = input             # <<<<<<<<<<<<<<
@@ -2342,7 +2350,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __Pyx_DECREF(__pyx_v_self->python_fp);
     __pyx_v_self->python_fp = __pyx_v_input;
 
-    /* "mmfparser/bytereader.pyx":82
+    /* "mmfparser/bytereader.pyx":83
  *                 self.fp = PyFile_AsFile(input)
  *             self.python_fp = input
  *             self.shared = False             # <<<<<<<<<<<<<<
@@ -2351,7 +2359,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_self->shared = 0;
 
-    /* "mmfparser/bytereader.pyx":83
+    /* "mmfparser/bytereader.pyx":84
  *             self.python_fp = input
  *             self.shared = False
  *             self.start = 0             # <<<<<<<<<<<<<<
@@ -2360,7 +2368,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_self->start = 0;
 
-    /* "mmfparser/bytereader.pyx":84
+    /* "mmfparser/bytereader.pyx":85
  *             self.shared = False
  *             self.start = 0
  *             return             # <<<<<<<<<<<<<<
@@ -2370,16 +2378,16 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":78
+    /* "mmfparser/bytereader.pyx":79
  *     def __cinit__(self, input = None, start = None, size = None):
  *         self.pos = 0
- *         if isinstance(input, file):             # <<<<<<<<<<<<<<
+ *         if isinstance(input, IOBase):             # <<<<<<<<<<<<<<
  *             IF not IS_PYPY:
  *                 self.fp = PyFile_AsFile(input)
  */
   }
 
-  /* "mmfparser/bytereader.pyx":86
+  /* "mmfparser/bytereader.pyx":87
  *             return
  *         else:
  *             self.python_fp = None             # <<<<<<<<<<<<<<
@@ -2393,18 +2401,18 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __Pyx_DECREF(__pyx_v_self->python_fp);
     __pyx_v_self->python_fp = Py_None;
 
-    /* "mmfparser/bytereader.pyx":87
+    /* "mmfparser/bytereader.pyx":88
  *         else:
  *             self.python_fp = None
  *             if input is not None:             # <<<<<<<<<<<<<<
  *                 data = input
  *             else:
  */
-    __pyx_t_2 = (__pyx_v_input != Py_None);
-    __pyx_t_1 = (__pyx_t_2 != 0);
-    if (__pyx_t_1) {
+    __pyx_t_3 = (__pyx_v_input != Py_None);
+    __pyx_t_2 = (__pyx_t_3 != 0);
+    if (__pyx_t_2) {
 
-      /* "mmfparser/bytereader.pyx":88
+      /* "mmfparser/bytereader.pyx":89
  *             self.python_fp = None
  *             if input is not None:
  *                 data = input             # <<<<<<<<<<<<<<
@@ -2414,7 +2422,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
       __Pyx_INCREF(__pyx_v_input);
       __pyx_v_data = __pyx_v_input;
 
-      /* "mmfparser/bytereader.pyx":87
+      /* "mmfparser/bytereader.pyx":88
  *         else:
  *             self.python_fp = None
  *             if input is not None:             # <<<<<<<<<<<<<<
@@ -2424,7 +2432,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
       goto __pyx_L4;
     }
 
-    /* "mmfparser/bytereader.pyx":90
+    /* "mmfparser/bytereader.pyx":91
  *                 data = input
  *             else:
  *                 data = ''             # <<<<<<<<<<<<<<
@@ -2438,27 +2446,27 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     __pyx_L4:;
   }
 
-  /* "mmfparser/bytereader.pyx":91
+  /* "mmfparser/bytereader.pyx":92
  *             else:
  *                 data = ''
  *         cdef bint isChild = start is not None and size is not None             # <<<<<<<<<<<<<<
  *         self.shared = isChild
  *         self.original = data
  */
-  __pyx_t_2 = (__pyx_v_start != Py_None);
-  __pyx_t_3 = (__pyx_t_2 != 0);
-  if (__pyx_t_3) {
+  __pyx_t_3 = (__pyx_v_start != Py_None);
+  __pyx_t_4 = (__pyx_t_3 != 0);
+  if (__pyx_t_4) {
   } else {
-    __pyx_t_1 = __pyx_t_3;
+    __pyx_t_2 = __pyx_t_4;
     goto __pyx_L5_bool_binop_done;
   }
-  __pyx_t_3 = (__pyx_v_size != Py_None);
-  __pyx_t_2 = (__pyx_t_3 != 0);
-  __pyx_t_1 = __pyx_t_2;
+  __pyx_t_4 = (__pyx_v_size != Py_None);
+  __pyx_t_3 = (__pyx_t_4 != 0);
+  __pyx_t_2 = __pyx_t_3;
   __pyx_L5_bool_binop_done:;
-  __pyx_v_isChild = __pyx_t_1;
+  __pyx_v_isChild = __pyx_t_2;
 
-  /* "mmfparser/bytereader.pyx":92
+  /* "mmfparser/bytereader.pyx":93
  *                 data = ''
  *         cdef bint isChild = start is not None and size is not None
  *         self.shared = isChild             # <<<<<<<<<<<<<<
@@ -2467,53 +2475,53 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
   __pyx_v_self->shared = __pyx_v_isChild;
 
-  /* "mmfparser/bytereader.pyx":93
+  /* "mmfparser/bytereader.pyx":94
  *         cdef bint isChild = start is not None and size is not None
  *         self.shared = isChild
  *         self.original = data             # <<<<<<<<<<<<<<
  *         cdef unsigned char * c_data
  *         c_data = data
  */
-  if (!(likely(PyBytes_CheckExact(__pyx_v_data))||((__pyx_v_data) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_data)->tp_name), 0))) __PYX_ERR(0, 93, __pyx_L1_error)
-  __pyx_t_4 = __pyx_v_data;
-  __Pyx_INCREF(__pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
+  if (!(likely(PyBytes_CheckExact(__pyx_v_data))||((__pyx_v_data) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_data)->tp_name), 0))) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_t_1 = __pyx_v_data;
+  __Pyx_INCREF(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF(__pyx_v_self->original);
   __Pyx_DECREF(__pyx_v_self->original);
-  __pyx_v_self->original = ((PyObject*)__pyx_t_4);
-  __pyx_t_4 = 0;
+  __pyx_v_self->original = ((PyObject*)__pyx_t_1);
+  __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":95
+  /* "mmfparser/bytereader.pyx":96
  *         self.original = data
  *         cdef unsigned char * c_data
  *         c_data = data             # <<<<<<<<<<<<<<
  *         cdef int int_start
  *         if isChild:
  */
-  __pyx_t_5 = __Pyx_PyObject_AsWritableUString(__pyx_v_data); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_AsWritableUString(__pyx_v_data); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L1_error)
   __pyx_v_c_data = __pyx_t_5;
 
-  /* "mmfparser/bytereader.pyx":97
+  /* "mmfparser/bytereader.pyx":98
  *         c_data = data
  *         cdef int int_start
  *         if isChild:             # <<<<<<<<<<<<<<
  *             int_start = start
  *             self.start = int_start
  */
-  __pyx_t_1 = (__pyx_v_isChild != 0);
-  if (__pyx_t_1) {
+  __pyx_t_2 = (__pyx_v_isChild != 0);
+  if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":98
+    /* "mmfparser/bytereader.pyx":99
  *         cdef int int_start
  *         if isChild:
  *             int_start = start             # <<<<<<<<<<<<<<
  *             self.start = int_start
  *             c_data += int_start
  */
-    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_v_start); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 98, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_v_start); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 99, __pyx_L1_error)
     __pyx_v_int_start = __pyx_t_6;
 
-    /* "mmfparser/bytereader.pyx":99
+    /* "mmfparser/bytereader.pyx":100
  *         if isChild:
  *             int_start = start
  *             self.start = int_start             # <<<<<<<<<<<<<<
@@ -2522,7 +2530,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_self->start = __pyx_v_int_start;
 
-    /* "mmfparser/bytereader.pyx":100
+    /* "mmfparser/bytereader.pyx":101
  *             int_start = start
  *             self.start = int_start
  *             c_data += int_start             # <<<<<<<<<<<<<<
@@ -2531,7 +2539,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
     __pyx_v_c_data = (__pyx_v_c_data + __pyx_v_int_start);
 
-    /* "mmfparser/bytereader.pyx":97
+    /* "mmfparser/bytereader.pyx":98
  *         c_data = data
  *         cdef int int_start
  *         if isChild:             # <<<<<<<<<<<<<<
@@ -2540,27 +2548,27 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":101
+  /* "mmfparser/bytereader.pyx":102
  *             self.start = int_start
  *             c_data += int_start
  *         if isChild:             # <<<<<<<<<<<<<<
  *             self.data_size = size
  *         else:
  */
-  __pyx_t_1 = (__pyx_v_isChild != 0);
-  if (__pyx_t_1) {
+  __pyx_t_2 = (__pyx_v_isChild != 0);
+  if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":102
+    /* "mmfparser/bytereader.pyx":103
  *             c_data += int_start
  *         if isChild:
  *             self.data_size = size             # <<<<<<<<<<<<<<
  *         else:
  *             self.data_size = len(data)
  */
-    __pyx_t_7 = __Pyx_PyInt_As_unsigned_int(__pyx_v_size); if (unlikely((__pyx_t_7 == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_As_unsigned_int(__pyx_v_size); if (unlikely((__pyx_t_7 == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 103, __pyx_L1_error)
     __pyx_v_self->data_size = __pyx_t_7;
 
-    /* "mmfparser/bytereader.pyx":101
+    /* "mmfparser/bytereader.pyx":102
  *             self.start = int_start
  *             c_data += int_start
  *         if isChild:             # <<<<<<<<<<<<<<
@@ -2570,7 +2578,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
     goto __pyx_L8;
   }
 
-  /* "mmfparser/bytereader.pyx":104
+  /* "mmfparser/bytereader.pyx":105
  *             self.data_size = size
  *         else:
  *             self.data_size = len(data)             # <<<<<<<<<<<<<<
@@ -2578,12 +2586,12 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  *         self.buffer = c_data
  */
   /*else*/ {
-    __pyx_t_8 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_8 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 105, __pyx_L1_error)
     __pyx_v_self->data_size = __pyx_t_8;
   }
   __pyx_L8:;
 
-  /* "mmfparser/bytereader.pyx":106
+  /* "mmfparser/bytereader.pyx":107
  *             self.data_size = len(data)
  * 
  *         self.buffer = c_data             # <<<<<<<<<<<<<<
@@ -2592,19 +2600,19 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
  */
   __pyx_v_self->buffer = __pyx_v_c_data;
 
-  /* "mmfparser/bytereader.pyx":76
+  /* "mmfparser/bytereader.pyx":77
  * @cython.final
  * cdef class ByteReader:
  *     def __cinit__(self, input = None, start = None, size = None):             # <<<<<<<<<<<<<<
  *         self.pos = 0
- *         if isinstance(input, file):
+ *         if isinstance(input, IOBase):
  */
 
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_1);
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
@@ -2613,7 +2621,7 @@ static int __pyx_pf_9mmfparser_10bytereader_10ByteReader___cinit__(struct __pyx_
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":108
+/* "mmfparser/bytereader.pyx":109
  *         self.buffer = c_data
  * 
  *     cpdef int tell(self):             # <<<<<<<<<<<<<<
@@ -2635,24 +2643,24 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tell", 0);
 
-  /* "mmfparser/bytereader.pyx":110
+  /* "mmfparser/bytereader.pyx":111
  *     cpdef int tell(self):
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 return self.python_fp.tell()
  *         ELSE:
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 111, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":111
+    /* "mmfparser/bytereader.pyx":112
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 return self.python_fp.tell()             # <<<<<<<<<<<<<<
  *         ELSE:
  *             if self.fp != NULL:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_tell); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_tell); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -2666,15 +2674,15 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_5;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":110
+    /* "mmfparser/bytereader.pyx":111
  *     cpdef int tell(self):
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -2683,7 +2691,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
  */
   }
 
-  /* "mmfparser/bytereader.pyx":116
+  /* "mmfparser/bytereader.pyx":117
  *                 return ftell(self.fp)
  * 
  *         return self.pos             # <<<<<<<<<<<<<<
@@ -2693,7 +2701,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(struct __pyx_obj_9m
   __pyx_r = __pyx_v_self->pos;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":108
+  /* "mmfparser/bytereader.pyx":109
  *         self.buffer = c_data
  * 
  *     cpdef int tell(self):             # <<<<<<<<<<<<<<
@@ -2735,7 +2743,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_2tell(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tell", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2752,7 +2760,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_2tell(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":118
+/* "mmfparser/bytereader.pyx":119
  *         return self.pos
  * 
  *     cpdef data(self):             # <<<<<<<<<<<<<<
@@ -2773,17 +2781,17 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("data", 0);
 
-  /* "mmfparser/bytereader.pyx":121
+  /* "mmfparser/bytereader.pyx":122
  *         cdef int pos
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 pos = self.tell()
  *                 self.seek(0)
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 122, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":122
+    /* "mmfparser/bytereader.pyx":123
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 pos = self.tell()             # <<<<<<<<<<<<<<
@@ -2792,7 +2800,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
     __pyx_v_pos = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser/bytereader.pyx":123
+    /* "mmfparser/bytereader.pyx":124
  *             if self.python_fp:
  *                 pos = self.tell()
  *                 self.seek(0)             # <<<<<<<<<<<<<<
@@ -2801,19 +2809,19 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, 0, 0, NULL));
 
-    /* "mmfparser/bytereader.pyx":124
+    /* "mmfparser/bytereader.pyx":125
  *                 pos = self.tell()
  *                 self.seek(0)
  *                 data = self.read()             # <<<<<<<<<<<<<<
  *                 self.seek(pos)
  *                 return data
  */
-    __pyx_t_2 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 124, __pyx_L1_error)
+    __pyx_t_2 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_v_data = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":125
+    /* "mmfparser/bytereader.pyx":126
  *                 self.seek(0)
  *                 data = self.read()
  *                 self.seek(pos)             # <<<<<<<<<<<<<<
@@ -2822,7 +2830,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, __pyx_v_pos, 0, NULL));
 
-    /* "mmfparser/bytereader.pyx":126
+    /* "mmfparser/bytereader.pyx":127
  *                 data = self.read()
  *                 self.seek(pos)
  *                 return data             # <<<<<<<<<<<<<<
@@ -2834,7 +2842,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
     __pyx_r = __pyx_v_data;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":121
+    /* "mmfparser/bytereader.pyx":122
  *         cdef int pos
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -2843,7 +2851,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":135
+  /* "mmfparser/bytereader.pyx":136
  *                 return data
  * 
  *         return self.buffer[0:self.data_size]             # <<<<<<<<<<<<<<
@@ -2851,13 +2859,13 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_data(struct __pyx_
  *     cpdef bint seek(self, int pos, int mode = 0):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_self->buffer) + 0, __pyx_v_self->data_size - 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_self->buffer) + 0, __pyx_v_self->data_size - 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":118
+  /* "mmfparser/bytereader.pyx":119
  *         return self.pos
  * 
  *     cpdef data(self):             # <<<<<<<<<<<<<<
@@ -2899,7 +2907,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_4data(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("data", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_data(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_data(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 119, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2916,7 +2924,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_4data(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":137
+/* "mmfparser/bytereader.pyx":138
  *         return self.buffer[0:self.data_size]
  * 
  *     cpdef bint seek(self, int pos, int mode = 0):             # <<<<<<<<<<<<<<
@@ -2948,28 +2956,28 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     }
   }
 
-  /* "mmfparser/bytereader.pyx":139
+  /* "mmfparser/bytereader.pyx":140
  *     cpdef bint seek(self, int pos, int mode = 0):
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 self.python_fp.seek(pos, mode)
  *                 return True
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 140, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":140
+    /* "mmfparser/bytereader.pyx":141
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.python_fp.seek(pos, mode)             # <<<<<<<<<<<<<<
  *                 return True
  *         ELSE:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_seek); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_seek); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_pos); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_pos); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 141, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_mode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_mode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 141, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     __pyx_t_7 = 0;
@@ -2986,7 +2994,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_4, __pyx_t_5};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2996,7 +3004,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_4, __pyx_t_5};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -3004,7 +3012,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 141, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (__pyx_t_6) {
         __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -3015,14 +3023,14 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_5);
       __pyx_t_4 = 0;
       __pyx_t_5 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":141
+    /* "mmfparser/bytereader.pyx":142
  *             if self.python_fp:
  *                 self.python_fp.seek(pos, mode)
  *                 return True             # <<<<<<<<<<<<<<
@@ -3032,7 +3040,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":139
+    /* "mmfparser/bytereader.pyx":140
  *     cpdef bint seek(self, int pos, int mode = 0):
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -3041,7 +3049,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
   }
 
-  /* "mmfparser/bytereader.pyx":147
+  /* "mmfparser/bytereader.pyx":148
  *                 return True
  * 
  *         if mode == 2:             # <<<<<<<<<<<<<<
@@ -3051,7 +3059,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   switch (__pyx_v_mode) {
     case 2:
 
-    /* "mmfparser/bytereader.pyx":148
+    /* "mmfparser/bytereader.pyx":149
  * 
  *         if mode == 2:
  *             pos += self.data_size             # <<<<<<<<<<<<<<
@@ -3060,7 +3068,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
     __pyx_v_pos = (__pyx_v_pos + __pyx_v_self->data_size);
 
-    /* "mmfparser/bytereader.pyx":147
+    /* "mmfparser/bytereader.pyx":148
  *                 return True
  * 
  *         if mode == 2:             # <<<<<<<<<<<<<<
@@ -3070,7 +3078,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     break;
     case 1:
 
-    /* "mmfparser/bytereader.pyx":150
+    /* "mmfparser/bytereader.pyx":151
  *             pos += self.data_size
  *         elif mode == 1:
  *             pos += self.pos             # <<<<<<<<<<<<<<
@@ -3079,7 +3087,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
     __pyx_v_pos = (__pyx_v_pos + __pyx_v_self->pos);
 
-    /* "mmfparser/bytereader.pyx":149
+    /* "mmfparser/bytereader.pyx":150
  *         if mode == 2:
  *             pos += self.data_size
  *         elif mode == 1:             # <<<<<<<<<<<<<<
@@ -3090,7 +3098,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     default: break;
   }
 
-  /* "mmfparser/bytereader.pyx":151
+  /* "mmfparser/bytereader.pyx":152
  *         elif mode == 1:
  *             pos += self.pos
  *         if pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3100,7 +3108,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_t_1 = ((__pyx_v_pos > __pyx_v_self->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":152
+    /* "mmfparser/bytereader.pyx":153
  *             pos += self.pos
  *         if pos > self.data_size:
  *             pos = self.data_size             # <<<<<<<<<<<<<<
@@ -3110,7 +3118,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
     __pyx_t_9 = __pyx_v_self->data_size;
     __pyx_v_pos = __pyx_t_9;
 
-    /* "mmfparser/bytereader.pyx":151
+    /* "mmfparser/bytereader.pyx":152
  *         elif mode == 1:
  *             pos += self.pos
  *         if pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3119,7 +3127,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
   }
 
-  /* "mmfparser/bytereader.pyx":153
+  /* "mmfparser/bytereader.pyx":154
  *         if pos > self.data_size:
  *             pos = self.data_size
  *         if pos < 0:             # <<<<<<<<<<<<<<
@@ -3129,7 +3137,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_t_1 = ((__pyx_v_pos < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":154
+    /* "mmfparser/bytereader.pyx":155
  *             pos = self.data_size
  *         if pos < 0:
  *             pos = 0             # <<<<<<<<<<<<<<
@@ -3138,7 +3146,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
     __pyx_v_pos = 0;
 
-    /* "mmfparser/bytereader.pyx":153
+    /* "mmfparser/bytereader.pyx":154
  *         if pos > self.data_size:
  *             pos = self.data_size
  *         if pos < 0:             # <<<<<<<<<<<<<<
@@ -3147,7 +3155,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
   }
 
-  /* "mmfparser/bytereader.pyx":155
+  /* "mmfparser/bytereader.pyx":156
  *         if pos < 0:
  *             pos = 0
  *         self.pos = pos             # <<<<<<<<<<<<<<
@@ -3156,7 +3164,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
  */
   __pyx_v_self->pos = __pyx_v_pos;
 
-  /* "mmfparser/bytereader.pyx":156
+  /* "mmfparser/bytereader.pyx":157
  *             pos = 0
  *         self.pos = pos
  *         return True             # <<<<<<<<<<<<<<
@@ -3166,7 +3174,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(struct __pyx_obj_9m
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":137
+  /* "mmfparser/bytereader.pyx":138
  *         return self.buffer[0:self.data_size]
  * 
  *     cpdef bint seek(self, int pos, int mode = 0):             # <<<<<<<<<<<<<<
@@ -3227,7 +3235,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_7seek(PyObject *_
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "seek") < 0)) __PYX_ERR(0, 137, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "seek") < 0)) __PYX_ERR(0, 138, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3238,16 +3246,16 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_7seek(PyObject *_
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_pos = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_pos == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L3_error)
+    __pyx_v_pos = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_pos == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L3_error)
     if (values[1]) {
-      __pyx_v_mode = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_mode == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L3_error)
+      __pyx_v_mode = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_mode == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L3_error)
     } else {
       __pyx_v_mode = ((int)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("seek", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 137, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("seek", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 138, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.seek", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3274,7 +3282,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_6seek(struct __py
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.mode = __pyx_v_mode;
   __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->seek(__pyx_v_self, __pyx_v_pos, 1, &__pyx_t_2); 
-  __pyx_t_3 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyBool_FromLong(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
@@ -3291,7 +3299,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_6seek(struct __py
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":158
+/* "mmfparser/bytereader.pyx":159
  *         return True
  * 
  *     cpdef adjust(self, int to):             # <<<<<<<<<<<<<<
@@ -3310,7 +3318,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("adjust", 0);
 
-  /* "mmfparser/bytereader.pyx":159
+  /* "mmfparser/bytereader.pyx":160
  * 
  *     cpdef adjust(self, int to):
  *         cdef int value = to - (self.tell() % to)             # <<<<<<<<<<<<<<
@@ -3319,17 +3327,17 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
   __pyx_v_value = (__pyx_v_to - (__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0) % __pyx_v_to));
 
-  /* "mmfparser/bytereader.pyx":162
+  /* "mmfparser/bytereader.pyx":163
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 self.seek(self.tell() + value)
  *                 return
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 163, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":163
+    /* "mmfparser/bytereader.pyx":164
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.seek(self.tell() + value)             # <<<<<<<<<<<<<<
@@ -3338,7 +3346,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, (__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0) + __pyx_v_value), 0, NULL));
 
-    /* "mmfparser/bytereader.pyx":164
+    /* "mmfparser/bytereader.pyx":165
  *             if self.python_fp:
  *                 self.seek(self.tell() + value)
  *                 return             # <<<<<<<<<<<<<<
@@ -3349,7 +3357,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":162
+    /* "mmfparser/bytereader.pyx":163
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -3358,7 +3366,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
   }
 
-  /* "mmfparser/bytereader.pyx":170
+  /* "mmfparser/bytereader.pyx":171
  *                 return
  * 
  *         self.pos += value             # <<<<<<<<<<<<<<
@@ -3367,7 +3375,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(struct __py
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_value);
 
-  /* "mmfparser/bytereader.pyx":158
+  /* "mmfparser/bytereader.pyx":159
  *         return True
  * 
  *     cpdef adjust(self, int to):             # <<<<<<<<<<<<<<
@@ -3398,7 +3406,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_9adjust(PyObject 
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("adjust (wrapper)", 0);
   assert(__pyx_arg_to); {
-    __pyx_v_to = __Pyx_PyInt_As_int(__pyx_arg_to); if (unlikely((__pyx_v_to == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 158, __pyx_L3_error)
+    __pyx_v_to = __Pyx_PyInt_As_int(__pyx_arg_to); if (unlikely((__pyx_v_to == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 159, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3422,7 +3430,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_8adjust(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("adjust", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(__pyx_v_self, __pyx_v_to, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_adjust(__pyx_v_self, __pyx_v_to, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3439,7 +3447,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_8adjust(struct __
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":172
+/* "mmfparser/bytereader.pyx":173
  *         self.pos += value
  * 
  *     cdef bint _read(self, void * value, int size) except False:             # <<<<<<<<<<<<<<
@@ -3465,26 +3473,26 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_read", 0);
 
-  /* "mmfparser/bytereader.pyx":175
+  /* "mmfparser/bytereader.pyx":176
  *         IF IS_PYPY:
  *             cdef char * data_c
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 data = self.python_fp.read(size)
  *                 if len(data) < size:
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 175, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":176
+    /* "mmfparser/bytereader.pyx":177
  *             cdef char * data_c
  *             if self.python_fp:
  *                 data = self.python_fp.read(size)             # <<<<<<<<<<<<<<
  *                 if len(data) < size:
  *                     raise struct.error('%s bytes required' % size)
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_read); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_read); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -3499,38 +3507,38 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_data = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":177
+    /* "mmfparser/bytereader.pyx":178
  *             if self.python_fp:
  *                 data = self.python_fp.read(size)
  *                 if len(data) < size:             # <<<<<<<<<<<<<<
  *                     raise struct.error('%s bytes required' % size)
  *                 data_c = data
  */
-    __pyx_t_6 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 178, __pyx_L1_error)
     __pyx_t_1 = ((__pyx_t_6 < __pyx_v_size) != 0);
     if (unlikely(__pyx_t_1)) {
 
-      /* "mmfparser/bytereader.pyx":178
+      /* "mmfparser/bytereader.pyx":179
  *                 data = self.python_fp.read(size)
  *                 if len(data) < size:
  *                     raise struct.error('%s bytes required' % size)             # <<<<<<<<<<<<<<
  *                 data_c = data
  *                 memcpy(value, data_c, len(data))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_struct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_struct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_error); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_bytes_required, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_s_bytes_required, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -3546,14 +3554,14 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
       __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_Raise(__pyx_t_2, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __PYX_ERR(0, 178, __pyx_L1_error)
+      __PYX_ERR(0, 179, __pyx_L1_error)
 
-      /* "mmfparser/bytereader.pyx":177
+      /* "mmfparser/bytereader.pyx":178
  *             if self.python_fp:
  *                 data = self.python_fp.read(size)
  *                 if len(data) < size:             # <<<<<<<<<<<<<<
@@ -3562,27 +3570,27 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
     }
 
-    /* "mmfparser/bytereader.pyx":179
+    /* "mmfparser/bytereader.pyx":180
  *                 if len(data) < size:
  *                     raise struct.error('%s bytes required' % size)
  *                 data_c = data             # <<<<<<<<<<<<<<
  *                 memcpy(value, data_c, len(data))
  *                 return True
  */
-    __pyx_t_7 = __Pyx_PyObject_AsWritableString(__pyx_v_data); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_AsWritableString(__pyx_v_data); if (unlikely((!__pyx_t_7) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_data_c = __pyx_t_7;
 
-    /* "mmfparser/bytereader.pyx":180
+    /* "mmfparser/bytereader.pyx":181
  *                     raise struct.error('%s bytes required' % size)
  *                 data_c = data
  *                 memcpy(value, data_c, len(data))             # <<<<<<<<<<<<<<
  *                 return True
  *         ELSE:
  */
-    __pyx_t_6 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 181, __pyx_L1_error)
     (void)(memcpy(__pyx_v_value, __pyx_v_data_c, __pyx_t_6));
 
-    /* "mmfparser/bytereader.pyx":181
+    /* "mmfparser/bytereader.pyx":182
  *                 data_c = data
  *                 memcpy(value, data_c, len(data))
  *                 return True             # <<<<<<<<<<<<<<
@@ -3592,7 +3600,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":175
+    /* "mmfparser/bytereader.pyx":176
  *         IF IS_PYPY:
  *             cdef char * data_c
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -3601,16 +3609,16 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
   }
 
-  /* "mmfparser/bytereader.pyx":190
+  /* "mmfparser/bytereader.pyx":191
  *                 return True
  * 
  *         check_available(self, size)             # <<<<<<<<<<<<<<
  *         memcpy(value, (self.buffer + self.pos), size)
  *         self.pos += size
  */
-  __pyx_t_8 = __pyx_f_9mmfparser_10bytereader_check_available(__pyx_v_self, __pyx_v_size); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_9mmfparser_10bytereader_check_available(__pyx_v_self, __pyx_v_size); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 191, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":191
+  /* "mmfparser/bytereader.pyx":192
  * 
  *         check_available(self, size)
  *         memcpy(value, (self.buffer + self.pos), size)             # <<<<<<<<<<<<<<
@@ -3619,7 +3627,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
   (void)(memcpy(__pyx_v_value, (__pyx_v_self->buffer + __pyx_v_self->pos), __pyx_v_size));
 
-  /* "mmfparser/bytereader.pyx":192
+  /* "mmfparser/bytereader.pyx":193
  *         check_available(self, size)
  *         memcpy(value, (self.buffer + self.pos), size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -3628,7 +3636,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":193
+  /* "mmfparser/bytereader.pyx":194
  *         memcpy(value, (self.buffer + self.pos), size)
  *         self.pos += size
  *         return True             # <<<<<<<<<<<<<<
@@ -3638,7 +3646,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":172
+  /* "mmfparser/bytereader.pyx":173
  *         self.pos += value
  * 
  *     cdef bint _read(self, void * value, int size) except False:             # <<<<<<<<<<<<<<
@@ -3660,7 +3668,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader__read(struct __pyx_obj_9
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":195
+/* "mmfparser/bytereader.pyx":196
  *         return True
  * 
  *     cpdef read(self, int size = -1):             # <<<<<<<<<<<<<<
@@ -3691,17 +3699,17 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     }
   }
 
-  /* "mmfparser/bytereader.pyx":200
+  /* "mmfparser/bytereader.pyx":201
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 if size == -1:
  *                     size = self.size() - self.tell()
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 201, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":201
+    /* "mmfparser/bytereader.pyx":202
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 if size == -1:             # <<<<<<<<<<<<<<
@@ -3711,7 +3719,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     __pyx_t_1 = ((__pyx_v_size == -1L) != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser/bytereader.pyx":202
+      /* "mmfparser/bytereader.pyx":203
  *             if self.python_fp:
  *                 if size == -1:
  *                     size = self.size() - self.tell()             # <<<<<<<<<<<<<<
@@ -3720,7 +3728,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
       __pyx_v_size = (__pyx_f_9mmfparser_10bytereader_10ByteReader_size(__pyx_v_self, 0) - __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0));
 
-      /* "mmfparser/bytereader.pyx":201
+      /* "mmfparser/bytereader.pyx":202
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 if size == -1:             # <<<<<<<<<<<<<<
@@ -3729,7 +3737,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
     }
 
-    /* "mmfparser/bytereader.pyx":203
+    /* "mmfparser/bytereader.pyx":204
  *                 if size == -1:
  *                     size = self.size() - self.tell()
  *                 return self.python_fp.read(size)             # <<<<<<<<<<<<<<
@@ -3737,9 +3745,9 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  *             if self.fp != NULL:
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_read); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_read); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 204, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 203, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -3754,14 +3762,14 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 204, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":200
+    /* "mmfparser/bytereader.pyx":201
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -3770,7 +3778,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":212
+  /* "mmfparser/bytereader.pyx":213
  *                 return newData
  * 
  *         if size == -1 or size + self.pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3788,7 +3796,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_L6_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":213
+    /* "mmfparser/bytereader.pyx":214
  * 
  *         if size == -1 or size + self.pos > self.data_size:
  *             size = self.data_size - self.pos             # <<<<<<<<<<<<<<
@@ -3797,7 +3805,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
     __pyx_v_size = (__pyx_v_self->data_size - __pyx_v_self->pos);
 
-    /* "mmfparser/bytereader.pyx":212
+    /* "mmfparser/bytereader.pyx":213
  *                 return newData
  * 
  *         if size == -1 or size + self.pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3806,7 +3814,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":214
+  /* "mmfparser/bytereader.pyx":215
  *         if size == -1 or size + self.pos > self.data_size:
  *             size = self.data_size - self.pos
  *         if size < 0:             # <<<<<<<<<<<<<<
@@ -3816,7 +3824,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_t_1 = ((__pyx_v_size < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":215
+    /* "mmfparser/bytereader.pyx":216
  *             size = self.data_size - self.pos
  *         if size < 0:
  *             size = 0             # <<<<<<<<<<<<<<
@@ -3825,7 +3833,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
     __pyx_v_size = 0;
 
-    /* "mmfparser/bytereader.pyx":214
+    /* "mmfparser/bytereader.pyx":215
  *         if size == -1 or size + self.pos > self.data_size:
  *             size = self.data_size - self.pos
  *         if size < 0:             # <<<<<<<<<<<<<<
@@ -3834,19 +3842,19 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":216
+  /* "mmfparser/bytereader.pyx":217
  *         if size < 0:
  *             size = 0
  *         data = self.buffer[self.pos:self.pos+size]             # <<<<<<<<<<<<<<
  *         self.pos += size
  *         if self.pos > self.data_size:
  */
-  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_self->buffer) + __pyx_v_self->pos, (__pyx_v_self->pos + __pyx_v_size) - __pyx_v_self->pos); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_self->buffer) + __pyx_v_self->pos, (__pyx_v_self->pos + __pyx_v_size) - __pyx_v_self->pos); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_data = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":217
+  /* "mmfparser/bytereader.pyx":218
  *             size = 0
  *         data = self.buffer[self.pos:self.pos+size]
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -3855,7 +3863,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":218
+  /* "mmfparser/bytereader.pyx":219
  *         data = self.buffer[self.pos:self.pos+size]
  *         self.pos += size
  *         if self.pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3865,7 +3873,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_t_1 = ((__pyx_v_self->pos > __pyx_v_self->data_size) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":219
+    /* "mmfparser/bytereader.pyx":220
  *         self.pos += size
  *         if self.pos > self.data_size:
  *             self.pos = self.data_size             # <<<<<<<<<<<<<<
@@ -3875,7 +3883,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
     __pyx_t_7 = __pyx_v_self->data_size;
     __pyx_v_self->pos = __pyx_t_7;
 
-    /* "mmfparser/bytereader.pyx":218
+    /* "mmfparser/bytereader.pyx":219
  *         data = self.buffer[self.pos:self.pos+size]
  *         self.pos += size
  *         if self.pos > self.data_size:             # <<<<<<<<<<<<<<
@@ -3884,7 +3892,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":220
+  /* "mmfparser/bytereader.pyx":221
  *         if self.pos > self.data_size:
  *             self.pos = self.data_size
  *         return data             # <<<<<<<<<<<<<<
@@ -3896,7 +3904,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_read(struct __pyx_
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":195
+  /* "mmfparser/bytereader.pyx":196
  *         return True
  * 
  *     cpdef read(self, int size = -1):             # <<<<<<<<<<<<<<
@@ -3950,7 +3958,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_11read(PyObject *
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "read") < 0)) __PYX_ERR(0, 195, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "read") < 0)) __PYX_ERR(0, 196, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3961,14 +3969,14 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_11read(PyObject *
       }
     }
     if (values[0]) {
-      __pyx_v_size = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_size == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 195, __pyx_L3_error)
+      __pyx_v_size = __Pyx_PyInt_As_int(values[0]); if (unlikely((__pyx_v_size == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
     } else {
       __pyx_v_size = ((int)-1);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("read", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 195, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("read", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 196, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.read", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3993,7 +4001,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_10read(struct __p
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.size = __pyx_v_size;
-  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->read(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->read(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4010,7 +4018,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_10read(struct __p
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":222
+/* "mmfparser/bytereader.pyx":223
  *         return data
  * 
  *     cpdef size_t size(self):             # <<<<<<<<<<<<<<
@@ -4031,17 +4039,17 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("size", 0);
 
-  /* "mmfparser/bytereader.pyx":227
+  /* "mmfparser/bytereader.pyx":228
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 pos = self.tell()
  *                 self.seek(0, 2)
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 228, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":228
+    /* "mmfparser/bytereader.pyx":229
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 pos = self.tell()             # <<<<<<<<<<<<<<
@@ -4050,7 +4058,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
     __pyx_v_pos = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser/bytereader.pyx":229
+    /* "mmfparser/bytereader.pyx":230
  *             if self.python_fp:
  *                 pos = self.tell()
  *                 self.seek(0, 2)             # <<<<<<<<<<<<<<
@@ -4061,7 +4069,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
     __pyx_t_2.mode = 2;
     __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, 0, 0, &__pyx_t_2); 
 
-    /* "mmfparser/bytereader.pyx":230
+    /* "mmfparser/bytereader.pyx":231
  *                 pos = self.tell()
  *                 self.seek(0, 2)
  *                 size = self.tell()             # <<<<<<<<<<<<<<
@@ -4070,7 +4078,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
     __pyx_v_size = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser/bytereader.pyx":231
+    /* "mmfparser/bytereader.pyx":232
  *                 self.seek(0, 2)
  *                 size = self.tell()
  *                 self.seek(pos)             # <<<<<<<<<<<<<<
@@ -4079,7 +4087,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, __pyx_v_pos, 0, NULL));
 
-    /* "mmfparser/bytereader.pyx":232
+    /* "mmfparser/bytereader.pyx":233
  *                 size = self.tell()
  *                 self.seek(pos)
  *                 return size             # <<<<<<<<<<<<<<
@@ -4089,7 +4097,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
     __pyx_r = __pyx_v_size;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":227
+    /* "mmfparser/bytereader.pyx":228
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -4098,7 +4106,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
  */
   }
 
-  /* "mmfparser/bytereader.pyx":241
+  /* "mmfparser/bytereader.pyx":242
  *                 return size
  * 
  *         return self.data_size             # <<<<<<<<<<<<<<
@@ -4108,7 +4116,7 @@ static size_t __pyx_f_9mmfparser_10bytereader_10ByteReader_size(struct __pyx_obj
   __pyx_r = __pyx_v_self->data_size;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":222
+  /* "mmfparser/bytereader.pyx":223
  *         return data
  * 
  *     cpdef size_t size(self):             # <<<<<<<<<<<<<<
@@ -4147,7 +4155,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_12size(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("size", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_f_9mmfparser_10bytereader_10ByteReader_size(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_FromSize_t(__pyx_f_9mmfparser_10bytereader_10ByteReader_size(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4164,7 +4172,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_12size(struct __p
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":243
+/* "mmfparser/bytereader.pyx":244
  *         return self.data_size
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -4190,7 +4198,7 @@ static Py_ssize_t __pyx_pf_9mmfparser_10bytereader_10ByteReader_14__len__(struct
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__len__", 0);
 
-  /* "mmfparser/bytereader.pyx":244
+  /* "mmfparser/bytereader.pyx":245
  * 
  *     def __len__(self):
  *         return self.size()             # <<<<<<<<<<<<<<
@@ -4200,7 +4208,7 @@ static Py_ssize_t __pyx_pf_9mmfparser_10bytereader_10ByteReader_14__len__(struct
   __pyx_r = __pyx_f_9mmfparser_10bytereader_10ByteReader_size(__pyx_v_self, 0);
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":243
+  /* "mmfparser/bytereader.pyx":244
  *         return self.data_size
  * 
  *     def __len__(self):             # <<<<<<<<<<<<<<
@@ -4214,7 +4222,7 @@ static Py_ssize_t __pyx_pf_9mmfparser_10bytereader_10ByteReader_14__len__(struct
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":246
+/* "mmfparser/bytereader.pyx":247
  *         return self.size()
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -4244,7 +4252,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_16__str__(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__str__", 0);
 
-  /* "mmfparser/bytereader.pyx":247
+  /* "mmfparser/bytereader.pyx":248
  * 
  *     def __str__(self):
  *         return self.data()             # <<<<<<<<<<<<<<
@@ -4252,13 +4260,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_16__str__(struct 
  *     def __repr__(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_data(__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_data(__pyx_v_self, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":246
+  /* "mmfparser/bytereader.pyx":247
  *         return self.size()
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -4277,7 +4285,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_16__str__(struct 
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":249
+/* "mmfparser/bytereader.pyx":250
  *         return self.data()
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -4308,7 +4316,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_18__repr__(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "mmfparser/bytereader.pyx":250
+  /* "mmfparser/bytereader.pyx":251
  * 
  *     def __repr__(self):
  *         return repr(str(self))             # <<<<<<<<<<<<<<
@@ -4316,16 +4324,16 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_18__repr__(struct
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 250, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), ((PyObject *)__pyx_v_self)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 251, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_Repr(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
+  __pyx_t_2 = PyObject_Repr(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 251, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":249
+  /* "mmfparser/bytereader.pyx":250
  *         return self.data()
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -4345,7 +4353,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_18__repr__(struct
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":252
+/* "mmfparser/bytereader.pyx":253
  *         return repr(str(self))
  * 
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -4370,16 +4378,16 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
     }
   }
 
-  /* "mmfparser/bytereader.pyx":254
+  /* "mmfparser/bytereader.pyx":255
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:
  *         cdef char value
  *         self._read(&value, 1)             # <<<<<<<<<<<<<<
  *         if asUnsigned:
  *             return <unsigned char>value
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 254, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 255, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":255
+  /* "mmfparser/bytereader.pyx":256
  *         cdef char value
  *         self._read(&value, 1)
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -4389,7 +4397,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
   __pyx_t_1 = (__pyx_v_asUnsigned != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":256
+    /* "mmfparser/bytereader.pyx":257
  *         self._read(&value, 1)
  *         if asUnsigned:
  *             return <unsigned char>value             # <<<<<<<<<<<<<<
@@ -4399,7 +4407,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
     __pyx_r = ((unsigned char)__pyx_v_value);
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":255
+    /* "mmfparser/bytereader.pyx":256
  *         cdef char value
  *         self._read(&value, 1)
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -4408,7 +4416,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":257
+  /* "mmfparser/bytereader.pyx":258
  *         if asUnsigned:
  *             return <unsigned char>value
  *         return value             # <<<<<<<<<<<<<<
@@ -4418,7 +4426,7 @@ static short __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(struct __pyx_
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":252
+  /* "mmfparser/bytereader.pyx":253
  *         return repr(str(self))
  * 
  *     cpdef short readByte(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -4466,7 +4474,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_21readByte(PyObje
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readByte") < 0)) __PYX_ERR(0, 252, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readByte") < 0)) __PYX_ERR(0, 253, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4477,14 +4485,14 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_21readByte(PyObje
       }
     }
     if (values[0]) {
-      __pyx_v_asUnsigned = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_asUnsigned == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 252, __pyx_L3_error)
+      __pyx_v_asUnsigned = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_asUnsigned == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 253, __pyx_L3_error)
     } else {
       __pyx_v_asUnsigned = ((int)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("readByte", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 252, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("readByte", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 253, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.readByte", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4510,8 +4518,8 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_20readByte(struct
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = __pyx_v_asUnsigned;
-  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readByte(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 252, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readByte(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 253, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
@@ -4528,7 +4536,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_20readByte(struct
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":259
+/* "mmfparser/bytereader.pyx":260
  *         return value
  * 
  *     cpdef int readShort(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -4555,25 +4563,25 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
     }
   }
 
-  /* "mmfparser/bytereader.pyx":262
+  /* "mmfparser/bytereader.pyx":263
  *         cdef short value
  *         cdef unsigned char byte1, byte2
  *         self._read(&byte1, 1)             # <<<<<<<<<<<<<<
  *         self._read(&byte2, 1)
  *         value = (byte2 << 8) | byte1
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte1), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte1), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 263, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":263
+  /* "mmfparser/bytereader.pyx":264
  *         cdef unsigned char byte1, byte2
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)             # <<<<<<<<<<<<<<
  *         value = (byte2 << 8) | byte1
  *         if asUnsigned:
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte2), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 263, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte2), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":264
+  /* "mmfparser/bytereader.pyx":265
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)
  *         value = (byte2 << 8) | byte1             # <<<<<<<<<<<<<<
@@ -4582,7 +4590,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
  */
   __pyx_v_value = ((__pyx_v_byte2 << 8) | __pyx_v_byte1);
 
-  /* "mmfparser/bytereader.pyx":265
+  /* "mmfparser/bytereader.pyx":266
  *         self._read(&byte2, 1)
  *         value = (byte2 << 8) | byte1
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -4592,7 +4600,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
   __pyx_t_1 = (__pyx_v_asUnsigned != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":266
+    /* "mmfparser/bytereader.pyx":267
  *         value = (byte2 << 8) | byte1
  *         if asUnsigned:
  *             return <unsigned short>value             # <<<<<<<<<<<<<<
@@ -4602,7 +4610,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
     __pyx_r = ((unsigned short)__pyx_v_value);
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":265
+    /* "mmfparser/bytereader.pyx":266
  *         self._read(&byte2, 1)
  *         value = (byte2 << 8) | byte1
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -4611,7 +4619,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
  */
   }
 
-  /* "mmfparser/bytereader.pyx":267
+  /* "mmfparser/bytereader.pyx":268
  *         if asUnsigned:
  *             return <unsigned short>value
  *         return value             # <<<<<<<<<<<<<<
@@ -4621,7 +4629,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_readShort(struct __pyx_o
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":259
+  /* "mmfparser/bytereader.pyx":260
  *         return value
  * 
  *     cpdef int readShort(self, bint asUnsigned = False) except? -10:             # <<<<<<<<<<<<<<
@@ -4669,7 +4677,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_23readShort(PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readShort") < 0)) __PYX_ERR(0, 259, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readShort") < 0)) __PYX_ERR(0, 260, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4680,14 +4688,14 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_23readShort(PyObj
       }
     }
     if (values[0]) {
-      __pyx_v_asUnsigned = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_asUnsigned == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 259, __pyx_L3_error)
+      __pyx_v_asUnsigned = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_asUnsigned == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 260, __pyx_L3_error)
     } else {
       __pyx_v_asUnsigned = ((int)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("readShort", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 259, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("readShort", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 260, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.readShort", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4713,8 +4721,8 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_22readShort(struc
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = __pyx_v_asUnsigned;
-  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readShort(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 259, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 259, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readShort(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
@@ -4731,7 +4739,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_22readShort(struc
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":269
+/* "mmfparser/bytereader.pyx":270
  *         return value
  * 
  *     cpdef float readFloat(self) except? -10:             # <<<<<<<<<<<<<<
@@ -4750,16 +4758,16 @@ static float __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readFloat", 0);
 
-  /* "mmfparser/bytereader.pyx":271
+  /* "mmfparser/bytereader.pyx":272
  *     cpdef float readFloat(self) except? -10:
  *         cdef float value
  *         self._read(&value, 4)             # <<<<<<<<<<<<<<
  *         return value
  * 
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 4); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 271, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 4); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 272, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":272
+  /* "mmfparser/bytereader.pyx":273
  *         cdef float value
  *         self._read(&value, 4)
  *         return value             # <<<<<<<<<<<<<<
@@ -4769,7 +4777,7 @@ static float __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(struct __pyx
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":269
+  /* "mmfparser/bytereader.pyx":270
  *         return value
  * 
  *     cpdef float readFloat(self) except? -10:             # <<<<<<<<<<<<<<
@@ -4809,8 +4817,8 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_24readFloat(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readFloat", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(__pyx_v_self, 1); if (unlikely(__pyx_t_1 == ((float)-10.0) && PyErr_Occurred())) __PYX_ERR(0, 269, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readFloat(__pyx_v_self, 1); if (unlikely(__pyx_t_1 == ((float)-10.0) && PyErr_Occurred())) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -4827,7 +4835,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_24readFloat(struc
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":274
+/* "mmfparser/bytereader.pyx":275
  *         return value
  * 
  *     cpdef double readDouble(self) except? -10:             # <<<<<<<<<<<<<<
@@ -4846,16 +4854,16 @@ static double __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readDouble", 0);
 
-  /* "mmfparser/bytereader.pyx":276
+  /* "mmfparser/bytereader.pyx":277
  *     cpdef double readDouble(self) except? -10:
  *         cdef double value
  *         self._read(&value, 8)             # <<<<<<<<<<<<<<
  *         return value
  * 
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 8); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_value), 8); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 277, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":277
+  /* "mmfparser/bytereader.pyx":278
  *         cdef double value
  *         self._read(&value, 8)
  *         return value             # <<<<<<<<<<<<<<
@@ -4865,7 +4873,7 @@ static double __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(struct __p
   __pyx_r = __pyx_v_value;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":274
+  /* "mmfparser/bytereader.pyx":275
  *         return value
  * 
  *     cpdef double readDouble(self) except? -10:             # <<<<<<<<<<<<<<
@@ -4905,8 +4913,8 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_26readDouble(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readDouble", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(__pyx_v_self, 1); if (unlikely(__pyx_t_1 == ((double)-10.0) && PyErr_Occurred())) __PYX_ERR(0, 274, __pyx_L1_error)
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 274, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readDouble(__pyx_v_self, 1); if (unlikely(__pyx_t_1 == ((double)-10.0) && PyErr_Occurred())) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -4923,7 +4931,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_26readDouble(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":279
+/* "mmfparser/bytereader.pyx":280
  *         return value
  * 
  *     cpdef readInt(self, bint asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -4953,43 +4961,43 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
     }
   }
 
-  /* "mmfparser/bytereader.pyx":282
+  /* "mmfparser/bytereader.pyx":283
  *         cdef int value
  *         cdef unsigned char byte1, byte2, byte3, byte4
  *         self._read(&byte1, 1)             # <<<<<<<<<<<<<<
  *         self._read(&byte2, 1)
  *         self._read(&byte3, 1)
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte1), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 282, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte1), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 283, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":283
+  /* "mmfparser/bytereader.pyx":284
  *         cdef unsigned char byte1, byte2, byte3, byte4
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)             # <<<<<<<<<<<<<<
  *         self._read(&byte3, 1)
  *         self._read(&byte4, 1)
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte2), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte2), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 284, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":284
+  /* "mmfparser/bytereader.pyx":285
  *         self._read(&byte1, 1)
  *         self._read(&byte2, 1)
  *         self._read(&byte3, 1)             # <<<<<<<<<<<<<<
  *         self._read(&byte4, 1)
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte3), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte3), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 285, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":285
+  /* "mmfparser/bytereader.pyx":286
  *         self._read(&byte2, 1)
  *         self._read(&byte3, 1)
  *         self._read(&byte4, 1)             # <<<<<<<<<<<<<<
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  *         if asUnsigned:
  */
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte4), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader__read(__pyx_v_self, (&__pyx_v_byte4), 1); if (unlikely(__pyx_t_1 == ((int)0))) __PYX_ERR(0, 286, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":286
+  /* "mmfparser/bytereader.pyx":287
  *         self._read(&byte3, 1)
  *         self._read(&byte4, 1)
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)             # <<<<<<<<<<<<<<
@@ -4998,7 +5006,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   __pyx_v_value = ((((__pyx_v_byte4 << 24) | (__pyx_v_byte3 << 16)) | (__pyx_v_byte2 << 8)) | __pyx_v_byte1);
 
-  /* "mmfparser/bytereader.pyx":287
+  /* "mmfparser/bytereader.pyx":288
  *         self._read(&byte4, 1)
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -5008,7 +5016,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
   __pyx_t_1 = (__pyx_v_asUnsigned != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":288
+    /* "mmfparser/bytereader.pyx":289
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  *         if asUnsigned:
  *             return <unsigned int>value             # <<<<<<<<<<<<<<
@@ -5016,13 +5024,13 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  * 
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(((unsigned int)__pyx_v_value)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_int(((unsigned int)__pyx_v_value)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":287
+    /* "mmfparser/bytereader.pyx":288
  *         self._read(&byte4, 1)
  *         value = ((byte4 << 24) | (byte3 << 16) | (byte2 << 8) | byte1)
  *         if asUnsigned:             # <<<<<<<<<<<<<<
@@ -5031,7 +5039,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  */
   }
 
-  /* "mmfparser/bytereader.pyx":289
+  /* "mmfparser/bytereader.pyx":290
  *         if asUnsigned:
  *             return <unsigned int>value
  *         return value             # <<<<<<<<<<<<<<
@@ -5039,13 +5047,13 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(struct __p
  *     cpdef bytes readString(self, size=None):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_value); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_value); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":279
+  /* "mmfparser/bytereader.pyx":280
  *         return value
  * 
  *     cpdef readInt(self, bint asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -5095,7 +5103,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_29readInt(PyObjec
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readInt") < 0)) __PYX_ERR(0, 279, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readInt") < 0)) __PYX_ERR(0, 280, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -5106,14 +5114,14 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_29readInt(PyObjec
       }
     }
     if (values[0]) {
-      __pyx_v_asUnsigned = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_asUnsigned == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 279, __pyx_L3_error)
+      __pyx_v_asUnsigned = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_asUnsigned == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 280, __pyx_L3_error)
     } else {
       __pyx_v_asUnsigned = ((int)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("readInt", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 279, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("readInt", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 280, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.readInt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5138,7 +5146,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_28readInt(struct 
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = __pyx_v_asUnsigned;
-  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readInt(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readInt(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5155,7 +5163,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_28readInt(struct 
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":291
+/* "mmfparser/bytereader.pyx":292
  *         return value
  * 
  *     cpdef bytes readString(self, size=None):             # <<<<<<<<<<<<<<
@@ -5186,7 +5194,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
     }
   }
 
-  /* "mmfparser/bytereader.pyx":292
+  /* "mmfparser/bytereader.pyx":293
  * 
  *     cpdef bytes readString(self, size=None):
  *         if size is not None:             # <<<<<<<<<<<<<<
@@ -5197,7 +5205,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":293
+    /* "mmfparser/bytereader.pyx":294
  *     cpdef bytes readString(self, size=None):
  *         if size is not None:
  *             return self.readReader(size).readString()             # <<<<<<<<<<<<<<
@@ -5205,17 +5213,17 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  *         while 1:
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_v_size); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 293, __pyx_L1_error)
-    __pyx_t_4 = ((PyObject *)__pyx_f_9mmfparser_10bytereader_10ByteReader_readReader(__pyx_v_self, __pyx_t_3, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_v_size); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 294, __pyx_L1_error)
+    __pyx_t_4 = ((PyObject *)__pyx_f_9mmfparser_10bytereader_10ByteReader_readReader(__pyx_v_self, __pyx_t_3, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readString(((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_4), 0, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readString(((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_4), 0, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_r = ((PyObject*)__pyx_t_5);
     __pyx_t_5 = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":292
+    /* "mmfparser/bytereader.pyx":293
  * 
  *     cpdef bytes readString(self, size=None):
  *         if size is not None:             # <<<<<<<<<<<<<<
@@ -5224,7 +5232,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
   }
 
-  /* "mmfparser/bytereader.pyx":294
+  /* "mmfparser/bytereader.pyx":295
  *         if size is not None:
  *             return self.readReader(size).readString()
  *         data = ''             # <<<<<<<<<<<<<<
@@ -5234,7 +5242,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
   __Pyx_INCREF(__pyx_kp_s_);
   __pyx_v_data = __pyx_kp_s_;
 
-  /* "mmfparser/bytereader.pyx":295
+  /* "mmfparser/bytereader.pyx":296
  *             return self.readReader(size).readString()
  *         data = ''
  *         while 1:             # <<<<<<<<<<<<<<
@@ -5243,7 +5251,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
   while (1) {
 
-    /* "mmfparser/bytereader.pyx":296
+    /* "mmfparser/bytereader.pyx":297
  *         data = ''
  *         while 1:
  *             c = self.read(1)             # <<<<<<<<<<<<<<
@@ -5252,12 +5260,12 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
     __pyx_t_6.__pyx_n = 1;
     __pyx_t_6.size = 1;
-    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L1_error)
+    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "mmfparser/bytereader.pyx":297
+    /* "mmfparser/bytereader.pyx":298
  *         while 1:
  *             c = self.read(1)
  *             if c in ('\x00', ''):             # <<<<<<<<<<<<<<
@@ -5266,20 +5274,20 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
     __Pyx_INCREF(__pyx_v_c);
     __pyx_t_5 = __pyx_v_c;
-    __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_5, __pyx_kp_s__2, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 297, __pyx_L1_error)
+    __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_5, __pyx_kp_s__2, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 298, __pyx_L1_error)
     if (!__pyx_t_1) {
     } else {
       __pyx_t_2 = __pyx_t_1;
       goto __pyx_L7_bool_binop_done;
     }
-    __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_5, __pyx_kp_s_, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 297, __pyx_L1_error)
+    __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_t_5, __pyx_kp_s_, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 298, __pyx_L1_error)
     __pyx_t_2 = __pyx_t_1;
     __pyx_L7_bool_binop_done:;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_1 = (__pyx_t_2 != 0);
     if (__pyx_t_1) {
 
-      /* "mmfparser/bytereader.pyx":298
+      /* "mmfparser/bytereader.pyx":299
  *             c = self.read(1)
  *             if c in ('\x00', ''):
  *                 break             # <<<<<<<<<<<<<<
@@ -5288,7 +5296,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
       goto __pyx_L5_break;
 
-      /* "mmfparser/bytereader.pyx":297
+      /* "mmfparser/bytereader.pyx":298
  *         while 1:
  *             c = self.read(1)
  *             if c in ('\x00', ''):             # <<<<<<<<<<<<<<
@@ -5297,21 +5305,21 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  */
     }
 
-    /* "mmfparser/bytereader.pyx":299
+    /* "mmfparser/bytereader.pyx":300
  *             if c in ('\x00', ''):
  *                 break
  *             data += c             # <<<<<<<<<<<<<<
  *         return data
  * 
  */
-    __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_data, __pyx_v_c); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 299, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_data, __pyx_v_c); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_5);
     __pyx_t_5 = 0;
   }
   __pyx_L5_break:;
 
-  /* "mmfparser/bytereader.pyx":300
+  /* "mmfparser/bytereader.pyx":301
  *                 break
  *             data += c
  *         return data             # <<<<<<<<<<<<<<
@@ -5319,12 +5327,12 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readString(struct 
  *     cpdef unicode readUnicodeString(self, size=None):
  */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyBytes_CheckExact(__pyx_v_data))||((__pyx_v_data) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_data)->tp_name), 0))) __PYX_ERR(0, 300, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_v_data))||((__pyx_v_data) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_data)->tp_name), 0))) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_INCREF(__pyx_v_data);
   __pyx_r = ((PyObject*)__pyx_v_data);
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":291
+  /* "mmfparser/bytereader.pyx":292
  *         return value
  * 
  *     cpdef bytes readString(self, size=None):             # <<<<<<<<<<<<<<
@@ -5378,7 +5386,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_31readString(PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readString") < 0)) __PYX_ERR(0, 291, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readString") < 0)) __PYX_ERR(0, 292, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -5392,7 +5400,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_31readString(PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("readString", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 291, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("readString", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 292, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.readString", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5417,7 +5425,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_30readString(stru
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.size = __pyx_v_size;
-  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readString(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readString(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5434,7 +5442,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_30readString(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":302
+/* "mmfparser/bytereader.pyx":303
  *         return data
  * 
  *     cpdef unicode readUnicodeString(self, size=None):             # <<<<<<<<<<<<<<
@@ -5469,7 +5477,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
     }
   }
 
-  /* "mmfparser/bytereader.pyx":303
+  /* "mmfparser/bytereader.pyx":304
  * 
  *     cpdef unicode readUnicodeString(self, size=None):
  *         if size is not None:             # <<<<<<<<<<<<<<
@@ -5480,7 +5488,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":304
+    /* "mmfparser/bytereader.pyx":305
  *     cpdef unicode readUnicodeString(self, size=None):
  *         if size is not None:
  *             return self.readReader(size*2).readUnicodeString()             # <<<<<<<<<<<<<<
@@ -5488,20 +5496,20 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  *         cdef int currentPosition = self.tell()
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = PyNumber_Multiply(__pyx_v_size, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Multiply(__pyx_v_size, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyInt_As_size_t(__pyx_t_3); if (unlikely((__pyx_t_4 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_As_size_t(__pyx_t_3); if (unlikely((__pyx_t_4 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = ((PyObject *)__pyx_f_9mmfparser_10bytereader_10ByteReader_readReader(__pyx_v_self, __pyx_t_4, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_3 = ((PyObject *)__pyx_f_9mmfparser_10bytereader_10ByteReader_readReader(__pyx_v_self, __pyx_t_4, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_3), 0, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_3), 0, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_r = ((PyObject*)__pyx_t_5);
     __pyx_t_5 = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":303
+    /* "mmfparser/bytereader.pyx":304
  * 
  *     cpdef unicode readUnicodeString(self, size=None):
  *         if size is not None:             # <<<<<<<<<<<<<<
@@ -5510,7 +5518,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
   }
 
-  /* "mmfparser/bytereader.pyx":306
+  /* "mmfparser/bytereader.pyx":307
  *             return self.readReader(size*2).readUnicodeString()
  * 
  *         cdef int currentPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -5519,7 +5527,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
   __pyx_v_currentPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-  /* "mmfparser/bytereader.pyx":308
+  /* "mmfparser/bytereader.pyx":309
  *         cdef int currentPosition = self.tell()
  *         cdef int endPosition
  *         data = ''             # <<<<<<<<<<<<<<
@@ -5529,7 +5537,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   __Pyx_INCREF(__pyx_kp_s_);
   __pyx_v_data = __pyx_kp_s_;
 
-  /* "mmfparser/bytereader.pyx":309
+  /* "mmfparser/bytereader.pyx":310
  *         cdef int endPosition
  *         data = ''
  *         while 1:             # <<<<<<<<<<<<<<
@@ -5538,7 +5546,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
   while (1) {
 
-    /* "mmfparser/bytereader.pyx":310
+    /* "mmfparser/bytereader.pyx":311
  *         data = ''
  *         while 1:
  *             endPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -5547,7 +5555,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
     __pyx_v_endPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser/bytereader.pyx":311
+    /* "mmfparser/bytereader.pyx":312
  *         while 1:
  *             endPosition = self.tell()
  *             c = self.read(2)             # <<<<<<<<<<<<<<
@@ -5556,23 +5564,23 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
     __pyx_t_6.__pyx_n = 1;
     __pyx_t_6.size = 2;
-    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 311, __pyx_L1_error)
+    __pyx_t_5 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 312, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "mmfparser/bytereader.pyx":312
+    /* "mmfparser/bytereader.pyx":313
  *             endPosition = self.tell()
  *             c = self.read(2)
  *             if len(c) != 2:             # <<<<<<<<<<<<<<
  *                 break
  *             if c == '\x00\x00':
  */
-    __pyx_t_7 = PyObject_Length(__pyx_v_c); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 312, __pyx_L1_error)
+    __pyx_t_7 = PyObject_Length(__pyx_v_c); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 313, __pyx_L1_error)
     __pyx_t_2 = ((__pyx_t_7 != 2) != 0);
     if (__pyx_t_2) {
 
-      /* "mmfparser/bytereader.pyx":313
+      /* "mmfparser/bytereader.pyx":314
  *             c = self.read(2)
  *             if len(c) != 2:
  *                 break             # <<<<<<<<<<<<<<
@@ -5581,7 +5589,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
       goto __pyx_L5_break;
 
-      /* "mmfparser/bytereader.pyx":312
+      /* "mmfparser/bytereader.pyx":313
  *             endPosition = self.tell()
  *             c = self.read(2)
  *             if len(c) != 2:             # <<<<<<<<<<<<<<
@@ -5590,17 +5598,17 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
     }
 
-    /* "mmfparser/bytereader.pyx":314
+    /* "mmfparser/bytereader.pyx":315
  *             if len(c) != 2:
  *                 break
  *             if c == '\x00\x00':             # <<<<<<<<<<<<<<
  *                 break
  *             data += c
  */
-    __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_c, __pyx_kp_s__3, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 314, __pyx_L1_error)
+    __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_c, __pyx_kp_s__3, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 315, __pyx_L1_error)
     if (__pyx_t_2) {
 
-      /* "mmfparser/bytereader.pyx":315
+      /* "mmfparser/bytereader.pyx":316
  *                 break
  *             if c == '\x00\x00':
  *                 break             # <<<<<<<<<<<<<<
@@ -5609,7 +5617,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
       goto __pyx_L5_break;
 
-      /* "mmfparser/bytereader.pyx":314
+      /* "mmfparser/bytereader.pyx":315
  *             if len(c) != 2:
  *                 break
  *             if c == '\x00\x00':             # <<<<<<<<<<<<<<
@@ -5618,21 +5626,21 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  */
     }
 
-    /* "mmfparser/bytereader.pyx":316
+    /* "mmfparser/bytereader.pyx":317
  *             if c == '\x00\x00':
  *                 break
  *             data += c             # <<<<<<<<<<<<<<
  * 
  *         return data.decode('utf-16-le')
  */
-    __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_data, __pyx_v_c); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 316, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_InPlaceAdd(__pyx_v_data, __pyx_v_c); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 317, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_5);
     __pyx_t_5 = 0;
   }
   __pyx_L5_break:;
 
-  /* "mmfparser/bytereader.pyx":318
+  /* "mmfparser/bytereader.pyx":319
  *             data += c
  * 
  *         return data.decode('utf-16-le')             # <<<<<<<<<<<<<<
@@ -5640,7 +5648,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
  *     cpdef tuple readColor(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_data, __pyx_n_s_decode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_data, __pyx_n_s_decode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_8 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -5654,15 +5662,15 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readUnicodeString(
   }
   __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_8, __pyx_kp_s_utf_16_le) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_s_utf_16_le);
   __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(PyUnicode_CheckExact(__pyx_t_5))||((__pyx_t_5) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_5)->tp_name), 0))) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_5))||((__pyx_t_5) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_5)->tp_name), 0))) __PYX_ERR(0, 319, __pyx_L1_error)
   __pyx_r = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":302
+  /* "mmfparser/bytereader.pyx":303
  *         return data
  * 
  *     cpdef unicode readUnicodeString(self, size=None):             # <<<<<<<<<<<<<<
@@ -5717,7 +5725,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_33readUnicodeStri
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readUnicodeString") < 0)) __PYX_ERR(0, 302, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "readUnicodeString") < 0)) __PYX_ERR(0, 303, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -5731,7 +5739,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_33readUnicodeStri
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("readUnicodeString", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 302, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("readUnicodeString", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 303, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.readUnicodeString", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5756,7 +5764,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_32readUnicodeStri
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.size = __pyx_v_size;
-  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readUnicodeString(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
+  __pyx_t_1 = __pyx_vtabptr_9mmfparser_10bytereader_ByteReader->readUnicodeString(__pyx_v_self, 1, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5773,7 +5781,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_32readUnicodeStri
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":320
+/* "mmfparser/bytereader.pyx":321
  *         return data.decode('utf-16-le')
  * 
  *     cpdef tuple readColor(self):             # <<<<<<<<<<<<<<
@@ -5800,7 +5808,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readColor", 0);
 
-  /* "mmfparser/bytereader.pyx":321
+  /* "mmfparser/bytereader.pyx":322
  * 
  *     cpdef tuple readColor(self):
  *         cdef int currentPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -5809,7 +5817,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   __pyx_v_currentPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-  /* "mmfparser/bytereader.pyx":322
+  /* "mmfparser/bytereader.pyx":323
  *     cpdef tuple readColor(self):
  *         cdef int currentPosition = self.tell()
  *         cdef short r = self.readByte(True)             # <<<<<<<<<<<<<<
@@ -5818,10 +5826,10 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = 1;
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 323, __pyx_L1_error)
   __pyx_v_r = __pyx_t_1;
 
-  /* "mmfparser/bytereader.pyx":323
+  /* "mmfparser/bytereader.pyx":324
  *         cdef int currentPosition = self.tell()
  *         cdef short r = self.readByte(True)
  *         cdef short g = self.readByte(True)             # <<<<<<<<<<<<<<
@@ -5830,10 +5838,10 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = 1;
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 324, __pyx_L1_error)
   __pyx_v_g = __pyx_t_1;
 
-  /* "mmfparser/bytereader.pyx":324
+  /* "mmfparser/bytereader.pyx":325
  *         cdef short r = self.readByte(True)
  *         cdef short g = self.readByte(True)
  *         cdef short b = self.readByte(True)             # <<<<<<<<<<<<<<
@@ -5842,10 +5850,10 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = 1;
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readByte(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(__pyx_t_1 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 325, __pyx_L1_error)
   __pyx_v_b = __pyx_t_1;
 
-  /* "mmfparser/bytereader.pyx":325
+  /* "mmfparser/bytereader.pyx":326
  *         cdef short g = self.readByte(True)
  *         cdef short b = self.readByte(True)
  *         self.skipBytes(1)             # <<<<<<<<<<<<<<
@@ -5854,7 +5862,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  */
   (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(__pyx_v_self, 1, 0));
 
-  /* "mmfparser/bytereader.pyx":326
+  /* "mmfparser/bytereader.pyx":327
  *         cdef short b = self.readByte(True)
  *         self.skipBytes(1)
  *         return (r, g, b)             # <<<<<<<<<<<<<<
@@ -5862,13 +5870,13 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
  *     cpdef ByteReader readReader(self, size_t size):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_r); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_short(__pyx_v_r); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 327, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_short(__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_short(__pyx_v_g); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 327, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_short(__pyx_v_b); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_short(__pyx_v_b); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 327, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 327, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -5883,7 +5891,7 @@ static PyObject *__pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(struct _
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":320
+  /* "mmfparser/bytereader.pyx":321
  *         return data.decode('utf-16-le')
  * 
  *     cpdef tuple readColor(self):             # <<<<<<<<<<<<<<
@@ -5927,7 +5935,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_34readColor(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readColor", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readColor(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5944,7 +5952,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_34readColor(struc
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":328
+/* "mmfparser/bytereader.pyx":329
  *         return (r, g, b)
  * 
  *     cpdef ByteReader readReader(self, size_t size):             # <<<<<<<<<<<<<<
@@ -5970,17 +5978,17 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readReader", 0);
 
-  /* "mmfparser/bytereader.pyx":332
+  /* "mmfparser/bytereader.pyx":333
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 data = self.read(size)
  *                 reader = ByteReader(data, 0, len(data))
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 333, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":333
+    /* "mmfparser/bytereader.pyx":334
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 data = self.read(size)             # <<<<<<<<<<<<<<
@@ -5989,22 +5997,22 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
     __pyx_t_3.__pyx_n = 1;
     __pyx_t_3.size = __pyx_v_size;
-    __pyx_t_2 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L1_error)
+    __pyx_t_2 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_v_data = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":334
+    /* "mmfparser/bytereader.pyx":335
  *             if self.python_fp:
  *                 data = self.read(size)
  *                 reader = ByteReader(data, 0, len(data))             # <<<<<<<<<<<<<<
  *                 return reader
  *         ELSE:
  */
-    __pyx_t_4 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 334, __pyx_L1_error)
-    __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_v_data); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 335, __pyx_L1_error)
+    __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 335, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_data);
     __Pyx_GIVEREF(__pyx_v_data);
@@ -6015,13 +6023,13 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
     __Pyx_GIVEREF(__pyx_t_2);
     PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9mmfparser_10bytereader_ByteReader), __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9mmfparser_10bytereader_ByteReader), __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_reader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":335
+    /* "mmfparser/bytereader.pyx":336
  *                 data = self.read(size)
  *                 reader = ByteReader(data, 0, len(data))
  *                 return reader             # <<<<<<<<<<<<<<
@@ -6033,7 +6041,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
     __pyx_r = __pyx_v_reader;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":332
+    /* "mmfparser/bytereader.pyx":333
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -6042,16 +6050,16 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
   }
 
-  /* "mmfparser/bytereader.pyx":342
+  /* "mmfparser/bytereader.pyx":343
  *                 return reader
  * 
  *         check_available(self, size)             # <<<<<<<<<<<<<<
  *         self.shared = True
  *         reader = ByteReader(self.original, self.pos + self.start, size)
  */
-  __pyx_t_6 = __pyx_f_9mmfparser_10bytereader_check_available(__pyx_v_self, __pyx_v_size); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_6 = __pyx_f_9mmfparser_10bytereader_check_available(__pyx_v_self, __pyx_v_size); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 343, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":343
+  /* "mmfparser/bytereader.pyx":344
  * 
  *         check_available(self, size)
  *         self.shared = True             # <<<<<<<<<<<<<<
@@ -6060,18 +6068,18 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
   __pyx_v_self->shared = 1;
 
-  /* "mmfparser/bytereader.pyx":344
+  /* "mmfparser/bytereader.pyx":345
  *         check_available(self, size)
  *         self.shared = True
  *         reader = ByteReader(self.original, self.pos + self.start, size)             # <<<<<<<<<<<<<<
  *         self.pos += size
  *         return reader
  */
-  __pyx_t_2 = __Pyx_PyInt_From_unsigned_int((__pyx_v_self->pos + __pyx_v_self->start)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_unsigned_int((__pyx_v_self->pos + __pyx_v_self->start)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(__pyx_v_self->original);
   __Pyx_GIVEREF(__pyx_v_self->original);
@@ -6082,13 +6090,13 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_5);
   __pyx_t_2 = 0;
   __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9mmfparser_10bytereader_ByteReader), __pyx_t_7, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_9mmfparser_10bytereader_ByteReader), __pyx_t_7, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_reader = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "mmfparser/bytereader.pyx":345
+  /* "mmfparser/bytereader.pyx":346
  *         self.shared = True
  *         reader = ByteReader(self.original, self.pos + self.start, size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -6097,7 +6105,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":346
+  /* "mmfparser/bytereader.pyx":347
  *         reader = ByteReader(self.original, self.pos + self.start, size)
  *         self.pos += size
  *         return reader             # <<<<<<<<<<<<<<
@@ -6109,7 +6117,7 @@ static struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_f_9mmfparser_1
   __pyx_r = __pyx_v_reader;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":328
+  /* "mmfparser/bytereader.pyx":329
  *         return (r, g, b)
  * 
  *     cpdef ByteReader readReader(self, size_t size):             # <<<<<<<<<<<<<<
@@ -6143,7 +6151,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_37readReader(PyOb
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("readReader (wrapper)", 0);
   assert(__pyx_arg_size); {
-    __pyx_v_size = __Pyx_PyInt_As_size_t(__pyx_arg_size); if (unlikely((__pyx_v_size == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 328, __pyx_L3_error)
+    __pyx_v_size = __Pyx_PyInt_As_size_t(__pyx_arg_size); if (unlikely((__pyx_v_size == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6167,7 +6175,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_36readReader(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readReader", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_9mmfparser_10bytereader_10ByteReader_readReader(__pyx_v_self, __pyx_v_size, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_9mmfparser_10bytereader_10ByteReader_readReader(__pyx_v_self, __pyx_v_size, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6184,7 +6192,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_36readReader(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":348
+/* "mmfparser/bytereader.pyx":349
  *         return reader
  * 
  *     def readIntString(self):             # <<<<<<<<<<<<<<
@@ -6218,7 +6226,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("readIntString", 0);
 
-  /* "mmfparser/bytereader.pyx":349
+  /* "mmfparser/bytereader.pyx":350
  * 
  *     def readIntString(self):
  *         cdef size_t length = self.readInt(True)             # <<<<<<<<<<<<<<
@@ -6227,13 +6235,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.asUnsigned = 1;
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_readInt(__pyx_v_self, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_t_1); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_size_t(__pyx_t_1); if (unlikely((__pyx_t_3 == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_length = __pyx_t_3;
 
-  /* "mmfparser/bytereader.pyx":350
+  /* "mmfparser/bytereader.pyx":351
  *     def readIntString(self):
  *         cdef size_t length = self.readInt(True)
  *         return self.read(length)             # <<<<<<<<<<<<<<
@@ -6243,13 +6251,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_4.__pyx_n = 1;
   __pyx_t_4.size = __pyx_v_length;
-  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9mmfparser_10bytereader_10ByteReader_read(__pyx_v_self, 0, &__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":348
+  /* "mmfparser/bytereader.pyx":349
  *         return reader
  * 
  *     def readIntString(self):             # <<<<<<<<<<<<<<
@@ -6268,7 +6276,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_38readIntString(s
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":352
+/* "mmfparser/bytereader.pyx":353
  *         return self.read(length)
  * 
  *     cpdef bint write(self, bytes data):             # <<<<<<<<<<<<<<
@@ -6293,7 +6301,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser/bytereader.pyx":353
+  /* "mmfparser/bytereader.pyx":354
  * 
  *     cpdef bint write(self, bytes data):
  *         cdef size_t size = len(data)             # <<<<<<<<<<<<<<
@@ -6302,12 +6310,12 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   if (unlikely(__pyx_v_data == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 353, __pyx_L1_error)
+    __PYX_ERR(0, 354, __pyx_L1_error)
   }
-  __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_1 = PyBytes_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 354, __pyx_L1_error)
   __pyx_v_size = __pyx_t_1;
 
-  /* "mmfparser/bytereader.pyx":354
+  /* "mmfparser/bytereader.pyx":355
  *     cpdef bint write(self, bytes data):
  *         cdef size_t size = len(data)
  *         if size == 0:             # <<<<<<<<<<<<<<
@@ -6317,7 +6325,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_t_2 = ((__pyx_v_size == 0) != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":355
+    /* "mmfparser/bytereader.pyx":356
  *         cdef size_t size = len(data)
  *         if size == 0:
  *             return False             # <<<<<<<<<<<<<<
@@ -6327,7 +6335,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":354
+    /* "mmfparser/bytereader.pyx":355
  *     cpdef bint write(self, bytes data):
  *         cdef size_t size = len(data)
  *         if size == 0:             # <<<<<<<<<<<<<<
@@ -6336,24 +6344,24 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   }
 
-  /* "mmfparser/bytereader.pyx":359
+  /* "mmfparser/bytereader.pyx":360
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
  *                 self.python_fp.write(data)
  *                 return True
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 359, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 360, __pyx_L1_error)
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":360
+    /* "mmfparser/bytereader.pyx":361
  *         IF IS_PYPY:
  *             if self.python_fp:
  *                 self.python_fp.write(data)             # <<<<<<<<<<<<<<
  *                 return True
  *         ELSE:
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -6367,12 +6375,12 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_data) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_data);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 360, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mmfparser/bytereader.pyx":361
+    /* "mmfparser/bytereader.pyx":362
  *             if self.python_fp:
  *                 self.python_fp.write(data)
  *                 return True             # <<<<<<<<<<<<<<
@@ -6382,7 +6390,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":359
+    /* "mmfparser/bytereader.pyx":360
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
@@ -6391,7 +6399,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   }
 
-  /* "mmfparser/bytereader.pyx":367
+  /* "mmfparser/bytereader.pyx":368
  *                 return True
  * 
  *         ensure_write_size(self, size)             # <<<<<<<<<<<<<<
@@ -6400,7 +6408,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   __pyx_f_9mmfparser_10bytereader_ensure_write_size(__pyx_v_self, __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":368
+  /* "mmfparser/bytereader.pyx":369
  * 
  *         ensure_write_size(self, size)
  *         c_data = data             # <<<<<<<<<<<<<<
@@ -6409,12 +6417,12 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   if (unlikely(__pyx_v_data == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 368, __pyx_L1_error)
+    __PYX_ERR(0, 369, __pyx_L1_error)
   }
-  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_data); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_AsWritableString(__pyx_v_data); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 369, __pyx_L1_error)
   __pyx_v_c_data = __pyx_t_6;
 
-  /* "mmfparser/bytereader.pyx":369
+  /* "mmfparser/bytereader.pyx":370
  *         ensure_write_size(self, size)
  *         c_data = data
  *         memcpy((self.buffer + self.pos), c_data, size)             # <<<<<<<<<<<<<<
@@ -6423,7 +6431,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   (void)(memcpy((__pyx_v_self->buffer + __pyx_v_self->pos), __pyx_v_c_data, __pyx_v_size));
 
-  /* "mmfparser/bytereader.pyx":370
+  /* "mmfparser/bytereader.pyx":371
  *         c_data = data
  *         memcpy((self.buffer + self.pos), c_data, size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -6432,7 +6440,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":371
+  /* "mmfparser/bytereader.pyx":372
  *         memcpy((self.buffer + self.pos), c_data, size)
  *         self.pos += size
  *         return True             # <<<<<<<<<<<<<<
@@ -6442,7 +6450,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write(struct __pyx_obj_9
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":352
+  /* "mmfparser/bytereader.pyx":353
  *         return self.read(length)
  * 
  *     cpdef bint write(self, bytes data):             # <<<<<<<<<<<<<<
@@ -6471,7 +6479,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_41write(PyObject 
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("write (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 352, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyBytes_Type), 1, "data", 1))) __PYX_ERR(0, 353, __pyx_L1_error)
   __pyx_r = __pyx_pf_9mmfparser_10bytereader_10ByteReader_40write(((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_self), ((PyObject*)__pyx_v_data));
 
   /* function exit code */
@@ -6492,7 +6500,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_40write(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, __pyx_v_data, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, __pyx_v_data, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6509,7 +6517,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_40write(struct __
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":373
+/* "mmfparser/bytereader.pyx":374
  *         return True
  * 
  *     cpdef bint write_size(self, char * data, size_t size):             # <<<<<<<<<<<<<<
@@ -6527,12 +6535,13 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write_size", 0);
 
-  /* "mmfparser/bytereader.pyx":374
+  /* "mmfparser/bytereader.pyx":375
  * 
  *     cpdef bint write_size(self, char * data, size_t size):
  *         if size == 0:             # <<<<<<<<<<<<<<
@@ -6542,7 +6551,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   __pyx_t_1 = ((__pyx_v_size == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":375
+    /* "mmfparser/bytereader.pyx":376
  *     cpdef bint write_size(self, char * data, size_t size):
  *         if size == 0:
  *             return False             # <<<<<<<<<<<<<<
@@ -6552,7 +6561,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":374
+    /* "mmfparser/bytereader.pyx":375
  * 
  *     cpdef bint write_size(self, char * data, size_t size):
  *         if size == 0:             # <<<<<<<<<<<<<<
@@ -6561,64 +6570,67 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   }
 
-  /* "mmfparser/bytereader.pyx":378
+  /* "mmfparser/bytereader.pyx":379
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
- *                 self.python_fp.write(buffer(data, 0, size))
+ *                 self.python_fp.write(memoryview(data, 0, size))
  *                 return True
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 379, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":379
+    /* "mmfparser/bytereader.pyx":380
  *         IF IS_PYPY:
  *             if self.python_fp:
- *                 self.python_fp.write(buffer(data, 0, size))             # <<<<<<<<<<<<<<
+ *                 self.python_fp.write(memoryview(data, 0, size))             # <<<<<<<<<<<<<<
  *                 return True
  *         ELSE:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 379, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 379, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyBytes_FromString(__pyx_v_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 379, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4);
+    __pyx_t_7 = PyTuple_New(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_GIVEREF(__pyx_t_5);
+    PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5);
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_GIVEREF(__pyx_int_0);
-    PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_int_0);
-    __Pyx_GIVEREF(__pyx_t_5);
-    PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_5);
-    __pyx_t_4 = 0;
+    PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_int_0);
+    __Pyx_GIVEREF(__pyx_t_6);
+    PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_6);
     __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_builtin_buffer, __pyx_t_6, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 379, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = NULL;
+    __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_6)) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_7)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_7);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_3, function);
       }
     }
-    __pyx_t_2 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_6, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5);
-    __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
+    __pyx_t_2 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":380
+    /* "mmfparser/bytereader.pyx":381
  *             if self.python_fp:
- *                 self.python_fp.write(buffer(data, 0, size))
+ *                 self.python_fp.write(memoryview(data, 0, size))
  *                 return True             # <<<<<<<<<<<<<<
  *         ELSE:
  *             if self.fp != NULL:
@@ -6626,16 +6638,16 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
     __pyx_r = 1;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":378
+    /* "mmfparser/bytereader.pyx":379
  * 
  *         IF IS_PYPY:
  *             if self.python_fp:             # <<<<<<<<<<<<<<
- *                 self.python_fp.write(buffer(data, 0, size))
+ *                 self.python_fp.write(memoryview(data, 0, size))
  *                 return True
  */
   }
 
-  /* "mmfparser/bytereader.pyx":386
+  /* "mmfparser/bytereader.pyx":387
  *                 return True
  * 
  *         ensure_write_size(self, size)             # <<<<<<<<<<<<<<
@@ -6644,7 +6656,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   __pyx_f_9mmfparser_10bytereader_ensure_write_size(__pyx_v_self, __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":387
+  /* "mmfparser/bytereader.pyx":388
  * 
  *         ensure_write_size(self, size)
  *         memcpy((self.buffer + self.pos), data, size)             # <<<<<<<<<<<<<<
@@ -6653,7 +6665,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   (void)(memcpy((__pyx_v_self->buffer + __pyx_v_self->pos), __pyx_v_data, __pyx_v_size));
 
-  /* "mmfparser/bytereader.pyx":388
+  /* "mmfparser/bytereader.pyx":389
  *         ensure_write_size(self, size)
  *         memcpy((self.buffer + self.pos), data, size)
  *         self.pos += size             # <<<<<<<<<<<<<<
@@ -6662,7 +6674,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
  */
   __pyx_v_self->pos = (__pyx_v_self->pos + __pyx_v_size);
 
-  /* "mmfparser/bytereader.pyx":389
+  /* "mmfparser/bytereader.pyx":390
  *         memcpy((self.buffer + self.pos), data, size)
  *         self.pos += size
  *         return True             # <<<<<<<<<<<<<<
@@ -6672,7 +6684,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   __pyx_r = 1;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":373
+  /* "mmfparser/bytereader.pyx":374
  *         return True
  * 
  *     cpdef bint write_size(self, char * data, size_t size):             # <<<<<<<<<<<<<<
@@ -6687,6 +6699,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(struct __pyx_
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
   __Pyx_WriteUnraisable("mmfparser.bytereader.ByteReader.write_size", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
@@ -6728,11 +6741,11 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_43write_size(PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_size)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("write_size", 1, 2, 2, 1); __PYX_ERR(0, 373, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("write_size", 1, 2, 2, 1); __PYX_ERR(0, 374, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "write_size") < 0)) __PYX_ERR(0, 373, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "write_size") < 0)) __PYX_ERR(0, 374, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -6740,12 +6753,12 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_43write_size(PyOb
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_data = __Pyx_PyObject_AsWritableString(values[0]); if (unlikely((!__pyx_v_data) && PyErr_Occurred())) __PYX_ERR(0, 373, __pyx_L3_error)
-    __pyx_v_size = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_size == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 373, __pyx_L3_error)
+    __pyx_v_data = __Pyx_PyObject_AsWritableString(values[0]); if (unlikely((!__pyx_v_data) && PyErr_Occurred())) __PYX_ERR(0, 374, __pyx_L3_error)
+    __pyx_v_size = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_size == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 374, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("write_size", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 373, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("write_size", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 374, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.write_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6767,7 +6780,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_42write_size(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write_size", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(__pyx_v_self, __pyx_v_data, __pyx_v_size, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_write_size(__pyx_v_self, __pyx_v_data, __pyx_v_size, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6784,7 +6797,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_42write_size(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":391
+/* "mmfparser/bytereader.pyx":392
  *         return True
  * 
  *     def writeByte(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -6831,7 +6844,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_45writeByte(PyObj
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeByte") < 0)) __PYX_ERR(0, 391, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeByte") < 0)) __PYX_ERR(0, 392, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -6847,7 +6860,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_45writeByte(PyObj
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("writeByte", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 391, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("writeByte", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 392, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.writeByte", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -6875,21 +6888,21 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeByte", 0);
 
-  /* "mmfparser/bytereader.pyx":392
+  /* "mmfparser/bytereader.pyx":393
  * 
  *     def writeByte(self, value, asUnsigned = False):
  *         format = UBYTE if asUnsigned else BYTE             # <<<<<<<<<<<<<<
  *         self.writeStruct(format, value)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_asUnsigned); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 392, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_asUnsigned); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 393, __pyx_L1_error)
   if (__pyx_t_2) {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_UBYTE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_UBYTE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __pyx_t_3;
     __pyx_t_3 = 0;
   } else {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_BYTE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_BYTE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -6897,14 +6910,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   __pyx_v_format = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":393
+  /* "mmfparser/bytereader.pyx":394
  *     def writeByte(self, value, asUnsigned = False):
  *         format = UBYTE if asUnsigned else BYTE
  *         self.writeStruct(format, value)             # <<<<<<<<<<<<<<
  * 
  *     def writeShort(self, value, asUnsigned = False):
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -6921,7 +6934,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_format, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -6929,13 +6942,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_format, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 394, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -6946,14 +6959,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
     __Pyx_INCREF(__pyx_v_value);
     __Pyx_GIVEREF(__pyx_v_value);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_value);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":391
+  /* "mmfparser/bytereader.pyx":392
  *         return True
  * 
  *     def writeByte(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -6978,7 +6991,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_44writeByte(struc
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":395
+/* "mmfparser/bytereader.pyx":396
  *         self.writeStruct(format, value)
  * 
  *     def writeShort(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -7025,7 +7038,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_47writeShort(PyOb
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeShort") < 0)) __PYX_ERR(0, 395, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeShort") < 0)) __PYX_ERR(0, 396, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7041,7 +7054,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_47writeShort(PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("writeShort", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 395, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("writeShort", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 396, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.writeShort", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7069,21 +7082,21 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeShort", 0);
 
-  /* "mmfparser/bytereader.pyx":396
+  /* "mmfparser/bytereader.pyx":397
  * 
  *     def writeShort(self, value, asUnsigned = False):
  *         format = USHORT if asUnsigned else SHORT             # <<<<<<<<<<<<<<
  *         self.writeStruct(format, value)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_asUnsigned); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_asUnsigned); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 397, __pyx_L1_error)
   if (__pyx_t_2) {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_USHORT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_USHORT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __pyx_t_3;
     __pyx_t_3 = 0;
   } else {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_SHORT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_SHORT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -7091,14 +7104,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   __pyx_v_format = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":397
+  /* "mmfparser/bytereader.pyx":398
  *     def writeShort(self, value, asUnsigned = False):
  *         format = USHORT if asUnsigned else SHORT
  *         self.writeStruct(format, value)             # <<<<<<<<<<<<<<
  * 
  *     def writeFloat(self, value):
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -7115,7 +7128,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_format, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -7123,13 +7136,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_format, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -7140,14 +7153,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
     __Pyx_INCREF(__pyx_v_value);
     __Pyx_GIVEREF(__pyx_v_value);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_value);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":395
+  /* "mmfparser/bytereader.pyx":396
  *         self.writeStruct(format, value)
  * 
  *     def writeShort(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -7172,7 +7185,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_46writeShort(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":399
+/* "mmfparser/bytereader.pyx":400
  *         self.writeStruct(format, value)
  * 
  *     def writeFloat(self, value):             # <<<<<<<<<<<<<<
@@ -7207,16 +7220,16 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeFloat", 0);
 
-  /* "mmfparser/bytereader.pyx":400
+  /* "mmfparser/bytereader.pyx":401
  * 
  *     def writeFloat(self, value):
  *         self.writeStruct(FLOAT, value)             # <<<<<<<<<<<<<<
  * 
  *     def writeDouble(self, value):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 400, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_FLOAT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 400, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_FLOAT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -7233,7 +7246,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7242,14 +7255,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 401, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -7260,14 +7273,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
     __Pyx_GIVEREF(__pyx_v_value);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_value);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":399
+  /* "mmfparser/bytereader.pyx":400
  *         self.writeStruct(format, value)
  * 
  *     def writeFloat(self, value):             # <<<<<<<<<<<<<<
@@ -7292,7 +7305,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_48writeFloat(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":402
+/* "mmfparser/bytereader.pyx":403
  *         self.writeStruct(FLOAT, value)
  * 
  *     def writeDouble(self, value):             # <<<<<<<<<<<<<<
@@ -7327,16 +7340,16 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeDouble", 0);
 
-  /* "mmfparser/bytereader.pyx":403
+  /* "mmfparser/bytereader.pyx":404
  * 
  *     def writeDouble(self, value):
  *         self.writeStruct(DOUBLE, value)             # <<<<<<<<<<<<<<
  * 
  *     def writeInt(self, value, asUnsigned = False):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 403, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 404, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DOUBLE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DOUBLE); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -7353,7 +7366,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7362,14 +7375,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 403, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -7380,14 +7393,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
     __Pyx_GIVEREF(__pyx_v_value);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_value);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":402
+  /* "mmfparser/bytereader.pyx":403
  *         self.writeStruct(FLOAT, value)
  * 
  *     def writeDouble(self, value):             # <<<<<<<<<<<<<<
@@ -7412,7 +7425,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_50writeDouble(str
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":405
+/* "mmfparser/bytereader.pyx":406
  *         self.writeStruct(DOUBLE, value)
  * 
  *     def writeInt(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -7459,7 +7472,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_53writeInt(PyObje
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeInt") < 0)) __PYX_ERR(0, 405, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeInt") < 0)) __PYX_ERR(0, 406, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7475,7 +7488,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_53writeInt(PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("writeInt", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 405, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("writeInt", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 406, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.writeInt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7503,21 +7516,21 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeInt", 0);
 
-  /* "mmfparser/bytereader.pyx":406
+  /* "mmfparser/bytereader.pyx":407
  * 
  *     def writeInt(self, value, asUnsigned = False):
  *         format = UINT if asUnsigned else INT             # <<<<<<<<<<<<<<
  *         self.writeStruct(format, value)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_asUnsigned); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 406, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_asUnsigned); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 407, __pyx_L1_error)
   if (__pyx_t_2) {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_UINT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 406, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_UINT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 407, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __pyx_t_3;
     __pyx_t_3 = 0;
   } else {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_INT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 406, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_INT); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 407, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_1 = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -7525,14 +7538,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   __pyx_v_format = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":407
+  /* "mmfparser/bytereader.pyx":408
  *     def writeInt(self, value, asUnsigned = False):
  *         format = UINT if asUnsigned else INT
  *         self.writeStruct(format, value)             # <<<<<<<<<<<<<<
  * 
  *     def writeString(self, value, size_t size = -1):
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 407, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeStruct); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 408, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -7549,7 +7562,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_format, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -7557,13 +7570,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_format, __pyx_v_value};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -7574,14 +7587,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
     __Pyx_INCREF(__pyx_v_value);
     __Pyx_GIVEREF(__pyx_v_value);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_value);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":405
+  /* "mmfparser/bytereader.pyx":406
  *         self.writeStruct(DOUBLE, value)
  * 
  *     def writeInt(self, value, asUnsigned = False):             # <<<<<<<<<<<<<<
@@ -7606,7 +7619,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_52writeInt(struct
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":409
+/* "mmfparser/bytereader.pyx":410
  *         self.writeStruct(format, value)
  * 
  *     def writeString(self, value, size_t size = -1):             # <<<<<<<<<<<<<<
@@ -7652,7 +7665,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_55writeString(PyO
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeString") < 0)) __PYX_ERR(0, 409, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "writeString") < 0)) __PYX_ERR(0, 410, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7665,14 +7678,14 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_55writeString(PyO
     }
     __pyx_v_value = values[0];
     if (values[1]) {
-      __pyx_v_size = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_size == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 409, __pyx_L3_error)
+      __pyx_v_size = __Pyx_PyInt_As_size_t(values[1]); if (unlikely((__pyx_v_size == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 410, __pyx_L3_error)
     } else {
       __pyx_v_size = ((size_t)-1L);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("writeString", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 409, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("writeString", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 410, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.writeString", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7702,7 +7715,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeString", 0);
 
-  /* "mmfparser/bytereader.pyx":411
+  /* "mmfparser/bytereader.pyx":412
  *     def writeString(self, value, size_t size = -1):
  *         cdef unsigned int currentPosition
  *         if size == -1:             # <<<<<<<<<<<<<<
@@ -7712,20 +7725,20 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   __pyx_t_1 = ((__pyx_v_size == -1L) != 0);
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":412
+    /* "mmfparser/bytereader.pyx":413
  *         cdef unsigned int currentPosition
  *         if size == -1:
  *             self.write(value + "\x00")             # <<<<<<<<<<<<<<
  *         else:
  *             for i in range(size):
  */
-    __pyx_t_2 = PyNumber_Add(__pyx_v_value, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 412, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_v_value, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 413, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 412, __pyx_L1_error)
+    if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 413, __pyx_L1_error)
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_2), 0));
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":411
+    /* "mmfparser/bytereader.pyx":412
  *     def writeString(self, value, size_t size = -1):
  *         cdef unsigned int currentPosition
  *         if size == -1:             # <<<<<<<<<<<<<<
@@ -7735,7 +7748,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
     goto __pyx_L3;
   }
 
-  /* "mmfparser/bytereader.pyx":414
+  /* "mmfparser/bytereader.pyx":415
  *             self.write(value + "\x00")
  *         else:
  *             for i in range(size):             # <<<<<<<<<<<<<<
@@ -7748,14 +7761,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
     for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
       __pyx_v_i = __pyx_t_5;
 
-      /* "mmfparser/bytereader.pyx":415
+      /* "mmfparser/bytereader.pyx":416
  *         else:
  *             for i in range(size):
  *                 self.writeByte(0)             # <<<<<<<<<<<<<<
  *             currentPosition = self.tell()
  *             self.rewind(size)
  */
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 415, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 416, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __pyx_t_7 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -7769,13 +7782,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
       }
       __pyx_t_2 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_7, __pyx_int_0) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_int_0);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
 
-    /* "mmfparser/bytereader.pyx":416
+    /* "mmfparser/bytereader.pyx":417
  *             for i in range(size):
  *                 self.writeByte(0)
  *             currentPosition = self.tell()             # <<<<<<<<<<<<<<
@@ -7784,7 +7797,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
  */
     __pyx_v_currentPosition = __pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0);
 
-    /* "mmfparser/bytereader.pyx":417
+    /* "mmfparser/bytereader.pyx":418
  *                 self.writeByte(0)
  *             currentPosition = self.tell()
  *             self.rewind(size)             # <<<<<<<<<<<<<<
@@ -7793,20 +7806,20 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
  */
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(__pyx_v_self, __pyx_v_size, 0));
 
-    /* "mmfparser/bytereader.pyx":418
+    /* "mmfparser/bytereader.pyx":419
  *             currentPosition = self.tell()
  *             self.rewind(size)
  *             self.write(value[:size-1])             # <<<<<<<<<<<<<<
  *             self.seek(currentPosition)
  * 
  */
-    __pyx_t_2 = __Pyx_PyObject_GetSlice(__pyx_v_value, 0, (__pyx_v_size - 1), NULL, NULL, NULL, 0, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetSlice(__pyx_v_value, 0, (__pyx_v_size - 1), NULL, NULL, NULL, 0, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 418, __pyx_L1_error)
+    if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 419, __pyx_L1_error)
     (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_2), 0));
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":419
+    /* "mmfparser/bytereader.pyx":420
  *             self.rewind(size)
  *             self.write(value[:size-1])
  *             self.seek(currentPosition)             # <<<<<<<<<<<<<<
@@ -7817,7 +7830,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   }
   __pyx_L3:;
 
-  /* "mmfparser/bytereader.pyx":409
+  /* "mmfparser/bytereader.pyx":410
  *         self.writeStruct(format, value)
  * 
  *     def writeString(self, value, size_t size = -1):             # <<<<<<<<<<<<<<
@@ -7840,7 +7853,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_54writeString(str
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":421
+/* "mmfparser/bytereader.pyx":422
  *             self.seek(currentPosition)
  * 
  *     def writeUnicodeString(self, value):             # <<<<<<<<<<<<<<
@@ -7872,14 +7885,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_56writeUnicodeStr
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeUnicodeString", 0);
 
-  /* "mmfparser/bytereader.pyx":422
+  /* "mmfparser/bytereader.pyx":423
  * 
  *     def writeUnicodeString(self, value):
  *         self.write(value.encode('utf-16-le') + "\x00\x00")             # <<<<<<<<<<<<<<
  * 
  *     def writeColor(self, colorTuple):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_value, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_value, __pyx_n_s_encode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7893,17 +7906,17 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_56writeUnicodeStr
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_s_utf_16_le) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_utf_16_le);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 422, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 422, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 423, __pyx_L1_error)
   (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_2), 0));
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":421
+  /* "mmfparser/bytereader.pyx":422
  *             self.seek(currentPosition)
  * 
  *     def writeUnicodeString(self, value):             # <<<<<<<<<<<<<<
@@ -7926,7 +7939,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_56writeUnicodeStr
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":424
+/* "mmfparser/bytereader.pyx":425
  *         self.write(value.encode('utf-16-le') + "\x00\x00")
  * 
  *     def writeColor(self, colorTuple):             # <<<<<<<<<<<<<<
@@ -7964,7 +7977,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeColor", 0);
 
-  /* "mmfparser/bytereader.pyx":425
+  /* "mmfparser/bytereader.pyx":426
  * 
  *     def writeColor(self, colorTuple):
  *         r, g, b = colorTuple             # <<<<<<<<<<<<<<
@@ -7977,7 +7990,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 425, __pyx_L1_error)
+      __PYX_ERR(0, 426, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -7993,16 +8006,16 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     __Pyx_INCREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_t_3);
     #else
-    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 425, __pyx_L1_error)
+    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 426, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 425, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 426, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_4 = PyObject_GetIter(__pyx_v_colorTuple); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
+    __pyx_t_4 = PyObject_GetIter(__pyx_v_colorTuple); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 426, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
     index = 0; __pyx_t_1 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_1)) goto __pyx_L3_unpacking_failed;
@@ -8011,7 +8024,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     __Pyx_GOTREF(__pyx_t_2);
     index = 2; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_3);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < 0) __PYX_ERR(0, 425, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 3) < 0) __PYX_ERR(0, 426, __pyx_L1_error)
     __pyx_t_5 = NULL;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     goto __pyx_L4_unpacking_done;
@@ -8019,7 +8032,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 425, __pyx_L1_error)
+    __PYX_ERR(0, 426, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_r = __pyx_t_1;
@@ -8029,14 +8042,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   __pyx_v_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":426
+  /* "mmfparser/bytereader.pyx":427
  *     def writeColor(self, colorTuple):
  *         r, g, b = colorTuple
  *         self.writeByte(r, True)             # <<<<<<<<<<<<<<
  *         self.writeByte(g, True)
  *         self.writeByte(b, True)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 426, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   __pyx_t_6 = 0;
@@ -8053,7 +8066,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_r, Py_True};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -8061,13 +8074,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_r, Py_True};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_4 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -8078,21 +8091,21 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     __Pyx_INCREF(Py_True);
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_6, Py_True);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 426, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":427
+  /* "mmfparser/bytereader.pyx":428
  *         r, g, b = colorTuple
  *         self.writeByte(r, True)
  *         self.writeByte(g, True)             # <<<<<<<<<<<<<<
  *         self.writeByte(b, True)
  *         self.writeByte(0)
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 428, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
@@ -8109,7 +8122,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_g, Py_True};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -8117,13 +8130,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_g, Py_True};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_1 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -8134,21 +8147,21 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     __Pyx_INCREF(Py_True);
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_6, Py_True);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":428
+  /* "mmfparser/bytereader.pyx":429
  *         self.writeByte(r, True)
  *         self.writeByte(g, True)
  *         self.writeByte(b, True)             # <<<<<<<<<<<<<<
  *         self.writeByte(0)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   __pyx_t_6 = 0;
@@ -8165,7 +8178,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_b, Py_True};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -8173,13 +8186,13 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_b, Py_True};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_4 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -8190,21 +8203,21 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
     __Pyx_INCREF(Py_True);
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_6, Py_True);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":429
+  /* "mmfparser/bytereader.pyx":430
  *         self.writeByte(g, True)
  *         self.writeByte(b, True)
  *         self.writeByte(0)             # <<<<<<<<<<<<<<
  * 
  *     def writeFormat(self, format, *values):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeByte); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8218,12 +8231,12 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   }
   __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_int_0) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_int_0);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 429, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "mmfparser/bytereader.pyx":424
+  /* "mmfparser/bytereader.pyx":425
  *         self.write(value.encode('utf-16-le') + "\x00\x00")
  * 
  *     def writeColor(self, colorTuple):             # <<<<<<<<<<<<<<
@@ -8250,7 +8263,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_58writeColor(stru
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":431
+/* "mmfparser/bytereader.pyx":432
  *         self.writeByte(0)
  * 
  *     def writeFormat(self, format, *values):             # <<<<<<<<<<<<<<
@@ -8299,7 +8312,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_61writeFormat(PyO
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t used_pos_args = (pos_args < 1) ? pos_args : 1;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "writeFormat") < 0)) __PYX_ERR(0, 431, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "writeFormat") < 0)) __PYX_ERR(0, 432, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) < 1) {
       goto __pyx_L5_argtuple_error;
@@ -8310,7 +8323,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_61writeFormat(PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("writeFormat", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 431, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("writeFormat", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 432, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_values); __pyx_v_values = 0;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.writeFormat", __pyx_clineno, __pyx_lineno, __pyx_filename);
@@ -8336,35 +8349,35 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_60writeFormat(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeFormat", 0);
 
-  /* "mmfparser/bytereader.pyx":432
+  /* "mmfparser/bytereader.pyx":433
  * 
  *     def writeFormat(self, format, *values):
  *         self.write(struct.pack(format, *values))             # <<<<<<<<<<<<<<
  * 
  *     def writeStruct(self, structType, *values):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pack); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 433, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_format);
   __Pyx_GIVEREF(__pyx_v_format);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_format);
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_v_values); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_v_values); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 433, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 432, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 433, __pyx_L1_error)
   (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_1), 0));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":431
+  /* "mmfparser/bytereader.pyx":432
  *         self.writeByte(0)
  * 
  *     def writeFormat(self, format, *values):             # <<<<<<<<<<<<<<
@@ -8387,7 +8400,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_60writeFormat(str
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":434
+/* "mmfparser/bytereader.pyx":435
  *         self.write(struct.pack(format, *values))
  * 
  *     def writeStruct(self, structType, *values):             # <<<<<<<<<<<<<<
@@ -8436,7 +8449,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_63writeStruct(PyO
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t used_pos_args = (pos_args < 1) ? pos_args : 1;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "writeStruct") < 0)) __PYX_ERR(0, 434, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "writeStruct") < 0)) __PYX_ERR(0, 435, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) < 1) {
       goto __pyx_L5_argtuple_error;
@@ -8447,7 +8460,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_63writeStruct(PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("writeStruct", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 434, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("writeStruct", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 435, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_values); __pyx_v_values = 0;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.writeStruct", __pyx_clineno, __pyx_lineno, __pyx_filename);
@@ -8472,23 +8485,23 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_62writeStruct(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeStruct", 0);
 
-  /* "mmfparser/bytereader.pyx":435
+  /* "mmfparser/bytereader.pyx":436
  * 
  *     def writeStruct(self, structType, *values):
  *         self.write(structType.pack(*values))             # <<<<<<<<<<<<<<
  * 
  *     def writeReader(self, reader):
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_structType, __pyx_n_s_pack); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_structType, __pyx_n_s_pack); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 436, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_v_values, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_v_values, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 436, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 435, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 436, __pyx_L1_error)
   (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_2), 0));
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":434
+  /* "mmfparser/bytereader.pyx":435
  *         self.write(struct.pack(format, *values))
  * 
  *     def writeStruct(self, structType, *values):             # <<<<<<<<<<<<<<
@@ -8510,7 +8523,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_62writeStruct(str
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":437
+/* "mmfparser/bytereader.pyx":438
  *         self.write(structType.pack(*values))
  * 
  *     def writeReader(self, reader):             # <<<<<<<<<<<<<<
@@ -8542,14 +8555,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_64writeReader(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeReader", 0);
 
-  /* "mmfparser/bytereader.pyx":438
+  /* "mmfparser/bytereader.pyx":439
  * 
  *     def writeReader(self, reader):
  *         self.write(reader.data())             # <<<<<<<<<<<<<<
  * 
  *     def writeIntString(self, value):
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_data); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_reader, __pyx_n_s_data); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 439, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8563,14 +8576,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_64writeReader(str
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 438, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 438, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 439, __pyx_L1_error)
   (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_t_1), 0));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":437
+  /* "mmfparser/bytereader.pyx":438
  *         self.write(structType.pack(*values))
  * 
  *     def writeReader(self, reader):             # <<<<<<<<<<<<<<
@@ -8593,7 +8606,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_64writeReader(str
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":440
+/* "mmfparser/bytereader.pyx":441
  *         self.write(reader.data())
  * 
  *     def writeIntString(self, value):             # <<<<<<<<<<<<<<
@@ -8629,17 +8642,17 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("writeIntString", 0);
 
-  /* "mmfparser/bytereader.pyx":441
+  /* "mmfparser/bytereader.pyx":442
  * 
  *     def writeIntString(self, value):
  *         self.writeInt(len(value), True)             # <<<<<<<<<<<<<<
  *         self.write(value)
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 442, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyObject_Length(__pyx_v_value); if (unlikely(__pyx_t_3 == ((Py_ssize_t)-1))) __PYX_ERR(0, 441, __pyx_L1_error)
-  __pyx_t_4 = PyInt_FromSsize_t(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_3 = PyObject_Length(__pyx_v_value); if (unlikely(__pyx_t_3 == ((Py_ssize_t)-1))) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_4 = PyInt_FromSsize_t(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 442, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -8656,7 +8669,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_4, Py_True};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8665,14 +8678,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_4, Py_True};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 442, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -8683,24 +8696,24 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, Py_True);
     __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":442
+  /* "mmfparser/bytereader.pyx":443
  *     def writeIntString(self, value):
  *         self.writeInt(len(value), True)
  *         self.write(value)             # <<<<<<<<<<<<<<
  * 
  *     cpdef bint skipBytes(self, size_t n):
  */
-  if (!(likely(PyBytes_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_value)->tp_name), 0))) __PYX_ERR(0, 442, __pyx_L1_error)
+  if (!(likely(PyBytes_CheckExact(__pyx_v_value))||((__pyx_v_value) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_value)->tp_name), 0))) __PYX_ERR(0, 443, __pyx_L1_error)
   (void)(__pyx_f_9mmfparser_10bytereader_10ByteReader_write(__pyx_v_self, ((PyObject*)__pyx_v_value), 0));
 
-  /* "mmfparser/bytereader.pyx":440
+  /* "mmfparser/bytereader.pyx":441
  *         self.write(reader.data())
  * 
  *     def writeIntString(self, value):             # <<<<<<<<<<<<<<
@@ -8725,7 +8738,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_66writeIntString(
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":444
+/* "mmfparser/bytereader.pyx":445
  *         self.write(value)
  * 
  *     cpdef bint skipBytes(self, size_t n):             # <<<<<<<<<<<<<<
@@ -8740,7 +8753,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(struct __pyx_o
   struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek __pyx_t_1;
   __Pyx_RefNannySetupContext("skipBytes", 0);
 
-  /* "mmfparser/bytereader.pyx":445
+  /* "mmfparser/bytereader.pyx":446
  * 
  *     cpdef bint skipBytes(self, size_t n):
  *         self.seek(n, 1)             # <<<<<<<<<<<<<<
@@ -8751,7 +8764,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(struct __pyx_o
   __pyx_t_1.mode = 1;
   __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, __pyx_v_n, 0, &__pyx_t_1); 
 
-  /* "mmfparser/bytereader.pyx":444
+  /* "mmfparser/bytereader.pyx":445
  *         self.write(value)
  * 
  *     cpdef bint skipBytes(self, size_t n):             # <<<<<<<<<<<<<<
@@ -8776,7 +8789,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_69skipBytes(PyObj
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("skipBytes (wrapper)", 0);
   assert(__pyx_arg_n); {
-    __pyx_v_n = __Pyx_PyInt_As_size_t(__pyx_arg_n); if (unlikely((__pyx_v_n == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 444, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_size_t(__pyx_arg_n); if (unlikely((__pyx_v_n == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 445, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8800,7 +8813,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_68skipBytes(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("skipBytes", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(__pyx_v_self, __pyx_v_n, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 444, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes(__pyx_v_self, __pyx_v_n, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 445, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8817,7 +8830,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_68skipBytes(struc
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":447
+/* "mmfparser/bytereader.pyx":448
  *         self.seek(n, 1)
  * 
  *     cpdef bint rewind(self, size_t n):             # <<<<<<<<<<<<<<
@@ -8832,7 +8845,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(struct __pyx_obj_
   struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek __pyx_t_1;
   __Pyx_RefNannySetupContext("rewind", 0);
 
-  /* "mmfparser/bytereader.pyx":448
+  /* "mmfparser/bytereader.pyx":449
  * 
  *     cpdef bint rewind(self, size_t n):
  *         self.seek(-n, 1)             # <<<<<<<<<<<<<<
@@ -8843,7 +8856,7 @@ static int __pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(struct __pyx_obj_
   __pyx_t_1.mode = 1;
   __pyx_f_9mmfparser_10bytereader_10ByteReader_seek(__pyx_v_self, (-__pyx_v_n), 0, &__pyx_t_1); 
 
-  /* "mmfparser/bytereader.pyx":447
+  /* "mmfparser/bytereader.pyx":448
  *         self.seek(n, 1)
  * 
  *     cpdef bint rewind(self, size_t n):             # <<<<<<<<<<<<<<
@@ -8868,7 +8881,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_71rewind(PyObject
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("rewind (wrapper)", 0);
   assert(__pyx_arg_n); {
-    __pyx_v_n = __Pyx_PyInt_As_size_t(__pyx_arg_n); if (unlikely((__pyx_v_n == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 447, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyInt_As_size_t(__pyx_arg_n); if (unlikely((__pyx_v_n == (size_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 448, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -8892,7 +8905,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_70rewind(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("rewind", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(__pyx_v_self, __pyx_v_n, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_f_9mmfparser_10bytereader_10ByteReader_rewind(__pyx_v_self, __pyx_v_n, 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8909,7 +8922,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_70rewind(struct _
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":450
+/* "mmfparser/bytereader.pyx":451
  *         self.seek(-n, 1)
  * 
  *     def truncate(self, value):             # <<<<<<<<<<<<<<
@@ -8941,16 +8954,16 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_72truncate(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("truncate", 0);
 
-  /* "mmfparser/bytereader.pyx":451
+  /* "mmfparser/bytereader.pyx":452
  * 
  *     def truncate(self, value):
  *         self.buffer.truncate(value)             # <<<<<<<<<<<<<<
  * 
  *     def checkDefault(self, value, *defaults):
  */
-  __pyx_t_2 = __Pyx_PyBytes_FromCString(__pyx_v_self->buffer); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 451, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_FromCString(__pyx_v_self->buffer); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_truncate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 451, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_truncate); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -8965,12 +8978,12 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_72truncate(struct
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_value) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_value);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 451, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":450
+  /* "mmfparser/bytereader.pyx":451
  *         self.seek(-n, 1)
  * 
  *     def truncate(self, value):             # <<<<<<<<<<<<<<
@@ -8993,7 +9006,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_72truncate(struct
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":453
+/* "mmfparser/bytereader.pyx":454
  *         self.buffer.truncate(value)
  * 
  *     def checkDefault(self, value, *defaults):             # <<<<<<<<<<<<<<
@@ -9042,7 +9055,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_75checkDefault(Py
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t used_pos_args = (pos_args < 1) ? pos_args : 1;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "checkDefault") < 0)) __PYX_ERR(0, 453, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "checkDefault") < 0)) __PYX_ERR(0, 454, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) < 1) {
       goto __pyx_L5_argtuple_error;
@@ -9053,7 +9066,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_10ByteReader_75checkDefault(Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("checkDefault", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 453, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("checkDefault", 0, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 454, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_defaults); __pyx_v_defaults = 0;
   __Pyx_AddTraceback("mmfparser.bytereader.ByteReader.checkDefault", __pyx_clineno, __pyx_lineno, __pyx_filename);
@@ -9079,7 +9092,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("checkDefault", 0);
 
-  /* "mmfparser/bytereader.pyx":454
+  /* "mmfparser/bytereader.pyx":455
  * 
  *     def checkDefault(self, value, *defaults):
  *         return checkDefault(self, value, *defaults)             # <<<<<<<<<<<<<<
@@ -9087,9 +9100,9 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
  *     def openEditor(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_checkDefault); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_checkDefault); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(((PyObject *)__pyx_v_self));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_self));
@@ -9097,10 +9110,10 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   __Pyx_INCREF(__pyx_v_value);
   __Pyx_GIVEREF(__pyx_v_value);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_value);
-  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_v_defaults); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_v_defaults); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9108,7 +9121,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":453
+  /* "mmfparser/bytereader.pyx":454
  *         self.buffer.truncate(value)
  * 
  *     def checkDefault(self, value, *defaults):             # <<<<<<<<<<<<<<
@@ -9129,7 +9142,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_74checkDefault(st
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":456
+/* "mmfparser/bytereader.pyx":457
  *         return checkDefault(self, value, *defaults)
  * 
  *     def openEditor(self):             # <<<<<<<<<<<<<<
@@ -9170,29 +9183,29 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("openEditor", 0);
 
-  /* "mmfparser/bytereader.pyx":458
+  /* "mmfparser/bytereader.pyx":459
  *     def openEditor(self):
  *         cdef object name
  *         if self.python_fp:             # <<<<<<<<<<<<<<
  *             name = self.python_fp.name
  *         else:
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_self->python_fp); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 459, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "mmfparser/bytereader.pyx":459
+    /* "mmfparser/bytereader.pyx":460
  *         cdef object name
  *         if self.python_fp:
  *             name = self.python_fp.name             # <<<<<<<<<<<<<<
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 459, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->python_fp, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 460, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_v_name = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/bytereader.pyx":458
+    /* "mmfparser/bytereader.pyx":459
  *     def openEditor(self):
  *         cdef object name
  *         if self.python_fp:             # <<<<<<<<<<<<<<
@@ -9202,7 +9215,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     goto __pyx_L3;
   }
 
-  /* "mmfparser/bytereader.pyx":461
+  /* "mmfparser/bytereader.pyx":462
  *             name = self.python_fp.name
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)             # <<<<<<<<<<<<<<
@@ -9210,31 +9223,31 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
  *             fp.close()
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tempfile); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tempfile); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 462, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_NamedTemporaryFile); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_NamedTemporaryFile); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 462, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 462, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_delete, Py_False) < 0) __PYX_ERR(0, 461, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__4, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 461, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_delete, Py_False) < 0) __PYX_ERR(0, 462, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__4, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 462, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_fp = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "mmfparser/bytereader.pyx":462
+    /* "mmfparser/bytereader.pyx":463
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)
  *             fp.write(self.data())             # <<<<<<<<<<<<<<
  *             fp.close()
  *             name = fp.name
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 462, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 463, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __pyx_f_9mmfparser_10bytereader_10ByteReader_data(__pyx_v_self, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 462, __pyx_L1_error)
+    __pyx_t_3 = __pyx_f_9mmfparser_10bytereader_10ByteReader_data(__pyx_v_self, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 463, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9249,19 +9262,19 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_5, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 462, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 463, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser/bytereader.pyx":463
+    /* "mmfparser/bytereader.pyx":464
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)
  *             fp.write(self.data())
  *             fp.close()             # <<<<<<<<<<<<<<
  *             name = fp.name
  * 
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_close); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 463, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_close); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9275,26 +9288,26 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     }
     __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 463, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 464, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "mmfparser/bytereader.pyx":464
+    /* "mmfparser/bytereader.pyx":465
  *             fp.write(self.data())
  *             fp.close()
  *             name = fp.name             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fp, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 465, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_v_name = __pyx_t_4;
     __pyx_t_4 = 0;
   }
   __pyx_L3:;
 
-  /* "mmfparser/bytereader.pyx":466
+  /* "mmfparser/bytereader.pyx":467
  *             name = fp.name
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -9310,27 +9323,27 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __Pyx_XGOTREF(__pyx_t_8);
     /*try:*/ {
 
-      /* "mmfparser/bytereader.pyx":467
+      /* "mmfparser/bytereader.pyx":468
  * 
  *         try:
  *             raw_input('Press enter to open hex editor...')             # <<<<<<<<<<<<<<
  *             openEditor(name, self.tell())
  *         except IOError:
  */
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_raw_input, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 467, __pyx_L4_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_raw_input, __pyx_tuple__5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 468, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "mmfparser/bytereader.pyx":468
+      /* "mmfparser/bytereader.pyx":469
  *         try:
  *             raw_input('Press enter to open hex editor...')
  *             openEditor(name, self.tell())             # <<<<<<<<<<<<<<
  *         except IOError:
  *             pass
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_openEditor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 468, __pyx_L4_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_openEditor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 469, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 468, __pyx_L4_error)
+      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_self, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 469, __pyx_L4_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_5 = NULL;
       __pyx_t_9 = 0;
@@ -9347,7 +9360,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_v_name, __pyx_t_3};
-        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 468, __pyx_L4_error)
+        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 469, __pyx_L4_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9356,14 +9369,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_v_name, __pyx_t_3};
-        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 468, __pyx_L4_error)
+        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 469, __pyx_L4_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_10 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 468, __pyx_L4_error)
+        __pyx_t_10 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 469, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_10);
         if (__pyx_t_5) {
           __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -9374,14 +9387,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
         __Pyx_GIVEREF(__pyx_t_3);
         PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_3);
         __pyx_t_3 = 0;
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 468, __pyx_L4_error)
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 469, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "mmfparser/bytereader.pyx":466
+      /* "mmfparser/bytereader.pyx":467
  *             name = fp.name
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -9400,7 +9413,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "mmfparser/bytereader.pyx":469
+    /* "mmfparser/bytereader.pyx":470
  *             raw_input('Press enter to open hex editor...')
  *             openEditor(name, self.tell())
  *         except IOError:             # <<<<<<<<<<<<<<
@@ -9415,7 +9428,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     goto __pyx_L6_except_error;
     __pyx_L6_except_error:;
 
-    /* "mmfparser/bytereader.pyx":466
+    /* "mmfparser/bytereader.pyx":467
  *             name = fp.name
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -9435,18 +9448,18 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_76openEditor(stru
     __pyx_L9_try_end:;
   }
 
-  /* "mmfparser/bytereader.pyx":471
+  /* "mmfparser/bytereader.pyx":472
  *         except IOError:
  *             pass
  *         raw_input('(enter)')             # <<<<<<<<<<<<<<
  * 
  * def openEditor(filename, position):
  */
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_raw_input, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_raw_input, __pyx_tuple__6, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 472, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser/bytereader.pyx":456
+  /* "mmfparser/bytereader.pyx":457
  *         return checkDefault(self, value, *defaults)
  * 
  *     def openEditor(self):             # <<<<<<<<<<<<<<
@@ -9586,7 +9599,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_10ByteReader_80__setstate_cyth
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":473
+/* "mmfparser/bytereader.pyx":474
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
@@ -9629,11 +9642,11 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_1openEditor(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_position)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("openEditor", 1, 2, 2, 1); __PYX_ERR(0, 473, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("openEditor", 1, 2, 2, 1); __PYX_ERR(0, 474, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "openEditor") < 0)) __PYX_ERR(0, 473, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "openEditor") < 0)) __PYX_ERR(0, 474, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -9646,7 +9659,7 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_1openEditor(PyObject *__pyx_se
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("openEditor", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 473, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("openEditor", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 474, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("mmfparser.bytereader.openEditor", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9671,7 +9684,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("openEditor", 0);
 
-  /* "mmfparser/bytereader.pyx":474
+  /* "mmfparser/bytereader.pyx":475
  * 
  * def openEditor(filename, position):
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])             # <<<<<<<<<<<<<<
@@ -9679,12 +9692,12 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
  * def checkDefault(ByteReader reader, value, *defaults):
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_subprocess); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_subprocess); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Popen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Popen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_filename);
   __Pyx_GIVEREF(__pyx_v_filename);
@@ -9692,10 +9705,10 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   __Pyx_INCREF(__pyx_v_position);
   __Pyx_GIVEREF(__pyx_v_position);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_position);
-  __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_s_s, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_s_s, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_kp_s_010editor);
   __Pyx_GIVEREF(__pyx_kp_s_010editor);
@@ -9716,14 +9729,14 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 474, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 475, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/bytereader.pyx":473
+  /* "mmfparser/bytereader.pyx":474
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
@@ -9745,7 +9758,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_openEditor(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "mmfparser/bytereader.pyx":476
+/* "mmfparser/bytereader.pyx":477
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
@@ -9799,12 +9812,12 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_3checkDefault(PyObject *__pyx_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("checkDefault", 0, 2, 2, 1); __PYX_ERR(0, 476, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("checkDefault", 0, 2, 2, 1); __PYX_ERR(0, 477, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t used_pos_args = (pos_args < 2) ? pos_args : 2;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "checkDefault") < 0)) __PYX_ERR(0, 476, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, used_pos_args, "checkDefault") < 0)) __PYX_ERR(0, 477, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) < 2) {
       goto __pyx_L5_argtuple_error;
@@ -9817,14 +9830,14 @@ static PyObject *__pyx_pw_9mmfparser_10bytereader_3checkDefault(PyObject *__pyx_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("checkDefault", 0, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 476, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("checkDefault", 0, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 477, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_DECREF(__pyx_v_defaults); __pyx_v_defaults = 0;
   __Pyx_AddTraceback("mmfparser.bytereader.checkDefault", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) __PYX_ERR(0, 476, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) __PYX_ERR(0, 477, __pyx_L1_error)
   __pyx_r = __pyx_pf_9mmfparser_10bytereader_2checkDefault(__pyx_self, __pyx_v_reader, __pyx_v_value, __pyx_v_defaults);
 
   /* function exit code */
@@ -9857,18 +9870,18 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("checkDefault", 0);
 
-  /* "mmfparser/bytereader.pyx":477
+  /* "mmfparser/bytereader.pyx":478
  * 
  * def checkDefault(ByteReader reader, value, *defaults):
  *     if value in defaults:             # <<<<<<<<<<<<<<
  *         return False
  *     cdef int lastPosition = reader.lastPosition
  */
-  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_v_value, __pyx_v_defaults, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_v_value, __pyx_v_defaults, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 478, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":478
+    /* "mmfparser/bytereader.pyx":479
  * def checkDefault(ByteReader reader, value, *defaults):
  *     if value in defaults:
  *         return False             # <<<<<<<<<<<<<<
@@ -9880,7 +9893,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
     __pyx_r = Py_False;
     goto __pyx_L0;
 
-    /* "mmfparser/bytereader.pyx":477
+    /* "mmfparser/bytereader.pyx":478
  * 
  * def checkDefault(ByteReader reader, value, *defaults):
  *     if value in defaults:             # <<<<<<<<<<<<<<
@@ -9889,7 +9902,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
  */
   }
 
-  /* "mmfparser/bytereader.pyx":479
+  /* "mmfparser/bytereader.pyx":480
  *     if value in defaults:
  *         return False
  *     cdef int lastPosition = reader.lastPosition             # <<<<<<<<<<<<<<
@@ -9899,7 +9912,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __pyx_t_3 = __pyx_v_reader->lastPosition;
   __pyx_v_lastPosition = __pyx_t_3;
 
-  /* "mmfparser/bytereader.pyx":480
+  /* "mmfparser/bytereader.pyx":481
  *         return False
  *     cdef int lastPosition = reader.lastPosition
  *     cdef size_t size = reader.tell() - lastPosition             # <<<<<<<<<<<<<<
@@ -9908,7 +9921,7 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
  */
   __pyx_v_size = (__pyx_f_9mmfparser_10bytereader_10ByteReader_tell(__pyx_v_reader, 0) - __pyx_v_lastPosition);
 
-  /* "mmfparser/bytereader.pyx":481
+  /* "mmfparser/bytereader.pyx":482
  *     cdef int lastPosition = reader.lastPosition
  *     cdef size_t size = reader.tell() - lastPosition
  *     reprDefaults = defaults             # <<<<<<<<<<<<<<
@@ -9918,18 +9931,18 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   __Pyx_INCREF(__pyx_v_defaults);
   __pyx_v_reprDefaults = __pyx_v_defaults;
 
-  /* "mmfparser/bytereader.pyx":482
+  /* "mmfparser/bytereader.pyx":483
  *     cdef size_t size = reader.tell() - lastPosition
  *     reprDefaults = defaults
  *     if len(defaults) == 1:             # <<<<<<<<<<<<<<
  *         reprDefaults, = defaults
  *     cdef str message = ('unimplemented value at %s, size %s (should be '
  */
-  __pyx_t_4 = PyTuple_GET_SIZE(__pyx_v_defaults); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_GET_SIZE(__pyx_v_defaults); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 483, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_4 == 1) != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":483
+    /* "mmfparser/bytereader.pyx":484
  *     reprDefaults = defaults
  *     if len(defaults) == 1:
  *         reprDefaults, = defaults             # <<<<<<<<<<<<<<
@@ -9942,20 +9955,20 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
       if (unlikely(size != 1)) {
         if (size > 1) __Pyx_RaiseTooManyValuesError(1);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 483, __pyx_L1_error)
+        __PYX_ERR(0, 484, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       __pyx_t_5 = PyTuple_GET_ITEM(sequence, 0); 
       __Pyx_INCREF(__pyx_t_5);
       #else
-      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 483, __pyx_L1_error)
+      __pyx_t_5 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 484, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       #endif
     }
     __Pyx_DECREF_SET(__pyx_v_reprDefaults, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "mmfparser/bytereader.pyx":482
+    /* "mmfparser/bytereader.pyx":483
  *     cdef size_t size = reader.tell() - lastPosition
  *     reprDefaults = defaults
  *     if len(defaults) == 1:             # <<<<<<<<<<<<<<
@@ -9964,18 +9977,18 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
  */
   }
 
-  /* "mmfparser/bytereader.pyx":485
+  /* "mmfparser/bytereader.pyx":486
  *         reprDefaults, = defaults
  *     cdef str message = ('unimplemented value at %s, size %s (should be '
  *         '%s but was %s)' % (lastPosition, size, reprDefaults, value))             # <<<<<<<<<<<<<<
  *     traceback.print_stack(file=sys.stdout)
  *     # print message
  */
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_lastPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 485, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_lastPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 485, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_FromSize_t(__pyx_v_size); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyTuple_New(4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 485, __pyx_L1_error)
+  __pyx_t_7 = PyTuple_New(4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_5);
   PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5);
@@ -9989,53 +10002,53 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   PyTuple_SET_ITEM(__pyx_t_7, 3, __pyx_v_value);
   __pyx_t_5 = 0;
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyString_Format(__pyx_kp_s_unimplemented_value_at_s_size_s, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 485, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyString_Format(__pyx_kp_s_unimplemented_value_at_s_size_s, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (!(likely(PyString_CheckExact(__pyx_t_6))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_t_6)->tp_name), 0))) __PYX_ERR(0, 485, __pyx_L1_error)
+  if (!(likely(PyString_CheckExact(__pyx_t_6))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_t_6)->tp_name), 0))) __PYX_ERR(0, 486, __pyx_L1_error)
   __pyx_v_message = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "mmfparser/bytereader.pyx":486
+  /* "mmfparser/bytereader.pyx":487
  *     cdef str message = ('unimplemented value at %s, size %s (should be '
  *         '%s but was %s)' % (lastPosition, size, reprDefaults, value))
  *     traceback.print_stack(file=sys.stdout)             # <<<<<<<<<<<<<<
  *     # print message
  *     if sys.stdin.isatty():
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_traceback); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_traceback); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_print_stack); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_print_stack); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sys); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sys); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_stdout); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_stdout); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_file, __pyx_t_8) < 0) __PYX_ERR(0, 486, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_file, __pyx_t_8) < 0) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/bytereader.pyx":488
+  /* "mmfparser/bytereader.pyx":489
  *     traceback.print_stack(file=sys.stdout)
  *     # print message
  *     if sys.stdin.isatty():             # <<<<<<<<<<<<<<
  *         reader.openEditor()
  *     raise SystemExit
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_sys); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_stdin); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_stdin); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isatty); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isatty); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -10050,20 +10063,20 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
   }
   __pyx_t_8 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 488, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   if (__pyx_t_2) {
 
-    /* "mmfparser/bytereader.pyx":489
+    /* "mmfparser/bytereader.pyx":490
  *     # print message
  *     if sys.stdin.isatty():
  *         reader.openEditor()             # <<<<<<<<<<<<<<
  *     raise SystemExit
  */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_openEditor); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 489, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_openEditor); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
@@ -10077,12 +10090,12 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
     }
     __pyx_t_8 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 489, __pyx_L1_error)
+    if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 490, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "mmfparser/bytereader.pyx":488
+    /* "mmfparser/bytereader.pyx":489
  *     traceback.print_stack(file=sys.stdout)
  *     # print message
  *     if sys.stdin.isatty():             # <<<<<<<<<<<<<<
@@ -10091,15 +10104,15 @@ static PyObject *__pyx_pf_9mmfparser_10bytereader_2checkDefault(CYTHON_UNUSED Py
  */
   }
 
-  /* "mmfparser/bytereader.pyx":490
+  /* "mmfparser/bytereader.pyx":491
  *     if sys.stdin.isatty():
  *         reader.openEditor()
  *     raise SystemExit             # <<<<<<<<<<<<<<
  */
   __Pyx_Raise(__pyx_builtin_SystemExit, 0, 0, 0);
-  __PYX_ERR(0, 490, __pyx_L1_error)
+  __PYX_ERR(0, 491, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":476
+  /* "mmfparser/bytereader.pyx":477
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
@@ -10390,9 +10403,6 @@ static PyTypeObject __pyx_type_9mmfparser_10bytereader_ByteReader = {
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 
 static PyMethodDef __pyx_methods[] = {
@@ -10451,6 +10461,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_H, __pyx_k_H, sizeof(__pyx_k_H), 0, 0, 1, 1},
   {&__pyx_n_s_I, __pyx_k_I, sizeof(__pyx_k_I), 0, 0, 1, 1},
   {&__pyx_n_s_INT, __pyx_k_INT, sizeof(__pyx_k_INT), 0, 0, 1, 1},
+  {&__pyx_n_s_IOBase, __pyx_k_IOBase, sizeof(__pyx_k_IOBase), 0, 0, 1, 1},
   {&__pyx_n_s_IOError, __pyx_k_IOError, sizeof(__pyx_k_IOError), 0, 0, 1, 1},
   {&__pyx_n_s_NamedTemporaryFile, __pyx_k_NamedTemporaryFile, sizeof(__pyx_k_NamedTemporaryFile), 0, 0, 1, 1},
   {&__pyx_n_s_Popen, __pyx_k_Popen, sizeof(__pyx_k_Popen), 0, 0, 1, 1},
@@ -10466,7 +10477,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 0},
   {&__pyx_n_s_asUnsigned, __pyx_k_asUnsigned, sizeof(__pyx_k_asUnsigned), 0, 0, 1, 1},
   {&__pyx_n_s_b, __pyx_k_b, sizeof(__pyx_k_b), 0, 0, 1, 1},
-  {&__pyx_n_s_buffer, __pyx_k_buffer, sizeof(__pyx_k_buffer), 0, 0, 1, 1},
   {&__pyx_n_s_checkDefault, __pyx_k_checkDefault, sizeof(__pyx_k_checkDefault), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
@@ -10487,9 +10497,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_input, __pyx_k_input, sizeof(__pyx_k_input), 0, 0, 1, 1},
+  {&__pyx_n_s_io, __pyx_k_io, sizeof(__pyx_k_io), 0, 0, 1, 1},
   {&__pyx_n_s_isatty, __pyx_k_isatty, sizeof(__pyx_k_isatty), 0, 0, 1, 1},
   {&__pyx_n_s_lastPosition, __pyx_k_lastPosition, sizeof(__pyx_k_lastPosition), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
+  {&__pyx_n_s_memoryview, __pyx_k_memoryview, sizeof(__pyx_k_memoryview), 0, 0, 1, 1},
   {&__pyx_n_s_message, __pyx_k_message, sizeof(__pyx_k_message), 0, 0, 1, 1},
   {&__pyx_n_s_mmfparser_bytereader, __pyx_k_mmfparser_bytereader, sizeof(__pyx_k_mmfparser_bytereader), 0, 0, 1, 1},
   {&__pyx_kp_s_mmfparser_bytereader_pyx, __pyx_k_mmfparser_bytereader_pyx, sizeof(__pyx_k_mmfparser_bytereader_pyx), 0, 0, 1, 0},
@@ -10541,17 +10553,15 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_file = __Pyx_GetBuiltinName(__pyx_n_s_file); if (!__pyx_builtin_file) __PYX_ERR(0, 78, __pyx_L1_error)
-  __pyx_builtin_buffer = __Pyx_GetBuiltinName(__pyx_n_s_buffer); if (!__pyx_builtin_buffer) __PYX_ERR(0, 379, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 415, __pyx_L1_error)
   #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_raw_input = __Pyx_GetBuiltinName(__pyx_n_s_input); if (!__pyx_builtin_raw_input) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_builtin_raw_input = __Pyx_GetBuiltinName(__pyx_n_s_input); if (!__pyx_builtin_raw_input) __PYX_ERR(0, 468, __pyx_L1_error)
   #else
-  __pyx_builtin_raw_input = __Pyx_GetBuiltinName(__pyx_n_s_raw_input); if (!__pyx_builtin_raw_input) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_builtin_raw_input = __Pyx_GetBuiltinName(__pyx_n_s_raw_input); if (!__pyx_builtin_raw_input) __PYX_ERR(0, 468, __pyx_L1_error)
   #endif
-  __pyx_builtin_IOError = __Pyx_GetBuiltinName(__pyx_n_s_IOError); if (!__pyx_builtin_IOError) __PYX_ERR(0, 469, __pyx_L1_error)
+  __pyx_builtin_IOError = __Pyx_GetBuiltinName(__pyx_n_s_IOError); if (!__pyx_builtin_IOError) __PYX_ERR(0, 470, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
-  __pyx_builtin_SystemExit = __Pyx_GetBuiltinName(__pyx_n_s_SystemExit); if (!__pyx_builtin_SystemExit) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_builtin_SystemExit = __Pyx_GetBuiltinName(__pyx_n_s_SystemExit); if (!__pyx_builtin_SystemExit) __PYX_ERR(0, 491, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -10561,36 +10571,36 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mmfparser/bytereader.pyx":461
+  /* "mmfparser/bytereader.pyx":462
  *             name = self.python_fp.name
  *         else:
  *             fp = tempfile.NamedTemporaryFile('wb', delete = False)             # <<<<<<<<<<<<<<
  *             fp.write(self.data())
  *             fp.close()
  */
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_wb); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_wb); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "mmfparser/bytereader.pyx":467
+  /* "mmfparser/bytereader.pyx":468
  * 
  *         try:
  *             raw_input('Press enter to open hex editor...')             # <<<<<<<<<<<<<<
  *             openEditor(name, self.tell())
  *         except IOError:
  */
-  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_Press_enter_to_open_hex_editor); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(1, __pyx_kp_s_Press_enter_to_open_hex_editor); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "mmfparser/bytereader.pyx":471
+  /* "mmfparser/bytereader.pyx":472
  *         except IOError:
  *             pass
  *         raw_input('(enter)')             # <<<<<<<<<<<<<<
  * 
  * def openEditor(filename, position):
  */
-  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_enter); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_enter); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 472, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
@@ -10613,117 +10623,117 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "mmfparser/bytereader.pyx":35
- * import tempfile
+  /* "mmfparser/bytereader.pyx":36
+ * from io import IOBase
  * 
  * BYTE = struct.Struct('b')             # <<<<<<<<<<<<<<
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_b); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_b); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "mmfparser/bytereader.pyx":36
+  /* "mmfparser/bytereader.pyx":37
  * 
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')             # <<<<<<<<<<<<<<
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')
  */
-  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_B); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(1, __pyx_n_s_B); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "mmfparser/bytereader.pyx":37
+  /* "mmfparser/bytereader.pyx":38
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')             # <<<<<<<<<<<<<<
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_n_s_h); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_n_s_h); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "mmfparser/bytereader.pyx":38
+  /* "mmfparser/bytereader.pyx":39
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')             # <<<<<<<<<<<<<<
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_n_s_H); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_n_s_H); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "mmfparser/bytereader.pyx":39
+  /* "mmfparser/bytereader.pyx":40
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')             # <<<<<<<<<<<<<<
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')
  */
-  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_n_s_f); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_n_s_f); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "mmfparser/bytereader.pyx":40
+  /* "mmfparser/bytereader.pyx":41
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')             # <<<<<<<<<<<<<<
  * INT = struct.Struct('i')
  * UINT = struct.Struct('I')
  */
-  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_s_d); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_s_d); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "mmfparser/bytereader.pyx":41
+  /* "mmfparser/bytereader.pyx":42
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')             # <<<<<<<<<<<<<<
  * UINT = struct.Struct('I')
  * 
  */
-  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_n_s_i); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_n_s_i); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "mmfparser/bytereader.pyx":42
+  /* "mmfparser/bytereader.pyx":43
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')
  * UINT = struct.Struct('I')             # <<<<<<<<<<<<<<
  * 
  * cdef class ByteReader
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_n_s_I); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_n_s_I); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "mmfparser/bytereader.pyx":473
+  /* "mmfparser/bytereader.pyx":474
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  */
-  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_n_s_filename, __pyx_n_s_position); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_n_s_filename, __pyx_n_s_position); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 474, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mmfparser_bytereader_pyx, __pyx_n_s_openEditor, 473, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mmfparser_bytereader_pyx, __pyx_n_s_openEditor, 474, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 474, __pyx_L1_error)
 
-  /* "mmfparser/bytereader.pyx":476
+  /* "mmfparser/bytereader.pyx":477
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
  *     if value in defaults:
  *         return False
  */
-  __pyx_tuple__19 = PyTuple_Pack(7, __pyx_n_s_reader, __pyx_n_s_value, __pyx_n_s_defaults, __pyx_n_s_lastPosition, __pyx_n_s_size, __pyx_n_s_reprDefaults, __pyx_n_s_message); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 476, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(7, __pyx_n_s_reader, __pyx_n_s_value, __pyx_n_s_defaults, __pyx_n_s_lastPosition, __pyx_n_s_size, __pyx_n_s_reprDefaults, __pyx_n_s_message); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 477, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mmfparser_bytereader_pyx, __pyx_n_s_checkDefault, 476, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 476, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARARGS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mmfparser_bytereader_pyx, __pyx_n_s_checkDefault, 477, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 477, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -10800,16 +10810,16 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_9mmfparser_10bytereader_ByteReader.skipBytes = (int (*)(struct __pyx_obj_9mmfparser_10bytereader_ByteReader *, size_t, int __pyx_skip_dispatch))__pyx_f_9mmfparser_10bytereader_10ByteReader_skipBytes;
   __pyx_vtable_9mmfparser_10bytereader_ByteReader.rewind = (int (*)(struct __pyx_obj_9mmfparser_10bytereader_ByteReader *, size_t, int __pyx_skip_dispatch))__pyx_f_9mmfparser_10bytereader_10ByteReader_rewind;
   __pyx_vtable_9mmfparser_10bytereader_ByteReader._read = (int (*)(struct __pyx_obj_9mmfparser_10bytereader_ByteReader *, void *, int))__pyx_f_9mmfparser_10bytereader_10ByteReader__read;
-  if (PyType_Ready(&__pyx_type_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_9mmfparser_10bytereader_ByteReader.tp_print = 0;
   #endif
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_9mmfparser_10bytereader_ByteReader.tp_dictoffset && __pyx_type_9mmfparser_10bytereader_ByteReader.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_9mmfparser_10bytereader_ByteReader.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
-  if (__Pyx_SetVtable(__pyx_type_9mmfparser_10bytereader_ByteReader.tp_dict, __pyx_vtabptr_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_ByteReader, (PyObject *)&__pyx_type_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_9mmfparser_10bytereader_ByteReader.tp_dict, __pyx_vtabptr_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_ByteReader, (PyObject *)&__pyx_type_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_9mmfparser_10bytereader_ByteReader) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   __pyx_ptype_9mmfparser_10bytereader_ByteReader = &__pyx_type_9mmfparser_10bytereader_ByteReader;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -11096,7 +11106,7 @@ if (!__Pyx_RefNanny) {
  * import traceback
  * import sys             # <<<<<<<<<<<<<<
  * import tempfile
- * 
+ * from io import IOBase
  */
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_sys, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -11107,191 +11117,212 @@ if (!__Pyx_RefNanny) {
  * import traceback
  * import sys
  * import tempfile             # <<<<<<<<<<<<<<
+ * from io import IOBase
  * 
- * BYTE = struct.Struct('b')
  */
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_tempfile, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_tempfile, __pyx_t_1) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/bytereader.pyx":35
+  /* "mmfparser/bytereader.pyx":34
+ * import sys
  * import tempfile
+ * from io import IOBase             # <<<<<<<<<<<<<<
+ * 
+ * BYTE = struct.Struct('b')
+ */
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_INCREF(__pyx_n_s_IOBase);
+  __Pyx_GIVEREF(__pyx_n_s_IOBase);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_IOBase);
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_io, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_IOBase); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_IOBase, __pyx_t_1) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "mmfparser/bytereader.pyx":36
+ * from io import IOBase
  * 
  * BYTE = struct.Struct('b')             # <<<<<<<<<<<<<<
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_BYTE, __pyx_t_1) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_BYTE, __pyx_t_2) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":36
+  /* "mmfparser/bytereader.pyx":37
  * 
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')             # <<<<<<<<<<<<<<
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_UBYTE, __pyx_t_1) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_UBYTE, __pyx_t_2) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":37
+  /* "mmfparser/bytereader.pyx":38
  * BYTE = struct.Struct('b')
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')             # <<<<<<<<<<<<<<
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SHORT, __pyx_t_1) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_SHORT, __pyx_t_2) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":38
+  /* "mmfparser/bytereader.pyx":39
  * UBYTE = struct.Struct('B')
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')             # <<<<<<<<<<<<<<
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_USHORT, __pyx_t_1) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_USHORT, __pyx_t_2) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":39
+  /* "mmfparser/bytereader.pyx":40
  * SHORT = struct.Struct('h')
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')             # <<<<<<<<<<<<<<
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FLOAT, __pyx_t_1) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_FLOAT, __pyx_t_2) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":40
+  /* "mmfparser/bytereader.pyx":41
  * USHORT = struct.Struct('H')
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')             # <<<<<<<<<<<<<<
  * INT = struct.Struct('i')
  * UINT = struct.Struct('I')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DOUBLE, __pyx_t_1) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DOUBLE, __pyx_t_2) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":41
+  /* "mmfparser/bytereader.pyx":42
  * FLOAT = struct.Struct('f')
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')             # <<<<<<<<<<<<<<
  * UINT = struct.Struct('I')
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_INT, __pyx_t_1) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_INT, __pyx_t_2) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":42
+  /* "mmfparser/bytereader.pyx":43
  * DOUBLE = struct.Struct('d')
  * INT = struct.Struct('i')
  * UINT = struct.Struct('I')             # <<<<<<<<<<<<<<
  * 
  * cdef class ByteReader
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_struct); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Struct); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_UINT, __pyx_t_1) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_UINT, __pyx_t_2) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":473
+  /* "mmfparser/bytereader.pyx":474
  *         raw_input('(enter)')
  * 
  * def openEditor(filename, position):             # <<<<<<<<<<<<<<
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9mmfparser_10bytereader_1openEditor, NULL, __pyx_n_s_mmfparser_bytereader); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_openEditor, __pyx_t_1) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9mmfparser_10bytereader_1openEditor, NULL, __pyx_n_s_mmfparser_bytereader); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_openEditor, __pyx_t_2) < 0) __PYX_ERR(0, 474, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mmfparser/bytereader.pyx":476
+  /* "mmfparser/bytereader.pyx":477
  *     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
  * 
  * def checkDefault(ByteReader reader, value, *defaults):             # <<<<<<<<<<<<<<
  *     if value in defaults:
  *         return False
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_9mmfparser_10bytereader_3checkDefault, NULL, __pyx_n_s_mmfparser_bytereader); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 476, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_checkDefault, __pyx_t_1) < 0) __PYX_ERR(0, 476, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_9mmfparser_10bytereader_3checkDefault, NULL, __pyx_n_s_mmfparser_bytereader); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_checkDefault, __pyx_t_2) < 0) __PYX_ERR(0, 477, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "mmfparser/bytereader.pyx":1
  * # Copyright (c) Mathias Kaerlev 2012.             # <<<<<<<<<<<<<<
  * 
  * # This file is part of Anaconda.
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "mmfparser/common.pxd":23
  *     int Py_REFCNT(object v)
@@ -12708,6 +12739,20 @@ __PYX_GOOD:
     Py_XDECREF(setstate);
     Py_XDECREF(setstate_cython);
     return ret;
+}
+
+/* ImportFrom */
+static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name) {
+    PyObject* value = __Pyx_PyObject_GetAttrStr(module, name);
+    if (unlikely(!value) && PyErr_ExceptionMatches(PyExc_AttributeError)) {
+        PyErr_Format(PyExc_ImportError,
+        #if PY_MAJOR_VERSION < 3
+            "cannot import name %.230s", PyString_AS_STRING(name));
+        #else
+            "cannot import name %S", name);
+        #endif
+    }
+    return value;
 }
 
 /* CLineInTraceback */

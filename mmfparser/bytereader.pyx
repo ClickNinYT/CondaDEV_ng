@@ -31,6 +31,7 @@ import os
 import traceback
 import sys
 import tempfile
+from io import IOBase
 
 BYTE = struct.Struct('b')
 UBYTE = struct.Struct('B')
@@ -75,7 +76,7 @@ cimport cython
 cdef class ByteReader:
     def __cinit__(self, input = None, start = None, size = None):
         self.pos = 0
-        if isinstance(input, file):
+        if isinstance(input, IOBase):
             IF not IS_PYPY:
                 self.fp = PyFile_AsFile(input)
             self.python_fp = input
@@ -376,7 +377,7 @@ cdef class ByteReader:
 
         IF IS_PYPY:
             if self.python_fp:
-                self.python_fp.write(buffer(data, 0, size))
+                self.python_fp.write(memoryview(data, 0, size))
                 return True
         ELSE:
             if self.fp != NULL:

@@ -5,23 +5,23 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
+        ],
         "depends": [
-            "mmfparser\\data\\chunk_cm.cpp"
-        ], 
+            "mmfparser/data/chunk_cm.cpp"
+        ],
         "include_dirs": [
-            "./mmfparser/data", 
+            "./mmfparser/data",
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.data.chunk", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.data.chunk",
         "sources": [
             "./mmfparser/data/chunk.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.data.chunk"
 }
 END: Cython Metadata */
@@ -928,9 +928,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunk.pyx",
+  "mmfparser/data/chunk.pyx",
   "stringsource",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -2173,7 +2173,7 @@ static const char __pyx_k_chunktype_r_not_found[] = "chunktype %r not found";
 static const char __pyx_k_s_has_not_implemented[] = "%s has not implemented!";
 static const char __pyx_k_pyx_unpickle_ChunkList[] = "__pyx_unpickle_ChunkList";
 static const char __pyx_k_Warning_Unknown_Chunk_s[] = "Warning: Unknown Chunk %s";
-static const char __pyx_k_mmfparser_data_chunk_pyx[] = "mmfparser\\data\\chunk.pyx";
+static const char __pyx_k_mmfparser_data_chunk_pyx[] = "mmfparser/data/chunk.pyx";
 static const char __pyx_k_mmfparser_data_chunkloaders[] = "mmfparser.data.chunkloaders";
 static const char __pyx_k_ADDITIONAL_FRAMEITEMINSTANCE[] = "ADDITIONAL_FRAMEITEMINSTANCE";
 static const char __pyx_k_pyx_unpickle_PreservingLoader[] = "__pyx_unpickle_PreservingLoader";
@@ -11790,9 +11790,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_5chunk_Chunk = {
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_5chunk_ChunkList __pyx_vtable_9mmfparser_4data_5chunk_ChunkList;
 
@@ -11937,9 +11934,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_5chunk_ChunkList = {
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_5chunk_PreservingLoader __pyx_vtable_9mmfparser_4data_5chunk_PreservingLoader;
 
@@ -12069,9 +12063,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_5chunk_PreservingLoader = {
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 
@@ -16233,9 +16224,6 @@ static PyTypeObject __pyx_CyFunctionType_type = {
     0,
 #endif
 #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
-    0,
-#endif
-#if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
     0,
 #endif
 };

@@ -19,7 +19,7 @@ cimport cython
 
 import struct
 import zlib
-from cStringIO import StringIO
+from cByteIO import ByteIO
 
 from mmfparser.bytereader cimport ByteReader
 from mmfparser.data import zlibdata
@@ -38,7 +38,7 @@ cdef int FIFTEENPOINT_MODE = 6  # 32768 colors
 
 cdef class ImageItem
     
-cdef inline object indexImage(ImageItem item, frame):
+cdef indexImage(ImageItem item, frame):
     cdef unsigned int i
     cdef tuple current_value
     cdef unsigned int * image
@@ -532,7 +532,7 @@ cdef class JavaImage(DataLoader):
                 self.data, self.width * -4, None)
         else:
             from mmfparser.player.common import load_image
-            newImage = load_image(StringIO(self.data))
+            newImage = load_image(ByteIO(self.data))
         newImage.anchor_x = self.xHotspot
         newImage.anchor_y = self.height - self.yHotspot
         return newImage

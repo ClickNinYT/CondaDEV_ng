@@ -1,0 +1,37 @@
+--- -	2022-01-13 17:47:15.350657318 +0700
++++ /home/clicknin/Documents/GitHub/CondaDEV_ng/mmfparser/data/chunkloaders/imagebank.cpp	2022-01-13 17:47:08.396409700 +0700
+@@ -17488,26 +17488,26 @@
+   /* "mmfparser/common.pxd":26
+  *     if size < 0:
+  *         size = 0
+- *     cdef object ob = PyBytes_FromStringAndSize(NULL, size)             # <<<<<<<<<<<<<<
+- *     i[0] = PyBytes_AS_STRING(ob)
++ *     cdef object ob = PyString_FromStringAndSize(NULL, size)             # <<<<<<<<<<<<<<
++ *     i[0] = PyString_AS_STRING(ob)
+  *     return ob
+  */
+-  __pyx_t_2 = PyBytes_FromStringAndSize(NULL, __pyx_v_size); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 26, __pyx_L1_error)
++  __pyx_t_2 = PyString_FromStringAndSize(NULL, __pyx_v_size); if (unlikely(!__pyx_t_2)) __PYX_ERR(2, 26, __pyx_L1_error)
+   __Pyx_GOTREF(__pyx_t_2);
+   __pyx_v_ob = __pyx_t_2;
+   __pyx_t_2 = 0;
+ 
+   /* "mmfparser/common.pxd":27
+  *         size = 0
+- *     cdef object ob = PyBytes_FromStringAndSize(NULL, size)
+- *     i[0] = PyBytes_AS_STRING(ob)             # <<<<<<<<<<<<<<
++ *     cdef object ob = PyString_FromStringAndSize(NULL, size)
++ *     i[0] = PyString_AS_STRING(ob)             # <<<<<<<<<<<<<<
+  *     return ob
+  */
+-  (__pyx_v_i[0]) = PyBytes_AS_STRING(__pyx_v_ob);
++  (__pyx_v_i[0]) = PyString_AS_STRING(__pyx_v_ob);
+ 
+   /* "mmfparser/common.pxd":28
+- *     cdef object ob = PyBytes_FromStringAndSize(NULL, size)
+- *     i[0] = PyBytes_AS_STRING(ob)
++ *     cdef object ob = PyString_FromStringAndSize(NULL, size)
++ *     i[0] = PyString_AS_STRING(ob)
+  *     return ob             # <<<<<<<<<<<<<<
+  */
+   __Pyx_XDECREF(__pyx_r);

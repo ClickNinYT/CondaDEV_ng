@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.data.chunkloaders.expressions.loader", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.data.chunkloaders.expressions.loader",
         "sources": [
             "./mmfparser/data/chunkloaders/expressions/loader.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.data.chunkloaders.expressions.loader"
 }
 END: Cython Metadata */
@@ -924,10 +924,10 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\expressions\\loader.pyx",
+  "mmfparser/data/chunkloaders/expressions/loader.pyx",
   "stringsource",
-  "mmfparser\\bytereader.pxd",
-  "mmfparser\\loader.pxd",
+  "mmfparser/bytereader.pxd",
+  "mmfparser/loader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -3914,9 +3914,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_11expressions_6lo
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
-  #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
   #endif
 };
 

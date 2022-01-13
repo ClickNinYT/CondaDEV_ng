@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.data.chunkloaders.objectinfo", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.data.chunkloaders.objectinfo",
         "sources": [
             "./mmfparser/data/chunkloaders/objectinfo.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.data.chunkloaders.objectinfo"
 }
 END: Cython Metadata */
@@ -924,9 +924,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\objectinfo.pyx",
-  "mmfparser\\bytereader.pxd",
-  "mmfparser\\loader.pxd",
+  "mmfparser/data/chunkloaders/objectinfo.pyx",
+  "mmfparser/bytereader.pxd",
+  "mmfparser/loader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -1800,7 +1800,7 @@ static const char __pyx_k_ObjectHeader_initialize[] = "ObjectHeader.initialize";
 static const char __pyx_k_REPLACE_TRANSPARENT_EFFECT[] = "REPLACE_TRANSPARENT_EFFECT";
 static const char __pyx_k_mmfparser_data_chunkloaders_comm[] = "mmfparser.data.chunkloaders.common";
 static const char __pyx_k_mmfparser_data_chunkloaders_last[] = "mmfparser.data.chunkloaders.last";
-static const char __pyx_k_mmfparser_data_chunkloaders_obje[] = "mmfparser\\data\\chunkloaders\\objectinfo.pyx";
+static const char __pyx_k_mmfparser_data_chunkloaders_obje[] = "mmfparser/data/chunkloaders/objectinfo.pyx";
 static const char __pyx_k_mmfparser_data_chunkloaders_stri[] = "mmfparser.data.chunkloaders.stringchunk";
 static const char __pyx_k_mmfparser_data_chunkloaders_obje_2[] = "mmfparser.data.chunkloaders.objectinfo";
 static const char __pyx_k_mmfparser_data_chunkloaders_obje_3[] = "mmfparser.data.chunkloaders.objects";
@@ -8712,9 +8712,6 @@ static PyTypeObject __pyx_CyFunctionType_type = {
     0,
 #endif
 #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
-    0,
-#endif
-#if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
     0,
 #endif
 };

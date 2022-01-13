@@ -5,20 +5,20 @@
     "distutils": {
         "define_macros": [
             [
-                "TRANS_START", 
+                "TRANS_START",
                 99
             ]
-        ], 
-        "depends": [], 
+        ],
+        "depends": [],
         "include_dirs": [
             "./mmfparser/player"
-        ], 
-        "language": "c++", 
-        "name": "mmfparser.data.chunkloaders.common", 
+        ],
+        "language": "c++",
+        "name": "mmfparser.data.chunkloaders.common",
         "sources": [
             "./mmfparser/data/chunkloaders/common.pyx"
         ]
-    }, 
+    },
     "module_name": "mmfparser.data.chunkloaders.common"
 }
 END: Cython Metadata */
@@ -924,10 +924,10 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser\\data\\chunkloaders\\common.pyx",
-  "mmfparser\\data\\chunkloaders\\common.pxd",
+  "mmfparser/data/chunkloaders/common.pyx",
+  "mmfparser/data/chunkloaders/common.pxd",
   "stringsource",
-  "mmfparser\\bytereader.pxd",
+  "mmfparser/bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -1815,7 +1815,7 @@ static const char __pyx_k_ObjectInfoMixin_getQualifier[] = "_ObjectInfoMixin.get
 static const char __pyx_k_ObjectTypeMixin_getExtension[] = "_ObjectTypeMixin.getExtension";
 static const char __pyx_k_ObjectTypeMixin_hasObjectInfo[] = "_ObjectTypeMixin.hasObjectInfo";
 static const char __pyx_k_Incompatible_checksums_s_vs_0x23[] = "Incompatible checksums (%s vs 0x23eceb4 = (extensionDict, loader, name, num, objectInfo, objectInfoList, objectType, parent, settings, systemDict))";
-static const char __pyx_k_mmfparser_data_chunkloaders_comm[] = "mmfparser\\data\\chunkloaders\\common.pyx";
+static const char __pyx_k_mmfparser_data_chunkloaders_comm[] = "mmfparser/data/chunkloaders/common.pyx";
 static const char __pyx_k_mmfparser_data_chunkloaders_obje[] = "mmfparser.data.chunkloaders.objectinfo";
 static const char __pyx_k_mmfparser_data_chunkloaders_comm_2[] = "mmfparser.data.chunkloaders.common";
 static PyObject *__pyx_kp_s_;
@@ -7402,9 +7402,6 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_6common__AceCommo
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
-  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
-  0, /*tp_pypy_flags*/
-  #endif
 };
 
 static PyMethodDef __pyx_methods[] = {
@@ -10799,9 +10796,6 @@ static PyTypeObject __pyx_CyFunctionType_type = {
     0,
 #endif
 #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
-    0,
-#endif
-#if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
     0,
 #endif
 };
