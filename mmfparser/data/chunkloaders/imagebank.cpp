@@ -34,7 +34,7 @@ END: Cython Metadata */
 #else
 #define CYTHON_ABI "0_29_26"
 #define CYTHON_HEX_VERSION 0x001D1AF0
-#define CYTHON_FUTURE_DIVISION 0
+#define CYTHON_FUTURE_DIVISION 1
 #include <stddef.h>
 #ifndef offsetof
   #define offsetof(type, member) ( (size_t) & ((type*)0) -> member )
@@ -2085,7 +2085,6 @@ static const char __pyx_k_items[] = "items";
 static const char __pyx_k_new_2[] = "__new__";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_write[] = "write";
-static const char __pyx_k_ByteIO[] = "ByteIO";
 static const char __pyx_k_handle[] = "handle";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_pickle[] = "pickle";
@@ -2096,10 +2095,10 @@ static const char __pyx_k_update[] = "update";
 static const char __pyx_k_values[] = "values";
 static const char __pyx_k_xrange[] = "xrange";
 static const char __pyx_k_BitDict[] = "BitDict";
-static const char __pyx_k_cByteIO[] = "cByteIO";
 static const char __pyx_k_offsets[] = "offsets";
 static const char __pyx_k_palette[] = "palette";
 static const char __pyx_k_AGMIBank[] = "AGMIBank";
+static const char __pyx_k_StringIO[] = "StringIO";
 static const char __pyx_k_anchor_x[] = "anchor_x";
 static const char __pyx_k_anchor_y[] = "anchor_y";
 static const char __pyx_k_compress[] = "compress";
@@ -2118,6 +2117,7 @@ static const char __pyx_k_ImageData[] = "ImageData";
 static const char __pyx_k_ImageItem[] = "ImageItem";
 static const char __pyx_k_JavaImage[] = "JavaImage";
 static const char __pyx_k_TypeError[] = "TypeError";
+static const char __pyx_k_cStringIO[] = "cStringIO";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_writeByte[] = "writeByte";
@@ -2163,48 +2163,51 @@ static const char __pyx_k_mmfparser_data_chunkloaders_apph[] = "mmfparser.data.c
 static const char __pyx_k_mmfparser_data_chunkloaders_imag[] = "mmfparser.data.chunkloaders.imagebank";
 static const char __pyx_k_mmfparser_data_mfaloaders_imageb[] = "mmfparser.data.mfaloaders.imagebank";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
-static PyObject *__pyx_n_s_ACE;
+static PyObject *__pyx_n_u_ACE;
 static PyObject *__pyx_n_s_AGMIBank;
-static PyObject *__pyx_n_s_ARGB;
-static PyObject *__pyx_n_s_Alpha;
+static PyObject *__pyx_n_u_ARGB;
+static PyObject *__pyx_n_u_Alpha;
 static PyObject *__pyx_n_s_BasePoint;
 static PyObject *__pyx_n_s_BitDict;
-static PyObject *__pyx_n_s_ByteIO;
 static PyObject *__pyx_n_s_FifteenPoint;
 static PyObject *__pyx_n_s_IMAGE_FLAGS;
 static PyObject *__pyx_n_s_Image;
 static PyObject *__pyx_n_s_ImageBank;
+static PyObject *__pyx_n_u_ImageBank;
 static PyObject *__pyx_n_s_ImageData;
 static PyObject *__pyx_n_s_ImageItem;
+static PyObject *__pyx_n_u_ImageItem;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x35;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x93;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0xab;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0xf7;
 static PyObject *__pyx_n_s_IndexPoint;
 static PyObject *__pyx_n_s_JavaImage;
-static PyObject *__pyx_n_s_LZX;
-static PyObject *__pyx_n_s_Mac;
+static PyObject *__pyx_n_u_JavaImage;
+static PyObject *__pyx_n_u_LZX;
+static PyObject *__pyx_n_u_Mac;
 static PyObject *__pyx_n_s_NotImplementedError;
 static PyObject *__pyx_n_s_PickleError;
 static PyObject *__pyx_n_s_Point;
-static PyObject *__pyx_n_s_RGBA;
-static PyObject *__pyx_n_s_RLE;
-static PyObject *__pyx_n_s_RLET;
-static PyObject *__pyx_n_s_RLEW;
+static PyObject *__pyx_n_u_RGBA;
+static PyObject *__pyx_n_u_RLE;
+static PyObject *__pyx_n_u_RLET;
+static PyObject *__pyx_n_u_RLEW;
 static PyObject *__pyx_n_s_SixteenPoint;
+static PyObject *__pyx_n_s_StringIO;
 static PyObject *__pyx_n_s_TypeError;
-static PyObject *__pyx_kp_s__11;
+static PyObject *__pyx_kp_u__11;
 static PyObject *__pyx_n_s_all;
 static PyObject *__pyx_n_s_anchor_x;
 static PyObject *__pyx_n_s_anchor_y;
-static PyObject *__pyx_n_s_build;
-static PyObject *__pyx_n_s_cByteIO;
+static PyObject *__pyx_n_u_build;
+static PyObject *__pyx_n_s_cStringIO;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_compress;
 static PyObject *__pyx_n_s_compressImageLZX;
 static PyObject *__pyx_n_s_copy;
 static PyObject *__pyx_n_s_data;
-static PyObject *__pyx_n_s_debug;
+static PyObject *__pyx_n_u_debug;
 static PyObject *__pyx_n_s_decompress;
 static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_error;
@@ -2218,10 +2221,10 @@ static PyObject *__pyx_n_s_handle;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_initialize;
 static PyObject *__pyx_n_s_items;
-static PyObject *__pyx_n_s_java;
+static PyObject *__pyx_n_u_java;
 static PyObject *__pyx_n_s_keys;
 static PyObject *__pyx_n_s_load;
-static PyObject *__pyx_n_s_loadImages;
+static PyObject *__pyx_n_u_loadImages;
 static PyObject *__pyx_n_s_load_image;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mmfparser_bitdict;
@@ -2236,9 +2239,9 @@ static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_new;
 static PyObject *__pyx_n_s_new_2;
 static PyObject *__pyx_kp_s_no_default___reduce___due_to_non;
-static PyObject *__pyx_kp_s_not_supported;
+static PyObject *__pyx_kp_u_not_supported;
 static PyObject *__pyx_n_s_offsets;
-static PyObject *__pyx_n_s_old;
+static PyObject *__pyx_n_u_old;
 static PyObject *__pyx_n_s_onepointfive;
 static PyObject *__pyx_n_s_open;
 static PyObject *__pyx_n_s_palette;
@@ -2254,7 +2257,7 @@ static PyObject *__pyx_n_s_pyx_unpickle_ImageItem;
 static PyObject *__pyx_n_s_pyx_unpickle_JavaImage;
 static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_range;
-static PyObject *__pyx_n_s_rb;
+static PyObject *__pyx_n_u_rb;
 static PyObject *__pyx_n_s_read;
 static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
@@ -2270,6 +2273,7 @@ static PyObject *__pyx_n_s_unload;
 static PyObject *__pyx_n_s_update;
 static PyObject *__pyx_n_s_values;
 static PyObject *__pyx_n_s_withSize;
+static PyObject *__pyx_n_u_withSize;
 static PyObject *__pyx_n_s_write;
 static PyObject *__pyx_n_s_writeByte;
 static PyObject *__pyx_n_s_writeColor;
@@ -2777,7 +2781,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
  * cdef inline object getImageData(ImageItem item, frame):
  */
   __Pyx_XDECREF(__pyx_r);
-  if (!(likely(PyString_CheckExact(__pyx_v_new_points))||((__pyx_v_new_points) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "str", Py_TYPE(__pyx_v_new_points)->tp_name), 0))) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_v_new_points))||((__pyx_v_new_points) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_v_new_points)->tp_name), 0))) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_INCREF(__pyx_v_new_points);
   __pyx_r = ((PyObject*)__pyx_v_new_points);
   goto __pyx_L0;
@@ -3108,7 +3112,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   __Pyx_INCREF(__pyx_n_s_ImageData);
   __Pyx_GIVEREF(__pyx_n_s_ImageData);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_ImageData);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ImageData); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
@@ -3154,7 +3158,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_5)) {
-    PyObject *__pyx_temp[7] = {__pyx_t_6, __pyx_t_1, __pyx_t_3, __pyx_n_s_RGBA, __pyx_v_data, __pyx_t_4, __pyx_v_item->alpha};
+    PyObject *__pyx_temp[7] = {__pyx_t_6, __pyx_t_1, __pyx_t_3, __pyx_n_u_RGBA, __pyx_v_data, __pyx_t_4, __pyx_v_item->alpha};
     __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 6+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_2);
@@ -3165,7 +3169,7 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
-    PyObject *__pyx_temp[7] = {__pyx_t_6, __pyx_t_1, __pyx_t_3, __pyx_n_s_RGBA, __pyx_v_data, __pyx_t_4, __pyx_v_item->alpha};
+    PyObject *__pyx_temp[7] = {__pyx_t_6, __pyx_t_1, __pyx_t_3, __pyx_n_u_RGBA, __pyx_v_data, __pyx_t_4, __pyx_v_item->alpha};
     __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 6+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_2);
@@ -3184,9 +3188,9 @@ static CYTHON_INLINE PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imageban
     PyTuple_SET_ITEM(__pyx_t_8, 0+__pyx_t_7, __pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_3);
-    __Pyx_INCREF(__pyx_n_s_RGBA);
-    __Pyx_GIVEREF(__pyx_n_s_RGBA);
-    PyTuple_SET_ITEM(__pyx_t_8, 2+__pyx_t_7, __pyx_n_s_RGBA);
+    __Pyx_INCREF(__pyx_n_u_RGBA);
+    __Pyx_GIVEREF(__pyx_n_u_RGBA);
+    PyTuple_SET_ITEM(__pyx_t_8, 2+__pyx_t_7, __pyx_n_u_RGBA);
     __Pyx_INCREF(__pyx_v_data);
     __Pyx_GIVEREF(__pyx_v_data);
     PyTuple_SET_ITEM(__pyx_t_8, 3+__pyx_t_7, __pyx_v_data);
@@ -5597,7 +5601,7 @@ static CYTHON_INLINE int __pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_get_
  * 
  * cdef inline tuple read_rle(char * data, int width, int height, BasePoint pointClass):
  */
-  __pyx_r = ((int)ceil((__pyx_v_pad / ((float)__pyx_v_pointClass->size))));
+  __pyx_r = ((int)ceil((((float)__pyx_v_pad) / ((float)__pyx_v_pointClass->size))));
   goto __pyx_L0;
 
   /* "mmfparser/data/chunkloaders/imagebank.pyx":211
@@ -6774,7 +6778,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 368, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_loadImages, Py_True); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_loadImages, Py_True); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6854,7 +6858,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 375, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_old, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_old, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6903,7 +6907,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_r
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 379, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7225,7 +7229,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 397, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_old, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_old, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7242,7 +7246,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_l
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 398, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7809,7 +7813,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *         cdef bint debug = self.settings.get('debug', False)
  *         compressedPeen = zlibdata.compressImageLZX(self.rawImage)
  */
-  if (unlikely(PyObject_SetItem(__pyx_v_self->flags, __pyx_n_s_LZX, Py_True) < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(__pyx_v_self->flags, __pyx_n_u_LZX, Py_True) < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
 
   /* "mmfparser/data/chunkloaders/imagebank.pyx":441
  *     def write(self, reader):
@@ -7822,7 +7826,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 441, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 441, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 441, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7935,7 +7939,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):
  */
-  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 446, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_u_LZX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 446, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 446, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -7992,7 +7996,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *             newReader.writeInt(len(compressedPeen) + 4, True)
  *         newReader.writeShort(self.width)
  */
-  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_u_LZX); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8208,7 +8212,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *         newReader.writeShort(self.xHotspot)
  *         newReader.writeShort(self.yHotspot)
  */
-  (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->write(__pyx_v_newReader, ((PyObject*)__pyx_kp_s__11), 0));
+  (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_newReader->__pyx_vtab)->write(__pyx_v_newReader, ((PyObject*)__pyx_kp_u__11), 0));
 
   /* "mmfparser/data/chunkloaders/imagebank.pyx":455
  *         newReader.writeByte(self.flags.getFlags())
@@ -8375,7 +8379,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *             newReader.writeReader(self.rawImage)
  *         if (self.flags['LZX'] == True):
  */
-  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_u_LZX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 460, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 460, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -8425,7 +8429,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *             newReader.writeInt(len(self.rawImage))
  *         if (self.flags['LZX'] == True):
  */
-  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 462, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_u_LZX); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8482,7 +8486,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageItem_
  *             newReader.writeReader(compressedPeen)
  *         reader.writeInt(self.handle)
  */
-  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_LZX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_u_LZX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11261,7 +11265,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_r
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 500, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_withSize, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_withSize, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -11661,7 +11665,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 518, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_withSize, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_withSize, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12003,7 +12007,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     __Pyx_INCREF(__pyx_n_s_ImageData);
     __Pyx_GIVEREF(__pyx_n_s_ImageData);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_ImageData);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_mmfparser_player_sprite, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 530, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_ImageData); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 530, __pyx_L1_error)
@@ -12049,7 +12053,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_6)) {
-      PyObject *__pyx_temp[7] = {__pyx_t_7, __pyx_t_2, __pyx_t_4, __pyx_n_s_ARGB, __pyx_v_self->data, __pyx_t_5, Py_None};
+      PyObject *__pyx_temp[7] = {__pyx_t_7, __pyx_t_2, __pyx_t_4, __pyx_n_u_ARGB, __pyx_v_self->data, __pyx_t_5, Py_None};
       __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 6+__pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_3);
@@ -12060,7 +12064,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
-      PyObject *__pyx_temp[7] = {__pyx_t_7, __pyx_t_2, __pyx_t_4, __pyx_n_s_ARGB, __pyx_v_self->data, __pyx_t_5, Py_None};
+      PyObject *__pyx_temp[7] = {__pyx_t_7, __pyx_t_2, __pyx_t_4, __pyx_n_u_ARGB, __pyx_v_self->data, __pyx_t_5, Py_None};
       __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_8, 6+__pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_3);
@@ -12079,9 +12083,9 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
       PyTuple_SET_ITEM(__pyx_t_9, 0+__pyx_t_8, __pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_8, __pyx_t_4);
-      __Pyx_INCREF(__pyx_n_s_ARGB);
-      __Pyx_GIVEREF(__pyx_n_s_ARGB);
-      PyTuple_SET_ITEM(__pyx_t_9, 2+__pyx_t_8, __pyx_n_s_ARGB);
+      __Pyx_INCREF(__pyx_n_u_ARGB);
+      __Pyx_GIVEREF(__pyx_n_u_ARGB);
+      PyTuple_SET_ITEM(__pyx_t_9, 2+__pyx_t_8, __pyx_n_u_ARGB);
       __Pyx_INCREF(__pyx_v_self->data);
       __Pyx_GIVEREF(__pyx_v_self->data);
       PyTuple_SET_ITEM(__pyx_t_9, 3+__pyx_t_8, __pyx_v_self->data);
@@ -12115,7 +12119,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
  *                 self.data, self.width * -4, None)
  *         else:
  *             from mmfparser.player.common import load_image             # <<<<<<<<<<<<<<
- *             newImage = load_image(ByteIO(self.data))
+ *             newImage = load_image(StringIO(self.data))
  *         newImage.anchor_x = self.xHotspot
  */
   /*else*/ {
@@ -12124,7 +12128,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     __Pyx_INCREF(__pyx_n_s_load_image);
     __Pyx_GIVEREF(__pyx_n_s_load_image);
     PyList_SET_ITEM(__pyx_t_3, 0, __pyx_n_s_load_image);
-    __pyx_t_6 = __Pyx_Import(__pyx_n_s_mmfparser_player_common, __pyx_t_3, -1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 534, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_Import(__pyx_n_s_mmfparser_player_common, __pyx_t_3, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 534, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = __Pyx_ImportFrom(__pyx_t_6, __pyx_n_s_load_image); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 534, __pyx_L1_error)
@@ -12137,11 +12141,11 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
     /* "mmfparser/data/chunkloaders/imagebank.pyx":535
  *         else:
  *             from mmfparser.player.common import load_image
- *             newImage = load_image(ByteIO(self.data))             # <<<<<<<<<<<<<<
+ *             newImage = load_image(StringIO(self.data))             # <<<<<<<<<<<<<<
  *         newImage.anchor_x = self.xHotspot
  *         newImage.anchor_y = self.height - self.yHotspot
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_ByteIO); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 535, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 535, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_9))) {
@@ -12182,7 +12186,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
 
   /* "mmfparser/data/chunkloaders/imagebank.pyx":536
  *             from mmfparser.player.common import load_image
- *             newImage = load_image(ByteIO(self.data))
+ *             newImage = load_image(StringIO(self.data))
  *         newImage.anchor_x = self.xHotspot             # <<<<<<<<<<<<<<
  *         newImage.anchor_y = self.height - self.yHotspot
  *         return newImage
@@ -12193,7 +12197,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "mmfparser/data/chunkloaders/imagebank.pyx":537
- *             newImage = load_image(ByteIO(self.data))
+ *             newImage = load_image(StringIO(self.data))
  *         newImage.anchor_x = self.xHotspot
  *         newImage.anchor_y = self.height - self.yHotspot             # <<<<<<<<<<<<<<
  *         return newImage
@@ -12297,7 +12301,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9JavaImage_
   __Pyx_INCREF(__pyx_n_s_Image);
   __Pyx_GIVEREF(__pyx_n_s_Image);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Image);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_image, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_image, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Image); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 541, __pyx_L1_error)
@@ -13788,7 +13792,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 557, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_java, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 557, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_java, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13805,7 +13809,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
     __PYX_ERR(0, 558, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->__pyx_base.settings, __pyx_n_s_build); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 558, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_self->__pyx_base.settings, __pyx_n_u_build); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 558, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_6 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 558, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13832,7 +13836,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
       __PYX_ERR(0, 562, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_debug, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 562, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 562, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13862,9 +13866,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_r
       __Pyx_INCREF(__pyx_v_path);
       __Pyx_GIVEREF(__pyx_v_path);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_path);
-      __Pyx_INCREF(__pyx_n_s_rb);
-      __Pyx_GIVEREF(__pyx_n_s_rb);
-      PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_rb);
+      __Pyx_INCREF(__pyx_n_u_rb);
+      __Pyx_GIVEREF(__pyx_n_u_rb);
+      PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_u_rb);
       __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 564, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -14597,7 +14601,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_9ImageBank_
     PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "get");
     __PYX_ERR(0, 596, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_java, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_u_java, Py_False); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_java = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -15655,7 +15659,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank___pyx_unpic
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -16051,7 +16055,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_2__pyx_unpi
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -16642,7 +16646,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_4__pyx_unpi
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -17136,7 +17140,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_9imagebank_6__pyx_unpi
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -18897,48 +18901,51 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_n_s_ACE, __pyx_k_ACE, sizeof(__pyx_k_ACE), 0, 0, 1, 1},
+  {&__pyx_n_u_ACE, __pyx_k_ACE, sizeof(__pyx_k_ACE), 0, 1, 0, 1},
   {&__pyx_n_s_AGMIBank, __pyx_k_AGMIBank, sizeof(__pyx_k_AGMIBank), 0, 0, 1, 1},
-  {&__pyx_n_s_ARGB, __pyx_k_ARGB, sizeof(__pyx_k_ARGB), 0, 0, 1, 1},
-  {&__pyx_n_s_Alpha, __pyx_k_Alpha, sizeof(__pyx_k_Alpha), 0, 0, 1, 1},
+  {&__pyx_n_u_ARGB, __pyx_k_ARGB, sizeof(__pyx_k_ARGB), 0, 1, 0, 1},
+  {&__pyx_n_u_Alpha, __pyx_k_Alpha, sizeof(__pyx_k_Alpha), 0, 1, 0, 1},
   {&__pyx_n_s_BasePoint, __pyx_k_BasePoint, sizeof(__pyx_k_BasePoint), 0, 0, 1, 1},
   {&__pyx_n_s_BitDict, __pyx_k_BitDict, sizeof(__pyx_k_BitDict), 0, 0, 1, 1},
-  {&__pyx_n_s_ByteIO, __pyx_k_ByteIO, sizeof(__pyx_k_ByteIO), 0, 0, 1, 1},
   {&__pyx_n_s_FifteenPoint, __pyx_k_FifteenPoint, sizeof(__pyx_k_FifteenPoint), 0, 0, 1, 1},
   {&__pyx_n_s_IMAGE_FLAGS, __pyx_k_IMAGE_FLAGS, sizeof(__pyx_k_IMAGE_FLAGS), 0, 0, 1, 1},
   {&__pyx_n_s_Image, __pyx_k_Image, sizeof(__pyx_k_Image), 0, 0, 1, 1},
   {&__pyx_n_s_ImageBank, __pyx_k_ImageBank, sizeof(__pyx_k_ImageBank), 0, 0, 1, 1},
+  {&__pyx_n_u_ImageBank, __pyx_k_ImageBank, sizeof(__pyx_k_ImageBank), 0, 1, 0, 1},
   {&__pyx_n_s_ImageData, __pyx_k_ImageData, sizeof(__pyx_k_ImageData), 0, 0, 1, 1},
   {&__pyx_n_s_ImageItem, __pyx_k_ImageItem, sizeof(__pyx_k_ImageItem), 0, 0, 1, 1},
+  {&__pyx_n_u_ImageItem, __pyx_k_ImageItem, sizeof(__pyx_k_ImageItem), 0, 1, 0, 1},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0x35, __pyx_k_Incompatible_checksums_s_vs_0x35, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x35), 0, 0, 1, 0},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0x93, __pyx_k_Incompatible_checksums_s_vs_0x93, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x93), 0, 0, 1, 0},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0xab, __pyx_k_Incompatible_checksums_s_vs_0xab, sizeof(__pyx_k_Incompatible_checksums_s_vs_0xab), 0, 0, 1, 0},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0xf7, __pyx_k_Incompatible_checksums_s_vs_0xf7, sizeof(__pyx_k_Incompatible_checksums_s_vs_0xf7), 0, 0, 1, 0},
   {&__pyx_n_s_IndexPoint, __pyx_k_IndexPoint, sizeof(__pyx_k_IndexPoint), 0, 0, 1, 1},
   {&__pyx_n_s_JavaImage, __pyx_k_JavaImage, sizeof(__pyx_k_JavaImage), 0, 0, 1, 1},
-  {&__pyx_n_s_LZX, __pyx_k_LZX, sizeof(__pyx_k_LZX), 0, 0, 1, 1},
-  {&__pyx_n_s_Mac, __pyx_k_Mac, sizeof(__pyx_k_Mac), 0, 0, 1, 1},
+  {&__pyx_n_u_JavaImage, __pyx_k_JavaImage, sizeof(__pyx_k_JavaImage), 0, 1, 0, 1},
+  {&__pyx_n_u_LZX, __pyx_k_LZX, sizeof(__pyx_k_LZX), 0, 1, 0, 1},
+  {&__pyx_n_u_Mac, __pyx_k_Mac, sizeof(__pyx_k_Mac), 0, 1, 0, 1},
   {&__pyx_n_s_NotImplementedError, __pyx_k_NotImplementedError, sizeof(__pyx_k_NotImplementedError), 0, 0, 1, 1},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_Point, __pyx_k_Point, sizeof(__pyx_k_Point), 0, 0, 1, 1},
-  {&__pyx_n_s_RGBA, __pyx_k_RGBA, sizeof(__pyx_k_RGBA), 0, 0, 1, 1},
-  {&__pyx_n_s_RLE, __pyx_k_RLE, sizeof(__pyx_k_RLE), 0, 0, 1, 1},
-  {&__pyx_n_s_RLET, __pyx_k_RLET, sizeof(__pyx_k_RLET), 0, 0, 1, 1},
-  {&__pyx_n_s_RLEW, __pyx_k_RLEW, sizeof(__pyx_k_RLEW), 0, 0, 1, 1},
+  {&__pyx_n_u_RGBA, __pyx_k_RGBA, sizeof(__pyx_k_RGBA), 0, 1, 0, 1},
+  {&__pyx_n_u_RLE, __pyx_k_RLE, sizeof(__pyx_k_RLE), 0, 1, 0, 1},
+  {&__pyx_n_u_RLET, __pyx_k_RLET, sizeof(__pyx_k_RLET), 0, 1, 0, 1},
+  {&__pyx_n_u_RLEW, __pyx_k_RLEW, sizeof(__pyx_k_RLEW), 0, 1, 0, 1},
   {&__pyx_n_s_SixteenPoint, __pyx_k_SixteenPoint, sizeof(__pyx_k_SixteenPoint), 0, 0, 1, 1},
+  {&__pyx_n_s_StringIO, __pyx_k_StringIO, sizeof(__pyx_k_StringIO), 0, 0, 1, 1},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
-  {&__pyx_kp_s__11, __pyx_k__11, sizeof(__pyx_k__11), 0, 0, 1, 0},
+  {&__pyx_kp_u__11, __pyx_k__11, sizeof(__pyx_k__11), 0, 1, 0, 0},
   {&__pyx_n_s_all, __pyx_k_all, sizeof(__pyx_k_all), 0, 0, 1, 1},
   {&__pyx_n_s_anchor_x, __pyx_k_anchor_x, sizeof(__pyx_k_anchor_x), 0, 0, 1, 1},
   {&__pyx_n_s_anchor_y, __pyx_k_anchor_y, sizeof(__pyx_k_anchor_y), 0, 0, 1, 1},
-  {&__pyx_n_s_build, __pyx_k_build, sizeof(__pyx_k_build), 0, 0, 1, 1},
-  {&__pyx_n_s_cByteIO, __pyx_k_cByteIO, sizeof(__pyx_k_cByteIO), 0, 0, 1, 1},
+  {&__pyx_n_u_build, __pyx_k_build, sizeof(__pyx_k_build), 0, 1, 0, 1},
+  {&__pyx_n_s_cStringIO, __pyx_k_cStringIO, sizeof(__pyx_k_cStringIO), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_compress, __pyx_k_compress, sizeof(__pyx_k_compress), 0, 0, 1, 1},
   {&__pyx_n_s_compressImageLZX, __pyx_k_compressImageLZX, sizeof(__pyx_k_compressImageLZX), 0, 0, 1, 1},
   {&__pyx_n_s_copy, __pyx_k_copy, sizeof(__pyx_k_copy), 0, 0, 1, 1},
   {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
-  {&__pyx_n_s_debug, __pyx_k_debug, sizeof(__pyx_k_debug), 0, 0, 1, 1},
+  {&__pyx_n_u_debug, __pyx_k_debug, sizeof(__pyx_k_debug), 0, 1, 0, 1},
   {&__pyx_n_s_decompress, __pyx_k_decompress, sizeof(__pyx_k_decompress), 0, 0, 1, 1},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
   {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
@@ -18952,10 +18959,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_initialize, __pyx_k_initialize, sizeof(__pyx_k_initialize), 0, 0, 1, 1},
   {&__pyx_n_s_items, __pyx_k_items, sizeof(__pyx_k_items), 0, 0, 1, 1},
-  {&__pyx_n_s_java, __pyx_k_java, sizeof(__pyx_k_java), 0, 0, 1, 1},
+  {&__pyx_n_u_java, __pyx_k_java, sizeof(__pyx_k_java), 0, 1, 0, 1},
   {&__pyx_n_s_keys, __pyx_k_keys, sizeof(__pyx_k_keys), 0, 0, 1, 1},
   {&__pyx_n_s_load, __pyx_k_load, sizeof(__pyx_k_load), 0, 0, 1, 1},
-  {&__pyx_n_s_loadImages, __pyx_k_loadImages, sizeof(__pyx_k_loadImages), 0, 0, 1, 1},
+  {&__pyx_n_u_loadImages, __pyx_k_loadImages, sizeof(__pyx_k_loadImages), 0, 1, 0, 1},
   {&__pyx_n_s_load_image, __pyx_k_load_image, sizeof(__pyx_k_load_image), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mmfparser_bitdict, __pyx_k_mmfparser_bitdict, sizeof(__pyx_k_mmfparser_bitdict), 0, 0, 1, 1},
@@ -18970,9 +18977,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_new, __pyx_k_new, sizeof(__pyx_k_new), 0, 0, 1, 1},
   {&__pyx_n_s_new_2, __pyx_k_new_2, sizeof(__pyx_k_new_2), 0, 0, 1, 1},
   {&__pyx_kp_s_no_default___reduce___due_to_non, __pyx_k_no_default___reduce___due_to_non, sizeof(__pyx_k_no_default___reduce___due_to_non), 0, 0, 1, 0},
-  {&__pyx_kp_s_not_supported, __pyx_k_not_supported, sizeof(__pyx_k_not_supported), 0, 0, 1, 0},
+  {&__pyx_kp_u_not_supported, __pyx_k_not_supported, sizeof(__pyx_k_not_supported), 0, 1, 0, 0},
   {&__pyx_n_s_offsets, __pyx_k_offsets, sizeof(__pyx_k_offsets), 0, 0, 1, 1},
-  {&__pyx_n_s_old, __pyx_k_old, sizeof(__pyx_k_old), 0, 0, 1, 1},
+  {&__pyx_n_u_old, __pyx_k_old, sizeof(__pyx_k_old), 0, 1, 0, 1},
   {&__pyx_n_s_onepointfive, __pyx_k_onepointfive, sizeof(__pyx_k_onepointfive), 0, 0, 1, 1},
   {&__pyx_n_s_open, __pyx_k_open, sizeof(__pyx_k_open), 0, 0, 1, 1},
   {&__pyx_n_s_palette, __pyx_k_palette, sizeof(__pyx_k_palette), 0, 0, 1, 1},
@@ -18988,7 +18995,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pyx_unpickle_JavaImage, __pyx_k_pyx_unpickle_JavaImage, sizeof(__pyx_k_pyx_unpickle_JavaImage), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
-  {&__pyx_n_s_rb, __pyx_k_rb, sizeof(__pyx_k_rb), 0, 0, 1, 1},
+  {&__pyx_n_u_rb, __pyx_k_rb, sizeof(__pyx_k_rb), 0, 1, 0, 1},
   {&__pyx_n_s_read, __pyx_k_read, sizeof(__pyx_k_read), 0, 0, 1, 1},
   {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
@@ -19004,6 +19011,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
   {&__pyx_n_s_values, __pyx_k_values, sizeof(__pyx_k_values), 0, 0, 1, 1},
   {&__pyx_n_s_withSize, __pyx_k_withSize, sizeof(__pyx_k_withSize), 0, 0, 1, 1},
+  {&__pyx_n_u_withSize, __pyx_k_withSize, sizeof(__pyx_k_withSize), 0, 1, 0, 1},
   {&__pyx_n_s_write, __pyx_k_write, sizeof(__pyx_k_write), 0, 0, 1, 1},
   {&__pyx_n_s_writeByte, __pyx_k_writeByte, sizeof(__pyx_k_writeByte), 0, 0, 1, 1},
   {&__pyx_n_s_writeColor, __pyx_k_writeColor, sizeof(__pyx_k_writeColor), 0, 0, 1, 1},
@@ -19117,7 +19125,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *         cdef bint debug = self.settings.get('debug', False)
  */
-  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_s_not_supported); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(1, __pyx_kp_u_not_supported); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
@@ -19139,7 +19147,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     'RLE',
  *     'RLEW',
  */
-  __pyx_tuple__12 = PyTuple_Pack(7, __pyx_n_s_RLE, __pyx_n_s_RLEW, __pyx_n_s_RLET, __pyx_n_s_LZX, __pyx_n_s_Alpha, __pyx_n_s_ACE, __pyx_n_s_Mac); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(7, __pyx_n_u_RLE, __pyx_n_u_RLEW, __pyx_n_u_RLET, __pyx_n_u_LZX, __pyx_n_u_Alpha, __pyx_n_u_ACE, __pyx_n_u_Mac); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
@@ -19622,9 +19630,9 @@ if (!__Pyx_RefNanny) {
  * 
  * import struct             # <<<<<<<<<<<<<<
  * import zlib
- * from cByteIO import ByteIO
+ * from cStringIO import StringIO
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_struct, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_struct, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_struct, __pyx_t_1) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -19633,10 +19641,10 @@ if (!__Pyx_RefNanny) {
  * 
  * import struct
  * import zlib             # <<<<<<<<<<<<<<
- * from cByteIO import ByteIO
+ * from cStringIO import StringIO
  * 
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_zlib, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_zlib, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_zlib, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -19644,21 +19652,21 @@ if (!__Pyx_RefNanny) {
   /* "mmfparser/data/chunkloaders/imagebank.pyx":22
  * import struct
  * import zlib
- * from cByteIO import ByteIO             # <<<<<<<<<<<<<<
+ * from cStringIO import StringIO             # <<<<<<<<<<<<<<
  * 
  * from mmfparser.bytereader cimport ByteReader
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_ByteIO);
-  __Pyx_GIVEREF(__pyx_n_s_ByteIO);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_ByteIO);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_cByteIO, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __Pyx_INCREF(__pyx_n_s_StringIO);
+  __Pyx_GIVEREF(__pyx_n_s_StringIO);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_StringIO);
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_cStringIO, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_ByteIO); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ByteIO, __pyx_t_1) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_StringIO, __pyx_t_1) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
@@ -19674,7 +19682,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_zlibdata);
   __Pyx_GIVEREF(__pyx_n_s_zlibdata);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_zlibdata);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_zlibdata); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
@@ -19695,7 +19703,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_onepointfive);
   __Pyx_GIVEREF(__pyx_n_s_onepointfive);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_onepointfive);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_onepointfive); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
@@ -19716,7 +19724,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_graphicModes);
   __Pyx_GIVEREF(__pyx_n_s_graphicModes);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_graphicModes);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data_chunkloaders_apph, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_mmfparser_data_chunkloaders_apph, __pyx_t_2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_graphicModes); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
@@ -19737,7 +19745,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_BitDict);
   __Pyx_GIVEREF(__pyx_n_s_BitDict);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_BitDict);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_bitdict, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_bitdict, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_BitDict); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
@@ -19847,7 +19855,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_AGMIBank);
   __Pyx_GIVEREF(__pyx_n_s_AGMIBank);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_AGMIBank);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data_mfaloaders_imageb, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 615, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data_mfaloaders_imageb, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 615, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_AGMIBank); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 615, __pyx_L1_error)
@@ -19863,15 +19871,15 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = PyList_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(__pyx_n_s_ImageBank);
-  __Pyx_GIVEREF(__pyx_n_s_ImageBank);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_ImageBank);
-  __Pyx_INCREF(__pyx_n_s_JavaImage);
-  __Pyx_GIVEREF(__pyx_n_s_JavaImage);
-  PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_s_JavaImage);
-  __Pyx_INCREF(__pyx_n_s_ImageItem);
-  __Pyx_GIVEREF(__pyx_n_s_ImageItem);
-  PyList_SET_ITEM(__pyx_t_2, 2, __pyx_n_s_ImageItem);
+  __Pyx_INCREF(__pyx_n_u_ImageBank);
+  __Pyx_GIVEREF(__pyx_n_u_ImageBank);
+  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_u_ImageBank);
+  __Pyx_INCREF(__pyx_n_u_JavaImage);
+  __Pyx_GIVEREF(__pyx_n_u_JavaImage);
+  PyList_SET_ITEM(__pyx_t_2, 1, __pyx_n_u_JavaImage);
+  __Pyx_INCREF(__pyx_n_u_ImageItem);
+  __Pyx_GIVEREF(__pyx_n_u_ImageItem);
+  PyList_SET_ITEM(__pyx_t_2, 2, __pyx_n_u_ImageItem);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_2) < 0) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 

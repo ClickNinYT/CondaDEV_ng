@@ -75,4 +75,4 @@ class Checksum(object):
         return make_pame_checksum(self.data)
 
 if __name__ == '__main__':
-    print hex(make_group_checksum('klonoafan', 'yay'))
+    print(hex(make_group_checksum('klonoafan', 'yay')))

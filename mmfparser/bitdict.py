@@ -84,19 +84,19 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
         values = {}
         while 1:
-            name = raw_input('name: ').strip()
+            name = input('name: ').strip()
             if name == '':
                 break
-            value = raw_input('value: ').strip()
+            value = input('value: ').strip()
             if value.startswith('0x'):
                 value = int(value, 16)
                 values[name] = value
             else:
-                print 'invalid!'
+                print('invalid!')
     else:
         arg = sys.argv[1:]
         values = {}
-        for i in xrange(len(arg) / 2):
+        for i in range(len(arg) / 2):
             name = arg[i * 2]
             value = arg[i * 2 + 1]
             try:
@@ -104,8 +104,8 @@ if __name__ == '__main__':
                 values[name] = value
             except ValueError:
                 continue
-    print values
+    print(values)
     from mmfparser.player.clipboard import set
     data = make_bitdict_string(values)
-    print data
+    print(data)
     set('%r' % data)
