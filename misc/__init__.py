@@ -22,10 +22,10 @@ def log(str, col):
     elif col == 3:
        col = colors.yellow
     else:
-       print colors.red + '[' + time + ']' + ' ' + 'Invaild color specified!' + colors.default
+       print(colors.red + '[' + time + ']' + ' ' + 'Invaild color specified!' + colors.default)
        exit()
     cl = colors.default
-    print col + log + cl
+    print(col + log + cl)
 
 def CheckArch():
     ar = 8 * struct.calcsize("P")

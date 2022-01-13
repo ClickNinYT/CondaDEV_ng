@@ -943,7 +943,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser/bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":16
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -955,7 +955,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser/bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":17
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -967,7 +967,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser/bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":20
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -979,7 +979,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser/bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":21
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -991,7 +991,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser/bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":24
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -1003,7 +1003,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser/bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":25
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -1015,7 +1015,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser/bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":26
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -1027,7 +1027,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString {
   PyObject *size;
 };
 
-/* "mmfparser/bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":3
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -2072,11 +2072,11 @@ static int __Pyx_modinit_type_import_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_import_code", 0);
   /*--- Type import code ---*/
-  __pyx_t_1 = PyImport_ImportModule("mmfparser.bytereader"); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 20, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule("mmfparser.bytereader"); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_ptype_9mmfparser_10bytereader_ByteReader = __Pyx_ImportType(__pyx_t_1, "mmfparser.bytereader", "ByteReader", sizeof(struct __pyx_obj_9mmfparser_10bytereader_ByteReader), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9mmfparser_10bytereader_ByteReader) __PYX_ERR(1, 20, __pyx_L1_error)
-  __pyx_vtabptr_9mmfparser_10bytereader_ByteReader = (struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader*)__Pyx_GetVtable(__pyx_ptype_9mmfparser_10bytereader_ByteReader->tp_dict); if (unlikely(!__pyx_vtabptr_9mmfparser_10bytereader_ByteReader)) __PYX_ERR(1, 20, __pyx_L1_error)
+   if (!__pyx_ptype_9mmfparser_10bytereader_ByteReader) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_vtabptr_9mmfparser_10bytereader_ByteReader = (struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader*)__Pyx_GetVtable(__pyx_ptype_9mmfparser_10bytereader_ByteReader->tp_dict); if (unlikely(!__pyx_vtabptr_9mmfparser_10bytereader_ByteReader)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_RefNannyFinishContext();
   return 0;

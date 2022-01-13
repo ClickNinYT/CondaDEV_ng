@@ -15,7 +15,7 @@ import os
 import string
 import os.path
 import platform
-                                                                                                                                                                                                                                                                                                                                                                                        
+
 def main(opt):
     if opt == 0:
         log("decompile <game path> <output path>: Decompile a game", 2)
@@ -72,7 +72,7 @@ def decompile():
             os.makedirs(path1)
             #log("Output Directory Check Passed!", 1)
             pass
-    
+
     if input.endswith('.ccn'):
         #fp = ByteReader(open(input, 'rb'))
         #newGame = GameData(fp)
@@ -94,7 +94,7 @@ def decompile():
     else:
         log("Error: Unsupported file!", 0)
         exit()
-    
+
     newGame = newExe.gameData
 
     s1 = newGame.name
@@ -158,4 +158,5 @@ if __name__ == '__main__':
     else:
         log("Error: Invaild option provided!", 0)
         exit()
-    
+
+
