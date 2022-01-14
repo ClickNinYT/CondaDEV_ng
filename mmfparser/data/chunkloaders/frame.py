@@ -40,7 +40,7 @@ class FrameHandles(DataLoader):
         self.handles = []
 
     def read(self, reader):
-        self.handles = [reader.readShort() for _ in xrange(len(reader) / 2)]
+        self.handles = [reader.readShort() for _ in range(len(reader) / 2)]
 
     def write(self, reader):
         for handle in self.handles:
@@ -282,7 +282,7 @@ PARENT_TYPES = [
     'Qualifier'
 ]
 
-NONE_PARENT, FRAME_PARENT, FRAMEITEM_PARENT, QUALIFIER_PARENT = xrange(4)
+NONE_PARENT, FRAME_PARENT, FRAMEITEM_PARENT, QUALIFIER_PARENT = range(4)
 
 class ObjectInstance(DataLoader):
     handle = None

@@ -19,7 +19,7 @@ cimport cython
 
 import struct
 import zlib
-from cStringIO import StringIO
+import io
 
 from mmfparser.bytereader cimport ByteReader
 from mmfparser.data import zlibdata
@@ -532,7 +532,7 @@ cdef class JavaImage(DataLoader):
                 self.data, self.width * -4, None)
         else:
             from mmfparser.player.common import load_image
-            newImage = load_image(StringIO(self.data))
+            newImage = load_image(io.StringIO(self.data))
         newImage.anchor_x = self.xHotspot
         newImage.anchor_y = self.height - self.yHotspot
         return newImage

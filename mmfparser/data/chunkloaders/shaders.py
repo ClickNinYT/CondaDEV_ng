@@ -30,7 +30,7 @@ class Parameter(object):
         parameter.value = self.value
         return parameter
 
-INT, FLOAT, INT_FLOAT4, IMAGE = xrange(4)
+INT, FLOAT, INT_FLOAT4, IMAGE = range(4)
 
 class Shader(DataLoader):
     name = None

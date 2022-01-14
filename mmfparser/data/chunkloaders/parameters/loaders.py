@@ -99,7 +99,7 @@ class Remark(ParameterCommon):
         self.fontColor = reader.readColor()
         self.backColor = reader.readColor()
         if reader.readShort() != 0:
-            print 'remark NOOO'
+            print('remark NOOO')
         self.id = reader.readInt(True)
 
     def write(self, reader):

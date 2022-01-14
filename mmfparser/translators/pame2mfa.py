@@ -348,7 +348,7 @@ def translate(game, print_func = dummy_out):
                 newLoader.height = text.height
                 question = text.items[0]
                 answer = text.items[1]
-                print question.font
+                print(question.font)
                 newLoader.questionFont = question.font
                 newLoader.questionColor = question.color
                 newLoader.questionFlags = 0

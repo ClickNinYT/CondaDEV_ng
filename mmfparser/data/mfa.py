@@ -116,7 +116,7 @@ class ValueList(DataLoader):
     def read(self, reader):
         count = reader.readInt()
         self.items = [self.new(ValueItem, reader)
-            for _ in xrange(count)]
+            for _ in range(count)]
 
     def write(self, reader):
         reader.writeInt(len(self.items))
@@ -153,7 +153,7 @@ class Filters(DataLoader):
         self.filters = filters = []
         while reader.tell() != len(reader):
             count = reader.readInt(True)
-            items = [reader.read(reader.readInt()) for _ in xrange(count)]
+            items = [reader.read(reader.readInt()) for _ in range(count)]
             filters.append(items)
 
 class Serial(DataLoader):
@@ -785,7 +785,7 @@ class SubApplication(ObjectLoader):
         self.startFrame = reader.readInt()
         if self.startFrame != -1:
             if reader.readInt() != -1:
-                print 'subapp NO'
+                print('subapp NO')
 
     def write(self, reader):
         ObjectLoader.write(self, reader)
