@@ -43,5 +43,5 @@ for name in names:
                                  include_dirs=include_dirs, **kw))
 setup(
     name = 'mmfparser extensions',
-    ext_modules = cythonize(ext_modules, compile_time_env=compile_env)
+    ext_modules = cythonize(ext_modules, compile_time_env=compile_env, language_level = "2")
 )
