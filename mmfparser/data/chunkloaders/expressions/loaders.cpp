@@ -34,7 +34,7 @@ END: Cython Metadata */
 #else
 #define CYTHON_ABI "0_29_26"
 #define CYTHON_HEX_VERSION 0x001D1AF0
-#define CYTHON_FUTURE_DIVISION 0
+#define CYTHON_FUTURE_DIVISION 1
 #include <stddef.h>
 #ifndef offsetof
   #define offsetof(type, member) ( (size_t) & ((type*)0) -> member )
@@ -924,9 +924,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser/data/chunkloaders/expressions/loaders.pyx",
+  "mmfparser\\data\\chunkloaders\\expressions\\loaders.pyx",
   "stringsource",
-  "mmfparser/bytereader.pxd",
+  "mmfparser\\bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -945,7 +945,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString;
 struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readUnicodeString;
 
-/* "mmfparser/bytereader.pxd":33
+/* "mmfparser/bytereader.pxd":16
  *     cpdef int tell(self)
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)             # <<<<<<<<<<<<<<
@@ -957,7 +957,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_seek {
   int mode;
 };
 
-/* "mmfparser/bytereader.pxd":34
+/* "mmfparser/bytereader.pxd":17
  *     cpdef data(self)
  *     cpdef bint seek(self, int pos, int mode = ?)
  *     cpdef read(self, int size = ?)             # <<<<<<<<<<<<<<
@@ -969,7 +969,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read {
   int size;
 };
 
-/* "mmfparser/bytereader.pxd":37
+/* "mmfparser/bytereader.pxd":20
  *     cpdef adjust(self, int to)
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -981,7 +981,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte {
   int asUnsigned;
 };
 
-/* "mmfparser/bytereader.pxd":38
+/* "mmfparser/bytereader.pxd":21
  *     cpdef size_t size(self)
  *     cpdef short readByte(self, bint asUnsigned = ?) except? -10
  *     cpdef int readShort(self, bint asUnsigned = ?) except? -10             # <<<<<<<<<<<<<<
@@ -993,7 +993,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readShort {
   int asUnsigned;
 };
 
-/* "mmfparser/bytereader.pxd":41
+/* "mmfparser/bytereader.pxd":24
  *     cpdef float readFloat(self) except? -10
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)             # <<<<<<<<<<<<<<
@@ -1005,7 +1005,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readInt {
   int asUnsigned;
 };
 
-/* "mmfparser/bytereader.pxd":42
+/* "mmfparser/bytereader.pxd":25
  *     cpdef double readDouble(self) except? -10
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)             # <<<<<<<<<<<<<<
@@ -1017,7 +1017,7 @@ struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString {
   PyObject *size;
 };
 
-/* "mmfparser/bytereader.pxd":43
+/* "mmfparser/bytereader.pxd":26
  *     cpdef readInt(self, bint asUnsigned = ?)
  *     cpdef bytes readString(self, size=?)
  *     cpdef unicode readUnicodeString(self, size=?)             # <<<<<<<<<<<<<<
@@ -1040,7 +1040,7 @@ struct __pyx_opt_args_9mmfparser_6loader_10DataLoader_readString {
   PyObject *size;
 };
 
-/* "mmfparser/bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":3
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -1143,7 +1143,7 @@ struct __pyx_obj_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Extensio
 
 
 
-/* "mmfparser/bytereader.pxd":20
+/* "mmfparser/bytereader.pxd":3
  * from libc.stdio cimport FILE
  * 
  * cdef class ByteReader:             # <<<<<<<<<<<<<<
@@ -1750,21 +1750,29 @@ static const char __pyx_k_Incompatible_checksums_s_vs_0x13[] = "Incompatible che
 static const char __pyx_k_Incompatible_checksums_s_vs_0x43[] = "Incompatible checksums (%s vs 0x437c438 = (parent, settings, value))";
 static const char __pyx_k_mmfparser_data_chunkloaders_comm[] = "mmfparser.data.chunkloaders.common";
 static const char __pyx_k_mmfparser_data_chunkloaders_expr[] = "mmfparser.data.chunkloaders.expressions.loaders";
-static PyObject *__pyx_kp_s_;
+static PyObject *__pyx_kp_u_;
 static PyObject *__pyx_n_s_Double;
+static PyObject *__pyx_n_u_Double;
 static PyObject *__pyx_n_s_Empty;
 static PyObject *__pyx_n_s_End;
+static PyObject *__pyx_n_u_End;
 static PyObject *__pyx_n_s_ExtensionCommon;
 static PyObject *__pyx_n_s_ExtensionString;
+static PyObject *__pyx_n_u_ExtensionString;
 static PyObject *__pyx_n_s_ExtensionValue;
+static PyObject *__pyx_n_u_ExtensionValue;
 static PyObject *__pyx_n_s_GlobalCommon;
 static PyObject *__pyx_n_s_GlobalString;
+static PyObject *__pyx_n_u_GlobalString;
 static PyObject *__pyx_n_s_GlobalValue;
+static PyObject *__pyx_n_u_GlobalValue;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x13;
 static PyObject *__pyx_kp_s_Incompatible_checksums_s_vs_0x43;
 static PyObject *__pyx_n_s_Long;
+static PyObject *__pyx_n_u_Long;
 static PyObject *__pyx_n_s_PickleError;
 static PyObject *__pyx_n_s_String;
+static PyObject *__pyx_n_u_String;
 static PyObject *__pyx_n_s_all;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_dict;
@@ -4122,7 +4130,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
       __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_s_) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_);
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_u_) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -5325,7 +5333,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -5747,7 +5755,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -6167,7 +6175,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -6597,7 +6605,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -7017,7 +7025,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_11expressions_7loaders
     __Pyx_INCREF(__pyx_n_s_PickleError);
     __Pyx_GIVEREF(__pyx_n_s_PickleError);
     PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_PickleError);
-    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, -1); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_Import(__pyx_n_s_pickle, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 5, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_PickleError); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 5, __pyx_L1_error)
@@ -7445,6 +7453,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_11expressions_7lo
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Long __pyx_vtable_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Long;
 
@@ -7572,6 +7583,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_11expressions_7lo
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Double __pyx_vtable_9mmfparser_4data_12chunkloaders_11expressions_7loaders_Double;
@@ -7716,6 +7730,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_11expressions_7lo
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_GlobalCommon __pyx_vtable_9mmfparser_4data_12chunkloaders_11expressions_7loaders_GlobalCommon;
 
@@ -7843,6 +7860,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_11expressions_7lo
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_11expressions_7loaders_ExtensionCommon __pyx_vtable_9mmfparser_4data_12chunkloaders_11expressions_7loaders_ExtensionCommon;
@@ -7972,6 +7992,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_11expressions_7lo
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 
 static PyMethodDef __pyx_methods[] = {
@@ -8020,21 +8043,29 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_kp_s_, __pyx_k_, sizeof(__pyx_k_), 0, 0, 1, 0},
+  {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
   {&__pyx_n_s_Double, __pyx_k_Double, sizeof(__pyx_k_Double), 0, 0, 1, 1},
+  {&__pyx_n_u_Double, __pyx_k_Double, sizeof(__pyx_k_Double), 0, 1, 0, 1},
   {&__pyx_n_s_Empty, __pyx_k_Empty, sizeof(__pyx_k_Empty), 0, 0, 1, 1},
   {&__pyx_n_s_End, __pyx_k_End, sizeof(__pyx_k_End), 0, 0, 1, 1},
+  {&__pyx_n_u_End, __pyx_k_End, sizeof(__pyx_k_End), 0, 1, 0, 1},
   {&__pyx_n_s_ExtensionCommon, __pyx_k_ExtensionCommon, sizeof(__pyx_k_ExtensionCommon), 0, 0, 1, 1},
   {&__pyx_n_s_ExtensionString, __pyx_k_ExtensionString, sizeof(__pyx_k_ExtensionString), 0, 0, 1, 1},
+  {&__pyx_n_u_ExtensionString, __pyx_k_ExtensionString, sizeof(__pyx_k_ExtensionString), 0, 1, 0, 1},
   {&__pyx_n_s_ExtensionValue, __pyx_k_ExtensionValue, sizeof(__pyx_k_ExtensionValue), 0, 0, 1, 1},
+  {&__pyx_n_u_ExtensionValue, __pyx_k_ExtensionValue, sizeof(__pyx_k_ExtensionValue), 0, 1, 0, 1},
   {&__pyx_n_s_GlobalCommon, __pyx_k_GlobalCommon, sizeof(__pyx_k_GlobalCommon), 0, 0, 1, 1},
   {&__pyx_n_s_GlobalString, __pyx_k_GlobalString, sizeof(__pyx_k_GlobalString), 0, 0, 1, 1},
+  {&__pyx_n_u_GlobalString, __pyx_k_GlobalString, sizeof(__pyx_k_GlobalString), 0, 1, 0, 1},
   {&__pyx_n_s_GlobalValue, __pyx_k_GlobalValue, sizeof(__pyx_k_GlobalValue), 0, 0, 1, 1},
+  {&__pyx_n_u_GlobalValue, __pyx_k_GlobalValue, sizeof(__pyx_k_GlobalValue), 0, 1, 0, 1},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0x13, __pyx_k_Incompatible_checksums_s_vs_0x13, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x13), 0, 0, 1, 0},
   {&__pyx_kp_s_Incompatible_checksums_s_vs_0x43, __pyx_k_Incompatible_checksums_s_vs_0x43, sizeof(__pyx_k_Incompatible_checksums_s_vs_0x43), 0, 0, 1, 0},
   {&__pyx_n_s_Long, __pyx_k_Long, sizeof(__pyx_k_Long), 0, 0, 1, 1},
+  {&__pyx_n_u_Long, __pyx_k_Long, sizeof(__pyx_k_Long), 0, 1, 0, 1},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_String, __pyx_k_String, sizeof(__pyx_k_String), 0, 0, 1, 1},
+  {&__pyx_n_u_String, __pyx_k_String, sizeof(__pyx_k_String), 0, 1, 0, 1},
   {&__pyx_n_s_all, __pyx_k_all, sizeof(__pyx_k_all), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
@@ -8265,11 +8296,11 @@ static int __Pyx_modinit_type_import_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_import_code", 0);
   /*--- Type import code ---*/
-  __pyx_t_1 = PyImport_ImportModule("mmfparser.bytereader"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 20, __pyx_L1_error)
+  __pyx_t_1 = PyImport_ImportModule("mmfparser.bytereader"); if (unlikely(!__pyx_t_1)) __PYX_ERR(2, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_ptype_9mmfparser_10bytereader_ByteReader = __Pyx_ImportType(__pyx_t_1, "mmfparser.bytereader", "ByteReader", sizeof(struct __pyx_obj_9mmfparser_10bytereader_ByteReader), __Pyx_ImportType_CheckSize_Warn);
-   if (!__pyx_ptype_9mmfparser_10bytereader_ByteReader) __PYX_ERR(2, 20, __pyx_L1_error)
-  __pyx_vtabptr_9mmfparser_10bytereader_ByteReader = (struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader*)__Pyx_GetVtable(__pyx_ptype_9mmfparser_10bytereader_ByteReader->tp_dict); if (unlikely(!__pyx_vtabptr_9mmfparser_10bytereader_ByteReader)) __PYX_ERR(2, 20, __pyx_L1_error)
+   if (!__pyx_ptype_9mmfparser_10bytereader_ByteReader) __PYX_ERR(2, 3, __pyx_L1_error)
+  __pyx_vtabptr_9mmfparser_10bytereader_ByteReader = (struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader*)__Pyx_GetVtable(__pyx_ptype_9mmfparser_10bytereader_ByteReader->tp_dict); if (unlikely(!__pyx_vtabptr_9mmfparser_10bytereader_ByteReader)) __PYX_ERR(2, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -8510,7 +8541,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_Empty);
   __Pyx_GIVEREF(__pyx_n_s_Empty);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Empty);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data_chunkloaders_comm, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_mmfparser_data_chunkloaders_comm, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
@@ -8537,7 +8568,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_End, __pyx_n_s_End, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_expr, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_End, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_End, __pyx_t_1, __pyx_t_3, NULL, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_End, __pyx_t_4) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8561,7 +8592,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_GlobalString, __pyx_n_s_GlobalString, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_expr, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_GlobalString, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_GlobalString, __pyx_t_1, __pyx_t_3, NULL, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_GlobalString, __pyx_t_4) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8585,7 +8616,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_GlobalValue, __pyx_n_s_GlobalValue, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_expr, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_GlobalValue, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_GlobalValue, __pyx_t_1, __pyx_t_3, NULL, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_GlobalValue, __pyx_t_4) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8609,7 +8640,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_ExtensionString, __pyx_n_s_ExtensionString, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_expr, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_ExtensionString, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_ExtensionString, __pyx_t_1, __pyx_t_3, NULL, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ExtensionString, __pyx_t_4) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8633,7 +8664,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_t_1, __pyx_n_s_ExtensionValue, __pyx_n_s_ExtensionValue, (PyObject *) NULL, __pyx_n_s_mmfparser_data_chunkloaders_expr, (PyObject *) NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_ExtensionValue, __pyx_t_1, __pyx_t_3, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(__pyx_t_2, __pyx_n_s_ExtensionValue, __pyx_t_1, __pyx_t_3, NULL, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ExtensionValue, __pyx_t_4) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8649,30 +8680,30 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_1 = PyList_New(8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_String);
-  __Pyx_GIVEREF(__pyx_n_s_String);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_String);
-  __Pyx_INCREF(__pyx_n_s_Long);
-  __Pyx_GIVEREF(__pyx_n_s_Long);
-  PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_Long);
-  __Pyx_INCREF(__pyx_n_s_Double);
-  __Pyx_GIVEREF(__pyx_n_s_Double);
-  PyList_SET_ITEM(__pyx_t_1, 2, __pyx_n_s_Double);
-  __Pyx_INCREF(__pyx_n_s_GlobalValue);
-  __Pyx_GIVEREF(__pyx_n_s_GlobalValue);
-  PyList_SET_ITEM(__pyx_t_1, 3, __pyx_n_s_GlobalValue);
-  __Pyx_INCREF(__pyx_n_s_GlobalString);
-  __Pyx_GIVEREF(__pyx_n_s_GlobalString);
-  PyList_SET_ITEM(__pyx_t_1, 4, __pyx_n_s_GlobalString);
-  __Pyx_INCREF(__pyx_n_s_ExtensionString);
-  __Pyx_GIVEREF(__pyx_n_s_ExtensionString);
-  PyList_SET_ITEM(__pyx_t_1, 5, __pyx_n_s_ExtensionString);
-  __Pyx_INCREF(__pyx_n_s_ExtensionValue);
-  __Pyx_GIVEREF(__pyx_n_s_ExtensionValue);
-  PyList_SET_ITEM(__pyx_t_1, 6, __pyx_n_s_ExtensionValue);
-  __Pyx_INCREF(__pyx_n_s_End);
-  __Pyx_GIVEREF(__pyx_n_s_End);
-  PyList_SET_ITEM(__pyx_t_1, 7, __pyx_n_s_End);
+  __Pyx_INCREF(__pyx_n_u_String);
+  __Pyx_GIVEREF(__pyx_n_u_String);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_u_String);
+  __Pyx_INCREF(__pyx_n_u_Long);
+  __Pyx_GIVEREF(__pyx_n_u_Long);
+  PyList_SET_ITEM(__pyx_t_1, 1, __pyx_n_u_Long);
+  __Pyx_INCREF(__pyx_n_u_Double);
+  __Pyx_GIVEREF(__pyx_n_u_Double);
+  PyList_SET_ITEM(__pyx_t_1, 2, __pyx_n_u_Double);
+  __Pyx_INCREF(__pyx_n_u_GlobalValue);
+  __Pyx_GIVEREF(__pyx_n_u_GlobalValue);
+  PyList_SET_ITEM(__pyx_t_1, 3, __pyx_n_u_GlobalValue);
+  __Pyx_INCREF(__pyx_n_u_GlobalString);
+  __Pyx_GIVEREF(__pyx_n_u_GlobalString);
+  PyList_SET_ITEM(__pyx_t_1, 4, __pyx_n_u_GlobalString);
+  __Pyx_INCREF(__pyx_n_u_ExtensionString);
+  __Pyx_GIVEREF(__pyx_n_u_ExtensionString);
+  PyList_SET_ITEM(__pyx_t_1, 5, __pyx_n_u_ExtensionString);
+  __Pyx_INCREF(__pyx_n_u_ExtensionValue);
+  __Pyx_GIVEREF(__pyx_n_u_ExtensionValue);
+  PyList_SET_ITEM(__pyx_t_1, 6, __pyx_n_u_ExtensionValue);
+  __Pyx_INCREF(__pyx_n_u_End);
+  __Pyx_GIVEREF(__pyx_n_u_End);
+  PyList_SET_ITEM(__pyx_t_1, 7, __pyx_n_u_End);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_1) < 0) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 

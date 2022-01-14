@@ -925,10 +925,10 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser/data/chunkloaders/imagebank.pyx",
+  "mmfparser\\data\\chunkloaders\\imagebank.pyx",
   "stringsource",
-  "mmfparser/common.pxd",
-  "mmfparser/bytereader.pxd",
+  "mmfparser\\common.pxd",
+  "mmfparser\\bytereader.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -17975,6 +17975,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageI
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_BasePoint;
 
@@ -18093,6 +18096,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_BasePo
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_Point __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_Point;
 
@@ -18181,6 +18187,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Point 
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_SixteenPoint;
@@ -18271,6 +18280,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Sixtee
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_FifteenPoint;
 
@@ -18360,6 +18372,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_Fiftee
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_IndexPoint;
 
@@ -18448,6 +18463,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_IndexP
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
   #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_JavaImage;
@@ -18710,6 +18728,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_JavaIm
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
   #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
+  #endif
 };
 static struct __pyx_vtabstruct_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank __pyx_vtable_9mmfparser_4data_12chunkloaders_9imagebank_ImageBank;
 
@@ -18855,6 +18876,9 @@ static PyTypeObject __pyx_type_9mmfparser_4data_12chunkloaders_9imagebank_ImageB
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
   #endif
 };
 

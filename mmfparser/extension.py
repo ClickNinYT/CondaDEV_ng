@@ -194,8 +194,8 @@ def loadLibrary(path):
     try:
         newLibrary = windll.LoadLibrary(path)
         return newLibrary
-    except WindowsError, e:
-        print e, path
+    except (WindowsError, e) as e:
+        print(e, path)
         return None
 
 MF_BYPOSITION = 0x00000400
@@ -226,17 +226,17 @@ def loadMenu(handle, resource, verbose = True):
     menu = user32.LoadMenuA(handle, resource)
     if not menu:
         if verbose:
-            print 'could not load menu', handle, resource, menu
+            print('could not load menu', handle, resource, menu)
         return 0
     submenu = user32.GetSubMenu(menu, 0)
     if not submenu:
         if verbose:
-            print 'could not load submenu'
+            print('could not load submenu')
         return 0
     popup = user32.CreatePopupMenu()
     if not popup:
         if verbose:
-            print 'could not load popup'
+            print('could not load popup')
         return 0
     copyMenu(popup, submenu)
     user32.DestroyMenu(menu)

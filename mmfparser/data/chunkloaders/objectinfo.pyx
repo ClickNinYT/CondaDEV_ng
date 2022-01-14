@@ -193,7 +193,7 @@ class ObjectInfo(DataLoader, _ObjectTypeMixin):
                 self.shaderId = loader.id
                 self.items = loader.items
             else:
-                print chunk.getName(), chunk.id
+                print(chunk.getName(), chunk.id)
         properties.load(self.objectType)
         self.properties = properties
 

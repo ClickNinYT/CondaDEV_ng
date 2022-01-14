@@ -925,9 +925,9 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mmfparser/bytereader.pyx",
+  "mmfparser\\bytereader.pyx",
   "stringsource",
-  "mmfparser/common.pxd",
+  "mmfparser\\common.pxd",
 };
 
 /*--- Type declarations ---*/
@@ -1653,7 +1653,7 @@ static const char __pyx_k_NamedTemporaryFile[] = "NamedTemporaryFile";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_mmfparser_bytereader[] = "mmfparser.bytereader";
 static const char __pyx_k_unimplemented_value_at[] = "unimplemented value at ";
-static const char __pyx_k_mmfparser_bytereader_pyx[] = "mmfparser/bytereader.pyx";
+static const char __pyx_k_mmfparser_bytereader_pyx[] = "mmfparser\\bytereader.pyx";
 static const char __pyx_k_Press_enter_to_open_hex_editor[] = "Press enter to open hex editor...";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static PyObject *__pyx_kp_u_;
@@ -10483,6 +10483,9 @@ static PyTypeObject __pyx_type_9mmfparser_10bytereader_ByteReader = {
   #endif
   #if PY_VERSION_HEX >= 0x030800b4 && PY_VERSION_HEX < 0x03090000
   0, /*tp_print*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PYPY_VERSION_NUM+0 >= 0x06000000
+  0, /*tp_pypy_flags*/
   #endif
 };
 
