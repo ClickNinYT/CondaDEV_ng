@@ -448,11 +448,11 @@ cdef class ByteReader:
             name = fp.name
 
         try:
-            raw_input('Press enter to open hex editor...')
+            input('Press enter to open hex editor...')
             openEditor(name, self.tell())
         except IOError:
             pass
-        raw_input('(enter)')
+        input('(enter)')
 
 def openEditor(filename, position):
     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
