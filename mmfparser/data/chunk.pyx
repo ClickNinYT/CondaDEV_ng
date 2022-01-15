@@ -273,6 +273,7 @@ cdef inline void setup():
         return
     from mmfparser.data.chunkloaders import all
     from mmfparser.data.chunkloaders.onepointfive import all as oldchunks
+    from mmfparser.data.chunkloaders.twofiveplus import all as tfp
 
     global chunkLoaders
     chunkLoaders = {
@@ -314,6 +315,9 @@ cdef inline void setup():
         8771 : all.Shaders, # Shaders
         8773 : all.ExtendedHeader, # ExtendedHeader aka APPHEADER2
         8774 : all.Spacer,  #Spacer chunk, not sure why
+        8787 : tfp.ObjectHeaders,        #Only 2.5+ - ObjectHeaders
+        8788 : tfp.ObjectNames,          #Only 2.5+ - ObjectNames
+        8790 : tfp.ObjectPropertyList,   #Only 2.5+ - ObjectPropertyList
         # Frame chunks (0x33)
         13107 : all.Frame, # Frame
         13108 : all.FrameHeader, # FrameHeader
