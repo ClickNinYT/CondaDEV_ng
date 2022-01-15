@@ -273,7 +273,7 @@ cdef inline void setup():
         return
     from mmfparser.data.chunkloaders import all
     from mmfparser.data.chunkloaders.onepointfive import all as oldchunks
-    
+
     global chunkLoaders
     chunkLoaders = {
         # Vitalize chunks (0x11)
@@ -313,6 +313,7 @@ cdef inline void setup():
         8770 : all.Protection,
         8771 : all.Shaders, # Shaders
         8773 : all.ExtendedHeader, # ExtendedHeader aka APPHEADER2
+        8774 : all.Spacer,  #Spacer chunk, not sure why
         # Frame chunks (0x33)
         13107 : all.Frame, # Frame
         13108 : all.FrameHeader, # FrameHeader
@@ -450,6 +451,7 @@ chunkNames = {
     8770 : 'PROTECTION',
     8771 : 'SHADERS',
     8773 : 'APPHEADER2',
+    8774 : 'SPACER',
     13107 : 'FRAME',
     13108 : 'FRAMEHEADER',
     13109 : 'FRAMENAME',

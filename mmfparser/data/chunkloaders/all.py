@@ -39,3 +39,8 @@ from mmfparser.data.chunkloaders.otherextensions import *
 from mmfparser.data.chunkloaders.transition import *
 from mmfparser.data.chunkloaders.extdata import *
 from mmfparser.data.chunkloaders.shaders import *
+from mmfparser.loader import DataLoader
+
+class Spacer(DataLoader):
+    def read(self, reader):
+        return "Spacer"
