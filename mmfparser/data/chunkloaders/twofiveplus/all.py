@@ -21,7 +21,8 @@ class ObjectHeaders(DataLoader):
             prop = all.ObjectHeader(reader)
             log("Reading object headers...", 1)
             prop.read(reader)
-            chunksize = reader.readInt()
+            chunkSize = reader.readInt()
+            print 'chunksize: ' + str(chunkSize)
             headers_count = current
             log(str(headers_count), 1)
             log(str(headers), 1)
