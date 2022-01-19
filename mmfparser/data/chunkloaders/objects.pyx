@@ -920,7 +920,7 @@ cdef class ObjectCommon(DataLoader):
                 decompressedReader = ByteReader(StringIO.StringIO(decompressed))
                 reader.seek(currentposition + size2 + 8)
             if decompressedReader.tell() > decompressedReader.size() - 19:
-                log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)
+                log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
                 return
             size = decompressedReader.readInt()
             animationsOffset = decompressedReader.readShort()
@@ -952,57 +952,61 @@ cdef class ObjectCommon(DataLoader):
             fadeOutOffset = decompressedReader.readInt()
             log("Finished parsing 2.5+ specific decompressed bytes!", 1)
             
-        if movementsOffset != 0:
-            reader.seek(currentPosition + movementsOffset)
-            self.movements = self.new(Movements, reader)
-
-        if valuesOffset != 0:
-            reader.seek(currentPosition + valuesOffset)
-            self.values = self.new(AlterableValues, reader)
-
-        if stringsOffset != 0:
-            reader.seek(currentPosition + stringsOffset)
-            self.strings = self.new(AlterableStrings, reader)
-
-        if animationsOffset != 0:
-            reader.seek(currentPosition + animationsOffset)
-            self.animations = self.new(AnimationHeader, reader)
-
-        if counterOffset != 0:
-            reader.seek(currentPosition + counterOffset)
-            self.counter = self.new(Counter, reader)
-
-        if extensionOffset != 0:
-            reader.seek(currentPosition + extensionOffset)
-
-            dataSize = reader.readInt() - 20
-            reader.skipBytes(4) # maxSize
-            self.extensionVersion = reader.readInt()
-            self.extensionId = reader.readInt()
-            self.extensionPrivate = reader.readInt()
-            if dataSize != 0:
-                self.extensionData = reader.read(dataSize)
-
-        if fadeInOffset != 0:
-            reader.seek(currentPosition + fadeInOffset)
-            self.fadeIn = self.new(FadeIn, reader)
-
-        if fadeOutOffset != 0:
-            reader.seek(currentPosition + fadeOutOffset)
-            self.fadeOut = self.new(FadeOut, reader)
-
-        if systemObjectOffset != 0:
-            reader.seek(currentPosition + systemObjectOffset)
-
+        deccurpos = 4
+        if animationsOffset > 0:
+            decompressedReader.seek(deccurpos + animationsOffset)
+            self.animations = self.new(AnimationHeader, decompressedReader)
+            
+        if movementsOffset > 0:
+            decompressedReader.seek(deccurpos + movementsOffset)
+            self.movements = self.new(Movements, decompressedReader)
+            
+        if systemObjectOffset > 0:
+            decompressedReader.seek(deccurpos + systemObjectOffset)
             objectType = self.parent.objectType
             if objectType in (TEXT, QUESTION):
-                self.text = self.new(Text, reader)
+                self.text = self.new(Text, decompressedReader)
             elif objectType in (SCORE, LIVES, COUNTER):
-                self.counters = self.new(Counters, reader)
+                self.counters = self.new(Counters, decompressedReader)
             elif objectType == RTF:
-                self.rtf = self.new(RTFObject, reader)
+                self.rtf = self.new(RTFObject, decompressedReader)
             elif objectType == SUBAPPLICATION:
-                self.subApplication = self.new(SubApplication, reader)
+                self.subApplication = self.new(SubApplication, decompressedReader)
+                
+        if extensionOffset > 0:
+            decompressedReader.seek(deccurpos + extensionOffset)
+            if decompressedReader.tell() > decompressedReader.size() - 20:
+                log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
+                return
+            dataSize = decompressedReader.readInt()
+            decompressedReader.skip(4)
+            self.extensionVersion = decompressedReader.readInt()
+            self.extensionId = decompressedReader.readInt()
+            self.extensionPrivate = decompressedReader.readInt()
+            if dataSize > 0:
+                self.extensionData = decompressedReader.readByte(dataSize)
+            else:
+                self.extensionData = None
+                
+        if counterOffset > 0:
+           decompressedReader.seek(deccurpos + counterOffset)
+           self.counter = self.new(Counter, decompressedReader)
+           
+        if valuesOffset > 0:
+            decompressedReader.seek(deccurpos + valuesOffset)
+            self.values = self.new(AlterableValues, decompressedReader)
+
+        if stringsOffset > 0:
+            decompressedReader.seek(deccurpos + stringsOffset)
+            self.strings = self.new(AlterableStrings, decompressedReader)
+            
+        if fadeInOffset > 0:
+            decompressedReader.seek(deccurpos + fadeInOffset)
+            self.fadeIn = self.new(FadeIn, decompressedReader)
+
+        if fadeOutOffset > 0:
+            decompressedReader.seek(deccurpos + fadeOutOffset)
+            self.fadeOut = self.new(FadeOut, decompressedReader)
 
     def write(self, ByteReader reader):
         movementsOffset = animationsOffset = counterOffset = \
