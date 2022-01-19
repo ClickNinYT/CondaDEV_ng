@@ -6,7 +6,6 @@ import sys
 sys.path.append('..\..\..\..')
 from misc import *
 
-
 class ObjectHeaders(DataLoader):
     def init(self):
         self.headers = None
@@ -22,7 +21,6 @@ class ObjectHeaders(DataLoader):
             log("Reading object headers...", 1)
             prop.read(reader)
             chunkSize = reader.readInt()
-            log("ChunkSize: " + str(chunkSize), 1)
             headers_count = current
             log(str(headers_count), 1)
             log(str(headers), 1)
