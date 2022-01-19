@@ -885,109 +885,10 @@ cdef class ObjectCommon(DataLoader):
         cdef short qualifier
         cdef unsigned int end
         
-        #cdef bint newobj = (self.settings['build'] >= 284 and
-        #                    not self.settings.get('compat', False))
-        #cdef bint newobj2 = True
+        cdef bint newobj = (self.settings['build'] >= 284 and
+                            not self.settings.get('compat', False))
         
-        cdef bint newobj = False
-        cdef bint newobj2 = False
-
-        cdef bint newobj25p = True
-
-        if newobj and newobj2:
-            animationsOffset = reader.readShort()
-            movementsOffset = reader.readShort()
-            self.version = reader.readShort()
-            reader.skipBytes(2) # "free"
-            extensionOffset = reader.readShort()
-            counterOffset = reader.readShort()
-            self.flags.setFlags(reader.readShort(True))
-            reader.readShort()
-
-            end = reader.tell() + 8 * 2
-
-            for _ in xrange(8):
-                qualifier = reader.readShort()
-                if qualifier == -1:
-                    break
-                self.qualifiers.append(qualifier)
-
-            reader.seek(end)
-
-            systemObjectOffset = reader.readShort()
-
-            valuesOffset = reader.readShort()
-            stringsOffset = reader.readShort()
-            self.newFlags.setFlags(reader.readShort(True))
-            self.preferences.setFlags(reader.readShort(True)) # runtime data
-            self.identifier = reader.readInt()
-            self.backColour = reader.readColor()
-            fadeInOffset = reader.readInt()
-            fadeOutOffset = reader.readInt()
-        elif newobj:
-            counterOffset = reader.readShort()
-            self.version = reader.readShort()
-            reader.skipBytes(2) # "free"
-            movementsOffset = reader.readShort()
-            extensionOffset = reader.readShort()
-            animationsOffset = reader.readShort()
-            self.flags.setFlags(reader.readInt(True))
-
-            end = reader.tell() + 8 * 2
-
-            for _ in xrange(8):
-                qualifier = reader.readShort()
-                if qualifier == -1:
-                    break
-                self.qualifiers.append(qualifier)
-
-            reader.seek(end)
-
-            systemObjectOffset = reader.readShort()
-
-            valuesOffset = reader.readShort()
-            stringsOffset = reader.readShort()
-            self.newFlags.setFlags(reader.readShort(True))
-            self.preferences.setFlags(reader.readShort(True)) # runtime data
-            self.identifier = reader.readInt()
-            self.backColour = reader.readColor()
-            fadeInOffset = reader.readInt()
-            fadeOutOffset = reader.readInt()
-        else:
-            # start change
-            movementsOffset = reader.readShort()
-            animationsOffset = reader.readShort()
-            self.version = reader.readShort()
-            counterOffset = reader.readShort()
-            systemObjectOffset = reader.readShort()
-            reader.skipBytes(2) # "free"
-            # stop change
-
-            self.flags.setFlags(reader.readInt(True))
-
-            end = reader.tell() + 8 * 2
-
-            for _ in xrange(8):
-                qualifier = reader.readShort()
-                if qualifier == -1:
-                    break
-                self.qualifiers.append(qualifier)
-
-            reader.seek(end)
-
-            # can change
-            extensionOffset = reader.readShort()
-
-            valuesOffset = reader.readShort()
-            stringsOffset = reader.readShort()
-            self.newFlags.setFlags(reader.readShort(True))
-            self.preferences.setFlags(reader.readShort(True)) # runtime data
-            self.identifier = reader.readInt()
-            self.backColour = reader.readColor()
-            fadeInOffset = reader.readInt()
-            fadeOutOffset = reader.readInt()
-
-        if newobj25p:
+        if newobj:
             currentposition = reader.tell()
             twofiveplusPos = int(currentposition)
             isfirstread = true
@@ -1028,8 +929,13 @@ cdef class ObjectCommon(DataLoader):
             decompressedReader.skipByte(2)
             extensionOffset = decompressedReader.readShort()
             counterOffset = decompressedReader.readShort()
-            Flags = decompressedReader.readShort()
+            self.flags.setFlags(decompressedReader.readShort())
             decompressedReader.skipByte(2)
+            for _ in xrange(8):
+                qualifier = decompressedReader.readShort()
+                if qualifier == -1:
+                    break
+                self.qualifiers.append(qualifier)
             end = decompressedReader.tell() + 8 * 2
             decompressedReader.seek(end)
             if decompressedReader.tell() > decompressedReader.size() - 20:
@@ -1038,10 +944,10 @@ cdef class ObjectCommon(DataLoader):
             systemObjectOffset = decompressedReader.readShort()
             valuesOffset = decompressedReader.readShort()
             stringsOffset = decompressedReader.readShort()
-            NewFlags = decompressedReader.readShort()
-            Preferences = decompressedReader.readShort()
-            Identifier = decompressedReader.readString(4)
-            BackColor = decompressedReader.readColor()
+            self.newFlags.setFlags(decompressedReader.readShort())
+            self.preferences.setFlags(decompressedReader.readShort())
+            self.identifier = decompressedReader.readString(4)
+            self.backColour = decompressedReader.readColor()
             fadeInOffset = decompressedReader.readInt()
             fadeOutOffset = decompressedReader.readInt()
             log("Finished parsing 2.5+ specific decompressed bytes!", 1)
