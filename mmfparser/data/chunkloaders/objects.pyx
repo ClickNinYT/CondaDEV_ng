@@ -884,9 +884,9 @@ cdef class ObjectCommon(DataLoader):
         cdef short extensionOffset
         cdef short qualifier
         cdef unsigned int end
-
+        
         #cdef bint newobj = (self.settings['build'] >= 284 and
-                            not self.settings.get('compat', False))
+        #                    not self.settings.get('compat', False))
         #cdef bint newobj2 = True
         
         cdef bint newobj = False
@@ -995,7 +995,7 @@ cdef class ObjectCommon(DataLoader):
             if isfirstread:
                 size2 = reader.readInt()
                 ass = reader.readByte(size2)
-                log("Reading at " + str(size2) + " at " + str(reader.tell(), 1)
+                log("Reading at " + str(size2) + " at " + str(reader.tell(), 1))
                 decompressed = zlib.decompress(ass)
                 decompressedReader = ByteReader(StringIO.StringIO(decompressed))
                 reader.seek(currentposition + size2 + 8)
