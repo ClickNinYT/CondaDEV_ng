@@ -871,7 +871,7 @@ cdef class ObjectCommon(DataLoader):
     cpdef read(self, ByteReader reader):
         currentPosition = None
 
-        cdef int size = null
+        cdef int size
 
         cdef short movementsOffset
         cdef short animationsOffset

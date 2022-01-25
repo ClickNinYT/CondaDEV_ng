@@ -46,6 +46,17 @@ class ObjectProperties(DataLoader, _ObjectTypeMixin):
     def read(self, ByteReader reader):
         self._loadReader = reader
 
+    def readnew(self, ByteReader reader, ifr):
+        if self.objectType == QUICKBACKDROP:
+            self.loader = self.new(QuickBackdrop, reader)
+        elif self.objectType == BACKDROP:
+            self.loader = self.new(Backdrop, reader)
+        else:
+            self.isCommon = True
+            self.loader = self.new(ObjectCommon, reader)
+            ObjectCommon(self.loader).isfirstread = ifr
+        self.loader.read(reader)
+
     def load(self, objectType):
         self.objectType = objectType
         reader = self._loadReader

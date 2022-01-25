@@ -23,14 +23,18 @@ class ObjectHeaders(DataLoader, _ObjectTypeMixin):
         self.headers = all.ObjectHeader(reader)
         self.current = 0
         while reader.tell() < self.end:
-            self.prop = all.ObjectHeader(reader)
-            log("Reading object headers...", 1)
-            self.prop.read(reader)
-            self.chunkSize = reader.readInt()
-            self.headers_count = self.current
-            log(str(self.headers_count), 1)
-            log(str(self.headers), 1)
-            self.current += 1
+            try:
+               self.prop = all.ObjectHeader(reader)
+               log("Reading object headers...", 1)
+               self.prop.read(reader)
+               self.chunkSize = reader.readInt()
+               self.headers_count = self.current
+               log(str(self.headers_count), 1)
+               log(str(self.headers), 1)
+               self.current += 1
+            except:
+                log("Warning: Skipped header reading!", 3)
+                pass
     
     def write(self, reader):
         log("Warning: Not yet implemented!", 3)
@@ -55,7 +59,8 @@ class ObjectPropertyList(DataLoader, _ObjectTypeMixin):
         self.current = 0
         while reader.tell() < self.end:
             self.prop = all.ObjectProperties(reader)
-            self.prop.read()
+            #self.prop.readnew(reader, True)
+            self.prop.read(reader)
             log("Reading object properties...", 1)
             self.Props_count = self.current
             log(str(self.Props_count), 1)

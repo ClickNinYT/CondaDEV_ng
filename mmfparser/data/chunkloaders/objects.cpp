@@ -2078,6 +2078,9 @@ static CYTHON_INLINE PyObject *__Pyx_CallUnboundCMethod2(__Pyx_CachedCFunction *
 /* PyIntCompare.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_EqObjC(PyObject *op1, PyObject *op2, long intval, long inplace);
 
+/* None.proto */
+static CYTHON_INLINE void __Pyx_RaiseUnboundLocalError(const char *varname);
+
 /* Import.proto */
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
@@ -2368,9 +2371,9 @@ static const char __pyx_k_keys[] = "keys";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_misc[] = "misc";
 static const char __pyx_k_name[] = "name";
-static const char __pyx_k_null[] = "null";
 static const char __pyx_k_path[] = "path";
 static const char __pyx_k_read[] = "read";
+static const char __pyx_k_skip[] = "skip";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_true[] = "true";
 static const char __pyx_k_zlib[] = "zlib";
@@ -2955,7 +2958,6 @@ static PyObject *__pyx_n_s_name_2;
 static PyObject *__pyx_n_s_new;
 static PyObject *__pyx_n_s_new_2;
 static PyObject *__pyx_kp_s_no_animation_could_be_found_for;
-static PyObject *__pyx_n_s_null;
 static PyObject *__pyx_n_s_object;
 static PyObject *__pyx_n_s_objectType;
 static PyObject *__pyx_n_s_obstacleType;
@@ -2994,6 +2996,7 @@ static PyObject *__pyx_n_s_references;
 static PyObject *__pyx_n_s_setFlags;
 static PyObject *__pyx_n_s_setstate;
 static PyObject *__pyx_n_s_setstate_cython;
+static PyObject *__pyx_n_s_skip;
 static PyObject *__pyx_n_s_skipByte;
 static PyObject *__pyx_kp_s_stringsource;
 static PyObject *__pyx_n_s_sys;
@@ -3379,7 +3382,6 @@ static PyObject *__pyx_int_9;
 static PyObject *__pyx_int_10;
 static PyObject *__pyx_int_11;
 static PyObject *__pyx_int_12;
-static PyObject *__pyx_int_20;
 static PyObject *__pyx_int_284;
 static PyObject *__pyx_int_4552;
 static PyObject *__pyx_int_2615892;
@@ -28013,7 +28015,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
 
 static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon_3read(PyObject *__pyx_v_self, PyObject *__pyx_v_reader); /*proto*/
 static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon_read(struct __pyx_obj_9mmfparser_4data_12chunkloaders_7objects_ObjectCommon *__pyx_v_self, struct __pyx_obj_9mmfparser_10bytereader_ByteReader *__pyx_v_reader, int __pyx_skip_dispatch) {
-  PyObject *__pyx_v_currentPosition = NULL;
+  CYTHON_UNUSED PyObject *__pyx_v_currentPosition = NULL;
   CYTHON_UNUSED int __pyx_v_size;
   short __pyx_v_movementsOffset;
   short __pyx_v_animationsOffset;
@@ -28036,8 +28038,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   PyObject *__pyx_v_decompressed = NULL;
   CYTHON_UNUSED int __pyx_v_version;
   CYTHON_UNUSED long __pyx_v__;
-  PyObject *__pyx_v_dataSize = NULL;
+  long __pyx_v_deccurpos;
   PyObject *__pyx_v_objectType = NULL;
+  PyObject *__pyx_v_dataSize = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -28047,14 +28050,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   int __pyx_t_5;
   int __pyx_t_6;
   int __pyx_t_7;
-  int __pyx_t_8;
-  short __pyx_t_9;
-  struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte __pyx_t_10;
-  PyObject *__pyx_t_11 = NULL;
+  short __pyx_t_8;
+  struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readByte __pyx_t_9;
+  PyObject *__pyx_t_10 = NULL;
+  int __pyx_t_11;
   long __pyx_t_12;
   int __pyx_t_13;
   struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_readString __pyx_t_14;
-  struct __pyx_opt_args_9mmfparser_10bytereader_10ByteReader_read __pyx_t_15;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -28111,23 +28113,10 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *     cpdef read(self, ByteReader reader):
  *         currentPosition = None             # <<<<<<<<<<<<<<
  * 
- *         cdef int size = null
+ *         cdef int size
  */
   __Pyx_INCREF(Py_None);
   __pyx_v_currentPosition = Py_None;
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":874
- *         currentPosition = None
- * 
- *         cdef int size = null             # <<<<<<<<<<<<<<
- * 
- *         cdef short movementsOffset
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_null); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 874, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 874, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_size = __pyx_t_5;
 
   /* "mmfparser/data/chunkloaders/objects.pyx":888
  *         cdef unsigned int end
@@ -28144,11 +28133,11 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_int_284, Py_GE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 888, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 888, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 888, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__pyx_t_7) {
+  if (__pyx_t_6) {
   } else {
-    __pyx_t_6 = __pyx_t_7;
+    __pyx_t_5 = __pyx_t_6;
     goto __pyx_L3_bool_binop_done;
   }
 
@@ -28165,12 +28154,12 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   }
   __pyx_t_2 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->__pyx_base.settings, __pyx_n_s_compat, Py_False); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 889, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 889, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 889, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_8 = ((!__pyx_t_7) != 0);
-  __pyx_t_6 = __pyx_t_8;
+  __pyx_t_7 = ((!__pyx_t_6) != 0);
+  __pyx_t_5 = __pyx_t_7;
   __pyx_L3_bool_binop_done:;
-  __pyx_v_newobj = __pyx_t_6;
+  __pyx_v_newobj = __pyx_t_5;
 
   /* "mmfparser/data/chunkloaders/objects.pyx":891
  *                             not self.settings.get('compat', False))
@@ -28179,8 +28168,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             currentposition = reader.tell()
  *             twofiveplusPos = int(currentposition)
  */
-  __pyx_t_6 = (__pyx_v_newobj != 0);
-  if (__pyx_t_6) {
+  __pyx_t_5 = (__pyx_v_newobj != 0);
+  if (__pyx_t_5) {
 
     /* "mmfparser/data/chunkloaders/objects.pyx":892
  * 
@@ -28237,8 +28226,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 size2 = reader.readInt()
  *                 ass = reader.readByte(size2)
  */
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_v_isfirstread); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 896, __pyx_L1_error)
-    if (__pyx_t_6) {
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_isfirstread); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 896, __pyx_L1_error)
+    if (__pyx_t_5) {
 
       /* "mmfparser/data/chunkloaders/objects.pyx":897
  *             decompressedReader = ByteReader()            #stub
@@ -28259,11 +28248,11 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 log("Reading at " + str(size2) + " at " + str(reader.tell(), 1))
  *                 decompressed = zlib.decompress(ass)
  */
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_v_size2); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 898, __pyx_L1_error)
-      __pyx_t_10.__pyx_n = 1;
-      __pyx_t_10.asUnsigned = __pyx_t_6;
-      __pyx_t_9 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readByte(__pyx_v_reader, 0, &__pyx_t_10); if (unlikely(__pyx_t_9 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 898, __pyx_L1_error)
-      __pyx_v_ass = __pyx_t_9;
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_size2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 898, __pyx_L1_error)
+      __pyx_t_9.__pyx_n = 1;
+      __pyx_t_9.asUnsigned = __pyx_t_5;
+      __pyx_t_8 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readByte(__pyx_v_reader, 0, &__pyx_t_9); if (unlikely(__pyx_t_8 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 898, __pyx_L1_error)
+      __pyx_v_ass = __pyx_t_8;
 
       /* "mmfparser/data/chunkloaders/objects.pyx":899
  *                 size2 = reader.readInt()
@@ -28284,19 +28273,19 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 899, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 899, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 899, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_4);
       __Pyx_INCREF(__pyx_int_1);
       __Pyx_GIVEREF(__pyx_int_1);
-      PyTuple_SET_ITEM(__pyx_t_11, 1, __pyx_int_1);
+      PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_int_1);
       __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_11, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 899, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 899, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_11 = PyNumber_Add(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 899, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = PyNumber_Add(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 899, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -28309,9 +28298,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
           __Pyx_DECREF_SET(__pyx_t_2, function);
         }
       }
-      __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_11) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_11);
+      __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_10);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 899, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -28326,27 +28315,27 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
       __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_zlib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 900, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_decompress); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 900, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_decompress); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 900, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_ass); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 900, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_11))) {
-        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_11);
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_10))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_10);
         if (likely(__pyx_t_4)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_11);
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_10);
           __Pyx_INCREF(__pyx_t_4);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_11, function);
+          __Pyx_DECREF_SET(__pyx_t_10, function);
         }
       }
-      __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_2);
+      __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_2);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 900, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_v_decompressed = __pyx_t_1;
       __pyx_t_1 = 0;
 
@@ -28357,23 +28346,23 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 reader.seek(currentposition + size2 + 8)
  *             else:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 901, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 901, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 901, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_StringIO); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 901, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_11 = NULL;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-        __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-        if (likely(__pyx_t_11)) {
+        __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_10)) {
           PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-          __Pyx_INCREF(__pyx_t_11);
+          __Pyx_INCREF(__pyx_t_10);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_2, function);
         }
       }
-      __pyx_t_1 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_11, __pyx_v_decompressed) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_decompressed);
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __pyx_t_1 = (__pyx_t_10) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_10, __pyx_v_decompressed) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_decompressed);
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 901, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -28398,9 +28387,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_8, 8, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 902, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 902, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 902, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
+      (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_11, 0, NULL));
 
       /* "mmfparser/data/chunkloaders/objects.pyx":896
  *             isfirstread = true
@@ -28420,8 +28409,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                     reader.seek(4)
  */
     /*else*/ {
-      __pyx_t_6 = ((__pyx_v_currentposition >= ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0)) != 0);
-      if (__pyx_t_6) {
+      __pyx_t_5 = ((__pyx_v_currentposition >= ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0)) != 0);
+      if (__pyx_t_5) {
 
         /* "mmfparser/data/chunkloaders/objects.pyx":905
  *             else:
@@ -28471,8 +28460,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                     log("Warning: Out of bytes reading ObjectCommon (" + str(reader.tell()) + "/" + str(reader.size()) + ")", 3)
  *                     return;
  */
-      __pyx_t_6 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0) - 4)) != 0);
-      if (__pyx_t_6) {
+      __pyx_t_5 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0) - 4)) != 0);
+      if (__pyx_t_5) {
 
         /* "mmfparser/data/chunkloaders/objects.pyx":909
  *                     currentposition = 4
@@ -28483,70 +28472,70 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
         __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_log); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 909, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_11 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 909, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __pyx_t_10 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = PyNumber_Add(__pyx_kp_s_Warning_Out_of_bytes_reading_Obj, __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 909, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = PyNumber_Add(__pyx_kp_s_Warning_Out_of_bytes_reading_Obj, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyNumber_Add(__pyx_t_11, __pyx_kp_s__2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __pyx_t_4 = PyNumber_Add(__pyx_t_10, __pyx_kp_s__2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 909, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 909, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = PyNumber_Add(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 909, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = PyNumber_Add(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyNumber_Add(__pyx_t_11, __pyx_kp_s__3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 909, __pyx_L1_error)
+        __pyx_t_3 = PyNumber_Add(__pyx_t_10, __pyx_kp_s__3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 909, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = NULL;
-        __pyx_t_5 = 0;
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = NULL;
+        __pyx_t_11 = 0;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-          __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-          if (likely(__pyx_t_11)) {
+          __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_2);
+          if (likely(__pyx_t_10)) {
             PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-            __Pyx_INCREF(__pyx_t_11);
+            __Pyx_INCREF(__pyx_t_10);
             __Pyx_INCREF(function);
             __Pyx_DECREF_SET(__pyx_t_2, function);
-            __pyx_t_5 = 1;
+            __pyx_t_11 = 1;
           }
         }
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_2)) {
-          PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_t_3, __pyx_int_3};
-          __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
-          __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+          PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_3, __pyx_int_3};
+          __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
+          __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         } else
         #endif
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-          PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_t_3, __pyx_int_3};
-          __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
-          __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+          PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_3, __pyx_int_3};
+          __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
+          __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         } else
         #endif
         {
-          __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
+          __pyx_t_4 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          if (__pyx_t_11) {
-            __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_11); __pyx_t_11 = NULL;
+          if (__pyx_t_10) {
+            __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_10); __pyx_t_10 = NULL;
           }
           __Pyx_GIVEREF(__pyx_t_3);
-          PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_5, __pyx_t_3);
+          PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_11, __pyx_t_3);
           __Pyx_INCREF(__pyx_int_3);
           __Pyx_GIVEREF(__pyx_int_3);
-          PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_5, __pyx_int_3);
+          PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_11, __pyx_int_3);
           __pyx_t_3 = 0;
           __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 909, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
@@ -28595,9 +28584,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                     return
  */
       __pyx_t_1 = PyObject_RichCompare(__pyx_v_size2, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 912, __pyx_L1_error)
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 912, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 912, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (__pyx_t_6) {
+      if (__pyx_t_5) {
 
         /* "mmfparser/data/chunkloaders/objects.pyx":913
  *                 size2 = reader.readInt()
@@ -28621,18 +28610,18 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_4 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 913, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_11 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 913, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __pyx_t_10 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 913, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 913, __pyx_L1_error)
+        __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 913, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 913, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 913, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_4 = NULL;
-        __pyx_t_5 = 0;
+        __pyx_t_11 = 0;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
           __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
           if (likely(__pyx_t_4)) {
@@ -28640,39 +28629,39 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
             __Pyx_INCREF(__pyx_t_4);
             __Pyx_INCREF(function);
             __Pyx_DECREF_SET(__pyx_t_2, function);
-            __pyx_t_5 = 1;
+            __pyx_t_11 = 1;
           }
         }
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_2)) {
-          PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_11, __pyx_int_3};
-          __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
+          PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_10, __pyx_int_3};
+          __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+          __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         } else
         #endif
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-          PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_11, __pyx_int_3};
-          __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
+          PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_10, __pyx_int_3};
+          __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+          __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         } else
         #endif
         {
-          __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 913, __pyx_L1_error)
+          __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 913, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           if (__pyx_t_4) {
             __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4); __pyx_t_4 = NULL;
           }
-          __Pyx_GIVEREF(__pyx_t_11);
-          PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_5, __pyx_t_11);
+          __Pyx_GIVEREF(__pyx_t_10);
+          PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_11, __pyx_t_10);
           __Pyx_INCREF(__pyx_int_3);
           __Pyx_GIVEREF(__pyx_int_3);
-          PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, __pyx_int_3);
-          __pyx_t_11 = 0;
+          PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, __pyx_int_3);
+          __pyx_t_10 = 0;
           __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 913, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -28707,11 +28696,11 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 if size2 > reader.tell() or size2 == 4552:
  *                     log("Warning: The size is bigger than the reader in ObjectCommon (" + str(size2) + "/" + str(reader.tell()) + ")", 3)
  */
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_v_size2); if (unlikely((__pyx_t_6 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 915, __pyx_L1_error)
-      __pyx_t_10.__pyx_n = 1;
-      __pyx_t_10.asUnsigned = __pyx_t_6;
-      __pyx_t_9 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readByte(__pyx_v_reader, 0, &__pyx_t_10); if (unlikely(__pyx_t_9 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 915, __pyx_L1_error)
-      __pyx_v_ass = __pyx_t_9;
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_size2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 915, __pyx_L1_error)
+      __pyx_t_9.__pyx_n = 1;
+      __pyx_t_9.asUnsigned = __pyx_t_5;
+      __pyx_t_8 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readByte(__pyx_v_reader, 0, &__pyx_t_9); if (unlikely(__pyx_t_8 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 915, __pyx_L1_error)
+      __pyx_v_ass = __pyx_t_8;
 
       /* "mmfparser/data/chunkloaders/objects.pyx":916
  *                     return
@@ -28724,20 +28713,20 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_2 = PyObject_RichCompare(__pyx_v_size2, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 916, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 916, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 916, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (!__pyx_t_8) {
+      if (!__pyx_t_7) {
       } else {
-        __pyx_t_6 = __pyx_t_8;
+        __pyx_t_5 = __pyx_t_7;
         goto __pyx_L11_bool_binop_done;
       }
       __pyx_t_2 = __Pyx_PyInt_EqObjC(__pyx_v_size2, __pyx_int_4552, 0x11C8, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 916, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 916, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 916, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_6 = __pyx_t_8;
+      __pyx_t_5 = __pyx_t_7;
       __pyx_L11_bool_binop_done:;
-      if (__pyx_t_6) {
+      if (__pyx_t_5) {
 
         /* "mmfparser/data/chunkloaders/objects.pyx":917
  *                 ass = reader.readByte(size2)
@@ -28750,65 +28739,65 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
         __Pyx_GOTREF(__pyx_t_1);
         __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_size2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 917, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_11 = PyNumber_Add(__pyx_kp_s_Warning_The_size_is_bigger_than, __pyx_t_3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 917, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __pyx_t_10 = PyNumber_Add(__pyx_kp_s_Warning_The_size_is_bigger_than, __pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 917, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyNumber_Add(__pyx_t_11, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 917, __pyx_L1_error)
+        __pyx_t_3 = PyNumber_Add(__pyx_t_10, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 917, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 917, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 917, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->tell(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 917, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 917, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = PyNumber_Add(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 917, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = PyNumber_Add(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 917, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyNumber_Add(__pyx_t_11, __pyx_kp_s__3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 917, __pyx_L1_error)
+        __pyx_t_4 = PyNumber_Add(__pyx_t_10, __pyx_kp_s__3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 917, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = NULL;
-        __pyx_t_5 = 0;
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __pyx_t_10 = NULL;
+        __pyx_t_11 = 0;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
-          __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_1);
-          if (likely(__pyx_t_11)) {
+          __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
+          if (likely(__pyx_t_10)) {
             PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-            __Pyx_INCREF(__pyx_t_11);
+            __Pyx_INCREF(__pyx_t_10);
             __Pyx_INCREF(function);
             __Pyx_DECREF_SET(__pyx_t_1, function);
-            __pyx_t_5 = 1;
+            __pyx_t_11 = 1;
           }
         }
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_1)) {
-          PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_t_4, __pyx_int_3};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
-          __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+          PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, __pyx_int_3};
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
+          __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         } else
         #endif
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-          PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_t_4, __pyx_int_3};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
-          __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+          PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, __pyx_int_3};
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
+          __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         } else
         #endif
         {
-          __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 917, __pyx_L1_error)
+          __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 917, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
-          if (__pyx_t_11) {
-            __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_11); __pyx_t_11 = NULL;
+          if (__pyx_t_10) {
+            __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_10); __pyx_t_10 = NULL;
           }
           __Pyx_GIVEREF(__pyx_t_4);
-          PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_5, __pyx_t_4);
+          PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_11, __pyx_t_4);
           __Pyx_INCREF(__pyx_int_3);
           __Pyx_GIVEREF(__pyx_int_3);
-          PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, __pyx_int_3);
+          PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, __pyx_int_3);
           __pyx_t_4 = 0;
           __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 917, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
@@ -28908,7 +28897,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 decompressedReader = ByteReader(StringIO.StringIO(decompressed))
  *                 reader.seek(currentposition + size2 + 8)             # <<<<<<<<<<<<<<
  *             if decompressedReader.tell() > decompressedReader.size() - 19:
- *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
  */
       __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_currentposition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 921, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
@@ -28918,9 +28907,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_t_2, __pyx_int_8, 8, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 921, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 921, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 921, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
+      (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_11, 0, NULL));
     }
     __pyx_L6:;
 
@@ -28928,16 +28917,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 decompressedReader = ByteReader(StringIO.StringIO(decompressed))
  *                 reader.seek(currentposition + size2 + 8)
  *             if decompressedReader.tell() > decompressedReader.size() - 19:             # <<<<<<<<<<<<<<
- *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
  *                 return
  */
-    __pyx_t_6 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0) - 19)) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_5 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0) - 19)) != 0);
+    if (__pyx_t_5) {
 
       /* "mmfparser/data/chunkloaders/objects.pyx":923
  *                 reader.seek(currentposition + size2 + 8)
  *             if decompressedReader.tell() > decompressedReader.size() - 19:
- *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)             # <<<<<<<<<<<<<<
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)             # <<<<<<<<<<<<<<
  *                 return
  *             size = decompressedReader.readInt()
  */
@@ -28954,20 +28943,20 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 923, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->size(__pyx_v_reader, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 923, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 923, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_11 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 923, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __pyx_t_10 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 923, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 923, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 923, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_11 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 923, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 923, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
-      __pyx_t_5 = 0;
+      __pyx_t_11 = 0;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
         __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
         if (likely(__pyx_t_3)) {
@@ -28975,39 +28964,39 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
           __Pyx_INCREF(__pyx_t_3);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_2, function);
-          __pyx_t_5 = 1;
+          __pyx_t_11 = 1;
         }
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_11, __pyx_int_3};
-        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 923, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_10, __pyx_int_3};
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 923, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       } else
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_11, __pyx_int_3};
-        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 923, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_10, __pyx_int_3};
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 923, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       } else
       #endif
       {
-        __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 923, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 923, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         if (__pyx_t_3) {
           __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
         }
-        __Pyx_GIVEREF(__pyx_t_11);
-        PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_5, __pyx_t_11);
+        __Pyx_GIVEREF(__pyx_t_10);
+        PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_11, __pyx_t_10);
         __Pyx_INCREF(__pyx_int_3);
         __Pyx_GIVEREF(__pyx_int_3);
-        PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_5, __pyx_int_3);
-        __pyx_t_11 = 0;
+        PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_11, __pyx_int_3);
+        __pyx_t_10 = 0;
         __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 923, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -29017,7 +29006,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
 
       /* "mmfparser/data/chunkloaders/objects.pyx":924
  *             if decompressedReader.tell() > decompressedReader.size() - 19:
- *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
  *                 return             # <<<<<<<<<<<<<<
  *             size = decompressedReader.readInt()
  *             animationsOffset = decompressedReader.readShort()
@@ -29030,13 +29019,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 decompressedReader = ByteReader(StringIO.StringIO(decompressed))
  *                 reader.seek(currentposition + size2 + 8)
  *             if decompressedReader.tell() > decompressedReader.size() - 19:             # <<<<<<<<<<<<<<
- *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
  *                 return
  */
     }
 
     /* "mmfparser/data/chunkloaders/objects.pyx":925
- *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(reader.size()) + ")", 3)
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
  *                 return
  *             size = decompressedReader.readInt()             # <<<<<<<<<<<<<<
  *             animationsOffset = decompressedReader.readShort()
@@ -29044,9 +29033,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
     __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 925, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 925, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 925, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_v_size = __pyx_t_5;
+    __pyx_v_size = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":926
  *                 return
@@ -29055,8 +29044,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             movementsOffset = decompressedReader.readShort()
  *             version = decompressedReader.readShort()
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 926, __pyx_L1_error)
-    __pyx_v_animationsOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 926, __pyx_L1_error)
+    __pyx_v_animationsOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":927
  *             size = decompressedReader.readInt()
@@ -29065,8 +29054,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             version = decompressedReader.readShort()
  *             decompressedReader.skipByte(2)
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 927, __pyx_L1_error)
-    __pyx_v_movementsOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 927, __pyx_L1_error)
+    __pyx_v_movementsOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":928
  *             animationsOffset = decompressedReader.readShort()
@@ -29075,8 +29064,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             decompressedReader.skipByte(2)
  *             extensionOffset = decompressedReader.readShort()
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 928, __pyx_L1_error)
-    __pyx_v_version = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 928, __pyx_L1_error)
+    __pyx_v_version = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":929
  *             movementsOffset = decompressedReader.readShort()
@@ -29111,8 +29100,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             counterOffset = decompressedReader.readShort()
  *             self.flags.setFlags(decompressedReader.readShort())
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 930, __pyx_L1_error)
-    __pyx_v_extensionOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 930, __pyx_L1_error)
+    __pyx_v_extensionOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":931
  *             decompressedReader.skipByte(2)
@@ -29121,8 +29110,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             self.flags.setFlags(decompressedReader.readShort())
  *             decompressedReader.skipByte(2)
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 931, __pyx_L1_error)
-    __pyx_v_counterOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 931, __pyx_L1_error)
+    __pyx_v_counterOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":932
  *             extensionOffset = decompressedReader.readShort()
@@ -29133,21 +29122,21 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_setFlags); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 932, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 932, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 932, __pyx_L1_error)
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 932, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 932, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_11 = NULL;
+    __pyx_t_10 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_11)) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_10)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_11);
+        __Pyx_INCREF(__pyx_t_10);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_2, function);
       }
     }
-    __pyx_t_1 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_11, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+    __pyx_t_1 = (__pyx_t_10) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_10, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
+    __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 932, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -29197,8 +29186,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 if qualifier == -1:
  *                     break
  */
-      __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 935, __pyx_L1_error)
-      __pyx_v_qualifier = __pyx_t_5;
+      __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 935, __pyx_L1_error)
+      __pyx_v_qualifier = __pyx_t_11;
 
       /* "mmfparser/data/chunkloaders/objects.pyx":936
  *             for _ in xrange(8):
@@ -29207,8 +29196,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                     break
  *                 self.qualifiers.append(qualifier)
  */
-      __pyx_t_6 = ((__pyx_v_qualifier == -1L) != 0);
-      if (__pyx_t_6) {
+      __pyx_t_5 = ((__pyx_v_qualifier == -1L) != 0);
+      if (__pyx_t_5) {
 
         /* "mmfparser/data/chunkloaders/objects.pyx":937
  *                 qualifier = decompressedReader.readShort()
@@ -29271,8 +29260,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
  *                 return
  */
-    __pyx_t_6 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0) - 20)) != 0);
-    if (__pyx_t_6) {
+    __pyx_t_5 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0) - 20)) != 0);
+    if (__pyx_t_5) {
 
       /* "mmfparser/data/chunkloaders/objects.pyx":942
  *             decompressedReader.seek(end)
@@ -29285,29 +29274,29 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_11 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 942, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __pyx_t_10 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 942, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyNumber_Add(__pyx_kp_s_Warning_Out_of_bytes_reading_Obj, __pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_Add(__pyx_kp_s_Warning_Out_of_bytes_reading_Obj, __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_11 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 942, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 942, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 942, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyNumber_Add(__pyx_t_11, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_Add(__pyx_t_10, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 942, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 942, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
-      __pyx_t_5 = 0;
+      __pyx_t_11 = 0;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
         __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
         if (likely(__pyx_t_4)) {
@@ -29315,13 +29304,13 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
           __Pyx_INCREF(__pyx_t_4);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_2, function);
-          __pyx_t_5 = 1;
+          __pyx_t_11 = 1;
         }
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_int_3};
-        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -29330,27 +29319,27 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_int_3};
-        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else
       #endif
       {
-        __pyx_t_11 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 942, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __pyx_t_10 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 942, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
         if (__pyx_t_4) {
-          __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4); __pyx_t_4 = NULL;
+          __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_4); __pyx_t_4 = NULL;
         }
         __Pyx_GIVEREF(__pyx_t_3);
-        PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_5, __pyx_t_3);
+        PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_11, __pyx_t_3);
         __Pyx_INCREF(__pyx_int_3);
         __Pyx_GIVEREF(__pyx_int_3);
-        PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_5, __pyx_int_3);
+        PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_11, __pyx_int_3);
         __pyx_t_3 = 0;
-        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 942, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -29382,8 +29371,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             valuesOffset = decompressedReader.readShort()
  *             stringsOffset = decompressedReader.readShort()
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 944, __pyx_L1_error)
-    __pyx_v_systemObjectOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 944, __pyx_L1_error)
+    __pyx_v_systemObjectOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":945
  *                 return
@@ -29392,8 +29381,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             stringsOffset = decompressedReader.readShort()
  *             self.newFlags.setFlags(decompressedReader.readShort())
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 945, __pyx_L1_error)
-    __pyx_v_valuesOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 945, __pyx_L1_error)
+    __pyx_v_valuesOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":946
  *             systemObjectOffset = decompressedReader.readShort()
@@ -29402,8 +29391,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  *             self.newFlags.setFlags(decompressedReader.readShort())
  *             self.preferences.setFlags(decompressedReader.readShort())
  */
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 946, __pyx_L1_error)
-    __pyx_v_stringsOffset = __pyx_t_5;
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 946, __pyx_L1_error)
+    __pyx_v_stringsOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":947
  *             valuesOffset = decompressedReader.readShort()
@@ -29414,9 +29403,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->newFlags, __pyx_n_s_setFlags); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 947, __pyx_L1_error)
-    __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 947, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 947, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 947, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
       __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
@@ -29427,9 +29416,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
         __Pyx_DECREF_SET(__pyx_t_2, function);
       }
     }
-    __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_t_11) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_11);
+    __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_10);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 947, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -29444,9 +29433,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->preferences, __pyx_n_s_setFlags); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 948, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_5 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 948, __pyx_L1_error)
-    __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 948, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
+    __pyx_t_11 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readShort(__pyx_v_decompressedReader, 0, NULL); if (unlikely(__pyx_t_11 == ((int)-10) && PyErr_Occurred())) __PYX_ERR(0, 948, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 948, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
       __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
@@ -29457,9 +29446,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
         __Pyx_DECREF_SET(__pyx_t_2, function);
       }
     }
-    __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_t_11) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_11);
+    __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_10);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 948, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -29476,9 +29465,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
     __pyx_t_14.size = __pyx_int_4;
     __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readString(__pyx_v_decompressedReader, 0, &__pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 949, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 949, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 949, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_v_self->identifier = __pyx_t_5;
+    __pyx_v_self->identifier = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":950
  *             self.preferences.setFlags(decompressedReader.readShort())
@@ -29504,9 +29493,9 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
     __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 951, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 951, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 951, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_v_fadeInOffset = __pyx_t_5;
+    __pyx_v_fadeInOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":952
  *             self.backColour = decompressedReader.readColor()
@@ -29517,16 +29506,16 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
  */
     __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 952, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 952, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_11 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 952, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_v_fadeOutOffset = __pyx_t_5;
+    __pyx_v_fadeOutOffset = __pyx_t_11;
 
     /* "mmfparser/data/chunkloaders/objects.pyx":953
  *             fadeInOffset = decompressedReader.readInt()
  *             fadeOutOffset = decompressedReader.readInt()
  *             log("Finished parsing 2.5+ specific decompressed bytes!", 1)             # <<<<<<<<<<<<<<
  * 
- *         if movementsOffset != 0:
+ *         deccurpos = 4
  */
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 953, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -29547,370 +29536,85 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   /* "mmfparser/data/chunkloaders/objects.pyx":955
  *             log("Finished parsing 2.5+ specific decompressed bytes!", 1)
  * 
- *         if movementsOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + movementsOffset)
- *             self.movements = self.new(Movements, reader)
+ *         deccurpos = 4             # <<<<<<<<<<<<<<
+ *         if animationsOffset > 0:
+ *             decompressedReader.seek(deccurpos + animationsOffset)
  */
-  __pyx_t_6 = ((__pyx_v_movementsOffset != 0) != 0);
-  if (__pyx_t_6) {
+  __pyx_v_deccurpos = 4;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":956
+  /* "mmfparser/data/chunkloaders/objects.pyx":956
  * 
- *         if movementsOffset != 0:
- *             reader.seek(currentPosition + movementsOffset)             # <<<<<<<<<<<<<<
- *             self.movements = self.new(Movements, reader)
- * 
+ *         deccurpos = 4
+ *         if animationsOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + animationsOffset)
+ *             self.animations = self.new(AnimationHeader, decompressedReader)
  */
-    __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_movementsOffset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 956, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 956, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 956, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
+  __pyx_t_5 = ((__pyx_v_animationsOffset > 0) != 0);
+  if (__pyx_t_5) {
 
     /* "mmfparser/data/chunkloaders/objects.pyx":957
- *         if movementsOffset != 0:
- *             reader.seek(currentPosition + movementsOffset)
- *             self.movements = self.new(Movements, reader)             # <<<<<<<<<<<<<<
+ *         deccurpos = 4
+ *         if animationsOffset > 0:
+ *             decompressedReader.seek(deccurpos + animationsOffset)             # <<<<<<<<<<<<<<
+ *             self.animations = self.new(AnimationHeader, decompressedReader)
  * 
- *         if valuesOffset != 0:
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 957, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_Movements); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 957, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_3 = NULL;
-    __pyx_t_5 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_3)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_3);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
-        __pyx_t_5 = 1;
-      }
-    }
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_11, ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_t_11, ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 957, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (__pyx_t_3) {
-        __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
-      }
-      __Pyx_GIVEREF(__pyx_t_11);
-      PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_5, __pyx_t_11);
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_11 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 957, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->movements);
-    __Pyx_DECREF(__pyx_v_self->movements);
-    __pyx_v_self->movements = __pyx_t_1;
-    __pyx_t_1 = 0;
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 957, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_animationsOffset), 0, NULL));
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":955
- *             log("Finished parsing 2.5+ specific decompressed bytes!", 1)
+    /* "mmfparser/data/chunkloaders/objects.pyx":958
+ *         if animationsOffset > 0:
+ *             decompressedReader.seek(deccurpos + animationsOffset)
+ *             self.animations = self.new(AnimationHeader, decompressedReader)             # <<<<<<<<<<<<<<
  * 
- *         if movementsOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + movementsOffset)
- *             self.movements = self.new(Movements, reader)
+ *         if movementsOffset > 0:
  */
-  }
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":959
- *             self.movements = self.new(Movements, reader)
- * 
- *         if valuesOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + valuesOffset)
- *             self.values = self.new(AlterableValues, reader)
- */
-  __pyx_t_6 = ((__pyx_v_valuesOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":960
- * 
- *         if valuesOffset != 0:
- *             reader.seek(currentPosition + valuesOffset)             # <<<<<<<<<<<<<<
- *             self.values = self.new(AlterableValues, reader)
- * 
- */
-    __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_valuesOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 960, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 958, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 960, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 960, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":961
- *         if valuesOffset != 0:
- *             reader.seek(currentPosition + valuesOffset)
- *             self.values = self.new(AlterableValues, reader)             # <<<<<<<<<<<<<<
- * 
- *         if stringsOffset != 0:
- */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 961, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = NULL;
-    __pyx_t_5 = 0;
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 958, __pyx_L1_error) }
+    __pyx_t_10 = NULL;
+    __pyx_t_11 = 0;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_4)) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_10)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(__pyx_t_10);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
+        __pyx_t_11 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 961, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      PyObject *__pyx_temp[3] = {__pyx_t_10, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 961, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      PyObject *__pyx_temp[3] = {__pyx_t_10, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     {
-      __pyx_t_11 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 961, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
-      if (__pyx_t_4) {
-        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4); __pyx_t_4 = NULL;
-      }
-      __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues));
-      __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues));
-      PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues));
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 961, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_GIVEREF(__pyx_t_2);
-    __Pyx_GOTREF(__pyx_v_self->values);
-    __Pyx_DECREF(__pyx_v_self->values);
-    __pyx_v_self->values = __pyx_t_2;
-    __pyx_t_2 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":959
- *             self.movements = self.new(Movements, reader)
- * 
- *         if valuesOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + valuesOffset)
- *             self.values = self.new(AlterableValues, reader)
- */
-  }
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":963
- *             self.values = self.new(AlterableValues, reader)
- * 
- *         if stringsOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + stringsOffset)
- *             self.strings = self.new(AlterableStrings, reader)
- */
-  __pyx_t_6 = ((__pyx_v_stringsOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":964
- * 
- *         if stringsOffset != 0:
- *             reader.seek(currentPosition + stringsOffset)             # <<<<<<<<<<<<<<
- *             self.strings = self.new(AlterableStrings, reader)
- * 
- */
-    __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_stringsOffset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 964, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 964, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 964, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":965
- *         if stringsOffset != 0:
- *             reader.seek(currentPosition + stringsOffset)
- *             self.strings = self.new(AlterableStrings, reader)             # <<<<<<<<<<<<<<
- * 
- *         if animationsOffset != 0:
- */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 965, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_11 = NULL;
-    __pyx_t_5 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_11)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_11);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
-        __pyx_t_5 = 1;
-      }
-    }
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 965, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 965, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-    } else
-    #endif
-    {
-      __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 965, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (__pyx_t_11) {
-        __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_11); __pyx_t_11 = NULL;
-      }
-      __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings));
-      __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings));
-      PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings));
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 965, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->strings);
-    __Pyx_DECREF(__pyx_v_self->strings);
-    __pyx_v_self->strings = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":963
- *             self.values = self.new(AlterableValues, reader)
- * 
- *         if stringsOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + stringsOffset)
- *             self.strings = self.new(AlterableStrings, reader)
- */
-  }
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":967
- *             self.strings = self.new(AlterableStrings, reader)
- * 
- *         if animationsOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + animationsOffset)
- *             self.animations = self.new(AnimationHeader, reader)
- */
-  __pyx_t_6 = ((__pyx_v_animationsOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":968
- * 
- *         if animationsOffset != 0:
- *             reader.seek(currentPosition + animationsOffset)             # <<<<<<<<<<<<<<
- *             self.animations = self.new(AnimationHeader, reader)
- * 
- */
-    __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_animationsOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 968, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 968, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 968, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":969
- *         if animationsOffset != 0:
- *             reader.seek(currentPosition + animationsOffset)
- *             self.animations = self.new(AnimationHeader, reader)             # <<<<<<<<<<<<<<
- * 
- *         if counterOffset != 0:
- */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 969, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = NULL;
-    __pyx_t_5 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_4)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_4);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
-      }
-    }
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 969, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_2);
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 969, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_2);
-    } else
-    #endif
-    {
-      __pyx_t_11 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 969, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
-      if (__pyx_t_4) {
-        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4); __pyx_t_4 = NULL;
+      __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 958, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      if (__pyx_t_10) {
+        __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_10); __pyx_t_10 = NULL;
       }
       __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader));
       __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader));
-      PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader));
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 969, __pyx_L1_error)
+      PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AnimationHeader));
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 958, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GIVEREF(__pyx_t_2);
@@ -29919,572 +29623,224 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
     __pyx_v_self->animations = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":967
- *             self.strings = self.new(AlterableStrings, reader)
+    /* "mmfparser/data/chunkloaders/objects.pyx":956
  * 
- *         if animationsOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + animationsOffset)
- *             self.animations = self.new(AnimationHeader, reader)
+ *         deccurpos = 4
+ *         if animationsOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + animationsOffset)
+ *             self.animations = self.new(AnimationHeader, decompressedReader)
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":971
- *             self.animations = self.new(AnimationHeader, reader)
+  /* "mmfparser/data/chunkloaders/objects.pyx":960
+ *             self.animations = self.new(AnimationHeader, decompressedReader)
  * 
- *         if counterOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + counterOffset)
- *             self.counter = self.new(Counter, reader)
+ *         if movementsOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + movementsOffset)
+ *             self.movements = self.new(Movements, decompressedReader)
  */
-  __pyx_t_6 = ((__pyx_v_counterOffset != 0) != 0);
-  if (__pyx_t_6) {
+  __pyx_t_5 = ((__pyx_v_movementsOffset > 0) != 0);
+  if (__pyx_t_5) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":972
+    /* "mmfparser/data/chunkloaders/objects.pyx":961
  * 
- *         if counterOffset != 0:
- *             reader.seek(currentPosition + counterOffset)             # <<<<<<<<<<<<<<
- *             self.counter = self.new(Counter, reader)
+ *         if movementsOffset > 0:
+ *             decompressedReader.seek(deccurpos + movementsOffset)             # <<<<<<<<<<<<<<
+ *             self.movements = self.new(Movements, decompressedReader)
  * 
  */
-    __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_v_counterOffset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 972, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 972, __pyx_L1_error)
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 961, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_movementsOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":962
+ *         if movementsOffset > 0:
+ *             decompressedReader.seek(deccurpos + movementsOffset)
+ *             self.movements = self.new(Movements, decompressedReader)             # <<<<<<<<<<<<<<
+ * 
+ *         if systemObjectOffset > 0:
+ */
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 962, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 972, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":973
- *         if counterOffset != 0:
- *             reader.seek(currentPosition + counterOffset)
- *             self.counter = self.new(Counter, reader)             # <<<<<<<<<<<<<<
- * 
- *         if extensionOffset != 0:
- */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 973, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_11 = NULL;
-    __pyx_t_5 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_11)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_11);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
-        __pyx_t_5 = 1;
-      }
-    }
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 973, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter), ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 973, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-    } else
-    #endif
-    {
-      __pyx_t_4 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 973, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      if (__pyx_t_11) {
-        __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_11); __pyx_t_11 = NULL;
-      }
-      __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter));
-      __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter));
-      PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter));
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 973, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->counter);
-    __Pyx_DECREF(__pyx_v_self->counter);
-    __pyx_v_self->counter = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":971
- *             self.animations = self.new(AnimationHeader, reader)
- * 
- *         if counterOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + counterOffset)
- *             self.counter = self.new(Counter, reader)
- */
-  }
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":975
- *             self.counter = self.new(Counter, reader)
- * 
- *         if extensionOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + extensionOffset)
- * 
- */
-  __pyx_t_6 = ((__pyx_v_extensionOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":976
- * 
- *         if extensionOffset != 0:
- *             reader.seek(currentPosition + extensionOffset)             # <<<<<<<<<<<<<<
- * 
- *             dataSize = reader.readInt() - 20
- */
-    __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_extensionOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 976, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 976, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 976, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":978
- *             reader.seek(currentPosition + extensionOffset)
- * 
- *             dataSize = reader.readInt() - 20             # <<<<<<<<<<<<<<
- *             reader.skipBytes(4) # maxSize
- *             self.extensionVersion = reader.readInt()
- */
-    __pyx_t_2 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 978, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyInt_SubtractObjC(__pyx_t_2, __pyx_int_20, 20, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 978, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_v_dataSize = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":979
- * 
- *             dataSize = reader.readInt() - 20
- *             reader.skipBytes(4) # maxSize             # <<<<<<<<<<<<<<
- *             self.extensionVersion = reader.readInt()
- *             self.extensionId = reader.readInt()
- */
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->skipBytes(__pyx_v_reader, 4, 0));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":980
- *             dataSize = reader.readInt() - 20
- *             reader.skipBytes(4) # maxSize
- *             self.extensionVersion = reader.readInt()             # <<<<<<<<<<<<<<
- *             self.extensionId = reader.readInt()
- *             self.extensionPrivate = reader.readInt()
- */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 980, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->extensionVersion);
-    __Pyx_DECREF(__pyx_v_self->extensionVersion);
-    __pyx_v_self->extensionVersion = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":981
- *             reader.skipBytes(4) # maxSize
- *             self.extensionVersion = reader.readInt()
- *             self.extensionId = reader.readInt()             # <<<<<<<<<<<<<<
- *             self.extensionPrivate = reader.readInt()
- *             if dataSize != 0:
- */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 981, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->extensionId);
-    __Pyx_DECREF(__pyx_v_self->extensionId);
-    __pyx_v_self->extensionId = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":982
- *             self.extensionVersion = reader.readInt()
- *             self.extensionId = reader.readInt()
- *             self.extensionPrivate = reader.readInt()             # <<<<<<<<<<<<<<
- *             if dataSize != 0:
- *                 self.extensionData = reader.read(dataSize)
- */
-    __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->readInt(__pyx_v_reader, 0, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 982, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->extensionPrivate);
-    __Pyx_DECREF(__pyx_v_self->extensionPrivate);
-    __pyx_v_self->extensionPrivate = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":983
- *             self.extensionId = reader.readInt()
- *             self.extensionPrivate = reader.readInt()
- *             if dataSize != 0:             # <<<<<<<<<<<<<<
- *                 self.extensionData = reader.read(dataSize)
- * 
- */
-    __pyx_t_1 = __Pyx_PyInt_NeObjC(__pyx_v_dataSize, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 983, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 983, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (__pyx_t_6) {
-
-      /* "mmfparser/data/chunkloaders/objects.pyx":984
- *             self.extensionPrivate = reader.readInt()
- *             if dataSize != 0:
- *                 self.extensionData = reader.read(dataSize)             # <<<<<<<<<<<<<<
- * 
- *         if fadeInOffset != 0:
- */
-      __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_v_dataSize); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 984, __pyx_L1_error)
-      __pyx_t_15.__pyx_n = 1;
-      __pyx_t_15.size = __pyx_t_5;
-      __pyx_t_1 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->read(__pyx_v_reader, 0, &__pyx_t_15); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 984, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_GIVEREF(__pyx_t_1);
-      __Pyx_GOTREF(__pyx_v_self->extensionData);
-      __Pyx_DECREF(__pyx_v_self->extensionData);
-      __pyx_v_self->extensionData = __pyx_t_1;
-      __pyx_t_1 = 0;
-
-      /* "mmfparser/data/chunkloaders/objects.pyx":983
- *             self.extensionId = reader.readInt()
- *             self.extensionPrivate = reader.readInt()
- *             if dataSize != 0:             # <<<<<<<<<<<<<<
- *                 self.extensionData = reader.read(dataSize)
- * 
- */
-    }
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":975
- *             self.counter = self.new(Counter, reader)
- * 
- *         if extensionOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + extensionOffset)
- * 
- */
-  }
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":986
- *                 self.extensionData = reader.read(dataSize)
- * 
- *         if fadeInOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + fadeInOffset)
- *             self.fadeIn = self.new(FadeIn, reader)
- */
-  __pyx_t_6 = ((__pyx_v_fadeInOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":987
- * 
- *         if fadeInOffset != 0:
- *             reader.seek(currentPosition + fadeInOffset)             # <<<<<<<<<<<<<<
- *             self.fadeIn = self.new(FadeIn, reader)
- * 
- */
-    __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_fadeInOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 987, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 987, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 987, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":988
- *         if fadeInOffset != 0:
- *             reader.seek(currentPosition + fadeInOffset)
- *             self.fadeIn = self.new(FadeIn, reader)             # <<<<<<<<<<<<<<
- * 
- *         if fadeOutOffset != 0:
- */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 988, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_FadeIn); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 988, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_11 = NULL;
-    __pyx_t_5 = 0;
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Movements); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 962, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 962, __pyx_L1_error) }
+    __pyx_t_10 = NULL;
+    __pyx_t_11 = 0;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_11)) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_10)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_11);
+        __Pyx_INCREF(__pyx_t_10);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
+        __pyx_t_11 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_t_4, ((PyObject *)__pyx_v_reader)};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 988, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_3, ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 962, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_t_4, ((PyObject *)__pyx_v_reader)};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 988, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_3, ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 962, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else
     #endif
     {
-      __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 988, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      if (__pyx_t_11) {
-        __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_11); __pyx_t_11 = NULL;
+      __pyx_t_4 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 962, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      if (__pyx_t_10) {
+        __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_10); __pyx_t_10 = NULL;
       }
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_5, __pyx_t_4);
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_4 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 988, __pyx_L1_error)
+      __Pyx_GIVEREF(__pyx_t_3);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_11, __pyx_t_3);
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_3 = 0;
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 962, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GIVEREF(__pyx_t_2);
-    __Pyx_GOTREF(__pyx_v_self->fadeIn);
-    __Pyx_DECREF(__pyx_v_self->fadeIn);
-    __pyx_v_self->fadeIn = __pyx_t_2;
+    __Pyx_GOTREF(__pyx_v_self->movements);
+    __Pyx_DECREF(__pyx_v_self->movements);
+    __pyx_v_self->movements = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":986
- *                 self.extensionData = reader.read(dataSize)
+    /* "mmfparser/data/chunkloaders/objects.pyx":960
+ *             self.animations = self.new(AnimationHeader, decompressedReader)
  * 
- *         if fadeInOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + fadeInOffset)
- *             self.fadeIn = self.new(FadeIn, reader)
+ *         if movementsOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + movementsOffset)
+ *             self.movements = self.new(Movements, decompressedReader)
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":990
- *             self.fadeIn = self.new(FadeIn, reader)
+  /* "mmfparser/data/chunkloaders/objects.pyx":964
+ *             self.movements = self.new(Movements, decompressedReader)
  * 
- *         if fadeOutOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + fadeOutOffset)
- *             self.fadeOut = self.new(FadeOut, reader)
- */
-  __pyx_t_6 = ((__pyx_v_fadeOutOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":991
- * 
- *         if fadeOutOffset != 0:
- *             reader.seek(currentPosition + fadeOutOffset)             # <<<<<<<<<<<<<<
- *             self.fadeOut = self.new(FadeOut, reader)
- * 
- */
-    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_fadeOutOffset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 991, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 991, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 991, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":992
- *         if fadeOutOffset != 0:
- *             reader.seek(currentPosition + fadeOutOffset)
- *             self.fadeOut = self.new(FadeOut, reader)             # <<<<<<<<<<<<<<
- * 
- *         if systemObjectOffset != 0:
- */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 992, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_FadeOut); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 992, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = NULL;
-    __pyx_t_5 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_4)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_4);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
-        __pyx_t_5 = 1;
-      }
-    }
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 992, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, ((PyObject *)__pyx_v_reader)};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 992, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_11 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 992, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
-      if (__pyx_t_4) {
-        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4); __pyx_t_4 = NULL;
-      }
-      __Pyx_GIVEREF(__pyx_t_3);
-      PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_5, __pyx_t_3);
-      __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-      __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-      PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-      __pyx_t_3 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 992, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    }
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GIVEREF(__pyx_t_1);
-    __Pyx_GOTREF(__pyx_v_self->fadeOut);
-    __Pyx_DECREF(__pyx_v_self->fadeOut);
-    __pyx_v_self->fadeOut = __pyx_t_1;
-    __pyx_t_1 = 0;
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":990
- *             self.fadeIn = self.new(FadeIn, reader)
- * 
- *         if fadeOutOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + fadeOutOffset)
- *             self.fadeOut = self.new(FadeOut, reader)
- */
-  }
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":994
- *             self.fadeOut = self.new(FadeOut, reader)
- * 
- *         if systemObjectOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + systemObjectOffset)
- * 
- */
-  __pyx_t_6 = ((__pyx_v_systemObjectOffset != 0) != 0);
-  if (__pyx_t_6) {
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":995
- * 
- *         if systemObjectOffset != 0:
- *             reader.seek(currentPosition + systemObjectOffset)             # <<<<<<<<<<<<<<
- * 
+ *         if systemObjectOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + systemObjectOffset)
  *             objectType = self.parent.objectType
  */
-    __pyx_t_1 = __Pyx_PyInt_From_short(__pyx_v_systemObjectOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 995, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyNumber_Add(__pyx_v_currentPosition, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 995, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 995, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader->__pyx_vtab)->seek(__pyx_v_reader, __pyx_t_5, 0, NULL));
+  __pyx_t_5 = ((__pyx_v_systemObjectOffset > 0) != 0);
+  if (__pyx_t_5) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":997
- *             reader.seek(currentPosition + systemObjectOffset)
+    /* "mmfparser/data/chunkloaders/objects.pyx":965
  * 
+ *         if systemObjectOffset > 0:
+ *             decompressedReader.seek(deccurpos + systemObjectOffset)             # <<<<<<<<<<<<<<
+ *             objectType = self.parent.objectType
+ *             if objectType in (TEXT, QUESTION):
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 965, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_systemObjectOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":966
+ *         if systemObjectOffset > 0:
+ *             decompressedReader.seek(deccurpos + systemObjectOffset)
  *             objectType = self.parent.objectType             # <<<<<<<<<<<<<<
  *             if objectType in (TEXT, QUESTION):
- *                 self.text = self.new(Text, reader)
+ *                 self.text = self.new(Text, decompressedReader)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.parent), __pyx_n_s_objectType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 997, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.parent), __pyx_n_s_objectType); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 966, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_v_objectType = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":998
- * 
+    /* "mmfparser/data/chunkloaders/objects.pyx":967
+ *             decompressedReader.seek(deccurpos + systemObjectOffset)
  *             objectType = self.parent.objectType
  *             if objectType in (TEXT, QUESTION):             # <<<<<<<<<<<<<<
- *                 self.text = self.new(Text, reader)
+ *                 self.text = self.new(Text, decompressedReader)
  *             elif objectType in (SCORE, LIVES, COUNTER):
  */
     __Pyx_INCREF(__pyx_v_objectType);
     __pyx_t_2 = __pyx_v_objectType;
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_TEXT); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_TEXT); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 967, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_11 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_11); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 998, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 967, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_11); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 998, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    if (!__pyx_t_8) {
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 967, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (!__pyx_t_7) {
     } else {
-      __pyx_t_6 = __pyx_t_8;
-      goto __pyx_L29_bool_binop_done;
+      __pyx_t_5 = __pyx_t_7;
+      goto __pyx_L22_bool_binop_done;
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_QUESTION); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 998, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_t_11, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 998, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 998, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_QUESTION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 967, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 967, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 967, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_6 = __pyx_t_8;
-    __pyx_L29_bool_binop_done:;
+    __pyx_t_5 = __pyx_t_7;
+    __pyx_L22_bool_binop_done:;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_8 = (__pyx_t_6 != 0);
-    if (__pyx_t_8) {
+    __pyx_t_7 = (__pyx_t_5 != 0);
+    if (__pyx_t_7) {
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":999
+      /* "mmfparser/data/chunkloaders/objects.pyx":968
  *             objectType = self.parent.objectType
  *             if objectType in (TEXT, QUESTION):
- *                 self.text = self.new(Text, reader)             # <<<<<<<<<<<<<<
+ *                 self.text = self.new(Text, decompressedReader)             # <<<<<<<<<<<<<<
  *             elif objectType in (SCORE, LIVES, COUNTER):
- *                 self.counters = self.new(Counters, reader)
+ *                 self.counters = self.new(Counters, decompressedReader)
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 999, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 968, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_11 = NULL;
-      __pyx_t_5 = 0;
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 968, __pyx_L1_error) }
+      __pyx_t_4 = NULL;
+      __pyx_t_11 = 0;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-        __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_1);
-        if (likely(__pyx_t_11)) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
+        if (likely(__pyx_t_4)) {
           PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-          __Pyx_INCREF(__pyx_t_11);
+          __Pyx_INCREF(__pyx_t_4);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_1, function);
-          __pyx_t_5 = 1;
+          __pyx_t_11 = 1;
         }
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_1)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 999, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+        PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 968, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 999, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+        PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 968, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       {
-        __pyx_t_3 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 999, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 968, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        if (__pyx_t_11) {
-          __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_11); __pyx_t_11 = NULL;
+        if (__pyx_t_4) {
+          __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4); __pyx_t_4 = NULL;
         }
         __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text));
         __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text));
-        PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text));
-        __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-        __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 999, __pyx_L1_error)
+        PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Text));
+        __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+        __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+        PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 968, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
@@ -30495,70 +29851,71 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_v_self->text = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":998
- * 
+      /* "mmfparser/data/chunkloaders/objects.pyx":967
+ *             decompressedReader.seek(deccurpos + systemObjectOffset)
  *             objectType = self.parent.objectType
  *             if objectType in (TEXT, QUESTION):             # <<<<<<<<<<<<<<
- *                 self.text = self.new(Text, reader)
+ *                 self.text = self.new(Text, decompressedReader)
  *             elif objectType in (SCORE, LIVES, COUNTER):
  */
-      goto __pyx_L28;
+      goto __pyx_L21;
     }
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1000
+    /* "mmfparser/data/chunkloaders/objects.pyx":969
  *             if objectType in (TEXT, QUESTION):
- *                 self.text = self.new(Text, reader)
+ *                 self.text = self.new(Text, decompressedReader)
  *             elif objectType in (SCORE, LIVES, COUNTER):             # <<<<<<<<<<<<<<
- *                 self.counters = self.new(Counters, reader)
+ *                 self.counters = self.new(Counters, decompressedReader)
  *             elif objectType == RTF:
  */
     __Pyx_INCREF(__pyx_v_objectType);
     __pyx_t_2 = __pyx_v_objectType;
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_SCORE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_SCORE); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!__pyx_t_6) {
+    if (!__pyx_t_5) {
     } else {
-      __pyx_t_8 = __pyx_t_6;
-      goto __pyx_L31_bool_binop_done;
+      __pyx_t_7 = __pyx_t_5;
+      goto __pyx_L24_bool_binop_done;
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_LIVES); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_LIVES); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (!__pyx_t_6) {
+    if (!__pyx_t_5) {
     } else {
-      __pyx_t_8 = __pyx_t_6;
-      goto __pyx_L31_bool_binop_done;
+      __pyx_t_7 = __pyx_t_5;
+      goto __pyx_L24_bool_binop_done;
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_COUNTER); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_COUNTER); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 1000, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 969, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_8 = __pyx_t_6;
-    __pyx_L31_bool_binop_done:;
+    __pyx_t_7 = __pyx_t_5;
+    __pyx_L24_bool_binop_done:;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_6 = (__pyx_t_8 != 0);
-    if (__pyx_t_6) {
+    __pyx_t_5 = (__pyx_t_7 != 0);
+    if (__pyx_t_5) {
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1001
- *                 self.text = self.new(Text, reader)
+      /* "mmfparser/data/chunkloaders/objects.pyx":970
+ *                 self.text = self.new(Text, decompressedReader)
  *             elif objectType in (SCORE, LIVES, COUNTER):
- *                 self.counters = self.new(Counters, reader)             # <<<<<<<<<<<<<<
+ *                 self.counters = self.new(Counters, decompressedReader)             # <<<<<<<<<<<<<<
  *             elif objectType == RTF:
- *                 self.rtf = self.new(RTFObject, reader)
+ *                 self.rtf = self.new(RTFObject, decompressedReader)
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1001, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 970, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 970, __pyx_L1_error) }
       __pyx_t_1 = NULL;
-      __pyx_t_5 = 0;
+      __pyx_t_11 = 0;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
         __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
         if (likely(__pyx_t_1)) {
@@ -30566,40 +29923,40 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
           __Pyx_INCREF(__pyx_t_1);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_3, function);
-          __pyx_t_5 = 1;
+          __pyx_t_11 = 1;
         }
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_3)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 970, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 970, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       {
-        __pyx_t_11 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1001, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __pyx_t_4 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 970, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
         if (__pyx_t_1) {
-          __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_1); __pyx_t_1 = NULL;
+          __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1); __pyx_t_1 = NULL;
         }
         __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters));
         __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters));
-        PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters));
-        __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-        __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
+        PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counters));
+        __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+        __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+        PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 970, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GIVEREF(__pyx_t_2);
@@ -30608,81 +29965,82 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_v_self->counters = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1000
+      /* "mmfparser/data/chunkloaders/objects.pyx":969
  *             if objectType in (TEXT, QUESTION):
- *                 self.text = self.new(Text, reader)
+ *                 self.text = self.new(Text, decompressedReader)
  *             elif objectType in (SCORE, LIVES, COUNTER):             # <<<<<<<<<<<<<<
- *                 self.counters = self.new(Counters, reader)
+ *                 self.counters = self.new(Counters, decompressedReader)
  *             elif objectType == RTF:
  */
-      goto __pyx_L28;
+      goto __pyx_L21;
     }
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1002
+    /* "mmfparser/data/chunkloaders/objects.pyx":971
  *             elif objectType in (SCORE, LIVES, COUNTER):
- *                 self.counters = self.new(Counters, reader)
+ *                 self.counters = self.new(Counters, decompressedReader)
  *             elif objectType == RTF:             # <<<<<<<<<<<<<<
- *                 self.rtf = self.new(RTFObject, reader)
+ *                 self.rtf = self.new(RTFObject, decompressedReader)
  *             elif objectType == SUBAPPLICATION:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_RTF); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1002, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_RTF); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 971, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1002, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 971, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 1002, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 971, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (__pyx_t_6) {
+    if (__pyx_t_5) {
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1003
- *                 self.counters = self.new(Counters, reader)
+      /* "mmfparser/data/chunkloaders/objects.pyx":972
+ *                 self.counters = self.new(Counters, decompressedReader)
  *             elif objectType == RTF:
- *                 self.rtf = self.new(RTFObject, reader)             # <<<<<<<<<<<<<<
+ *                 self.rtf = self.new(RTFObject, decompressedReader)             # <<<<<<<<<<<<<<
  *             elif objectType == SUBAPPLICATION:
- *                 self.subApplication = self.new(SubApplication, reader)
+ *                 self.subApplication = self.new(SubApplication, decompressedReader)
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1003, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 972, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_11 = NULL;
-      __pyx_t_5 = 0;
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 972, __pyx_L1_error) }
+      __pyx_t_4 = NULL;
+      __pyx_t_11 = 0;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-        __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_2);
-        if (likely(__pyx_t_11)) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_4)) {
           PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-          __Pyx_INCREF(__pyx_t_11);
+          __Pyx_INCREF(__pyx_t_4);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_2, function);
-          __pyx_t_5 = 1;
+          __pyx_t_11 = 1;
         }
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1003, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+        PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 972, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1003, __pyx_L1_error)
-        __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+        PyObject *__pyx_temp[3] = {__pyx_t_4, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 972, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
       #endif
       {
-        __pyx_t_1 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1003, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 972, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        if (__pyx_t_11) {
-          __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_11); __pyx_t_11 = NULL;
+        if (__pyx_t_4) {
+          __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4); __pyx_t_4 = NULL;
         }
         __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject));
         __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject));
-        PyTuple_SET_ITEM(__pyx_t_1, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject));
-        __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-        __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1003, __pyx_L1_error)
+        PyTuple_SET_ITEM(__pyx_t_1, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_RTFObject));
+        __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+        __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+        PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 972, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
@@ -30693,42 +30051,43 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_v_self->rtf = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1002
+      /* "mmfparser/data/chunkloaders/objects.pyx":971
  *             elif objectType in (SCORE, LIVES, COUNTER):
- *                 self.counters = self.new(Counters, reader)
+ *                 self.counters = self.new(Counters, decompressedReader)
  *             elif objectType == RTF:             # <<<<<<<<<<<<<<
- *                 self.rtf = self.new(RTFObject, reader)
+ *                 self.rtf = self.new(RTFObject, decompressedReader)
  *             elif objectType == SUBAPPLICATION:
  */
-      goto __pyx_L28;
+      goto __pyx_L21;
     }
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1004
+    /* "mmfparser/data/chunkloaders/objects.pyx":973
  *             elif objectType == RTF:
- *                 self.rtf = self.new(RTFObject, reader)
+ *                 self.rtf = self.new(RTFObject, decompressedReader)
  *             elif objectType == SUBAPPLICATION:             # <<<<<<<<<<<<<<
- *                 self.subApplication = self.new(SubApplication, reader)
+ *                 self.subApplication = self.new(SubApplication, decompressedReader)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_SUBAPPLICATION); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_SUBAPPLICATION); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 973, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 973, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 1004, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 973, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (__pyx_t_6) {
+    if (__pyx_t_5) {
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1005
- *                 self.rtf = self.new(RTFObject, reader)
+      /* "mmfparser/data/chunkloaders/objects.pyx":974
+ *                 self.rtf = self.new(RTFObject, decompressedReader)
  *             elif objectType == SUBAPPLICATION:
- *                 self.subApplication = self.new(SubApplication, reader)             # <<<<<<<<<<<<<<
+ *                 self.subApplication = self.new(SubApplication, decompressedReader)             # <<<<<<<<<<<<<<
  * 
- *     def write(self, ByteReader reader):
+ *         if extensionOffset > 0:
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 974, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 974, __pyx_L1_error) }
       __pyx_t_1 = NULL;
-      __pyx_t_5 = 0;
+      __pyx_t_11 = 0;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
         __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
         if (likely(__pyx_t_1)) {
@@ -30736,40 +30095,40 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
           __Pyx_INCREF(__pyx_t_1);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_3, function);
-          __pyx_t_5 = 1;
+          __pyx_t_11 = 1;
         }
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_3)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 974, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication), ((PyObject *)__pyx_v_reader)};
-        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication), ((PyObject *)__pyx_v_decompressedReader)};
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 974, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_2);
       } else
       #endif
       {
-        __pyx_t_11 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1005, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_11);
+        __pyx_t_4 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 974, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
         if (__pyx_t_1) {
-          __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_1); __pyx_t_1 = NULL;
+          __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1); __pyx_t_1 = NULL;
         }
         __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication));
         __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication));
-        PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_5, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication));
-        __Pyx_INCREF(((PyObject *)__pyx_v_reader));
-        __Pyx_GIVEREF(((PyObject *)__pyx_v_reader));
-        PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_5, ((PyObject *)__pyx_v_reader));
-        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+        PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_SubApplication));
+        __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+        __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+        PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 974, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GIVEREF(__pyx_t_2);
@@ -30778,22 +30137,770 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
       __pyx_v_self->subApplication = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1004
+      /* "mmfparser/data/chunkloaders/objects.pyx":973
  *             elif objectType == RTF:
- *                 self.rtf = self.new(RTFObject, reader)
+ *                 self.rtf = self.new(RTFObject, decompressedReader)
  *             elif objectType == SUBAPPLICATION:             # <<<<<<<<<<<<<<
- *                 self.subApplication = self.new(SubApplication, reader)
+ *                 self.subApplication = self.new(SubApplication, decompressedReader)
  * 
  */
     }
-    __pyx_L28:;
+    __pyx_L21:;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":994
- *             self.fadeOut = self.new(FadeOut, reader)
+    /* "mmfparser/data/chunkloaders/objects.pyx":964
+ *             self.movements = self.new(Movements, decompressedReader)
  * 
- *         if systemObjectOffset != 0:             # <<<<<<<<<<<<<<
- *             reader.seek(currentPosition + systemObjectOffset)
+ *         if systemObjectOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + systemObjectOffset)
+ *             objectType = self.parent.objectType
+ */
+  }
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":976
+ *                 self.subApplication = self.new(SubApplication, decompressedReader)
  * 
+ *         if extensionOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + extensionOffset)
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:
+ */
+  __pyx_t_5 = ((__pyx_v_extensionOffset > 0) != 0);
+  if (__pyx_t_5) {
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":977
+ * 
+ *         if extensionOffset > 0:
+ *             decompressedReader.seek(deccurpos + extensionOffset)             # <<<<<<<<<<<<<<
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 977, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_extensionOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":978
+ *         if extensionOffset > 0:
+ *             decompressedReader.seek(deccurpos + extensionOffset)
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:             # <<<<<<<<<<<<<<
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
+ *                 return
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 978, __pyx_L1_error) }
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 978, __pyx_L1_error) }
+    __pyx_t_5 = ((((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0) > (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0) - 20)) != 0);
+    if (__pyx_t_5) {
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":979
+ *             decompressedReader.seek(deccurpos + extensionOffset)
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)             # <<<<<<<<<<<<<<
+ *                 return
+ *             dataSize = decompressedReader.readInt()
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_log); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 979, __pyx_L1_error) }
+      __pyx_t_4 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->tell(__pyx_v_decompressedReader, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = PyNumber_Add(__pyx_kp_s_Warning_Out_of_bytes_reading_Obj, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 979, __pyx_L1_error) }
+      __pyx_t_4 = __Pyx_PyInt_FromSize_t(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->size(__pyx_v_decompressedReader, 0)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_10 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_10); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = PyNumber_Add(__pyx_t_4, __pyx_kp_s__3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 979, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = NULL;
+      __pyx_t_11 = 0;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+          __pyx_t_11 = 1;
+        }
+      }
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_3)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_10, __pyx_int_3};
+        __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_10, __pyx_int_3};
+        __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      } else
+      #endif
+      {
+        __pyx_t_1 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        if (__pyx_t_4) {
+          __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4); __pyx_t_4 = NULL;
+        }
+        __Pyx_GIVEREF(__pyx_t_10);
+        PyTuple_SET_ITEM(__pyx_t_1, 0+__pyx_t_11, __pyx_t_10);
+        __Pyx_INCREF(__pyx_int_3);
+        __Pyx_GIVEREF(__pyx_int_3);
+        PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_11, __pyx_int_3);
+        __pyx_t_10 = 0;
+        __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 979, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":980
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
+ *                 return             # <<<<<<<<<<<<<<
+ *             dataSize = decompressedReader.readInt()
+ *             decompressedReader.skip(4)
+ */
+      __Pyx_XDECREF(__pyx_r);
+      __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+      goto __pyx_L0;
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":978
+ *         if extensionOffset > 0:
+ *             decompressedReader.seek(deccurpos + extensionOffset)
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:             # <<<<<<<<<<<<<<
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
+ *                 return
+ */
+    }
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":981
+ *                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
+ *                 return
+ *             dataSize = decompressedReader.readInt()             # <<<<<<<<<<<<<<
+ *             decompressedReader.skip(4)
+ *             self.extensionVersion = decompressedReader.readInt()
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 981, __pyx_L1_error) }
+    __pyx_t_2 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 981, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_v_dataSize = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":982
+ *                 return
+ *             dataSize = decompressedReader.readInt()
+ *             decompressedReader.skip(4)             # <<<<<<<<<<<<<<
+ *             self.extensionVersion = decompressedReader.readInt()
+ *             self.extensionId = decompressedReader.readInt()
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 982, __pyx_L1_error) }
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_decompressedReader), __pyx_n_s_skip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 982, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_1 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+      }
+    }
+    __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_1, __pyx_int_4) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_int_4);
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 982, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":983
+ *             dataSize = decompressedReader.readInt()
+ *             decompressedReader.skip(4)
+ *             self.extensionVersion = decompressedReader.readInt()             # <<<<<<<<<<<<<<
+ *             self.extensionId = decompressedReader.readInt()
+ *             self.extensionPrivate = decompressedReader.readInt()
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 983, __pyx_L1_error) }
+    __pyx_t_2 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 983, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->extensionVersion);
+    __Pyx_DECREF(__pyx_v_self->extensionVersion);
+    __pyx_v_self->extensionVersion = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":984
+ *             decompressedReader.skip(4)
+ *             self.extensionVersion = decompressedReader.readInt()
+ *             self.extensionId = decompressedReader.readInt()             # <<<<<<<<<<<<<<
+ *             self.extensionPrivate = decompressedReader.readInt()
+ *             if dataSize > 0:
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 984, __pyx_L1_error) }
+    __pyx_t_2 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 984, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->extensionId);
+    __Pyx_DECREF(__pyx_v_self->extensionId);
+    __pyx_v_self->extensionId = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":985
+ *             self.extensionVersion = decompressedReader.readInt()
+ *             self.extensionId = decompressedReader.readInt()
+ *             self.extensionPrivate = decompressedReader.readInt()             # <<<<<<<<<<<<<<
+ *             if dataSize > 0:
+ *                 self.extensionData = decompressedReader.readByte(dataSize)
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 985, __pyx_L1_error) }
+    __pyx_t_2 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readInt(__pyx_v_decompressedReader, 0, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 985, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->extensionPrivate);
+    __Pyx_DECREF(__pyx_v_self->extensionPrivate);
+    __pyx_v_self->extensionPrivate = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":986
+ *             self.extensionId = decompressedReader.readInt()
+ *             self.extensionPrivate = decompressedReader.readInt()
+ *             if dataSize > 0:             # <<<<<<<<<<<<<<
+ *                 self.extensionData = decompressedReader.readByte(dataSize)
+ *             else:
+ */
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_dataSize, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 986, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 986, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (__pyx_t_5) {
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":987
+ *             self.extensionPrivate = decompressedReader.readInt()
+ *             if dataSize > 0:
+ *                 self.extensionData = decompressedReader.readByte(dataSize)             # <<<<<<<<<<<<<<
+ *             else:
+ *                 self.extensionData = None
+ */
+      if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 987, __pyx_L1_error) }
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_v_dataSize); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 987, __pyx_L1_error)
+      __pyx_t_9.__pyx_n = 1;
+      __pyx_t_9.asUnsigned = __pyx_t_5;
+      __pyx_t_8 = ((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->readByte(__pyx_v_decompressedReader, 0, &__pyx_t_9); if (unlikely(__pyx_t_8 == ((short)-10) && PyErr_Occurred())) __PYX_ERR(0, 987, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From_short(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 987, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_2);
+      __Pyx_GOTREF(__pyx_v_self->extensionData);
+      __Pyx_DECREF(__pyx_v_self->extensionData);
+      __pyx_v_self->extensionData = __pyx_t_2;
+      __pyx_t_2 = 0;
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":986
+ *             self.extensionId = decompressedReader.readInt()
+ *             self.extensionPrivate = decompressedReader.readInt()
+ *             if dataSize > 0:             # <<<<<<<<<<<<<<
+ *                 self.extensionData = decompressedReader.readByte(dataSize)
+ *             else:
+ */
+      goto __pyx_L29;
+    }
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":989
+ *                 self.extensionData = decompressedReader.readByte(dataSize)
+ *             else:
+ *                 self.extensionData = None             # <<<<<<<<<<<<<<
+ * 
+ *         if counterOffset > 0:
+ */
+    /*else*/ {
+      __Pyx_INCREF(Py_None);
+      __Pyx_GIVEREF(Py_None);
+      __Pyx_GOTREF(__pyx_v_self->extensionData);
+      __Pyx_DECREF(__pyx_v_self->extensionData);
+      __pyx_v_self->extensionData = Py_None;
+    }
+    __pyx_L29:;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":976
+ *                 self.subApplication = self.new(SubApplication, decompressedReader)
+ * 
+ *         if extensionOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + extensionOffset)
+ *             if decompressedReader.tell() > decompressedReader.size() - 20:
+ */
+  }
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":991
+ *                 self.extensionData = None
+ * 
+ *         if counterOffset > 0:             # <<<<<<<<<<<<<<
+ *            decompressedReader.seek(deccurpos + counterOffset)
+ *            self.counter = self.new(Counter, decompressedReader)
+ */
+  __pyx_t_5 = ((__pyx_v_counterOffset > 0) != 0);
+  if (__pyx_t_5) {
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":992
+ * 
+ *         if counterOffset > 0:
+ *            decompressedReader.seek(deccurpos + counterOffset)             # <<<<<<<<<<<<<<
+ *            self.counter = self.new(Counter, decompressedReader)
+ * 
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 992, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_counterOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":993
+ *         if counterOffset > 0:
+ *            decompressedReader.seek(deccurpos + counterOffset)
+ *            self.counter = self.new(Counter, decompressedReader)             # <<<<<<<<<<<<<<
+ * 
+ *         if valuesOffset > 0:
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 993, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 993, __pyx_L1_error) }
+    __pyx_t_1 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 993, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 993, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+    } else
+    #endif
+    {
+      __pyx_t_10 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 993, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      if (__pyx_t_1) {
+        __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_1); __pyx_t_1 = NULL;
+      }
+      __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter));
+      __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter));
+      PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_Counter));
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 993, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->counter);
+    __Pyx_DECREF(__pyx_v_self->counter);
+    __pyx_v_self->counter = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":991
+ *                 self.extensionData = None
+ * 
+ *         if counterOffset > 0:             # <<<<<<<<<<<<<<
+ *            decompressedReader.seek(deccurpos + counterOffset)
+ *            self.counter = self.new(Counter, decompressedReader)
+ */
+  }
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":995
+ *            self.counter = self.new(Counter, decompressedReader)
+ * 
+ *         if valuesOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + valuesOffset)
+ *             self.values = self.new(AlterableValues, decompressedReader)
+ */
+  __pyx_t_5 = ((__pyx_v_valuesOffset > 0) != 0);
+  if (__pyx_t_5) {
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":996
+ * 
+ *         if valuesOffset > 0:
+ *             decompressedReader.seek(deccurpos + valuesOffset)             # <<<<<<<<<<<<<<
+ *             self.values = self.new(AlterableValues, decompressedReader)
+ * 
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 996, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_valuesOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":997
+ *         if valuesOffset > 0:
+ *             decompressedReader.seek(deccurpos + valuesOffset)
+ *             self.values = self.new(AlterableValues, decompressedReader)             # <<<<<<<<<<<<<<
+ * 
+ *         if stringsOffset > 0:
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 997, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 997, __pyx_L1_error) }
+    __pyx_t_10 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_10)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_10);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_10, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 997, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_10, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 997, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+    } else
+    #endif
+    {
+      __pyx_t_1 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 997, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (__pyx_t_10) {
+        __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_10); __pyx_t_10 = NULL;
+      }
+      __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues));
+      __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues));
+      PyTuple_SET_ITEM(__pyx_t_1, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableValues));
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 997, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->values);
+    __Pyx_DECREF(__pyx_v_self->values);
+    __pyx_v_self->values = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":995
+ *            self.counter = self.new(Counter, decompressedReader)
+ * 
+ *         if valuesOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + valuesOffset)
+ *             self.values = self.new(AlterableValues, decompressedReader)
+ */
+  }
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":999
+ *             self.values = self.new(AlterableValues, decompressedReader)
+ * 
+ *         if stringsOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + stringsOffset)
+ *             self.strings = self.new(AlterableStrings, decompressedReader)
+ */
+  __pyx_t_5 = ((__pyx_v_stringsOffset > 0) != 0);
+  if (__pyx_t_5) {
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1000
+ * 
+ *         if stringsOffset > 0:
+ *             decompressedReader.seek(deccurpos + stringsOffset)             # <<<<<<<<<<<<<<
+ *             self.strings = self.new(AlterableStrings, decompressedReader)
+ * 
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 1000, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_stringsOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1001
+ *         if stringsOffset > 0:
+ *             decompressedReader.seek(deccurpos + stringsOffset)
+ *             self.strings = self.new(AlterableStrings, decompressedReader)             # <<<<<<<<<<<<<<
+ * 
+ *         if fadeInOffset > 0:
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1001, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 1001, __pyx_L1_error) }
+    __pyx_t_1 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings), ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+    } else
+    #endif
+    {
+      __pyx_t_10 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1001, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      if (__pyx_t_1) {
+        __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_1); __pyx_t_1 = NULL;
+      }
+      __Pyx_INCREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings));
+      __Pyx_GIVEREF(((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings));
+      PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_11, ((PyObject *)__pyx_ptype_9mmfparser_4data_12chunkloaders_7objects_AlterableStrings));
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1001, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->strings);
+    __Pyx_DECREF(__pyx_v_self->strings);
+    __pyx_v_self->strings = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":999
+ *             self.values = self.new(AlterableValues, decompressedReader)
+ * 
+ *         if stringsOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + stringsOffset)
+ *             self.strings = self.new(AlterableStrings, decompressedReader)
+ */
+  }
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":1003
+ *             self.strings = self.new(AlterableStrings, decompressedReader)
+ * 
+ *         if fadeInOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + fadeInOffset)
+ *             self.fadeIn = self.new(FadeIn, decompressedReader)
+ */
+  __pyx_t_5 = ((__pyx_v_fadeInOffset > 0) != 0);
+  if (__pyx_t_5) {
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1004
+ * 
+ *         if fadeInOffset > 0:
+ *             decompressedReader.seek(deccurpos + fadeInOffset)             # <<<<<<<<<<<<<<
+ *             self.fadeIn = self.new(FadeIn, decompressedReader)
+ * 
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 1004, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_fadeInOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1005
+ *         if fadeInOffset > 0:
+ *             decompressedReader.seek(deccurpos + fadeInOffset)
+ *             self.fadeIn = self.new(FadeIn, decompressedReader)             # <<<<<<<<<<<<<<
+ * 
+ *         if fadeOutOffset > 0:
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_FadeIn); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1005, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 1005, __pyx_L1_error) }
+    __pyx_t_1 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_t_10, ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_t_10, ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      if (__pyx_t_1) {
+        __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1); __pyx_t_1 = NULL;
+      }
+      __Pyx_GIVEREF(__pyx_t_10);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+__pyx_t_11, __pyx_t_10);
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_10 = 0;
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1005, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->fadeIn);
+    __Pyx_DECREF(__pyx_v_self->fadeIn);
+    __pyx_v_self->fadeIn = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1003
+ *             self.strings = self.new(AlterableStrings, decompressedReader)
+ * 
+ *         if fadeInOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + fadeInOffset)
+ *             self.fadeIn = self.new(FadeIn, decompressedReader)
+ */
+  }
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":1007
+ *             self.fadeIn = self.new(FadeIn, decompressedReader)
+ * 
+ *         if fadeOutOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + fadeOutOffset)
+ *             self.fadeOut = self.new(FadeOut, decompressedReader)
+ */
+  __pyx_t_5 = ((__pyx_v_fadeOutOffset > 0) != 0);
+  if (__pyx_t_5) {
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1008
+ * 
+ *         if fadeOutOffset > 0:
+ *             decompressedReader.seek(deccurpos + fadeOutOffset)             # <<<<<<<<<<<<<<
+ *             self.fadeOut = self.new(FadeOut, decompressedReader)
+ * 
+ */
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 1008, __pyx_L1_error) }
+    (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_decompressedReader->__pyx_vtab)->seek(__pyx_v_decompressedReader, (__pyx_v_deccurpos + __pyx_v_fadeOutOffset), 0, NULL));
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1009
+ *         if fadeOutOffset > 0:
+ *             decompressedReader.seek(deccurpos + fadeOutOffset)
+ *             self.fadeOut = self.new(FadeOut, decompressedReader)             # <<<<<<<<<<<<<<
+ * 
+ *     def write(self, ByteReader reader):
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1009, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_FadeOut); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1009, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    if (unlikely(!__pyx_v_decompressedReader)) { __Pyx_RaiseUnboundLocalError("decompressedReader"); __PYX_ERR(0, 1009, __pyx_L1_error) }
+    __pyx_t_10 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_10)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_10);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, ((PyObject *)__pyx_v_decompressedReader)};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_1 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (__pyx_t_10) {
+        __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_10); __pyx_t_10 = NULL;
+      }
+      __Pyx_GIVEREF(__pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_1, 0+__pyx_t_11, __pyx_t_4);
+      __Pyx_INCREF(((PyObject *)__pyx_v_decompressedReader));
+      __Pyx_GIVEREF(((PyObject *)__pyx_v_decompressedReader));
+      PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_11, ((PyObject *)__pyx_v_decompressedReader));
+      __pyx_t_4 = 0;
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_GIVEREF(__pyx_t_2);
+    __Pyx_GOTREF(__pyx_v_self->fadeOut);
+    __Pyx_DECREF(__pyx_v_self->fadeOut);
+    __pyx_v_self->fadeOut = __pyx_t_2;
+    __pyx_t_2 = 0;
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1007
+ *             self.fadeIn = self.new(FadeIn, decompressedReader)
+ * 
+ *         if fadeOutOffset > 0:             # <<<<<<<<<<<<<<
+ *             decompressedReader.seek(deccurpos + fadeOutOffset)
+ *             self.fadeOut = self.new(FadeOut, decompressedReader)
  */
   }
 
@@ -30813,7 +30920,7 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_XDECREF(__pyx_t_10);
   __Pyx_AddTraceback("mmfparser.data.chunkloaders.objects.ObjectCommon.read", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
@@ -30823,8 +30930,8 @@ static PyObject *__pyx_f_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon
   __Pyx_XDECREF((PyObject *)__pyx_v_decompressedReader);
   __Pyx_XDECREF(__pyx_v_size2);
   __Pyx_XDECREF(__pyx_v_decompressed);
-  __Pyx_XDECREF(__pyx_v_dataSize);
   __Pyx_XDECREF(__pyx_v_objectType);
+  __Pyx_XDECREF(__pyx_v_dataSize);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -30877,8 +30984,8 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   return __pyx_r;
 }
 
-/* "mmfparser/data/chunkloaders/objects.pyx":1007
- *                 self.subApplication = self.new(SubApplication, reader)
+/* "mmfparser/data/chunkloaders/objects.pyx":1011
+ *             self.fadeOut = self.new(FadeOut, decompressedReader)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
  *         movementsOffset = animationsOffset = counterOffset = \
@@ -30894,7 +31001,7 @@ static PyObject *__pyx_pw_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("write (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) __PYX_ERR(0, 1007, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_reader), __pyx_ptype_9mmfparser_10bytereader_ByteReader, 1, "reader", 0))) __PYX_ERR(0, 1011, __pyx_L1_error)
   __pyx_r = __pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommon_4write(((struct __pyx_obj_9mmfparser_4data_12chunkloaders_7objects_ObjectCommon *)__pyx_v_self), ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_v_reader));
 
   /* function exit code */
@@ -30940,7 +31047,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("write", 0);
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1010
+  /* "mmfparser/data/chunkloaders/objects.pyx":1014
  *         movementsOffset = animationsOffset = counterOffset = \
  *         systemObjectOffset = extensionOffset = valuesOffset = \
  *         stringsOffset = fadeInOffset = fadeOutOffset = 0             # <<<<<<<<<<<<<<
@@ -30957,19 +31064,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_v_fadeInOffset = 0;
   __pyx_v_fadeOutOffset = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1012
+  /* "mmfparser/data/chunkloaders/objects.pyx":1016
  *         stringsOffset = fadeInOffset = fadeOutOffset = 0
  * 
  *         objectData = ByteReader()             # <<<<<<<<<<<<<<
  *         if self.movements is not None:
  *             movementsOffset = objectData.tell() + 62
  */
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_9mmfparser_10bytereader_ByteReader)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1012, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_9mmfparser_10bytereader_ByteReader)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1016, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_objectData = ((struct __pyx_obj_9mmfparser_10bytereader_ByteReader *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1013
+  /* "mmfparser/data/chunkloaders/objects.pyx":1017
  * 
  *         objectData = ByteReader()
  *         if self.movements is not None:             # <<<<<<<<<<<<<<
@@ -30980,7 +31087,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1014
+    /* "mmfparser/data/chunkloaders/objects.pyx":1018
  *         objectData = ByteReader()
  *         if self.movements is not None:
  *             movementsOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -30989,14 +31096,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_movementsOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1015
+    /* "mmfparser/data/chunkloaders/objects.pyx":1019
  *         if self.movements is not None:
  *             movementsOffset = objectData.tell() + 62
  *             self.movements.write(objectData)             # <<<<<<<<<<<<<<
  *         if self.values is not None:
  *             valuesOffset = objectData.tell() + 62
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->movements, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1015, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->movements, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1019, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31010,12 +31117,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1015, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1019, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1013
+    /* "mmfparser/data/chunkloaders/objects.pyx":1017
  * 
  *         objectData = ByteReader()
  *         if self.movements is not None:             # <<<<<<<<<<<<<<
@@ -31024,7 +31131,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1016
+  /* "mmfparser/data/chunkloaders/objects.pyx":1020
  *             movementsOffset = objectData.tell() + 62
  *             self.movements.write(objectData)
  *         if self.values is not None:             # <<<<<<<<<<<<<<
@@ -31035,7 +31142,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1017
+    /* "mmfparser/data/chunkloaders/objects.pyx":1021
  *             self.movements.write(objectData)
  *         if self.values is not None:
  *             valuesOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31044,14 +31151,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_valuesOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1018
+    /* "mmfparser/data/chunkloaders/objects.pyx":1022
  *         if self.values is not None:
  *             valuesOffset = objectData.tell() + 62
  *             self.values.write(objectData)             # <<<<<<<<<<<<<<
  *         if self.strings is not None:
  *             stringsOffset = objectData.tell() + 62
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->values, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1018, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->values, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1022, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31065,12 +31172,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1018, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1022, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1016
+    /* "mmfparser/data/chunkloaders/objects.pyx":1020
  *             movementsOffset = objectData.tell() + 62
  *             self.movements.write(objectData)
  *         if self.values is not None:             # <<<<<<<<<<<<<<
@@ -31079,7 +31186,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1019
+  /* "mmfparser/data/chunkloaders/objects.pyx":1023
  *             valuesOffset = objectData.tell() + 62
  *             self.values.write(objectData)
  *         if self.strings is not None:             # <<<<<<<<<<<<<<
@@ -31090,7 +31197,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1020
+    /* "mmfparser/data/chunkloaders/objects.pyx":1024
  *             self.values.write(objectData)
  *         if self.strings is not None:
  *             stringsOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31099,14 +31206,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_stringsOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1021
+    /* "mmfparser/data/chunkloaders/objects.pyx":1025
  *         if self.strings is not None:
  *             stringsOffset = objectData.tell() + 62
  *             self.strings.write(objectData)             # <<<<<<<<<<<<<<
  *         if self.animations is not None:
  *             animationsOffset = objectData.tell() + 62
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->strings, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1021, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->strings, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1025, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31120,12 +31227,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1021, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1025, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1019
+    /* "mmfparser/data/chunkloaders/objects.pyx":1023
  *             valuesOffset = objectData.tell() + 62
  *             self.values.write(objectData)
  *         if self.strings is not None:             # <<<<<<<<<<<<<<
@@ -31134,7 +31241,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1022
+  /* "mmfparser/data/chunkloaders/objects.pyx":1026
  *             stringsOffset = objectData.tell() + 62
  *             self.strings.write(objectData)
  *         if self.animations is not None:             # <<<<<<<<<<<<<<
@@ -31145,7 +31252,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1023
+    /* "mmfparser/data/chunkloaders/objects.pyx":1027
  *             self.strings.write(objectData)
  *         if self.animations is not None:
  *             animationsOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31154,14 +31261,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_animationsOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1024
+    /* "mmfparser/data/chunkloaders/objects.pyx":1028
  *         if self.animations is not None:
  *             animationsOffset = objectData.tell() + 62
  *             self.animations.write(objectData)             # <<<<<<<<<<<<<<
  *         if self.counter is not None:
  *             counterOffset = objectData.tell() + 62
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->animations, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1024, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->animations, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1028, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31175,12 +31282,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1024, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1028, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1022
+    /* "mmfparser/data/chunkloaders/objects.pyx":1026
  *             stringsOffset = objectData.tell() + 62
  *             self.strings.write(objectData)
  *         if self.animations is not None:             # <<<<<<<<<<<<<<
@@ -31189,7 +31296,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1025
+  /* "mmfparser/data/chunkloaders/objects.pyx":1029
  *             animationsOffset = objectData.tell() + 62
  *             self.animations.write(objectData)
  *         if self.counter is not None:             # <<<<<<<<<<<<<<
@@ -31200,7 +31307,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1026
+    /* "mmfparser/data/chunkloaders/objects.pyx":1030
  *             self.animations.write(objectData)
  *         if self.counter is not None:
  *             counterOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31209,14 +31316,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_counterOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1027
+    /* "mmfparser/data/chunkloaders/objects.pyx":1031
  *         if self.counter is not None:
  *             counterOffset = objectData.tell() + 62
  *             self.counter.write(objectData)             # <<<<<<<<<<<<<<
  *         if self.extensionVersion is not None:
  *             extensionOffset = objectData.tell() + 62
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->counter, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1027, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->counter, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1031, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31230,12 +31337,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1027, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1031, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1025
+    /* "mmfparser/data/chunkloaders/objects.pyx":1029
  *             animationsOffset = objectData.tell() + 62
  *             self.animations.write(objectData)
  *         if self.counter is not None:             # <<<<<<<<<<<<<<
@@ -31244,7 +31351,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1028
+  /* "mmfparser/data/chunkloaders/objects.pyx":1032
  *             counterOffset = objectData.tell() + 62
  *             self.counter.write(objectData)
  *         if self.extensionVersion is not None:             # <<<<<<<<<<<<<<
@@ -31255,7 +31362,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1029
+    /* "mmfparser/data/chunkloaders/objects.pyx":1033
  *             self.counter.write(objectData)
  *         if self.extensionVersion is not None:
  *             extensionOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31264,16 +31371,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_extensionOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1030
+    /* "mmfparser/data/chunkloaders/objects.pyx":1034
  *         if self.extensionVersion is not None:
  *             extensionOffset = objectData.tell() + 62
  *             objectData.writeInt(20 + len(self.extensionData or ''))             # <<<<<<<<<<<<<<
  *             objectData.writeInt(20 + len(self.extensionData or ''))
  *             objectData.writeInt(self.extensionVersion)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1030, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1034, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->extensionData); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1030, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->extensionData); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1034, __pyx_L1_error)
     if (!__pyx_t_2) {
     } else {
       __Pyx_INCREF(__pyx_v_self->extensionData);
@@ -31283,9 +31390,9 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __Pyx_INCREF(__pyx_kp_s__5);
     __pyx_t_5 = __pyx_kp_s__5;
     __pyx_L9_bool_binop_done:;
-    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1030, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1034, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyInt_FromSsize_t((20 + __pyx_t_6)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1030, __pyx_L1_error)
+    __pyx_t_5 = PyInt_FromSsize_t((20 + __pyx_t_6)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1034, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31300,21 +31407,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1030, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1034, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1031
+    /* "mmfparser/data/chunkloaders/objects.pyx":1035
  *             extensionOffset = objectData.tell() + 62
  *             objectData.writeInt(20 + len(self.extensionData or ''))
  *             objectData.writeInt(20 + len(self.extensionData or ''))             # <<<<<<<<<<<<<<
  *             objectData.writeInt(self.extensionVersion)
  *             objectData.writeInt(self.extensionId)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1031, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1035, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->extensionData); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1031, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->extensionData); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1035, __pyx_L1_error)
     if (!__pyx_t_2) {
     } else {
       __Pyx_INCREF(__pyx_v_self->extensionData);
@@ -31324,9 +31431,9 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __Pyx_INCREF(__pyx_kp_s__5);
     __pyx_t_5 = __pyx_kp_s__5;
     __pyx_L11_bool_binop_done:;
-    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1031, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(__pyx_t_5); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1035, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyInt_FromSsize_t((20 + __pyx_t_6)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1031, __pyx_L1_error)
+    __pyx_t_5 = PyInt_FromSsize_t((20 + __pyx_t_6)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1035, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31341,19 +31448,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1031, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1035, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1032
+    /* "mmfparser/data/chunkloaders/objects.pyx":1036
  *             objectData.writeInt(20 + len(self.extensionData or ''))
  *             objectData.writeInt(20 + len(self.extensionData or ''))
  *             objectData.writeInt(self.extensionVersion)             # <<<<<<<<<<<<<<
  *             objectData.writeInt(self.extensionId)
  *             objectData.writeInt(self.extensionPrivate)
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1032, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1036, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31367,19 +31474,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_self->extensionVersion) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_self->extensionVersion);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1032, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1036, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1033
+    /* "mmfparser/data/chunkloaders/objects.pyx":1037
  *             objectData.writeInt(20 + len(self.extensionData or ''))
  *             objectData.writeInt(self.extensionVersion)
  *             objectData.writeInt(self.extensionId)             # <<<<<<<<<<<<<<
  *             objectData.writeInt(self.extensionPrivate)
  *             objectData.write(self.extensionData or b'')
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1033, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1037, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31393,19 +31500,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_self->extensionId) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_self->extensionId);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1033, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1037, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1034
+    /* "mmfparser/data/chunkloaders/objects.pyx":1038
  *             objectData.writeInt(self.extensionVersion)
  *             objectData.writeInt(self.extensionId)
  *             objectData.writeInt(self.extensionPrivate)             # <<<<<<<<<<<<<<
  *             objectData.write(self.extensionData or b'')
  *         if self.fadeIn is not None:
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1034, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_objectData), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1038, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31419,22 +31526,22 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_self->extensionPrivate) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_self->extensionPrivate);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1034, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1038, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1035
+    /* "mmfparser/data/chunkloaders/objects.pyx":1039
  *             objectData.writeInt(self.extensionId)
  *             objectData.writeInt(self.extensionPrivate)
  *             objectData.write(self.extensionData or b'')             # <<<<<<<<<<<<<<
  *         if self.fadeIn is not None:
  *             fadeInOffset = objectData.tell() + 62
  */
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->extensionData); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1035, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_self->extensionData); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1039, __pyx_L1_error)
     if (!__pyx_t_2) {
     } else {
-      if (!(likely(PyBytes_CheckExact(__pyx_v_self->extensionData))||((__pyx_v_self->extensionData) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_self->extensionData)->tp_name), 0))) __PYX_ERR(0, 1035, __pyx_L1_error)
+      if (!(likely(PyBytes_CheckExact(__pyx_v_self->extensionData))||((__pyx_v_self->extensionData) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "bytes", Py_TYPE(__pyx_v_self->extensionData)->tp_name), 0))) __PYX_ERR(0, 1039, __pyx_L1_error)
       __Pyx_INCREF(__pyx_v_self->extensionData);
       __pyx_t_1 = __pyx_v_self->extensionData;
       goto __pyx_L13_bool_binop_done;
@@ -31445,7 +31552,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     (void)(((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->write(__pyx_v_objectData, ((PyObject*)__pyx_t_1), 0));
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1028
+    /* "mmfparser/data/chunkloaders/objects.pyx":1032
  *             counterOffset = objectData.tell() + 62
  *             self.counter.write(objectData)
  *         if self.extensionVersion is not None:             # <<<<<<<<<<<<<<
@@ -31454,7 +31561,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1036
+  /* "mmfparser/data/chunkloaders/objects.pyx":1040
  *             objectData.writeInt(self.extensionPrivate)
  *             objectData.write(self.extensionData or b'')
  *         if self.fadeIn is not None:             # <<<<<<<<<<<<<<
@@ -31465,7 +31572,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1037
+    /* "mmfparser/data/chunkloaders/objects.pyx":1041
  *             objectData.write(self.extensionData or b'')
  *         if self.fadeIn is not None:
  *             fadeInOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31474,14 +31581,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_fadeInOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1038
+    /* "mmfparser/data/chunkloaders/objects.pyx":1042
  *         if self.fadeIn is not None:
  *             fadeInOffset = objectData.tell() + 62
  *             self.fadeIn.write(objectData)             # <<<<<<<<<<<<<<
  *         if self.fadeOut is not None:
  *             fadeOutOffset = objectData.tell() + 62
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->fadeIn, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1038, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->fadeIn, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1042, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31495,12 +31602,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1038, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1042, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1036
+    /* "mmfparser/data/chunkloaders/objects.pyx":1040
  *             objectData.writeInt(self.extensionPrivate)
  *             objectData.write(self.extensionData or b'')
  *         if self.fadeIn is not None:             # <<<<<<<<<<<<<<
@@ -31509,7 +31616,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1039
+  /* "mmfparser/data/chunkloaders/objects.pyx":1043
  *             fadeInOffset = objectData.tell() + 62
  *             self.fadeIn.write(objectData)
  *         if self.fadeOut is not None:             # <<<<<<<<<<<<<<
@@ -31520,7 +31627,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1040
+    /* "mmfparser/data/chunkloaders/objects.pyx":1044
  *             self.fadeIn.write(objectData)
  *         if self.fadeOut is not None:
  *             fadeOutOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31529,14 +31636,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_fadeOutOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1041
+    /* "mmfparser/data/chunkloaders/objects.pyx":1045
  *         if self.fadeOut is not None:
  *             fadeOutOffset = objectData.tell() + 62
  *             self.fadeOut.write(objectData)             # <<<<<<<<<<<<<<
  *         objectType = self.parent.objectType
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->fadeOut, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1041, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->fadeOut, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1045, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31550,12 +31657,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1041, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1045, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1039
+    /* "mmfparser/data/chunkloaders/objects.pyx":1043
  *             fadeInOffset = objectData.tell() + 62
  *             self.fadeIn.write(objectData)
  *         if self.fadeOut is not None:             # <<<<<<<<<<<<<<
@@ -31564,19 +31671,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1042
+  /* "mmfparser/data/chunkloaders/objects.pyx":1046
  *             fadeOutOffset = objectData.tell() + 62
  *             self.fadeOut.write(objectData)
  *         objectType = self.parent.objectType             # <<<<<<<<<<<<<<
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,
  *                         SUBAPPLICATION):
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.parent), __pyx_n_s_objectType); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1042, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.parent), __pyx_n_s_objectType); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_objectType = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1043
+  /* "mmfparser/data/chunkloaders/objects.pyx":1047
  *             self.fadeOut.write(objectData)
  *         objectType = self.parent.objectType
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,             # <<<<<<<<<<<<<<
@@ -31585,66 +31692,66 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   __Pyx_INCREF(__pyx_v_objectType);
   __pyx_t_1 = __pyx_v_objectType;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_TEXT); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_TEXT); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_2 = __pyx_t_3;
     goto __pyx_L18_bool_binop_done;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_QUESTION); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_QUESTION); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_2 = __pyx_t_3;
     goto __pyx_L18_bool_binop_done;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SCORE); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SCORE); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_2 = __pyx_t_3;
     goto __pyx_L18_bool_binop_done;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_LIVES); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_LIVES); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_2 = __pyx_t_3;
     goto __pyx_L18_bool_binop_done;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_COUNTER); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_COUNTER); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (!__pyx_t_3) {
   } else {
     __pyx_t_2 = __pyx_t_3;
     goto __pyx_L18_bool_binop_done;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_RTF); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_RTF); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (!__pyx_t_3) {
   } else {
@@ -31652,26 +31759,26 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     goto __pyx_L18_bool_binop_done;
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1044
+  /* "mmfparser/data/chunkloaders/objects.pyx":1048
  *         objectType = self.parent.objectType
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,
  *                         SUBAPPLICATION):             # <<<<<<<<<<<<<<
  *             systemObjectOffset = objectData.tell() + 62
  *             if objectType in (TEXT, QUESTION):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SUBAPPLICATION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1044, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SUBAPPLICATION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1048, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1043
+  /* "mmfparser/data/chunkloaders/objects.pyx":1047
  *             self.fadeOut.write(objectData)
  *         objectType = self.parent.objectType
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,             # <<<<<<<<<<<<<<
  *                         SUBAPPLICATION):
  *             systemObjectOffset = objectData.tell() + 62
  */
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1043, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_2 = __pyx_t_3;
   __pyx_L18_bool_binop_done:;
@@ -31679,7 +31786,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1045
+    /* "mmfparser/data/chunkloaders/objects.pyx":1049
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,
  *                         SUBAPPLICATION):
  *             systemObjectOffset = objectData.tell() + 62             # <<<<<<<<<<<<<<
@@ -31688,7 +31795,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __pyx_v_systemObjectOffset = (((struct __pyx_vtabstruct_9mmfparser_10bytereader_ByteReader *)__pyx_v_objectData->__pyx_vtab)->tell(__pyx_v_objectData, 0) + 62);
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1046
+    /* "mmfparser/data/chunkloaders/objects.pyx":1050
  *                         SUBAPPLICATION):
  *             systemObjectOffset = objectData.tell() + 62
  *             if objectType in (TEXT, QUESTION):             # <<<<<<<<<<<<<<
@@ -31697,22 +31804,22 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __Pyx_INCREF(__pyx_v_objectType);
     __pyx_t_1 = __pyx_v_objectType;
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_TEXT); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1046, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_TEXT); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1046, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1046, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (!__pyx_t_2) {
     } else {
       __pyx_t_3 = __pyx_t_2;
       goto __pyx_L26_bool_binop_done;
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_QUESTION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1046, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_QUESTION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1046, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1046, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1050, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_3 = __pyx_t_2;
     __pyx_L26_bool_binop_done:;
@@ -31720,14 +31827,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __pyx_t_2 = (__pyx_t_3 != 0);
     if (__pyx_t_2) {
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1047
+      /* "mmfparser/data/chunkloaders/objects.pyx":1051
  *             systemObjectOffset = objectData.tell() + 62
  *             if objectType in (TEXT, QUESTION):
  *                 self.text.write(objectData)             # <<<<<<<<<<<<<<
  *             elif objectType in (SCORE, LIVES, COUNTER):
  *                 self.counters.write(objectData)
  */
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->text, __pyx_n_s_write); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1047, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->text, __pyx_n_s_write); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1051, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -31741,12 +31848,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       }
       __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_5, ((PyObject *)__pyx_v_objectData));
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1047, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1051, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1046
+      /* "mmfparser/data/chunkloaders/objects.pyx":1050
  *                         SUBAPPLICATION):
  *             systemObjectOffset = objectData.tell() + 62
  *             if objectType in (TEXT, QUESTION):             # <<<<<<<<<<<<<<
@@ -31756,7 +31863,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       goto __pyx_L25;
     }
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1048
+    /* "mmfparser/data/chunkloaders/objects.pyx":1052
  *             if objectType in (TEXT, QUESTION):
  *                 self.text.write(objectData)
  *             elif objectType in (SCORE, LIVES, COUNTER):             # <<<<<<<<<<<<<<
@@ -31765,33 +31872,33 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
     __Pyx_INCREF(__pyx_v_objectType);
     __pyx_t_1 = __pyx_v_objectType;
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_SCORE); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_SCORE); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (!__pyx_t_3) {
     } else {
       __pyx_t_2 = __pyx_t_3;
       goto __pyx_L28_bool_binop_done;
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LIVES); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LIVES); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (!__pyx_t_3) {
     } else {
       __pyx_t_2 = __pyx_t_3;
       goto __pyx_L28_bool_binop_done;
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_COUNTER); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_COUNTER); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_t_5, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1048, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1052, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_2 = __pyx_t_3;
     __pyx_L28_bool_binop_done:;
@@ -31799,116 +31906,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __pyx_t_3 = (__pyx_t_2 != 0);
     if (__pyx_t_3) {
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1049
+      /* "mmfparser/data/chunkloaders/objects.pyx":1053
  *                 self.text.write(objectData)
  *             elif objectType in (SCORE, LIVES, COUNTER):
  *                 self.counters.write(objectData)             # <<<<<<<<<<<<<<
  *             elif objectType == RTF:
  *                 self.rtf.write(objectData)
  */
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->counters, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1049, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = NULL;
-      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
-        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-        if (likely(__pyx_t_5)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-          __Pyx_INCREF(__pyx_t_5);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_4, function);
-        }
-      }
-      __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
-      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1049, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-      /* "mmfparser/data/chunkloaders/objects.pyx":1048
- *             if objectType in (TEXT, QUESTION):
- *                 self.text.write(objectData)
- *             elif objectType in (SCORE, LIVES, COUNTER):             # <<<<<<<<<<<<<<
- *                 self.counters.write(objectData)
- *             elif objectType == RTF:
- */
-      goto __pyx_L25;
-    }
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":1050
- *             elif objectType in (SCORE, LIVES, COUNTER):
- *                 self.counters.write(objectData)
- *             elif objectType == RTF:             # <<<<<<<<<<<<<<
- *                 self.rtf.write(objectData)
- *             elif objectType == SUBAPPLICATION:
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_RTF); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1050, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1050, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1050, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__pyx_t_3) {
-
-      /* "mmfparser/data/chunkloaders/objects.pyx":1051
- *                 self.counters.write(objectData)
- *             elif objectType == RTF:
- *                 self.rtf.write(objectData)             # <<<<<<<<<<<<<<
- *             elif objectType == SUBAPPLICATION:
- *                 self.subApplication.write(objectData)
- */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->rtf, __pyx_n_s_write); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1051, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_5 = NULL;
-      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
-        if (likely(__pyx_t_5)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-          __Pyx_INCREF(__pyx_t_5);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_1, function);
-        }
-      }
-      __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_objectData));
-      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1051, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-
-      /* "mmfparser/data/chunkloaders/objects.pyx":1050
- *             elif objectType in (SCORE, LIVES, COUNTER):
- *                 self.counters.write(objectData)
- *             elif objectType == RTF:             # <<<<<<<<<<<<<<
- *                 self.rtf.write(objectData)
- *             elif objectType == SUBAPPLICATION:
- */
-      goto __pyx_L25;
-    }
-
-    /* "mmfparser/data/chunkloaders/objects.pyx":1052
- *             elif objectType == RTF:
- *                 self.rtf.write(objectData)
- *             elif objectType == SUBAPPLICATION:             # <<<<<<<<<<<<<<
- *                 self.subApplication.write(objectData)
- * 
- */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SUBAPPLICATION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1052, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1052, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1052, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (__pyx_t_3) {
-
-      /* "mmfparser/data/chunkloaders/objects.pyx":1053
- *                 self.rtf.write(objectData)
- *             elif objectType == SUBAPPLICATION:
- *                 self.subApplication.write(objectData)             # <<<<<<<<<<<<<<
- * 
- *         reader.writeInt(len(objectData) + 62) # size
- */
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->subApplication, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->counters, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1053, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_5 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -31928,6 +31933,108 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
       /* "mmfparser/data/chunkloaders/objects.pyx":1052
+ *             if objectType in (TEXT, QUESTION):
+ *                 self.text.write(objectData)
+ *             elif objectType in (SCORE, LIVES, COUNTER):             # <<<<<<<<<<<<<<
+ *                 self.counters.write(objectData)
+ *             elif objectType == RTF:
+ */
+      goto __pyx_L25;
+    }
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1054
+ *             elif objectType in (SCORE, LIVES, COUNTER):
+ *                 self.counters.write(objectData)
+ *             elif objectType == RTF:             # <<<<<<<<<<<<<<
+ *                 self.rtf.write(objectData)
+ *             elif objectType == SUBAPPLICATION:
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_RTF); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1054, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_4 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1054, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1054, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (__pyx_t_3) {
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":1055
+ *                 self.counters.write(objectData)
+ *             elif objectType == RTF:
+ *                 self.rtf.write(objectData)             # <<<<<<<<<<<<<<
+ *             elif objectType == SUBAPPLICATION:
+ *                 self.subApplication.write(objectData)
+ */
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->rtf, __pyx_n_s_write); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1055, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_5 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
+        if (likely(__pyx_t_5)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+          __Pyx_INCREF(__pyx_t_5);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_1, function);
+        }
+      }
+      __pyx_t_4 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_1, ((PyObject *)__pyx_v_objectData));
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1055, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":1054
+ *             elif objectType in (SCORE, LIVES, COUNTER):
+ *                 self.counters.write(objectData)
+ *             elif objectType == RTF:             # <<<<<<<<<<<<<<
+ *                 self.rtf.write(objectData)
+ *             elif objectType == SUBAPPLICATION:
+ */
+      goto __pyx_L25;
+    }
+
+    /* "mmfparser/data/chunkloaders/objects.pyx":1056
+ *             elif objectType == RTF:
+ *                 self.rtf.write(objectData)
+ *             elif objectType == SUBAPPLICATION:             # <<<<<<<<<<<<<<
+ *                 self.subApplication.write(objectData)
+ * 
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_SUBAPPLICATION); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1056, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_1 = PyObject_RichCompare(__pyx_v_objectType, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1056, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1056, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (__pyx_t_3) {
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":1057
+ *                 self.rtf.write(objectData)
+ *             elif objectType == SUBAPPLICATION:
+ *                 self.subApplication.write(objectData)             # <<<<<<<<<<<<<<
+ * 
+ *         reader.writeInt(len(objectData) + 62) # size
+ */
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->subApplication, __pyx_n_s_write); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1057, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_5 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+        if (likely(__pyx_t_5)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          __Pyx_INCREF(__pyx_t_5);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_4, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1057, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "mmfparser/data/chunkloaders/objects.pyx":1056
  *             elif objectType == RTF:
  *                 self.rtf.write(objectData)
  *             elif objectType == SUBAPPLICATION:             # <<<<<<<<<<<<<<
@@ -31937,7 +32044,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
     __pyx_L25:;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1043
+    /* "mmfparser/data/chunkloaders/objects.pyx":1047
  *             self.fadeOut.write(objectData)
  *         objectType = self.parent.objectType
  *         if objectType in (TEXT, QUESTION, SCORE, LIVES, COUNTER, RTF,             # <<<<<<<<<<<<<<
@@ -31946,133 +32053,17 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  */
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1055
+  /* "mmfparser/data/chunkloaders/objects.pyx":1059
  *                 self.subApplication.write(objectData)
  * 
  *         reader.writeInt(len(objectData) + 62) # size             # <<<<<<<<<<<<<<
  *         reader.writeShort(movementsOffset)
  *         reader.writeShort(animationsOffset)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1055, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1059, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_objectData)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1055, __pyx_L1_error)
-  __pyx_t_5 = PyInt_FromSsize_t((__pyx_t_6 + 62)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1055, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_7)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_7);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1055, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":1056
- * 
- *         reader.writeInt(len(objectData) + 62) # size
- *         reader.writeShort(movementsOffset)             # <<<<<<<<<<<<<<
- *         reader.writeShort(animationsOffset)
- *         reader.writeShort(self.version)
- */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1056, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_movementsOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1056, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_7)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_7);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1056, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":1057
- *         reader.writeInt(len(objectData) + 62) # size
- *         reader.writeShort(movementsOffset)
- *         reader.writeShort(animationsOffset)             # <<<<<<<<<<<<<<
- *         reader.writeShort(self.version)
- *         reader.writeShort(counterOffset)
- */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1057, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_animationsOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1057, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_7)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_7);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1057, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":1058
- *         reader.writeShort(movementsOffset)
- *         reader.writeShort(animationsOffset)
- *         reader.writeShort(self.version)             # <<<<<<<<<<<<<<
- *         reader.writeShort(counterOffset)
- *         reader.writeShort(systemObjectOffset)
- */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1058, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->version); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1058, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_7)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_7);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1058, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "mmfparser/data/chunkloaders/objects.pyx":1059
- *         reader.writeShort(animationsOffset)
- *         reader.writeShort(self.version)
- *         reader.writeShort(counterOffset)             # <<<<<<<<<<<<<<
- *         reader.writeShort(systemObjectOffset)
- *         reader.writeShort(0)
- */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1059, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_counterOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1059, __pyx_L1_error)
+  __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_objectData)); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1059, __pyx_L1_error)
+  __pyx_t_5 = PyInt_FromSsize_t((__pyx_t_6 + 62)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1059, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32093,15 +32084,15 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "mmfparser/data/chunkloaders/objects.pyx":1060
+ * 
+ *         reader.writeInt(len(objectData) + 62) # size
+ *         reader.writeShort(movementsOffset)             # <<<<<<<<<<<<<<
+ *         reader.writeShort(animationsOffset)
  *         reader.writeShort(self.version)
- *         reader.writeShort(counterOffset)
- *         reader.writeShort(systemObjectOffset)             # <<<<<<<<<<<<<<
- *         reader.writeShort(0)
- *         reader.writeInt(self.flags.getFlags(), True)
  */
   __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1060, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_systemObjectOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1060, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_movementsOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1060, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32122,13 +32113,129 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "mmfparser/data/chunkloaders/objects.pyx":1061
+ *         reader.writeInt(len(objectData) + 62) # size
+ *         reader.writeShort(movementsOffset)
+ *         reader.writeShort(animationsOffset)             # <<<<<<<<<<<<<<
+ *         reader.writeShort(self.version)
+ *         reader.writeShort(counterOffset)
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1061, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_animationsOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1061, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1061, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":1062
+ *         reader.writeShort(movementsOffset)
+ *         reader.writeShort(animationsOffset)
+ *         reader.writeShort(self.version)             # <<<<<<<<<<<<<<
+ *         reader.writeShort(counterOffset)
+ *         reader.writeShort(systemObjectOffset)
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1062, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->version); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1062, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1062, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":1063
+ *         reader.writeShort(animationsOffset)
+ *         reader.writeShort(self.version)
+ *         reader.writeShort(counterOffset)             # <<<<<<<<<<<<<<
+ *         reader.writeShort(systemObjectOffset)
+ *         reader.writeShort(0)
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1063, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_counterOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1063, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1063, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":1064
+ *         reader.writeShort(self.version)
+ *         reader.writeShort(counterOffset)
+ *         reader.writeShort(systemObjectOffset)             # <<<<<<<<<<<<<<
+ *         reader.writeShort(0)
+ *         reader.writeInt(self.flags.getFlags(), True)
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1064, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_systemObjectOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1064, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_7 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_7)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_7);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1064, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "mmfparser/data/chunkloaders/objects.pyx":1065
  *         reader.writeShort(counterOffset)
  *         reader.writeShort(systemObjectOffset)
  *         reader.writeShort(0)             # <<<<<<<<<<<<<<
  *         reader.writeInt(self.flags.getFlags(), True)
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1061, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1065, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32142,21 +32249,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   }
   __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_int_0) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_int_0);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1061, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1065, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1062
+  /* "mmfparser/data/chunkloaders/objects.pyx":1066
  *         reader.writeShort(systemObjectOffset)
  *         reader.writeShort(0)
  *         reader.writeInt(self.flags.getFlags(), True)             # <<<<<<<<<<<<<<
  * 
  *         for i in xrange(8):
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1062, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1066, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1062, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->flags, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1066, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_t_8 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -32170,7 +32277,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   }
   __pyx_t_5 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1062, __pyx_L1_error)
+  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1066, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -32188,7 +32295,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_t_5, Py_True};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1062, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1066, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -32197,14 +32304,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_t_5, Py_True};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1062, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1066, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1062, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1066, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_7) {
       __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -32215,14 +32322,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_9, Py_True);
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1062, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1066, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1064
+  /* "mmfparser/data/chunkloaders/objects.pyx":1068
  *         reader.writeInt(self.flags.getFlags(), True)
  * 
  *         for i in xrange(8):             # <<<<<<<<<<<<<<
@@ -32232,7 +32339,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   for (__pyx_t_10 = 0; __pyx_t_10 < 8; __pyx_t_10+=1) {
     __pyx_v_i = __pyx_t_10;
 
-    /* "mmfparser/data/chunkloaders/objects.pyx":1065
+    /* "mmfparser/data/chunkloaders/objects.pyx":1069
  * 
  *         for i in xrange(8):
  *             try:             # <<<<<<<<<<<<<<
@@ -32248,20 +32355,20 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       __Pyx_XGOTREF(__pyx_t_13);
       /*try:*/ {
 
-        /* "mmfparser/data/chunkloaders/objects.pyx":1066
+        /* "mmfparser/data/chunkloaders/objects.pyx":1070
  *         for i in xrange(8):
  *             try:
  *                 reader.writeShort(self.qualifiers[i])             # <<<<<<<<<<<<<<
  *             except IndexError:
  *                 reader.writeShort(-1)
  */
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1066, __pyx_L33_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1070, __pyx_L33_error)
         __Pyx_GOTREF(__pyx_t_4);
         if (unlikely(__pyx_v_self->qualifiers == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 1066, __pyx_L33_error)
+          __PYX_ERR(0, 1070, __pyx_L33_error)
         }
-        __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_self->qualifiers, __pyx_v_i, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1066, __pyx_L33_error)
+        __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_self->qualifiers, __pyx_v_i, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1070, __pyx_L33_error)
         __Pyx_GOTREF(__pyx_t_8);
         __pyx_t_5 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32276,12 +32383,12 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
         __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8);
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1066, __pyx_L33_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1070, __pyx_L33_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "mmfparser/data/chunkloaders/objects.pyx":1065
+        /* "mmfparser/data/chunkloaders/objects.pyx":1069
  * 
  *         for i in xrange(8):
  *             try:             # <<<<<<<<<<<<<<
@@ -32300,7 +32407,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1067
+      /* "mmfparser/data/chunkloaders/objects.pyx":1071
  *             try:
  *                 reader.writeShort(self.qualifiers[i])
  *             except IndexError:             # <<<<<<<<<<<<<<
@@ -32310,19 +32417,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       __pyx_t_9 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_IndexError);
       if (__pyx_t_9) {
         __Pyx_AddTraceback("mmfparser.data.chunkloaders.objects.ObjectCommon.write", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_4, &__pyx_t_8) < 0) __PYX_ERR(0, 1067, __pyx_L35_except_error)
+        if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_4, &__pyx_t_8) < 0) __PYX_ERR(0, 1071, __pyx_L35_except_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_8);
 
-        /* "mmfparser/data/chunkloaders/objects.pyx":1068
+        /* "mmfparser/data/chunkloaders/objects.pyx":1072
  *                 reader.writeShort(self.qualifiers[i])
  *             except IndexError:
  *                 reader.writeShort(-1)             # <<<<<<<<<<<<<<
  *         reader.writeShort(extensionOffset)
  *         reader.writeShort(valuesOffset)
  */
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1068, __pyx_L35_except_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1072, __pyx_L35_except_error)
         __Pyx_GOTREF(__pyx_t_7);
         __pyx_t_14 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -32336,7 +32443,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
         }
         __pyx_t_5 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_14, __pyx_int_neg_1) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_int_neg_1);
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1068, __pyx_L35_except_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1072, __pyx_L35_except_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -32348,7 +32455,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
       goto __pyx_L35_except_error;
       __pyx_L35_except_error:;
 
-      /* "mmfparser/data/chunkloaders/objects.pyx":1065
+      /* "mmfparser/data/chunkloaders/objects.pyx":1069
  * 
  *         for i in xrange(8):
  *             try:             # <<<<<<<<<<<<<<
@@ -32369,16 +32476,16 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     }
   }
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1069
+  /* "mmfparser/data/chunkloaders/objects.pyx":1073
  *             except IndexError:
  *                 reader.writeShort(-1)
  *         reader.writeShort(extensionOffset)             # <<<<<<<<<<<<<<
  *         reader.writeShort(valuesOffset)
  *         reader.writeShort(stringsOffset)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1069, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1073, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_extensionOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1069, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_extensionOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1073, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32393,21 +32500,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_8 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1069, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1073, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1070
+  /* "mmfparser/data/chunkloaders/objects.pyx":1074
  *                 reader.writeShort(-1)
  *         reader.writeShort(extensionOffset)
  *         reader.writeShort(valuesOffset)             # <<<<<<<<<<<<<<
  *         reader.writeShort(stringsOffset)
  *         reader.writeShort(self.newFlags.getFlags(), True)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1070, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1074, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_valuesOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1070, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_valuesOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1074, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32422,21 +32529,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_8 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1070, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1074, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1071
+  /* "mmfparser/data/chunkloaders/objects.pyx":1075
  *         reader.writeShort(extensionOffset)
  *         reader.writeShort(valuesOffset)
  *         reader.writeShort(stringsOffset)             # <<<<<<<<<<<<<<
  *         reader.writeShort(self.newFlags.getFlags(), True)
  *         reader.writeShort(self.preferences.getFlags(), True)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1071, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1075, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_stringsOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1071, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_stringsOffset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1075, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32451,21 +32558,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_8 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1071, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1075, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1072
+  /* "mmfparser/data/chunkloaders/objects.pyx":1076
  *         reader.writeShort(valuesOffset)
  *         reader.writeShort(stringsOffset)
  *         reader.writeShort(self.newFlags.getFlags(), True)             # <<<<<<<<<<<<<<
  *         reader.writeShort(self.preferences.getFlags(), True)
  *         reader.writeInt(self.identifier)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1072, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1076, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->newFlags, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1072, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->newFlags, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1076, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -32479,7 +32586,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   }
   __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1072, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1076, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -32497,7 +32604,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_1, Py_True};
-    __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1072, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1076, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -32506,14 +32613,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_1, Py_True};
-    __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1072, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1076, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1072, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1076, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -32524,23 +32631,23 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_9, Py_True);
     __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1072, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1076, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1073
+  /* "mmfparser/data/chunkloaders/objects.pyx":1077
  *         reader.writeShort(stringsOffset)
  *         reader.writeShort(self.newFlags.getFlags(), True)
  *         reader.writeShort(self.preferences.getFlags(), True)             # <<<<<<<<<<<<<<
  *         reader.writeInt(self.identifier)
  *         reader.writeColor(self.backColour)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1073, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeShort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1077, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->preferences, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1073, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self->preferences, __pyx_n_s_getFlags); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1077, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -32554,7 +32661,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   }
   __pyx_t_7 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1073, __pyx_L1_error)
+  if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1077, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -32572,7 +32679,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_t_7, Py_True};
-    __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1073, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1077, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -32581,14 +32688,14 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_t_7, Py_True};
-    __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1073, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1077, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1073, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1077, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -32599,23 +32706,23 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __Pyx_GIVEREF(Py_True);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_9, Py_True);
     __pyx_t_7 = 0;
-    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1073, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1077, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1074
+  /* "mmfparser/data/chunkloaders/objects.pyx":1078
  *         reader.writeShort(self.newFlags.getFlags(), True)
  *         reader.writeShort(self.preferences.getFlags(), True)
  *         reader.writeInt(self.identifier)             # <<<<<<<<<<<<<<
  *         reader.writeColor(self.backColour)
  *         reader.writeInt(fadeInOffset)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1074, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1078, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->identifier); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1074, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_self->identifier); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1078, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32630,19 +32737,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_8 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1074, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1078, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1075
+  /* "mmfparser/data/chunkloaders/objects.pyx":1079
  *         reader.writeShort(self.preferences.getFlags(), True)
  *         reader.writeInt(self.identifier)
  *         reader.writeColor(self.backColour)             # <<<<<<<<<<<<<<
  *         reader.writeInt(fadeInOffset)
  *         reader.writeInt(fadeOutOffset)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeColor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1075, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeColor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1079, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32656,21 +32763,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   }
   __pyx_t_8 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_self->backColour) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_self->backColour);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1075, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1079, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1076
+  /* "mmfparser/data/chunkloaders/objects.pyx":1080
  *         reader.writeInt(self.identifier)
  *         reader.writeColor(self.backColour)
  *         reader.writeInt(fadeInOffset)             # <<<<<<<<<<<<<<
  *         reader.writeInt(fadeOutOffset)
  *         reader.writeReader(objectData)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1076, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1080, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_fadeInOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1076, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_fadeInOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1080, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32685,21 +32792,21 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_8 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1076, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1080, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1077
+  /* "mmfparser/data/chunkloaders/objects.pyx":1081
  *         reader.writeColor(self.backColour)
  *         reader.writeInt(fadeInOffset)
  *         reader.writeInt(fadeOutOffset)             # <<<<<<<<<<<<<<
  *         reader.writeReader(objectData)
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1077, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeInt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1081, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_fadeOutOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1077, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long(__pyx_v_fadeOutOffset); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1081, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_7 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32714,19 +32821,19 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_8 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1077, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1081, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1078
+  /* "mmfparser/data/chunkloaders/objects.pyx":1082
  *         reader.writeInt(fadeInOffset)
  *         reader.writeInt(fadeOutOffset)
  *         reader.writeReader(objectData)             # <<<<<<<<<<<<<<
  * 
  *     def isBackground(self):
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeReader); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1078, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_reader), __pyx_n_s_writeReader); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1082, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -32740,13 +32847,13 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   }
   __pyx_t_8 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, ((PyObject *)__pyx_v_objectData)) : __Pyx_PyObject_CallOneArg(__pyx_t_4, ((PyObject *)__pyx_v_objectData));
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1078, __pyx_L1_error)
+  if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1082, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1007
- *                 self.subApplication = self.new(SubApplication, reader)
+  /* "mmfparser/data/chunkloaders/objects.pyx":1011
+ *             self.fadeOut = self.new(FadeOut, decompressedReader)
  * 
  *     def write(self, ByteReader reader):             # <<<<<<<<<<<<<<
  *         movementsOffset = animationsOffset = counterOffset = \
@@ -32773,7 +32880,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   return __pyx_r;
 }
 
-/* "mmfparser/data/chunkloaders/objects.pyx":1080
+/* "mmfparser/data/chunkloaders/objects.pyx":1084
  *         reader.writeReader(objectData)
  * 
  *     def isBackground(self):             # <<<<<<<<<<<<<<
@@ -32805,7 +32912,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("isBackground", 0);
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1081
+  /* "mmfparser/data/chunkloaders/objects.pyx":1085
  * 
  *     def isBackground(self):
  *         return self.flags['QuickDisplay'] or self.flags['Background']             # <<<<<<<<<<<<<<
@@ -32813,9 +32920,9 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
  * __all__ = ['AlterableValues', 'AlterableStrings', 'Backdrop', 'QuickBackdrop',
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_QuickDisplay); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1081, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_QuickDisplay); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1085, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1081, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 1085, __pyx_L1_error)
   if (!__pyx_t_3) {
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   } else {
@@ -32824,7 +32931,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     goto __pyx_L3_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_Background); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1081, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_v_self->flags, __pyx_n_s_Background); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1085, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_t_2);
   __pyx_t_1 = __pyx_t_2;
@@ -32834,7 +32941,7 @@ static PyObject *__pyx_pf_9mmfparser_4data_12chunkloaders_7objects_12ObjectCommo
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1080
+  /* "mmfparser/data/chunkloaders/objects.pyx":1084
  *         reader.writeReader(objectData)
  * 
  *     def isBackground(self):             # <<<<<<<<<<<<<<
@@ -47080,7 +47187,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_new, __pyx_k_new, sizeof(__pyx_k_new), 0, 0, 1, 1},
   {&__pyx_n_s_new_2, __pyx_k_new_2, sizeof(__pyx_k_new_2), 0, 0, 1, 1},
   {&__pyx_kp_s_no_animation_could_be_found_for, __pyx_k_no_animation_could_be_found_for, sizeof(__pyx_k_no_animation_could_be_found_for), 0, 0, 1, 0},
-  {&__pyx_n_s_null, __pyx_k_null, sizeof(__pyx_k_null), 0, 0, 1, 1},
   {&__pyx_n_s_object, __pyx_k_object, sizeof(__pyx_k_object), 0, 0, 1, 1},
   {&__pyx_n_s_objectType, __pyx_k_objectType, sizeof(__pyx_k_objectType), 0, 0, 1, 1},
   {&__pyx_n_s_obstacleType, __pyx_k_obstacleType, sizeof(__pyx_k_obstacleType), 0, 0, 1, 1},
@@ -47119,6 +47225,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_setFlags, __pyx_k_setFlags, sizeof(__pyx_k_setFlags), 0, 0, 1, 1},
   {&__pyx_n_s_setstate, __pyx_k_setstate, sizeof(__pyx_k_setstate), 0, 0, 1, 1},
   {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
+  {&__pyx_n_s_skip, __pyx_k_skip, sizeof(__pyx_k_skip), 0, 0, 1, 1},
   {&__pyx_n_s_skipByte, __pyx_k_skipByte, sizeof(__pyx_k_skipByte), 0, 0, 1, 1},
   {&__pyx_kp_s_stringsource, __pyx_k_stringsource, sizeof(__pyx_k_stringsource), 0, 0, 1, 0},
   {&__pyx_n_s_sys, __pyx_k_sys, sizeof(__pyx_k_sys), 0, 0, 1, 1},
@@ -47176,7 +47283,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *             fadeOutOffset = decompressedReader.readInt()
  *             log("Finished parsing 2.5+ specific decompressed bytes!", 1)             # <<<<<<<<<<<<<<
  * 
- *         if movementsOffset != 0:
+ *         deccurpos = 4
  */
   __pyx_tuple__4 = PyTuple_Pack(2, __pyx_kp_s_Finished_parsing_2_5_specific_de, __pyx_int_1); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 953, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
@@ -47419,7 +47526,6 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_11 = PyInt_FromLong(11); if (unlikely(!__pyx_int_11)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_12 = PyInt_FromLong(12); if (unlikely(!__pyx_int_12)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_20 = PyInt_FromLong(20); if (unlikely(!__pyx_int_20)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_284 = PyInt_FromLong(284); if (unlikely(!__pyx_int_284)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_4552 = PyInt_FromLong(4552); if (unlikely(!__pyx_int_4552)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_2615892 = PyInt_FromLong(2615892L); if (unlikely(!__pyx_int_2615892)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -49404,13 +49510,13 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_OBJECT_PREFERENCES, __pyx_t_6) < 0) __PYX_ERR(0, 822, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "mmfparser/data/chunkloaders/objects.pyx":1083
+  /* "mmfparser/data/chunkloaders/objects.pyx":1087
  *         return self.flags['QuickDisplay'] or self.flags['Background']
  * 
  * __all__ = ['AlterableValues', 'AlterableStrings', 'Backdrop', 'QuickBackdrop',             # <<<<<<<<<<<<<<
  *     'AnimationDirection', 'Animation', 'AnimationHeader', 'ObjectCommon']
  */
-  __pyx_t_6 = PyList_New(8); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1083, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(8); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1087, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(__pyx_n_s_AlterableValues);
   __Pyx_GIVEREF(__pyx_n_s_AlterableValues);
@@ -49436,7 +49542,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_ObjectCommon);
   __Pyx_GIVEREF(__pyx_n_s_ObjectCommon);
   PyList_SET_ITEM(__pyx_t_6, 7, __pyx_n_s_ObjectCommon);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_6) < 0) __PYX_ERR(0, 1083, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_all, __pyx_t_6) < 0) __PYX_ERR(0, 1087, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
   /* "(tree fragment)":1
@@ -51268,6 +51374,11 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_EqObjC(PyObject *op1, PyObject *op2, 
     }
     return (
         PyObject_RichCompare(op1, op2, Py_EQ));
+}
+
+/* None */
+static CYTHON_INLINE void __Pyx_RaiseUnboundLocalError(const char *varname) {
+    PyErr_Format(PyExc_UnboundLocalError, "local variable '%s' referenced before assignment", varname);
 }
 
 /* Import */
