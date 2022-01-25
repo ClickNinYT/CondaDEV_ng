@@ -24,16 +24,15 @@ class ObjectHeaders(DataLoader, _ObjectTypeMixin):
         self.current = 0
         while reader.tell() < self.end:
             try:
-               self.prop = all.ObjectHeader(reader)
-               log("Reading object headers...", 1)
-               self.prop.read(reader)
-               self.chunkSize = reader.readInt()
-               self.headers_count = self.current
-               log(str(self.headers_count), 1)
-               log(str(self.headers), 1)
-               self.current += 1
+                self.prop = all.ObjectHeader(reader)
+                #log("Reading object headers...", 1)
+                self.prop.read(reader)
+                self.chunkSize = reader.readInt()
+                self.headers_count = self.current
+                #log(str(self.headers_count), 1)
+                #log(str(self.headers), 1)
+                self.current += 1
             except:
-                log("Warning: Skipped header reading!", 3)
                 pass
     
     def write(self, reader):
@@ -57,14 +56,14 @@ class ObjectPropertyList(DataLoader, _ObjectTypeMixin):
         self.Props_count = 0
         self.Props = all.ObjectProperties(reader)
         self.current = 0
-        while reader.tell() < self.end:
+        while False:
+            print reader.tell()
             self.prop = all.ObjectProperties(reader)
-            self.prop.readnew(reader, True)
-            #self.prop.read(reader)
-            log("Reading object properties...", 1)
+            self.prop.read(reader)
+            #log("Reading object properties...", 1)
             self.Props_count = self.current
-            log(str(self.Props_count), 1)
-            log(str(self.Props), 1)
+            #log(str(self.Props_count), 1)
+            #log(str(self.Props), 1)
             self.current += 1
 
     def write(self, reader):
@@ -92,8 +91,8 @@ class ObjectNames(DataLoader, _ObjectTypeMixin):
             self.name = reader.readString()
             self.Names_count = self.current
             self.Names = self.name
-            log(str(self.Names_count), 1)
-            log(str(self.Names), 1)
+            #log(str(self.Names_count), 1)
+            #log(str(self.Names), 1)
             self.current += 1
         
         

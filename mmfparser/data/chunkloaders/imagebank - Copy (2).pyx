@@ -19,7 +19,6 @@ cimport cython
 
 import struct
 import zlib
-import lz4.block
 from cStringIO import StringIO
 
 from mmfparser.bytereader cimport ByteReader
@@ -397,155 +396,53 @@ cdef class ImageItem(DataLoader):
 
         cdef bint old = self.settings.get('old', False)
         cdef bint debug = self.settings.get('debug', False)
-        #print debug
         cdef ByteReader newReader
         if old:
             newReader = onepointfive.decompress(reader)
         elif debug:
             newReader = reader
-#penis
-            start = newReader.tell()
-        
-            if old:
-                self.checksum = newReader.readShort()
-            else:
-                self.checksum = newReader.readInt()
-            self.references = newReader.readInt()
-            size = newReader.readInt(True)
-        
-            if debug:
-                newReader = newReader.readReader(size + 20)
-            self.width = newReader.readShort()
-            self.height = newReader.readShort()
-            self.graphicMode = newReader.readByte()
-            self.flags.setFlags(newReader.readByte(True))
-        
-            if not old:
-                newReader.skipBytes(2) # imgNotUsed
-            self.xHotspot = newReader.readShort()
-            self.yHotspot = newReader.readShort()
-            self.actionX = newReader.readShort()
-            self.actionY = newReader.readShort()
-            if old:
-                self.transparent = (0, 0, 0)
-            else:
-                self.transparent = newReader.readColor()
-
-            #cdef int decompressed
-            data = newReader.read()
-            self.rawImage=ByteReader()
-            self.rawImage.write(data)
-#penis
         else:
-            print 'reading using LZ4'
-            #print size
-            newReader = reader
+            newReader = zlibdata.decompress(reader)
 
-        #start = newReader.tell()
+        start = newReader.tell()
         
-        #if old:
-        #    self.checksum = newReader.readShort()
-        #else:
-        #    self.checksum = newReader.readInt()
-        #self.references = newReader.readInt()
-        #self.references = newReader.readInt()
-        #cdef int size = newReader.readInt(True)
-        #print 'the size is'
-        #print size
+        if old:
+            self.checksum = newReader.readShort()
+        else:
+            self.checksum = newReader.readInt()
+        self.references = newReader.readInt()
+        cdef int size = newReader.readInt(True)
         
-        #if debug:
-        #    newReader = newReader.readReader(size + 20)
-        #self.width = newReader.readShort()
-        #self.height = newReader.readShort()
-        #newReader.readInt()
-        #self.graphicMode = 16
-        #self.flags.setFlags(newReader.readByte(True))
+        if debug:
+            newReader = newReader.readReader(size + 20)
+        self.width = newReader.readShort()
+        self.height = newReader.readShort()
+        self.graphicMode = newReader.readByte()
+        self.flags.setFlags(newReader.readByte(True))
         
-        if not debug:
-           #print 'before anal sex '
-           #print reader.tell()
-           reader.seek(reader.tell() - 4)
-           handle = reader.readInt()
-           unk2 = reader.readInt()
-           unk = reader.readInt()
-           unk3 = reader.readInt()
-           datasize = reader.readInt()
-           self.width = reader.readShort()
-           self.height = reader.readShort()
-           unk6 = reader.readShort()
-           unk7 = reader.readShort()
-           self.xHotspot = reader.readShort()
-           self.yHotspot = reader.readShort()
-           self.actionX = reader.readShort()
-           self.actionY = reader.readShort()
-           self.transparent = reader.readColor()
-           decompressedSize = reader.readInt()
-           #print 'the anal sex size before sex is '
-           #print (datasize - 4)
-           #print 'the size of her asshole after intercourse is '
-           #print decompressedSize
-           rawImage = reader.readReader(datasize-4)
-           #print 'the raw anal relations is '
-           analsex = str(rawImage)
-           #print len(analsex)
-           #for n in analsex:
-           #    print(ord(str(n)))
-           target = lz4.block.decompress(analsex, uncompressed_size=decompressedSize)
-           #for n in target:
-           #    print(ord(str(n)))
-           self.graphicMode = 4;
-           # 2.5+ conversion code
-           
-           pp = 0
-           newTarget = ByteReader()
-           dummyTarget = ByteReader()
-           dummyTarget.write(target)
-           print dummyTarget.size()
-           while (pp < len(target)):
-               #print 'reading', pp, 'out of', len(target)
-               dummyTarget.seek(pp)
-               newTarget.writeByte(dummyTarget.readByte(True), True)
-               newTarget.writeByte(dummyTarget.readByte(True), True)
-               newTarget.writeByte(dummyTarget.readByte(True), True)
-               pp = pp + 4
+        if not old:
+            newReader.skipBytes(2) # imgNotUsed
+        self.xHotspot = newReader.readShort()
+        self.yHotspot = newReader.readShort()
+        self.actionX = newReader.readShort()
+        self.actionY = newReader.readShort()
+        if old:
+            self.transparent = (0, 0, 0)
+        else:
+            self.transparent = newReader.readColor()
 
-           pad = 2 - ((self.width * 3) % 2)
-           if pad == 2:
-               pad = 0
-           else:
-               pad = pad / 3
-           print 'pad', pad
-           padPos = 0
-           pp = 0
-           niggyTarget = ByteReader()
-           
-           while (pp < newTarget.size()):
-               newTarget.seek(pp)
-               niggyTarget.writeByte(newTarget.readByte(True), True)
-               niggyTarget.writeByte(newTarget.readByte(True), True)
-               niggyTarget.writeByte(newTarget.readByte(True), True)
-               padPos = padPos + 3
-               pp = pp + 3
-               if ((newTarget.tell() / 3) % self.width == 0):
-                   for j in range(pad):
-                       niggyTarget.writeByte(0, True)
-                       niggyTarget.writeByte(0, True)
-                       niggyTarget.writeByte(0, True)
-
-           self.rawImage=niggyTarget
-           print self.rawImage.size()
+        cdef int decompressed
+        data = newReader.read()
+        self.rawImage=ByteReader()
+        self.rawImage.write(data)
         
     def write(self, reader):
-        self.flags['LZX'] = True
         cdef bint debug = self.settings.get('debug', False)
-        compressedPeen = zlibdata.compressImageLZX(self.rawImage)
+
         newReader = ByteReader()
         newReader.writeInt(self.checksum)
         newReader.writeInt(self.references)
-        if (self.flags['LZX'] == False):
-            newReader.writeInt(len(self.rawImage))
-        if (self.flags['LZX'] == True):
-            newReader.writeInt(len(compressedPeen) + 4, True)
+        newReader.writeInt(len(self.rawImage))
         newReader.writeShort(self.width)
         newReader.writeShort(self.height)
         newReader.writeByte(self.graphicMode)
@@ -556,12 +453,7 @@ cdef class ImageItem(DataLoader):
         newReader.writeShort(self.actionX)
         newReader.writeShort(self.actionY)
         newReader.writeColor(self.transparent or (0, 0, 0))
-        if (self.flags['LZX'] == False):
-            newReader.writeReader(self.rawImage)
-        if (self.flags['LZX'] == True):
-            newReader.writeInt(len(self.rawImage))
-        if (self.flags['LZX'] == True):
-            newReader.writeReader(compressedPeen)
+        newReader.writeReader(self.rawImage)
         reader.writeInt(self.handle)
         if debug:
             reader.writeReader(newReader)

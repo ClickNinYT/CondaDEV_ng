@@ -871,8 +871,8 @@ cdef class ObjectCommon(DataLoader):
     cpdef read(self, ByteReader reader):
         currentPosition = None
 
-        cdef int size
-
+        cdef int size = null
+        print 'penis'
         cdef short movementsOffset
         cdef short animationsOffset
         cdef short counterOffset

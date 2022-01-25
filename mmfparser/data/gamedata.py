@@ -1,3 +1,20 @@
+# Copyright (c) Mathias Kaerlev 2012.
+
+# This file is part of Anaconda.
+
+# Anaconda is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# Anaconda is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with Anaconda.  If not, see <http://www.gnu.org/licenses/>.
+
 from mmfparser.loader import DataLoader
 
 GAME_HEADER = 'PAME'
@@ -53,12 +70,6 @@ class GameData(DataLoader):
     serial = None
 
     shaders = None
-
-    # 2.5+ REGION
-    headers = None
-    names = None
-    props = None
-    newinfo = None
 
     def initialize(self):
         self.frames = []
@@ -239,22 +250,11 @@ class GameData(DataLoader):
             pass
 
         self.extensions = chunks.popChunk(ExtensionList)
-
-        self.frameItems = chunks.popChunk(FrameItems)
+        try:
+            self.frameItems = chunks.popChunk(FrameItems)
+        except IndexError:
+            pass
         self.frameHandles = chunks.popChunk(FrameHandles).handles
-
-        self.headers = chunk.popChunk(ObjectHeaders)
-        self.names = chunk.popChunk(ObjectNames)
-        self.props = chunk.popChunk(ObjectPropertyList)
-        self.frameItems = None
-        for header in self.headers:
-            self.newinfo = objectInfo(ByteReader, None)
-            self.newinfo.handle = header.handle
-            self.newinfo.objectType = objectType(eader.objectType)
-            self.newinfo.inkEffect = int(header.inkEffect)
-            self.newinfo.inkEffectValue = header.inkEffectParameter
-            ObjectProperties(prop) = null
-            
 
         try:
             while 1:

@@ -167,203 +167,204 @@ def translate(game, print_func = dummy_out):
     mfa.chunks = mfa.new(ChunkList)
 
     frameItems = {}
-
-    for itemIndex, item in enumerate(game.frameItems.items):
-    # for itemIndex, item in enumerate([]):
-        newItem = mfa.new(FrameItem)
-        newItem.name = item.name or ('Unnamed %s' % itemIndex)
-        newItem.objectType = item.objectType
-        newItem.handle = item.handle
-        newItem.transparent = item.transparent
-        newItem.inkEffect = item.inkEffect
-        newItem.inkEffectParameter = item.inkEffectValue
-        newItem.antiAliasing = item.antialias
-        newItem.flags.setFlags(item.flags.getFlags())
-        newItem.iconHandle = 10
-        newItem.chunks = newItem.new(ChunkList)
-        itemLoader = item.properties.loader
-        if item.objectType >= EXTENSION_BASE:
-            objectClass = ExtensionObject
-        else:
-            objectClass = FRAME_ITEM_LOADERS[item.objectType]
-        newLoader = newItem.loader = newItem.new(objectClass)
-        if item.objectType in (QUICKBACKDROP, BACKDROP):
-            newLoader.obstacleType = itemLoader.obstacleType
-            newLoader.collisionType = itemLoader.collisionMode
-            if item.objectType == QUICKBACKDROP:
-                newLoader.width = itemLoader.width
-                newLoader.height = itemLoader.height
-                shape = itemLoader.shape
-                newLoader.shape = shape.shape
-                newLoader.borderSize = shape.borderSize
-                newLoader.borderColor = shape.borderColor
-                newLoader.fillType = shape.fillType
-                newLoader.color1 = shape.color1 or (0, 0, 0)
-                newLoader.color2 = shape.color2 or (0, 0, 0)
-                newLoader.flags.setFlags(shape.gradientFlags)
-                newLoader.image = shape.image
-            else:
-                newLoader.handle = itemLoader.image
-        else:
-            newLoader.objectFlags.setFlags(itemLoader.flags.getFlags())
-            try:
-                newLoader.newObjectFlags.setFlags(
-                    itemLoader.newFlags.getFlags())
-            except AttributeError:
-                # could happen for MMF1.5
-                pass
-            newLoader.backgroundColor = itemLoader.backColour
-            newLoader.qualifiers = itemLoader.qualifiers
-            newLoader.values = convert_alterables(itemLoader.values, 'Value')
-            newLoader.strings = convert_alterables(itemLoader.strings, 'String')
-
-            newLoader.movements = movements = newLoader.new(Movements)
-            for index, movement in enumerate(itemLoader.movements.items):
-                newMovement = movements.new(Movement)
-                newMovement.name = 'Movement #%s' % (index + 1)
-                if movement.getName() == 'Extension':
-                    newMovement.extension = movement.loader.name + '.mvx'
-                    newMovement.identifier = movement.loader.id
-                else:
-                    newMovement.extension = ''
-                    newMovement.identifier = movement.type
-                    newMovement.player = movement.player
-                    newMovement.type = movement.type
-                    newMovement.movingAtStart = movement.movingAtStart
-                    newMovement.directionAtStart = movement.directionAtStart
-                newMovement.loader = movement.loader
-                movements.items.append(newMovement)
-
-            newLoader.behaviours = newLoader.new(Behaviours)
-            newLoader.fadeIn = convert_transition(itemLoader.fadeIn)
-            newLoader.fadeOut = convert_transition(itemLoader.fadeOut)
-            if itemLoader.animations is not None:
-                animationHeader = itemLoader.animations
-                newLoader.items = items = []
-                for i in xrange(max(animationHeader.loadedAnimations) + 1):
-                    newAnimation = newLoader.new(Animation)
-                    items.append(newAnimation)
-                    newAnimation.directions = newDirections = []
-                    try:
-                        animation = animationHeader.loadedAnimations[i]
-                    except KeyError:
-                        continue
-                    for n, direction in animation.loadedDirections.iteritems():
-                        newDirection = newAnimation.new(AnimationDirection)
-                        newDirections.append(newDirection)
-                        newDirection.index = n
-                        newDirection.minSpeed = direction.minSpeed
-                        newDirection.maxSpeed = direction.maxSpeed
-                        newDirection.repeat = direction.repeat
-                        newDirection.backTo = direction.backTo
-                        newDirection.frames = direction.frames
+    try:
+        for itemIndex, item in enumerate(game.frameItems.items):
+        # for itemIndex, item in enumerate([]):
+            newItem = mfa.new(FrameItem)
+            newItem.name = item.name or ('Unnamed %s' % itemIndex)
+            newItem.objectType = item.objectType
+            newItem.handle = item.handle
+            newItem.transparent = item.transparent
+            newItem.inkEffect = item.inkEffect
+            newItem.inkEffectParameter = item.inkEffectValue
+            newItem.antiAliasing = item.antialias
+            newItem.flags.setFlags(item.flags.getFlags())
+            newItem.iconHandle = 10
+            newItem.chunks = newItem.new(ChunkList)
+            itemLoader = item.properties.loader
             if item.objectType >= EXTENSION_BASE:
-                extension = item.getExtension(game.extensions)
-                newLoader.extensionType = -1
-                newLoader.extensionName = ''
-                newLoader.filename = extension.name + '.mfx'
-                newLoader.magic = extension.magicNumber
-                newLoader.subType = extension.subType
-                newLoader.extensionVersion = itemLoader.extensionVersion
-                newLoader.extensionId = itemLoader.extensionId
-                newLoader.extensionPrivate = itemLoader.extensionPrivate
-                newLoader.extensionData = itemLoader.extensionData or ''
-            elif item.objectType == COUNTER:
-                counter = itemLoader.counter
-                counters = itemLoader.counters
-                newLoader.value = counter.initial
-                newLoader.minimum = counter.minimum
-                newLoader.maximum = counter.maximum
-                if counters is None:
-                    newLoader.displayType = HIDDEN
-                    shape = None
-                    newLoader.countType = 0
-                    newLoader.width = 0
-                    newLoader.height = 0
-                    newLoader.images = []
-                    newLoader.font = 0
+                objectClass = ExtensionObject
+            else:
+                objectClass = FRAME_ITEM_LOADERS[item.objectType]
+            newLoader = newItem.loader = newItem.new(objectClass)
+            if item.objectType in (QUICKBACKDROP, BACKDROP):
+                newLoader.obstacleType = itemLoader.obstacleType
+                newLoader.collisionType = itemLoader.collisionMode
+                if item.objectType == QUICKBACKDROP:
+                    newLoader.width = itemLoader.width
+                    newLoader.height = itemLoader.height
+                    shape = itemLoader.shape
+                    newLoader.shape = shape.shape
+                    newLoader.borderSize = shape.borderSize
+                    newLoader.borderColor = shape.borderColor
+                    newLoader.fillType = shape.fillType
+                    newLoader.color1 = shape.color1 or (0, 0, 0)
+                    newLoader.color2 = shape.color2 or (0, 0, 0)
+                    newLoader.flags.setFlags(shape.gradientFlags)
+                    newLoader.image = shape.image
                 else:
-                    shape = counters.shape
+                    newLoader.handle = itemLoader.image
+            else:
+                newLoader.objectFlags.setFlags(itemLoader.flags.getFlags())
+                try:
+                    newLoader.newObjectFlags.setFlags(
+                        itemLoader.newFlags.getFlags())
+                except AttributeError:
+                    # could happen for MMF1.5
+                    pass
+                newLoader.backgroundColor = itemLoader.backColour
+                newLoader.qualifiers = itemLoader.qualifiers
+                newLoader.values = convert_alterables(itemLoader.values, 'Value')
+                newLoader.strings = convert_alterables(itemLoader.strings, 'String')
+
+                newLoader.movements = movements = newLoader.new(Movements)
+                for index, movement in enumerate(itemLoader.movements.items):
+                    newMovement = movements.new(Movement)
+                    newMovement.name = 'Movement #%s' % (index + 1)
+                    if movement.getName() == 'Extension':
+                        newMovement.extension = movement.loader.name + '.mvx'
+                        newMovement.identifier = movement.loader.id
+                    else:
+                        newMovement.extension = ''
+                        newMovement.identifier = movement.type
+                        newMovement.player = movement.player
+                        newMovement.type = movement.type
+                        newMovement.movingAtStart = movement.movingAtStart
+                        newMovement.directionAtStart = movement.directionAtStart
+                    newMovement.loader = movement.loader
+                    movements.items.append(newMovement)
+
+                newLoader.behaviours = newLoader.new(Behaviours)
+                newLoader.fadeIn = convert_transition(itemLoader.fadeIn)
+                newLoader.fadeOut = convert_transition(itemLoader.fadeOut)
+                if itemLoader.animations is not None:
+                    animationHeader = itemLoader.animations
+                    newLoader.items = items = []
+                    for i in xrange(max(animationHeader.loadedAnimations) + 1):
+                        newAnimation = newLoader.new(Animation)
+                        items.append(newAnimation)
+                        newAnimation.directions = newDirections = []
+                        try:
+                            animation = animationHeader.loadedAnimations[i]
+                        except KeyError:
+                            continue
+                        for n, direction in animation.loadedDirections.iteritems():
+                            newDirection = newAnimation.new(AnimationDirection)
+                            newDirections.append(newDirection)
+                            newDirection.index = n
+                            newDirection.minSpeed = direction.minSpeed
+                            newDirection.maxSpeed = direction.maxSpeed
+                            newDirection.repeat = direction.repeat
+                            newDirection.backTo = direction.backTo
+                            newDirection.frames = direction.frames
+                if item.objectType >= EXTENSION_BASE:
+                    extension = item.getExtension(game.extensions)
+                    newLoader.extensionType = -1
+                    newLoader.extensionName = ''
+                    newLoader.filename = extension.name + '.mfx'
+                    newLoader.magic = extension.magicNumber
+                    newLoader.subType = extension.subType
+                    newLoader.extensionVersion = itemLoader.extensionVersion
+                    newLoader.extensionId = itemLoader.extensionId
+                    newLoader.extensionPrivate = itemLoader.extensionPrivate
+                    newLoader.extensionData = itemLoader.extensionData or ''
+                elif item.objectType == COUNTER:
+                    counter = itemLoader.counter
+                    counters = itemLoader.counters
+                    newLoader.value = counter.initial
+                    newLoader.minimum = counter.minimum
+                    newLoader.maximum = counter.maximum
+                    if counters is None:
+                        newLoader.displayType = HIDDEN
+                        shape = None
+                        newLoader.countType = 0
+                        newLoader.width = 0
+                        newLoader.height = 0
+                        newLoader.images = []
+                        newLoader.font = 0
+                    else:
+                        shape = counters.shape
+                        newLoader.displayType = counters.displayType
+                        newLoader.countType = counters.inverse
+                        newLoader.width = counters.width
+                        newLoader.height = counters.height
+                        newLoader.images = counters.frames or []
+                        newLoader.font = counters.font or 0
+                    if shape is None:
+                        color1 = color2 = (0, 0, 0)
+                        newLoader.verticalGradient = 0
+                        newLoader.flags = 0
+                    else:
+                        color1 = shape.color1 or (0, 0, 0)
+                        color2 = shape.color2 or (0, 0, 0)
+                        newLoader.verticalGradient = shape.gradientFlags or 0
+                        newLoader.flags = shape.fillType
+                    newLoader.color1 = color1
+                    newLoader.color2 = color2
+                elif item.objectType in (SCORE, LIVES):
+                    counters = itemLoader.counters
+                    newLoader.player = counters.player
+                    newLoader.images = counters.frames or []
                     newLoader.displayType = counters.displayType
-                    newLoader.countType = counters.inverse
+                    newLoader.flags = counters.flags
+                    newLoader.font = counters.font
                     newLoader.width = counters.width
                     newLoader.height = counters.height
-                    newLoader.images = counters.frames or []
-                    newLoader.font = counters.font or 0
-                if shape is None:
-                    color1 = color2 = (0, 0, 0)
-                    newLoader.verticalGradient = 0
+                elif item.objectType == RTF:
+                    rtf = itemLoader.rtf
+                    newLoader.width = rtf.width
+                    newLoader.height = rtf.height
+                    newLoader.value = rtf.value
+                    newLoader.color = rtf.backColor #typo fixed
+                    newLoader.flags = rtf.options.getFlags()
+                elif item.objectType == SUBAPPLICATION:
+                    subApplication = itemLoader.subApplication
+                    newLoader.width = subApplication.width
+                    newLoader.height = subApplication.height
+                    newLoader.filename = subApplication.name
+                    if subApplication.options['Internal']:
+                        startFrame = subApplication.startFrame
+                    else:
+                        startFrame = -1
+                    newLoader.startFrame = startFrame
+                    newLoader.options.setFlags(subApplication.options.getFlags())
+                elif item.objectType == TEXT:
+                    text = itemLoader.text
+                    newLoader.width = text.width
+                    newLoader.height = text.height
+                    paragraph = text.items[0]
+                    newLoader.font = paragraph.font
+                    newLoader.color = paragraph.color
                     newLoader.flags = 0
-                else:
-                    color1 = shape.color1 or (0, 0, 0)
-                    color2 = shape.color2 or (0, 0, 0)
-                    newLoader.verticalGradient = shape.gradientFlags or 0
-                    newLoader.flags = shape.fillType
-                newLoader.color1 = color1
-                newLoader.color2 = color2
-            elif item.objectType in (SCORE, LIVES):
-                counters = itemLoader.counters
-                newLoader.player = counters.player
-                newLoader.images = counters.frames or []
-                newLoader.displayType = counters.displayType
-                newLoader.flags = counters.flags
-                newLoader.font = counters.font
-                newLoader.width = counters.width
-                newLoader.height = counters.height
-            elif item.objectType == RTF:
-                rtf = itemLoader.rtf
-                newLoader.width = rtf.width
-                newLoader.height = rtf.height
-                newLoader.value = rtf.value
-                newLoader.color = rtf.backColor #typo fixed
-                newLoader.flags = rtf.options.getFlags()
-            elif item.objectType == SUBAPPLICATION:
-                subApplication = itemLoader.subApplication
-                newLoader.width = subApplication.width
-                newLoader.height = subApplication.height
-                newLoader.filename = subApplication.name
-                if subApplication.options['Internal']:
-                    startFrame = subApplication.startFrame
-                else:
-                    startFrame = -1
-                newLoader.startFrame = startFrame
-                newLoader.options.setFlags(subApplication.options.getFlags())
-            elif item.objectType == TEXT:
-                text = itemLoader.text
-                newLoader.width = text.width
-                newLoader.height = text.height
-                paragraph = text.items[0]
-                newLoader.font = paragraph.font
-                newLoader.color = paragraph.color
-                newLoader.flags = 0
-                newLoader.items = paragraphs = []
-                for paragraph in text.items:
-                    newParagraph = newLoader.new(Paragraph)
-                    paragraphs.append(newParagraph)
-                    newParagraph.value = paragraph.value
-                    newParagraph.flags = paragraph.flags.getFlags()
-            elif item.objectType == QUESTION:
-                text = itemLoader.text
-                newLoader.width = text.width
-                newLoader.height = text.height
-                question = text.items[0]
-                answer = text.items[1]
-                print question.font
-                newLoader.questionFont = question.font
-                newLoader.questionColor = question.color
-                newLoader.questionFlags = 0
-                newLoader.question = question.value
-                newLoader.answerFont = answer.font
-                newLoader.answerColor = answer.color
-                newLoader.answerFlags = 0
-                newLoader.items = paragraphs = []
-                for paragraph in text.items[1:]:
-                    newParagraph = newLoader.new(Paragraph)
-                    paragraphs.append(newParagraph)
-                    newParagraph.value = paragraph.value
-                    newParagraph.flags = paragraph.flags.getFlags()
-        frameItems[newItem.handle] = newItem
-
+                    newLoader.items = paragraphs = []
+                    for paragraph in text.items:
+                        newParagraph = newLoader.new(Paragraph)
+                        paragraphs.append(newParagraph)
+                        newParagraph.value = paragraph.value
+                        newParagraph.flags = paragraph.flags.getFlags()
+                elif item.objectType == QUESTION:
+                    text = itemLoader.text
+                    newLoader.width = text.width
+                    newLoader.height = text.height
+                    question = text.items[0]
+                    answer = text.items[1]
+                    print question.font
+                    newLoader.questionFont = question.font
+                    newLoader.questionColor = question.color
+                    newLoader.questionFlags = 0
+                    newLoader.question = question.value
+                    newLoader.answerFont = answer.font
+                    newLoader.answerColor = answer.color
+                    newLoader.answerFlags = 0
+                    newLoader.items = paragraphs = []
+                    for paragraph in text.items[1:]:
+                        newParagraph = newLoader.new(Paragraph)
+                        paragraphs.append(newParagraph)
+                        newParagraph.value = paragraph.value
+                        newParagraph.flags = paragraph.flags.getFlags()
+            frameItems[newItem.handle] = newItem
+    except:
+        pass
     qualifiers = {}
 
     indexHandles = dict(
@@ -543,9 +544,11 @@ def translate(game, print_func = dummy_out):
                     except KeyError:
                         parameter.id = groups[parameter.pointer - 2]
                 parameter.savedPointer = parameter.pointer = 0
-
-        newFrame.chunks = mfa.new(ChunkList)
-        mfa.frames.append(save_data_loader(newFrame))
+        try:
+            newFrame.chunks = mfa.new(ChunkList)
+            mfa.frames.append(save_data_loader(newFrame))
+        except:
+            pass
         frame.close()
 
     return mfa
