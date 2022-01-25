@@ -6,7 +6,7 @@ import sys
 sys.path.append('..\..\..\..')
 from misc import *
 
-class ObjectHeaders(DataLoader):
+class ObjectHeaders(DataLoader, _ObjectTypeMixin):
     def init(self):
         self.headers = None
     
@@ -31,7 +31,7 @@ class ObjectHeaders(DataLoader):
         pass
 
 
-class ObjectPropertyList(DataLoader):
+class ObjectPropertyList(DataLoader, _ObjectTypeMixin):
     def init(self):
         self.Props = None
 
@@ -55,7 +55,7 @@ class ObjectPropertyList(DataLoader):
         log("Warning: Not yet implemented!", 3)
         pass
 
-class ObjectNames(DataLoader):
+class ObjectNames(DataLoader, _ObjectTypeMixin):
     def write(self, reader):
         log("Warning: Not yet implemented!", 3)
         pass

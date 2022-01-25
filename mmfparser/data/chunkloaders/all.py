@@ -44,3 +44,6 @@ from mmfparser.loader import DataLoader
 class Spacer(DataLoader):
     def read(self, reader):
         return "Spacer"
+
+    def write(self, reader):
+        return "Spacer"
