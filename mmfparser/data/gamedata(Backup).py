@@ -54,12 +54,6 @@ class GameData(DataLoader):
 
     shaders = None
 
-    # 2.5+ REGION
-    headers = None
-    names = None
-    props = None
-    newinfo = None
-
     def initialize(self):
         self.frames = []
 
@@ -242,19 +236,6 @@ class GameData(DataLoader):
 
         self.frameItems = chunks.popChunk(FrameItems)
         self.frameHandles = chunks.popChunk(FrameHandles).handles
-
-        self.headers = chunk.popChunk(ObjectHeaders)
-        self.names = chunk.popChunk(ObjectNames)
-        self.props = chunk.popChunk(ObjectPropertyList)
-        self.frameItems = None
-        for header in self.headers:
-            self.newinfo = objectInfo(ByteReader, None)
-            self.newinfo.handle = header.handle
-            self.newinfo.objectType = objectType(eader.objectType)
-            self.newinfo.inkEffect = int(header.inkEffect)
-            self.newinfo.inkEffectValue = header.inkEffectParameter
-            ObjectProperties(prop) = null
-            
 
         try:
             while 1:
