@@ -437,7 +437,7 @@ cdef class ImageItem(DataLoader):
             self.rawImage.write(data)
 #penis
         else:
-            print 'reading using LZ4'
+            #print 'reading using LZ4'
             #print size
             newReader = reader
 
@@ -500,7 +500,7 @@ cdef class ImageItem(DataLoader):
            newTarget = ByteReader()
            dummyTarget = ByteReader()
            dummyTarget.write(target)
-           print dummyTarget.size()
+           #print dummyTarget.size()
            while (pp < len(target)):
                #print 'reading', pp, 'out of', len(target)
                dummyTarget.seek(pp)
@@ -514,7 +514,7 @@ cdef class ImageItem(DataLoader):
                pad = 0
            else:
                pad = pad / 3
-           print 'pad', pad
+           #print 'pad', pad
            padPos = 0
            pp = 0
            niggyTarget = ByteReader()
@@ -533,7 +533,7 @@ cdef class ImageItem(DataLoader):
                        niggyTarget.writeByte(0, True)
 
            self.rawImage=niggyTarget
-           print self.rawImage.size()
+           #print self.rawImage.size()
         
     def write(self, reader):
         self.flags['LZX'] = True

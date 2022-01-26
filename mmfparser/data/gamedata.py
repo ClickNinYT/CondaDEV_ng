@@ -253,6 +253,7 @@ class GameData(DataLoader):
         try:
             self.frameItems = chunks.popChunk(FrameItems)
         except IndexError:
+            print 'this isnt supposed to happen ever'
             pass
         self.frameHandles = chunks.popChunk(FrameHandles).handles
 

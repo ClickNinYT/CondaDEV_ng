@@ -34,7 +34,7 @@ class AGMIBank(DataLoader):
         reader.writeInt(len(self.items))
         log("Number of images offsets: " + str(len(self.items)), 1)
         for item in self.items:
-           log("Writing image to MFA: " + str(len(reader)), 1)
+           #log("Writing image to MFA: " + str(len(reader)), 1)
            item.write(reader)
 
 

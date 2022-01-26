@@ -56,10 +56,10 @@ class ObjectPropertyList(DataLoader, _ObjectTypeMixin):
         self.Props_count = 0
         self.Props = all.ObjectProperties(reader)
         self.current = 0
-        while False:
-            print reader.tell()
+        while reader.tell() < self.end:
+            #print reader.tell()
             self.prop = all.ObjectProperties(reader)
-            self.prop.read(reader)
+            self.prop.load(reader)
             #log("Reading object properties...", 1)
             self.Props_count = self.current
             #log(str(self.Props_count), 1)

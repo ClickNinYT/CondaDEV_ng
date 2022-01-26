@@ -51,7 +51,8 @@ class ObjectProperties(DataLoader, _ObjectTypeMixin):
         reader = self._loadReader
         del self._loadReader
         #reader.seek(0)
-        print objectType
+        #print 'penis type'
+        #print objectType
         self.isCommon = False
         if objectType == QUICKBACKDROP:
             self.loader = self.new(QuickBackdrop, reader)
@@ -154,7 +155,7 @@ class ObjectInfo(DataLoader, _ObjectTypeMixin):
     items = None
 
     def read(self, ByteReader reader):
-        print 'vagina'
+        #print 'vagina'
         infoChunks = self.new(ChunkList, reader)
         properties = None
         for chunk in infoChunks.items:

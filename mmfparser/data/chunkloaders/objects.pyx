@@ -30,8 +30,11 @@ cdef class AlterableStrings(DataLoader):
         self.items = []
 
     cpdef read(self, ByteReader reader):
-        self.items = [self.readString(reader)
-            for _ in xrange(reader.readShort(True))]
+        try:
+            self.items = [self.readString(reader)
+                for _ in xrange(reader.readShort(True))]
+        except:
+            pass
 
     def write(self, ByteReader reader):
         reader.writeShort(len(self.items))
@@ -871,8 +874,8 @@ cdef class ObjectCommon(DataLoader):
     cpdef read(self, ByteReader reader):
         currentPosition = None
 
-        cdef int size = null
-        print 'penis'
+        cdef int size = 0
+        print 'penis LONG'
         cdef short movementsOffset
         cdef short animationsOffset
         cdef short counterOffset
@@ -885,52 +888,53 @@ cdef class ObjectCommon(DataLoader):
         cdef short qualifier
         cdef unsigned int end
         
-        cdef bint newobj = (self.settings['build'] >= 284 and
-                            not self.settings.get('compat', False))
-        
-        if newobj:
+        #cdef bint newobj = (self.settings['build'] >= 284 and not self.settings.get('compat', False))
+        cdef bint newobj = True
+        print 'righteous'
+        if (newobj == True):
             currentposition = reader.tell()
+            print currentposition
             twofiveplusPos = int(currentposition)
-            isfirstread = true
+            isfirstread = True
             decompressedReader = ByteReader()            #stub
-            if isfirstread:
+            if (isfirstread == True):
                 size2 = reader.readInt()
-                ass = reader.readByte(size2)
-                log("Reading at " + str(size2) + " at " + str(reader.tell(), 1))
-                decompressed = zlib.decompress(ass)
-                decompressedReader = ByteReader(StringIO.StringIO(decompressed))
+                ass = reader.readReader(size2)
+                print "Reading " + str(size2) + " bytes at position " + str(reader.tell())
+                decompressed = zlib.decompress(str(ass))
+                decompressedReader = ByteReader(decompressed)
                 reader.seek(currentposition + size2 + 8)
             else:
-                if currentposition >= reader.size():
+                if (currentposition >= reader.size()):
                     log("Rewinding ObjectCommon buffer to 4...", 3)
                     reader.seek(4)
                     currentposition = 4
-                if reader.tell() > reader.size() - 4:
+                if (reader.tell() > reader.size() - 4):
                     log("Warning: Out of bytes reading ObjectCommon (" + str(reader.tell()) + "/" + str(reader.size()) + ")", 3)
                     return;
                 size2 = reader.readInt()
-                if size2 < 0:
+                if (size2 < 0):
                     log("Warning: There is no bytes to read in ObjectCommon (" + str(reader.tell()) + "/" + str(reader.size()) + ")", 3)
                     return
                 ass = reader.readByte(size2)
-                if size2 > reader.tell() or size2 == 4552:
+                if (size2 > reader.tell() or size2 == 4552):
                     log("Warning: The size is bigger than the reader in ObjectCommon (" + str(size2) + "/" + str(reader.tell()) + ")", 3)
                     return
                 decompressed = zlib.decompress(ass)
                 decompressedReader = ByteReader(StringIO.StringIO(decompressed))
                 reader.seek(currentposition + size2 + 8)
-            if decompressedReader.tell() > decompressedReader.size() - 19:
+            if (decompressedReader.tell() > decompressedReader.size() - 19):
                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
                 return
             size = decompressedReader.readInt()
             animationsOffset = decompressedReader.readShort()
             movementsOffset = decompressedReader.readShort()
             version = decompressedReader.readShort()
-            decompressedReader.skipByte(2)
+            testicle = decompressedReader.readShort()
             extensionOffset = decompressedReader.readShort()
             counterOffset = decompressedReader.readShort()
             self.flags.setFlags(decompressedReader.readShort())
-            decompressedReader.skipByte(2)
+            testicle = decompressedReader.readShort()
             for _ in xrange(8):
                 qualifier = decompressedReader.readShort()
                 if qualifier == -1:
@@ -938,7 +942,7 @@ cdef class ObjectCommon(DataLoader):
                 self.qualifiers.append(qualifier)
             end = decompressedReader.tell() + 8 * 2
             decompressedReader.seek(end)
-            if decompressedReader.tell() > decompressedReader.size() - 20:
+            if (decompressedReader.tell() > decompressedReader.size() - 20):
                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
                 return
             systemObjectOffset = decompressedReader.readShort()
@@ -946,22 +950,23 @@ cdef class ObjectCommon(DataLoader):
             stringsOffset = decompressedReader.readShort()
             self.newFlags.setFlags(decompressedReader.readShort())
             self.preferences.setFlags(decompressedReader.readShort())
-            self.identifier = decompressedReader.readString(4)
+            self.identifier = 0
+            niggyfier = decompressedReader.readString(4)
             self.backColour = decompressedReader.readColor()
             fadeInOffset = decompressedReader.readInt()
             fadeOutOffset = decompressedReader.readInt()
             log("Finished parsing 2.5+ specific decompressed bytes!", 1)
             
         deccurpos = 4
-        if animationsOffset > 0:
+        if (animationsOffset > 0):
             decompressedReader.seek(deccurpos + animationsOffset)
             self.animations = self.new(AnimationHeader, decompressedReader)
             
-        if movementsOffset > 0:
+        if (movementsOffset > 0):
             decompressedReader.seek(deccurpos + movementsOffset)
             self.movements = self.new(Movements, decompressedReader)
             
-        if systemObjectOffset > 0:
+        if (systemObjectOffset > 0):
             decompressedReader.seek(deccurpos + systemObjectOffset)
             objectType = self.parent.objectType
             if objectType in (TEXT, QUESTION):
@@ -973,38 +978,38 @@ cdef class ObjectCommon(DataLoader):
             elif objectType == SUBAPPLICATION:
                 self.subApplication = self.new(SubApplication, decompressedReader)
                 
-        if extensionOffset > 0:
+        if (extensionOffset > 0):
             decompressedReader.seek(deccurpos + extensionOffset)
-            if decompressedReader.tell() > decompressedReader.size() - 20:
+            if (decompressedReader.tell() > decompressedReader.size() - 20):
                 log("Warning: Out of bytes reading ObjectCommon (" + str(decompressedReader.tell()) + "/" + str(decompressedReader.size()) + ")", 3)
                 return
             dataSize = decompressedReader.readInt()
-            decompressedReader.skip(4)
+            testicle = decompressedReader.readInt()
             self.extensionVersion = decompressedReader.readInt()
             self.extensionId = decompressedReader.readInt()
             self.extensionPrivate = decompressedReader.readInt()
-            if dataSize > 0:
+            if (dataSize > 0):
                 self.extensionData = decompressedReader.readByte(dataSize)
             else:
                 self.extensionData = None
                 
-        if counterOffset > 0:
+        if (counterOffset > 0):
            decompressedReader.seek(deccurpos + counterOffset)
            self.counter = self.new(Counter, decompressedReader)
            
-        if valuesOffset > 0:
+        if (valuesOffset > 0):
             decompressedReader.seek(deccurpos + valuesOffset)
             self.values = self.new(AlterableValues, decompressedReader)
 
-        if stringsOffset > 0:
+        if (stringsOffset > 0):
             decompressedReader.seek(deccurpos + stringsOffset)
             self.strings = self.new(AlterableStrings, decompressedReader)
             
-        if fadeInOffset > 0:
+        if (fadeInOffset > 0):
             decompressedReader.seek(deccurpos + fadeInOffset)
             self.fadeIn = self.new(FadeIn, decompressedReader)
 
-        if fadeOutOffset > 0:
+        if (fadeOutOffset > 0):
             decompressedReader.seek(deccurpos + fadeOutOffset)
             self.fadeOut = self.new(FadeOut, decompressedReader)
 
