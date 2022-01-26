@@ -9,3 +9,9 @@ CondaDEV now support 85% of every games made with Clickteam Series! Including Th
 
 # About this branch
 This branch is an *experimental* attempt to bringing 2.5+ games support into CondaDEV. Currently it doesn't working properly yet, so expects your exceptations. However we are actively working on it.
+
+# Dependencies
+Cython, LZ4 and Future PyPi modules will be need to be installed. Python 2.7.13 or newer are recommended.
+```
+pip install Cython lz4 future
+```
