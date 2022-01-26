@@ -875,7 +875,6 @@ cdef class ObjectCommon(DataLoader):
         currentPosition = None
 
         cdef int size = 0
-        print 'penis LONG'
         cdef short movementsOffset
         cdef short animationsOffset
         cdef short counterOffset
@@ -890,13 +889,12 @@ cdef class ObjectCommon(DataLoader):
         
         #cdef bint newobj = (self.settings['build'] >= 284 and not self.settings.get('compat', False))
         cdef bint newobj = True
-        print 'righteous'
         if (newobj == True):
             currentposition = reader.tell()
-            print currentposition
+            log("Current Position: " + str(currentposition), 1)
             twofiveplusPos = int(currentposition)
             isfirstread = True
-            decompressedReader = ByteReader()            #stub
+            decompressedReader = ByteReader()   
             if (isfirstread == True):
                 size2 = reader.readInt()
                 ass = reader.readReader(size2)
@@ -911,7 +909,7 @@ cdef class ObjectCommon(DataLoader):
                     currentposition = 4
                 if (reader.tell() > reader.size() - 4):
                     log("Warning: Out of bytes reading ObjectCommon (" + str(reader.tell()) + "/" + str(reader.size()) + ")", 3)
-                    return;
+                    return
                 size2 = reader.readInt()
                 if (size2 < 0):
                     log("Warning: There is no bytes to read in ObjectCommon (" + str(reader.tell()) + "/" + str(reader.size()) + ")", 3)

@@ -4,6 +4,10 @@ from mmfparser.data.chunkloaders.stringchunk import StringChunk
 from mmfparser.loader cimport DataLoader
 from mmfparser.data.chunkloaders.common import _ObjectTypeMixin
 from mmfparser import byteflag
+import sys
+
+sys.path.append('..\..')
+from misc import *
 
 EXTENSION_BASE = 32
 
@@ -45,6 +49,23 @@ class ObjectProperties(DataLoader, _ObjectTypeMixin):
 
     def read(self, ByteReader reader):
         self._loadReader = reader
+
+    def readnew(self, objectType, parent):
+        log("Reading a new properties...", 1)
+        self.objectType = objectType
+        reader = self._loadReader
+        del self._loadReader
+        if objectType == 0:
+            log("Reading object type: QuickBackdrop...", 1)
+            self.loader = self.new(QuickBackdrop, reader)
+        elif objectType == 1:
+            log("Reading object type: Backdrop...", 1)
+            self.loader = self.new(Backdrop, reader)
+        else:
+            log("Reading object type: Common...", 1)
+            self.isCommon = True
+            self.loader = self.new(ObjectCommon, reader)
+            self.loader.read(reader)
 
     def load(self, objectType):
         self.objectType = objectType

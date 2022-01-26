@@ -33,6 +33,7 @@ class ObjectHeaders(DataLoader, _ObjectTypeMixin):
                 #log(str(self.headers), 1)
                 self.current += 1
             except:
+                print("Warning: Header not readed!", 3)
                 pass
     
     def write(self, reader):
@@ -57,15 +58,21 @@ class ObjectPropertyList(DataLoader, _ObjectTypeMixin):
         self.Props = all.ObjectProperties(reader)
         self.current = 0
         while reader.tell() < self.end:
-            #print reader.tell()
-            self.prop = all.ObjectProperties(reader)
-            self.prop.load(reader)
-            #log("Reading object properties...", 1)
-            self.Props_count = self.current
-            #log(str(self.Props_count), 1)
-            #log(str(self.Props), 1)
-            self.current += 1
-
+            try:
+               #print reader.tell()
+               self.prop = all.ObjectProperties(reader)
+               #self.prop.read(reader)
+               #self.prop.load(2)
+               self.prop.readnew(2, None)
+               #log("Reading object properties...", 1)
+               self.Props_count = self.current
+               #log(str(self.Props_count), 1)
+               #log(str(self.Props), 1)
+               self.current += 1
+            except:
+                log("Warning: Properties not reaed!", 3)
+                pass
+  
     def write(self, reader):
         log("Warning: Not yet implemented!", 3)
         pass
@@ -91,8 +98,6 @@ class ObjectNames(DataLoader, _ObjectTypeMixin):
             self.name = reader.readString()
             self.Names_count = self.current
             self.Names = self.name
-            #log(str(self.Names_count), 1)
-            #log(str(self.Names), 1)
             self.current += 1
         
         
