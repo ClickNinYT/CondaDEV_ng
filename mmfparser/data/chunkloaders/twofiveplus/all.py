@@ -70,7 +70,7 @@ class ObjectPropertyList(DataLoader, _ObjectTypeMixin):
                #log(str(self.Props), 1)
                self.current += 1
             except:
-                log("Warning: Properties not reaed!", 3)
+                log("Warning: Properties not readed!", 3)
                 pass
   
     def write(self, reader):
