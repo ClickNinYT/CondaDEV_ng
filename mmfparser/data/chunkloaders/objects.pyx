@@ -898,7 +898,7 @@ cdef class ObjectCommon(DataLoader):
             if (isfirstread == True):
                 size2 = reader.readInt()
                 ass = reader.readReader(size2)
-                print "Reading " + str(size2) + " bytes at position " + str(reader.tell())
+                log("Reading " + str(size2) + " bytes at position " + str(reader.tell()), 1)
                 decompressed = zlib.decompress(str(ass))
                 decompressedReader = ByteReader(decompressed)
                 reader.seek(currentposition + size2 + 8)
