@@ -1,19 +1,5 @@
-# Copyright (c) Mathias Kaerlev 2012.
-
-# This file is part of Anaconda.
-
-# Anaconda is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# Anaconda is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# You should have received a copy of the GNU General Public License
-# along with Anaconda.  If not, see <http://www.gnu.org/licenses/>.
+from __future__ import with_statement
+from __future__ import absolute_import
 
 cdef extern from "stdlib.h":
     void *memcpy(void * str1, void * str2, size_t n)
@@ -31,6 +17,13 @@ import os
 import traceback
 import sys
 import tempfile
+import contextlib
+import io
+import typing
+import zlib
+from io import BytesIO
+from io import open
+from builtins import bytes
 
 BYTE = struct.Struct('b')
 UBYTE = struct.Struct('B')
@@ -469,6 +462,269 @@ cdef class ByteReader:
         except IOError:
             pass
         raw_input('(enter)')
+    
+    # New aera
+    @contextlib.contextmanager
+    def save_current_pos(self):
+        entry = self.tell1()
+        yield
+        self.seek1(entry)
+
+    def __bool1__(self):
+        return self.tell1() < self.size1()
+
+    def __int1__(self):
+        return self.size1()
+
+    def __repr1__(self):
+        return "<byteio {}/{}>".format(self.tell1(), self.size1())
+
+    def __len1__(self):
+        return self.size1()
+
+    def close(self):
+        if hasattr(self.python_fp, 'mode'):
+            if 'w' in getattr(self.python_fp, 'mode'):
+                self.python_fp.close()
+
+    def rewind1(self, amount):
+        self.python_fp.seek1(-amount, io.SEEK_CUR)
+
+    def skip1(self, amount):
+        self.python_fp.seek1(amount, io.SEEK_CUR)
+
+    def seek1(self, off, pos=io.SEEK_SET):
+        self.python_fp.seek1(off, pos)
+
+    def tell1(self):
+        return self.python_fp.tell1()
+
+    def size1(self):
+        curr_offset = self.tell1()
+        self.seek1(0, io.SEEK_END)
+        ret = self.tell1()
+        self.seek1(curr_offset, io.SEEK_SET)
+        return ret
+
+    def fill1(self, amount):
+        for _ in range(amount):
+            self._write1('\x00')
+
+    # ------------ PEEK SECTION ------------ #
+
+    def _peek1(self, size=1):
+        with self.save_current_pos():
+            return self._read1(size)
+
+    def peek1(self, t):
+        size = struct.calcsize(t)
+        return struct.unpack(t, self._peek1(size))[0]
+
+    def peek_fmt(self, fmt):
+        size = struct.calcsize(fmt)
+        return struct.unpack(fmt, self._peek1(size))
+
+    def peek_uint64(self):
+        return self.peek1('Q')
+    
+    def peek_int64(self):
+        return self.peek1('q')
+
+    def peek_uint32(self):
+        return self.peek1('I')
+
+    def peek_int32(self):
+        return self.peek1('i')
+
+    def peek_uint16(self):
+        return self.peek1('H')
+
+    def peek_int16(self):
+        return self.peek1('h')
+
+    def peek_uint8(self):
+        return self.peek1('B')
+
+    def peek_int8(self):
+        return self.peek1('b')
+
+    def peek_float(self):
+        return self.peek1('f')
+
+    def peek_double(self):
+        return self.peek1('d')
+
+    def peek_fourcc(self):
+        with self.save_current_pos():
+            return self.read_ascii_string(4)
+
+    # ------------ READ SECTION ------------ #
+
+    def _read1(self, size=-1):
+        return self.python_fp.read1(size)
+
+    def read1(self, t):
+        size = struct.calcsize(t)
+        return struct.unpack(t, self._read1(size))[0]
+
+    def read_fmt(self, fmt):
+        size = struct.calcsize(fmt)
+        return struct.unpack(fmt, self._read1(size))
+
+    def read_uint64(self):
+        return self.read1(u'Q')
+
+    def read_int64(self):
+        return self.read1(u'q')
+
+    def read_uint32(self):
+        return self.read1(u'I')
+
+    def read_int32(self):
+        return self.read1(u'i')
+
+    def read_uint16(self):
+        return self.read1(u'H')
+
+    def read_int16(self):
+        return self.read1(u'h')
+
+    def read_uint8(self):
+        return self.read1(u'B')
+
+    def read_int8(self):
+        return self.read1(u'b')
+
+    def read_float(self):
+        return self.read1(u'f')
+
+    def read_double(self):
+        return self.read1(u'd')
+
+    def read_wide_string(self, length=None):
+        if length:
+            return bytes(''.join([unichr(self.read_uint16()) for _ in range(length)]), u'utf').strip('\x00').decode(u'utf')
+
+        acc = ''
+        b = self.read_uint16()
+        while b != 0:
+            acc += chr(b)
+            b = self.read_uint16()
+        return acc
+
+    def read_ascii_string(self, length=None):
+        if length:
+            return byts(''.join([unichr(self.read_uint8()) for _ in range(length)]), u'utf').strip('\x00').decode(u'utf')
+
+        acc = u''
+        b = self.read_uint8()
+        while b != 0:
+            acc += chr(b)
+            b = self.read_uint8()
+        return acc
+
+    def read_fourcc(self):
+        return self.read_ascii_string(4)
+
+    def read_from_offset(self, offset, reader, **reader_args):
+        if offset > self.size1():
+            raise OffsetOutOfBounds()
+        # curr_offset = self.tell()
+        with self.save_current_pos():
+            self.seek1(offset, io.SEEK_SET)
+            ret = reader(**reader_args)
+        # self.seek(curr_offset, io.SEEK_SET)
+        return ret
+
+    # ------------ WRITE SECTION ------------ #
+
+    def _write1(self, data):
+        self.python_fp.write(data)
+
+    def write1(self, t, value):
+        self._write1(struct.pack(t, value))
+
+    def write_uint64(self, value):
+        self.write1(u'Q', value)
+
+    def write_int64(self, value):
+        self.write1(u'q', value)
+
+    def write_uint32(self, value):
+        self.write1(u'I', value)
+
+    def write_int32(self, value):
+        self.write1(u'i', value)
+
+    def write_uint16(self, value):
+        self.write1(u'H', value)
+
+    def write_int16(self, value):
+        self.write1(u'h', value)
+
+    def write_uint8(self, value):
+        self.write1(u'B', value)
+
+    def write_int8(self, value):
+        self.write1(u'b', value)
+
+    def write_float(self, value):
+        self.write1(u'f', value)
+
+    def write_double(self, value):
+        self.write1(u'd', value)
+
+    def write_ascii_string(self, string,size = 0, zero_terminated=True):
+        entry = self.tell1()
+        for c in string:
+            self._write1(c.encode('ascii'))
+        if zero_terminated:
+            self._write1(b'\x00')
+        if size and self.tell1()-entry<size:
+            bytes_written = self.tell1()-entry
+            self._write1(b'\x00'*(size-bytes_written))
+
+
+    def write_fourcc(self, fourcc):
+        self.write_ascii_string(fourcc)
+
+    def write_to_offset(self, offset, writer, value, fill_to_target=False):
+        if offset > self.size1() and not fill_to_target:
+            raise OffsetOutOfBounds()
+        curr_offset = self.tell()
+        self.seek1(offset, io.SEEK_SET)
+        ret = writer(value)
+        self.seek1(curr_offset, io.SEEK_SET)
+        return ret
+
+    def read_bytes(self, size=-1):
+        return self._read1(size)
+
+    def read_float16(self):
+        return self.read1('e')
+
+    def write_bytes(self, data):
+        self._write1(data)
+
+    def decompress_block(self, size, decompressed_size, as_reader=False):
+        data = self._read1(size)
+        data = zlib.decompress(data)
+        assert len(data) == decompressed_size
+        if as_reader:
+            return ByteReader(byte_object=data)
+        else:
+            return data
+
+    def auto_decompress(self, as_reader=False):
+        decomp_size = self.read_int32()
+        comp_size = self.read_int32()
+        return self.decompress_block(comp_size, decomp_size, as_reader)
+
+    def check(self, size):
+        return self.size1() - self.tell1() >= size
+
+    def write_fmt(self,fmt, data):
+        self.write1(fmt,data)
 
 def openEditor(filename, position):
     return subprocess.Popen(['010editor', '%s@%s' % (filename, position)])
