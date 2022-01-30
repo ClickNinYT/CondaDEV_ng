@@ -909,7 +909,9 @@ cdef class ObjectCommon(DataLoader):
             extensionOffset = reader.readShort()
             counterOffset = reader.readShort()
             self.flags.setFlags(reader.readShort(True))
-            reader.readShort()
+            penisFlags = reader.readShort()
+            if penisFlags == 6:
+                self.flags["DoNotCreateAtStart"] = True
 
             end = reader.tell() + 8 * 2
 

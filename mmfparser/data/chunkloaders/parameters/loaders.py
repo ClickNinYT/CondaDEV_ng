@@ -24,6 +24,10 @@ from mmfparser.data.chunkloaders.common import (_ObjectInfoMixin,
     _ObjectTypeMixin)
 from mmfparser.data.font import LogFont
 from mmfparser.bytereader import ByteReader
+import sys
+
+sys.path.append("..\..\..\..")
+from misc import *
 
 EQUAL = 0
 DIFFERENT = 1
@@ -351,8 +355,13 @@ class Group(ParameterCommon):
         self.offset = reader.tell() - 24
         self.flags.setFlags(reader.readShort(True))
         self.id = reader.readShort(True)
-        self.name = self.readString(reader, 96)
-        self.password = reader.readInt()
+        try:
+            self.name = self.readString(reader, 96)
+            self.password = reader.readInt()
+        except:
+            self.name = 'Unreadable Group Name'
+            self.password = 420
+            log("Warning: Unreadable group name!", 3)
 
     def write(self, reader):
         reader.writeShort(self.flags.getFlags(), True)

@@ -156,6 +156,31 @@ cdef class Action(_AceCommon):
     def write(self, ByteReader reader):
         newReader = ByteReader()
         newReader.writeShort(self.objectType)
+        if self.objectType == -1:
+            if self.num == 27:
+                self.num = 3
+            if self.num == 28:
+                self.num = 3
+            if self.num == 29:
+                self.num = 3
+            if self.num == 30:
+                self.num = 3
+            if self.num == 31:
+                self.num = 4
+            if self.num == 32:
+                self.num = 4
+            if self.num == 33:
+                self.num = 4
+            if self.num == 34:
+                self.num = 4
+            if self.num == 35:
+                self.num = 5
+            if self.num == 36:
+                self.num = 5
+            if self.num == 37:
+                self.num = 5
+            if self.num == 38:
+                self.num = 5
         newReader.writeShort(self.num)
         newReader.writeShort(self.objectInfo, True)
         newReader.writeShort(self.objectInfoList)
@@ -210,8 +235,19 @@ cdef class Condition(_AceCommon):
         newReader.writeShort(self.objectType)
         if self.num == -42:
             self.num = -27
-        if self.num == -28 or self.num == -29 or self.num == -30 or self.num == -31 or self.num == -32 or self.num == -33:
-            self.num = -8
+        if self.objectType == -1:
+            if self.num == -28:
+                self.num = -8
+            if self.num == -29:
+                self.num = -8
+            if self.num == -30:
+                self.num = -8
+            if self.num == -31:
+                self.num = -8
+            if self.num == -32:
+                self.num = -8
+            if self.num == -33:
+                self.num = -8
         newReader.writeShort(self.num)
         newReader.writeShort(self.objectInfo, True)
         newReader.writeShort(self.objectInfoList)

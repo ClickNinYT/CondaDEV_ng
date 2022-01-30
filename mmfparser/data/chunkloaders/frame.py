@@ -150,6 +150,9 @@ class Frame(DataLoader):
         self.left = newVirtual.left
         self.right = newVirtual.right
 
+        self.width = self.right
+        self.height = self.bottom
+
         self.instances = newChunks.popChunk(ObjectInstances, True)
 
         self.layers = newChunks.popChunk(Layers)
